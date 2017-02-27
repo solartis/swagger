@@ -1,0 +1,231 @@
+swagger: '2.0'
+info:
+  version: '1.0.0'
+  title: Starr Assist - Find Policy
+  description: Find Policy API is to retrieve the issued policies from DTC and CSR system
+  contact:
+    name: Adheep M
+    email: adheep_m@solartis.net
+host: starrassistuatkb.uat.solartis.net
+basePath: /DroolsV4_2/DroolsService
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /FireEventV2:
+    post:
+      description: Retrieve list of policies issues based on the given criteria
+      operationId: FindPolicy
+      produces:
+        - application/json
+      parameters:
+        - name: Token
+          in: header
+          description: Authentication Token
+          required: true
+          type: string
+          format: string
+          default: "iMgdpnp436QjuYQ2tn9HU+SgJDsyFW8kDSoLHGwadQKpl/wr4yKoVMjkSfJB/FKqjFqrLmebBUqmHM/dVAMv+DDPaXOt/GY7mjWZXGT2z0ArRvyiojuQz8LrhVYihPok4SNftJWQa7rNrqjh5PWJcVbnbLVHo4e9WNp/4X9Sai/5LrKZ1J99H71yIi/9rXsAKhCk5lGzFaO3SXLwJluxpsUM+5MiljDi4NFM+/K0KPeUOuL8R2FZD9RobXBVvR7xPdH1oZ71jBgOmg59/75ugVgJ/35PRXWc1Emi9SPqQHHEmsD4AoH2xj45UGMY3hjx0sz/uABSHKxNwA8DwPTBS7jaN2XqKLCayPsSWHVH04XW+ZeDaw1iRLb/0euQfXT97fiPQgPQSjtDvxif6cFXZQX/BHYIcAUjZtdcuv098quieEPaIWri6DUFEIzf/uRM7R4itGHIU7/B0cMwwQNFhxjtMVAgSBq7Kw4a8kf5s+2XOip5XV3KeT5U4u8HX6/xdKxhpP8gLng6PoGj0MEnSugWYicqO81QJH2UISAaI3iDgNxzCSFmsAChwURz5g/RRmHqLknkxHh4lvFfjQGlTIfdNwW+CwHbg0EQFt/c/4M6CofYIAQVzElcVRih/j88U7EqGr8v1mrTPel1sBXl+auuXSlODNRoeDVogcqA1Fr9504oM1kbCEmrVIqjUxUmK9a8CWsZEjIYiNuY0KncVKuuXSlODNRoeDVogcqA1Foa9LkTsAlC3ItSy+gbt0NdLaJdXbWS8ClBkbddTRCbeWRNMZNDq/vS1JTb8FKCl5OsniK5MZQnMbZdqNHlqbv2WOw2j+jUU0BThnDgEX6XEjSt7SoS1Xd6+F4DyPRZsQbD7XGhOWwTgbKALHDL6LviA3K4dHjVKHv1xOd8L284LsWKpOWqHf8xYqRIiCHZgQEtSRZCdfQPbklkXKGNaTjD"
+        - name: EventName
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "FindPolicy"
+        - name: FindPolicy
+          in: body
+          description: FindPolicy/traveler details
+          required: true
+          schema:
+            $ref: '#/definitions/FindPolicy_Request'
+      responses:
+        '200':
+          description: Success Response
+          schema:
+            $ref: '#/definitions/FindPolicy_Success_Response'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/errorModel'
+definitions:
+  FindPolicy_Request:
+    type: object
+    required:
+     - ServiceRequestDetail
+     - Count
+     - EventName
+     - OwnerId
+     - SortOrder
+    properties:
+      EndClientUserUniqueSessionId:
+        type: string
+      EndClientUserBrowserSessionId:
+        type: string
+      EndClientUserBrowserInformation:
+        type: string
+      PaaSClientIPAddress:
+        type: string
+      ClientUniqueRequestID:
+        type: string
+      ServiceRequestDetail:
+        type: object
+        required:
+          - OwnerId
+          - RegionCode
+          - Token
+          - ServiceRequestVersion
+          - ServiceResponseVersion
+          - ResponseType
+        properties:
+          ServiceRequestVersion:
+            type: string
+            default: "1.0"
+          ServiceResponseVersion:
+            type: string
+            default: "1.0"
+          OwnerId:
+            type: string
+            default: "15"
+          ResponseType:
+            type: string
+            enum: ["JSON","XML"]
+            default: "JSON"
+          RegionCode:
+            type: string
+            default: "US"
+          Token:
+            type: string
+            default: "iMgdpnp436QjuYQ2tn9HU+SgJDsyFW8kDSoLHGwadQKpl/wr4yKoVMjkSfJB/FKqjFqrLmebBUqmHM/dVAMv+DDPaXOt/GY7mjWZXGT2z0ArRvyiojuQz8LrhVYihPok4SNftJWQa7rNrqjh5PWJcVbnbLVHo4e9WNp/4X9Sai/5LrKZ1J99H71yIi/9rXsAKhCk5lGzFaO3SXLwJluxpsUM+5MiljDi4NFM+/K0KPeUOuL8R2FZD9RobXBVvR7xPdH1oZ71jBgOmg59/75ugVgJ/35PRXWc1Emi9SPqQHHEmsD4AoH2xj45UGMY3hjx0sz/uABSHKxNwA8DwPTBS7jaN2XqKLCayPsSWHVH04XW+ZeDaw1iRLb/0euQfXT97fiPQgPQSjtDvxif6cFXZQX/BHYIcAUjZtdcuv098quieEPaIWri6DUFEIzf/uRM7R4itGHIU7/B0cMwwQNFhxjtMVAgSBq7Kw4a8kf5s+2XOip5XV3KeT5U4u8HX6/xdKxhpP8gLng6PoGj0MEnSugWYicqO81QJH2UISAaI3iDgNxzCSFmsAChwURz5g/RRmHqLknkxHh4lvFfjQGlTIfdNwW+CwHbg0EQFt/c/4M6CofYIAQVzElcVRih/j88U7EqGr8v1mrTPel1sBXl+auuXSlODNRoeDVogcqA1Fr9504oM1kbCEmrVIqjUxUmK9a8CWsZEjIYiNuY0KncVKuuXSlODNRoeDVogcqA1Foa9LkTsAlC3ItSy+gbt0NdLaJdXbWS8ClBkbddTRCbeWRNMZNDq/vS1JTb8FKCl5OsniK5MZQnMbZdqNHlqbv2WOw2j+jUU0BThnDgEX6XEjSt7SoS1Xd6+F4DyPRZsQbD7XGhOWwTgbKALHDL6LviA3K4dHjVKHv1xOd8L284LsWKpOWqHf8xYqRIiCHZgQEtSRZCdfQPbklkXKGNaTjD"
+          UserName:
+            type: string
+            default: "travelagent"
+          LanguageCode:
+            type: string
+            default: "en"
+          BrowserIp:
+            type: string
+      OwnerId:
+        type: string
+        default: "15"
+      EventName:
+        type: string
+        default: "FindPolicy"
+      AgencyName:
+        type: string
+        default: Starr Agency
+      AgentName:
+        type: string
+        default: Starr Agent
+      BatchNumber:
+        type: string
+      PolicyNumber:
+        type: string
+      SortOrder:
+        type: string
+        default: "ASC"
+        enum: ["ASC","DESC"]
+      TravelerName:
+        type: string
+      StateName:
+        type: string
+      PlanCode:
+        type: string
+        enum: ["1","2","3","4","9","10","11"]
+      PolicyType:
+        type: string
+        enum: ["New Business","Endorsement"]
+      PolicyStatus:
+        type: string
+        enum: ["Issued","Cancelled"]
+      DepartureDateFrom:
+        type: string
+      PolicyEffectiveDateForm:
+        type: string
+        format: date
+      PolicyEffectiveDateTo:
+        type: string
+        format: date
+      ReturnDateFrom:
+        type: string
+        format: date
+      ReturnDateTo:
+        type: string
+        format: date
+      CreatedDateFrom:
+        type: string
+        format: date
+      CreatedDateTo:
+        type: string
+        format: date
+      Count:
+        type: integer
+        default: 10
+      Offset:
+        type: string
+        default: "0"
+  FindPolicy_Success_Response:
+    type: object
+    required:
+      - RequestStatus
+      - policyInformationList
+    properties:
+      RequestStatus:
+        type: string
+      policyInformationList:
+        type: array
+        items:
+          properties:
+            PolicyNumber:
+              type: string
+            BatchNumber:
+              type: string
+            PolicyStatus:
+              type: string
+            PlanName:
+              type: string
+            TravelerName:
+              type: string
+            PolicyType:
+              type: string
+            CreatedDate:
+              type: string
+            DepartureDate:
+              type: string
+            PolicyEffectiveDate:
+              type: string
+            PolicyExpirationDate:
+              type: string
+            ReturnDate:
+              type: string
+  errorModel:
+    type: object
+    required:
+      - RequestStatus
+      - MessageDetail
+    properties:
+      RequestStatus:
+        type: string
+      MessageDetail:
+        type: object
+        properties:
+          MessageCode:
+            type: string
+          MessageType:
+            type: string
+          UserMessage:
+            type: string
+          MessageLevel:
+            type: string
+          MessageSeverity:
+            type: string
+          MessageList:
+            type: object
+            properties:
+              Message:
+                type: array
+                items:
+                  type: string

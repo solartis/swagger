@@ -1,0 +1,483 @@
+swagger: '2.0'
+info:
+  version: '1.1.0'
+  title: Search and Rescue - Issue Certificate API
+  description: Search and Rescuse PaaS API is consumed by Ubimodo from their UI and Certificate is issued by Solartis on behalf of Starr Indemnity and Liabilities Companies.
+  contact:
+    name: Solartis Support
+    email: SupportSearchRescue@solartis.com
+host: sar.uat.solartis.net
+basePath: /DroolsV4_2/DroolsService
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /FireEventV2:
+    post:
+      description: Issue Certificate PaaS API provides ability to generated a Certificate of Insurance by providing valid values like Insured, Beneficiary and Dependent information.
+      operationId: IssueCertificate
+      produces:
+        - application/json
+      consumes:
+        - application/json
+      parameters:
+        - name: Token
+          in: header
+          description: Authentication Token
+          required: true
+          type: string
+          format: string
+          enum: ["QfYjYpD84oWJ0pe6GkeaAo+U19gRsGs6p9dSX8+actKAT7iJKK8+M9/djPLSR1R0Dxewo+8JMe9VMtkiblunQDKaDEDZO9FP7jWUIEyT+TtH7Etn/ahLYkJX537/mPeZF9o7TM7haaDDfFjeJnwkjkq9BQiwZIQCTBk7vszQ1k7GF7xnRX90u/xaLm1sm9PdFUDuQ0s+Bhhf/75wwH4FrOuWp2zFdIN0FP706fCed0tj20NmTT0HKlNohZSpL3vrMragBxC3NoI4UHK5nj5dDW+AyIKnNiA6u5qE/5xJhyTmRr0p5/gOaDTK9GjCkuy2gDGjmpxiqzrHkDYf0RsLXLDC6FLrJNNbrd8reqwXNAZSCsoZf/nVxWS+OExaBcyU8X3mKd4idEduWZnwFElVCbKXNWKa8S0XRe4LBjip7yHlnwM9PwN/YXU4BhnRfk3ox8LNcYJ9mZxJMxDsxYXUuuz1xauejI059T6q/fFudClOKxtLuwI3Cp8tkkDBqrTsZ4P9E+TTvqAdzNinNdRd+0RF54aMUJ4q6ntJTz/2RqnSDXPuLpy/vgr912xOoLI3"]
+        - name: EventName
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          enum: ["IssueCertificate_Workflow"]
+        - name: IssueCertificate
+          in: body
+          description: IssueCertificate payload JSON content
+          required: true
+          schema:
+            $ref: '#/definitions/IssueCertificate_Request'
+      responses:
+        '200':
+          description: Success Response
+          schema:
+            $ref: '#/definitions/IssueCertificate_Response'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/errorModel'
+definitions:
+  IssueCertificate_Request:
+    description: Request JSON content for Issue certificate
+    type: object
+    required:
+     - ServiceRequestDetail
+     - EventName
+     - OwnerId
+     - GroupPolicy
+    properties:
+      ServiceRequestDetail:
+        description: To hold meta data information
+        type: object
+        required:
+          - OwnerId
+          - LanguageCode
+          - RegionCode
+          - Token
+          - ServiceRequestVersion
+          - ResponseType
+        properties:
+          ServiceRequestVersion:
+            type: string
+            enum: ["1.0"]
+            description: To identify the request/response version of the API
+          OwnerId:
+            type: string
+            enum: ["14"]
+            description: Unique identifier for Starr Companies
+          ResponseType:
+            type: string
+            enum: ["JSON"]
+            description: Format in which the response should be sent
+          RegionCode:
+            type: string
+            enum: ["US"]
+            description: For formatting the currency and date based on the region code
+          Token:
+            type: string
+            enum: ["QfYjYpD84oWJ0pe6GkeaAo+U19gRsGs6p9dSX8+actKAT7iJKK8+M9/djPLSR1R0Dxewo+8JMe9VMtkiblunQDKaDEDZO9FP7jWUIEyT+TtH7Etn/ahLYkJX537/mPeZF9o7TM7haaDDfFjeJnwkjkq9BQiwZIQCTBk7vszQ1k7GF7xnRX90u/xaLm1sm9PdFUDuQ0s+Bhhf/75wwH4FrOuWp2zFdIN0FP706fCed0tj20NmTT0HKlNohZSpL3vrMragBxC3NoI4UHK5nj5dDW+AyIKnNiA6u5qE/5xJhyTmRr0p5/gOaDTK9GjCkuy2gDGjmpxiqzrHkDYf0RsLXLDC6FLrJNNbrd8reqwXNAZSCsoZf/nVxWS+OExaBcyU8X3mKd4idEduWZnwFElVCbKXNWKa8S0XRe4LBjip7yHlnwM9PwN/YXU4BhnRfk3ox8LNcYJ9mZxJMxDsxYXUuuz1xauejI059T6q/fFudClOKxtLuwI3Cp8tkkDBqrTsZ4P9E+TTvqAdzNinNdRd+0RF54aMUJ4q6ntJTz/2RqnSDXPuLpy/vgr912xOoLI3"]
+            description: Unique encrypted Authorization Token for security validation
+          UserName:
+            type: string
+            default: "ubiadmin"
+            description: Unique user provided by Solartis to Ubimodo to generate the token and consume the API
+          LanguageCode:
+            type: string
+            enum: ["en"]
+            description: Language in which the response should be sent
+          BrowserIp:
+            type: string
+            description: End user's browsing IP address
+      EventName:
+        type: string
+        enum: ["IssueCertificate_Workflow"]
+        description: Unique identifier to invoke the workflow for issuing a certificate
+      OwnerId:
+        type: string
+        enum: ["14"]
+        description: Unique identifier for Starr Companies
+      GroupPolicy:
+        description: Container for holding the Group Policy information generated by Starr Companies
+        type: object
+        required:
+          - PolicyHolderName
+          - PolicyNumber
+          - ProductNumber
+          - ProductVerNumber
+          - LOB
+          - Certificate
+        properties:
+          PolicyHolderName:
+            type: string
+            enum: ["Ubimodo"]
+            description: Group policy's holder name issued by Starr Companies for Ubimodo
+          PolicyNumber:
+            type: string
+            enum: ["ADDG 100200"]
+            description: Group policy number issued by Starr Companies for Ubimodo
+          ProductNumber:
+            type: string
+            enum: ["SR"]
+            description: Unique number for identifying the Search and Rescue product
+          ProductVerNumber:
+            type: string
+            enum: ["1.0"]
+            description: Product version number for the Search and Rescue product
+          LOB:
+            type: string
+            enum: ["A&H"]
+            description: Line of Business of the Search and Rescue product
+          Certificate:
+            description: Holder to contain attributes related to the Insured, dependent, beneficiary and payment information
+            type: object
+            required:
+              - PlanName
+              - CoverageType
+              - CertificateNumber
+              - Premium
+              - EffectiveDate
+              - MemberDetails
+              - BillingInfo
+              - PaymentInfo
+            properties:
+              PlanName:
+                type: string
+                enum: ["Plan 1","Plan 2","Plan 3"]
+                description: Names of available plans with different coverage and benefits combo
+              CoverageType:
+                type: string
+                enum: ["Member Only","Family"]
+                description: To mention for whom the coverage is eligible
+              CertificateNumber:
+                type: string
+                description: Unique number sent to Solartis for generating a Certificate
+              Premium:
+                type: string
+                description: Cost of the plan and coverage selected by the user
+              EffectiveDate:
+                type: string
+                description: Enter date in (mm/dd/yyyy) format. This specifies from which date the policy is effective from
+              MemberDetails:
+                description: To contain the Insured personal details
+                type: object
+                required:
+                 - MemberNumber
+                 - FirstName
+                 - LastName
+                 - AddressLine1
+                 - City
+                 - State
+                 - ZipCode
+                 - DOB
+                 - Gender
+                 - Communication
+                properties:
+                  MemberNumber:
+                    type: string
+                    description: Ubimodo's member number
+                  FirstName:
+                    type: string
+                  LastName:
+                    type: string
+                  MiddleName:
+                    type: string
+                  AddressLine1:
+                    type: string
+                  AddressLine2:
+                    type: string
+                  City:
+                    type: string
+                  State:
+                    type: string
+                    enum: ["OR"]
+                  ZipCode:
+                    type: string
+                  DOB:
+                    type: string
+                    description: Enter Date of Birth of the insured in (mm/dd/yyyy) format
+                  Gender:
+                    type: string
+                    enum: ["Male","Female"]
+                    description: Enter the gender of the insured
+                  Communication:
+                    description: To hold the communication details
+                    type: object
+                    required:
+                      - Email
+                      - Phone
+                    properties:
+                      Email:
+                        type: string
+                      Phone:
+                        type: object
+                        required:
+                          - Home
+                          - Work
+                        properties:
+                          Home:
+                            type: string
+                          Work:
+                            type: string
+              BillingInfo:
+                description: Billing address information
+                type: object
+                required:
+                  - Communication
+                  - AddressLine1
+                  - City
+                  - State
+                  - ZipCode
+                properties:
+                  AddressLine1:
+                    type: string
+                  AddressLine2:
+                    type: string
+                  City:
+                    type: string
+                  State:
+                    type: string
+                    enum: ["OR"]
+                  ZipCode:
+                    type: string
+                  Communication:
+                    description: To hold the communication details
+                    type: object
+                    required:
+                      - Email
+                      - Phone
+                    properties:
+                      Email:
+                        type: string
+                      Phone:
+                        type: object
+                        required:
+                          - Home
+                          - Work
+                        properties:
+                          Home:
+                            type: string
+                          Work:
+                            type: string
+              BeneficiaryInfo:
+                description: To hold the beneficiary information
+                type: array
+                items:
+                  properties:
+                    BeneficiaryDetails:
+                      type: object
+                      required:
+                        - FirstName
+                        - LastName
+                        - BeneficiaryType
+                        - DOB
+                      properties:
+                        Relationship:
+                          type: string
+                        FirstName:
+                          type: string
+                        LastName:
+                          type: string
+                        MiddleName:
+                          type: string
+                        DOB:
+                          type: string
+                        BeneficiaryType:
+                          type: string
+                          enum: ["Primary","Contingent"]
+              DependentInfo:
+                description: To hold the Dependent information
+                type: array
+                items:
+                  properties:
+                    DependentDetails:
+                      type: object
+                      required:
+                        - FirstName
+                        - LastName
+                        - DependentType
+                        - Gender
+                        - DOB
+                      properties:
+                        FirstName:
+                          type: string
+                        LastName:
+                          type: string
+                        MiddleName:
+                          type: string
+                        DependentType:
+                          type: string
+                          enum: ["Spouse","Children"]
+                        Gender:
+                          type: string
+                          enum: ["Male", "Female"]
+                        DOB:
+                          type: string
+              PaymentInfo:
+                description: To hold the Payment information
+                type: object
+                required:
+                  - PaymentStatus
+                  - InvoiceNumber
+                  - TransactionReferenceNumber
+                  - PayerReferenceNumber
+                properties:
+                  PaymentStatus:
+                    description: Propay's payment status
+                    type: string
+                  InvoiceNumber:
+                    description: Unique number generated by Uibmodo to send for Propay request
+                    type: string
+                  TransactionReferenceNumber:
+                    description: Unique number generated by Propay for the particular payment transaction
+                    type: string
+                  PayerReferenceNumber:
+                    description: Unique number generated by Propay for the card holder, it can be found in Propay response in ProfileID tag or simlar name
+                    type: string
+      EndClientUserUniqueSessionId:
+        description: Session ID generated for the User
+        type: string
+      ClientUniqueRequestID:
+        type: string
+        description: Request ID generated for each client call to Ubimodo
+      EndClientUserBrowserSessionId:
+        type: string
+      EndClientUserBrowserInformation:
+        type: string
+        description: Browser information
+      PaaSClientIPAddress:
+        type: string
+        description: PaaS consumer Server IP
+  IssueCertificate_Response:
+    type: object
+    required:
+      - ResponseStatus
+    properties:
+      ResponseStatus:
+        type: string
+      GroupPolicy:
+        description: Container for holding the Group Policy information generated by Starr Companies
+        type: object
+        required:
+          - PolicyHolderName
+          - PolicyNumber
+          - Certificate
+        properties:
+          PolicyHolderName:
+            type: string
+            enum: ["Ubimodo"]
+            description: Group policy's holder name issued by Starr Companies for Ubimodo
+          PolicyNumber:
+            type: string
+            enum: ["ADDG 100200"]
+            description: Group policy number issued by Starr Companies for Ubimodo
+          Certificate:
+            description: Holder to contain attributes related to the Insured, dependent, beneficiary and payment information
+            type: object
+            required:
+              - PlanName
+              - CoverageType
+              - CertificateNumber
+              - Premium
+              - EffectiveDate
+            properties:
+              PlanName:
+                type: string
+                enum: ["Plan 1","Plan 2","Plan 3"]
+                description: Names of available plans with different coverage and benefits combo
+              CoverageType:
+                type: string
+                enum: ["Member Only","Family"]
+                description: To mention for whom the coverage is eligible
+              CertificateNumber:
+                type: string
+                description: Unique number sent to Solartis for generating a Certificate
+              Premium:
+                type: string
+                description: Cost of the plan and coverage selected by the user
+              EffectiveDate:
+                type: string
+                description: Enter date in (mm/dd/yyyy) format. This specifies from which date the policy is effective from
+              MemberDetails:
+                description: To contain the Insured personal details
+                type: object
+                required:
+                 - MemberNumber
+                 - FirstName
+                 - LastName
+                 - DOB
+                properties:
+                  MemberNumber:
+                    type: string
+                    description: Ubimodo's member number
+                  FirstName:
+                    type: string
+                  LastName:
+                    type: string
+                  DOB:
+                    type: string
+              CertificateIssuedDate:
+                type: string
+              CertificateStatus:
+                type: string
+              DocumentInfo:
+                type: object
+                properties:
+                  OuputFileRootPath:
+                    type: string
+                  NumberOfDocuments:
+                    type: string
+                  DocumentList:
+                    type: array
+                    items:
+                      properties:
+                        DocumentType:
+                          type: string
+                        DocumentName:
+                          type: string
+                        DocumentURL:
+                          type: string
+  errorModel:
+    type: object
+    required:
+      - RequestStatus
+      - MessageDetail
+    properties:
+      RequestStatus:
+        type: string
+      MessageDetail:
+        type: object
+        properties:
+          MessageCode:
+            type: string
+          MessageType:
+            type: string
+          UserMessage:
+            type: string
+          MessageLevel:
+            type: string
+          MessageSeverity:
+            type: string
+          MessageList:
+            type: object
+            properties:
+              Message:
+                type: array
+                items:
+                  type: string

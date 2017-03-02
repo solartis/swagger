@@ -1,6 +1,6 @@
 swagger: '2.0'
 info:
-  version: '1.0.0'
+  version: '1.0'
   title: Starr Assist - Rating API
   description: |
     Get rates for the Starr Assist Travel plans. 

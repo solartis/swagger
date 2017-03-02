@@ -141,10 +141,10 @@ definitions:
         properties:
           ProductID:
             type: string
-            default: "706"
+            default: "619"
           ProductVerID:
             type: string
-            default: "619"
+            default: "706"
           ProductNumber:
             type: string
             default: "ILT"

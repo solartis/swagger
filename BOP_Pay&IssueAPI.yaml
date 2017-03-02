@@ -10,7 +10,7 @@ externalDocs:
   description: "Go back to Wiki"
   url: "http://portal.solartis.net:8080/share/page/site/starr-BOP/wiki-page?title=Starr_Insure_-_Business_Owners_Policy_-_API_Wiki"
   
-host: starrbopuatkb.uat.solartis.net
+host: sbopkbv4-1.solartis.net
 basePath: /DroolsV4_1/DroolsService
 schemes:
   - https

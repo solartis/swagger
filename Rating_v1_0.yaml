@@ -5,14 +5,11 @@ info:
   description: |
     Get rates for the Starr Assist Travel plans. 
     
-    New Features:
-    1. Added coverage information along with response
-    2. Enhaced Rate API to respond with proper error messages
-  
     Features:
     1. Accept input as JSON request with Plan information
     2. Respond back with premium information
     3. Respond with erorr message incase of invalid request or failure scenarios
+    4. Enhaced Rate API to respond with proper error messages
     
   contact:
     name: Adheep M
@@ -243,16 +240,6 @@ definitions:
             type: string
           TotalOptionalCoverage:
             type: string
-      CoverageInformation:
-        type: array
-        items:
-          properties:
-            CoverageName:
-              type: string
-            CoverageLimit:
-              type: string
-            IsOptionalCoverage:
-              type: string
   errorModel:
     type: object
     required:

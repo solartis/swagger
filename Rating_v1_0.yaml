@@ -14,6 +14,11 @@ info:
   contact:
     name: Adheep M
     email: adheep_m@solartis.net
+    
+externalDocs:
+    description: "Assist - Rating API Wiki"
+    url: "http://portal.solartis.net:8080/share/page/site/starr-assist-portal/wiki-page?title=Starr_Assist_-_Rating_API"
+    
 host: starrassistuatkb.uat.solartis.net
 basePath: /DroolsV4_2/DroolsService
 schemes:

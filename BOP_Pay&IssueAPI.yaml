@@ -1,5 +1,5 @@
 swagger: '2.0'
-  info:
+info:
   version: '1.0.0'
   title: Starr BOP - Pay & Issue
   description: Pay and Issue API will validate the Payment & Quote Info & Process the Payment and on successful payment, Issues the Policy for the given Quote.

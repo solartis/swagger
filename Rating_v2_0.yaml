@@ -1,6 +1,6 @@
 swagger: '2.0'
 info:
-  version: '1.1.0'
+  version: '2.0'
   title: Starr Assist - Rating API
   description: |
     Get rates for the Starr Assist Travel plans. 
@@ -8,6 +8,7 @@ info:
     New Features:
     1. Added CFAR Premium even if CFAR is not opted
     2. Similary added TripCancellation Premium even if CFAR is opted
+    3. Added coverage information to the response
   
     Features:
     1. Accept input as JSON request with Plan information
@@ -17,8 +18,13 @@ info:
     5. Enhaced Rate API to respond with proper error messages
     
   contact:
-    name: Adheep M
-    email: adheep_m@solartis.net
+    name: Solartis Support
+    email: assistdtc@solartis.com
+    
+externalDocs:
+    description: "Assist - Rating API Wiki"
+    url: "http://portal.solartis.net:8080/share/page/site/starr-assist-portal/wiki-page?title=Starr_Assist_-_Rating_API"
+
 host: starrassistuatkb.uat.solartis.net
 basePath: /DroolsV4_2/DroolsService
 schemes:
@@ -129,8 +135,16 @@ definitions:
           - EventName
           - ProductNumber
           - ProductVerNumber
+          - ProductID
+          - ProductVerID
           - TravelerList
         properties:
+          ProductID:
+            type: string
+            default: "706"
+          ProductVerID:
+            type: string
+            default: "619"
           ProductNumber:
             type: string
             default: "ILT"

@@ -128,14 +128,14 @@ definitions:
             type: string
           PolicyNumber:
             type: string
-          IsRefundNeeded:
-            type: string
           CancelRefundPremiumMethod:
             type: string
+            enum: ["Credit Card", "Paper check", "No Refund"]
           CancelRequestedDate:
             type: string
           CancelReason:
             type: string
+            enum: ["Insured Request Cancel", "Other"]
           OtherCancelReason:
             type: string
           BankName:

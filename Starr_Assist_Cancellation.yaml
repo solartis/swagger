@@ -186,6 +186,10 @@ definitions:
             type: string
           EventName:
             type: string
+          PolicyStatus:
+            type: string
+          StateName:
+            type: string
           PolicyEffectiveDate:
             type: string
           StateCode:

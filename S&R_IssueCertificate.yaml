@@ -150,7 +150,7 @@ definitions:
             required:
               - PlanName
               - CoverageType
-              - CertificateNumber
+              - CertificateRequestNumber
               - Premium
               - EffectiveDate
               - MemberDetails
@@ -165,7 +165,7 @@ definitions:
                 type: string
                 enum: ["Member Only","Family"]
                 description: To mention for whom the coverage is eligible
-              CertificateNumber:
+              CertificateRequestNumber:
                 type: string
                 description: Unique number sent to Solartis for generating a Certificate
               Premium:
@@ -393,7 +393,7 @@ definitions:
             required:
               - PlanName
               - CoverageType
-              - CertificateNumber
+              - CertificateRequestNumber
               - Premium
               - EffectiveDate
             properties:
@@ -405,7 +405,7 @@ definitions:
                 type: string
                 enum: ["Member Only","Family"]
                 description: To mention for whom the coverage is eligible
-              CertificateNumber:
+              CertificateRequestNumber:
                 type: string
                 description: Unique number sent to Solartis for generating a Certificate
               Premium:

@@ -2,6 +2,11 @@ swagger: '2.0'
 info:
   version: "1.0.0"
   title: Solartis Rate API for ISO Commercial Automobile
+  description: To get rate for Commercial Automobile from Solartis Rate 
+    API with ISO ERC.
+    
+    
+    Commercial Vehicle Insurance is a policy of physical damage and liability coverages for amounts, situations, and usage not covered by a personal auto policy. Insurance that protects the insured against financial loss because of legal liability for automobile-related injuries to others or damage to their property by an auto.
 host: isocakbv4-2.uat.solartis.net
 basePath: /DroolsV4_2/DroolsService
 schemes:

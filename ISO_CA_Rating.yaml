@@ -24,7 +24,7 @@ paths:
           required: true
           type: string
           format: string
-          default: "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"
+          default: "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"
           
         - name: Content-Type
           in: header
@@ -81,10 +81,10 @@ definitions:
             default: "RC_AU_ID_11012016_V01"
           EffectiveDate:
             type: string
-            default: "2016-11-01"
+            default: "2017-05-09"
           ExpirationDate:
             type: string
-            default: "2017-11-01"
+            default: "2017-05-09"
           InsuredName:
             type: string
             default: "John Smith"
@@ -120,12 +120,9 @@ definitions:
             type: string
             default: "No"
             enum: ["Yes","No"]
-          RideSharingArrangementsEndorsementIndicator:
-            type: string
-            default: ""
           CommercialAutomobilePublicTransportationAutos:
             type: string
-            default: "No"
+            default: "Yes"
             enum: ["Yes","No"]
           CommercialAutomobilePublicOrLiveryPassengerConveyanceExclusion:
             type: string
@@ -144,10 +141,10 @@ definitions:
                   properties:
                     AddressLine1:
                       type: string
-                      default: "test"
+                      default: ""
                     AddressLine2:
                       type: string
-                      default: "test"
+                      default: ""
                     City:
                       type: string
                       default: "STEVENS POINT"
@@ -159,32 +156,32 @@ definitions:
                       default: "ID"
                     ZipCode:
                       type: string
-                      default: "53001"
+                      default: "83234"
                     Territory:
                       type: string
-                      default: "105"
+                      default: "104"
                     VehicleType:
                       type: string
                       default: "Truck"
                     TruckSizeClass:
                       type: string
-                      default: "Light Truck"
+                      default: "Heavy Truck"
                     TruckTrailerHowUsed:
                       type: string
-                      default: "Used in Dumping Operations"
+                      default: "Amusement Device Mounted On"
                     TruckUsedAsTNCOrOnDemand:
                       type: string
-                      default: "Used in Dumping Operations"
+                      default: "Used As Both Transportation Network Company And On-Demand"
                     TruckPercentageOfTransportationNetworkServiceAutoUse:
                       type: string
-                      default: "80% or More"
+                      default: "Under 20.0%"
                     TruckSafetyScoreDiscountApplies: 
                       type: string
                       default: "No"
                       enum: ["Yes","No"]
                     TruckSafetyScore:
                       type: string
-                      default: "27 - 30"
+                      default: "35 - 37"
                     TruckBusinessUseClass:
                       type: string
                       default: "Commercial"
@@ -193,7 +190,7 @@ definitions:
                       default: "Local"
                     TruckFleet:
                       type: string
-                      default: "No"
+                      default: "Yes"
                       enum: ["Yes","No"]
                     TruckSecondaryClassCode:
                       type: string
@@ -207,13 +204,13 @@ definitions:
                       enum: ["Yes","No"]
                     TruckOriginalCostNewOfVehicle:
                       type: string
-                      default: ""
+                      default: "26,000"
                     TruckStatedAmount:
                       type: string
-                      default: ""
+                      default: "0"
                     TruckYear:
                       type: string
-                      default: ""
+                      default: "2010"
                     TruckMake:
                       type: string
                       default: ""
@@ -231,19 +228,19 @@ definitions:
                       default: "2017-01-01"
                     TruckMedicalPaymentsCoverageLimit:
                       type: string
-                      default: "1,000"
+                      default: "500"
                     TruckLiabilityCoveragePercentOfMilesDrivenInGreenZone:
                       type: string
-                      default: "51 - 60%"
+                      default: "Not Applicable"
                     TruckLiabilityCoverageType:
                       type: string
                       default: "Combined Single Limit"
                     TruckLiabilityCoverageLimit:
                       type: string
-                      default: "500000"
+                      default: "350,000"
                     TruckLiabilityCoverageDeductible:
                       type: string
-                      default: "250 Combined Single Limit"
+                      default: "25,000 Combined Single Limit"
                     TruckHiredAutosSpecifiedAsCoveredAutosYouOwn:
                       type: string
                       default: "No"
@@ -257,22 +254,22 @@ definitions:
                       default: "Combined Single Limit"
                     TruckUnderinsuredMotoristsCoverageCombinedSingleLimit:
                       type: string
-                      default: "50,000" 
+                      default: "125,000" 
                     TruckUnderinsuredMotoristsCoverageSplitLimit:
                       type: string
-                      default: "50,000/100,000"
+                      default: "Not Applicable"
                     TruckUninsuredMotoristsCoverageType:
                       type: string
                       default: "Combined Single Limit"
                     TruckUninsuredMotoristsCoverageSplitLimit:
                       type: string
-                      default: "50,000/100,000"
+                      default: "Not Applicable"
                     TruckUninsuredMotoristsCoverageCombinedSingleLimit:
                       type: string
-                      default: "50,000"
+                      default: "2,000,000"
                     TruckPrimaryClassCode:
                       type: string
-                      default: ""
+                      default: "334"
           PrivatePassenger:
             type: array
             items:
@@ -284,10 +281,10 @@ definitions:
                   properties:
                     AddressLine1:
                       type: string
-                      default: "test"
+                      default: ""
                     AddressLine2:
                       type: string
-                      default: "test"
+                      default: ""
                     City:
                       type: string
                       default: "STEVENS POINT"
@@ -299,51 +296,51 @@ definitions:
                      default: "ID"
                     ZipCode:
                       type: string
-                      default: "53001"
+                      default: "83234"
                     Territory:
                       type: string
-                      default: "101"
+                      default: "104"
                     VehicleType:
                       type: string
                       default: "Private Passenger"
                     PrivatePassengerType:
                       type: string
-                      default: "Personal Use or Farm Use - Nonfleet Vehicle"
+                      default: "Business Use - Nonfleet Vehicle"
                     PrivatePassengerLiabilityCoveragePercentOfMilesDrivenInGreenZone:
                       type: string
-                      default: "0 - 50%"
+                      default: "Not Applicable"
                     PrivatePassengerGreenZoneDiscountApplies:
                       type: string
-                      default: "No"
+                      default: "Yes"
                       enum: ["Yes","No"]
                     PrivatePassengerSafetyScoreDiscountApplies:
                       type: string
-                      default: "No"
+                      default: "Yes"
                       enum: ["Yes","No"]
                     PrivatePassengerSafetyScore:
                       type: string
-                      default: "1 – 26"
+                      default: "1 â€“ 26"
                     PrivatePassengerOperatorExperience:
                       type: string
                       default: "Not Applicable"
                     PrivatePassengerUse:
                       type: string
-                      default: "To or From Work Less Than 15 Miles"
+                      default: "Not Applicable"
                     PrivatePassengerOriginalCostNewOfVehicle:
                       type: string
-                      default: ""
+                      default: "25,000"
                     PrivatePassengerStatedAmount:
                       type: string
                       default: "0"
                     PrivatePassengerUsedAsTNCOrOnDemand:
                       type: string
-                      default: "Not Used In A Transportation Network Company Or On-Demand Capacity"
+                      default: "Used As On-Demand And Not As Transportation Network Company"
                     PrivatePassengerPercentageOfTransportationNetworkServiceAutoUse:
                       type: string
-                      default: "20% to 49.9%"
+                      default: "Under 20.0%"
                     PrivatePassengerMake:
                       type: string
-                      default: ""
+                      default: "2005"
                     PrivatePassengerModel:
                       type: string
                       default: ""
@@ -358,13 +355,13 @@ definitions:
                       default: "Combined Single Limit"
                     PrivatePassengerLiabilityCoverageLimit:
                       type: string
-                      default: "500000"
+                      default: "65,000"
                     PrivatePassengerLiabilityCoverageDeductible:
                       type: string
                       default: "250 Combined Single Limit"
                     PrivatePassengerMedicalPaymentsCoverageLimit:
                       type: string
-                      default: "1,000"
+                      default: "5,000"
                     PrivatePassengerHiredAutosSpecifiedAsCoveredAutosYouOwn:
                       type: string
                       default: "No"
@@ -375,25 +372,25 @@ definitions:
                       enum: ["Yes","No"]
                     PrivatePassengerClassCode:
                       type: string
-                      default: ""
+                      default: "7391"
                     PrivatePassengerUnderinsuredMotoristsCoverageType:
                       type: string
-                      default: "Combined Single Limit"
+                      default: "No Coverage"
                     PrivatePassengerUnderinsuredMotoristsCoverageCombinedSingleLimit:
                       type: string
-                      default: "50,000"
+                      default: "125,000"
                     PrivatePassengerUnderinsuredMotoristsCoverageSplitLimit:
                       type: string
-                      default: "50,000/100,000"
+                      default: "Not Applicable"
                     PrivatePassengerUninsuredMotoristsCoverageType:
                       type: string
                       default: "Combined Single Limit"
                     PrivatePassengerUninsuredMotoristsCoverageSplitLimit:
                       type: string
-                      default: "50,000/100,000"
+                      default: "Not Applicable"
                     PrivatePassengerUninsuredMotoristsCoverageCombinedSingleLimit:
                       type: string
-                      default: "50,000"
+                      default: "200,000"
                     
                     
                     
@@ -416,7 +413,7 @@ definitions:
             default: "isorateadmin"
           Token:
             type: string
-            default: "cgHkrayYxCQUELzjteEsxZP32zou6UWFXKryWyV7StxpCXrv4Wrw5AgstHJauqCYH0c69BJQL+K19wmFO62JVC00mWQeTs64FO1Exlbj82y1TkII6gSpwRs6d7ZGWuRRKr93tw+FL2s5IOIegd+vfFI1fOHjIs49tuzyDTDyHFd4zLAyXr1iifE21KN5M4KPuj9BeyB02zPGKGO+3S7yojnIPpfpamzEmQMR5XY2iB4UEyLtWCuR9wtM5FtbWHIbzj/bnmLCK6pb8HpH9fDqD3/NUXwW9f8LB/d+oCPp3dUsnCP5Awut2j7mq3nQhacg7xN56OlEJTqV+byM4WsBSYUu+RCiXbic0kx+kBFEW0zB3ahSzo9l23f2dqI051gXd/YRH090RvwO9XpFkmMrxYCoi4MB4x6dvKmhUsgRY80chdGFe6NaXRz5QHH9Ghhtq50njM6Vr2lOJFh8PUPJzbZG2Ecu9vbW5khPB8jeVHKHMwlQswycTzbVogwTTGlvkr0TZgGmgdhmMTzAqe0NTlUoh7CxFto9YYnsQ9eJYRfMUJsg8DOC93m69wudKk1Wu872JSbEKfULE3+hfzAll8W8jF1O8ak3UoBq1qIf/8jytZ9VAQ/L8jhq8mz7Szs5P7yI4K6jdJOzfUWfYeiflteVrPvYVaeXirqCiX8CueLmHmQuan4NsfYl2ws5dZ03SDDvvGZ+/2cwDeXfUTdjaG0IReHMCzI8TUeSoKgniUqIdEWAZvDVT+4dfy964U7httS0iXn/5bYTBwOWgG4YFXXpJj1nd+hMt+DTuJFG2iJS9yCsl+g3HbrW8jjVWuGNw3qMIl92ECSBuAujK6DqEzQVuGnvyP385edvTPMwGAcx2bcKemqTnS/xlog+IUx8vY0RE64FXkwjVhndjLWFxfcXoh04wm/SeWg/Gu0atqYwZ6zz/ELelvOlvddhWJ9OIFN2WcrxuBJox11v2C6GhPwwevhs+xC1WlhKBUkQduC1kqf1U/TEDS2FMmRJIQU2TtWbBVhXDuEEAPDAWxLE3Q0wOgMkgIi0d0ATOk4lp7KmyLzGRjrtZ5GLCp9igKhDrNOt6/r47Q+BN4J2Qie+tjn7JHPeEyme8agVLPvNW0jGl61EwmcoeVHvVHnnGcHnDt1wxx6JWxZE6/FTCLGhTZ9hJ59Z1Hyqzd0bdBKdlTCyeXH+YYd8E6KXdXR2mZLgmvlfjSIeCARWzpU6BJDzdebsJAzzQGaJtopkkyFAwh/nBagajHYhS/1A38t/8pvO+35WgKQCrv9Wq206+AwhGSjM9ANEoNIJb/PMhtIVAgmo5AE5xKz4Du3xEwUCl9IQUwkIAUiLvuyAF9v5+MDZp3JSsw2BRFShIWKyCb39aGjnOczcDJrTX3XHPwhV+l4PK9tE+CLXIBCymsq1xelWZCK2SXWiZzFzq0g9iSJrs1xpL9ES+g4ig5hM7HpujgrCBmUTCvj+VEil3uel+wADNcsz9wHTO/mwRMiD+INLXz1FTK+E5UsjdjQNo3QWL3EkYOEJIvneIjmrr8idyI3WTyELxlMqwIrTb4339qvrpbPc9IsCUhFZCzC7pI/KjiHSnimnmr7qCNPVDKRGR2A6aD/doZZUgmVyi9760e/v1m2/SrUL7DuiQTfxs3UqW6IMURpPXdyZaR8SjBByeLKDHjevMn51EJ8glGgjW9K2k2t1JppHFc920NUvC5cH6vDfj1gnAyTauBeFCleEs1TEe1SO/draOOTvTNK9PYtxC6h/xI/H9+sGq2T8yPI+BGOgffJ72/sZIDhSf3cyftv7t2i3kggt/KprE6bX3iKIrDaYsH+EuX7HtZ5fADGy4cAD6XxEup9YstwtzlGfVQqTCV0pNKbFbIKUi9p0FVwqLhdGJawncRfA2kG9NUG/iQexnYBoQSxctUSGt7BTrAVX7RubDTSkxLODsZ+QD2n9YQIgU3ZZyvG4EmjHXW/YLoaEngq7tOddfEz4y/tURqDA2g=="
+            default: "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"
           BrowserIp:
             type: string
             default: "127.0.0.1"
@@ -462,12 +459,4 @@ definitions:
               Message:
                 type: array
                 items:
-                  type: string        
-                    
-                
-            
-            
-  
-            
-          
-        
+                  type: string

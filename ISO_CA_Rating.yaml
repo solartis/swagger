@@ -1,10 +1,9 @@
 swagger: '2.0'
 info:
   version: "1.0.0"
-  title: Solartis Rate API for ISO Commercial Automobile
-  description: To get rate for Commercial Automobile from Solartis Rate 
+  title: Solartis Rate API for ISO Commercial Auto
+  description: To get rate for Commercial Auto from Solartis Rate 
     API with ISO ERC.
-    
     
     Commercial Vehicle Insurance is a policy of physical damage and liability coverages for amounts, situations, and usage not covered by a personal auto policy. Insurance that protects the insured against financial loss because of legal liability for automobile-related injuries to others or damage to their property by an auto.
 host: isocakbv4-2.uat.solartis.net
@@ -45,7 +44,7 @@ paths:
           required: true
           type: string
           format: string
-          default: "ISOAURate"
+          default: "ISOCARate"
           
         - name: Rating Request
           in: body
@@ -77,19 +76,19 @@ definitions:
             default: "ISO Commercial Automobile"
           ProductVerNumber:
             type: string
-            default: "ISO_AU_V1"
+            default: "ISO_CA_V1"
           EventName:
             type: string
-            default: "ISOAURate"
+            default: "ISOCARate"
           ISOERCVersion:
             type: string
-            default: "RC_AU_ID_11012016_V01"
+            default: "RC_CA_AZ_11012016_V01"
           EffectiveDate:
             type: string
-            default: "2017-05-09"
+            default: "2017-05-23"
           ExpirationDate:
             type: string
-            default: "2017-05-09"
+            default: "2018-05-23"
           InsuredName:
             type: string
             default: "John Smith"
@@ -101,16 +100,16 @@ definitions:
             default: "test street"
           City:
             type: string
-            default: "STEVENS POINT"
+            default: "PRESCOTT VALLEY"
           County:
             type: string
-            default: "PORTAGE"
+            default: "YAVAPAI"
           ZipCode:
             type: string
-            default: "53001"
+            default: "85005"
           State:
             type: string
-            default: "ID"
+            default: "AZ"
           Territory:
             type: string
             default: "105"
@@ -123,7 +122,7 @@ definitions:
             default: "Business Auto Coverage Form"
           IndividualNamedInsuredOnThePolicy:
             type: string
-            default: "No"
+            default: "Yes"
             enum: ["Yes","No"]
           CommercialAutomobilePublicTransportationAutos:
             type: string
@@ -143,13 +142,15 @@ definitions:
               properties:
                 TruckDetail:
                   type: object
+                  required:
+                    - TruckVIN
                   properties:
                     AddressLine1:
                       type: string
-                      default: ""
+                      default: "test"
                     AddressLine2:
                       type: string
-                      default: ""
+                      default: "test1"
                     City:
                       type: string
                       default: "STEVENS POINT"
@@ -158,7 +159,7 @@ definitions:
                       default: "PORTAGE"
                     State:
                       type: string
-                      default: "ID"
+                      default: "AZ"
                     ZipCode:
                       type: string
                       default: "83234"
@@ -209,7 +210,7 @@ definitions:
                       enum: ["Yes","No"]
                     TruckOriginalCostNewOfVehicle:
                       type: string
-                      default: "26,000"
+                      default: "16,000"
                     TruckStatedAmount:
                       type: string
                       default: "0"
@@ -218,13 +219,13 @@ definitions:
                       default: "2010"
                     TruckMake:
                       type: string
-                      default: ""
+                      default: "test"
                     TruckModel:
                       type: string
-                      default: ""
+                      default: "test"
                     TruckVIN:
                       type: string
-                      default: ""
+                      default: "12"
                     TruckStartOfOperations:
                       type: string
                       default: "2017-01-01"
@@ -233,19 +234,19 @@ definitions:
                       default: "2017-01-01"
                     TruckMedicalPaymentsCoverageLimit:
                       type: string
-                      default: "500"
+                      default: "No Coverage"
                     TruckLiabilityCoveragePercentOfMilesDrivenInGreenZone:
                       type: string
                       default: "Not Applicable"
                     TruckLiabilityCoverageType:
                       type: string
-                      default: "Combined Single Limit"
+                      default: "No Coverage"
                     TruckLiabilityCoverageLimit:
                       type: string
-                      default: "350,000"
+                      default: "Not Applicable"
                     TruckLiabilityCoverageDeductible:
                       type: string
-                      default: "25,000 Combined Single Limit"
+                      default: "Not Applicable"
                     TruckHiredAutosSpecifiedAsCoveredAutosYouOwn:
                       type: string
                       default: "No"
@@ -275,6 +276,18 @@ definitions:
                     TruckPrimaryClassCode:
                       type: string
                       default: "334"
+                    TruckAutoRentedToOtherMotorCarriers:
+                      type: string
+                      default: "No"
+                      enum: ["Yes","No"]
+                    TruckAgriculturalProduceTrailersSeasonal:
+                      type: string
+                      default: "No"
+                      enum: ["Yes","No"]
+                    TruckUninsuredMotoristsCoverageWanted:
+                       type: string
+                       default: "No"
+                       enum: ["Yes","No"]
           PrivatePassenger:
             type: array
             items:
@@ -286,10 +299,10 @@ definitions:
                   properties:
                     AddressLine1:
                       type: string
-                      default: ""
+                      default: "test"
                     AddressLine2:
                       type: string
-                      default: ""
+                      default: "test"
                     City:
                       type: string
                       default: "STEVENS POINT"
@@ -298,7 +311,7 @@ definitions:
                       default: "PORTAGE"
                     State:
                      type: string
-                     default: "ID"
+                     default: "AZ"
                     ZipCode:
                       type: string
                       default: "83234"
@@ -313,18 +326,14 @@ definitions:
                       default: "Business Use - Nonfleet Vehicle"
                     PrivatePassengerLiabilityCoveragePercentOfMilesDrivenInGreenZone:
                       type: string
-                      default: "Not Applicable"
-                    PrivatePassengerGreenZoneDiscountApplies:
-                      type: string
-                      default: "Yes"
-                      enum: ["Yes","No"]
+                      default: "0 - 50%"
                     PrivatePassengerSafetyScoreDiscountApplies:
                       type: string
-                      default: "Yes"
+                      default: "No"
                       enum: ["Yes","No"]
                     PrivatePassengerSafetyScore:
                       type: string
-                      default: "1 â€“ 26"
+                      default: "1 - 26"
                     PrivatePassengerOperatorExperience:
                       type: string
                       default: "Not Applicable"
@@ -342,19 +351,22 @@ definitions:
                       default: "Used As On-Demand And Not As Transportation Network Company"
                     PrivatePassengerPercentageOfTransportationNetworkServiceAutoUse:
                       type: string
-                      default: "Under 20.0%"
+                      default: "Under 20%"
                     PrivatePassengerMake:
                       type: string
                       default: "2005"
                     PrivatePassengerModel:
                       type: string
-                      default: ""
+                      default: "tes"
                     PrivatePassengerYear:
                       type: string
-                      default: ""
+                      default: "2005"
                     PrivatePassengerVIN:
                       type: string
-                      default: ""
+                      default: "t123"
+                    PrivatePassengerFleet:
+                      type: string
+                      default: "No"
                     PrivatePassengerLiabilityCoverageType:
                       type: string
                       default: "Combined Single Limit"
@@ -380,7 +392,7 @@ definitions:
                       default: "7391"
                     PrivatePassengerUnderinsuredMotoristsCoverageType:
                       type: string
-                      default: "No Coverage"
+                      default: "Combined Single Limit"
                     PrivatePassengerUnderinsuredMotoristsCoverageCombinedSingleLimit:
                       type: string
                       default: "125,000"
@@ -396,6 +408,10 @@ definitions:
                     PrivatePassengerUninsuredMotoristsCoverageCombinedSingleLimit:
                       type: string
                       default: "200,000"
+                    PrivatePassengerUninsuredMotoristsCoverageWanted:
+                      type: string
+                      default: "No"
+                      enum: ["Yes","No"]
                     
                     
                     

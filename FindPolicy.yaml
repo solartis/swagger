@@ -1,11 +1,17 @@
 swagger: '2.0'
 info:
-  version: '1.0.0'
-  title: Starr Assist - Find Policy
-  description: Find Policy API is to retrieve the issued policies from DTC and CSR system
+  version: '2.0'
+  title: Starr Assist - Find Policy API
+  description: |
+    This API is used to Retrieve the issued Policies from DTC and CSR system.
+  
+    Features:
+    1. Provides ability to retrieve policies from DTC and CSR system.
+    
   contact:
-    name: Adheep M
-    email: adheep_m@solartis.net
+    name: Solartis Support
+    email: info@solartis.com
+
 host: starrassistuatkb.uat.solartis.net
 basePath: /DroolsV4_2/DroolsService
 schemes:
@@ -167,6 +173,8 @@ definitions:
       Offset:
         type: string
         default: "0"
+      Email:
+        type: string
   FindPolicy_Success_Response:
     type: object
     required:
@@ -200,6 +208,8 @@ definitions:
             PolicyExpirationDate:
               type: string
             ReturnDate:
+              type: string
+            Email:
               type: string
   errorModel:
     type: object

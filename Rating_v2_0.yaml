@@ -151,6 +151,24 @@ definitions:
           ProductVerNumber:
             type: string
             default: "1.0"
+          AgentID:
+            type: string
+            default: "62"
+          AgencyID:
+            type: string
+            default: "5549"
+          CustomerID:
+            type: string
+            default: "12"
+          RoleID:
+            type: string
+            default: "5"
+          RoleName:
+            type: string
+            default: "Agent"
+          RoleType:
+            type: string
+            default: "User"
           ProducerCode:
             type: string
             default: "86201"
@@ -165,13 +183,10 @@ definitions:
             enum: ["1","2","3","4","9","10","11"]
           DepartureDate:
             type: string
-            format: date
           ReturnDate:
             type: string
-            format: date
           DepositDate:
             type: string
-            format: date
           TripCancellationCoverage:
             type: string
             enum: ["","With Trip Cancellation","With Trip Cancellation for Any Reason"]
@@ -179,13 +194,10 @@ definitions:
             type: string
           PolicyEffectiveDate:
             type: string
-            format: date
           RentalStartDate:
             type: string
-            format: date
           RentalEndDate:
             type: string
-            format: date
           RentalLimit:
             type: string
             default: "35000"
@@ -193,6 +205,8 @@ definitions:
             type: string
             default: "1"
           StateCode:
+            type: string
+          StateName:
             type: string
           QuoteType:
             type: string
@@ -208,9 +222,9 @@ definitions:
               properties:
                 TravelerDOB:
                   type: string
-                  format: date
                 TravelCost:
                   type: string
+                  
   Rating_Success_Response:
     type: object
     required:
@@ -249,7 +263,9 @@ definitions:
             type: string
           TotalGrossPremium_IM:
             type: string
-          ServierFee:
+          TotalGrossPremium_AH:
+            type: string
+          ServiceFee:
             type: string
           CommissionAmt:
             type: string
@@ -261,6 +277,10 @@ definitions:
             type: string
           TotalTripCancellationPremium:
             type: string
+          TripCancellationCoverage:
+            type: string
+          CFARErrorMessage:
+            type: string
       CoverageInformation:
         type: array
         items:
@@ -271,6 +291,7 @@ definitions:
               type: string
             IsOptionalCoverage:
               type: string
+  
   errorModel:
     type: object
     required:

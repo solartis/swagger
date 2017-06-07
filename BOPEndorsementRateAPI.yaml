@@ -1,0 +1,841 @@
+swagger: '2.0'
+info:
+  version: "1.0.0"
+  title: Solartis Endorsement Rate API for Starr Insure - BOP
+  description: To get rate for Business Owners from Solartis Rate 
+               API with ISO ERC
+
+host: starrbopkb.uat.solartis.net
+basePath: /DroolsV4_2/DroolsService
+schemes:
+  - https
+consumes:
+  - application/json  
+produces:
+  - application/json
+paths:
+  /FireEventV2:
+    post:
+      description: Gets Rate for Business Owners based on ISO ERC
+      operationId: getRates
+      produces:
+        - application/json
+      parameters:
+        - name: Token
+          in: header
+          description: Authentication Token
+          required: true
+          type: string
+          format: string
+          default: "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"
+        - name: EventName
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "BOPEndorsementRate"  
+        - name: Content-Type
+          in: header
+          description: Content Type
+          required: true
+          type: string
+          format: string
+          default: "application/json"
+        - name: Rating Request
+          in: body
+          description: For rating request
+          schema:
+            $ref: '#/definitions/Rating_Request'
+      responses:
+       '200':
+        description: Success Response
+        schema:
+         $ref: '#/definitions/Rating_Success_Response'
+       default:
+        description: unexpected error
+        schema:
+          $ref: '#/definitions/errorModel'
+definitions:
+  Rating_Request:
+    type: object
+    properties:
+      EndClientUserUniqueSessionId: 
+       title: "Client User Unique Session ID"
+       type: string
+       default: "Uniquesession"
+      Policy:
+       type: object
+       required:
+        - ProductNumber
+        - ProductVerNumber
+        - QuoteNumber
+        - PolicyNumber
+        - PolicyVerNumber
+        - EffectiveDate
+        - LastRateLookUpDate
+        - ExpirationDate
+        - EventName
+        - EachOccLimit
+        - AggregateLimit
+        - BOPApartmentBuildings
+        - BOPPhotography
+        - BOPPollutionCleanupLimit
+        - BOPPersonalPropertyOffPremisesLimit
+        - BOPResidentialCleaningServices
+        - BOPPersonalEffectsLimit
+        - BOPNewlyAcquiredPropertyBppLimit
+        - BOPNewlyAcquiredPropertyBldgLimit
+        - BOPWindstormOrHailExclusion
+        - BOPRestaurants
+        - BOPExclAccessOrDisclosurePrsnlAndAdvertisingInjuryOnly
+        - BOPExclAccessOrDisclosureLimitedBodilyInjuryExceptionNotIncluded
+        - BOPConditionalLimitationOfCoverageTerrorismSublimitAnnualAggregateTerrorismAct2002
+        - BOPMoneyordersandCounterfeitMoneyLimit
+        - BOPLostWagesClaimsInvestigationLimit
+        - BOPForgeryAlterationCoverageLimit
+        - BOPInterruptionComputerOpsCoverageLimit
+        - BOPFireExtinguisherRechargeLimit
+        - BOPConditionalExclusionOfTerrorismDispositionOfAct2002
+        - BOPElectronicDataCoverageLimit
+        - BOPEmployeeDishtyCoverageLimit
+        - BOPConditionalExclusionOfTerrorismNuclearBiologicalChemicalDispositionOfAct2002
+        - BusnIncomeOrdinaryPayrollNumDays
+        - BOPBailBondsLimit
+        - ExcludeTerrorismActOutUS
+        - OptionalMedicalCovLimitPerPerson
+        - PropDamageLiabDed
+        - PropDamageLiabDedType
+        - ProdsCompldOpsAggregateLimit
+        - TRIAExtended
+        - TRIPTerminatesBeforeExpirationDate
+        - TypeOfExclusion
+        - TerrorismCoverageSpecificLimits
+        - TRIAExpirationDate
+        - TerrsmSubLimit
+        - TerrorismCoverage
+       properties:
+        QuoteNumber:
+         title: "QuoteNumber"
+         type: string
+        PolicyNumber:
+         title: "PolicyNumber"
+         type: string
+        PolicyVerNumber:
+         title: "PolicyVerNumber"
+         type: string
+        ProductNumber:
+         title: "ProductNumber"
+         type: string
+         default: "StarrBasicBOPENDR-2"
+        ProductVerNumber: 
+         title: "ProductVerNumber"
+         type: string
+         default: "STARR_BASIC_2016_V1"
+        LastRateLookUpDate: 
+         title: "LastRateLookupDate"
+         type: string
+         default: "2016-11-01" 
+        EventName: 
+         title: "EventName"
+         type: string
+         default: "BOPEndorsementRate"
+        EffectiveDate: 
+         title: "Policy Start Date"
+         type: string
+         default: "2016-11-01"
+        ExpirationDate: 
+         title: "PolicyExpiryDate"
+         type: string
+         default: "2017-11-01"
+        LossCause:
+         title: "PolicyVerNumber"
+         type: string
+        PolicyStatus:
+         title: "PolicyStatus"
+         type: string
+        QuoteVerNumber:
+         title: "QuoteVerNumber"
+         type: string
+        QuoteStatus:
+         title: "QuoteStatus"
+         type: string
+        InsuredName: 
+         title: "InsuredName"
+         type: string
+         default: "John Smith"
+        StreetName: 
+         title: "Address Line 2"
+         type: string
+         default: ""
+        StreetNumber: 
+         title: "Address Line 1"
+         type: string
+        City: 
+         title: "City"
+         type: string
+         default: "STEVENS POINT"
+        County: 
+         title: "County"
+         type: string
+         default: "PORTAGE"
+        CountyDivision: 
+         title: "County Division"
+         type: string
+         enum: ["59th Street and below","Above 59th Street"]
+        State: 
+         title: "State"
+         type: string
+         default: "WI"
+         enum: ["AK","AL","AR","AZ","CA","CO","CT","DC","DE","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA","MA","MD","ME","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","NY","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VA","VT","WA","WI","WV","WY"]
+        ZipCode: 
+         title: "Zip"
+         type: string
+         default: "53001"
+        BOPConditionalLimitationOfCoverageTerrorismSublimitAnnualAggregateTerrorismAct2002:
+         title: "Conditional Limitation Of Coverage Terrorism Sublimit Annual Aggregate Terrorism Act 2002"
+         type: string
+         default: "No"
+        TypeOfExclusion: 
+         title: "Select Type of Exclusion"
+         type: string
+        BusnIncomeOrdinaryPayrollNumDays: 
+         title: "Business Income Ordinary Payroll"
+         type: string
+         default: "60"
+        PropDamageLiabDedType: 
+         title: "Property Damage Liability Deductible Type "
+         type: string
+         default: "Not Applicable"
+        TerrorismCoverage: 
+         title: "Terrorism"
+         type: string
+         default: "Yes"
+        BOPPollutionCleanupLimit:
+         title: "BOPPollutionCleanupLimit"
+         type: string
+         default: ""
+        BOPPersonalPropertyOffPremisesLimit:
+         title: "BOPPersonalPropertyOffPremisesLimit"
+         type: string
+         default: "" 
+        BOPPersonalEffectsLimit:
+         title: "BOPPersonalEffectsLimit"
+         type: string
+         default: "" 
+        BOPNewlyAcquiredPropertyBppLimit:
+         title: "BOPNewlyAcquiredPropertyBppLimit"
+         type: string
+         default: "" 
+        BOPNewlyAcquiredPropertyBldgLimit:
+         title: "BOPNewlyAcquiredPropertyBldgLimit"
+         type: string
+         default: "" 
+        BOPMoneyordersandCounterfeitMoneyLimit:
+         title: "BOPMoneyordersandCounterfeitMoneyLimit"
+         type: string
+         default: "" 
+        BOPLostWagesClaimsInvestigationLimit:
+         title: "BOPLostWagesClaimsInvestigationLimit"
+         type: string
+         default: "" 
+        BOPFireExtinguisherRechargeLimit:
+         title: "BOPFireExtinguisherRechargeLimit"
+         type: string
+         default: "" 
+        BOPBailBondsLimit:
+         title: "BOPBailBondsLimit"
+         type: string
+         default: ""
+        AmountPaidForClaim:
+         title: "AmountPaidForClaim"
+         type: string
+         default: ""
+        ClaimOccurenceDate:
+         title: "ClaimOccurenceDate"
+         type: string
+         default: ""
+        IsClaimClosed:
+         title: "IsClaimClosed"
+         type: string
+         default: "" 
+        TerrsmSubLimit: 
+         title: "Terrorism Liability Sub Limit"
+         type: string
+         default: ""
+        BOPExclAccessOrDisclosureLimitedBodilyInjuryExceptionNotIncluded: 
+         title: "Exclusion - Access Or Disclosure Of Confidential Or Prsnl Info And Data-Related Liab - Limited Bodily Injury Excptn Not Included"
+         type: string
+         default: "No"
+        EachOccLimit: 
+         title: "General Liability"
+         type: string
+         default: "1000000"
+         enum: ["300000","500000","1000000","2000000"]
+        TerrorismCoverageSpecificLimits: 
+         title: "Accept Certified Acts Terrorism Coverage Provided With Specific Limitations"
+         type: string
+         default: "No"
+        AggregateLimit: 
+         title: "Aggregate Limit"
+         type: string
+         default: "2000000"
+         enum: ["600000","1000000","2000000","4000000"]
+        HiredAutoAndNonOwnedAutoLiability: 
+         type: object
+         properties:
+          BOPHiredNonOwnedAutoHiredCoverageLiabilityCoverage: 
+           title: "Hired Auto"
+           type: string
+           default: "No"
+           enum: ["Yes", "No"]
+          BOPHiredNonOwnedAutoNonOwnedCoverageLiabilityCoverage: 
+           title: "Non-Owned"
+           type: string
+           default: "No"
+           enum: ["Yes", "No"]
+        BOPForgeryAlterationCoverageLimit: 
+         title: "Forgery or Alteration"
+         type: string
+         default: "2500"
+        ExcludeTerrorismActOutUS: 
+         title: "Exclude Acts Of Terrorism Committed Outside Of The US"
+         type: string
+         default: "No"
+        BOPElectronicDataCoverageLimit: 
+         title: "Electronic Data"
+         type: string
+         default: "10000"
+        BOPEmployeeDishtyCoverageLimit: 
+         title: "Employee Dishonesty Coverage"
+         type: string
+         default: "10000"
+        ProdsCompldOpsAggregateLimit: 
+         title: "Products/Completed Operations Aggregate Limit"
+         type: string
+         default: "2000000"
+        PropDamageLiabDed: 
+         title: "Property Damage Liability Deductible "
+         type: string
+         default: "No Deductible"
+        TRIAExtended: 
+         title: "Has TRIA been extended past termination date of TRIP?"
+         type: string
+         default: "No"
+        BOPResidentialCleaningServices: 
+         title: "Residential Cleaning Services"
+         type: string
+         default: "No"
+        BOPApartmentBuildings: 
+         title: "ApartmentBuildings"
+         type: string
+         default: "No"
+        BOPRestaurants: 
+         title: "Restaurants"
+         type: string
+         default: "No"
+        BOPWindstormOrHailExclusion: 
+         title: "Windstorm Or Hail Exclusion "
+         type: string
+         enum: ["Yes", "No"]
+         default: "No"
+        TRIPTerminatesBeforeExpirationDate: 
+         title: "Terrorism Risk Insurance Program (TRIP) terminates before policy expiration date"
+         type: string
+         default: "No"
+        BOPConditionalExclusionOfTerrorismNuclearBiologicalChemicalDispositionOfAct2002: 
+         title: "Conditional Exclusion Of Terrorism Nuclear Biological Chemical Disposition Of Act 2002"
+         type: string
+         default: "No"
+        BOPExclAccessOrDisclosurePrsnlAndAdvertisingInjuryOnly: 
+         title: "Exclusion - Access Or Disclosure Of Confidential Or Personal Information (Personal And Advertising Injury Only)"
+         type: string
+         default: "No"
+        BOPPhotography: 
+         title: "Photography"
+         type: string
+         default: "No"
+        BOPConditionalExclusionOfTerrorismDispositionOfAct2002: 
+         title: "Conditiona lExclusion Of Terrorism Disposition Of Act 2002"
+         type: string
+         default: "No"
+        OptionalMedicalCovLimitPerPerson: 
+         title: "Medical Liability"
+         type: string
+         default: "5000"
+        AdditionalInsuredList:
+          type: array
+          items:
+           properties:
+            AdditionalInsuredType:
+              title: "Additional Insured Type"
+              type: string
+              enum: ["Controlling Interest","Co-Owner of Insured Premises","Designated Person or Organization","Engineers, Architects or Surveyors","Grantor of Franchise","Loss Payable Clauses","Lessor Of Leased Equipment","Mortgagee, Assignee or Receiver","Managers Or Lessors Of Premises","Owners, Lessees or Contractors - Scheduled Person or Organization","Owners, Lessees or Contractors - With Additional Insured Requirement in Construction Contract","Owners, Lessees or Contractors - Completed Operations","Owners, Lessees or Contractors - With Additional Insured Requirement For Other Parties In Construction Contract","Owners Or Other Interests From Whom Land Has Been Leased","State or Governmental Agency or Subdivision of Political Subdivision - Permits or Authorizations Relating to Premises","State or Governmental Agency or Subdivision of Political Subdivision - Permits or Authorizations","Vendors"]
+              default: "Vendors"
+            AdditionalInsuredDetail:
+             type: object
+             properties:
+              Action: 
+                title: "Action"
+                type: string
+                enum: ["Add","Modify","Delete","No Change"]
+                default: "Add"
+              AINumber:
+                title: "AI Number"
+                type: string
+                default: ""
+              TypeRisk:
+                title: "Type Risk"
+                type: string
+                enum: ["Apartment and Office","Other"]
+                default: "Apartment and Office"
+              AIName:
+                title: "Additional Insured Name"
+                type: string
+                default: "Additional Insured Name"
+              NameofPersonOrOrganization:
+                title: "Name of Person or Organization"
+                type: string
+                default: ""
+              AddressLine1:
+                title: "Address Line 1"
+                type: string
+                default: ""
+              AddressLine2:
+                title: "Address Line 2"
+                type: string
+                default: ""
+              County:
+                title: "County"
+                type: string
+                default: ""
+              City: 
+                title: "City"
+                type: string
+                default: ""
+              ZipCode:
+                title: "ZipCode"
+                type: string
+                default: ""
+              State:
+                title: "State"
+                type: string
+                default: "AL"
+                enum: ["AK","AL","AR","AZ","CA","CO","CT","DC","DE","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA","MA","MD","ME","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","NY","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VA","VT","WA","WI","WV","WY"]
+              StateGovtAgencySubdivOrPolSubdiv:
+                title: "StateGovtAgencySubdivOrPolSubdiv"
+                type: string
+                default: "StateGovtAgencySubdivOrPolSubdiv"
+              YourProducts:
+                title: "YourProducts"
+                type: string
+                default: "YourProducts"
+              LocAndDescOfCompOperations:
+                title: "LocAndDescOfCompOperations"
+                type: string
+                default: "LocAndDescOfCompOperations"
+              DescOfLeasedEquipment:
+                title: "DescOfLeasedEquipment"
+                type: string
+                default: "Description Of Leased Equipment"
+              LossPayableApplicableClause:
+                title: "LossPayableApplicableClause"
+                type: string
+                enum: ["A","B","C","D"]
+                default: "A"
+              DescOfProperty:
+                title: "DescOfProperty"
+                type: string
+                default: "Description Of Property"
+              COIDescription:
+                title: "COIDescription"
+                type: string
+                default: "Certificate of Insurance - Desc"
+        Location:
+         type: array
+         items:
+          properties:         
+           LocationDetail:
+            type: object
+            required:
+             - BOPLocationMoneySecuritiesOnPremCoverageLimit
+             - BOPLocationFireDeptServiceCoverageLimit
+             - BOPLocationOutdoorSignsCoverageLimit
+             - BOPLocationMoneySecuritiesOffPremCoverageLimit
+             - SeparateAnnualAggregateLimit
+             - FungiLimit
+             - EmployeeDishtyApply
+             - FireProtectionClassPPC
+             - NumEmployees
+             - OptionalDeductible
+             - RatingTerritory
+             - WindHailDeductible
+             - WaterBackUpAndSumpOverflow
+             - City
+             - State
+             - ZipCode
+            properties:
+             EmployeeDishtyApply: 
+              title: "Employee Dishonesty Apply"
+              type: string
+              default: "Yes"
+             NumEmployees: 
+              title: "What is the total no of employees?"
+              type: string
+              default: "50"
+             BOPLocationFireDeptServiceCoverageLimit: 
+              title: "Fire Department Service Charge"
+              type: string
+              default: "2500"
+             Building:
+              type: array
+              items:              
+               properties:
+                BuildingDetail:
+                 type: object
+                 required:
+                  - ConstructionType
+                  - BldgCodeEffectivenessGradeClass
+                  - BldgCodeEffectivenessGrade
+                  - AutomaticSprinklerSystem
+                  - SeparateAnnualAggregateLimit
+                  - FungiLimit
+                  - RatingBasis
+                  - PctOwnerOccupied
+                  - BuildingLimit
+                  - BOPTenantsLiabilityLimit
+                  - TerrsmSubLimit
+                  - BOPOrdinanceOrLawCov2CoverageLimit
+                  - DebrisRemovalAdditionalInsurance
+                  - YearBuilt
+                 properties:
+                  BuildingID:
+                   title: "Building Id"
+                   type: string
+                  BldgCodeEffectivenessGrade: 
+                   title: "Building Code Effectiveness Grade"
+                   type: string
+                   enum: ["1","2","3","4","5","6","7","8","9","10","Not Eligible","Ungraded"]
+                   default: "Not Eligible"
+                  BOPOrdinanceOrLawCov2CoverageLimit: 
+                   title: "Increased Cost of Construction"
+                   type: string
+                   default: "10000"
+                  AutomaticSprinklerSystem: 
+                   title: "Automatic Sprinkler System"
+                   type: string
+                   enum: ["Yes", "No"]
+                   default: "Yes"
+                  DebrisRemovalAdditionalInsurance:
+                   type: object
+                   properties:
+                    Limit:
+                     title: "Additional Debris Removal"
+                     type: string
+                     default: "10000"
+                  BOPTenantsLiabilityLimit: 
+                   title: "Damage to premises you rented"
+                   type: string
+                   default: "50000"
+                  BuildingLimit: 
+                   title: "Building Limit"
+                   type: string
+                   default: ""
+                  BldgCodeEffectivenessGradeClass: 
+                   title: "Community Classification "
+                   type: string
+                   enum: ["Building individually inspected and certified as best grade 1","Graded-building constructed before year of community grading","Graded-building constructed during or after year of community grading","Not GradedBuilding individually inspected and certified as best grade 1","Not Graded"]
+                   default: "Graded-building constructed before year of community grading"
+                  RatingBasis: 
+                   title: "Rating Basis"
+                   type: string
+                   default: "Replacement Cost"
+                  Classification:
+                   type: array
+                   items:
+                    properties:
+                     ClassificationDetail:
+                      type: object
+                      required:
+                       - ClassCode
+                       - SquareFootage
+                       - BusnPrsnlPropLimit
+                       - BOPClassificationAccountsReceivableCoverageLimit
+                       - BOPClassificationAccountsReceivableCoverageOffLimit
+                       - BOPClassificationBPPTemporarilyInPortableStorageUnitsCoverageLimit
+                       - BOPClassificationBusnIncomeDependentPropCoverageLimit
+                       - BOPClassificationOutdoorPropertyCoverageLimit
+                       - BOPClassificationValuablePapersCoverageLimit
+                       - BOPClassificationValuablePapersCoverageOffLimit
+                       - BusinessIncomeFromSecondaryDependentProperties
+                       - TerrsmSubLimit
+                       - FuncBusPerPropValApplies
+                       - TotalAnnualGrossSales
+                       - BopFunctlBusnPrsnlPropValtnLimit
+                      properties:                       
+                       BOPClassificationOutdoorPropertyCoverageLimit: 
+                        title: "Outdoor Property ($500 any one plant)"
+                        type: string
+                        default: "2500"
+                       BOPClassificationValuablePapersCoverageOffLimit: 
+                        title: "Off Premises"
+                        type: string
+                        default: "5000"
+                       BOPClassificationBPPTemporarilyInPortableStorageUnitsCoverageLimit: 
+                        title: "Business Personal Property Temporarily in Portable Storage Units"
+                        type: string
+                        default: "10000"
+                       FuncBusPerPropValApplies: 
+                        title: "Functional Business Personal Property Valuation Applies"
+                        type: string
+                        default: "No"
+                       BusinessIncomeFromSecondaryDependentProperties: 
+                        title: "Business Income From Secondary Dependent Properties"
+                        type: string
+                        default: "No"
+                       TotalAnnualGrossSales: 
+                        title: "Total Annual Gross Sales"
+                        type: string
+                        default: "1000000"
+                       BOPClassificationAccountsReceivableCoverageLimit: 
+                        title: "On Premises"
+                        type: string
+                        default: "10000"
+                       BOPClassificationBusnIncomeDependentPropCoverageLimit: 
+                        title: "Business Income from Dependent Properties"
+                        type: string
+                        default: "5000"
+                       ClassDescription: 
+                        title: "Please Select Your Retail Category"
+                        type: string
+                        default: "Fabric - Stores"
+                       MunicipalityCode:
+                        title: "Municipality Code"
+                        type: string
+                       MunicipalityName:
+                        title: "Municipality Name"
+                        type: string
+                       ClassificationID:
+                        title: "Classification ID"
+                        type: string
+                       ClassCode: 
+                        title: "Class code"
+                        type: string
+                        default: "57338"
+                        enum: ["50061","50081","50111","50141","50171","50201","50231","50261","50291","50321","50333","50351","50381","50391","50471","50481","50501","50571","50581","50641","50651","50661","50671","50691","50721","50741","50771","50801","50811","50812","50813","50815","50819","50821","50901","50925","50928","52114","52322","52512","53127","53315","53317","53983","53985","53989","54116","54127","54136","54216","54221","54231","54241","54251","54315","54321","54331","54341","54351","54446","54457","54467","54477","54516","54606","55313","55973","56113","56114","56214","56311","56312","56313","56319","56325","56413","56613","56814","56992","57121","57128","57134","57155","57223","57224","57326","57334","57338","59116","59215","59325","59425","59435","59505","59526","59625","59685","59695","59698","59715","59906","59935","59954","59955","59974","59981","59982","59983","59991","59992","59993","59994","59995","59996","59997","59998","59999","71311","71332","71811","71837","71842","71855","71865","71877","71888","71899","71912","71926","71941","71952","71961","71976","73905","84112","09001","09011","09021","09031","09041","09051","09061","09071","09081","09091","09101","09111","09121","09131","09141","09151","09161","09171","09181","09191","09201","09211","09221","09231","09241","09251","09261","09321","09331","09341","09351","09361","09421","09431","09441","09451","09501","09521","09531","09541","09611","09621","09631","09641","09651","09661","09671","09681","09691"]
+                       SquareFootage: 
+                        title: "Classification Square Footage "
+                        type: string
+                        default: "10000"
+                       BOPClassificationValuablePapersCoverageLimit: 
+                        title: "On Premises"
+                        type: string
+                        default: "10000"
+                       TerrsmSubLimit: 
+                        title: "Terrorism BPP Sub Limit"
+                        type: string
+                       BOPClassificationAccountsReceivableCoverageOffLimit: 
+                        title: "Off Premises"
+                        type: string
+                        default: "5000"
+                       BusnPrsnlPropLimit: 
+                        title: "Please enter your Business Personal Property Limit"
+                        type: string
+                        default: "78000"
+                       BopFunctlBusnPrsnlPropValtnLimit: 
+                        title: "Total Functional Business Personal Property Valuation Limit"
+                        type: string
+                  TerrsmSubLimit: 
+                   title: "Terrorism BPP Sub Limit"
+                   type: string
+                  FungiLimit: 
+                   title: "Fungi Limit - Location "
+                   type: string
+                  SeparateAnnualAggregateLimit: 
+                   title: "Separate Annual Aggregate Limit Applies - Building"
+                   type: string
+                   default: "No"
+                  PctOwnerOccupied: 
+                   title: "Percentage Owner Occupied"
+                   type: string
+                   default: "Not Applicable"
+                  ConstructionType: 
+                   title: "Construction Type"
+                   type: string
+                   enum: ["Frame Construction","Joisted Masonry","Non-combustible","Masonry Non-combustible","Modified Fire-resistive","Fire-resistive"]
+                   default: "Masonry Non-combustible"
+                  YearBuilt: 
+                   title: "Year Built"
+                   type: string
+                   default: "1979"
+             BOPLocationOutdoorSignsCoverageLimit: 
+              title: "Outdoor Signs"
+              type: string
+              default: "10000"
+             WaterBackUpAndSumpOverflow: 
+              type: object
+              properties:
+               BusinessIncomeExtraExpenseAnnualAggregateLimit:
+                title: "Business Income / Expense Limit"
+                type: string
+                default: "5000"
+               CoveredPropertyAnnualAggregateLimit:
+                title: "Covered Property Annual Aggregate Limit"
+                type: string
+                default: "5000"
+               Limit: 
+                title: "Water Backup and Sump Overflow Limit"
+                type: string
+                default: "5000"
+             AddressLine1: 
+              title: "AddressLine1"
+              type: string
+             AddressLine2: 
+              title: "AddressLine2"
+              type: string
+             State: 
+              title: "State"
+              type: string
+              default: "WI"
+              enum: ["AK","AL","AR","AZ","CA","CO","CT","DC","DE","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA","MA","MD","ME","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","NY","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VA","VT","WA","WI","WV","WY"]
+             ZipCode: 
+              title: "ZipCode"
+              type: string
+              default: "53001"
+             City: 
+              title: "City"
+              type: string
+              default: ""
+             LocationID: 
+              title: "LocationID"
+              type: string
+              default: ""  
+             RatingTerritory: 
+              title: "RatingTerritory"
+              type: string
+              default: "701"
+             FireProtectionClassPPC: 
+              title: "Protection Class "
+              type: string
+              enum: ["1","2","3","4","5","6","7","8","8B","9","10","1X","2X","3X","4X","5X","6X","7X","8X","1Y","2Y","3Y","4Y","5Y","6Y","7Y","8Y","10W"]
+              default: "10W"
+             WindHailDeductible: 
+              title: "Wind or Hail Deductible"
+              type: string
+              enum: ["1%","2%","5%","Not Applicable"]
+              default: "Not Applicable"
+             FungiLimit: 
+              title: "Fungi Limit - Location "
+              type: string
+             BOPLocationMoneySecuritiesOffPremCoverageLimit: 
+              title: "Off Premises"
+              type: string
+              default: "1000"
+             SeparateAnnualAggregateLimit: 
+              title: "Separate Annual Aggregate Limit Applies - Location"
+              type: string
+              default: "No"
+             OptionalDeductible: 
+              title: "Optional Deductible"
+              type: string
+              default: "500"
+             BOPLocationMoneySecuritiesOnPremCoverageLimit: 
+              title: "On Premises"
+              type: string
+              default: "1000"
+        BOPInterruptionComputerOpsCoverageLimit: 
+         title: "Interruption of Computer Operations"
+         type: string
+         default: "10000"
+        TRIAExpirationDate: 
+         title: "Enter current TRIA expiration date"
+         type: string
+         default: "2020-12-31"
+        ChangesLimitedFungiCoverage:
+         type: object
+         properties:
+          SeparatePremisesLocationsOption:
+           title: "Separate Premises or Locations Option "
+           type: string
+           default: "No"
+          Limit:
+           title: "Fungi, Dry Rot and Bacteria"
+           type: string
+           default: "15000"
+          BOPLimitedFungiBacteriaCovBusnIncomeExtraExpenseCoverageNumDays:
+           title: "Business Income/Extra Expense Number of Days"
+           type: string
+      OwnerId: 
+       type: string
+       default: "24"
+      ServiceRequestDetail:
+       type: object
+       properties:
+        ResponseType:
+         type: string
+         enum: ["JSON","XML"]
+         default: "JSON"
+        OwnerId:
+         type: string
+         default: "24" 
+        UserName:
+         type: string
+         default: "BOPAgent" 
+        Token:
+         type: string
+        BrowserIp:
+         type: string 
+        ServiceRequestVersion:
+         type: string
+         default: "1.0"
+        ServiceResponseVersion:
+         type: string
+         default: "1.0"
+        RegionCode:
+         type: string
+         default: "US"
+        LanguageCode:
+         type: string
+         default: "en"
+ 
+  Rating_Success_Response:
+    type: object
+    required:
+      - RequestStatus
+      - Policy
+    properties:
+      messageDetail:
+        type: object
+      RequestStatus:
+        type: string
+      Policy:
+       type: object
+       
+  errorModel:
+    type: object
+    required:
+      - RequestStatus
+      - MessageDetail
+    properties:
+      RequestStatus:
+        type: string
+      MessageDetail:
+        type: object
+        properties:
+          MessageCode:
+            type: string
+          MessageType:
+            type: string
+          UserMessage:
+            type: string
+          MessageLevel:
+            type: string
+          MessageSeverity:
+            type: string
+          MessageList:
+            type: object
+            properties:
+              Message:
+                type: array
+                items:
+                  type: string

@@ -283,27 +283,18 @@ definitions:
     type: object
     required:
       - RequestStatus
-      - MessageDetail
+      - RuleInformationList
     properties:
       RequestStatus:
         type: string
-      MessageDetail:
-        type: object
-        properties:
-          MessageCode:
-            type: string
-          MessageType:
-            type: string
-          UserMessage:
-            type: string
-          MessageLevel:
-            type: string
-          MessageSeverity:
-            type: string
-          MessageList:
-            type: object
-            properties:
-              Message:
-                type: array
-                items:
-                  type: string
+      RuleInformationList:
+        type: array
+        items:
+          properties:
+            Message:
+              type: string
+            Status:
+              type: string
+            RuleName:
+              type: string
+            

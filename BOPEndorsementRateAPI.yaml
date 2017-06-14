@@ -5,7 +5,7 @@ info:
   description: To get rate for Business Owners from Solartis Rate 
                API with ISO ERC
 
-host: starrbopkb.uat.solartis.net
+host: starrbopkbv4_2.uat.solartis.net
 basePath: /DroolsV4_2/DroolsService
 schemes:
   - https

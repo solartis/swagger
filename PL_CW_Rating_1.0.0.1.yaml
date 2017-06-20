@@ -5,7 +5,7 @@ info:
   description: To get rate for Profesional Liability from Solartis Rate API with ISO ERC.
   
   
-host: cw.alpha.solartis.net
+host: cwalpha.solartis.net
 basePath: /DroolsV6/DroolsService
 schemes:
   - https

@@ -168,6 +168,9 @@ definitions:
             enum: ["","With Trip Cancellation","With Trip Cancellation for Any Reason"]
           DestinationCountry:
             type: string
+          CubaTravelReason:
+            type: string
+            enum: ["Family visits", "Official business of the U.S. government, foreign governments, and certain intergovernmental organizations", "Journalistic activity", "Professional research and professional meetings", "Educational activities", "Religious activities", "Public performances, clinics, workshops, athletic and other competitions, and exhibitions", "Support for the Cuban people", "Humanitarian projects", "Activities of private foundations or research or educational institutes", "Exportation, importation, or transmission of information or information materials", "Certain authorized export transactions", "Other Licensed Activity"]
           PolicyEffectiveDate:
             type: string
           RentalStartDate:
@@ -221,6 +224,8 @@ definitions:
                 Phone:
                   type: string
                 Email:
+                  type: string
+                OFACLicenseNumber:
                   type: string
                 TravelerIndex:
                   type: string

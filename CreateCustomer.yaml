@@ -1,12 +1,12 @@
 swagger: '2.0'
 info:
   version: '2.0'
-  title: Starr Assist - Save Customer API
+  title: Starr Assist - Create Customer API
   description: |
-    Save Customer API is to save the traveler information and generate a unique identifier which can be referenced to a CSR at any given point in the business flow. From which the CSR would pickup the CRN number and issue a quote in case the user not able to proceed with the flow by Underwriting rulesew the specimen of Policy PDF.
+    Create Customer API is to save the Traveler, Trip information and generate a unique identifier which can be referenced to a CSR at any given point in the business flow. From which the CSR would pickup the CRN number and issue a quote in case the user is not able to proceed with the flow by Underwriting rules.
   
     Features:
-    1. Provides ability to save the Quote, Traveler Informations and generates a Customer Reference Number
+    1. Provides ability to save the Trip, Traveler Informations and generates a Customer Reference Number
     
   contact:
     name: Solartis Support
@@ -24,7 +24,7 @@ paths:
   /FireEventV2:
     post:
       description: Save traveler information and plan information
-      operationId: SaveCustomer
+      operationId: CreateCustomer
       produces:
         - application/json
       parameters:
@@ -159,13 +159,10 @@ definitions:
             enum: ["Single Trip","Annual","Renter's Collision"]
           DepartureDate:
             type: string
-            format: date
           ReturnDate:
             type: string
-            format: date
           DepositDate:
             type: string
-            format: date
           TripCancellationCoverage:
             type: string
             enum: ["","With Trip Cancellation","With Trip Cancellation for Any Reason"]
@@ -173,13 +170,10 @@ definitions:
             type: string
           PolicyEffectiveDate:
             type: string
-            format: date
           RentalStartDate:
             type: string
-            format: date
           RentalEndDate:
             type: string
-            format: date
           RentalLimit:
             type: string
             default: "35000"
@@ -204,7 +198,6 @@ definitions:
               properties:
                 TravelerDOB:
                   type: string
-                  format: date
                 TravelCost:
                   type: string
                 FirstName:

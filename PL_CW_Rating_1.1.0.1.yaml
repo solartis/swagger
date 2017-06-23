@@ -65,6 +65,9 @@ definitions:
       - ServiceRequestDetail
       - Policy
     properties:
+      EndClientUserUniqueSessionId:
+        type: string
+        default: "Uniquesession"
       EndClientUserBrowserSessionId:
         type: string
       EndClientUserBrowserInformation:
@@ -307,6 +310,9 @@ definitions:
       OwnerID:
         type: string
         default: "27"
+      EndClientUserUniqueSessionId:
+        type: string
+        default: "Uniquesession"
       EndClientUserBrowserSessionId:
         type: string
         default: "7Eadfad4444"

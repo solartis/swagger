@@ -1,22 +1,3 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Marketplace
-Gist
- @solartis
- Sign out
- Watch 0
-  Star 0
-  Fork 1 solartis/swagger
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Settings Insights 
-Branch: master Find file Copy pathswagger/Cover Wallet/Alpha/PL_CW_RateAPI_1.0.0.1
-7c72e0a  6 hours ago
-@solartis solartis Update PL_CW_RateAPI_1.0.0.1
-1 contributor
-RawBlameHistory     
-589 lines (581 sloc)  29 KB
 swagger: '2.0'
 info:
   version: "1.0.0"

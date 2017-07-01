@@ -119,7 +119,6 @@ definitions:
           - AdditionalInsuredCoverage
           - EmploymentCategory
           - EffectiveDate
-          - ApplicableFromDate
         properties:
           PolicyType:
             title: "Policy Type"
@@ -143,17 +142,10 @@ definitions:
             title: "Event Version"
             type: string
             default: "1.0.0.2"
-          ProductNumber:
-            title: "Product Number"
-            type: string
-            default: "HC_PLI"
-          ProductVerNumber:
-            title: "Product Version Number"
-            type: string
-            default: "1.0"
           ApplicableFromDate:
             title: "Applicable From Date"
             type: string
+            default: "2017-07-01"
           NumOfProviders:
             title: "Number of Providers"
             type: string
@@ -193,6 +185,14 @@ definitions:
             title: "Employment Category"
             type: string
             enum: ["","Employed","Self-Employed"]
+          ProductNumber:
+            title: "Product Number"
+            type: string
+            default: "HC_PLI"
+          ProductVerNumber:
+            title: "Product Version Number"
+            type: string
+            default: "1.0"
           Provider:
             type: array
             items:
@@ -215,9 +215,6 @@ definitions:
                     LastName:
                       title: "Last Name"
                       type: string
-                    ProviderEmailID:
-                      title: "Provider Email ID"
-                      type: string
                     ProviderClass:
                       title: "Provider Class"
                       type: string
@@ -233,86 +230,13 @@ definitions:
                     HoursWorkPerWeek:
                       title: "Hours Work Per Week"
                       type: string
-                    NonRenewedWithinPast10YearsFactor:
-                      title: "Non-Renewed Within Past 10 Years Factor"
+                    ScheduleRatingFactor: 
+                      title: "Schedule Rating Factor"
                       type: string
-                      default: "10"
-                    ClaimsExperienceFactor:
-                      title: "Claims Experience Factor"
+                    ProviderEmailId:
+                      title: "Provider Email ID"
                       type: string
-                      default: "10"
-                    LicensingBoardExperienceFactor:
-                      title: "Licensing Board Experience Factor"
-                      type: string
-                      default: "10"
-                    OtherExperienceFactor:
-                      title: "Other Experience Factor"
-                      type: string
-                      default: "10"
-                    LossControlFactor:
-                      title: "Loss Control Factor"
-                      type: string
-                      default: "10"
-                    EthicalOrMoralStandingFactor:
-                      title: "Ethical Or Moral Standing Factor"
-                      type: string
-                      default: "10"
-                    NumberOfYearsInBusinessFactor:
-                      title: "Number Of Years In Business Factor"
-                      type: string
-                      default: "10"
-                    MultipleMedicalProfessionsFactor:
-                      title: "Multiple Medical Professions Factor"
-                      type: string
-                      default: "10"
-                    OtherQualityManagementFactor:
-                      title: "Other Quality Management actor"
-                      type: string
-                      default: "10"
-                    NursingHomeFactor:
-                      title: "Nursing Home Factor"
-                      type: string
-                      default: "10"
-                    HospitalFactor:
-                      title: "Hospital Factor"
-                      type: string
-                      default: "10"
-                    FreeStandingClinicFactor:
-                      title: "Free Standing Clinic Factor"
-                      type: string
-                      default: "10"
-                    HomeHealthCareFactor:
-                      title: "Home Health Care Factor"
-                      type: string
-                      default: "10"
-                    MultipleLocationsFactor:
-                      title: "Multiple Locations Factor"
-                      type: string
-                      default: "10"
-                    OtherLocationFactor:
-                      title: "Other Location Factor"
-                      type: string
-                      default: "10"
-                    DirectPatientCareFactor:
-                     title: "Direct Patient Care Factor"
-                     type: string
-                     default: "10"
-                    CostmeticProceduresFactor:
-                     title: "Costmetic Procedures Factor"
-                     type: string
-                     default: "10"
-                    SupervisionOfOthersFactor:
-                     title: "Supervision Of Others Factor"
-                     type: string
-                     default: "10"
-                    CorrectionalFacilitiesFactor:
-                     title: "Correctional Facilities Factor"
-                     type: string
-                     default: "10"
-                    OtherAreaOfPracticeFactor:
-                     title: "Other Area Of Practice Factor"
-                     type: string
-                     default: "10"
+  
       OwnerId:
         type: string
         default: "27"
@@ -384,10 +308,6 @@ definitions:
           EventVersion:
             title: "Event Version"
             type: string
-          ProductNumber:
-            title: "Product Number"
-          ProductVerNumber:
-            title: "Product Version Number"
           ApplicableFromDate:
             title: "Applicable From Date"
             type: string
@@ -449,6 +369,10 @@ definitions:
             type: string
           TotalTFSAmount:
             type: string
+          ProductNumber:
+            title: "Product Number"
+          ProductVerNumber:
+            title: "Product Version Number"
           Provider:
             type: array 
             items:
@@ -465,6 +389,9 @@ definitions:
                     LastName:
                       title: "Last Name"
                       type: string
+                    ProviderEmailId:
+                      title: "Provider Email ID"
+                      type: string
                     ProviderClass:
                       title: "Provider Class"
                       type: string
@@ -477,74 +404,6 @@ definitions:
                     HoursWorkPerWeek:
                       title: "Hours Work Per Week"
                       type: string
-                    NonRenewedWithinPast10YearsFactor:
-                      title: "Non-Renewed Within Past 10 Years Factor"
-                      type: string
-                    ClaimsExperienceFactor:
-                      title: "Claims Experience Factor"
-                      type: string
-                    LicensingBoardExperienceFactor:
-                      title: "Licensing Board Experience Factor"
-                      type: string
-                    OtherExperienceFactor:
-                      title: "Other Experience Factor"
-                      type: string
-                    LossControlFactor:
-                      title: "Loss Control Factor"
-                      type: string
-                    EthicalOrMoralStandingFactor:
-                      title: "Ethical Or Moral Standing Factor"
-                      type: string
-                    NumberOfYearsInBusinessFactor:
-                      title: "Number Of Years In Business Factor"
-                      type: string
-                    MultipleMedicalProfessionsFactor:
-                      title: "Multiple Medical Professions Factor"
-                      type: string
-                    OtherQualityManagementFactor:
-                      title: "Other Quality Management actor"
-                      type: string
-                    NursingHomeFactor:
-                      title: "Nursing Home Factor"
-                      type: string
-                    HospitalFactor:
-                      title: "Hospital Factor"
-                      type: string
-                    FreeStandingClinicFactor:
-                      title: "Free Standing Clinic Factor"
-                      type: string
-                    HomeHealthCareFactor:
-                      title: "Home Health Care Factor"
-                      type: string
-                    MultipleLocationsFactor:
-                      title: "Multiple Locations Factor"
-                      type: string
-                    OtherLocationFactor:
-                      title: "Other Location Factor"
-                      type: string
-                    DirectPatientCareFactor:
-                     title: "Direct Patient Care Factor"
-                     type: string
-                    CostmeticProceduresFactor:
-                     title: "Costmetic Procedures Factor"
-                     type: string
-                    SupervisionOfOthersFactor:
-                     title: "Supervision Of Others Factor"
-                     type: string
-                    CorrectionalFacilitiesFactor:
-                     title: "Correctional Facilities Factor"
-                     type: string
-                    OtherAreaOfPracticeFactor:
-                     title: "Other Area Of Practice Factor"
-                     type: string
-                    ExperienceFactor:
-                     type: string
-                    QualityManagementFactor:
-                     type: string
-                    LocationFactor:
-                     type: string
-                    AreaofPracticeFactor:
-                     type: string
                     ScheduleRatingFactor:
                      type: string
                     ProfessionalLiabilityBaseRate:
@@ -556,8 +415,6 @@ definitions:
                     NewProviderDiscountFactor:
                      type: string
                     PartTimeDiscountFactor:
-                     type: string
-                    GroupDiscountFactor:
                      type: string
                     TotalCappedCredits:
                      type: string

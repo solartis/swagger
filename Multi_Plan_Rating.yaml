@@ -218,6 +218,12 @@ definitions:
         type: object
       RequestStatus:
         type: string
+      NumberofPlansRated:
+        type: string
+      NumberofPlansRatedSuccessfully:
+        type: string
+      NumberofPlansRatingFailed:
+        type: string
       PlanWisePremiumCoverageInformation:
         type: array
         items:
@@ -267,6 +273,8 @@ definitions:
                 TripCancellationCoverage:
                   type: string
                 CFARErrorMessage:
+                  type: string
+                PlanStatus:
                   type: string
             CoverageInformation:
               type: array

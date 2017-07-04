@@ -5,7 +5,7 @@ info:
   description: Cancel API is used by the customer to cancel the issued policy
   
 host: starrglalpha.solartis.net
-basePath: /DroolsV4_2/DroolsService
+basePath: /DroolsV6/DroolsService
 schemes:
   - https
 consumes:
@@ -34,6 +34,22 @@ paths:
           required: true
           type: string
           default: "application/json"
+          
+         - name: EventName
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "CancelIssuance"
+          
+        - name: EventVersion
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "1.0.0.1"
         
         - name: Cancel Request
           in: body
@@ -66,24 +82,24 @@ definitions:
           EndClientUserUniqueSessionId: 
            title: "Client User Unique Session ID"
            type: string
-           default: ""
+           default: "Uniqusession"
           EndClientUserBrowserSessionId:
            title: "EndClientUserBrowserSession ID"
            type: string
-           default: ""
+           default: "Uniquesession"
           EndClientUserBrowserInformation:
            title: "EndClientUserBrowserInformation"
            type: string
-           default: ""
+           default: "Uniquesession"
           ClientUniqueRequestID:
            type: string
-           default: ""
+           default: "1.0"
           ServiceRequestVersion:
            type: string
            default: "1.0"
           OwnerId:
             type: string
-            default: "24"
+            default: "30"
           ResponseType:
            title: "Response Type"
            type: string
@@ -100,14 +116,14 @@ definitions:
        default: "CancelWorkflow"
       ProductNumber:
        type: string
-       default: "STARR SGL"
+       default: "GL"
       ProductVerNumber:
        type: string
-       default: "STARR_GL_2017_V 1.0.0.1"
-      Policynumber:
+       default: "1.0"
+      PolicyNumber:
        type: string
        default: ""
-      Canceltype:
+      CancelType:
        type: string
        enum: ["Flat", "Prorata","Shortrate"]
        default: "Flat"

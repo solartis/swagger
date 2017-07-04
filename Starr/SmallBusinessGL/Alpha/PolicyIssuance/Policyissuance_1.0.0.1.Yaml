@@ -37,14 +37,14 @@ paths:
           required: true
           type: string
           format: string
-          default: "PLICalculateRate"
+          default: "IssuanceWorkflow"
         - name: EventVersion
           in: header
           description: Name of the event to be invoked
           required: true
           type: string
           format: string
-          default: "1.1.0.1"
+          default: "1.0.0.1"
         - name: Policy_Issuance
           in: body
           description: Policy_Issuance_Request

@@ -206,7 +206,7 @@ definitions:
          title: "Number of Employees"
          type: string
          default: ""
-        GeneralLiabilityDamageToPremisesRentedToYouCoverage.Limit:
+        GeneralLiabilityDamageToPremisesRentedToYouCoverageLimit:
          title: "Damage To Premises Rented To You Limit"
          type: string
          default: ""

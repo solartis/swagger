@@ -144,46 +144,46 @@ definitions:
         title: "Payment Card CVV"
         type: string
         default: "333"
-      PaymentCardExpiryYear:
+      PaymentCardExpirationDate:
         title: "Card Expiration Date"
         type: string
         default: "11-2019"
-      CardholderpartyName:
+      CardHolderPayerName:
         title: "Card Holder name"
         type: string
         default: "Jhon Doe"
-      CardholderAddressLine1:
+      CardHolderAddress1:
         title: "Card Holder Address Line 1"
         type: string
         default: "60 East Street"
-      CardholderAddressLine2:
+      CardHolderAddress2:
         title: "Card Holder Address Line 2"
         type: string
         default: "Avenue of America"
-      CardholderCity:
-        title: "Card holder city"
+      CardHolderCity:
+        title: "Card Holder city"
         type: string
         default: "New York"
-      cardholderState:
-        title: "Card holder state"
+      CardHolderState:
+        title: "Card Holder state"
         type: string
         default: "New York"
-      cardholderCountry:
-        title: "card holder county"
+      cardHolderCounty:
+        title: "card Holder county"
         type: string
-        default: "New York"
-      cardholderZipcode:
-        title: "card holder zip code"
+        default: "NY"
+      cardHolderZipcode:
+        title: "card Holder zip code"
         type: string
         default: "10022"
-      cardholderZipcode2:
+      cardHolderZipcode2:
         type: string  
-      cardholderEmail:
-        title: "card holder email"
+      cardHolderEmail:
+        title: "card Holder email"
         type: string
         default: "abc@xyz.com"
-      cardholderPhone:
-        title: "card holder phone number"
+      cardHolderPhone:
+        title: "card Holder phone number"
         type: string
         default: "8459999999"
       PaymentPlancode:

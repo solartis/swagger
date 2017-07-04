@@ -95,13 +95,20 @@ definitions:
            default: "JSON"
           BrowserIp:
            type: string
-           default: "" 
+           default: "127.0.0.1"
+          RegionCode:
+           title: "Region Code"
+           type: string
+           default: "US"  
       EndClientUserUniqueSessionId:
         type: string
+        default: "Uniquesession"
       EndClientUserBrowserSessionId:
         type: string
+        default: "Uniquesession"
       EndClientUserBrowserInformation:
         type: string
+        default: "Uniquesession"
       ClientUniqueRequestID:
         type: string
       VersionNumber:
@@ -109,13 +116,13 @@ definitions:
         default: "1.0.0.1"
       EventName:
         type: string
-        default: "PolicyIssuance"
+        default: "PolicyIssuanceWorkflow"
       ProductNumber:
         type: string
-        default: "STARR SGL"
+        default: "GL"
       ProductVerNumber:
         type: string
-        default: "STARR_GL_2017_V 1.0.0.1"
+        default: "1.0"
       QuoteNumber:
         title: "Quote Number"
         type: string
@@ -137,20 +144,20 @@ definitions:
         title: "Payment Card CVV"
         type: string
         default: "333"
-      PaymentCardExpirationDate:
+      PaymentCardExpiryYear:
         title: "Card Expiration Date"
         type: string
         default: "11-2019"
-      CardHolderPayerName:
+      CardholderpartyName:
         title: "Card Holder name"
         type: string
         default: "Jhon Doe"
-      CardHolderAddress1:
-        title: "Card Holder Address 1"
+      CardholderAddressLine1:
+        title: "Card Holder Address Line 1"
         type: string
         default: "60 East Street"
-      CardHolderAddress2:
-        title: "Card Holder Address 2"
+      CardholderAddressLine2:
+        title: "Card Holder Address Line 2"
         type: string
         default: "Avenue of America"
       CardholderCity:
@@ -161,26 +168,26 @@ definitions:
         title: "Card holder state"
         type: string
         default: "New York"
-      CardHolderStateCode:
-        title: "card holder StateCode"
+      cardholderCountry:
+        title: "card holder county"
         type: string
         default: "New York"
-      cardHolderZipcode:
+      cardholderZipcode:
         title: "card holder zip code"
         type: string
         default: "10022"
-      cardHolderZipcode2:
+      cardholderZipcode2:
         type: string  
-      cardHolderEmail:
+      cardholderEmail:
         title: "card holder email"
         type: string
         default: "abc@xyz.com"
-      cardHolderPhone:
+      cardholderPhone:
         title: "card holder phone number"
         type: string
         default: "8459999999"
       PaymentPlancode:
-        title: "Installement Plan Code"
+        title: "Payment Plan code"
         type: string
         enum: ["TA01", "BQ25", "BQ50"]
         default: "TA01"

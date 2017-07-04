@@ -150,6 +150,7 @@ definitions:
          title: "Conditional Exclusion Of Terrorism Involving Nuclear, Biological Or Chemical Terrorism "
          type: string
          enum: ["Yes","No"]
+         default: "No"
         GeneralLiabilityExclusionOfTerrorismNuclearBiologicalChemicalTerrorism:
          title: "Exclusion Of Terrorism Involving Nuclear, Biological Or Chemical Terrorism"
          type: string
@@ -192,7 +193,7 @@ definitions:
          title: "Employee Benefits Liability Limit of Insurance - each Employee"
          type: string
          enum: [ "300,000 CSL","500,000 CSL","1,000,000 CSL","2,000,000 CSL"]
-         default: ""
+         default: "1,000,000 CSL"
         AggregateLimitInt:
          title: "Employee Benefits Liability Limit of Insurance - Aggregate"
          type: string
@@ -235,10 +236,9 @@ definitions:
                 State:
                     title: "State"
                     type: string
-                    enum: ["SC","MI","PA","NC","AL","MO","MS","TN","IN","AZ","MD","DC","OH","CO","OK","KS","NV","WI","NM","IA","SD","ID","UT","MT","WY","ND","OR","NE","DE"]
                     default: "AL"
                 ZipCode:
-                    title: "ZipCode"
+                    title: "Zip Code"
                     type: string
                     default: "35005"
                 PremisesOperationsTerritory:
@@ -259,7 +259,6 @@ definitions:
                             Classcode:
                                 title: "Class code"
                                 type: string
-                                enum: ["10010","10042","10071","10111","10113","10120","10141","10146","10150","10204","11007","11126","11127","11160","11222","11248","12014","12375","12797","12805","12841","13351","13590","13621","13673","13716","13759","14068","14279","14405","14655","14733","14734","14734","14913","15607","15699","15839","15991","16402","16403","16471","16527","16604","16676","16892","18109","18110","18206","18437","18437","18507","41677","41677","51350","51351","51352","52002","52002","59964","66122","66122","66561","66561","90089","91555","92663","92663"]
                                 default: "10010"
                             PremOpsExposure:
                                 title: "Premises Operations Exposure"
@@ -276,28 +275,27 @@ definitions:
                             GeneralLiabilityExclCovCMedPayLocClassLvl:
                                 title: "Exclusion - Coverage C - Medical Payments"
                                 type: string
-                                enum: ["Yes","No"]
                                 default: "No"
                             PremOpsAddlCovFactor:
                                 title: "Premises Operations Additional Coverage Factor"
                                 type: string
-                                default: "1"
+                                default: ""
                             PremOpsBIDeductible:
                                 title: "Premises Operations BI Deductible"
                                 type: string
-                                default: "No Deductible"
+                                default: ""
                             PremOpsPDDeductible:
                                 title: "Premises Operations PD Deductible"
-                                type: string 
-                                default: "No Deductible"
-                            PremOpsBIPDDeductible:
-                                title: "Premises Operations BIPD Deductible"
                                 type: string
-                                default: "No Deductible"
+                                default: ""
+                            PremOpsBIPDDeductible:
+                                title: "Premises Operations BIPD Deductible" 
+                                type: string
+                                default: ""
                             SprayPainting:
                                 title: "Spray Painting"
                                 type: string
-                                default: "No"
+                                default: ""
         AdditionalInsuredList:
          type: array
          items:

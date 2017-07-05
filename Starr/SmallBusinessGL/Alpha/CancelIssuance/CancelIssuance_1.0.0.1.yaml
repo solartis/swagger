@@ -1,6 +1,6 @@
 swagger: '2.0'
 info:
-  version: "1.0.0"
+  version: "1.0.0.1"
   title: STARR Small Business General Liability - Cancel API
   description: Cancel API is used by the customer to cancel the issued policy
   

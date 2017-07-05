@@ -115,6 +115,7 @@ definitions:
         default: "Uniquesession"
       ClientUniqueRequestID:
         type: string
+        default: "Uniquesession"
       VersionNumber:
         type: string
         default: "1.0.0.1"

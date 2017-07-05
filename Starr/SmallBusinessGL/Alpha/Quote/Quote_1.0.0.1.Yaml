@@ -268,7 +268,7 @@ definitions:
         Productionchannel:
          title: "Production Channel"
          type: string
-         enum: ["DTC,"CW"]
+         enum: ["DTC","CW"]
          default: "DTC"
         Location:
           type: array

@@ -149,8 +149,8 @@ definitions:
         Subline:
          title: "Subline"
          type: string
-         enum: [ "Premies/Operations and Products/Completed Operations","Premises/Operations","Products/Completed Operations"]
-         default: "Premies/Operations and Products/Completed Operations"
+         enum: [ "Premises/Operations and Products/Completed Operations","Premises/Operations","Products/Completed Operations"]
+         default: "Premises/Operations and Products/Completed Operations"
         GeneralLiabilityMedpayCoverageLimit:
          title: "Medical Payments Limit"
          type: string
@@ -167,7 +167,7 @@ definitions:
         GeneralAggregateLimit:
          title: "General Aggregate Limit"
          type: string
-         default: ""
+         default: "2,000,000 CSL"
         TerrorismCoverage:
          title: "Accept Certified Acts of Terrorism Coverage"
          type: string
@@ -229,7 +229,7 @@ definitions:
         AggregateLimitInt:
          title: "Employee Benefits Liability Limit of Insurance - Aggregate"
          type: string
-         default: ""
+         default: "2,000,000 CSL"
         DeductibleInt:
          title: "Employee Benefits Liability Deductible"
          type: string
@@ -311,23 +311,23 @@ definitions:
                             PremOpsAddlCovFactor:
                                 title: "Premises Operations Additional Coverage Factor"
                                 type: string
-                                default: ""
+                                default: "1"
                             PremOpsBIDeductible:
                                 title: "Premises Operations BI Deductible"
                                 type: string
-                                default: ""
+                                default: "No Deductible"
                             PremOpsPDDeductible:
                                 title: "Premises Operations PD Deductible"
                                 type: string
-                                default: ""
+                                default: "No Deductible"
                             PremOpsBIPDDeductible:
                                 title: "Premises Operations BIPD Deductible" 
                                 type: string
-                                default: ""
+                                default: "No Deductible"
                             SprayPainting:
                                 title: "Spray Painting"
                                 type: string
-                                default: ""
+                                default: "No"
         AdditionalInsuredList:
          type: array
          items:

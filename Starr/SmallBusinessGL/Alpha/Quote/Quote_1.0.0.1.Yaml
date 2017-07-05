@@ -1,8 +1,8 @@
 swagger: '2.0'
 info:
   version: "1.0.0.1"
-  title: Solartis Quote API for STARR Smallbusiness General Liability
-  description: To get rate for General Liability from Solartis Quote 
+  title: Solartis Quote API for STARR SmallBusiness General Liability
+  description: To get rate for SmallBusiness General Liability from Solartis Quote 
                API with ISO ERC
 
 host: starrglalpha.solartis.net
@@ -28,14 +28,12 @@ paths:
           type: string
           format: string
           default: "HzhAo4CbF/h3sUqNu9samOpuM/fUjfkVztgESsH7udp80k5yVLm79dKYysDbkulxXUv434aVbgPqr59TTj7RQzRB//HqhOV+Kg7ig72VDD/ofFNP0eMGRzK1wOfvCbR3aKw9qlED61a1lgFAoA2a2rLPXrBh/FzYxPMjYEPi8HJE7nDKTBS0KkocOeSUsj8z5zLA8mZnvGmxh4HJbVeqWExdBFyJUz7XJRY9rDW9YV09sOeoJAZddIOJ/Ox3oGX+4u1RH2wEi+vr5YkpgXY1xVRmLdK2SVXrMDedPWZNiqNNjRUUUSq1y4NKyCNxQXjDjiDGofUSvboBuLDE6DT/8oPxVLlKEuu6QNd+Wn2EgxoTfye4Qe71FYzZ6gmgT7Bi09eiWxPkUPcJtrg7KGg23Orp1dqMQWRkgQtjIfQCJapfME56GZbbvXzldsg/xpkz1cUGmko0zdOuDo6rVVSY7l77yj5qBwmKxkV4yJC1b12pie2Yr7xXu7mGPiP19zvahS29HRF5DYYc7sT1GPttRSsZW+9/wrSJiCqoVG0NX9IhHcsN9bAdMn7gzEy4tffqctu1Ix+CpaHNIwia8OelYNDrSVfq7AxSoiQhJjukKOxDcirv00KBIt2SWer42NI5BdfNWDdshrhbme+CEXTh5jdQJUsvnc63erI+Ae0S9noTMBrklNX3N0KrQWc2YZOOyM+LpxwNumqsQuJZjepi8eFgOkfH7dJ2DEcpLAWbSXHAhaP4vBzhGH7ZKia8Zae78bGP72tt3SMc+TgHVbOTcfrzHKz2gGY78EgFmVSzk8yC4A2iI2xyXe7BkX5EfEC2TpbN5pOrbu+gYJWwhutLosJunuvW+cv908fUrBvzOI6ttcS4GqL0su2NawM7pEUBYDvphyZfG99mILy2irt9I4i6LNeyot3EaQ2JG7XdwYx6EyN7cCSruqAMrHdhC4pGXw/27HNlrG8XDi0yv1Lceoi6LNeyot3EaQ2JG7XdwYz2KWF3J+4j5qGwMJQxZQqB5HXuAheyF1X15SFHpFGSUXOHSWYev+OmEAYnkK6tOPtx9gErwTLkhbTD49Ub7omytie2WHF3eq3h0GFuCs3t2g=="
-        
         - name: Content-Type
           in: header
           description: Content Type
           required: true
           type: string
-          default: "application/json"
-		  
+          default: "application/json"	  
 	- name: EventName
           in: header
           description: Name of the event to be invoked
@@ -43,15 +41,13 @@ paths:
           type: string
           format: string
           default: "QuoteWorkflow"
-          
         - name: EventVersion
           in: header
           description: Name of the event to be invoked
           required: true
           type: string
           format: string
-          default: "1.0.0.1"
-        
+          default: "1.0.0.1"       
         - name: Rating Request
           in: body
           description: For rating request

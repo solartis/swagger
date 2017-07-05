@@ -1,7 +1,7 @@
 swagger: '2.0'
 info:
   version: "1.0.0.1"
-  title: Solartis Rate API for STARR Smallbusiness General Liability
+  title: Solartis Rate API for STARR SmallBusiness General Liability
   description: To get rate for General Liability from Solartis Rate 
                API with ISO ERC
 
@@ -16,7 +16,7 @@ produces:
 paths:
   /FireEventV2:
     post:
-      description: Gets Rate for General Liability based on ISO ERC
+      description: Gets Rate for Small Business General Liability based on ISO ERC
       operationId: getRates
       produces:
         - application/json

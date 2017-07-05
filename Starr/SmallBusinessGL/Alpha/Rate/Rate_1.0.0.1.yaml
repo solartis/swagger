@@ -71,6 +71,10 @@ definitions:
   Rating_Request:
     type: object
     properties:
+      OwnerID:
+       title: "Owner ID"
+       type: string
+       default: "30"
       EndClientUserUniqueSessionId: 
        title: "Client User Unique Session ID"
        type: string

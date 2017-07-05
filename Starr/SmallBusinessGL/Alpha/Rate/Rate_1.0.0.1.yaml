@@ -1,8 +1,8 @@
 swagger: '2.0'
 info:
   version: "1.0.0.1"
-  title: Solartis Rate API for STARR SmallBusiness General Liability
-  description: To get rate for General Liability from Solartis Rate 
+  title: Solartis Rate API for STARR Small Business General Liability
+  description: To get rate for Small Business General Liability from Solartis Rate 
                API with ISO ERC
 
 host: starrglalpha.solartis.net
@@ -113,11 +113,11 @@ definitions:
         EffectiveDate: 
          title: "Policy Start Date"
          type: string
-         default: "2017-04-01"
+         default: "01-04-2017"
         ExpirationDate: 
          title: "Policy Expiry Date"
          type: string
-         default: "2018-04-01"
+         default: "01-04-2017"
         LastRateLookUpDate:
          title: "LastRateLookUpDate"
          type: string

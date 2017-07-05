@@ -78,7 +78,7 @@ definitions:
          title: "ProductNumber"
          type: string
          default: "GL"
-         EventVersion:
+        EventVersion:
          title: "Event Version"
          type: string
          default: "1.0.0.1"
@@ -469,7 +469,7 @@ definitions:
          type: string
         QuoteNumber:
          title: "Quote Number"
-         type: default
+         type: string
         Classification:
          type: object
          properties:

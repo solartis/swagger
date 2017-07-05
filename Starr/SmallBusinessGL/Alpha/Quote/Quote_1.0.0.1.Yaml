@@ -71,9 +71,25 @@ definitions:
        title: "Client User Unique Session ID"
        type: string
        default: "Uniquesession"
+      EndClientUserBrowserSessionId: 
+       title: "Client User Browser Session ID"
+       type: string
+       default: "Uniquesession"
+      EndClientUserBrowserInformation: 
+       title: "Client User Browser Information"
+       type: string
+       default: "Uniquesession"
+      ClientUniqueRequestID: 
+       title: "Client Unique Request ID"
+       type: string
+       default: "Uniquesession"
       Policy:
        type: object
        properties:
+        OwnerID:
+         title: "Owner ID"
+         type: string
+         default: "30"
         ProductNumber:
          title: "ProductNumber"
          type: string

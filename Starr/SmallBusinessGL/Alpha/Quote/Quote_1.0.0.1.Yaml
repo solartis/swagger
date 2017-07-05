@@ -264,7 +264,12 @@ definitions:
          title: "Does the insured wish to purchase coverage for premises that  are certified as being lead free?"
          type: string
          enum: ["Yes","No"]
-         default: "No"		 
+         default: "No"	
+        Productionchannel:
+         title: "Production Channel"
+         type: string
+         enum: ["DTC,"CW"]
+         default: "DTC"
         Location:
           type: array
           items:
@@ -486,6 +491,18 @@ definitions:
         QuoteNumber:
          title: "Quote Number"
          type: string
+        ReductionfactorList:
+         title: "ReductionfactorList"
+         type: string
+        Reductionfactor1:
+          title: "Reductionfactor1"
+          type: string
+        Reductionfactor2:
+          title: "Reductionfactor2"
+          type: string
+        Reductionfactor3:
+          title: "Reductionfactor3"
+          type: string
         Classification:
          type: object
          properties:

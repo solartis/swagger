@@ -1,12 +1,12 @@
 swagger: '2.0'
 info:
-  version: "1.0.0"
+  version: "1.0.0.1"
   title: Solartis Rate API for STARR Smallbusiness General Liability
   description: To get rate for General Liability from Solartis Rate 
                API with ISO ERC
 
 host: starrglalpha.solartis.net
-basePath: /DroolsV4_2/DroolsService
+basePath: /DroolsV6/DroolsService
 schemes:
   - https
 consumes:
@@ -35,6 +35,22 @@ paths:
           required: true
           type: string
           default: "application/json"
+          
+        - name: EventName
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "StarrGLRate"
+          
+        - name: EventVersion
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "1.0.0.1"
         
         - name: Rating Request
           in: body
@@ -59,6 +75,18 @@ definitions:
        title: "Client User Unique Session ID"
        type: string
        default: "Uniquesession"
+      EndClientUserBrowserSessionId: 
+       title: "Client User Browser Session ID"
+       type: string
+       default: "Uniquesession"
+      EndClientUserBrowserInformation: 
+       title: "Client User Browser Information"
+       type: string
+       default: "Uniquesession"
+      ClientUniqueRequestID: 
+       title: "Client Unique Request ID"
+       type: string
+       default: "Uniquesession"
       Policy:
        type: object
        properties:
@@ -69,11 +97,11 @@ definitions:
         ProductVerNumber: 
          title: "ProductVerNumber"
          type: string
-         default: ""         
+         default: "1.0"         
         EventName: 
          title: "EventName"
          type: string
-         default: "STARRGLRate"
+         default: "StarrGLRate"
         ISOERCVersion: 
          title: "State and ERC Version identifier"
          type: string
@@ -83,19 +111,23 @@ definitions:
          type: string
          default: "2017-04-01"
         ExpirationDate: 
-         title: "PolicyExpiryDate"
+         title: "Policy Expiry Date"
          type: string
          default: "2018-04-01"
+        LastRateLookUpDate:
+         title: "LastRateLookUpDate"
+         type: string
+         default: ""
         InsuredName: 
          title: "InsuredName"
          type: string
          default: "John Smith"
-        Addressline2: 
-         title: "Address Line 2"
-         type: string
-         default: ""
         Addressline1: 
          title: "Address Line 1"
+         type: string
+         default: ""
+        Addressline2: 
+         title: "Address Line 2"
          type: string
         City: 
          title: "City"
@@ -119,7 +151,7 @@ definitions:
          type: string
          enum: [ "Premies/Operations and Products/Completed Operations","Premises/Operations","Products/Completed Operations"]
          default: "Premies/Operations and Products/Completed Operations"
-        GeneralLiabilityMedpayCoverage.Limit:
+        GeneralLiabilityMedpayCoverageLimit:
          title: "Medical Payments Limit"
          type: string
          default: "5000"
@@ -127,7 +159,7 @@ definitions:
          title: "Coverage Form"
          type: string
          default: "Occurrence"
-        EachOccurrenceLimt:
+        EachOccurrenceLimit:
          title: "Each Occurrence Limit"
          type: string
          enum: [ "300,000 CSL", "500,000 CSL","1,000,000 CSL","2,000,000 CSL"]

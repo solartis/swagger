@@ -62,7 +62,7 @@ paths:
        '200':
         description: Success Response
         schema:
-         $ref: '#/definitions/Rating_Success_Response'
+          $ref: '#/definitions/Rating_Success_Response'
        default:
         description: unexpected error
         schema:
@@ -211,11 +211,11 @@ definitions:
         TRIAExpirationDate :
          title: "TRIA Expiration Date"
          type: string
-         default: ""
+         default: "2018-04-01"
         TerrorismAggregateLimit:
          title: "Terrorism Aggregate Limit"
          type: string
-         default: ""
+         default: "1,000,000 CSL"
         EmployeeBenefitsLiability:
          title: "Employee Benefits Liability"
          type: string
@@ -237,7 +237,7 @@ definitions:
         NumEmployees:
          title: "Number of Employees"
          type: string
-         default: ""
+         default: "10"
         Location:
           type: array
           items:
@@ -419,4 +419,98 @@ definitions:
         type: string
       Policy:
        type: object
-  
+       required: 
+          - Classification
+          - AdditionalInsured
+       properties:
+        EffectiveDate:
+         title: "Effective Date"
+         type: string
+        ExpirationDate:
+         title: "Expiration Date"
+         type: string
+        BasePremium:
+         title: "Base Premium"
+         type: string
+        EmployeeBenefitsLiabCovCalculatedPremium:
+         title: "Employee Benedits Liability Covearge Calculated Premium"
+         type: string
+        EmployeeBenefitsLiabCovPremium:
+         title: "Employee Benedits Liability Covearge Premium"
+         type: string
+        TerrorismCalculatedPremium:
+         title: "Terrorism Calculated Premium"
+         type: string
+        TerrorismPremium:
+         title: "Terrorism Premium"
+         type: string
+        TFSAmount:
+         title: "TFS Amount"
+         type: string
+        TotalProratedTFSAmount:
+         title: "Total Prorated TFS Amount"
+         type: string
+        TotalPremium:
+         title: "Total Premium"
+         type: string
+        LCM:
+         title: "LCM"
+         type: string
+        Classification:
+         type: object
+         properties:
+          PremOpsCoverageCalculatedPremium: 
+           title: "Premises Operation Liability Coverage Calculated Premium"
+           type: string
+          PremOpsCoverageClasslevelPremium:
+           title: "Premises Operation Liability Coverage Classlevel Premium"
+           type: string
+          PremOpsCoveragePremium:
+           title: "Premises Operation Liability Coverage  Premium"
+           type: string
+          ILFPremOps:
+           title: "ILFPremOps"
+           type: string
+          PremiumBasePremOps:
+           title: "PremiumBasePremOps"
+           type: string
+          FinalRate:
+           title: "FinalRate"
+           type: string
+          BaseRate:
+           title: "BaseRate"
+           type: string
+          FinalILF:
+           title: "FinalILF"
+           type: string
+          PremOpsELPFactor:
+           title: "PremOpsELPFactor"
+           type: string
+          PremOpsIncrdLimitFactor:
+           title: "PremOpsIncrdLimitFactor"
+           type: string
+          CSLILF:
+           title: "CSLILF"
+           type: string
+          DeductibleFactor:
+           title: "DeductibleFactor"
+           type: string
+          MedicalPaymentsCharge:
+           title: "MedicalPaymentsCharge"
+           type: string
+          FinalPremOpsIncrdLimitTableAssignment:
+           title: "FinalPremOpsIncrdLimitTableAssignment"
+           type: string
+        AdditionalInsured:
+         type: object
+         properties:
+          AdditionalInsuredCalculatedPremium:
+           title: "AdditionalInsuredCalculatedPremium"
+           type: string
+          AdditionalInsuredPremium:
+           title: "AdditionalInsuredPremium"
+           type: string
+           
+          
+         
+   

@@ -1,6 +1,6 @@
 swagger: '2.0'
 info:
-  version: '1.0.0'
+  version: '1.0.0.1'
   title: Starr GL - Issuance API
   description: Issuance API will validate the Payment & Quote Info & Process the Payment and on successful payment, Issues the Policy for the given Quote.  
 host: starrglalpha.solartis.net
@@ -87,7 +87,7 @@ definitions:
           UserName:
            title: "User Name"
            type: string
-           default: "GLAgent"
+           default: "StarrGLagent"
           ResponseType:
            title: "Response Type"
            type: string
@@ -96,6 +96,10 @@ definitions:
           BrowserIp:
            type: string
            default: "127.0.0.1"
+          LanguageCode:
+           title: "Language Code"
+           type: string
+           default: "en"    
           RegionCode:
            title: "Region Code"
            type: string
@@ -117,6 +121,9 @@ definitions:
       EventName:
         type: string
         default: "PolicyIssuanceWorkflow"
+      EventVersion:
+        type: string
+        default: "V1"
       ProductNumber:
         type: string
         default: "GL"
@@ -126,6 +133,7 @@ definitions:
       QuoteNumber:
         title: "Quote Number"
         type: string
+        default: "45866"
       PaymentMethod:
         title: "Payment Method"
         type: string

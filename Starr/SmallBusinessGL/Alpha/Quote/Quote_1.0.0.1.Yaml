@@ -78,10 +78,10 @@ definitions:
          title: "ProductNumber"
          type: string
          default: "GL"
-		EventVersion:
-		 title: "Event Version"
-		 type: string
-		 default: "1.0.0.1"
+         EventVersion:
+         title: "Event Version"
+         type: string
+         default: "1.0.0.1"
         ProductVerNumber: 
          title: "ProductVerNumber"
          type: string
@@ -467,9 +467,9 @@ definitions:
         LCM:
          title: "LCM"
          type: string
-		QuoteNumber:
-		 title: "Quote Number"
-		 type: default
+        QuoteNumber:
+         title: "Quote Number"
+         type: default
         Classification:
          type: object
          properties:

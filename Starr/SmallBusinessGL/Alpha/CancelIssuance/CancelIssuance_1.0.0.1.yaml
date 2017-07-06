@@ -138,9 +138,6 @@ definitions:
     type: object
     required:
       - RequestStatus
-      - PolicyNumber
-      - PolicyStatus
-      - EmailStatus
       - DocumentsInfoList
     properties:
       RequestStatus:

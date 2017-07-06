@@ -145,21 +145,12 @@ definitions:
     properties:
       RequestStatus:
         type: string
-      QuoteNumber:
+      CancellationQuoteID:
         type: string
-      Premium:
+      CancellationPolicyId:
         type: string
-      QuoteStatus:
+      TotalReturnpremium:
         type: string
-        default : "Cancelled"
-      PolicyStatus:
-        type: string
-        default: "CANCELLED"
-      PolicyNumber: 
-        type: string
-      EmailStatus:
-        type: string
-        default: "Success"
       DocumentsInfoList:
         type: object
         properties:

@@ -41,7 +41,7 @@ paths:
           required: true
           type: string
           format: string
-          default: "CancelIssuance"
+          default: "CancelPreview"
           
         - name: EventVersion
           in: header
@@ -113,7 +113,7 @@ definitions:
            default: ""
       EventName:
        type: string
-       default: "CancelWorkflow"
+       default: "CancelPreview"
       ProductNumber:
        type: string
        default: "GL"

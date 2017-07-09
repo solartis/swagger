@@ -281,6 +281,14 @@ definitions:
                     title: "Premises Operations Territory"
                     type: string
                     default: "503"
+                MunicipalityCode:
+                    title: "Municipality Code"
+                    type: string
+                    default: ""
+                MunicipalityName:
+                    title: "Municipality Name"
+                    type: string
+                    default: ""
                 Classification:
                   type: array
                   items:
@@ -299,15 +307,7 @@ definitions:
                             PremOpsExposure:
                                 title: "Premises Operations Exposure"
                                 type: string
-                                default: "15000"    
-                            MunicipalityCode:
-                                title: "Municipality Code"
-                                type: string
-                                default: ""
-                            MunicipalityName:
-                                title: "Municipality Name"
-                                type: string
-                                default: ""		
+                                default: "15000"		
                             GeneralLiabilityExclCovCMedPayLocClassLvl:
                                 title: "Exclusion - Coverage C - Medical Payments"
                                 type: string

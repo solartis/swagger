@@ -228,7 +228,6 @@ definitions:
         LimitEachEmployeeInt:
          title: "Employee Benefits Liability Limit of Insurance - each Employee"
          type: string
-         enum: [ "300,000 CSL","500,000 CSL","1,000,000 CSL","2,000,000 CSL"]
          default: ""
         AggregateLimitInt:
          title: "Employee Benefits Liability Limit of Insurance - Aggregate"

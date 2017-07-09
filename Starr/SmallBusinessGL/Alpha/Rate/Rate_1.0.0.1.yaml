@@ -219,7 +219,7 @@ definitions:
         TerrorismAggregateLimit:
          title: "Terrorism Aggregate Limit"
          type: string
-         default: "1,000,000 CSL"
+         default: ""
         EmployeeBenefitsLiability:
          title: "Employee Benefits Liability"
          type: string
@@ -229,11 +229,11 @@ definitions:
          title: "Employee Benefits Liability Limit of Insurance - each Employee"
          type: string
          enum: [ "300,000 CSL","500,000 CSL","1,000,000 CSL","2,000,000 CSL"]
-         default: "1,000,000 CSL"
+         default: ""
         AggregateLimitInt:
          title: "Employee Benefits Liability Limit of Insurance - Aggregate"
          type: string
-         default: "2,000,000 CSL"
+         default: ""
         DeductibleInt:
          title: "Employee Benefits Liability Deductible"
          type: string

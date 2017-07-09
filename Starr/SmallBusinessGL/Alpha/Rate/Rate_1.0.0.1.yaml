@@ -106,6 +106,10 @@ definitions:
          title: "EventName"
          type: string
          default: "StarrGLRate"
+        EventVersion:
+         title: "Event Version"
+         type: string
+         default: "1.0.0.1"
         ISOERCVersion: 
          title: "State and ERC Version identifier"
          type: string

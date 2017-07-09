@@ -269,6 +269,10 @@ definitions:
          type: string
          enum: ["DTC","CW"]
          default: "DTC"
+        FormofBusiness:
+         title: "Form of Business"
+         type: "string"
+         default: ""
         Location:
           type: array
           items:

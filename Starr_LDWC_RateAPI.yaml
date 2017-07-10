@@ -1,0 +1,897 @@
+swagger: '2.0'
+info:
+  version: '2.0'
+  title: Starr LDWC Rate API- To calculate the LD Factor
+  description: |
+    Get LD Factors for the Quote which was Requested by CSC System
+    
+    New Features:
+    1. LD-Factors transferred automatically 
+            Agency Link system will automatically receive LD-Factors from LDCC system as a response to Policy Data transfer.
+    
+    2. Non-Editable fields in LDCC system 
+            Policy Information sent from Agency-Link system cannot be edited in LDCC system, To update Policy Information sent from Agency-Link system, User needs to edit the Policy Information in Agency-Link system and send it to LDCC system
+    
+    3. “Send LD-Factor” button
+            User can also manually send LD-Factors from LDCC system to Agency-Link system by Clicking “Send LD-Factor” button.
+    
+    4. Associate Quotes
+            User can associate multiple quotes to calculate Aggregate premium.                                                                             
+host: ldwc.uat.solartis.net
+basePath: /LDWCQuotingServiceV2/Quote
+schemes:
+  - https
+consumes: 
+  - application/xml
+produces:
+  - application/xml
+paths:
+  /SaveQuote:
+    post:
+      description: Get LD Factors for the given input
+      produces:
+        - application/xml
+      parameters:
+        - name: Content-Type
+          in: header
+          required: true
+          type: string
+          default: "application/xml"
+          
+        - name: Rating Request
+          in: body
+          description: Rating content
+          required: true
+          schema:
+            $ref: '#/definitions/Rating_Request'
+      responses:
+        '200':
+          description: Success Response
+          schema:
+            $ref: '#/definitions/Rating_Success_Response'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/errorModel'
+            
+definitions:
+  Rating_Request:
+    type: object
+    description: Insurance Service Request Sign on Wrapper
+      - SignonRq
+      - InsuranceSvcRq
+    properties:
+      SignonRq:
+        description: Sign on Request Starr DCC System Specific Information
+        type: object
+        required:
+          - SignonPswd
+          - ClientDt
+          - ClientApp
+        properties:
+          SignonPswd:
+            type: object
+            required:
+              - CustId
+              - CustPswd
+            properties:
+              CustId:
+                description: CSC Supplied Transaction User Id and Value to be determined
+                type: string
+                default: "starrcscadmin"
+              CustPswd:
+                description: CSC Supplied Transaction Password and Value to be determined
+                type: string
+                default: "sKVSbX7wj8UYYAaar4amxQ=="
+          ClientDt:
+            description: 
+              1. CSC Supplied Client Request Date
+              2. Format ==> YYYY-MM-DDTHH:MM:SS:mmm
+              3. YYYY = Year
+              4. MM = Month
+              5. DD = Day
+              6. T = Time Stamp
+              7. HH = Hour
+              8. MM = Minutes
+              9. mmm = Milliseconds
+            type: string
+          ClientApp:
+            type: object
+            required: 
+              - Org
+              - Name
+              - Version
+            properties:
+              Org: 
+                description: CSC Supplied Organization
+                type: string
+                default: "Starr"
+              Name: 
+                description: CSC Supplied Name of Transaction
+                type: string
+                default: LDCC
+              Version: 
+                description: CSC Supplied Version Number of Interface
+                type: string
+                default: "1.00"
+      InsuranceSvcRq:
+        description: Insurance Service Request Wrapper
+        type: object
+        required:
+          - RqUID
+          - com.csc_TransactionSeqNbr
+          - LargeDeductibleCreditCalculationRq
+        properties:
+          RqUID:
+            description: CSC Supplied Unique Transaction GUID 
+            type: string
+            default: "0ef193bd-1902-78-b765154587d-solartis-007qwerty5555"
+          com.csc_TransactionSeqNbr:
+            type: string
+            default: ""
+          LargeDeductibleCreditCalculationRq:
+            description: Starr DCC System Transaction Request Wrapper
+            required:
+              - MsgStatus
+              - RqUID
+              - TransactionRequestDt
+              - TransactionEffectiveDt
+              - Producer
+              - InsuredOrPrincipal
+              - CommlPolicy
+              - WorkCompLineBusiness
+            properties:
+              MsgStatus:
+                description: Starr DCC System Supplied Response Status
+                type: object
+                required:
+                  - MsgStatusCd
+                  - MsgErrorCd
+                  - MsgStatusDesc
+                properties:
+                  MsgStatusCd:
+                    description: Starr DCC System Supplied Message Status
+                      1. Success
+                      2. Error
+                    type: string
+                    default: "Success"
+                  MsgErrorCd:
+                    description: Starr DCC System Supplied Error Code
+                    type: string
+                    default: "0"
+                  MsgStatusDesc:
+                    description: Starr DCC System Supplied Error Description
+                    type: string
+                    default: "Success"
+              RqUID:
+                description: CSC Supplied Application Id 
+                type: string
+                default: "27921299210669453589"
+              TransactionRequestDt:
+                description: CSC Supplied Transaction Request Date (Format ==> YYYY/MM/DD)
+                type: string
+              TransactionEffectiveDt:
+                description: CSC Supplied Transaction Effective Date (Format ==> YYYY/MM/DD)
+                type: string
+              Producer:
+                description: Producer Information
+                type: object
+                required:
+                  - ItemIdInfo
+                  - ProducerInfo
+                properties:
+                  ItemIdInfo:
+                    type: object
+                    required:
+                      - AgencyId
+                    properties:
+                      AgencyId:
+                        type: string
+                        default: "1800001"
+                  ProducerInfo:
+                    type: object
+                    required:
+                      - ProducerInfo
+                    properties:
+                      ProducerInfo:
+                        type: string
+                        default: "starrunderwriter"
+              InsuredOrPrincipal:
+                description: Primary Insured or Principle Information
+                type: object
+                required:
+                  - GeneralPartyInfo
+                  - InsuredOrPrincipalInfo
+                properties:
+                  GeneralPartyInfo:
+                    type: object
+                    required:
+                      - NameInfo
+                    properties:
+                      NameInfo:
+                        type: object
+                        required:
+                          - CommlName
+                        properties:
+                          CommlName:
+                            type: object
+                            required:
+                              - CommercialName
+                              - com csc ClientNumber
+                            properties:
+                              CommercialName:
+                                description: CSC Supplied Named Insured
+                                type: string
+                              com csc ClientNumber:
+                                description: Client Number for Named Insured 
+                                type: string
+                  InsuredOrPrincipalInfo:
+                    description: InsuredOrPrincipalRoleCd, 'NI' = Named Insured 
+                    type: string
+                    default: "NI"
+              CommlPolicy:
+                description: Policy Level Information
+                type: object
+                required:
+                  - com csc QuoteNumber
+                  - PolicyVersion
+                  - CompanyProductCd
+                  - LOBCd
+                  - ContractTerm
+                  - PolicyStatusCd
+                  - CurrentTermAmt
+                  - com csc TxnType
+                  - com csc_Submission_Nbr
+                  - CommlCoverage
+                properties:
+                  com csc QuoteNumber: 
+                    type: string
+                    default: "100 7004296"
+                  PolicyNumber: 
+                    description: CSC Supplied Issued Policy Number and Only Applicable on some of the Transaction Types
+                    type: string
+                    default: "1234567"
+                  PolicyVersion: 
+                    description: CSC Supplied Policy Module Number
+                    type: string
+                    default: "1"
+                  CompanyProductCd:
+                    description: CSC Supplied Policy Symbol
+                    type: string
+                    default: "WC"
+                  LOBCd:
+                    description: CSC Supplied Policy Module Number and Value = 'WCV'
+                    type: string
+                    default: "WCV"
+                  ContractTerm:
+                    type: object
+                    required:
+                      - EffectiveDt
+                      - ExpirationDt
+                    properties:
+                      EffectiveDt:
+                        description: CSC Supplied Policy Effective Date (Format ==> YYYY/MM/DD)
+                        type: string
+                      ExpirationDt:
+                        description: CSC Supplied Policy Expiration Date (Format ==> YYYY/MM/DD)
+                        type: string
+                  PolicyStatusCd:
+                    description: CSC Supplied Policy Status 
+                      1. 'N' = Quote
+                      2. 'A' = Endorsement
+                      3. 'R' = Renewal
+                    type: string
+                    default: "N"
+                  CurrentTermAmt:
+                    description: CSC Supplied Countrywide Standard Premium Amount
+                    type: string
+                    default: "100000"
+                  com csc TxnType:
+                    description: CSC Supplied Policy Transaction Request Type
+                      1. 'INIT' = First Quote Process
+                      2. 'QUOTE' = Subsequent Quote Process 
+                      3. 'ISSUE' = Policy Bind Process
+                    type: string
+                    default: "INIT"
+                    enum: ["INIT","QUOTE","ISSUE"]
+                  com csc_Submission_Nbr:
+                    description: Starr DCC System Supplied Submission Number and CSC will echo this value back on subsequent request
+                    type: string
+                  CommlCoverage:
+                    description: 
+                      1. CSC Supplied Deductible / Aggregate Information
+                      2. Aggregate Occurs once within Each State
+                    type: object
+                    required:
+                      - CoverageCd
+                      - Deductible
+                    properties:
+                      CoverageCd:
+                        description: CSC Supplied Coverage Type Code and Value = 'WC'
+                        type: string
+                        default: "WC"
+                      Deductible:
+                        type: array
+                        items:
+                          required:
+                            - DeductibleTypeCd
+                            - DeductibleAppliesToCd
+                            - FormatCurrency
+                          properties: 
+                            DeductibleTypeCd:
+                              description: CSC Supplied Aggregate Deductible Amount Information and Deductible Type Code
+                                1. '00' = Not Applicable
+                                2. '01' = Per Claim
+                                3. '02' = Per Accident 
+                                4. '03' = Per Policy (Aggregated)
+                                5. '04' = Percent of Claim Loss
+                                6. '05' = Percent of Premium
+                                7. '06' = Coinsurance Only
+                                8. '07' = Benefits Coinsurance
+                                9. '08' = Per Accident Coinsurance
+                              type: string
+                              default: "00"
+                            DeductibleAppliesToCd:
+                              type: string
+                              default: "Amount"
+                              enum: ["Amount","Aggregate"]
+                            FormatCurrency:
+                              type: string
+              WorkCompLineBusiness: 
+                description: Workers Compensation Line Of Business Wrapper
+                type: object
+                required:
+                  - LOBCd
+                  - WorkCompRateState
+                properties:
+                  LOBCd:
+                    type: string
+                    description: CSC Supplied Policy Line of Business (ACORD)
+                    default: "WC"
+                  WorkCompRateState:
+                    type: array
+                    items:
+                      required:
+                      - StateProvCd
+                      - CreditOrSurcharge
+                      - WorkCompRateClass
+                      properties: 
+                        StateProvCd:
+                          description: CSC Supplied State Information and Aggregate Occurs For Each State 
+                          type: string
+                        CreditOrSurcharge:
+                          type: array
+                          items:
+                            required:
+                            - CreditSurchargeCdEMOD
+                            - CreditSurchargeCdLD
+                            - CreditSurchargeCdMRAP
+                            properties:
+                              CreditSurchargeCdEMOD:
+                                description: CSC Supplied Experience Modifier Value
+                                type: object
+                                required: 
+                                - CreditSurchargeCd
+                                - NumericValue
+                                properties:
+                                  CreditSurchargeCd:
+                                    type: string
+                                    default: "EMOD"
+                                  NumericValue:
+                                    type: object
+                                    required:
+                                    - FormatModFactor
+                                    properties:
+                                      FormatModFactor:
+                                        type: string
+                              CreditSurchargeCdLD:
+                                description: CSC Supplied Large Deductible Modifier (ALAE)
+                                type: object
+                                required: 
+                                  - CreditSurchargeCd
+                                  - NumericValue
+                                properties:
+                                  CreditSurchargeCd:
+                                    type: string
+                                    default: "LD01"
+                                    enum: ["LD01","LD02","LD03"]
+                                  NumericValue:
+                                    type: object
+                                    required:
+                                      - FormatModFactor
+                                    properties:
+                                      FormatModFactor:
+                                        type: string
+                                        default: "0.500000"
+                              CreditSurchargeCdMRAP:
+                                description: CSC Supplied ARAP Code for 'MA' Only
+                                type: object
+                                required: 
+                                  - CreditSurchargeCd
+                                  - NumericValue
+                                properties:
+                                  CreditSurchargeCd:
+                                    type: string
+                                    default: "MRAP"
+                                  NumericValue:
+                                    type: object
+                                    required:
+                                      - FormatModFactor
+                                    properties:
+                                      FormatModFactor:
+                                        type: string
+                                        default: "0"
+                        WorkCompRateClass:
+                          description: 
+                            1. CSC Supplied Class Code Information
+                            2. Aggregate Occurs For Each Class Code Within Each State
+                          type: array
+                          items:
+                            required:
+                            - Exposure
+                            - RatingClassificationCd
+                            - csc_GoverningClassInd
+                            properties:
+                              Exposure:
+                                description: CSC Supplied Class Exposure Amount
+                                type: string
+                              RatingClassificationCd:
+                                description: CSC Supplied Class Code
+                                type: string
+                              csc_GoverningClassInd:
+                                description: CSC Supplied Governing Class Indicator
+                                   1. 'Y' = Yes 
+                                   2. 'N' = No
+                                type: string
+                                enum: ["Y","N"]
+                          
+
+  Rating_Success_Response:
+    type: object
+    description: Insurance Service Request Sign on Wrapper
+      - SignonRq
+      - InsuranceSvcRq
+    properties:
+      SignonRq:
+        description: Sign on Request Starr DCC System Specific Information
+        type: object
+        required:
+          - SignonPswd
+          - ClientDt
+          - ClientApp
+        properties:
+          SignonPswd:
+            type: object
+            required:
+              - CustId
+              - CustPswd
+            properties:
+              CustId:
+                description: CSC Supplied Transaction User Id and Value to be determined
+                type: string
+                default: "starrcscadmin"
+              CustPswd:
+                description: CSC Supplied Transaction Password and Value to be determined
+                type: string
+                default: "sKVSbX7wj8UYYAaar4amxQ=="
+          ClientDt:
+            description: 
+              1. CSC Supplied Client Request Date
+              2. Format ==> YYYY-MM-DDTHH:MM:SS:mmm
+              3. YYYY = Year
+              4. MM = Month
+              5. DD = Day
+              6. T = Time Stamp
+              7. HH = Hour
+              8. MM = Minutes
+              9. mmm = Milliseconds
+            type: string
+          ClientApp:
+            type: object
+            required: 
+              - Org
+              - Name
+              - Version
+            properties:
+              Org: 
+                description: CSC Supplied Organization
+                type: string
+                default: "Starr"
+              Name: 
+                description: CSC Supplied Name of Transaction
+                type: string
+                default: LDCC
+              Version: 
+                description: CSC Supplied Version Number of Interface
+                type: string
+                default: "1.00"
+      InsuranceSvcRq:
+        description: Insurance Service Request Wrapper
+        type: object
+        required:
+          - RqUID
+          - com.csc_TransactionSeqNbr
+          - LargeDeductibleCreditCalculationRq
+        properties:
+          RqUID:
+            description: CSC Supplied Unique Transaction GUID 
+            type: string
+            default: "0ef193bd-1902-78-b765154587d-solartis-007qwerty5555"
+          com.csc_TransactionSeqNbr:
+            type: string
+            default: ""
+          LargeDeductibleCreditCalculationRq:
+            description: Starr DCC System Transaction Request Wrapper
+            required:
+              - MsgStatus
+              - RqUID
+              - TransactionRequestDt
+              - TransactionEffectiveDt
+              - Producer
+              - InsuredOrPrincipal
+              - CommlPolicy
+              - WorkCompLineBusiness
+            properties:
+              MsgStatus:
+                description: Starr DCC System Supplied Response Status
+                type: object
+                required:
+                  - MsgStatusCd
+                  - MsgErrorCd
+                  - MsgStatusDesc
+                properties:
+                  MsgStatusCd:
+                    description: Starr DCC System Supplied Message Status
+                      1. Success
+                      2. Error
+                    type: string
+                    default: "Success"
+                  MsgErrorCd:
+                    description: Starr DCC System Supplied Error Code
+                    type: string
+                    default: "0"
+                  MsgStatusDesc:
+                    description: Starr DCC System Supplied Error Description
+                    type: string
+                    default: "Success"
+              RqUID:
+                description: CSC Supplied Application Id 
+                type: string
+                default: "27921299210669453589"
+              TransactionRequestDt:
+                description: CSC Supplied Transaction Request Date (Format ==> YYYY/MM/DD)
+                type: string
+              TransactionEffectiveDt:
+                description: CSC Supplied Transaction Effective Date (Format ==> YYYY/MM/DD)
+                type: string
+              Producer:
+                description: Producer Information
+                type: object
+                required:
+                  - ItemIdInfo
+                  - ProducerInfo
+                properties:
+                  ItemIdInfo:
+                    type: object
+                    required:
+                      - AgencyId
+                    properties:
+                      AgencyId:
+                        type: string
+                        default: "1800001"
+                  ProducerInfo:
+                    type: object
+                    required:
+                      - ProducerInfo
+                    properties:
+                      ProducerInfo:
+                        type: string
+                        default: "starrunderwriter"
+              InsuredOrPrincipal:
+                description: Primary Insured or Principle Information
+                type: object
+                required:
+                  - GeneralPartyInfo
+                  - InsuredOrPrincipalInfo
+                properties:
+                  GeneralPartyInfo:
+                    type: object
+                    required:
+                      - NameInfo
+                    properties:
+                      NameInfo:
+                        type: object
+                        required:
+                          - CommlName
+                        properties:
+                          CommlName:
+                            type: object
+                            required:
+                              - CommercialName
+                            properties:
+                              CommercialName:
+                                description: CSC Supplied Named Insured
+                                type: string
+                              com.csc_ClientNumber:
+                                description: Client Number for Named Insured 
+                                type: string
+                  InsuredOrPrincipalInfo:
+                    description: InsuredOrPrincipalRoleCd, 'NI' = Named Insured 
+                    type: string
+                    default: "NI"
+              CommlPolicy:
+                description: Policy Level Information
+                type: object
+                required:
+                  - com.csc_QuoteNumber
+                  - PolicyNumber
+                  - PolicyVersion
+                  - CompanyProductCd
+                  - LOBCd
+                  - ContractTerm
+                  - PolicyStatusCd
+                  - CurrentTermAmt
+                  - com.csc_TxnType
+                  - com.csc_Submission_Nbr
+                  - CommlCoverage
+                properties:
+                  com.csc_QuoteNumber: 
+                    description: CSC Supplied Original Quote Number or Submission Number
+                    type: string
+                    default: "100 7004296"
+                  PolicyNumber: 
+                    description: CSC Supplied Issued Policy Number and Only Applicable on some of the Transaction Types
+                    type: string
+                    default: "1234567"
+                  PolicyVersion: 
+                    description: CSC Supplied Policy Module Number
+                    type: string
+                    default: "1"
+                  CompanyProductCd:
+                    description: CSC Supplied Policy Symbol
+                    type: string
+                    default: "WC"
+                  LOBCd:
+                    description: CSC Supplied Policy Module Number and Value = 'WCV'
+                    type: string
+                    default: "WCV"
+                  ContractTerm:
+                    type: object
+                    required:
+                      - EffectiveDt
+                      - ExpirationDt
+                    properties:
+                      EffectiveDt:
+                        description: CSC Supplied Policy Effective Date (Format ==> YYYY/MM/DD)
+                        type: string
+                      ExpirationDt:
+                        description: CSC Supplied Policy Expiration Date (Format ==> YYYY/MM/DD)
+                        type: string
+                  PolicyStatusCd:
+                    description: CSC Supplied Policy Status 
+                      1. 'N' = Quote
+                      2. 'A' = Endorsement
+                      3. 'R' = Renewal
+                    type: string
+                    default: "N"
+                  CurrentTermAmt:
+                    description: CSC Supplied Countrywide Standard Premium Amount
+                    type: string
+                    default: "100000"
+                  com.csc_TxnType:
+                    description: CSC Supplied Policy Transaction Request Type
+                      1. 'INIT' = First Quote Process
+                      2. 'QUOTE' = Subsequent Quote Process 
+                      3. 'ISSUE' = Policy Bind Process
+                    type: string
+                    default: "INIT"
+                    enum: ["INIT","QUOTE","ISSUE"]
+                  com.csc_Submission_Nbr:
+                    description: Starr DCC System Supplied Submission Number and CSC will echo this value back on subsequent request
+                    type: string
+                  CommlCoverage:
+                    description: 
+                      1. CSC Supplied Deductible / Aggregate Information
+                      2. Aggregate Occurs once within Each State
+                    type: object
+                    required:
+                      - CoverageCd
+                      - Deductible
+                    properties:
+                      CoverageCd:
+                        description: CSC Supplied Coverage Type Code and Value = 'WC'
+                        type: string
+                        default: "WC"
+                      Deductible:
+                        type: array
+                        items:
+                          required:
+                            - DeductibleTypeCd
+                            - DeductibleAppliesToCd
+                            - FormatCurrency
+                          properties: 
+                            DeductibleTypeCd:
+                              description: CSC Supplied Aggregate Deductible Amount Information and Deductible Type Code
+                                1. '00' = Not Applicable
+                                2. '01' = Per Claim
+                                3. '02' = Per Accident 
+                                4. '03' = Per Policy (Aggregated)
+                                5. '04' = Percent of Claim Loss
+                                6. '05' = Percent of Premium
+                                7. '06' = Coinsurance Only
+                                8. '07' = Benefits Coinsurance
+                                9. '08' = Per Accident Coinsurance
+                              type: string
+                              default: "00"
+                            DeductibleAppliesToCd:
+                              type: string
+                              default: "Amount"
+                              enum: ["Amount","Aggregate"]
+                            FormatCurrency:
+                              type: string
+              WorkCompLineBusiness: 
+                description: Workers Compensation Line Of Business Wrapper
+                type: object
+                required:
+                  - LOBCd
+                  - WorkCompRateState
+                properties:
+                  LOBCd:
+                    type: string
+                    description: CSC Supplied Policy Line of Business (ACORD)
+                    default: "WC"
+                  WorkCompRateState:
+                    type: array
+                    items:
+                      required:
+                      - StateProvCd
+                      - CreditOrSurcharge
+                      - WorkCompRateClass
+                      properties: 
+                        StateProvCd:
+                          description: CSC Supplied State Information and Aggregate Occurs For Each State 
+                          type: string
+                        CreditOrSurcharge:
+                          type: array
+                          items:
+                            required:
+                            - CreditSurchargeCdEMOD
+                            - CreditSurchargeCdLD
+                            - CreditSurchargeCdMRAP
+                            properties:
+                              CreditSurchargeCdEMOD:
+                                description: CSC Supplied Experience Modifier Value
+                                type: object
+                                required: 
+                                - CreditSurchargeCd
+                                - NumericValue
+                                properties:
+                                  CreditSurchargeCd:
+                                    type: string
+                                    default: "EMOD"
+                                  NumericValue:
+                                    type: object
+                                    required:
+                                    - FormatModFactor
+                                    properties:
+                                      FormatModFactor:
+                                        type: string
+                              CreditSurchargeCdLD:
+                                description: CSC Supplied Large Deductible Modifier (ALAE)
+                                type: object
+                                required: 
+                                  - CreditSurchargeCd
+                                  - NumericValue
+                                properties:
+                                  CreditSurchargeCd:
+                                    type: string
+                                    default: "LD01"
+                                    enum: ["LD01","LD02","LD03"]
+                                  NumericValue:
+                                    type: object
+                                    required:
+                                      - FormatModFactor
+                                    properties:
+                                      FormatModFactor:
+                                        type: string
+                                        default: "0.500000"
+                              CreditSurchargeCdMRAP:
+                                description: CSC Supplied ARAP Code for 'MA' Only
+                                type: object
+                                required: 
+                                  - CreditSurchargeCd
+                                  - NumericValue
+                                properties:
+                                  CreditSurchargeCd:
+                                    type: string
+                                    default: "MRAP"
+                                  NumericValue:
+                                    type: object
+                                    required:
+                                      - FormatModFactor
+                                    properties:
+                                      FormatModFactor:
+                                        type: string
+                                        default: "0"
+                        WorkCompRateClass:
+                          description: 
+                            1. CSC Supplied Class Code Information
+                            2. Aggregate Occurs For Each Class Code Within Each State
+                          type: array
+                          items:
+                            required:
+                            - Exposure
+                            - RatingClassificationCd
+                            - csc_GoverningClassInd
+                            properties:
+                              Exposure:
+                                description: CSC Supplied Class Exposure Amount
+                                type: string
+                              RatingClassificationCd:
+                                description: CSC Supplied Class Code
+                                type: string
+                              csc_GoverningClassInd:
+                                description: CSC Supplied Governing Class Indicator
+                                   1. 'Y' = Yes 
+                                   2. 'N' = No
+                                type: string
+                                enum: ["Y","N"]
+                          
+                
+
+  errorModel:
+    type: object
+    required:
+      - MsgStatus
+    properties:
+      MsgStatus:
+        description: Starr DCC System Supplied Response Status
+        type: object
+        required:
+          - MsgStatusCd
+          - MsgErrorCd
+          - MsgStatusDesc
+        properties:
+          MsgStatusCd:
+            description: Starr DCC System Supplied Message Status
+              1. Success
+              2. Error
+            type: string
+            default: "Success"
+          MsgErrorCd:
+            description: Starr DCC System Supplied Error Code
+            type: string
+            default: "0"
+          MsgStatusDesc:
+            description: Starr DCC System Supplied Error Description
+            type: string
+            default: "Success"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

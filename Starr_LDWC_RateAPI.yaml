@@ -737,7 +737,7 @@ definitions:
                   - WorkCompRateState
                 properties:
                   LOBCd:
-                    type: string
+                    type: string  
                     description: CSC Supplied Policy Line of Business (ACORD)
                     default: "WC"
                   WorkCompRateState:

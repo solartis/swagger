@@ -80,9 +80,11 @@ definitions:
         properties:
          ServiceRequestVersion:
           title: "ServiceRequestVersion"
+          type: string
           default: "1.0"
          ServiceResponseVersion:
           title: "ServiceResponseVersion"
+          type: string
           default: "1.0"
          OwnerID:
           title: "Owner ID"

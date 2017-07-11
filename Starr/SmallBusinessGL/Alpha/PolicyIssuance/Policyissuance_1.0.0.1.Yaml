@@ -183,7 +183,7 @@ definitions:
             title: "Payment Card Type"
             type: string
             default: "MasterCard"
-          PaymentPlancode:
+          PaymentPlanCode:
             title: "Payment Plan code"
             type: string
             default: ""

@@ -132,7 +132,7 @@ definitions:
         LastRateLookUpDate:
          title: "Last Rate Look Up Date"
          type: string
-         default: "2017-07-07"
+         default: "01-04-2017"
         EffectiveDate: 
          title: "Policy Start Date"
          type: string

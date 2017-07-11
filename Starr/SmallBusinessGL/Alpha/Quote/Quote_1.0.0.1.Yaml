@@ -290,55 +290,7 @@ definitions:
          title: "Does the insured wish to purchase coverage for premises that  are certified as being lead free?"
          type: string
          enum: ["Yes","No"]
-         default: "No"
-        LocationOfCoveredOperations:
-         title: "Additional Insured Location Of Covered Operations"
-         type: string
-         default: ""
-        DesignationOfPremisesRentedToYou:
-         title: "Designation Of Premises Rented To You"
-         type: string
-         default: ""
-        LocationOfPremises:
-         title: "Location Of Premises"
-         type: string
-         default: ""
-        RiskAgreedtoPollutionExclusion:
-         title: "Did the risk agree to the policy pollution exclusion or the attachment of a pollution exclusion endorsement?"
-         type: string
-         default: ""
-        EntityType:
-         title: "Entity Type"
-         type: string
-         default: ""
-        FormOfBusiness:
-         title: "Form Of Business"
-         type: string
-         default: ""
-        AgencyCode:
-         title: "Agency Code"
-         type: string
-         default: ""
-        AgentCode:
-         title: "Agent Code"
-         type: string
-         default: ""
-        BusinessName:
-         title: "Business Name"
-         type: string
-         default: ""
-        InsuredMailingAddress:
-         title: "Insured Mailing Address"
-         type: string
-         default: ""
-        PhoneNumber:
-         title: "Phone Number"
-         type: string
-         default: ""
-        ContentFilledBy:
-         title: "Content Filled By"
-         type: string
-         default: ""      
+         default: "No"     
         AdditionalInsuredList:
          type: array
          items:
@@ -481,14 +433,6 @@ definitions:
                                   title: "Spray Painting"
                                   type: string
                                   default: "No"
-                              LeadRentalPropertyDefinedinRhodeIslandGeneralLaws:
-                                  title: "Is this a rental property as defined in Rhode Island General Laws?"
-                                  type: string
-                                  default: "No"
-                              LeadConstructedPriorto1978PrimaFacieEvidenceofCompliance:
-                                  title: "Have any premises constructed prior to 1978 received a Prima Facie Evidence of Compliance?"
-                                  type: string
-                                  default: "Yes" 
   errorModel:
     type: object
     required:
@@ -547,24 +491,6 @@ definitions:
          type: string
         EmployeeBenefitsLiabCovPremium:
          title: "Employee Benedits Liability Covearge Premium"
-         type: string
-        EmployeeBenefitsLiabCovAgencyCommission:
-         title: "Employee Benedits Liability Agency Commission"
-         type: string
-        EmployeeBenefitsLiabCovBillingBrokerCommission:
-         title: "Employee Benedits Liability Billing broker Commission"
-         type: string
-        EmployeeBenefitsLiabCovCommission:
-         title: "Employee Benedits Liability Covearge Commission"
-         type: string
-        TerrorismAgencyCommission:
-         title: "Terrorism Agency Commission"
-         type: string
-        TerrorismBillingBrokerCommission:
-         title: "Terrorism Billing broker Commission"
-         type: string
-        TerrorismCommission:
-         title: "Terrorism  Commission"
          type: string
         TerrorismCalculatedPremium:
          title: "Terrorism Calculated Premium"
@@ -652,15 +578,6 @@ definitions:
            type: string
           FinalPremOpsIncrdLimitTableAssignment:
            title: "FinalPremOpsIncrdLimitTableAssignment"
-           type: string
-          PremOpsCoverageAgencyCommission :
-           title: "Premises Operation Liability Coverage  Agency Commission"
-           type: string
-          PremOpsCoverageBillingBrokerCommission:
-           title: "Premises Operation Liability Coverage Billing broker Commission"
-           type: string
-          PremOpsCoverageCommission
-           title: "Premises Operation Liability Coverage Commission"
            type: string
         AdditionalInsured:
          type: object

@@ -1,0 +1,252 @@
+swagger: '2.0'
+info:
+  version: '2.0'
+  title: Starr Assist - Get Policy API
+  description: >-
+    Get Policy API is to retrieve more information specific to a particular
+    Batch or Policy number
+    
+    Features:
+    1. Provides information specific to a Batch or Policy Number
+    
+  contact:
+    name: Solartis Support
+    email: solartis_dtc_support@solartis.com
+
+host: starrassistuatkb.uat.solartis.net
+basePath: /DroolsV4_2/DroolsService
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /FireEventV2:
+    post:
+      description: Get Policy retrieves specific information about a Policy and a Batch
+      operationId: GetPolicy
+      produces:
+        - application/json
+      parameters:
+        - name: Token
+          in: header
+          description: Authentication Token
+          required: true
+          type: string
+          format: string
+          default: >-
+            iMgdpnp436QjuYQ2tn9HU+SgJDsyFW8kDSoLHGwadQKpl/wr4yKoVMjkSfJB/FKqjFqrLmebBUqmHM/dVAMv+DDPaXOt/GY7mjWZXGT2z0ArRvyiojuQz8LrhVYihPok4SNftJWQa7rNrqjh5PWJcVbnbLVHo4e9WNp/4X9Sai/5LrKZ1J99H71yIi/9rXsAKhCk5lGzFaO3SXLwJluxpsUM+5MiljDi4NFM+/K0KPeUOuL8R2FZD9RobXBVvR7xPdH1oZ71jBgOmg59/75ugVgJ/35PRXWc1Emi9SPqQHHEmsD4AoH2xj45UGMY3hjx0sz/uABSHKxNwA8DwPTBS7jaN2XqKLCayPsSWHVH04XW+ZeDaw1iRLb/0euQfXT97fiPQgPQSjtDvxif6cFXZQX/BHYIcAUjZtdcuv098quieEPaIWri6DUFEIzf/uRM7R4itGHIU7/B0cMwwQNFhxjtMVAgSBq7Kw4a8kf5s+2XOip5XV3KeT5U4u8HX6/xdKxhpP8gLng6PoGj0MEnSugWYicqO81QJH2UISAaI3iDgNxzCSFmsAChwURz5g/RRmHqLknkxHh4lvFfjQGlTIfdNwW+CwHbg0EQFt/c/4M6CofYIAQVzElcVRih/j88U7EqGr8v1mrTPel1sBXl+auuXSlODNRoeDVogcqA1Fr9504oM1kbCEmrVIqjUxUmK9a8CWsZEjIYiNuY0KncVKuuXSlODNRoeDVogcqA1Foa9LkTsAlC3ItSy+gbt0NdLaJdXbWS8ClBkbddTRCbeWRNMZNDq/vS1JTb8FKCl5OsniK5MZQnMbZdqNHlqbv2WOw2j+jUU0BThnDgEX6XEjSt7SoS1Xd6+F4DyPRZsQbD7XGhOWwTgbKALHDL6LviA3K4dHjVKHv1xOd8L284LsWKpOWqHf8xYqRIiCHZgQEtSRZCdfQPbklkXKGNaTjD
+        - name: EventName
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: GetPolicyV2
+        - name: GetPolicy
+          in: body
+          description: GetPolicy/traveler details
+          required: true
+          schema:
+            $ref: '#/definitions/GetPolicy_Request'
+      responses:
+        '200':
+          description: Success Response
+          schema:
+            $ref: '#/definitions/GetPolicy_Success_Response'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/errorModel'
+definitions:
+  GetPolicy_Request:
+    type: object
+    required:
+      - ServiceRequestDetail
+      - EventName
+      - OwnerId
+    properties:
+      EndClientUserUniqueSessionId:
+        type: string
+      EndClientUserBrowserSessionId:
+        type: string
+      EndClientUserBrowserInformation:
+        type: string
+      PaaSClientIPAddress:
+        type: string
+      ClientUniqueRequestID:
+        type: string
+      ServiceRequestDetail:
+        type: object
+        required:
+          - OwnerId
+          - RegionCode
+          - Token
+          - ServiceRequestVersion
+          - ServiceResponseVersion
+          - ResponseType
+        properties:
+          ServiceRequestVersion:
+            type: string
+            default: '1.0'
+          ServiceResponseVersion:
+            type: string
+            default: '1.0'
+          OwnerId:
+            type: string
+            default: '15'
+            enum:
+              - '15'
+          ResponseType:
+            type: string
+            enum:
+              - JSON
+              - XML
+            default: JSON
+          RegionCode:
+            type: string
+            default: US
+          Token:
+            type: string
+            default: >-
+              iMgdpnp436QjuYQ2tn9HU+SgJDsyFW8kDSoLHGwadQKpl/wr4yKoVMjkSfJB/FKqjFqrLmebBUqmHM/dVAMv+DDPaXOt/GY7mjWZXGT2z0ArRvyiojuQz8LrhVYihPok4SNftJWQa7rNrqjh5PWJcVbnbLVHo4e9WNp/4X9Sai/5LrKZ1J99H71yIi/9rXsAKhCk5lGzFaO3SXLwJluxpsUM+5MiljDi4NFM+/K0KPeUOuL8R2FZD9RobXBVvR7xPdH1oZ71jBgOmg59/75ugVgJ/35PRXWc1Emi9SPqQHHEmsD4AoH2xj45UGMY3hjx0sz/uABSHKxNwA8DwPTBS7jaN2XqKLCayPsSWHVH04XW+ZeDaw1iRLb/0euQfXT97fiPQgPQSjtDvxif6cFXZQX/BHYIcAUjZtdcuv098quieEPaIWri6DUFEIzf/uRM7R4itGHIU7/B0cMwwQNFhxjtMVAgSBq7Kw4a8kf5s+2XOip5XV3KeT5U4u8HX6/xdKxhpP8gLng6PoGj0MEnSugWYicqO81QJH2UISAaI3iDgNxzCSFmsAChwURz5g/RRmHqLknkxHh4lvFfjQGlTIfdNwW+CwHbg0EQFt/c/4M6CofYIAQVzElcVRih/j88U7EqGr8v1mrTPel1sBXl+auuXSlODNRoeDVogcqA1Fr9504oM1kbCEmrVIqjUxUmK9a8CWsZEjIYiNuY0KncVKuuXSlODNRoeDVogcqA1Foa9LkTsAlC3ItSy+gbt0NdLaJdXbWS8ClBkbddTRCbeWRNMZNDq/vS1JTb8FKCl5OsniK5MZQnMbZdqNHlqbv2WOw2j+jUU0BThnDgEX6XEjSt7SoS1Xd6+F4DyPRZsQbD7XGhOWwTgbKALHDL6LviA3K4dHjVKHv1xOd8L284LsWKpOWqHf8xYqRIiCHZgQEtSRZCdfQPbklkXKGNaTjD
+          UserName:
+            type: string
+            default: travelagent
+          LanguageCode:
+            type: string
+            default: en
+          BrowserIp:
+            type: string
+      OwnerId:
+        type: string
+        default: '15'
+      EventName:
+        type: string
+        default: GetPolicyV2
+      BatchNumber:
+        type: string
+      PolicyNumber:
+        type: string
+  GetPolicy_Success_Response:
+    type: object
+    required:
+      - RequestStatus
+      - policyInformationList
+    properties:
+      RequestStatus:
+        type: string
+      policyInformationList:
+        type: object
+        properties:
+          BatchNumber:
+            type: string
+          Status:
+            type: string
+          PlanName:
+            type: string
+          PlanCode:
+            type: string
+          DepartureDate:
+            type: string
+          PolicyEffectiveDate:
+            type: string
+          PolicyExpirationDate:
+            type: string
+          ReturnDate:
+            type: string
+          RentalStartDate:
+            type: string
+          RentalEndDate:
+            type: string
+          IssuedDate:
+            type: string
+          AgencyName:
+            type: string
+          AgentName:
+            type: string
+          CommissionAmt:
+            type: string
+          StateName:
+            type: string
+          StateCode:
+            type: string
+          TotalPolicyPremium:
+            type: string
+          DepostiDate:
+            type: string
+          TripDuration:
+            type: string
+          TripCancellationCoverage:
+            type: string
+          DestinationCountry:
+            type: string
+          NumberOfTravelers:
+            type: string
+          Documents:
+            type: array
+            items:
+              properties:
+                DocumentType:
+                  type: string
+                DocumentName:
+                  type: string
+                DocumentURL:
+                  type: string
+          Policies:
+            type: array
+            items:
+              properties:
+                PolicyNumber:
+                  type: string
+                TravelerName:
+                  type: string
+                TravelerIndex:
+                  type: string
+                TravelerPremium:
+                  type: string
+                TravelerDOB:
+                  type: string
+                Status:
+                  type: string
+                PolicyType:
+                  type: string
+                Documents:
+                  type: array
+                  items:
+                    properties:
+                      DocumentType:
+                        type: string
+                      DocumentName:
+                        type: string
+                      DocumentURL:
+                        type: string
+  errorModel:
+    type: object
+    required:
+      - RequestStatus
+      - MessageDetail
+    properties:
+      RequestStatus:
+        type: string
+      MessageDetail:
+        type: object
+        properties:
+          MessageCode:
+            type: string
+          MessageType:
+            type: string
+          UserMessage:
+            type: string
+          MessageLevel:
+            type: string
+          MessageSeverity:
+            type: string
+          MessageList:
+            type: object
+            properties:
+              Message:
+                type: array
+                items:
+                  type: string

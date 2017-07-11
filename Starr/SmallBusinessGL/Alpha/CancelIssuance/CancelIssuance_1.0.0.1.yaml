@@ -4,7 +4,7 @@ info:
   title: STARR Small Business General Liability - Cancel API
   description: Cancel API is used by the customer to cancel the issued policy
   
-host: ucistarrgl.solartis.net
+host: starrglalpha.solartis.net
 basePath: /DroolsV6/DroolsService
 schemes:
   - https
@@ -41,7 +41,7 @@ paths:
           required: true
           type: string
           format: string
-          default: "CancelPreview"
+          default: "CancelIssuance"
           
         - name: EventVersion
           in: header

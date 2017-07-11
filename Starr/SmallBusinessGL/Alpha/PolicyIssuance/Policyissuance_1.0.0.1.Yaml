@@ -3,7 +3,7 @@ info:
   version: '1.0.0.1'
   title: Starr GL - Issuance API
   description: Issuance API will validate the Payment & Quote Info & Process the Payment and on successful payment, Issues the Policy for the given Quote.  
-host: starrglalpha.solartis.net
+host: ucistarrgl.solartis.net
 basePath: /DroolsV6/DroolsService
 schemes:
   - https

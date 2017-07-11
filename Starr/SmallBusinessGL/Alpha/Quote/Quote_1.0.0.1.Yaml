@@ -525,15 +525,6 @@ definitions:
         Reductionfactor3:
           title: "Reductionfactor3"
           type: string
-        TFSList
-          title: "Tax List"
-          type: string
-        TFSRate
-          title: "Tax Rate"
-          type: string
-        TFSDescription
-          title: "Tax Description"
-          type: string
         Classification:
          type: object
          properties:

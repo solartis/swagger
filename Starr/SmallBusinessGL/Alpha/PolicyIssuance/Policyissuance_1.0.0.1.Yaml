@@ -162,11 +162,11 @@ definitions:
             title: "card Holder State Code"
             type: string
             default: "NY"
-          CardHolderZipcode:
+          CardHolderZipCode:
             title: "card Holder zip code"
             type: string
             default: "10022"
-          CardHolderEmail:
+          PaymentEmail:
             title: "card Holder email"
             type: string
             default: "abc@xyz.com"

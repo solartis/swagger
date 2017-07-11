@@ -130,7 +130,7 @@ definitions:
             title: "Payment Card Number"
             type: string
             default: "55555555554444"
-          PaymentcardCVV:
+          PaymentCardCVV:
             title: "Payment Card CVV"
             type: string
             default: "333"
@@ -158,19 +158,19 @@ definitions:
             title: "Card Holder state"
             type: string
             default: "New York"
-          cardHolderStateCode:
+          CardHolderStateCode:
             title: "card Holder State Code"
             type: string
             default: "NY"
-          cardHolderZipcode:
+          CardHolderZipcode:
             title: "card Holder zip code"
             type: string
             default: "10022"
-          cardHolderEmail:
+          CardHolderEmail:
             title: "card Holder email"
             type: string
             default: "abc@xyz.com"
-          cardHolderPhone:
+          CardHolderPhone:
             title: "card Holder phone number"
             type: string
             default: "8459999999"
@@ -191,7 +191,7 @@ definitions:
             title: "Payment type"
             type: string
             default: "Annual Payment"
-          Sendmail:
+          SendMail:
             title: "send email"
             type: string
             enum: ["Yes","No"]

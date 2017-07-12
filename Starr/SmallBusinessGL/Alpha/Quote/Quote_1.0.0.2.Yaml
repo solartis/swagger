@@ -238,7 +238,7 @@ definitions:
         TRIAExpirationDate :
          title: "TRIA Expiration Date"
          type: string
-         default: "2018-04-01"
+         default: "01-04-2018"
         TerrorismAggregateLimit:
          title: "Terrorism Aggregate Limit"
          type: string

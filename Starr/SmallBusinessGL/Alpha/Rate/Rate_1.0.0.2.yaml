@@ -128,7 +128,7 @@ definitions:
         EventVersion:
          title: "Event Version"
          type: string
-         default: "1.0.0.2
+         default: "1.0.0.2"
         LastRateLookUpDate:
          title: "Last Rate Look Up Date"
          type: string

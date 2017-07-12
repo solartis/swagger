@@ -1,6 +1,6 @@
 swagger: '2.0'
 info:
-  version: "1.0.0.1"
+  version: "1.0.0.2"
   title: Solartis Rate API for STARR Small Business General Liability
   description: To get rate for Small Business General Liability from Solartis Quote 
                API with ISO ERC
@@ -47,7 +47,7 @@ paths:
           required: true
           type: string
           format: string
-          default: "1.0.0.1"       
+          default: "1.0.0.2"       
         - name: Rating Request
           in: body
           description: For rating request
@@ -128,7 +128,7 @@ definitions:
         EventVersion:
          title: "Event Version"
          type: string
-         default: "1.0.0.1"
+         default: "1.0.0.2
         LastRateLookUpDate:
          title: "Last Rate Look Up Date"
          type: string

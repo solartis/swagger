@@ -267,7 +267,8 @@ definitions:
            AdditionalInsuredType:
               title: "Additional Insured Type"
               type: string
-              default: "Vendors"
+              enum: ["Owners, Lessees Or Contractors - Scheduled Person Or Organization","Managers Or Lessors Of Premises","Designated Person Or Organization","Co-Owner Of Insured Premises","Lessor Of Leased Equipment","Owners, Lessees or Contractors - Automatic Status When Required In Construction Agreement With You","Lessor Of Leased Equipment - Automatic Status When Required In Lease Agreement With You","Club Members","Users of Golfmobiles"]
+              default: "Lessor Of Leased Equipment"
            AdditionalInsuredDetail:
             type: array
             items:

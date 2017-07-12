@@ -190,7 +190,7 @@ definitions:
           PaymentType:
             title: "Payment type"
             type: string
-            default: "Annual Payment"
+            default: "Annual"
           SendMail:
             title: "send email"
             type: string

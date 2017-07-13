@@ -112,6 +112,35 @@ definitions:
           default: "US" 
       Policy:
        type: object
+       Required: 
+          - EventVersion
+          - ProductVerNumber
+          - ProductNumber
+          - EventName
+          - EffectiveDate
+          - ExpirationDate
+          - LastRateLookUpDate
+          - InsuredName
+          - AddressLine1
+          - AddressLine2
+          - City
+          - County
+          - State
+          - ZipCode
+          - Subline
+          - GeneralLiabilityMedPayCoverageLimit
+          - PremOpsProdsCoverageForm
+          - EachOccurrenceLimit
+          - GeneralAggregateLimit
+          - TerrorismCoverage
+          - TRIAExtended
+          - TRIAExpirationDate
+          - TerrorismAggregateLimit
+          - EmployeeBenefitsLiability
+          - LimitEachEmployeeInt
+          - AggregateLimitInt
+          - DeductibleInt
+          - NumEmployees
        properties:
         ProductNumber:
          title: "ProductNumber"
@@ -271,6 +300,18 @@ definitions:
               default: "Lessor Of Leased Equipment"
            AdditionalInsuredDetail:
             type: array
+            Required:
+              - AdditionalInsuredType
+              - AdditionalInsuredAction
+              - AdditionalInsuredNumber
+              - COIDescription
+              - AdditionalInsuredName
+              - AdditionalInsuredAddressLine1
+              - AdditionalInsuredAddressLine2
+              - AdditionalInsuredCounty
+              - AdditionalInsuredCity
+              - AdditionalInsuredZipCode
+              - AdditionalInsuredState
             items:
              properties: 
               AdditionalInsuredAction:
@@ -318,6 +359,16 @@ definitions:
          properties: 
           LocationDetail:
             type: array
+            Required:
+              - LocationID
+              - AddressLine1
+              - City
+              - County
+              - State
+              - Zip Code
+              - MunicipalityCode
+              - MunicipalityName
+              - PremisesOperationsTerritory
             items:
               properties:
                 LocationID:
@@ -366,6 +417,16 @@ definitions:
                       ClassificationDetail:
                           type: array
                           items:
+                          Required:
+                            - ClassificationID
+                            - Classcode
+                            - PremOpsExposure
+                            - GeneralLiabilityExclCovCMedPayLocClassLvl
+                            - PremOpsAddlCovFactor
+                            - PremOpsBIDeductible
+                            - PremOpsPDDeductible
+                            - PremOpsBIPDDeductible
+                            - SprayPainting
                             properties:
                               ClassificationID:
                                   title: "ClassificationID"

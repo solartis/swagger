@@ -112,6 +112,35 @@ definitions:
           default: "US" 
       Policy:
        type: object
+       required:
+        - EventVersion
+        - ProductVerNumber
+        - ProductNumber
+        - EventName
+        - EffectiveDate
+        - ExpirationDate
+        - LastRateLookUpDate
+        - InsuredName
+        - Addressline1
+        - Addressline2
+        - City
+        - County
+        - State
+        - ZipCode
+        - Subline
+        - GeneralLiabilityMedPayCoverageLimit
+        - PremOpsProdsCoverageForm
+        - EachOccurrenceLimit
+        - GeneralAggregateLimit
+        - TerrorismCoverage
+        - TRIAExtended
+        - TRIAExpirationDate
+        - TerrorismAggregateLimit
+        - EmployeeBenefitsLiability
+        - LimitEachEmployeeInt
+        - AggregateLimitInt
+        - DeductibleInt
+        - NumEmployees
        properties:
         ProductNumber:
          title: "ProductNumber"
@@ -365,16 +394,6 @@ definitions:
                   properties:	
                       ClassificationDetail:
                           type: array
-                          Required:
-                            - ClassificationID
-                            - Classcode
-                            - PremOpsExposure
-                            - GeneralLiabilityExclCovCMedPayLocClassLvl
-                            - PremOpsAddlCovFactor
-                            - PremOpsBIDeductible
-                            - PremOpsPDDeductible
-                            - PremOpsBIPDDeductible
-                            - SprayPainting
                           items:
                             properties:
                                 ClassificationID:

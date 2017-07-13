@@ -112,7 +112,7 @@ definitions:
           default: "US" 
       Policy:
        type: object
-       Required: 
+       required: 
           - EventVersion
           - ProductVerNumber
           - ProductNumber
@@ -300,7 +300,7 @@ definitions:
               default: "Lessor Of Leased Equipment"
            AdditionalInsuredDetail:
             type: array
-            Required:
+            required:
               - AdditionalInsuredType
               - AdditionalInsuredAction
               - AdditionalInsuredNumber
@@ -359,7 +359,7 @@ definitions:
          properties: 
           LocationDetail:
             type: array
-            Required:
+            required:
               - LocationID
               - AddressLine1
               - City
@@ -416,7 +416,6 @@ definitions:
                   properties:	
                       ClassificationDetail:
                           type: array
-                          items:
                           Required:
                             - ClassificationID
                             - Classcode
@@ -427,40 +426,41 @@ definitions:
                             - PremOpsPDDeductible
                             - PremOpsBIPDDeductible
                             - SprayPainting
+                          items:
                             properties:
-                              ClassificationID:
+                                ClassificationID:
                                   title: "ClassificationID"
                                   type: string
                                   default: "1"
-                              Classcode:
+                                Classcode:
                                   title: "Class code"
                                   type: string
                                   default: "10010"
-                              PremOpsExposure:
+                                PremOpsExposure:
                                   title: "Premises Operations Exposure"
                                   type: string
                                   default: "15000"
-                              GeneralLiabilityExclCovCMedPayLocClassLvl:
+                                GeneralLiabilityExclCovCMedPayLocClassLvl:
                                   title: "Exclusion - Coverage C - Medical Payments"
                                   type: string
                                   default: "No"
-                              PremOpsAddlCovFactor:
+                                PremOpsAddlCovFactor:
                                   title: "Premises Operations Additional Coverage Factor"
                                   type: string
                                   default: "1"
-                              PremOpsBIDeductible:
+                                PremOpsBIDeductible:
                                   title: "Premises Operations BI Deductible"
                                   type: string
                                   default: "No Deductible"
-                              PremOpsPDDeductible:
+                                PremOpsPDDeductible:
                                   title: "Premises Operations PD Deductible"
                                   type: string
                                   default: "No Deductible"
-                              PremOpsBIPDDeductible:
+                                PremOpsBIPDDeductible:
                                   title: "Premises Operations BIPD Deductible" 
                                   type: string
                                   default: "No Deductible"
-                              SprayPainting:
+                                SprayPainting:
                                   title: "Spray Painting"
                                   type: string
                                   default: "No"    

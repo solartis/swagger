@@ -112,35 +112,6 @@ definitions:
           default: "US" 
       Policy:
        type: object
-       required: 
-          - EventVersion
-          - ProductVerNumber
-          - ProductNumber
-          - EventName
-          - EffectiveDate
-          - ExpirationDate
-          - LastRateLookUpDate
-          - InsuredName
-          - AddressLine1
-          - AddressLine2
-          - City
-          - County
-          - State
-          - ZipCode
-          - Subline
-          - GeneralLiabilityMedPayCoverageLimit
-          - PremOpsProdsCoverageForm
-          - EachOccurrenceLimit
-          - GeneralAggregateLimit
-          - TerrorismCoverage
-          - TRIAExtended
-          - TRIAExpirationDate
-          - TerrorismAggregateLimit
-          - EmployeeBenefitsLiability
-          - LimitEachEmployeeInt
-          - AggregateLimitInt
-          - DeductibleInt
-          - NumEmployees
        properties:
         ProductNumber:
          title: "ProductNumber"
@@ -300,18 +271,6 @@ definitions:
               default: "Lessor Of Leased Equipment"
            AdditionalInsuredDetail:
             type: array
-            required:
-              - AdditionalInsuredType
-              - AdditionalInsuredAction
-              - AdditionalInsuredNumber
-              - COIDescription
-              - AdditionalInsuredName
-              - AdditionalInsuredAddressLine1
-              - AdditionalInsuredAddressLine2
-              - AdditionalInsuredCounty
-              - AdditionalInsuredCity
-              - AdditionalInsuredZipCode
-              - AdditionalInsuredState
             items:
              properties: 
               AdditionalInsuredAction:
@@ -359,16 +318,6 @@ definitions:
          properties: 
           LocationDetail:
             type: array
-            required:
-              - LocationID
-              - AddressLine1
-              - City
-              - County
-              - State
-              - Zip Code
-              - MunicipalityCode
-              - MunicipalityName
-              - PremisesOperationsTerritory
             items:
               properties:
                 LocationID:

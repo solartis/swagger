@@ -1,8 +1,8 @@
 swagger: '2.0'
 info:
   version: "1.0.0.1"
-  title: STARR Small Business General Liability - Cancel API
-  description: Cancel API is used by the customer to cancel the issued policy
+  title: STARR Small Business General Liability - Cancel Preview API
+  description: Cancel Preview API can be used by the customer to preview how the cancel API works
   
 host: starrglalpha.solartis.net
 basePath: /DroolsV6/DroolsService

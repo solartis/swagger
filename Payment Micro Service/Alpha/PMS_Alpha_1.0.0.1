@@ -147,15 +147,15 @@ definitions:
           InvoiceNumber:
             type: string
             default: '11221'
-          TransactionID:
+          TransactionId:
             type: string
             default: '121'
           TransactionType:
             type: string
-            default: Payment
+            default: Report Purchase
           Amount:
             type: string
-            default: '500'
+            default: '200.00'
           PaymentMode:
             type: string
             default: Initial
@@ -170,6 +170,7 @@ definitions:
             default: '2212'
           Comments:
             type: string
+            default: " "
           PaymentMethodDetail:
             type: object
             properties:
@@ -188,9 +189,9 @@ definitions:
                     type: string
                     enum:
                     - '5555555555554444'
-                    - '6011000990139424'
-                    - '3530111333300000'
                     - '4012888888881881'
+                    - '3530111333300000'
+                    - '6011000990139424'
                     - '347712669659320'
                   ExpiryDate:
                     type: string
@@ -205,20 +206,21 @@ definitions:
               PayerName:
                 type: string
                 default: Test Payment
-              Address1:
+              AddressLine1:
                 type: string
                 default: '788 County Road'
-              Address2:
+              AddressLine2:
                 type: string
+                default: " "
               City:
                 type: string
                 default: Ider
               State:
                 type: string
-                default: Alabama
-              Country:
+                default: AL
+              CountryCode:
                 type: string
-                default: United States
+                default: US
               ZipCode:
                 type: string
                 default: '35981'
@@ -261,6 +263,8 @@ definitions:
           PaymentAuthorizationNumber:
             type: string
           PaidStatus:
+            type: string
+          PaidAmount:
             type: string
       PayerDetail:
         type: object

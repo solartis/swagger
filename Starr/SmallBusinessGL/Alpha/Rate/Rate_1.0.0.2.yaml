@@ -112,35 +112,6 @@ definitions:
           default: "US" 
       Policy:
        type: object
-       required:
-        - EventVersion
-        - ProductVerNumber
-        - ProductNumber
-        - EventName
-        - EffectiveDate
-        - ExpirationDate
-        - LastRateLookUpDate
-        - InsuredName
-        - Addressline1
-        - Addressline2
-        - City
-        - County
-        - State
-        - ZipCode
-        - Subline
-        - GeneralLiabilityMedPayCoverageLimit
-        - PremOpsProdsCoverageForm
-        - EachOccurrenceLimit
-        - GeneralAggregateLimit
-        - TerrorismCoverage
-        - TRIAExtended
-        - TRIAExpirationDate
-        - TerrorismAggregateLimit
-        - EmployeeBenefitsLiability
-        - LimitEachEmployeeInt
-        - AggregateLimitInt
-        - DeductibleInt
-        - NumEmployees
        properties:
         ProductNumber:
          title: "ProductNumber"
@@ -396,39 +367,39 @@ definitions:
                           type: array
                           items:
                             properties:
-                                ClassificationID:
+                              ClassificationID:
                                   title: "ClassificationID"
                                   type: string
                                   default: "1"
-                                Classcode:
+                              Classcode:
                                   title: "Class code"
                                   type: string
                                   default: "10010"
-                                PremOpsExposure:
+                              PremOpsExposure:
                                   title: "Premises Operations Exposure"
                                   type: string
                                   default: "15000"
-                                GeneralLiabilityExclCovCMedPayLocClassLvl:
+                              GeneralLiabilityExclCovCMedPayLocClassLvl:
                                   title: "Exclusion - Coverage C - Medical Payments"
                                   type: string
                                   default: "No"
-                                PremOpsAddlCovFactor:
+                              PremOpsAddlCovFactor:
                                   title: "Premises Operations Additional Coverage Factor"
                                   type: string
                                   default: "1"
-                                PremOpsBIDeductible:
+                              PremOpsBIDeductible:
                                   title: "Premises Operations BI Deductible"
                                   type: string
                                   default: "No Deductible"
-                                PremOpsPDDeductible:
+                              PremOpsPDDeductible:
                                   title: "Premises Operations PD Deductible"
                                   type: string
                                   default: "No Deductible"
-                                PremOpsBIPDDeductible:
+                              PremOpsBIPDDeductible:
                                   title: "Premises Operations BIPD Deductible" 
                                   type: string
                                   default: "No Deductible"
-                                SprayPainting:
+                              SprayPainting:
                                   title: "Spray Painting"
                                   type: string
                                   default: "No"    

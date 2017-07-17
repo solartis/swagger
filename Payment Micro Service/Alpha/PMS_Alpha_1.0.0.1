@@ -1,14 +1,14 @@
 swagger: '2.0'
 info:
-  version: '1.0'
+  version: 'Alpha 1.0.0.1'
   title: Starr - Payment Service
   description: >-
-    Payment Service is used to make Payment, generate Payment Receipt and email the Receipt to the Email Address.
+    Payment Micro Service is used to process Payment, generate Payment Receipt and email the Receipt to the Payer Email Address.
     
     
     Features:
-    1. Process Payment with the provided information
-    2. Payment Receipt generation
+    1. Payment Processing
+    2. Generation of Payment Receipt
     
 
 host:  starrpmsalpha.solartis.net
@@ -48,7 +48,7 @@ paths:
           required: true
           type: string
           format: string
-          default: 0.0.0.1
+          default: 1.0.0.1
         - name: Payment
           in: body
           description: Payment/traveler details
@@ -73,8 +73,6 @@ definitions:
       - EventName
       - OwnerId
       - PaymentDetail
-      - PaymentMethodDetail
-      - PayerDetail
     properties:
       EndClientUserUniqueSessionId:
         type: string
@@ -136,7 +134,7 @@ definitions:
         default: '31'
       EventVersion:
         type: string
-        default: '0.0.0.1'
+        default: '1.0.0.1'
       ProductNumber:
         type: string
         default: PaymentMicroservice
@@ -148,71 +146,88 @@ definitions:
         properties:
           InvoiceNumber:
             type: string
+            default: '11221'
           TransactionID:
             type: string
+            default: '121'
           TransactionType:
             type: string
+            default: Payment
           Amount:
             type: string
+            default: '500'
           PaymentMode:
             type: string
+            default: Initial
           PaymentType:
             type: string
+            default: Pay
           PaymentMethod:
             type: string
+            default: Credit Card
           TransactionReferenceNumber:
             type: string
+            default: '2212'
           Comments:
             type: string
-      PaymentMethodDetail:
-        type: object
-        properties:
-          CardDetail:
+          PaymentMethodDetail:
             type: object
             properties:
-              CardType:
+              CardDetail:
+                type: object
+                properties:
+                  CardType:
+                    type: string
+                    enum:
+                    - MasterCard
+                    - Visa
+                    - JCB
+                    - Discover
+                    - American Express
+                  CardNumber:
+                    type: string
+                    enum:
+                    - '5555555555554444'
+                    - '6011000990139424'
+                    - '3530111333300000'
+                    - '4012888888881881'
+                    - '347712669659320'
+                  ExpiryDate:
+                    type: string
+                  CVV:
+                    type: string
+          PayerDetail:
+            type: object
+            properties:
+              PayerReferenceNumber:
                 type: string
-                enum:
-                - '5555555555554444'
-                - '6011000990139424'
-                - '3530111333300000'
-                - '4012888888881881'
-                - '347712669659320'
-              CardNumber:
+                default: '101'
+              PayerName:
                 type: string
-                enum:
-                - MasterCard
-                - Visa
-                - JCB
-                - Discover
-                - American Express
-              ExpiryDate:
+                default: Test Payment
+              Address1:
                 type: string
-              CVV:
+                default: '788 County Road'
+              Address2:
                 type: string
-      PayerDetail:
-        type: object
-        properties:
-          PayerReferenceNumber:
-            type: string
-          PayerName:
-            type: string
-          Address1:
-            type: string
-          Address2:
-            type: string
-          State:
-            type: string
-          City:
-            type: string
-          Country:
-            type: string
-          ZipCode:
-            type: string
-          PhoneNumber:
-            type: string
-          EmailAddress:
-            type: string
+              City:
+                type: string
+                default: Ider
+              State:
+                type: string
+                default: Alabama
+              Country:
+                type: string
+                default: United States
+              ZipCode:
+                type: string
+                default: '35981'
+              PhoneNumber:
+                type: string
+                default: '1111111111'
+              EmailAddress:
+                type: string
+                default: 'test@test.com'
       PaymentAdditionalDetail:
         type: array
         items:
@@ -244,6 +259,8 @@ definitions:
           PaymentStatusMessage:
             type: string
           PaymentAuthorizationNumber:
+            type: string
+          PaidStatus:
             type: string
       PayerDetail:
         type: object

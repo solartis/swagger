@@ -112,6 +112,8 @@ definitions:
           default: "US" 
       Policy:
        type: object
+       required:
+        - ProductNumber
        properties:
         ProductNumber:
          title: "ProductNumber"
@@ -263,6 +265,8 @@ definitions:
         AdditionalInsuredList:
          type: array
          items:
+          required:
+           - AdditionalInsuredType
           properties:
            AdditionalInsuredType:
               title: "Additional Insured Type"
@@ -272,6 +276,11 @@ definitions:
            AdditionalInsuredDetail:
             type: array
             items:
+             required:
+              - AdditionalInsuredAction
+              - AdditionalInsuredNumber
+              - COIDescription
+              - AdditionalInsuredName
              properties: 
               AdditionalInsuredAction:
                title: " Additional Insured Action"
@@ -315,10 +324,15 @@ definitions:
                default: "WA" 
         Location:
          type: object
+         required:
+          - LocationDetail
          properties: 
           LocationDetail:
             type: array
             items:
+              required:
+               - LocationID
+               - ZipCode
               properties:
                 LocationID:
                     title: "Location ID"

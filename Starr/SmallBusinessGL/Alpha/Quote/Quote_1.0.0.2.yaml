@@ -145,6 +145,12 @@ definitions:
         - DeductibleInt
         - NumEmployees
         - AdditionalInsuredList
+        - GeneralLiabilityDamageToPremisesRentedToYouCoverageLimit
+        - PersonalAndAdvertisingInjuryLimit
+        - LeadHaveAllPremisesConstructedInOrAfter1978
+        - ProdsCompldOpsAggregateLimit
+        - LeadIsMultiplePremieseRiskConstructedBefore1978AndInOrAfter1978
+        - LeadWishToPurchaseCoverageForPremisesCertifiedAsLeadFree
        properties:
         ProductNumber:
          title: "ProductNumber"
@@ -169,15 +175,15 @@ definitions:
         LastRateLookUpDate:
          title: "Last Rate Look Up Date"
          type: string
-         default: "01-04-2017"
+         default: "2017-09-01"
         EffectiveDate: 
          title: "Policy Start Date"
          type: string
-         default: "01-04-2017"
+         default: "2017-09-01"
         ExpirationDate: 
          title: "PolicyExpiryDate"
          type: string
-         default: "01-04-2018"
+         default: "2018-09-01"
         InsuredName: 
          title: "InsuredName"
          type: string
@@ -214,7 +220,7 @@ definitions:
         GeneralLiabilityMedPayCoverageLimit:
          title: "Medical Payments Limit"
          type: string
-         default: "5000"
+         default: "5,000"
         PremOpsProdsCoverageForm:
          title: "Coverage Form"
          type: string
@@ -288,11 +294,11 @@ definitions:
         AggregateLimitInt:
          title: "Employee Benefits Liability Limit of Insurance - Aggregate"
          type: string
-         default: "1000"
+         default: "1,000"
         DeductibleInt:
          title: "Employee Benefits Liability Deductible"
          type: string
-         default: "1000"
+         default: "1,000"
         NumEmployees:
          title: "Number of Employees"
          type: string
@@ -375,6 +381,8 @@ definitions:
         AdditionalInsuredList:
          type: array
          items:
+          required:
+           - AdditionalInsuredType
           properties:
            AdditionalInsuredType:
               title: "Additional Insured Type"
@@ -384,6 +392,11 @@ definitions:
            AdditionalInsuredDetail:
             type: array
             items:
+             required: 
+              - AdditionalInsuredAction
+              - AdditionalInsuredNumber
+              - COIDescription
+              - AdditionalInsuredName
              properties: 
               AdditionalInsuredAction:
                title: " Additional Insured Action"
@@ -431,6 +444,13 @@ definitions:
           LocationDetail:
             type: array
             items:
+              required:
+               - LocationID
+               - City
+               - County
+               - State
+               - ZipCode
+               - PremisesOperationsTerritory
               properties:
                 LocationID:
                     title: "Location ID"
@@ -478,6 +498,18 @@ definitions:
                       ClassificationDetail:
                           type: array
                           items:
+                            required:
+                             - ClassificationID
+                             - Classcode
+                             - PremOpsExposure
+                             - GeneralLiabilityExclCovCMedPayLocClassLvl
+                             - PremOpsAddlCovFactor
+                             - PremOpsBIDeductible
+                             - PremOpsPDDeductible
+                             - PremOpsBIPDDeductible
+                             - SprayPainting
+                             - LeadRentalPropertyDefinedinRhodeIslandGeneralLaws
+                             - LeadConstructedPriorto1978PrimaFacieEvidenceofCompliance
                             properties:
                               ClassificationID:
                                   title: "ClassificationID"

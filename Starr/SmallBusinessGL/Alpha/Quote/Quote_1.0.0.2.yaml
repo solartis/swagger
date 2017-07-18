@@ -121,6 +121,7 @@ definitions:
         - EffectiveDate
         - ExpirationDate
         - InsuredName
+        - AddressLine1
         - City
         - County
         - State
@@ -131,12 +132,6 @@ definitions:
         - EachOccurrenceLimit
         - GeneralAggregateLimit
         - TerrorismCoverage
-        - GeneralLiabilityExclusionOfCertifiedActsOfNuclearBiologicalChemicalActsTerrorismCapOnLossesFromCertifiedActs
-        - GeneralLiabilityConditionalExclusionOfTerrorismNuclearBiologicalChemicalDispositionOfAct2002
-        - GeneralLiabilityExclusionOfTerrorismNuclearBiologicalChemicalTerrorism
-        - GeneralLiabilityCertifiedActsOfTerrorismAggregateLimitCapOnLossesFromCertifiedActsOfTerrorismPremOps
-        - GeneralLiabilityConditionalLimitationOfCoverageTerrorismSublimitAnnualAggregateTerrorismAct2002
-        - GeneralLiabilityLimitationOfCoverageForTerrorismSubLimitAnnualAggregateBasis
         - TRIAExtended
         - TRIAExpirationDate
         - EmployeeBenefitsLiability
@@ -151,6 +146,9 @@ definitions:
         - ProdsCompldOpsAggregateLimit
         - LeadIsMultiplePremieseRiskConstructedBefore1978AndInOrAfter1978
         - LeadWishToPurchaseCoverageForPremisesCertifiedAsLeadFree
+        - ProductionChannel
+        - InsuredMailingAddress
+        - PhoneNumber
        properties:
         ProductNumber:
          title: "ProductNumber"
@@ -397,6 +395,10 @@ definitions:
               - AdditionalInsuredNumber
               - COIDescription
               - AdditionalInsuredName
+              - AdditionalInsuredAddressLine1
+              - AdditionalInsuredCounty
+              - AdditionalInsuredCity
+              - AdditionalInsuredState
              properties: 
               AdditionalInsuredAction:
                title: " Additional Insured Action"

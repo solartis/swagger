@@ -131,12 +131,6 @@ definitions:
         - EachOccurrenceLimit
         - GeneralAggregateLimit
         - TerrorismCoverage
-        - GeneralLiabilityExclusionOfCertifiedActsOfNuclearBiologicalChemicalActsTerrorismCapOnLossesFromCertifiedActs
-        - GeneralLiabilityConditionalExclusionOfTerrorismNuclearBiologicalChemicalDispositionOfAct2002
-        - GeneralLiabilityExclusionOfTerrorismNuclearBiologicalChemicalTerrorism
-        - GeneralLiabilityCertifiedActsOfTerrorismAggregateLimitCapOnLossesFromCertifiedActsOfTerrorismPremOps
-        - GeneralLiabilityConditionalLimitationOfCoverageTerrorismSublimitAnnualAggregateTerrorismAct2002
-        - GeneralLiabilityLimitationOfCoverageForTerrorismSubLimitAnnualAggregateBasis
         - TRIAExtended
         - TRIAExpirationDate
         - EmployeeBenefitsLiability
@@ -312,6 +306,10 @@ definitions:
               - AdditionalInsuredNumber
               - COIDescription
               - AdditionalInsuredName
+              - AdditionalInsuredAddressLine1
+              - AdditionalInsuredCounty
+              - AdditionalInsuredCity
+              - AdditionalInsuredState
              properties: 
               AdditionalInsuredAction:
                title: " Additional Insured Action"

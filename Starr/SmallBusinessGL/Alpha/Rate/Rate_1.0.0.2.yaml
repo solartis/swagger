@@ -132,15 +132,15 @@ definitions:
         LastRateLookUpDate:
          title: "Last Rate Look Up Date"
          type: string
-         default: "01-04-2017"
+         default: "2017-09-01"
         EffectiveDate: 
          title: "Policy Start Date"
          type: string
-         default: "01-04-2017"
+         default: "2017-09-01"
         ExpirationDate: 
          title: "PolicyExpiryDate"
          type: string
-         default: "01-04-2018"
+         default: "2018-09-01"
         InsuredName: 
          title: "InsuredName"
          type: string
@@ -177,7 +177,7 @@ definitions:
         GeneralLiabilityMedPayCoverageLimit:
          title: "Medical Payments Limit"
          type: string
-         default: "5000"
+         default: "5,000"
         PremOpsProdsCoverageForm:
          title: "Coverage Form"
          type: string
@@ -234,7 +234,7 @@ definitions:
         TRIAExpirationDate :
          title: "TRIA Expiration Date"
          type: string
-         default: "04-01-2018"
+         default: "2018-05-01"
         TerrorismAggregateLimit:
          title: "Terrorism Aggregate Limit"
          type: string
@@ -251,11 +251,11 @@ definitions:
         AggregateLimitInt:
          title: "Employee Benefits Liability Limit of Insurance - Aggregate"
          type: string
-         default: "1000"
+         default: "1,000"
         DeductibleInt:
          title: "Employee Benefits Liability Deductible"
          type: string
-         default: "1000"
+         default: "1,000"
         NumEmployees:
          title: "Number of Employees"
          type: string

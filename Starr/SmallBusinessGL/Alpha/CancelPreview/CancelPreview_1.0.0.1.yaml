@@ -113,6 +113,15 @@ definitions:
             default: "US"  
        Policy:
          type: object
+         required:
+          - ProductNumber
+          - ProductVerNumber
+          - EventName
+          - EventVersion
+          - PolicyNumber
+          - CancelEffectiveDate
+          - CancelReason
+          - CancelType
          properties:
            ProductNumber:
             type: string

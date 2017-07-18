@@ -109,6 +109,26 @@ definitions:
             default: "US"  
       Policy:
          type: object
+         required:
+          - ProductNumber
+          - ProductVerNumber
+          - EventName
+          - EventVersion
+          - QuoteNumber
+          - PaymentCardNumber
+          - PaymentCardCVV
+          - PaymentCardExpirationDate
+          - CardHolderPayerName
+          - CardHolderAddress1
+          - CardHolderCity
+          - CardHolderState
+          - CardHolderZipCode
+          - PaymentEmail
+          - CardHolderPhone
+          - PaymentMethod
+          - PaymentCardType
+          - PaymentType
+          - SendMail
          properties:
           ProductNumber:
             type: string

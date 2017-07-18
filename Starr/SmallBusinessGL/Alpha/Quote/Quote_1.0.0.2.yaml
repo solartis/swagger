@@ -112,6 +112,39 @@ definitions:
           default: "US" 
       Policy:
        type: object
+       required:
+        - ProductNumber
+        - ProductVerNumber
+        - EventName
+        - EventVersion
+        - LastRateLookUpDate
+        - EffectiveDate
+        - ExpirationDate
+        - InsuredName
+        - City
+        - County
+        - State
+        - ZipCode
+        - Subline
+        - GeneralLiabilityMedPayCoverageLimit
+        - PremOpsProdsCoverageForm
+        - EachOccurrenceLimit
+        - GeneralAggregateLimit
+        - TerrorismCoverage
+        - GeneralLiabilityExclusionOfCertifiedActsOfNuclearBiologicalChemicalActsTerrorismCapOnLossesFromCertifiedActs
+        - GeneralLiabilityConditionalExclusionOfTerrorismNuclearBiologicalChemicalDispositionOfAct2002
+        - GeneralLiabilityExclusionOfTerrorismNuclearBiologicalChemicalTerrorism
+        - GeneralLiabilityCertifiedActsOfTerrorismAggregateLimitCapOnLossesFromCertifiedActsOfTerrorismPremOps
+        - GeneralLiabilityConditionalLimitationOfCoverageTerrorismSublimitAnnualAggregateTerrorismAct2002
+        - GeneralLiabilityLimitationOfCoverageForTerrorismSubLimitAnnualAggregateBasis
+        - TRIAExtended
+        - TRIAExpirationDate
+        - EmployeeBenefitsLiability
+        - LimitEachEmployeeInt
+        - AggregateLimitInt
+        - DeductibleInt
+        - NumEmployees
+        - AdditionalInsuredList
        properties:
         ProductNumber:
          title: "ProductNumber"

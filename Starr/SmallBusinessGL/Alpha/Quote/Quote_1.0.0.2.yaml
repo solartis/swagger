@@ -419,11 +419,11 @@ definitions:
               AdditionalInsuredAddressLine1:
                title: "Additional Insured Address Line1"
                type: string
-               default: ""
+               default: "70 Bowman St"
               AdditionalInsuredAddressLine2:
                title: "Additional Insured Address Line2"
                type: string
-               default: "70 Bowman St"
+               default: ""
               AdditionalInsuredCounty:
                title: "Additional Insured County"
                type: string

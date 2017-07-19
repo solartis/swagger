@@ -134,7 +134,6 @@ definitions:
         - EffectiveDate
         - ExpirationDate
         - InsuredName
-        - Addressline1
         - City
         - County
         - State
@@ -160,7 +159,6 @@ definitions:
         - LeadIsMultiplePremieseRiskConstructedBefore1978AndInOrAfter1978
         - LeadWishToPurchaseCoverageForPremisesCertifiedAsLeadFree
         - ProductionChannel
-        - InsuredMailingAddress
        properties:
         ProductNumber:
          title: "ProductNumber"

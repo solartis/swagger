@@ -566,7 +566,7 @@ definitions:
                               LeadConstructedPriorto1978PrimaFacieEvidenceofCompliance:
                                   title: "Have any premises constructed prior to 1978 received a Prima Facie Evidence of Compliance?"
                                   type: string
-                                  default: "Yes" 
+                                  default: "No" 
   errorModel:
     type: object
     required:

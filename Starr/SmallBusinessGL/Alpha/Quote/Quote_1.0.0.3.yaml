@@ -201,7 +201,7 @@ definitions:
         Addressline1: 
          title: "Address Line 1"
          type: string
-         default: ""
+         default: "70 Bowman St."
         Addressline2: 
          title: "Address Line 2"
          type: string
@@ -343,7 +343,7 @@ definitions:
         RiskAgreedtoPollutionExclusion:
          title: "Did the risk agree to the policy pollution exclusion or the attachment of a pollution exclusion endorsement?"
          type: string
-         default: ""
+         default: "No"
         EntityType:
          title: "Entity Type"
          type: string
@@ -367,7 +367,7 @@ definitions:
         InsuredMailingAddress:
          title: "Insured Mailing Address"
          type: string
-         default: ""
+         default: "test@test.com"
         PhoneNumber:
          title: "Phone Number"
          type: string

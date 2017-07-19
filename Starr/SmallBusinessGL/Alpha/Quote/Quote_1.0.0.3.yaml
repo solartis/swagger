@@ -199,7 +199,7 @@ definitions:
         Addressline1: 
          title: "Address Line 1"
          type: string
-         default: "70 Bowman St."
+         default: ""
         Addressline2: 
          title: "Address Line 2"
          type: string
@@ -365,7 +365,7 @@ definitions:
         InsuredMailingAddress:
          title: "Insured Mailing Address"
          type: string
-         default: "test@test.com"
+         default: ""
         PhoneNumber:
          title: "Phone Number"
          type: string

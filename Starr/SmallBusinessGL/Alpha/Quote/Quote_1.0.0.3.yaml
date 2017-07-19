@@ -66,6 +66,10 @@ paths:
 definitions:
   Rating_Request:
     type: object
+    required:
+    - EndClientUserUniqueSessionId
+    - OwnerId
+    - ServiceRequestDetail
     properties:
       EndClientUserUniqueSessionId: 
        title: "Client User Unique Session ID"
@@ -77,6 +81,15 @@ definitions:
        default: "30"
       ServiceRequestDetail:
         type: object
+        required:
+         - ServiceRequestVersion
+         - ServiceResponseVersion
+         - ResponseType
+         - OwnerId
+         - UserName
+         - Token
+         - LanguageCode
+         - RegionCode
         properties:
          ServiceRequestVersion:
           title: "ServiceRequestVersion"
@@ -148,7 +161,6 @@ definitions:
         - LeadWishToPurchaseCoverageForPremisesCertifiedAsLeadFree
         - ProductionChannel
         - InsuredMailingAddress
-        - PhoneNumber
        properties:
         ProductNumber:
          title: "ProductNumber"

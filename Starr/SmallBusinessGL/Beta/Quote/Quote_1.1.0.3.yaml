@@ -607,15 +607,129 @@ definitions:
         type: string
       Policy:
        type: object
-       required: 
-          - Classification
-          - AdditionalInsured
        properties:
-        EffectiveDate:
-         title: "Effective Date"
+        ProductNumber:
+         title: "ProductNumber"
          type: string
-        ExpirationDate:
-         title: "Expiration Date"
+        ProductVerNumber: 
+         title: "ProductVerNumber"
+         type: string
+        EventName: 
+         title: "EventName"
+         type: string
+        EventVersion:
+         title: "Event Version"
+         type: string
+        ProductionChannel:
+         title: "Production Channel"
+         type: string
+        LastRateLookUpDate:
+         title: "Last Rate Look Up Date"
+         type: string
+        EffectiveDate: 
+         title: "Policy Start Date"
+         type: string
+        ExpirationDate: 
+         title: "PolicyExpiryDate"
+         type: string
+        InsuredName: 
+         title: "InsuredName"
+         type: string
+        Addressline1: 
+         title: "Address Line 1"
+         type: string
+        Addressline2: 
+         title: "Address Line 2"
+         type: string
+        City: 
+         title: "City"
+         type: string
+        County: 
+         title: "County"
+         type: string
+        State: 
+         title: "State"
+         type: string
+        ZipCode: 
+         title: "Zip"
+         type: string
+        Subline:
+         title: "Subline"
+         type: string
+        GeneralLiabilityMedPayCoverageLimit:
+         title: "Medical Payments Limit"
+         type: string
+        PremOpsProdsCoverageForm:
+         title: "Coverage Form"
+         type: string
+        EachOccurrenceLimit:
+         title: "Each Occurrence Limit"
+         type: string
+        GeneralAggregateLimit:
+         title: "General Aggregate Limit"
+         type: string
+        TerrorismCoverage:
+         title: "Accept Certified Acts of Terrorism Coverage"
+         type: string
+        GeneralLiabilityExclusionOfCertifiedActsOfNuclearBiologicalChemicalActsTerrorismCapOnLossesFromCertifiedActs:
+         title: " Exclusion Of Certified Nuclear, Biological, Chemical Or Radiological Acts Of Terrsm; Cap On Losses From Certified Acts Of Terrsm"
+         type: string
+        GeneralLiabilityConditionalExclusionOfTerrorismNuclearBiologicalChemicalDispositionOfAct2002 : 
+         title: "Conditional Exclusion Of Terrorism Involving Nuclear, Biological Or Chemical Terrorism "
+         type: string
+        GeneralLiabilityExclusionOfTerrorismNuclearBiologicalChemicalTerrorism:
+         title: "Exclusion Of Terrorism Involving Nuclear, Biological Or Chemical Terrorism"
+         type: string
+        GeneralLiabilityCertifiedActsOfTerrorismAggregateLimitCapOnLossesFromCertifiedActsOfTerrorismPremOps:
+         title: "Certified Acts Of Terrorism Aggregate Limit; Cap On Losses From Certified Acts Of Terrorism"
+         type: string
+        GeneralLiabilityConditionalLimitationOfCoverageTerrorismSublimitAnnualAggregateTerrorismAct2002:
+         title: "Conditional Limitation Of Coverage For Terrorism On An Annual Aggregate Basis"
+         type: string
+        GeneralLiabilityLimitationOfCoverageForTerrorismSubLimitAnnualAggregateBasis:
+         title: "Limitation Of Coverage For Terrorism On An Annual Aggregate Basis"
+         type: string
+        TRIAExtended:
+         title: "Has TRIA been extended past termination date of TRIP?"
+         type: string
+        TRIAExpirationDate :
+         title: "TRIA Expiration Date"
+         type: string
+        TerrorismAggregateLimit:
+         title: "Terrorism Aggregate Limit"
+         type: string
+        EmployeeBenefitsLiability:
+         title: "Employee Benefits Liability"
+         type: string
+        LimitEachEmployeeInt:
+         title: "Employee Benefits Liability Limit of Insurance - each Employee"
+         type: string
+        AggregateLimitInt:
+         title: "Employee Benefits Liability Limit of Insurance - Aggregate"
+         type: string
+        DeductibleInt:
+         title: "Employee Benefits Liability Deductible"
+         type: string
+        NumEmployees:
+         title: "Number of Employees"
+         type: string
+        GeneralLiabilityDamageToPremisesRentedToYouCoverageLimit:
+         title: "Damage To Premises Rented To You Limit"
+         type: string
+        PersonalAndAdvertisingInjuryLimit: 
+         title: "Personal And Advertising Injury Limit"
+         type: string
+        ProdsCompldOpsAggregateLimit:
+         title: "Products-Completed Operations Aggregate Limit"
+         type: string
+        LeadHaveAllPremisesConstructedInOrAfter1978:
+         title: "Have all the premises been constructed in or after 1978?"
+         type: string
+        LeadIsMultiplePremieseRiskConstructedBefore1978AndInOrAfter1978:
+         title: "Is this a multiple premises risk that has buildings constructed before 1978 and in or after 1978?"
+         type: string
+        LeadWishToPurchaseCoverageForPremisesCertifiedAsLeadFree:
+         title: "Does the insured wish to purchase coverage for premises that  are certified as being lead free?"
          type: string
         BasePremium:
          title: "Base Premium"
@@ -686,67 +800,170 @@ definitions:
         TFSDescription:
           title: "Tax Description"
           type: string
-        Classification:
+        AdditionalInsuredCalculatedPremium:
+          type: string
+        AdditionalInsuredPremium:
+          type: string
+        AdditionalInsuredList:
+         type: array
+         items:
+          required:
+           - AdditionalInsuredType
+          properties:
+           AdditionalInsuredType:
+              title: "Additional Insured Type"
+              type: string
+           AdditionalInsuredDetail:
+            type: array
+            items:
+             properties: 
+              AdditionalInsuredAction:
+               title: " Additional Insured Action"
+               type: string
+              AdditionalInsuredNumber:
+               title: "Additional Insured Number"
+               type: string
+              COIDescription:
+               title: "COI Description"
+               type: string
+              AdditionalInsuredName:
+               title: "Additional Insured Name"
+               type: string
+              AdditionalInsuredAddressLine1:
+               title: "Additional Insured Address Line1"
+               type: string
+              AdditionalInsuredAddressLine2:
+               title: "Additional Insured Address Line2"
+               type: string
+              AdditionalInsuredCounty:
+               title: "Additional Insured County"
+               type: string
+              AdditionalInsuredCity:
+               title: "Additional Insured City"
+               type: string
+              AdditionalInsuredZipCode: 
+               title: "Additional Insured ZipCode"
+               type: string
+              AdditionalInsuredState: 
+               title: "Additional Insured State"
+               type: string
+              LocationOfCoveredOperations:
+               title: "Additional Insured Location Of Covered Operations"
+               type: string
+              DesignationOfPremisesRentedToYou:
+               title: "Designation Of Premises Rented To You"
+               type: string
+              LocationOfPremises:
+               title: "Location Of Premises"
+               type: string
+        Location:
          type: object
-         properties:
-          PremOpsCoverageCalculatedPremium: 
-           title: "Premises Operation Liability Coverage Calculated Premium"
-           type: string
-          PremOpsCoverageClasslevelPremium:
-           title: "Premises Operation Liability Coverage Classlevel Premium"
-           type: string
-          PremOpsCoveragePremium:
-           title: "Premises Operation Liability Coverage  Premium"
-           type: string
-          ILFPremOps:
-           title: "ILFPremOps"
-           type: string
-          PremiumBasePremOps:
-           title: "PremiumBasePremOps"
-           type: string
-          FinalRate:
-           title: "FinalRate"
-           type: string
-          BaseRate:
-           title: "BaseRate"
-           type: string
-          FinalILF:
-           title: "FinalILF"
-           type: string
-          PremOpsELPFactor:
-           title: "PremOpsELPFactor"
-           type: string
-          PremOpsIncrdLimitFactor:
-           title: "PremOpsIncrdLimitFactor"
-           type: string
-          CSLILF:
-           title: "CSLILF"
-           type: string
-          DeductibleFactor:
-           title: "DeductibleFactor"
-           type: string
-          MedicalPaymentsCharge:
-           title: "MedicalPaymentsCharge"
-           type: string
-          FinalPremOpsIncrdLimitTableAssignment:
-           title: "FinalPremOpsIncrdLimitTableAssignment"
-           type: string
-          PremOpsCoverageAgencyCommission :
-           title: "Premises Operation Liability Coverage  Agency Commission"
-           type: string
-          PremOpsCoverageBillingBrokerCommission:
-           title: "Premises Operation Liability Coverage Billing broker Commission"
-           type: string
-          PremOpsCoverageCommission:
-           title: "Premises Operation Liability Coverage Commission"
-           type: string
-        AdditionalInsured:
-         type: object
-         properties:
-          AdditionalInsuredCalculatedPremium:
-           title: "AdditionalInsuredCalculatedPremium"
-           type: string
-          AdditionalInsuredPremium:
-           title: "AdditionalInsuredPremium"
-           type: string
-  
+         properties: 
+          LocationDetail:
+            type: array
+            items:
+              properties:
+                LocationID:
+                    title: "Location ID"
+                    type: string
+                AddressLine1:
+                    title: "Address Line 1"
+                    type: string
+                AddressLine2:
+                    title: "Address Line 2"
+                    type: string
+                City:
+                    title: "City"
+                    type: string
+                County:
+                    title: "County"
+                    type: string
+                State:
+                    title: "State"
+                    type: string
+                ZipCode:
+                    title: "Zip Code"
+                    type: string
+                PremisesOperationsTerritory:
+                    title: "Premises Operations Territory"
+                    type: string
+                MunicipalityCode:
+                    title: "Municipality Code"
+                    type: string
+                MunicipalityName:
+                    title: "Municipality Name"
+                    type: string
+                Classification:
+                  type: object
+                  properties:	
+                      ClassificationDetail:
+                          type: array
+                          items:
+                            properties:
+                              ClassificationID:
+                                  title: "ClassificationID"
+                                  type: string
+                              Classcode:
+                                  title: "Class code"
+                                  type: string
+                              PremOpsExposure:
+                                  title: "Premises Operations Exposure"
+                                  type: string
+                              GeneralLiabilityExclCovCMedPayLocClassLvl:
+                                  title: "Exclusion - Coverage C - Medical Payments"
+                                  type: string
+                              PremOpsAddlCovFactor:
+                                  title: "Premises Operations Additional Coverage Factor"
+                                  type: string
+                              PremOpsBIDeductible:
+                                  title: "Premises Operations BI Deductible"
+                                  type: string
+                              PremOpsPDDeductible:
+                                  title: "Premises Operations PD Deductible"
+                                  type: string
+                              PremOpsBIPDDeductible:
+                                  title: "Premises Operations BIPD Deductible" 
+                                  type: string
+                              SprayPainting:
+                                  title: "Spray Painting"
+                                  type: string
+                              PremOpsCoverageCalculatedPremium:
+                                  type: string
+                              PremOpsCoverageClasslevelPremium:
+                                  type: string
+                              PremOpsCoveragePremium:
+                                  type: string
+                              ILFPremOps:
+                                  type: string
+                              PremiumBasePremOps:
+                                  type: string
+                              FinalRate:
+                                  type: string
+                              BaseRate:
+                                  type: string
+                              FinalILF:
+                                  type: string
+                              PremOpsELPFactor:
+                                  type: string
+                              CSLILF:
+                                  type: string
+                              DeductibleFactor:
+                                  type: string
+                              PremOpsIncrdLimitFactor:
+                                  type: string
+                              MedicalPaymentsCharge:
+                                  type: string
+                              FinalPremOpsIncrdLimitTableAssignment:
+                                  type: string
+                              PremOpsCoverageAgencyCommission:
+                                  type: string
+                              PremOpsCoverageBillingBrokerCommission:
+                                  type: string
+                              PremOpsCoverageCommission:
+                                  type: string
+                              LeadRentalPropertyDefinedinRhodeIslandGeneralLaws:
+                                  type: string
+                              LeadConstructedPriorto1978PrimaFacieEvidenceofCompliance:
+                                  type: string
+                              ClassDescription:
+                                  type: string

@@ -1,6 +1,6 @@
 swagger: '2.0'
 info:
-  version: '1.1.0.2'
+  version: '1.2.0.1'
   title: Starr GL - Issuance API
   description: Issuance API will validate the Payment & Quote Info & Process the Payment and on successful payment, Issues the Policy for the given Quote.  
 host: starrsgl.beta.solartis.net
@@ -44,7 +44,7 @@ paths:
           required: true
           type: string
           format: string
-          default: "1.1.0.2"
+          default: "1.2.0.1"
         - name: Policy_Issuance
           in: body
           description: Policy_Issuance_Request
@@ -141,7 +141,7 @@ definitions:
             default: "PolicyIssuance"
           EventVersion:
              type: string
-             default: "1.1.0.2"
+             default: "1.2.0.1"
           QuoteNumber:
             title: "Quote Number"
             type: string

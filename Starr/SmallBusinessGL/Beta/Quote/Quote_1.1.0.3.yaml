@@ -196,11 +196,11 @@ definitions:
          title: "InsuredName"
          type: string
          default: "John Smith"
-        Addressline1: 
+        AddressLine1:
          title: "Address Line 1"
          type: string
          default: ""
-        Addressline2: 
+        AddressLine2: 
          title: "Address Line 2"
          type: string
         City: 
@@ -285,7 +285,7 @@ definitions:
         TRIAExpirationDate :
          title: "TRIA Expiration Date"
          type: string
-         default: "01-04-2018"
+         default: "2018-04-04"
         TerrorismAggregateLimit:
          title: "Terrorism Aggregate Limit"
          type: string

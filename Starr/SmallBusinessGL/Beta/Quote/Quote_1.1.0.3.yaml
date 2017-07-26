@@ -285,7 +285,7 @@ definitions:
         TRIAExpirationDate :
          title: "TRIA Expiration Date"
          type: string
-         default: "2018-04-04"
+         default: "2020-12-31"
         TerrorismAggregateLimit:
          title: "Terrorism Aggregate Limit"
          type: string

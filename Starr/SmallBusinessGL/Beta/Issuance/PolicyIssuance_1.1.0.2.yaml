@@ -87,8 +87,8 @@ definitions:
           ResponseType:
             title: "Response Type"
             type: string
-            enum: ["JSON","XML"]
-            default: "JSON"
+            enum: ["json","XML"]
+            default: "json"
           UserName:
             title: "User Name"
             type: string

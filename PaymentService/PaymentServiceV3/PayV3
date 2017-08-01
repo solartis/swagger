@@ -1,9 +1,5 @@
-# Example YAML to get you started quickly.
-# Be aware that YAML has indentation based scoping.
-# Code completion support is available so start typing for available options.
 swagger: '2.0'
 
-# This is your document metadata
 info:
   version: "3.0.0"
   title: Solartis Payment Service V3
@@ -16,7 +12,6 @@ consumes:
   - application/json
 produces:
   - application/json
-# Describe your paths here
 paths:
   /payV3:
     post:

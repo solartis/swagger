@@ -4,6 +4,7 @@ info:
   version: "3.0.0"
   title: Solartis Payment Service V3
   description: To invoke Chase Payment Gateway to make payment
+# Alfresco Link : http://portal.solartis.net:8080/share/page/site/solartis-platform/wiki-page?title=Payment_Service
 host: paymentservice.solartis.net
 basePath: /PaymentServiceV3/PaymentV3
 schemes:

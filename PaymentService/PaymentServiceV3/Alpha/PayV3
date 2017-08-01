@@ -135,6 +135,7 @@ definitions:
                 properties:
                   CardType:
                     type: string
+                    default: "MasterCard"
                     enum:
                     - MasterCard
                     - Visa
@@ -143,6 +144,7 @@ definitions:
                     - American Express
                   CardNumber:
                     type: string
+                    default: "5555555555554444"
                     enum:
                     - '5555555555554444'
                     - '4012888888881881'
@@ -151,9 +153,11 @@ definitions:
                     - '347712669659320'
                   ExpiryDate:
                     type: string
+                    default: "0118"
                     title: ExpiryDate (MMYY)
                   CVV:
                     type: string
+                    default: "333"
           PayerDetail:
             type: object
             properties:

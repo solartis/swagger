@@ -167,7 +167,7 @@ definitions:
         ExpirationDate: 
          title: "PolicyExpiryDate"
          type: string
-         default: "2018-09-01"
+         default: "2020-31-12"
         InsuredName: 
          title: "InsuredName"
          type: string

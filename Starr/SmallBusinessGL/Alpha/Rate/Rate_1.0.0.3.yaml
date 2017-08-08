@@ -93,7 +93,7 @@ definitions:
          ResponseType:
           title: "Response Type"
           type: string
-          default: "JSON"
+          default: "json"
          UserName:
           title: "User Name"
           type: string
@@ -172,11 +172,11 @@ definitions:
          title: "InsuredName"
          type: string
          default: "John Smith"
-        Addressline1: 
+        AddressLine1: 
          title: "Address Line 1"
          type: string
          default: ""
-        Addressline2: 
+        AddressLine2: 
          title: "Address Line 2"
          type: string
         City: 
@@ -261,7 +261,7 @@ definitions:
         TRIAExpirationDate :
          title: "TRIA Expiration Date"
          type: string
-         default: "2018-05-01"
+         default: "2020-12-31"
         TerrorismAggregateLimit:
          title: "Terrorism Aggregate Limit"
          type: string

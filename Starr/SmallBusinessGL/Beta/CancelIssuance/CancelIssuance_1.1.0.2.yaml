@@ -133,7 +133,7 @@ definitions:
             default: "CancelIssuance"
            EventVersion: 
             type: string
-            default: "1.0.0.1"
+            default: "1.1.0.2"
            PolicyNumber:
             type: string
             default: "1000202169"

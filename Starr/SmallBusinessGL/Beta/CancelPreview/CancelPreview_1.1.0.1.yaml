@@ -1,4 +1,4 @@
-Swagger: '2.0'
+swagger: '2.0'
 info:
   version: "1.1.0.1"
   title: STARR Small Business General Liability - Cancel Preview API

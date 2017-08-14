@@ -4,7 +4,7 @@ info:
   title: STARR Small Business General Liability - Cancel Preview API
   description: Cancel Preview API can be used by the customer to preview how the cancel API works
   
-host: starrsgl.alpha.solartis.net
+host: starrsgl.beta.solartis.net
 basePath: /DroolsV6/DroolsService
 schemes:
   - https

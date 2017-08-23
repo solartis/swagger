@@ -149,23 +149,32 @@ definitions:
             type: string
             default: '11221'
           TransactionId:
+            description: Transaction ID should be unique for each Transaction
             type: string
-            default: '122'
+            default: '205'
           TransactionType:
             type: string
             default: Report Purchase
+            enum:
+            - Report Purchase
           Amount:
             type: string
             default: '200.00'
           PaymentMode:
             type: string
             default: Initial
+            enum:
+            - Initial
           PaymentType:
             type: string
             default: Pay
+            enum:
+            - Pay
           PaymentMethod:
             type: string
             default: Credit Card
+            enum:
+            - Credit Card
           TransactionReferenceNumber:
             type: string
             default: '2212'

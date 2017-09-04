@@ -168,7 +168,7 @@ definitions:
          title: "State"
          type: string
          default: "AL"
-         enum: ["SC","MI","PA","NC","AL","MO","MS","TN","IN","AZ","MD","DC","OH","CO","OK","KS","NV","WI","NM","IA","SD","ID","UT","MT","WY","ND","OR","NE","DE"]
+         enum: ["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IA","IN","KS","KY","LA","MD","MA","ME","MI","MT","MO","MN","MS","NE","NV","NH","ND","NC","NJ","NY","NM","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"]
         ZipCode: 
          title: "Zip"
          type: string
@@ -343,7 +343,8 @@ definitions:
               AdditionalInsuredState: 
                title: "Additional Insured State"
                type: string
-               default: "WA" 
+               default: "WA"
+               enum: ["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IA","IN","KS","KY","LA","MD","MA","ME","MI","MT","MO","MN","MS","NE","NV","NH","ND","NC","NJ","NY","NM","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"]
         Location:
          type: object
          properties: 
@@ -375,6 +376,7 @@ definitions:
                     title: "State"
                     type: string
                     default: "AL"
+                    enum: ["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IA","IN","KS","KY","LA","MD","MA","ME","MI","MT","MO","MN","MS","NE","NV","NH","ND","NC","NJ","NY","NM","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"]
                 ZipCode:
                     title: "Zip Code"
                     type: string

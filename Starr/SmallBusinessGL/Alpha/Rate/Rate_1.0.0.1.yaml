@@ -255,7 +255,7 @@ definitions:
         DeductibleInt:
          title: "Employee Benefits Liability Deductible"
          type: string
-         default: "1,000"
+         default: "1000"
         NumEmployees:
          title: "Number of Employees"
          type: string

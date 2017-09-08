@@ -290,7 +290,7 @@ definitions:
         RetroactiveDate:
          title: "RetroactiveDate"
          type: string
-         default: ""
+         default: "2017-09-01"
         AdditionalInsuredList:
          type: array
          items:

@@ -282,7 +282,7 @@ definitions:
         DeductibleInt:
          title: "Employee Benefits Liability Deductible"
          type: string
-         default: "1,000"
+         default: "1000"
         NumEmployees:
          title: "Number of Employees"
          type: string
@@ -290,7 +290,7 @@ definitions:
         RetroactiveDate:
          title: "RetroactiveDate"
          type: string
-         default: ""
+         default: "2017-09-01"
         AdditionalInsuredList:
          type: array
          items:

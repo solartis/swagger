@@ -322,7 +322,7 @@ definitions:
         ProdsCompldOpsAggregateLimit:
          title: "Products-Completed Operations Aggregate Limit"
          type: string
-         default: "25,000 CSL"
+         default: "2,000,000 CSL"
         LeadHaveAllPremisesConstructedInOrAfter1978:
          title: "Have all the premises been constructed in or after 1978?"
          type: string

@@ -750,6 +750,15 @@ definitions:
         TotalPremium:
          title: "Total Premium"
          type: string
+        TotalBillingBrokerCommission:
+         title: "Total Billing Broker Commission"
+         type: string
+        TotalAgencyCommission:
+         title: "Total Agency Commission"
+         type: string
+        TotalCommission:
+         title: "Total Commission"
+         type: string
         LCM:
          title: "LCM"
          type: string
@@ -827,6 +836,15 @@ definitions:
               AdditionalInsuredRate:
                title: "Additional Insured Rate"
                type: string
+              AdditionalInsuredAgencyCommission:
+                title: "Additional Insured Agency Commission"
+                type: string
+              AdditionalInsuredBillingBrokerCommission:
+                title: "AdditionalInsured Billing broker Commission"
+                type: string
+              AdditionalInsuredCommission:
+                title: "AdditionalInsured  Commission"
+                type: string       
         Location:
          type: object
          properties: 

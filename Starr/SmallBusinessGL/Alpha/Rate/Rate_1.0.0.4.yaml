@@ -505,36 +505,138 @@ definitions:
         type: string
       Policy:
        type: object
-       required: 
-          - Classification
-          - AdditionalInsured
        properties:
-        EffectiveDate:
-         title: "Effective Date"
+        ProductNumber:
+         title: "ProductNumber"
          type: string
-        ExpirationDate:
-         title: "Expiration Date"
+        ProductVerNumber: 
+         title: "ProductVerNumber"
          type: string
-        ERCVersion:
-         title: "ERC Version"
+        EventName: 
+         title: "EventName"
          type: string
-        CWVersion:
-         title: "CW Version"
+        EventVersion:
+         title: "Event Version"
+         type: string
+        ProductionChannel:
+         title: "Production Channel"
+         type: string
+        LastRateLookUpDate:
+         title: "Last Rate Look Up Date"
+         type: string
+        EffectiveDate: 
+         title: "Policy Start Date"
+         type: string
+        ExpirationDate: 
+         title: "PolicyExpiryDate"
+         type: string
+        InsuredName: 
+         title: "InsuredName"
+         type: string
+        Addressline1: 
+         title: "Address Line 1"
+         type: string
+        Addressline2: 
+         title: "Address Line 2"
+         type: string
+        City: 
+         title: "City"
+         type: string
+        County: 
+         title: "County"
+         type: string
+        State: 
+         title: "State"
+         type: string
+        ZipCode: 
+         title: "Zip"
+         type: string
+        Subline:
+         title: "Subline"
+         type: string
+        GeneralLiabilityMedPayCoverageLimit:
+         title: "Medical Payments Limit"
+         type: string
+        PremOpsProdsCoverageForm:
+         title: "Coverage Form"
+         type: string
+        EachOccurrenceLimit:
+         title: "Each Occurrence Limit"
+         type: string
+        GeneralAggregateLimit:
+         title: "General Aggregate Limit"
+         type: string
+        TerrorismCoverage:
+         title: "Accept Certified Acts of Terrorism Coverage"
+         type: string
+        GeneralLiabilityExclusionOfCertifiedActsOfNuclearBiologicalChemicalActsTerrorismCapOnLossesFromCertifiedActs:
+         title: " Exclusion Of Certified Nuclear, Biological, Chemical Or Radiological Acts Of Terrsm; Cap On Losses From Certified Acts Of Terrsm"
+         type: string
+        GeneralLiabilityConditionalExclusionOfTerrorismNuclearBiologicalChemicalDispositionOfAct2002 : 
+         title: "Conditional Exclusion Of Terrorism Involving Nuclear, Biological Or Chemical Terrorism "
+         type: string
+        GeneralLiabilityExclusionOfTerrorismNuclearBiologicalChemicalTerrorism:
+         title: "Exclusion Of Terrorism Involving Nuclear, Biological Or Chemical Terrorism"
+         type: string
+        GeneralLiabilityCertifiedActsOfTerrorismAggregateLimitCapOnLossesFromCertifiedActsOfTerrorismPremOps:
+         title: "Certified Acts Of Terrorism Aggregate Limit; Cap On Losses From Certified Acts Of Terrorism"
+         type: string
+        GeneralLiabilityConditionalLimitationOfCoverageTerrorismSublimitAnnualAggregateTerrorismAct2002:
+         title: "Conditional Limitation Of Coverage For Terrorism On An Annual Aggregate Basis"
+         type: string
+        GeneralLiabilityLimitationOfCoverageForTerrorismSubLimitAnnualAggregateBasis:
+         title: "Limitation Of Coverage For Terrorism On An Annual Aggregate Basis"
+         type: string
+        TRIAExtended:
+         title: "Has TRIA been extended past termination date of TRIP?"
+         type: string
+        TRIAExpirationDate :
+         title: "TRIA Expiration Date"
+         type: string
+        TerrorismAggregateLimit:
+         title: "Terrorism Aggregate Limit"
+         type: string
+        EmployeeBenefitsLiability:
+         title: "Employee Benefits Liability"
+         type: string
+        LimitEachEmployeeInt:
+         title: "Employee Benefits Liability Limit of Insurance - each Employee"
+         type: string
+        AggregateLimitInt:
+         title: "Employee Benefits Liability Limit of Insurance - Aggregate"
+         type: string
+        DeductibleInt:
+         title: "Employee Benefits Liability Deductible"
+         type: string
+        NumEmployees:
+         title: "Number of Employees"
+         type: string
+        GeneralLiabilityDamageToPremisesRentedToYouCoverageLimit:
+         title: "Damage To Premises Rented To You Limit"
+         type: string
+        PersonalAndAdvertisingInjuryLimit: 
+         title: "Personal And Advertising Injury Limit"
+         type: string
+        ProdsCompldOpsAggregateLimit:
+         title: "Products-Completed Operations Aggregate Limit"
          type: string
         BasePremium:
          title: "Base Premium"
-         type: string
-        EmployeeBenefitsBasePremium:
-         title: "Employee Benefits Base Premium"
-         type: string
-        EmployeeBenefitsIncreasedLimitsOfLiabilityFactor:
-         title: "Employee Benefits Increased Limits Of Liability Factor"
          type: string
         EmployeeBenefitsLiabCovCalculatedPremium:
          title: "Employee Benedits Liability Covearge Calculated Premium"
          type: string
         EmployeeBenefitsLiabCovPremium:
          title: "Employee Benedits Liability Covearge Premium"
+         type: string
+        EmployeeBenefitsLiabCovAgencyCommission:
+         title: "Employee Benedits Liability Agency Commission"
+         type: string
+        EmployeeBenefitsLiabCovBillingBrokerCommission:
+         title: "Employee Benedits Liability Billing broker Commission"
+         type: string
+        EmployeeBenefitsLiabCovCommission:
+         title: "Employee Benedits Liability Covearge Commission"
          type: string
         TFSAmount:
          title: "TFS Amount"
@@ -545,93 +647,204 @@ definitions:
         TotalPremium:
          title: "Total Premium"
          type: string
+        TotalBillingBrokerCommission:
+         title: "Total Billing Broker Commission"
+         type: string
+        TotalAgencyCommission:
+         title: "Total Agency Commission"
+         type: string
+        TotalCommission:
+         title: "Total Commission"
+         type: string
         LCM:
          title: "LCM"
          type: string
-        QuoteNumber:
-         title: "Quote Number"
-         type: string
-        ReductionfactorList:
-         title: "ReductionfactorList"
-         type: string
-        Reductionfactor1:
-          title: "Reductionfactor1"
+        AdditionalInsuredCalculatedPremium:
           type: string
-        Reductionfactor2:
-          title: "Reductionfactor2"
+        AdditionalInsuredPremium:
           type: string
-        Reductionfactor3:
-          title: "Reductionfactor3"
-          type: string
-        ProrataFactor:
-          title: "Prorata Factor"
-          type: string
-        Classification:
+        AdditionalInsuredList:
+         type: array
+         items:
+          required:
+           - AdditionalInsuredType
+          properties:
+           AdditionalInsuredType:
+              title: "Additional Insured Type"
+              type: string
+           AdditionalInsuredDetail:
+            type: array
+            items:
+             properties: 
+              AdditionalInsuredAction:
+               title: " Additional Insured Action"
+               type: string
+              AdditionalInsuredNumber:
+               title: "Additional Insured Number"
+               type: string
+              COIDescription:
+               title: "COI Description"
+               type: string
+              AdditionalInsuredName:
+               title: "Additional Insured Name"
+               type: string
+              AdditionalInsuredAddressLine1:
+               title: "Additional Insured Address Line1"
+               type: string
+              AdditionalInsuredAddressLine2:
+               title: "Additional Insured Address Line2"
+               type: string
+              AdditionalInsuredCounty:
+               title: "Additional Insured County"
+               type: string
+              AdditionalInsuredCity:
+               title: "Additional Insured City"
+               type: string
+              AdditionalInsuredZipCode: 
+               title: "Additional Insured ZipCode"
+               type: string
+              AdditionalInsuredState: 
+               title: "Additional Insured State"
+               type: string
+              AdditionalInsuredRate:
+               title: "Additional Insured Rate"
+               type: string
+              AdditionalInsuredAgencyCommission:
+                title: "Additional Insured Agency Commission"
+                type: string
+              AdditionalInsuredBillingBrokerCommission:
+                title: "AdditionalInsured Billing broker Commission"
+                type: string
+              AdditionalInsuredCommission:
+                title: "AdditionalInsured  Commission"
+                type: string                  
+        Location:
          type: object
-         properties:
-          PremOpsCoverageCalculatedPremium: 
-           title: "Premises Operation Liability Coverage Calculated Premium"
-           type: string
-          PremOpsCoverageClasslevelPremium:
-           title: "Premises Operation Liability Coverage Classlevel Premium"
-           type: string
-          PremOpsCoveragePremium:
-           title: "Premises Operation Liability Coverage  Premium"
-           type: string
-          PremiumBasePremOps:
-           title: "PremiumBasePremOps"
-           type: string
-          FinalPremOpsIncrdLimitTableAssignment:
-           title: "Final Premises Operations Increased Limit Table Assignment"
-           type: string
-          FinalRate:
-           title: "FinalRate"
-           type: string
-          BaseRate:
-           title: "BaseRate"
-           type: string
-          FinalILF:
-           title: "FinalILF"
-           type: string
-          PremOpsELPFactor:
-           title: "Premises Operations ELP Factor"
-           type: string
-          PremOpsIncrdLimitFactor:
-           title: "Premises Operations Incremented Limit Factor"
-           type: string
-          CSLILF:
-           title: "CSLILF"
-           type: string
-          DeductibleFactor:
-           title: "DeductibleFactor"
-           type: string
-          MedicalPaymentsCharge:
-           title: "Medical Payments Charge"
-           type: string
-          ILFPremOps:
-           title: "Premises Operations incremented Limit Factor"
-           type: string
-          CertifiedActsOfTerrorismExposureClassFactorPremises:
-           title: "CertifiedActsOfTerrorismExposureClassFactorPremises"
-           type: string
-          TerrorismILF:
-           title: "TerrorismILF"
-           type: string
-          TerrorismCalculatedPremium:
-           title: "Terrorism Calculated Premium"
-           type: string
-          TerrorismPremium:
-           title: "Terrorism Premium"
-           type: string
-        AdditionalInsured:
-         type: object
-         properties:
-          AdditionalInsuredCalculatedPremium:
-           title: "AdditionalInsuredCalculatedPremium"
-           type: string
-          AdditionalInsuredPremium:
-           title: "AdditionalInsuredPremium"
-           type: string
-          AdditionalInsuredRate:
-           title: "Additional Insured Rate"
-           type: string  
+         properties: 
+          LocationDetail:
+            type: array
+            items:
+              properties:
+                LocationID:
+                    title: "Location ID"
+                    type: string
+                AddressLine1:
+                    title: "Address Line 1"
+                    type: string
+                AddressLine2:
+                    title: "Address Line 2"
+                    type: string
+                City:
+                    title: "City"
+                    type: string
+                County:
+                    title: "County"
+                    type: string
+                State:
+                    title: "State"
+                    type: string
+                ZipCode:
+                    title: "Zip Code"
+                    type: string
+                PremisesOperationsTerritory:
+                    title: "Premises Operations Territory"
+                    type: string
+                MunicipalityCode:
+                    title: "Municipality Code"
+                    type: string
+                MunicipalityName:
+                    title: "Municipality Name"
+                    type: string
+                Classification:
+                  type: object
+                  properties:	
+                      ClassificationDetail:
+                          type: array
+                          items:
+                            properties:
+                              ClassificationID:
+                                  title: "ClassificationID"
+                                  type: string
+                              Classcode:
+                                  title: "Class code"
+                                  type: string
+                              PremOpsExposure:
+                                  title: "Premises Operations Exposure"
+                                  type: string
+                              GeneralLiabilityExclCovCMedPayLocClassLvl:
+                                  title: "Exclusion - Coverage C - Medical Payments"
+                                  type: string
+                              PremOpsAddlCovFactor:
+                                  title: "Premises Operations Additional Coverage Factor"
+                                  type: string
+                              PremOpsBIDeductible:
+                                  title: "Premises Operations BI Deductible"
+                                  type: string
+                              PremOpsPDDeductible:
+                                  title: "Premises Operations PD Deductible"
+                                  type: string
+                              PremOpsBIPDDeductible:
+                                  title: "Premises Operations BIPD Deductible" 
+                                  type: string
+                              SprayPainting:
+                                  title: "Spray Painting"
+                                  type: string
+                              PremOpsCoverageCalculatedPremium:
+                                  type: string
+                              PremOpsCoverageClasslevelPremium:
+                                  type: string
+                              PremOpsCoveragePremium:
+                                  type: string
+                              ILFPremOps:
+                                  type: string
+                              PremiumBasePremOps:
+                                  type: string
+                              FinalRate:
+                                  type: string
+                              BaseRate:
+                                  type: string
+                              FinalILF:
+                                  type: string
+                              PremOpsELPFactor:
+                                  type: string
+                              CSLILF:
+                                  type: string
+                              DeductibleFactor:
+                                  type: string
+                              PremOpsIncrdLimitFactor:
+                                  type: string
+                              MedicalPaymentsCharge:
+                                  type: string
+                              FinalPremOpsIncrdLimitTableAssignment:
+                                  type: string
+                              PremOpsCoverageAgencyCommission:
+                                  type: string
+                              PremOpsCoverageBillingBrokerCommission:
+                                  type: string
+                              PremOpsCoverageCommission:
+                                  type: string
+                              ClassDescription:
+                                  type: string
+                              PremOpsLossCost:
+                                  type: string
+                              CertifiedActsOfTerrorismExposureClassFactorPremises:
+                                  type: string
+                              TerrorismILF:
+                                  type: string
+                              TerrorismAgencyCommission:
+                                  title: "Terrorism Agency Commission"
+                                  type: string
+                              TerrorismBillingBrokerCommission:
+                                  title: "Terrorism Billing broker Commission"
+                                  type: string
+                              TerrorismCommission:
+                                  title: "Terrorism  Commission"
+                                  type: string
+                              TerrorismCalculatedPremium:
+                                  title: "Terrorism Calculated Premium"
+                                  type: string
+                              TerrorismPremium:
+                                  title: "Terrorism Premium"
+                                  type: string
+                              
+

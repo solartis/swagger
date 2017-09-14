@@ -6,7 +6,7 @@ info:
   
   
 host: cw.beta.solartis.net
-basePath: /DroolsV6/DroolsService
+basePath: /BCService/service
 schemes:
   - https
 consumes:
@@ -14,7 +14,7 @@ consumes:
 produces:
   - application/json
 paths:
-  /FireEventV2:
+  /createInsured:
     post:
       description: Create Insured in BlockChain
       operationId: createInsured

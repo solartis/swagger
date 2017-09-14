@@ -70,7 +70,7 @@ definitions:
         type: string
         default: "http://solbctify.westus.cloudapp.azure.com:8545"
       PolicyContractAddress:
-        title: "ProductName"
+        title: "PolicyContractAddress"
         type: string
         default: "0x858196b1587c6411fc93c22b5e6f447e0c9e2404"
       

@@ -2,11 +2,11 @@ swagger: '2.0'
 info:
   version: "1.0.0"
   title: Solartis Service to Update Insured in BlockChain
-  description: To update insured in BlockChain network using Solartis Service
+  description: To update Insured in BlockChain network using Solartis Service
   
   
-host: cw.beta.solartis.net
-basePath: /DroolsV6/DroolsService
+host: starrbopucikbv4-3.solartis.net
+basePath: /BCService/service
 schemes:
   - https
 consumes:
@@ -14,7 +14,7 @@ consumes:
 produces:
   - application/json
 paths:
-  /FireEventV2:
+  /createInsured:
     post:
       description: Update Insured in BlockChain
       operationId: updateInsured

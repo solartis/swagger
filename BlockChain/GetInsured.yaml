@@ -78,7 +78,7 @@ definitions:
         type: string
         default: "1388 park street"
       AddressLine2:
-        title: "Effective Date"
+        title: "AddressLine2"
         type: string
         default: "Blvd. Opp to Bloomingdale"
       City:

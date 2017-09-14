@@ -21,13 +21,6 @@ paths:
       produces:
         - application/json
       parameters:
-        - name: Token
-          in: header
-          description: Authentication Token
-          required: true
-          type: string
-          format: string
-          default: "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"
         - name: Update Insured
           in: body
           description: Update Insured

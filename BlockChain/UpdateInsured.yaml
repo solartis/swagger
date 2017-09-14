@@ -82,7 +82,7 @@ definitions:
         type: string
         default: "1388 park street"
       AddressLine2:
-        title: "Effective Date"
+        title: "AddressLine2"
         type: string
         default: "Blvd. Opp to Bloomingdale"
       City:
@@ -114,7 +114,7 @@ definitions:
         type: string
         default: "Abinaya K"
       InsuredContactAddress:
-        title: "Workplace Liability Insurance"
+        title: "InsuredContactAddress"
         type: string
         default: "3rd block DLF, Alfreta, 30502, USA"
       InsuredContactPhone:
@@ -122,7 +122,7 @@ definitions:
         type: string
         default: "+1 405 555 5512"
       InsuredContactEmail:
-        title: "Transition Factor"
+        title: "InsuredContactEmail"
         type: string
         default: "test@solartis.com"
 

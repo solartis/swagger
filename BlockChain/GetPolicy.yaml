@@ -84,7 +84,7 @@ definitions:
         type: string
         default: "SUCCESS"
       PolicyContractAddress:
-        title: "ProductName"
+        title: "PolicyContractAddress"
         type: string
         default: "0x858196b1587c6411fc93c22b5e6f447e0c9e2404"
       ProductName:
@@ -94,7 +94,7 @@ definitions:
       ProductNumber:
         title: "ProductNumber"
         type: string
-        default: "ProductNumber"
+        default: "BOP"
       ProductVerNumber:
         title: "ProductVerNumber"
         type: string
@@ -336,9 +336,9 @@ definitions:
                   type: string
                   default: "991000207109"
                 UpdatedBy:
-                  title: "BOPAgent"
+                  title: "UpdatedBy"
                   type: string
-                  default: "1505308467"
+                  default: "BOPAgent"
                 EndorsementDocumentURL:
                   title: "EndorsementDocumentURL"
                   type: string

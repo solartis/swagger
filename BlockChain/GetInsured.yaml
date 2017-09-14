@@ -5,8 +5,8 @@ info:
   description: To get insured in BlockChain network using Solartis Service
   
   
-host: starrbopucikbv4-3.solartis.net
-basePath: /BCService/service
+host: cw.beta.solartis.net
+basePath: /DroolsV6/DroolsService
 schemes:
   - https
 consumes:
@@ -14,7 +14,7 @@ consumes:
 produces:
   - application/json
 paths:
-  /getInsured:
+  /FireEventV2:
     post:
       description: Get Insured in BlockChain
       operationId: getInsured
@@ -195,10 +195,9 @@ definitions:
       PolicyList:
         type: array
         items:
-          properties:
-            PolicyNumber:
-              type: string
+          type: string
 
+             
        
   errorModel:
     type: object

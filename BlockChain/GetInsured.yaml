@@ -1,8 +1,8 @@
 swagger: '2.0'
 info:
   version: "1.0.0"
-  title: Solartis Service to Get Insured in BlockChain
-  description: To get insured in BlockChain network using Solartis Service
+  title: Solartis Service to Get Insured from BlockChain
+  description: To get insured from BlockChain network using Solartis Service
   
   
 host: cw.beta.solartis.net
@@ -16,7 +16,7 @@ produces:
 paths:
   /FireEventV2:
     post:
-      description: Get Insured in BlockChain
+      description: Get Insured from BlockChain
       operationId: getInsured
       produces:
         - application/json

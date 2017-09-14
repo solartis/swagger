@@ -5,7 +5,7 @@ info:
   description: To create insured in BlockChain network using Solartis Service
   
   
-host: cw.beta.solartis.net
+host: starrbopucikbv4-3.solartis.net
 basePath: /BCService/service
 schemes:
   - https

@@ -76,7 +76,7 @@ definitions:
       ProductNumber:
         title: "ProductNumber"
         type: string
-        default: "ProductNumber"
+        default: "BOP"
       ProductVerNumber:
         title: "ProductVerNumber"
         type: string

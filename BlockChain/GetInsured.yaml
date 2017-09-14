@@ -14,7 +14,7 @@ consumes:
 produces:
   - application/json
 paths:
-  /createInsured:
+  /getInsured:
     post:
       description: Get Insured from BlockChain
       operationId: getInsured
@@ -69,58 +69,11 @@ definitions:
         title: "BlockChainURL"
         type: string
         default: "http://solbctify.westus.cloudapp.azure.com:8545"
-      InsuredName:
-        title: "InsuredName"
+      InsuredContractAddress:
+        title: "InsuredContractAddress"
         type: string
-        default: "Westfield Toponga Mall"
-      AddressLine1:
-        title: "AddressLine1"
-        type: string
-        default: "1388 park street"
-      AddressLine2:
-        title: "AddressLine2"
-        type: string
-        default: "Blvd. Opp to Bloomingdale"
-      City:
-        title: "City"
-        type: string
-        default: "Atlanta"
-      State:
-        title: "State"
-        type: string
-        default: "GA"
-      Zipcode:
-        title: "Zipcode"
-        type: string
-        default: "30305"
-      Country:
-        title: "Country"
-        type: string
-        default: "United States"
-      Phone:
-        title: "Phone"
-        type: string
-        default: "+1 404 555 5512"
-      Email:
-        title: "Email"
-        type: string
-        default: "test@solartis.com"
-      InsuredContactName:
-        title: "InsuredContactName"
-        type: string
-        default: "Abinaya K"
-      InsuredContactAddress:
-        title: "Workplace Liability Insurance"
-        type: string
-        default: "3rd block DLF, Alfreta, 30502, USA"
-      InsuredContactPhone:
-        title: "InsuredContactPhone"
-        type: string
-        default: "+1 405 555 5512"
-      InsuredContactEmail:
-        title: "InsuredContactEmail"
-        type: string
-        default: "test@solartis.com"
+        default: "0xa6a6f1184319e9848f09c8a26d184e8a2b2adf3f"
+      
 
 
   GetInsured_Success_Response:

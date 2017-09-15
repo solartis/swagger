@@ -163,6 +163,96 @@ definitions:
             title: "GLProductsAggregateLimit"
             type: string
             default: "1000000"
+          ALAdditionalCoverage1:
+            title: "ALAdditionalCoverage1"
+            type: string
+          ALAdditionalCoverage2:
+            title: "ALAdditionalCoverage2"
+            type: string
+          ALAdditionalInsuredAvailable:
+            title: "ALAdditionalInsuredAvailable"
+            type: string
+          ALAutomobileAvailable:
+            title: "ALAutomobileAvailable"
+            type: string
+          ALBodilyInjuryPerAccidentLimit:
+            title: "ALBodilyInjuryPerAccidentLimit"
+            type: string
+          ALBodilyInjuryPerPersonLimit:
+            title: "ALBodilyInjuryPerPersonLimit"
+            type: string
+          ALCombinedSingleLimit:
+            title: "ALCombinedSingleLimit"
+            type: string
+          ALHiredAutos:
+            title: "ALHiredAutos"
+            type: string
+          ALNonOwnedAuots:
+            title: "ALNonOwnedAuots"
+            type: string
+          ALOwnedAutos:
+            title: "ALOwnedAutos"
+            type: string
+          ALPropertyDamageLimit:
+            title: "ALPropertyDamageLimit"
+            type: string
+          ALScheduledAutos:
+            title: "ALScheduledAutos"
+            type: string
+          ALWaiverOfSubragationApplicable:
+            title: "ALWaiverOfSubragationApplicable"
+            type: string
+          ULAdditionalInsuredAvailable:
+            title: "ULAdditionalInsuredAvailable"
+            type: string
+          ULAggregateLimit:
+            title: "ULAggregateLimit"
+            type: string
+          ULClaimsMade:
+            title: "ULClaimsMade"
+            type: string
+          ULDeduction:
+            title: "ULDeduction"
+            type: string
+          ULEachOccuranceLimit:
+            title: "ULEachOccuranceLimit"
+            type: string
+          ULExcessLiability:
+            title: "ULExcessLiability"
+            type: string
+          ULOccuranceMade:
+            title: "ULOccuranceMade"
+            type: string
+          ULRetention:
+            title: "ULRetention"
+            type: string
+          ULUmbrellaLiabilityAvailable:
+            title: "ULUmbrellaLiabilityAvailable"
+            type: string
+          ULWaiverOfSubragationApplicable:
+            title: "ULWaiverOfSubragationApplicable"
+            type: string
+          WCAdditionalInsuredAvailable:
+            title: "WCAdditionalInsuredAvailable"
+            type: string
+          WCAnyProprietorMemberIncluded:
+            title: "WCAnyProprietorMemberIncluded"
+            type: string
+          WCDiseaseEmployeeLimit:
+            title: "WCDiseaseEmployeeLimit"
+            type: string
+          WCDiseasePolicyLimit:
+            title: "WCDiseasePolicyLimit"
+            type: string
+          WCEachAccident:
+            title: "WCEachAccident"
+            type: string
+          WCStatutoryLimits:
+            title: "WCStatutoryLimits"
+            type: string
+          WCWaiverOfSubragationApplicable:
+            title: "WCWaiverOfSubragationApplicable"
+            type: string
 
 
   EndorsePolicy_Success_Response:
@@ -178,30 +268,5 @@ definitions:
                     
        
   errorModel:
-    type: object
-    required:
-      - RequestStatus
-      - MessageDetail
-    properties:
-      RequestStatus:
-        type: string
-      MessageDetail:
-        type: object
-        properties:
-          MessageCode:
-            type: string
-          MessageType:
-            type: string
-          UserMessage:
-            type: string
-          MessageLevel:
-            type: string
-          MessageSeverity:
-            type: string
-          MessageList:
-            type: object
-            properties:
-              Message:
-                type: array
-                items:
-                  type: string      
+    type: string
+      

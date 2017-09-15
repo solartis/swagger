@@ -86,174 +86,135 @@ definitions:
       PolicyContractAddress:
         title: "PolicyContractAddress"
         type: string
-        default: "0x858196b1587c6411fc93c22b5e6f447e0c9e2404"
       ProductName:
         title: "ProductName"
         type: string
-        default: "ISO BASIC BOP"
       ProductNumber:
         title: "ProductNumber"
         type: string
-        default: "BOP"
       ProductVerNumber:
         title: "ProductVerNumber"
         type: string
-        default: "2.0"
       AgencyName:
         title: "AgencyName"
         type: string
-        default: "ABC Insure"
       AgencyCode:
         title: "AgencyCode"
         type: string
-        default: "AG1234"
       AgencyCommunicationDetail:
         type: object
         properties:
           Address:
             title: "Address"
             type: string
-            default: "399 park avenue, New York, NY, 10222, USA"
           Phone:
             title: "Phone"
             type: string
-            default: "+1 444 555 5512"
           Email:
             title: "Email"
             type: string
-            default: "test@solartis.net"
           Fax:
             title: "Fax"
             type: string
-            default: "+1 444 555 5512"
       AgentName:
         title: "AgentName"
         type: string
-        default: "Ned Stark"
       AgentCode:
         title: "AgentCode"
         type: string
-        default: "AT12345"
       AgentCommunicationDetail:
         type: object
         properties:
           Address:
             title: "Address"
             type: string
-            default: "399 park avenue, New York, NY, 10222, USA"
           Phone:
             title: "Phone"
             type: string
-            default: "+1 444 555 5512"
           Email:
             title: "Email"
             type: string
-            default: "test@solartis.net"
           Fax:
             title: "Fax"
             type: string
-            default: "+1 444 555 5512"
       InsuredName:
         title: "InsuredName"
         type: string
-        default: "Westfield Topanga & The Village Mall"
       InsuredCommunicationDetail:
         type: object
         properties:
           Address:
             title: "Address"
             type: string
-            default: "399 park avenue, New York, NY, 10222, USA"
           Phone:
             title: "Phone"
             type: string
-            default: "+1 444 555 5512"
           Email:
             title: "Email"
             type: string
-            default: "test@solartis.net"
           Fax:
             title: "Fax"
             type: string
-            default: "+1 444 555 5512"
       InsuredContactName:
         title: "InsuredContactName"
         type: string
-        default: "Westfield Topanga & The Village Mall"
       InsuredContactCommunicationDetail:
         type: object
         properties:
           Address:
             title: "Address"
             type: string
-            default: "399 park avenue, New York, NY, 10222, USA"
           Phone:
             title: "Phone"
             type: string
-            default: "+1 444 555 5512"
           Email:
             title: "Email"
             type: string
-            default: "test@solartis.net"
           Fax:
             title: "Fax"
             type: string
-            default: "+1 444 555 5512"
       InsurerName:
         title: "InsurerName"
         type: string
-        default: "ABC Insurance Provider Inc."
       InsurerNAICNumber:
         title: "InsurerNAICNumber"
         type: string
-        default: "499999"
       InsurerCommunicationDetail:
         type: object
         properties:
           Address:
             title: "Address"
             type: string
-            default: "399 park avenue, New York, NY, 10222, USA"
           Phone:
             title: "Phone"
             type: string
-            default: "+1 444 555 5512"
           Email:
             title: "Email"
             type: string
-            default: "test@solartis.net"
           Fax:
             title: "Fax"
             type: string
-            default: "+1 444 555 5512"
       PolicyNumber:
         title: "PolicyNumber"
         type: string
-        default: "991000207109"
       PolicyDocumentURL:
         title: "PolicyDocumentURL"
         type: string
-        default: "https://pdfservice.solartis.net/DocRetriever/Document/Starr/BOP/QuotePDFs/895643/StarrInsure_ISSUANCE_AUG-11-2017-16-13-47.pdf"
       PolicyEffectiveDate:
         title: "PolicyEffectiveDate"
         type: string
-        default: "2017-03-01"
       PolicyExpirationDate:
         title: "PolicyExpirationDate"
         type: string
-        default: "2018-03-02"
       PolicyPremium:
         title: "PolicyPremium"
         type: string
-        default: "1327.00"
       PolicyStatus:
         title: "PolicyStatus"
         type: string
-        default: "ISSUED"
       InsuranceType:
         title: "InsuranceType"
         type: string
-        default: "GeneralLiability"
       CoverageInformation:
         title: "CoverageInformation"
         type: object
@@ -261,15 +222,12 @@ definitions:
           GLCommercialGeneralLiabilityAvailable:
             title: "GLCommercialGeneralLiabilityAvailable"
             type: string
-            default: "Yes"
           GLClaimsMade:
             title: "GLClaimsMade"
             type: string
-            default: "No"
           GLOccuranceMade:
             title: "GLOccuranceMade"
             type: string
-            default: "Yes"
           GLAdditionalCoverage1:
             title: "GLAdditionalCoverage1"
             type: string
@@ -279,31 +237,24 @@ definitions:
           GLAggregateLimitAppliesPerPolicy:
             title: "GLAggregateLimitAppliesPerPolicy"
             type: string
-            default: "Yes"
           GLAggregateLimitAppliesPerProject:
             title: "GLAggregateLimitAppliesPerProject"
             type: string
-            default: "No"
           GLAggregateLimitAppliesPerLocation:
             title: "GLAggregateLimitAppliesPerLocation"
             type: string
-            default: "No"
           GLAdditionalInsuredAvailable:
             title: "GLAdditionalInsuredAvailable"
             type: string
-            default: "Yes"
           GLWaiverOfSubragationApplicable:
             title: "GLWaiverOfSubragationApplicable"
             type: string
-            default: "Yes"
           GLEachOccuranceLimit:
             title: "GLEachOccuranceLimit"
             type: string
-            default: "500000"
           GLMedicalExpensesLimit:
             title: "GLMedicalExpensesLimit"
             type: string
-            default: "5000"
           GLPersonalAndAdventureInjuryLimit:
             title: "GLPersonalAndAdventureInjuryLimit"
             type: string
@@ -311,137 +262,282 @@ definitions:
           GLGeneralAggregateLimit:
             title: "GLGeneralAggregateLimit"
             type: string
-            default: "1000000"
           GLProductsAggregateLimit:
             title: "GLProductsAggregateLimit"
             type: string
-            default: "1000000"
+          ALAdditionalCoverage1:
+            title: "ALAdditionalCoverage1"
+            type: string
+          ALAdditionalCoverage2:
+            title: "ALAdditionalCoverage2"
+            type: string
+          ALAdditionalInsuredAvailable:
+            title: "ALAdditionalInsuredAvailable"
+            type: string
+          ALAutomobileAvailable:
+            title: "ALAutomobileAvailable"
+            type: string
+          ALBodilyInjuryPerAccidentLimit:
+            title: "ALBodilyInjuryPerAccidentLimit"
+            type: string
+          ALBodilyInjuryPerPersonLimit:
+            title: "ALBodilyInjuryPerPersonLimit"
+            type: string
+          ALCombinedSingleLimit:
+            title: "ALCombinedSingleLimit"
+            type: string
+          ALHiredAutos:
+            title: "ALHiredAutos"
+            type: string
+          ALNonOwnedAuots:
+            title: "ALNonOwnedAuots"
+            type: string
+          ALOwnedAutos:
+            title: "ALOwnedAutos"
+            type: string
+          ALPropertyDamageLimit:
+            title: "ALPropertyDamageLimit"
+            type: string
+          ALScheduledAutos:
+            title: "ALScheduledAutos"
+            type: string
+          ALWaiverOfSubragationApplicable:
+            title: "ALWaiverOfSubragationApplicable"
+            type: string
+          ULAdditionalInsuredAvailable:
+            title: "ULAdditionalInsuredAvailable"
+            type: string
+          ULAggregateLimit:
+            title: "ULAggregateLimit"
+            type: string
+          ULClaimsMade:
+            title: "ULClaimsMade"
+            type: string
+          ULDeduction:
+            title: "ULDeduction"
+            type: string
+          ULEachOccuranceLimit:
+            title: "ULEachOccuranceLimit"
+            type: string
+          ULExcessLiability:
+            title: "ULExcessLiability"
+            type: string
+          ULOccuranceMade:
+            title: "ULOccuranceMade"
+            type: string
+          ULRetention:
+            title: "ULRetention"
+            type: string
+          ULUmbrellaLiabilityAvailable:
+            title: "ULUmbrellaLiabilityAvailable"
+            type: string
+          ULWaiverOfSubragationApplicable:
+            title: "ULWaiverOfSubragationApplicable"
+            type: string
+          WCAdditionalInsuredAvailable:
+            title: "WCAdditionalInsuredAvailable"
+            type: string
+          WCAnyProprietorMemberIncluded:
+            title: "WCAnyProprietorMemberIncluded"
+            type: string
+          WCDiseaseEmployeeLimit:
+            title: "WCDiseaseEmployeeLimit"
+            type: string
+          WCDiseasePolicyLimit:
+            title: "WCDiseasePolicyLimit"
+            type: string
+          WCEachAccident:
+            title: "WCEachAccident"
+            type: string
+          WCStatutoryLimits:
+            title: "WCStatutoryLimits"
+            type: string
+          WCWaiverOfSubragationApplicable:
+            title: "WCWaiverOfSubragationApplicable"
+            type: string
       EndoresementDetails:
         type: array
         items:
+          type: object
           properties:
-            EndoresementDetail:
+            UpdatedDate:
+              title: "UpdatedDatee"
+              type: string
+              default: "1505308467"
+            PolicyStatus:
+              title: "PolicyStatus"
+              type: string
+              default: "ISSUED"
+            PolicyNumber:
+              title: "PolicyNumber"
+              type: string
+              default: "991000207109"
+            UpdatedBy:
+              title: "UpdatedBy"
+              type: string
+              default: "BOPAgent"
+            EndorsementDocumentURL:
+              title: "EndorsementDocumentURL"
+              type: string
+              default: "https://pdfservice.solartis.net/DocRetriever/Document/Starr/BOP/QuotePDFs/895643/StarrInsure_ISSUANCE_AUG-11-2017-16-13-47.pdf"
+            PolicyEffectiveDate:
+              title: "PolicyEffectiveDate"
+              type: string
+              default: "2016-03-01"
+            PolicyExpirationDate:
+              title: "PolicyExpirationDate"
+              type: string
+              default: "2018-03-02"
+            CoverageInformation:
+              title: "CoverageInformation"
               type: object
               properties:
-                UpdatedDate:
-                  title: "UpdatedDatee"
+                GLCommercialGeneralLiabilityAvailable:
+                  title: "GLCommercialGeneralLiabilityAvailable"
                   type: string
-                  default: "1505308467"
-                PolicyStatus:
-                  title: "PolicyStatus"
+                  default: "Yes"
+                GLClaimsMade:
+                  title: "GLClaimsMade"
                   type: string
-                  default: "ISSUED"
-                PolicyNumber:
-                  title: "PolicyNumber"
+                  default: "No"
+                GLOccuranceMade:
+                  title: "GLOccuranceMade"
                   type: string
-                  default: "991000207109"
-                UpdatedBy:
-                  title: "UpdatedBy"
+                  default: "Yes"
+                GLAdditionalCoverage1:
+                  title: "GLAdditionalCoverage1"
                   type: string
-                  default: "BOPAgent"
-                EndorsementDocumentURL:
-                  title: "EndorsementDocumentURL"
+                GLAdditionalCoverage2:
+                  title: "GLAdditionalCoverage2"
                   type: string
-                  default: "https://pdfservice.solartis.net/DocRetriever/Document/Starr/BOP/QuotePDFs/895643/StarrInsure_ISSUANCE_AUG-11-2017-16-13-47.pdf"
-                PolicyEffectiveDate:
-                  title: "PolicyEffectiveDate"
+                GLAggregateLimitAppliesPerPolicy:
+                  title: "GLAggregateLimitAppliesPerPolicy"
                   type: string
-                  default: "2016-03-01"
-                PolicyExpirationDate:
-                  title: "PolicyExpirationDate"
+                  default: "Yes"
+                GLAggregateLimitAppliesPerProject:
+                  title: "GLAggregateLimitAppliesPerProject"
                   type: string
-                  default: "2018-03-02"
-                CoverageInformation:
-                  title: "CoverageInformation"
-                  type: object
-                  properties:
-                    GLCommercialGeneralLiabilityAvailable:
-                      title: "GLCommercialGeneralLiabilityAvailable"
-                      type: string
-                      default: "Yes"
-                    GLClaimsMade:
-                      title: "GLClaimsMade"
-                      type: string
-                      default: "No"
-                    GLOccuranceMade:
-                      title: "GLOccuranceMade"
-                      type: string
-                      default: "Yes"
-                    GLAdditionalCoverage1:
-                      title: "GLAdditionalCoverage1"
-                      type: string
-                    GLAdditionalCoverage2:
-                      title: "GLAdditionalCoverage2"
-                      type: string
-                    GLAggregateLimitAppliesPerPolicy:
-                      title: "GLAggregateLimitAppliesPerPolicy"
-                      type: string
-                      default: "Yes"
-                    GLAggregateLimitAppliesPerProject:
-                      title: "GLAggregateLimitAppliesPerProject"
-                      type: string
-                      default: "No"
-                    GLAggregateLimitAppliesPerLocation:
-                      title: "GLAggregateLimitAppliesPerLocation"
-                      type: string
-                      default: "No"
-                    GLAdditionalInsuredAvailable:
-                      title: "GLAdditionalInsuredAvailable"
-                      type: string
-                      default: "Yes"
-                    GLWaiverOfSubragationApplicable:
-                      title: "GLWaiverOfSubragationApplicable"
-                      type: string
-                      default: "Yes"
-                    GLEachOccuranceLimit:
-                      title: "GLEachOccuranceLimit"
-                      type: string
-                      default: "500000"
-                    GLMedicalExpensesLimit:
-                      title: "GLMedicalExpensesLimit"
-                      type: string
-                      default: "5000"
-                    GLPersonalAndAdventureInjuryLimit:
-                      title: "GLPersonalAndAdventureInjuryLimit"
-                      type: string
-                      default: ""
-                    GLGeneralAggregateLimit:
-                      title: "GLGeneralAggregateLimit"
-                      type: string
-                      default: "1000000"
-                    GLProductsAggregateLimit:
-                      title: "GLProductsAggregateLimit"
-                      type: string
-                      default: "1000000"
+                  default: "No"
+                GLAggregateLimitAppliesPerLocation:
+                  title: "GLAggregateLimitAppliesPerLocation"
+                  type: string
+                  default: "No"
+                GLAdditionalInsuredAvailable:
+                  title: "GLAdditionalInsuredAvailable"
+                  type: string
+                  default: "Yes"
+                GLWaiverOfSubragationApplicable:
+                  title: "GLWaiverOfSubragationApplicable"
+                  type: string
+                  default: "Yes"
+                GLEachOccuranceLimit:
+                  title: "GLEachOccuranceLimit"
+                  type: string
+                  default: "500000"
+                GLMedicalExpensesLimit:
+                  title: "GLMedicalExpensesLimit"
+                  type: string
+                GLPersonalAndAdventureInjuryLimit:
+                  title: "GLPersonalAndAdventureInjuryLimit"
+                  type: string
+                GLGeneralAggregateLimit:
+                  title: "GLGeneralAggregateLimit"
+                  type: string
+                GLProductsAggregateLimit:
+                  title: "GLProductsAggregateLimit"
+                  type: string
+                ALAdditionalCoverage1:
+                  title: "ALAdditionalCoverage1"
+                  type: string
+                ALAdditionalCoverage2:
+                  title: "ALAdditionalCoverage2"
+                  type: string
+                ALAdditionalInsuredAvailable:
+                  title: "ALAdditionalInsuredAvailable"
+                  type: string
+                ALAutomobileAvailable:
+                  title: "ALAutomobileAvailable"
+                  type: string
+                ALBodilyInjuryPerAccidentLimit:
+                  title: "ALBodilyInjuryPerAccidentLimit"
+                  type: string
+                ALBodilyInjuryPerPersonLimit:
+                  title: "ALBodilyInjuryPerPersonLimit"
+                  type: string
+                ALCombinedSingleLimit:
+                  title: "ALCombinedSingleLimit"
+                  type: string
+                ALHiredAutos:
+                  title: "ALHiredAutos"
+                  type: string
+                ALNonOwnedAuots:
+                  title: "ALNonOwnedAuots"
+                  type: string
+                ALOwnedAutos:
+                  title: "ALOwnedAutos"
+                  type: string
+                ALPropertyDamageLimit:
+                  title: "ALPropertyDamageLimit"
+                  type: string
+                ALScheduledAutos:
+                  title: "ALScheduledAutos"
+                  type: string
+                ALWaiverOfSubragationApplicable:
+                  title: "ALWaiverOfSubragationApplicable"
+                  type: string
+                ULAdditionalInsuredAvailable:
+                  title: "ULAdditionalInsuredAvailable"
+                  type: string
+                ULAggregateLimit:
+                  title: "ULAggregateLimit"
+                  type: string
+                ULClaimsMade:
+                  title: "ULClaimsMade"
+                  type: string
+                ULDeduction:
+                  title: "ULDeduction"
+                  type: string
+                ULEachOccuranceLimit:
+                  title: "ULEachOccuranceLimit"
+                  type: string
+                ULExcessLiability:
+                  title: "ULExcessLiability"
+                  type: string
+                ULOccuranceMade:
+                  title: "ULOccuranceMade"
+                  type: string
+                ULRetention:
+                  title: "ULRetention"
+                  type: string
+                ULUmbrellaLiabilityAvailable:
+                  title: "ULUmbrellaLiabilityAvailable"
+                  type: string
+                ULWaiverOfSubragationApplicable:
+                  title: "ULWaiverOfSubragationApplicable"
+                  type: string
+                WCAdditionalInsuredAvailable:
+                  title: "WCAdditionalInsuredAvailable"
+                  type: string
+                WCAnyProprietorMemberIncluded:
+                  title: "WCAnyProprietorMemberIncluded"
+                  type: string
+                WCDiseaseEmployeeLimit:
+                  title: "WCDiseaseEmployeeLimit"
+                  type: string
+                WCDiseasePolicyLimit:
+                  title: "WCDiseasePolicyLimit"
+                  type: string
+                WCEachAccident:
+                  title: "WCEachAccident"
+                  type: string
+                WCStatutoryLimits:
+                  title: "WCStatutoryLimits"
+                  type: string
+                WCWaiverOfSubragationApplicable:
+                  title: "WCWaiverOfSubragationApplicable"
+                  type: string
 
-      
-                    
        
   errorModel:
-    type: object
-    required:
-      - RequestStatus
-      - MessageDetail
-    properties:
-      RequestStatus:
-        type: string
-      MessageDetail:
-        type: object
-        properties:
-          MessageCode:
-            type: string
-          MessageType:
-            type: string
-          UserMessage:
-            type: string
-          MessageLevel:
-            type: string
-          MessageSeverity:
-            type: string
-          MessageList:
-            type: object
-            properties:
-              Message:
-                type: array
-                items:
-                  type: string      
+    type: string
+    

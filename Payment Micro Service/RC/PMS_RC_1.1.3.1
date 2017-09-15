@@ -1,0 +1,333 @@
+swagger: '2.0'
+info:
+  version: 'RC 1.1.3.1'
+  title: Starr Executive Intelligence - Payment Service
+  description: >-
+    Payment Micro Service is used to process Payment, generate Payment Receipt and email the Receipt to the Payer Email Address.
+    
+    
+    Features:
+    1. Payment Processing
+    2. Generation of Payment Receipt
+    3. Auto Email of Payment Receipt to Payer Email Address
+    4. Error Handling (Mandatory, Invalid input validation) included at the Attribute level
+
+host:  starrpms.rc.solartis.net
+basePath: /DroolsV6/DroolsService
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /FireEventV2:
+    post:
+      description: Payment servce is used to process payment, generate receipt and email the receipt 
+      operationId: Payment
+      produces:
+        - application/json
+      parameters:
+        - name: Token
+          in: header
+          description: Authentication Token
+          required: true
+          type: string
+          format: string
+          default: >-
+            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
+        - name: EventName
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: PaymentMicroService
+        - name: EventVersion
+          in: header
+          description: Name of the event version to be invoked
+          required: true
+          type: string
+          format: string
+          default: 1.1.3.1
+        - name: Payment
+          in: body
+          description: Payment/traveler details
+          required: true
+          schema:
+            $ref: '#/definitions/Payment_Request'
+      responses:
+        '200':
+          description: Success Response
+          schema:
+            $ref: '#/definitions/Payment_Success_Response'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/errorModel'
+            
+definitions:
+  Payment_Request:
+    type: object
+    required:
+      - ServiceRequestDetail
+      - EventName
+      - OwnerId
+      - PaymentDetail
+    properties:
+      EndClientUserUniqueSessionId:
+        type: string
+      EndClientUserBrowserSessionId:
+        type: string
+      EndClientUserBrowserInformation:
+        type: string
+      PaaSClientIPAddress:
+        type: string
+      ClientUniqueRequestID:
+        type: string
+      ServiceRequestDetail:
+        type: object
+        required:
+          - OwnerId
+          - RegionCode
+          - Token
+          - ServiceRequestVersion
+          - ServiceResponseVersion
+          - ResponseType
+        properties:
+          ServiceRequestVersion:
+            type: string
+            default: '1.0'
+          ServiceResponseVersion:
+            type: string
+            default: '1.0'
+          OwnerId:
+            type: string
+            default: '31'
+            enum:
+              - '31'
+          ResponseType:
+            type: string
+            enum:
+              - JSON
+              - XML
+            default: JSON
+          RegionCode:
+            type: string
+            default: US
+          Token:
+            type: string
+            default: >-
+              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
+          UserName:
+            type: string
+            default: pmsunderwriter
+          LanguageCode:
+            type: string
+            default: en
+          BrowserIp:
+            type: string
+      EventName:
+        type: string
+        default: PaymentMicroService
+      OwnerId:
+        type: string
+        default: '31'
+      EventVersion:
+        type: string
+        default: '1.1.3.1'
+      ProductNumber:
+        type: string
+        default: PMS
+      ProductVerNumber:
+        type: string
+        default: '1.0'
+      PaymentDetail:
+        type: object
+        properties:
+          InvoiceNumber:
+            type: string
+            default: '11221'
+          TransactionId:
+            description: Transaction ID should be unique for each Transaction
+            type: string
+            default: '205'
+          TransactionType:
+            type: string
+            default: Report Purchase
+            enum:
+            - Report Purchase
+          Amount:
+            type: string
+            default: '200.00'
+          PaymentMode:
+            type: string
+            default: Initial
+            enum:
+            - Initial
+          PaymentType:
+            type: string
+            default: Pay
+            enum:
+            - Pay
+          PaymentMethod:
+            type: string
+            default: Credit Card
+            enum:
+            - Credit Card
+          TransactionReferenceNumber:
+            type: string
+            default: '2212'
+          Comments:
+            type: string
+            default: " "
+          PaymentMethodDetail:
+            type: object
+            properties:
+              CardDetail:
+                type: object
+                properties:
+                  CardType:
+                    type: string
+                    enum:
+                    - MasterCard
+                    - Visa
+                    - JCB
+                    - Discover
+                    - American Express
+                  CardNumber:
+                    type: string
+                    enum:
+                    - '5555555555554444'
+                    - '4012888888881881'
+                    - '3530111333300000'
+                    - '6011000990139424'
+                    - '347712669659320'
+                  ExpiryDate:
+                    type: string
+                    title: ExpiryDate (MM/YY)
+                  CVV:
+                    type: string
+          PayerDetail:
+            type: object
+            properties:
+              PayerReferenceNumber:
+                type: string
+                default: '101'
+              PayerName:
+                type: string
+                default: Test Payment
+              AddressLine1:
+                type: string
+                default: '788 County Road'
+              AddressLine2:
+                type: string
+                default: " "
+              City:
+                type: string
+                default: Ider
+              State:
+                type: string
+                default: AL
+                description: Provide State Code
+              CountryCode:
+                type: string
+                default: US
+              ZipCode:
+                type: string
+                default: '35981'
+              PhoneNumber:
+                type: string
+                default: '1111111111'
+              EmailAddress:
+                type: string
+                default: 'test@test.com'
+      PaymentAdditionalDetail:
+        type: array
+        items:
+          properties:
+            Key:
+              type: string
+            Value:
+              type: string
+          
+        
+  Payment_Success_Response:
+    type: object
+    required:
+      - ResponseStatus
+    properties:
+      ResponseStatus:
+        type: string
+      PaymentDetail:
+        type: object
+        properties:
+          PaymentDate:
+            type: string
+          PaymentStatus:
+            type: string
+          PaymentConfirmationNumber:
+            type: string
+          TransactionReferenceNumber:
+            type: string
+          PaymentStatusMessage:
+            type: string
+          PaymentAuthorizationNumber:
+            type: string
+          PaidAmount:
+            type: string
+      PayerDetail:
+        type: object
+        properties:
+          PayerReferenceNumber:
+            type: string
+          PayerName:
+            type: string
+          EmailAddress:
+            type: string
+      DocumentDetail:
+        type: object
+        properties:
+          NumberOfDocuments:
+            type: string
+          Documents:
+            type: array
+            items:
+              properties:
+                DocumentType:
+                  type: string
+                DocumentName:
+                  type: string
+                DocumentURL:
+                  type: string
+          
+      
+  errorModel:
+    type: object
+    required:
+      - RequestStatus
+      - MessageDetail
+    properties:
+      RequestStatus:
+        type: string
+      MessageDetail:
+        type: object
+        properties:
+          MessageCode:
+            type: string
+          MessageType:
+            type: string
+          UserMessage:
+            type: string
+          MessageLevel:
+            type: string
+          MessageSeverity:
+            type: string
+          MessageList:
+            type: object
+            properties:
+              Message:
+                type: array
+                items:
+                  type: string
+

@@ -222,12 +222,18 @@ definitions:
           GLCommercialGeneralLiabilityAvailable:
             title: "GLCommercialGeneralLiabilityAvailable"
             type: string
+            enum: ["Yes","No"]
+            default: "Yes"
           GLClaimsMade:
             title: "GLClaimsMade"
             type: string
+            enum: ["Yes","No"]
+            default: "No"
           GLOccuranceMade:
             title: "GLOccuranceMade"
             type: string
+            enum: ["Yes","No"]
+            default: "Yes"
           GLAdditionalCoverage1:
             title: "GLAdditionalCoverage1"
             type: string
@@ -237,24 +243,37 @@ definitions:
           GLAggregateLimitAppliesPerPolicy:
             title: "GLAggregateLimitAppliesPerPolicy"
             type: string
+            enum: ["Yes","No"]
+            default: "Yes"
           GLAggregateLimitAppliesPerProject:
             title: "GLAggregateLimitAppliesPerProject"
             type: string
+            enum: ["Yes","No"]
+            default: "No"
           GLAggregateLimitAppliesPerLocation:
             title: "GLAggregateLimitAppliesPerLocation"
             type: string
+            enum: ["Yes","No"]
+            default: "No"
           GLAdditionalInsuredAvailable:
             title: "GLAdditionalInsuredAvailable"
             type: string
+            enum: ["Yes","No"]
+            default: "Yes"
           GLWaiverOfSubragationApplicable:
             title: "GLWaiverOfSubragationApplicable"
             type: string
+            enum: ["Yes","No"]
+            default: "Yes"
           GLEachOccuranceLimit:
             title: "GLEachOccuranceLimit"
             type: string
+            enum: ["300000","500000","1000000","2000000"]
+            default: "500000"
           GLMedicalExpensesLimit:
             title: "GLMedicalExpensesLimit"
             type: string
+            default: "5000"
           GLPersonalAndAdventureInjuryLimit:
             title: "GLPersonalAndAdventureInjuryLimit"
             type: string
@@ -262,9 +281,13 @@ definitions:
           GLGeneralAggregateLimit:
             title: "GLGeneralAggregateLimit"
             type: string
+            enum: ["600000","1000000","2000000","4000000"]
+            default: "1000000"
           GLProductsAggregateLimit:
             title: "GLProductsAggregateLimit"
             type: string
+            enum: ["600000","900000","1000000","1500000","2000000","3000000","4000000","6000000"]
+            default: "1000000"
           ALAdditionalCoverage1:
             title: "ALAdditionalCoverage1"
             type: string
@@ -388,12 +411,18 @@ definitions:
                 GLCommercialGeneralLiabilityAvailable:
                   title: "GLCommercialGeneralLiabilityAvailable"
                   type: string
+                  enum: ["Yes","No"]
+                  default: "Yes"
                 GLClaimsMade:
                   title: "GLClaimsMade"
                   type: string
+                  enum: ["Yes","No"]
+                  default: "No"
                 GLOccuranceMade:
                   title: "GLOccuranceMade"
                   type: string
+                  enum: ["Yes","No"]
+                  default: "Yes"
                 GLAdditionalCoverage1:
                   title: "GLAdditionalCoverage1"
                   type: string
@@ -403,33 +432,51 @@ definitions:
                 GLAggregateLimitAppliesPerPolicy:
                   title: "GLAggregateLimitAppliesPerPolicy"
                   type: string
+                  enum: ["Yes","No"]
+                  default: "Yes"
                 GLAggregateLimitAppliesPerProject:
                   title: "GLAggregateLimitAppliesPerProject"
                   type: string
+                  enum: ["Yes","No"]
+                  default: "No"
                 GLAggregateLimitAppliesPerLocation:
                   title: "GLAggregateLimitAppliesPerLocation"
                   type: string
+                  enum: ["Yes","No"]
+                  default: "No"
                 GLAdditionalInsuredAvailable:
                   title: "GLAdditionalInsuredAvailable"
                   type: string
+                  enum: ["Yes","No"]
+                  default: "Yes"
                 GLWaiverOfSubragationApplicable:
                   title: "GLWaiverOfSubragationApplicable"
                   type: string
+                  enum: ["Yes","No"]
+                  default: "Yes"
                 GLEachOccuranceLimit:
                   title: "GLEachOccuranceLimit"
                   type: string
+                  enum: ["300000","500000","1000000","2000000"]
+                  default: "500000"
                 GLMedicalExpensesLimit:
                   title: "GLMedicalExpensesLimit"
                   type: string
+                  default: "5000"
                 GLPersonalAndAdventureInjuryLimit:
                   title: "GLPersonalAndAdventureInjuryLimit"
                   type: string
+                  default: ""
                 GLGeneralAggregateLimit:
                   title: "GLGeneralAggregateLimit"
                   type: string
+                  enum: ["600000","1000000","2000000","4000000"]
+                  default: "1000000"
                 GLProductsAggregateLimit:
                   title: "GLProductsAggregateLimit"
                   type: string
+                  enum: ["600000","900000","1000000","1500000","2000000","3000000","4000000","6000000"]
+                  default: "1000000"
                 ALAdditionalCoverage1:
                   title: "ALAdditionalCoverage1"
                   type: string

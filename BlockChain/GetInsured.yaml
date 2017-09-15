@@ -89,55 +89,42 @@ definitions:
       InsuredName:
         title: "InsuredName"
         type: string
-        default: "Westfield Toponga Mall"
       AddressLine1:
         title: "AddressLine1"
         type: string
-        default: "1388 park street"
       AddressLine2:
         title: "AddressLine2"
         type: string
-        default: "Blvd. Opp to Bloomingdale"
       City:
         title: "City"
         type: string
-        default: "Atlanta"
       State:
         title: "State"
         type: string
-        default: "GA"
       Zipcode:
         title: "Zipcode"
         type: string
-        default: "30305"
       Country:
         title: "Country"
         type: string
-        default: "United States"
       Phone:
         title: "Phone"
         type: string
-        default: "+1 404 555 5512"
       Email:
         title: "Email"
         type: string
-        default: "test@solartis.com"
       InsuredContactName:
         title: "InsuredContactName"
         type: string
-        default: "Abinaya K"
       InsuredContactAddress:
         title: "InsuredContactAddress"
         type: string
-        default: "3rd block DLF, Alfreta, 30502, USA"
       InsuredContactPhone:
         title: "InsuredContactPhone"
         type: string
-        default: "+1 405 555 5512"
       InsuredContactEmail:
         title: "InsuredContactEmail"
         type: string
-        default: "test@solartis.com"
       PolicyList:
         type: array
         items:
@@ -146,30 +133,5 @@ definitions:
              
        
   errorModel:
-    type: object
-    required:
-      - RequestStatus
-      - MessageDetail
-    properties:
-      RequestStatus:
-        type: string
-      MessageDetail:
-        type: object
-        properties:
-          MessageCode:
-            type: string
-          MessageType:
-            type: string
-          UserMessage:
-            type: string
-          MessageLevel:
-            type: string
-          MessageSeverity:
-            type: string
-          MessageList:
-            type: object
-            properties:
-              Message:
-                type: array
-                items:
-                  type: string      
+    type: string
+    

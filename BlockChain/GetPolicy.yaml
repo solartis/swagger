@@ -363,31 +363,24 @@ definitions:
             UpdatedDate:
               title: "UpdatedDatee"
               type: string
-              default: "1505308467"
             PolicyStatus:
               title: "PolicyStatus"
               type: string
-              default: "ISSUED"
             PolicyNumber:
               title: "PolicyNumber"
               type: string
-              default: "991000207109"
             UpdatedBy:
               title: "UpdatedBy"
               type: string
-              default: "BOPAgent"
             EndorsementDocumentURL:
               title: "EndorsementDocumentURL"
               type: string
-              default: "https://pdfservice.solartis.net/DocRetriever/Document/Starr/BOP/QuotePDFs/895643/StarrInsure_ISSUANCE_AUG-11-2017-16-13-47.pdf"
             PolicyEffectiveDate:
               title: "PolicyEffectiveDate"
               type: string
-              default: "2016-03-01"
             PolicyExpirationDate:
               title: "PolicyExpirationDate"
               type: string
-              default: "2018-03-02"
             CoverageInformation:
               title: "CoverageInformation"
               type: object
@@ -395,15 +388,12 @@ definitions:
                 GLCommercialGeneralLiabilityAvailable:
                   title: "GLCommercialGeneralLiabilityAvailable"
                   type: string
-                  default: "Yes"
                 GLClaimsMade:
                   title: "GLClaimsMade"
                   type: string
-                  default: "No"
                 GLOccuranceMade:
                   title: "GLOccuranceMade"
                   type: string
-                  default: "Yes"
                 GLAdditionalCoverage1:
                   title: "GLAdditionalCoverage1"
                   type: string
@@ -413,27 +403,21 @@ definitions:
                 GLAggregateLimitAppliesPerPolicy:
                   title: "GLAggregateLimitAppliesPerPolicy"
                   type: string
-                  default: "Yes"
                 GLAggregateLimitAppliesPerProject:
                   title: "GLAggregateLimitAppliesPerProject"
                   type: string
-                  default: "No"
                 GLAggregateLimitAppliesPerLocation:
                   title: "GLAggregateLimitAppliesPerLocation"
                   type: string
-                  default: "No"
                 GLAdditionalInsuredAvailable:
                   title: "GLAdditionalInsuredAvailable"
                   type: string
-                  default: "Yes"
                 GLWaiverOfSubragationApplicable:
                   title: "GLWaiverOfSubragationApplicable"
                   type: string
-                  default: "Yes"
                 GLEachOccuranceLimit:
                   title: "GLEachOccuranceLimit"
                   type: string
-                  default: "500000"
                 GLMedicalExpensesLimit:
                   title: "GLMedicalExpensesLimit"
                   type: string

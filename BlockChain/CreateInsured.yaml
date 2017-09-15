@@ -136,30 +136,5 @@ definitions:
                     
        
   errorModel:
-    type: object
-    required:
-      - RequestStatus
-      - MessageDetail
-    properties:
-      RequestStatus:
-        type: string
-      MessageDetail:
-        type: object
-        properties:
-          MessageCode:
-            type: string
-          MessageType:
-            type: string
-          UserMessage:
-            type: string
-          MessageLevel:
-            type: string
-          MessageSeverity:
-            type: string
-          MessageList:
-            type: object
-            properties:
-              Message:
-                type: array
-                items:
-                  type: string      
+    type: string
+         

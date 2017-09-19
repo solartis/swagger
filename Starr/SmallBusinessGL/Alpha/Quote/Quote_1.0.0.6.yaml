@@ -138,7 +138,6 @@ definitions:
         - County
         - State
         - ZipCode
-        - Subline
         - GeneralLiabilityMedPayCoverageLimit
         - PremOpsProdsCoverageForm
         - EachOccurrenceLimit

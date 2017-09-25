@@ -47,7 +47,7 @@ paths:
           required: true
           type: string
           format: string
-          default: "1.0.0.4"       
+          default: "1.0.0.5"       
         - name: Rating Request
           in: body
           description: For rating request
@@ -154,7 +154,7 @@ definitions:
         EventVersion:
          title: "Event Version"
          type: string
-         default: "1.0.0.4"
+         default: "1.0.0.5"
         LastRateLookUpDate:
          title: "Last Rate Look Up Date"
          type: string

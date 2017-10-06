@@ -221,7 +221,7 @@ definitions:
         ProdsCompldOpsAggregateLimit:
          title: "ProdsCompldGeneralAggregateLimit"
          type: string
-         default: "2,00,000 CSL"
+         default: "2,000,000 CSL"
         TerrorismCoverage:
          title: "Accept Certified Acts of Terrorism Coverage"
          type: string

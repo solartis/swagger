@@ -1,0 +1,254 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Common Payment Service - API",
+        "description": "Payment workflow API(s)",
+        "contact": {
+            "name": "Solartis Support",
+            "email": "info@solartis.net"
+        }
+    },
+    "host": "commonpmsuci.solartis.net",
+    "basePath": "/DroolsV6/DroolsService",
+    "schemes": [
+        "https"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/FireEvent": {
+            "post": {
+                "description": "This API does the Payment transaction",
+                "operationId": "Payment_transaction",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Token",
+                        "in": "header",
+                        "description": "Authentication Token",
+                        "required": true,
+                        "type": "string",
+                        "format": "string",
+                        "default": "xLhw2bHL9y741nPO3bsodsjsFbCNFU7wGBuA5HIyJtY0OINWgROHT2LrxBWhCXZcJyUlJggpz7X36IU6xg2gC52YNr1uHVUwOlMkJma0WvYrlfGwV2M3XA1EXP92GgBESawO8xW28QEH/RbiCLds7cC2MY9hTDEI/PsFK2riR9O1qk4+xWWTH9/Bi3p+aQFWyo6qiDUxFOzO9wAKXF9yR1c5fiu7MAoW4sGvjSgo2NZj2COhMinCc7pEcYMulubQ1339xJROa6ShYDXNCXHLZtGp2c+V6HXJgHQFlT5CwvTuZ18yYQgXHd4tQIPqtToR5B7qrk8ihgpXiBZ5HVgitdey4S21ULnheIOKqru5mXae3SGE3Q/Cj3kyjdVffccyUeGSd5bQ5rKFnq+A82ts5mxdK9ZXsgJXHHacrVQi/hqNmuOWb+djxJF0oYkmXWbromhva2QqIGua/GTpIJb9mdw7ebr8v+A3WKwDW3+zT9XkhWEmryuyMT7xoGX18+AF+SDKuexmtMdjv5L8tmhRwLgRJFoKdc23Ade0CElr8/YrYN+xU11lOW0EB2dM4+RaqeeY53dkONV2VXCqIE8htj22ulPAu+WrzOQsz18ebEuJhq/5fsxk9EUfFcAayyoRfX8lytMoYCRn+Kstl3uv2Dl6c1SSVelMTp1bQrwDdKf8ZyDB6HU6o2AmreZg6RxtVfnEwRH7HpMgqmwEu9d2ytH1dE4/Is82dayZVsq2uCEYfhz64ibRPFU2giq+QqSb5zLA8mZnvGmxh4HJbVeqWExdBFyJUz7XJRY9rDW9YV09sOeoJAZddIOJ/Ox3oGX+4u1RH2wEi+vr5YkpgXY1xVRmLdK2SVXrMDedPWZNiqNYQrreQd5u5edBBJ1whelb41pqvT0sift+lJunMI9/XrBO8knaTzxSAWvh3vcQqdo8K99/3Q7vqFFqZwT9N3aZ632Sy5w9SWsw1ZhYb+ZSSvQEk+pJ7myHqxhOocDHSbEFp0NjmwLbmReGx3sGxYk1LU0gm/Mg/LiYAGmGIAWCa5PRU71l3k1w+A+T1GXUsmU5/3QeGSFKkPBhnXnGkrWbBVkv8c9afiHKjbqlzfd0jql7xf5Y9mL4daTFv01wRSvmBOoAXijbchELHQeacUPfK0SmFOfTA+IKGVBHnXAT9w=="
+                    },
+                    {
+                        "name": "RequestModel",
+                        "in": "body",
+                        "description": "Payment_transaction details",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/RequestModel"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success Response",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseModel"
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/errorModel"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "RequestModel": {
+            "type": "object",
+            "required": [
+                "ServiceRequestDetail"
+            ],
+            "properties": {
+                "ServiceRequestDetail": {
+                    "type": "object",
+                    "required": [
+                        "OwnerId",
+                        "RegionCode",
+                        "Token",
+                        "ServiceRequestVersion",
+                        "ServiceResponseVersion",
+                        "ResponseType"
+                    ],
+                    "properties": {
+                        "ServiceRequestVersion": {
+                            "type": "string",
+                            "default": "1.0"
+                        },
+                        "ServiceResponseVersion": {
+                            "type": "string",
+                            "default": "1.0"
+                        },
+                        "OwnerId": {
+                            "type": "string",
+                            "default": "5"
+                        },
+                        "ResponseType": {
+                            "type": "string",
+                            "enum": [
+                                "JSON",
+                                "XML"
+                            ],
+                            "default": "JSON"
+                        },
+                        "RegionCode": {
+                            "type": "string",
+                            "default": "US"
+                        },
+                        "Token": {
+                            "type": "string",
+                            "default": "xLhw2bHL9y741nPO3bsodsjsFbCNFU7wGBuA5HIyJtY0OINWgROHT2LrxBWhCXZcJyUlJggpz7X36IU6xg2gC52YNr1uHVUwOlMkJma0WvYrlfGwV2M3XA1EXP92GgBESawO8xW28QEH/RbiCLds7cC2MY9hTDEI/PsFK2riR9O1qk4+xWWTH9/Bi3p+aQFWyo6qiDUxFOzO9wAKXF9yR1c5fiu7MAoW4sGvjSgo2NZj2COhMinCc7pEcYMulubQ1339xJROa6ShYDXNCXHLZtGp2c+V6HXJgHQFlT5CwvTuZ18yYQgXHd4tQIPqtToR5B7qrk8ihgpXiBZ5HVgitdey4S21ULnheIOKqru5mXae3SGE3Q/Cj3kyjdVffccyUeGSd5bQ5rKFnq+A82ts5mxdK9ZXsgJXHHacrVQi/hqNmuOWb+djxJF0oYkmXWbromhva2QqIGua/GTpIJb9mdw7ebr8v+A3WKwDW3+zT9XkhWEmryuyMT7xoGX18+AF+SDKuexmtMdjv5L8tmhRwLgRJFoKdc23Ade0CElr8/YrYN+xU11lOW0EB2dM4+RaqeeY53dkONV2VXCqIE8htj22ulPAu+WrzOQsz18ebEuJhq/5fsxk9EUfFcAayyoRfX8lytMoYCRn+Kstl3uv2Dl6c1SSVelMTp1bQrwDdKf8ZyDB6HU6o2AmreZg6RxtVfnEwRH7HpMgqmwEu9d2ytH1dE4/Is82dayZVsq2uCEYfhz64ibRPFU2giq+QqSb5zLA8mZnvGmxh4HJbVeqWExdBFyJUz7XJRY9rDW9YV09sOeoJAZddIOJ/Ox3oGX+4u1RH2wEi+vr5YkpgXY1xVRmLdK2SVXrMDedPWZNiqNYQrreQd5u5edBBJ1whelb41pqvT0sift+lJunMI9/XrBO8knaTzxSAWvh3vcQqdo8K99/3Q7vqFFqZwT9N3aZ632Sy5w9SWsw1ZhYb+ZSSvQEk+pJ7myHqxhOocDHSbEFp0NjmwLbmReGx3sGxYk1LU0gm/Mg/LiYAGmGIAWCa5PRU71l3k1w+A+T1GXUsmU5/3QeGSFKkPBhnXnGkrWbBVkv8c9afiHKjbqlzfd0jql7xf5Y9mL4daTFv01wRSvmBOoAXijbchELHQeacUPfK0SmFOfTA+IKGVBHnXAT9w=="
+                        },
+                        "UserName": {
+                            "type": "string",
+                            "default": "newunderwriter"
+                        },
+                        "LanguageCode": {
+                            "type": "string",
+                            "default": "en"
+                        },
+                        "BrowserIp": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "AttributeDetailList": {
+                    "type": "array",
+                    "items": {
+                        "properties": {
+                            "AttributeDetail": {
+                                "type": "array",
+                                "items": {
+                                    "properties": {
+                                        "Key": {
+                                            "type": "string"
+                                        },
+                                        "Value": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "ResponseModel": {
+            "type": "object",
+            "required": [
+                "ResponseStatus"
+            ],
+            "properties": {
+                "ResponseStatus": {
+                    "type": "string"
+                },
+                "attributeListDetail": {
+                    "type": "array",
+                    "items": {
+                        "properties": {
+                            "AttributeDetail": {
+                                "type": "array",
+                                "items": {
+                                    "properties": {
+                                        "Key": {
+                                            "type": "string"
+                                        },
+                                        "Value": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            },
+                            "repeatedAttributeListDetail": {
+                                "type": "array",
+                                "items": {
+                                    "properties": {
+                                        "Key": {
+                                            "type": "string"
+                                        },
+                                        "AttributeDetailList": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "AttributeDetail": {
+                                                        "type": "array",
+                                                        "items": {
+                                                            "properties": {
+                                                                "Key": {
+                                                                    "type": "string"
+                                                                },
+                                                                "Value": {
+                                                                    "type": "string"
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "errorModel": {
+            "type": "object",
+            "required": [
+                "ResponseStatus",
+                "MessageDetail"
+            ],
+            "properties": {
+                "ResponseStatus": {
+                    "type": "string"
+                },
+                "MessageDetail": {
+                    "type": "object",
+                    "properties": {
+                        "MessageCode": {
+                            "type": "string"
+                        },
+                        "MessageType": {
+                            "type": "string"
+                        },
+                        "UserMessage": {
+                            "type": "string"
+                        },
+                        "MessageLevel": {
+                            "type": "string"
+                        },
+                        "MessageSeverity": {
+                            "type": "string"
+                        },
+                        "MessageList": {
+                            "type": "object",
+                            "properties": {
+                                "Message": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -47,7 +47,7 @@ paths:
           required: true
           type: string
           format: string
-          default: "1.1.0.5"       
+          default: "1.1.0.6"       
         - name: Rating Request
           in: body
           description: For rating request
@@ -166,7 +166,7 @@ definitions:
         ExpirationDate: 
          title: "PolicyExpiryDate"
          type: string
-         default: "2020-31-12"
+         default: "2018-09-01"
         InsuredName: 
          title: "InsuredName"
          type: string

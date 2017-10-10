@@ -1,0 +1,220 @@
+swagger: '2.0'
+info:
+  version: "1.1.0.2"
+  title: STARR Small Business General Liability - Cancel API
+  description: Cancel API is used by the customer to cancel the issued policy
+  
+host: starrsgl.ga.solartis.net
+basePath: /DroolsV6/DroolsService
+schemes:
+  - https
+consumes:
+  - application/json  
+produces:
+  - application/json
+paths:
+  /FireEventV2:
+    post:
+      description: Cancel rate API for issued SGL policies.
+      operationId: Cancelrate
+      produces:
+        - application/json
+      parameters:
+        - name: Token
+          in: header
+          description: Authentication Token
+          required: true
+          type: string
+          format: string
+          default: "EySuBJRPdaKYIPkH6PG4/iBBUI1k1zz3sqOKqy3mIo/7GYS1mgyQwmWKRKuwgGuByuBKqjKVODM0trsaxPTPuJ7qP/4uJk/BP9DC4M3Pq0iTHmZJQkrhr14EcM1q2p9+HbaiBuOEsfGqjUHqQk214qcRMi2h20iHP3S7st1i73CIB7pzAypPafFKsGJa84hB3vpmLsVxh6FAJ+phs8c+0EPZT+KS9ZxDvv0c45IwYOfQc7XLcAnvoB3WAEUiTIwWTyjZqUCUcHoJfHYckFnZh7KBNS6CwE9scK0//GbJdHKc5YyBoVoIa2RPqEREmwe2+IGZcvgj4xouiATzJSLGmmubsGqoEUe8Wsq9OX46/UD2ixgucgppxNv289Xfn1m/OcjFNiiUNlRbLHv4iK8vqPuk1TDyfBopITIRCQ/+z9515AL6fH0Bp/ThGjEm97VjVhMkgMBxUoq9+CTXEOsSg/ZZ0pURMkrjqL86NK3k23QZV5avhMwE15yFxTwCD/nHwN5k5yZEOClPxPoy2qL3K0seL2VIVEquzfos9GHaVq4lC9V4wpJijr4YFaXzNtiaSqIzyiUOIs7ang06Tj8UwsQZr2NJ/L2sTX3GlXkuRYMudIC7SweHXwg4rcyTW5/Aw9jwWc42R6JQ5BrUEueeYHfHZRnl5XkY2Fx2tdSxWavCdeyusCvsFmOKiRSCObAeWLkXDXVXsXfaZaSSgPo5h5RTH66tBq/QkzLnWlpCPuLsaMELWXBiXp6PRoD/d2SAgh+iEnE/07MQorzv3C3S3pQxYT8mJ8ys53MaZyP0M/tAdtPlpa8ZzBqKv0O3/582gpbQEv3N814OZWIOO97FrHSyC1hTtYvNArNHCQqk6stLYSidO4L/7kjf76XBJg8CdXaLdBpz+LcK6o/vVDiC7A5os+7m/xnw8jMEoQb4mWaGT7HsZ6O0nnu7zsQhU5fngI2RwFy9bwNl0pUdxzfbulO4Wq4AzRyvaHYrnYt7QRgEAhUob2KM7jZtSEIzCIY+xXXSP9kYFbIlRJ25vCPJV4GhFstLwf+o0So7dFKTk8BEhY/N8d3dS2+fGGy8Hs+mfy8wJrz3gu+QFYbeaGiTPgfq/IT2FtW7I124VBcWJEsNc45fwBYjECp4zghKA2rk98MSvVMItxeiIi73boS43VjHgPSt5YkUE59hKA3APuYWswZMIqHDRtFPWAQl9rMPJaZiwAwSnaxp7iLHYrUGoIbsRiwKuW7GwijsrpkGsTd46sURtKjcnbNjjD+AIsRXdZeTI48ut3Wug8iqcrkuH03MxQQm9E73yZIc0S8Ww3Fcvl9LZN5b508ac6aPhJ47sp3k3ocjmRMMVoan3dkcoiZLS5r37V2EfZrY0UTeNMXbr7eEb5pS0a1FerJcxqKQFB9pbHNZZUKdKB9F97yS+82TmiOayF37hPD0dxsW2guSEZdXAT2q6dVaFSxVnumLXhtVrJH7HirY3cXJlC+1PXv6vG76qviEI/LhePg6PvIDECAdVW8JomxZBjWtjLLGdn0fR3pM1GPFNeiIOiKIYg8rVymhnlL68Oy17yIA/E0F6FQiTLYnlalz+t5xFUzROD3iXzttNWlnvJfLM2H/ecZOex+yE4SL9CrCSkviu/SWU+BsNKnDxTED+fd93OSSKSlpCFp2FtatYSApWX5Msgo6yU4hTIwLyKssPQs/u6kVxe0X14qm5xpvFma5GX5EIFN2WcrxuBJox11v2C6GhGfd/eqCBy7yyBnNlJiyHvMgi2G8/ldN3jTMkaFyV7LIIFN2WcrxuBJox11v2C6GhN3vGq4cesJU6NnADT6l76fwBjpzsriXJt1y7z4R4lw9K6kcsynGtCUHAPAFJ2s/2X6Ltbv1qzXEuhN2uLNc00es1whYUugJdZRVvRnWxukThnWaLK9CVURE7YWYLmZWYxaLWXcTDPQFsrgDfp9voq5w5HCpqVUyqKitTqxIYbfG0uDmOWbyM7D3ZJrj/hT33go/NZYYh9nbnfoGxIrMrI0Vsk1Jir69nOxQdptQXVLf/MTjaDfKzLUJ8ZXD0+HGjMvVekI/ImPBENOgrGMmvzF64SnWMZiXHod5d07KQIQBL244fSZ8II6ePf5wwj37qChtrcq16n+iFDF2DLbLa1FkpsBVfmtN0lNQodJu0PqLGNmPaMRPJLibxZaA2ji5kGPjpMXcg9jAgYDMl1DYeITiYVuwEe2IiOh8nMAxFWpUYhfxDdUPQRtKy0+V2P/Mk0IGtzjWMRtNygJANJjjvybvcBqpUENNaCOmVt3TKLNhLbnKl8ZV9zNvryO4EZI1kcWFTmT05cegGKshpJtEV/KZYcp2fZgJeO0gfHrn7J7zqgwDwhgOUn7TUpbCyP/K1X8bDh6SHfcBYzma1/aqVfLEdH2qutBNVFNj4rJVIHrzMqMIXmseaO7rYrgczoUCu2ElyQeLoKKLxrIM7mHXmGTvnrCv6NR249jM3kjSaEf9rRDLHkEf1YSVGwB+g8PucdXVLfu9PYL7xHz82/YjCijUPZK8tK+Z/PmNwoSOb7uoqVXVoxgMS4mik/9Lg8sOSYe/DY91TW1NVVgrx0ntI9kNDjGkc4cA/8znLFBK71qHk7vMdBQifjxm/S+CI8/ZrZpjb/GDXfRC+BISWwgSN8OwhyCMdetqQgWItkrsUlORgUPh7uibg+fR7VIqP6PWY74ipfIqMMPXmSoxOXu+Be27JhPfUznSDuyXsDtbazrrjRJ2s0hGHanadZjuiTfBgDakrJkZAb1PM0uVONDxBw8bPIFebcdlgtMamK6FfJQre8r91r01Cfy3OA3thWNtJziFiX+8aFSq8gZVQunFbmYHmBqescSvj3WSPhbfKRF4zXlNDT0btk/fz2Lv2VgyEanI2y/WxDX4XBu9J0OgOuQ0OzvZQ5MB50TvMPaFfSkQtLkyzUU58rggnrKM7WVKRMdzWnfeoSU8plgf8VYP4217cJLPCgiYVqHxnQmQ6g5+yqxd8fWlgQF5osqx1HvlSmjbqmizXOQSTNX59ZIHva/OFE/m/3DLH7iZhVSzFgAfaw1WOr+yI++/DS4HL1N8FXrgXuvpzD5lQz6Tgvi26dtuGiRvreenKrSFLp8YBBU2M5iIgxrpWx09r/4pehWaDTHRR1RboZ0t/R5BdrBKQAeDh1FxPNInKBQwvcMfNN3ie29APYSRE6+y6Z+d9g+LpTevMn51EJ8glGgjW9K2k2t1JppHFc920NUvC5cH6vDfj1gnAyTauBeFCleEs1TEe1SO/draOOTvTNK9PYtxC6h/xI/H9+sGq2T8yPI+BGOgffJ72/sZIDhSf3cyftv7t2i3kggt/KprE6bX3iKIrDaYsH+EuX7HtZ5fADGy4cAD6XxEup9YstwtzlGfVQqTCV0pNKbFbIKUi9p0FVwqLhdGJawncRfA2kG9NUG/iQexnYBoQSxctUSGt7BTrAVX7RubDTSkxLODsZ+QD2n9YQIgU3ZZyvG4EmjHXW/YLoaEaxvPn7RzKJka0nY1C9szqw=="
+        
+        - name: Content-Type
+          in: header
+          description: Content Type
+          required: true
+          type: string
+          default: "application/json"
+          
+        - name: EventName
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "CancelIssuance"
+          
+        - name: EventVersion
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "1.1.0.2"
+        
+        - name: Cancel_request
+          in: body
+          description: For cancel_request
+          schema:
+            $ref: '#/definitions/cancel_request'
+      responses:
+        '200':
+          description: Success Response
+          schema:
+            $ref: '#/definitions/Cancellation_Success_Response'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/errorModel'
+definitions:
+  cancel_request:
+    type: object
+    properties:
+       EndClientUserUniqueSessionId: 
+        title: "Client User Unique Session ID"
+        type: string
+        default: "Uniqusession"
+       OwnerId:
+        type: string
+        default: "30"
+       ServiceRequestDetail:
+        type: object
+        properties:
+          ServiceRequestVersion:
+           type: string
+           default: "1.0"
+          ServiceResponseVersion:
+           type: string
+           default: "1.0"
+          OwnerId:
+            type: string
+            default: "30"
+          ResponseType:
+           title: "Response Type"
+           type: string
+           default: "json"
+          UserName:
+           title: "User Name"
+           type: string
+           default: "StarrGLagent"
+          Token:
+           type: string
+           default: "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"
+          BrowserIp:
+            type: string
+            default: "127.0.0.1"
+          LanguageCode:
+            title: "Language Code"
+            type: string
+            default: "en"    
+          RegionCode:
+            title: "Region Code"
+            type: string
+            default: "US"  
+       Policy:
+         type: object
+         required:
+          - ProductNumber
+          - ProductVerNumber
+          - EventName
+          - EventVersion
+          - PolicyNumber
+          - CancelEffectiveDate
+          - CancelReason
+          - CancelType
+         properties:
+           ProductNumber:
+            type: string
+            default: "StarrSGLENDR-1"
+           ProductVerNumber:
+            type: string
+            default: "STARR_SGL_2017_V1"
+           EventName:
+            type: string
+            default: "CancelIssuance"
+           EventVersion: 
+            type: string
+            default: "1.1.0.2"
+           PolicyNumber:
+            type: string
+            default: "1000202169"
+           CancelEffectiveDate:
+            type: string
+            default: "2017-07-15"
+           CancelReason:
+            type: string
+            enum: ["Insured's Option - No insurable interest","Insured's Option - Other","Company Option","Cancel - Policy Change","Non-Payment of Premium"]
+            default: "Insured's Option - No insurable interest"
+           CancelType:
+            type: string
+            enum: ["Flat", "Prorata","Shortrate"]
+            default: "Flat"
+           
+  Cancellation_Success_Response:
+    type: object
+    required:
+      - RequestStatus
+      - Policy
+    properties:
+      messageDetail:
+        type: object
+      RequestStatus:
+        type: string
+      Policy:
+       type: object
+       properties:
+        ProductNumber:
+         type: string
+        ProductVerNumber: 
+         type: string
+        EventName: 
+         type: string
+        EventVersion:
+         type: string
+        PolicyNumber:
+         type: string
+        CancelType:
+         type: string
+        CancelEffectiveDate:
+         type: string
+        CancelReason:
+         type: string
+        TotalReturnpremium:
+         type: string
+        DocumentsInfoList:
+          type: array
+          items:
+            properties:
+              DocumentType:
+                type: string
+              DocumentURL:
+                type: string
+  errorModel:
+    type: object
+    required:
+      - RequestStatus
+      - MessageDetail
+    properties:
+      RequestStatus:
+        type: string
+        default: "FAILED"
+      MessageDetail:
+        type: object
+        properties:
+          MessageCode:
+            type: string
+          MessageType:
+            type: string
+          UserMessage:
+            type: string
+          MessageLevel:
+            type: string
+          MessageSeverity:
+            type: string
+          MessageList:
+            type: object
+            properties:
+              Message:
+                type: array
+                items:
+                  type: string
+        

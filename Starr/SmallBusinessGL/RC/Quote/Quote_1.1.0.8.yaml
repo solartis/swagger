@@ -763,6 +763,9 @@ definitions:
         TotalPremium:
          title: "Total Premium"
          type: string
+        CalculatedBasePremium:
+         title: "Calculated Base Premium"
+         type: string
         TotalBillingBrokerCommission:
          title: "Total Billing Broker Commission"
          type: string

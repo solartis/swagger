@@ -676,6 +676,9 @@ definitions:
         TotalCommission:
          title: "Total Commission"
          type: string
+        CalculatedBasePremium:
+         title: "Total Calculated Base Premium"
+         type: string
         LCM:
          title: "LCM"
          type: string

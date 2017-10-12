@@ -3,7 +3,7 @@ info:
   version: '1.0.0.1'
   title: Starr Assist - Pay Issue API
   description: |
-    This version of API is used to get Trip, Traveler, Payer and Payment information from the Customer and provides a static response with a static Pdf's.
+    This version of API is used to get Trip, Traveler, Payer and Payment information from the Customer and provides a static response.
   
     Features:
     1. Provides ability to process payment for the information provided and issues Policy for each Traveler in the Batch
@@ -147,8 +147,6 @@ definitions:
             default: '15'
             enum:
               - '15'
-          CustomerNumber:
-            type: string
           RoleID:
             type: string
             default: '5'
@@ -219,6 +217,7 @@ definitions:
                   type: string
                 Country:
                   type: string
+                  default: "United States"
                 Zipcode:
                   type: string
                 Phone:
@@ -259,7 +258,7 @@ definitions:
                   type: string
                 PayerCountry:
                   type: string
-                  default: US
+                  default: "United States"
                 PayerZipcode:
                   type: string
                 PayerEmail:

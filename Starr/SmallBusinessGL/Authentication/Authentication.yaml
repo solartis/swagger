@@ -63,10 +63,10 @@ definitions:
         properties:
           UserName: 
             type: string
-            default: "StarrGLAgent"
+            default: "StarrGLagent_UAT"
           Password:
             type: string
-            default: "sKVSbX7wj8UYYAaar4amxQ=="
+            default: "HOY0iDFqqUdDtp/5R/DDsw=="
             
   Authenication_Success_Response:
     type: object

@@ -165,12 +165,12 @@ definitions:
               - 'SQM_PayIssue_1.1.0.1'
           PlanName:
             type: string
-            default: 'CAT70'
-            enum: ['CAT70']
+            default: 'CAT 70'
+            enum: ['CAT 70']
           PlanCode:
             type: string
-            default: '12'
-            enum: ['12']
+            default: '15'
+            enum: ['15']
           StateCode:
             type: string
           StateName:
@@ -258,9 +258,11 @@ definitions:
                   type: string
                 PayerState:
                   type: string
+                  description: Provide State Code
                 PayerCountry:
                   type: string
-                  default: "United States"
+                  enum: ['US']
+                  default: "US"
                 PayerZipcode:
                   type: string
                 PayerEmail:

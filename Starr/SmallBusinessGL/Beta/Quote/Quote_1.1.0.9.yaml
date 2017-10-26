@@ -760,12 +760,6 @@ definitions:
         EmployeeBenefitsLiabCovCommission:
          title: "Employee Benedits Liability Covearge Commission"
          type: string
-        TFSAmount:
-         title: "TFS Amount"
-         type: string
-        TotalProratedTFSAmount:
-         title: "Total Prorated TFS Amount"
-         type: string
         TotalPremium:
          title: "Total Premium"
          type: string

@@ -760,12 +760,6 @@ definitions:
         EmployeeBenefitsLiabCovCommission:
          title: "Employee Benedits Liability Covearge Commission"
          type: string
-        TFSAmount:
-         title: "TFS Amount"
-         type: string
-        TotalProratedTFSAmount:
-         title: "Total Prorated TFS Amount"
-         type: string
         TotalPremium:
          title: "Total Premium"
          type: string
@@ -785,26 +779,34 @@ definitions:
          title: "Quote Number"
          type: string
         ReductionfactorList:
-         title: "ReductionfactorList"
-         type: string
-        Reductionfactor1:
-          title: "Reductionfactor1"
-          type: string
-        Reductionfactor2:
-          title: "Reductionfactor2"
-          type: string
-        Reductionfactor3:
-          title: "Reductionfactor3"
-          type: string
+         type: array
+         items:
+          properties:
+            Reductionfactor1:
+              title: "Reductionfactor1"
+              type: string
+            Reductionfactor2:
+              title: "Reductionfactor2"
+              type: string
+            Reductionfactor3:
+              title: "Reductionfactor3"
+              type: string
         TFSList:
-          title: "Tax List"
-          type: string
-        TFSRate:
-          title: "Tax Rate"
-          type: string
-        TFSDescription:
-          title: "Tax Description"
-          type: string
+          type: array
+          items:
+           properties:
+             TFSRate:
+               title: "Tax Rate"
+               type: string
+             TFSDescription:
+               title: "Tax Description"
+               type: string
+             TFSAmount:
+                title: "TFS Amount"
+                type: string
+             TotalProratedTFSAmount:
+                 title: "Total Prorated TFS Amount"
+                 type: string
         AdditionalInsuredCalculatedPremium:
           type: string
         AdditionalInsuredPremium:

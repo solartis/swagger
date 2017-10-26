@@ -5,7 +5,7 @@ info:
   description: To get rate for Small Business General Liability from Solartis Quote 
                API with ISO ERC
 
-host: starrsgl.beta.solartis.net
+host: starrsgl.rc.solartis.net
 basePath: /DroolsV6/DroolsService
 schemes:
   - https

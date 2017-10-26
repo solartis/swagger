@@ -664,6 +664,12 @@ definitions:
         EmployeeBenefitsLiabCovCommission:
          title: "Employee Benedits Liability Covearge Commission"
          type: string
+        TFSAmount:
+         title: "TFS Amount"
+         type: string
+        TotalProratedTFSAmount:
+         title: "Total Prorated TFS Amount"
+         type: string
         TotalPremium:
          title: "Total Premium"
          type: string
@@ -675,9 +681,6 @@ definitions:
          type: string
         TotalCommission:
          title: "Total Commission"
-         type: string
-        CalculatedBasePremium:
-         title: "Total Calculated Base Premium"
          type: string
         LCM:
          title: "LCM"
@@ -915,4 +918,6 @@ definitions:
                                   type: string
                               TerrorismAllOtherSublinePremium:
                                   type: string
-
+                              CertifiedActsOfTerrorismExposureClassFactorAllOtherSubline:
+                                  type: string
+    

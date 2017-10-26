@@ -918,4 +918,6 @@ definitions:
                                   type: string
                               TerrorismAllOtherSublinePremium:
                                   type: string
-
+                              CertifiedActsOfTerrorismExposureClassFactorAllOtherSubline:
+                                  type: string
+    

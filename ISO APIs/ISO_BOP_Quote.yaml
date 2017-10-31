@@ -118,6 +118,101 @@ definitions:
          title: "Zip"
          type: string
          default: "32003"
+        BOPInformationSecurityProtectionEndorsement:
+          type: object
+            properties:
+              AggregateLimit: 
+                title: "Aggregate Limit"
+                type: string
+                default: "75,000"
+              BusinessIncomeAndExtraExpenseWaitingPeriodHours: 
+                title: "Business Income & Extra Expense Waiting Period Hours"
+                type: string
+                default: "8"        
+              CoverageTierSelect:
+                title: "Coverage Tier"
+                type: string
+                default: "Tier 1, 2 and 3"
+              Deductible:
+                title: "Deductible"
+                type: string
+                default: "2,500"
+              IncludeRiskCharacteristics:
+                title: "Include Risk Characteristics"
+                type: string
+                default: "No"
+              PostSecurityBreachServicesIDT911:
+                title: "Post Security Breach Services IDT911"
+                type: string
+                default: "Yes"
+              PostSecurityBreachServicesOther1:
+                title: "Post Security Breach Services Other1"
+                type: string
+                default: " "
+              PostSecurityBreachServicesOther2:
+                title: "Post Security Breach Services Other2"
+                type: string
+                default: " "
+              PreSecurityBreachServicesIDT911:
+                title: "Pre Security Breach Services IDT911"
+                type: string
+                default: " "
+              PreSecurityBreachServicesOther1:
+                title: "PreSecurityBreachServicesOther1"
+                type: string
+                default: " "
+              PreSecurityBreachServicesOther2:
+                title: "PreSecurityBreachServicesOther2"
+                type: string
+                default: " "
+              RiskCharacteristicHighHazardClassifications:
+                title: "RiskCharacteristicHighHazardClassifications"
+                type: string
+                default: " "
+              RiskCharacteristicInsuredCollectsDataRequiredToBeProtected:
+                title: "RiskCharacteristicInsuredCollectsDataRequiredToBeProtected"
+                type: string
+                default: " "
+              RiskCharacteristicInsuredCollectsInformationOnMinors:
+                title: "RiskCharacteristicInsuredCollectsInformationOnMinors"
+                type: string
+                default: " "
+              RiskCharacteristicInsuredConductsOnlineTransactions:
+                title: "RiskCharacteristicInsuredConductsOnlineTransactions"
+                type: string
+                default: "Yes"
+              RiskCharacteristicInsuredDoesNotHaveWebsite:
+                title: "RiskCharacteristicInsuredDoesNotHaveWebsite"
+                type: string
+                default: "Yes"
+              RiskCharacteristicInsuredEmploysEncryption:
+                title: "Risk Characteristic Insured Employs Encryption"
+                type: string
+                default: "Yes"
+              RiskCharacteristicInsuredHasActiveSocialMediaProfiles:
+                title: "Risk Characteristic Insured Has Active Social Media Profiles"
+                type: string
+                default: "Yes"
+              RiskCharacteristicInsuredUtilizesBackgroundAndCreditChecks:
+                title: "Risk Characteristic Insured Utilizes Background & CreditChecks"
+                type: string
+                default: "Yes"
+              RiskCharacteristicInsuredUtilizesMedicalRecordsInDailyBusiness:
+                title: "Risk Characteristic Insured Utilizes Medical Records In Daily Business"
+                type: string
+                default: "Yes"
+              RiskCharacteristicRemoteAccessToInsuredsComputerSystem:
+                title: "Risk Characteristic RemoteAccess To Insureds ComputerSystem"
+                type: string
+                default: "Yes"
+              SupplementalExtendedReportingPeriod:
+                title: "Supplemental Extended Reporting Period"
+                type: string
+                default: "Yes"
+              SupplementalExtendedReportingPeriodPremium:
+                title: "Supplemental Extended Reporting Period Premium"
+                type: string
+                default: "0"
         BOPConditionalLimitationOfCoverageTerrorismSublimitAnnualAggregateTerrorismAct2002:
          title: "Conditional Limitation Of Coverage Terrorism Sublimit Annual Aggregate Terrorism Act 2002"
          type: string
@@ -544,6 +639,7 @@ definitions:
           BOPLimitedFungiBacteriaCovBusnIncomeExtraExpenseCoverageNumDays:
            title: "Business Income/Extra Expense Number of Days"
            type: string
+           default: " "
          
       OwnerId: 
        type: string

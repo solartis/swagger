@@ -7,7 +7,7 @@ info:
                A Business Owners Policy packages together several policies to offer small and mid-sized business owners one convenient policy to protect themselves. It simplifies coverage needs by combining two policies that most businesses need - property and liability - while offering savings over purchasing each policy separately.
 
 
-host: isowrapper.uat.solartis.net
+host: isowrapper.solartis.net
 basePath: /ISOWrapperService/ISO
 schemes:
   - https

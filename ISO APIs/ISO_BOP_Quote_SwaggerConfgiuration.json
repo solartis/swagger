@@ -2,10 +2,9 @@
 	"swagger": "2.0",
 	"info": {
 		"version": "1.0.0",
-		"title": "Solartis Rate API for ISO BOP",
-		"description": "To get rate for Business Owners from Solartis Rate API with ISO ERC. A Business Owners Policy packages together several policies to offer small and mid-sized business owners one convenient policy to protect themselves. It simplifies coverage needs by combining two policies that most businesses need - property and liability - while offering savings over purchasing each policy separately."
+		"title": "Solartis Rate API for ISO BOP",	"description": "To get rate for Business Owners from Solartis Rate API with ISO ERC. A Business Owners Policy packages together several policies to offer small and mid-sized business owners one convenient policy to protect themselves. It simplifies coverage needs by combining two policies that most businesses need - property and liability - while offering savings over purchasing each policy separately."
 	},
-	"host": "isowrapper.solartis.net",
+	"host": "isowrapper.uat.solartis.net",
 	"basePath": "/ISOWrapperService/ISO",
 	"schemes": [
 		"https"
@@ -116,13 +115,13 @@
 							"type": "string",
 							"default": "John Smith"
 						},
-						"StreetName": {
-							"title": "Address Line 2",
+						"Address Line 1": {
+							"title": "StreetName",
 							"type": "string",
 							"default": ""
 						},
-						"StreetNumber": {
-							"title": "Address Line 1",
+						"Address Line 2": {
+							"title": "StreetNumber",
 							"type": "string"
 						},
 						"City": {
@@ -137,11 +136,7 @@
 						},
 						"CountyDivision": {
 							"title": "County Division",
-							"type": "string",
-							"enum": [
-								"59th Street and below",
-								"Above 59th Street"
-							]
+							"type": "string"
 						},
 						"State": {
 							"title": "State",
@@ -269,12 +264,82 @@
 								}
 							}
 						},
+				"BOPInformationSecurityProtectionEndorsement": {
+			  "type": "object",
+				"properties": {
+        "SupplementalExtendedReportingPeriod":{
+          "type": "string",
+				  "default": "Yes"},
+        "SupplementalExtendedReportingPeriodPremium":{
+          "type": "string",
+          "default": "0"},
+        "IncludeRiskCharacteristics":{
+          "type": "string",
+          "default": "No"},
+        "CoverageTierSelect":{
+          "type": "string",
+          "default": "Tier 1, 2 and 3"},
+        "AggregateLimit":{
+          "type": "string",
+          "default": "75,000"},
+        "Deductible":{
+          "type": "string",
+          "default": "2,500"},
+        "BusinessIncomeAndExtraExpenseWaitingPeriodHours":{
+          "type": "string",
+          "default": "8"},
+        "PreSecurityBreachServicesIDT911":{
+          "type": "string",
+        "default": "Yes"},
+        "PreSecurityBreachServicesOther1":{
+          "type": "string"},
+        "PreSecurityBreachServicesOther2": {
+          "type": "string"},
+        "PostSecurityBreachServicesIDT911":{
+          "type": "string",
+          "default": "Yes"},
+        "PostSecurityBreachServicesOther1":{
+          "type": "string"},
+        "PostSecurityBreachServicesOther2":{
+          "type": "string"},
+        "RiskCharacteristicInsuredUtilizesMedicalRecordsInDailyBusiness":{
+          "type": "string",
+          "default": "Yes"},
+        "RiskCharacteristicInsuredCollectsDataRequiredToBeProtected":{
+          "type": "string",
+          "default": "Yes"},
+        "RiskCharacteristicInsuredConductsOnlineTransactions":{
+          "type": "string",
+          "default": "Yes"},
+        "RiskCharacteristicInsuredDoesNotHaveWebsite":{
+          "type": "string",
+        "default": "Yes"},
+        "RiskCharacteristicInsuredUtilizesBackgroundAndCreditChecks":{
+          "type": "string",
+          "default": "Yes"},
+        "RiskCharacteristicInsuredEmploysEncryption":{
+          "type": "string",
+          "default": "Yes"},
+        "RiskCharacteristicInsuredCollectsInformationOnMinors":{
+          "type": "string",
+          "default": "Yes"},
+        "RiskCharacteristicInsuredHasActiveSocialMediaProfiles":{
+          "type": "string",
+          "default": "Yes"},
+        "RiskCharacteristicRemoteAccessToInsuredsComputerSystem":{
+          "type": "string",
+          "default": "Yes"},
+        "RiskCharacteristicHighHazardClassifications":{
+          "type": "string",
+          "default": "Yes"}
+				}
+    },
 						"BOPContrctrsInstalltnToolsAndEquipmtCov": {
 							"type": "object",
 							"properties": {
 								"BlanketSubLimit": {
 									"type": "string",
-									"default": "2000"
+									"default": "1000"
 								},
 								"SubLimitNotInExcess": {
 									"type": "string",
@@ -308,7 +373,7 @@
 						"BOPEmployeeDishtyCoverageLimit": {
 							"title": "Employee Dishonesty Coverage",
 							"type": "string",
-							"default": "10000"
+							"default": "0"
 						},
 						"ProdsCompldOpsAggregateLimit": {
 							"title": "Products/Completed Operations Aggregate Limit",
@@ -347,7 +412,7 @@
 								"Yes",
 								"No"
 							],
-							"default": "No"
+							"default": "Yes"
 						},
 						"TRIPTerminatesBeforeExpirationDate": {
 							"title": "Terrorism Risk Insurance Program (TRIP) terminates before policy expiration date",
@@ -433,7 +498,7 @@
 																		"Not Eligible",
 																		"Ungraded"
 																	],
-																	"default": "1"
+																	"default": "Not Eligible"
 																},
 																"BOPOrdinanceOrLawCov2CoverageLimit": {
 																	"title": "Increased Cost of Construction",
@@ -462,7 +527,7 @@
 																"BOPTenantsLiabilityLimit": {
 																	"title": "Damage to premises you rented",
 																	"type": "string",
-																	"default": "50000"
+																	"default": "25000"
 																},
 																"BuildingLimit": {
 																	"title": "Building Limit",
@@ -499,7 +564,7 @@
 																"MineSubsidenceCoverage": {
 																	"title": "Mine Subsidence Coverage",
 																	"type": "string",
-																	"default": "All Buildings"
+																	"default": "No Coverage"
 																},
 																"MineSubsidenceApplies": {
 																	"title": "Mine Subsidence Applies",
@@ -556,7 +621,7 @@
 																					"TotalAnnualGrossSales": {
 																						"title": "Total Annual Gross Sales",
 																						"type": "string",
-																						"default": "1000000"
+																						"default": "25000"
 																					},
 																					"BOPClassificationAccountsReceivableCoverageLimit": {
 																						"title": "On Premises",
@@ -576,7 +641,7 @@
 																					"ClassCode": {
 																						"title": "Class code",
 																						"type": "string",
-																						"default": "74011",
+																						"default": "57338",
 																						"enum": [
 																							"50061",
 																							"50081",
@@ -768,7 +833,7 @@
 																					"SquareFootage": {
 																						"title": "Classification Square Footage ",
 																						"type": "string",
-																						"default": "10000"
+																						"default": "144"
 																					},
 																					"BOPClassificationValuablePapersCoverageLimit": {
 																						"title": "On Premises",
@@ -827,7 +892,7 @@
 																		"Modified Fire-resistive",
 																		"Fire-resistive"
 																	],
-																	"default": "Masonry Non-combustible"
+																	"default": "Fire-resistive"
 																},
 																"YearBuilt": {
 																	"title": "Year Built",
@@ -842,7 +907,7 @@
 											"BOPLocationOutdoorSignsCoverageLimit": {
 												"title": "Outdoor Signs",
 												"type": "string",
-												"default": "10000"
+												"default": "0"
 											},
 											"WaterBackUpAndSumpOverflow": {
 												"type": "object",

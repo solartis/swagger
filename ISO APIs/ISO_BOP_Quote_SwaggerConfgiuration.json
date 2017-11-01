@@ -1,0 +1,1145 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"version": "1.0.0",
+		"title": "Solartis Rate API for ISO BOP",
+		"description": "To get rate for Business Owners from Solartis Rate API with ISO ERC. A Business Owners Policy packages together several policies to offer small and mid-sized business owners one convenient policy to protect themselves. It simplifies coverage needs by combining two policies that most businesses need - property and liability - while offering savings over purchasing each policy separately."
+	},
+	"host": "isowrapper.uat.solartis.net",
+	"basePath": "/ISOWrapperService/ISO",
+	"schemes": [
+		"https"
+	],
+	"consumes": [
+		"application/json"
+	],
+	"produces": [
+		"application/json"
+	],
+	"paths": {
+		"/BOPRate": {
+			"post": {
+				"description": "Gets Rate for Business Owners based on ISO ERC",
+				"operationId": "getRates",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"name": "Token",
+						"in": "header",
+						"description": "Authentication Token",
+						"required": true,
+						"type": "string",
+						"format": "string",
+						"default": "HzhAo4CbF/h3sUqNu9samOpuM/fUjfkVztgESsH7udp80k5yVLm79dKYysDbkulxXUv434aVbgPqr59TTj7RQzRB//HqhOV+Kg7ig72VDD/ofFNP0eMGRzK1wOfvCbR3aKw9qlED61a1lgFAoA2a2n6RQheIHbgBhQtuIoHMn1FE7nDKTBS0KkocOeSUsj8z5zLA8mZnvGmxh4HJbVeqWExdBFyJUz7XJRY9rDW9YV09sOeoJAZddIOJ/Ox3oGX+4u1RH2wEi+vr5YkpgXY1xVRmLdK2SVXrMDedPWZNiqNNjRUUUSq1y4NKyCNxQXjDjiDGofUSvboBuLDE6DT/8oPxVLlKEuu6QNd+Wn2EgxoTfye4Qe71FYzZ6gmgT7Bi09eiWxPkUPcJtrg7KGg23Orp1dqMQWRkgQtjIfQCJapfME56GZbbvXzldsg/xpkz1cUGmko0zdOuDo6rVVSY7l77yj5qBwmKxkV4yJC1b12pie2Yr7xXu7mGPiP19zvahS29HRF5DYYc7sT1GPttRSsZW+9/wrSJiCqoVG0NX9IhHcsN9bAdMn7gzEy4tffqctu1Ix+CpaHNIwia8OelYNDrSVfq7AxSoiQhJjukKOxDcirv00KBIt2SWer42NI5BdfNWDdshrhbme+CEXTh5jdQJUsvnc63erI+Ae0S9noTMBrklNX3N0KrQWc2YZOOyM+LpxwNumqsQuJZjepi8eFgOkfH7dJ2DEcpLAWbSXHAhaP4vBzhGH7ZKia8Zae78bGP72tt3SMc+TgHVbOTcfrzHKz2gGY78EgFmVSzk8yC4A2iI2xyXe7BkX5EfEC2TpbN5pOrbu+gYJWwhutLosJunuvW+cv908fUrBvzOI6ttcS4GqL0su2NawM7pEUBYDvphyZfG99mILy2irt9I4i6LNeyot3EaQ2JG7XdwYx6EyN7cCSruqAMrHdhC4pGXw/27HNlrG8XDi0yv1Lceoi6LNeyot3EaQ2JG7XdwYz2KWF3J+4j5qGwMJQxZQqB5HXuAheyF1X15SFHpFGSUXOHSWYev+OmEAYnkK6tOPtx9gErwTLkhbTD49Ub7omytie2WHF3eq3h0GFuCs3t2g=="
+					},
+					{
+						"name": "Content-Type",
+						"in": "header",
+						"description": "Content Type",
+						"required": true,
+						"type": "string",
+						"format": "string",
+						"default": "application/json"
+					},
+					{
+						"name": "Rating Request",
+						"in": "body",
+						"description": "For rating request",
+						"schema": {
+							"$ref": "#/definitions/Rating_Request"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Success Response",
+						"schema": {
+							"$ref": "#/definitions/Rating_Success_Response"
+						}
+					},
+					"default": {
+						"description": "unexpected error",
+						"schema": {
+							"$ref": "#/definitions/errorModel"
+						}
+					}
+				}
+			}
+		}
+	},
+	"definitions": {
+		"Rating_Request": {
+			"type": "object",
+			"properties": {
+				"EndClientUserUniqueSessionId": {
+					"title": "Client User Unique Session ID",
+					"type": "string",
+					"default": "Uniquesession"
+				},
+				"Policy": {
+					"type": "object",
+					"properties": {
+						"ProductNumber": {
+							"title": "ProductNumber",
+							"type": "string",
+							"default": "ISO BOP"
+						},
+						"ProductVerNumber": {
+							"title": "ProductVerNumber",
+							"type": "string",
+							"default": "ISO_2016_V1"
+						},
+						"EventName": {
+							"title": "EventName",
+							"type": "string",
+							"default": "ISOBOPQuote"
+						},
+						"ISOERCVersion": {
+							"title": "State and ERC Version identifier",
+							"type": "string",
+							"default": "RC_BP_FL_07012017_V01"
+						},
+						"EffectiveDate": {
+							"title": "Policy Start Date",
+							"type": "string",
+							"default": "2017-07-01"
+						},
+						"ExpirationDate": {
+							"title": "PolicyExpiryDate",
+							"type": "string",
+							"default": "2018-07-01"
+						},
+						"InsuredName": {
+							"title": "InsuredName",
+							"type": "string",
+							"default": "John Smith"
+						},
+						"StreetName": {
+							"title": "Address Line 2",
+							"type": "string",
+							"default": ""
+						},
+						"StreetNumber": {
+							"title": "Address Line 1",
+							"type": "string"
+						},
+						"City": {
+							"title": "City",
+							"type": "string",
+							"default": "THE VILLAGES"
+						},
+						"County": {
+							"title": "County",
+							"type": "string",
+							"default": "SUMTER"
+						},
+						"CountyDivision": {
+							"title": "County Division",
+							"type": "string",
+							"enum": [
+								"59th Street and below",
+								"Above 59th Street"
+							]
+						},
+						"State": {
+							"title": "State",
+							"type": "string",
+							"default": "FL",
+							"enum": [
+								"SC",
+								"MI",
+								"PA",
+								"NC",
+								"AL",
+								"MO",
+								"MS",
+								"TN",
+								"IN",
+								"AZ",
+								"MD",
+								"DC",
+								"OH",
+								"CO",
+								"OK",
+								"KS",
+								"NV",
+								"WI",
+								"NM",
+								"IA",
+								"SD",
+								"ID",
+								"UT",
+								"MT",
+								"WY",
+								"ND",
+								"OR",
+								"NE",
+								"DE",
+								"FL"
+							]
+						},
+						"ZipCode": {
+							"title": "Zip",
+							"type": "string",
+							"default": "32003"
+						},
+						"BOPConditionalLimitationOfCoverageTerrorismSublimitAnnualAggregateTerrorismAct2002": {
+							"title": "Conditional Limitation Of Coverage Terrorism Sublimit Annual Aggregate Terrorism Act 2002",
+							"type": "string",
+							"default": "No"
+						},
+						"TypeOfExclusion": {
+							"title": "Select Type of Exclusion",
+							"type": "string"
+						},
+						"BusnIncomeOrdinaryPayrollNumDays": {
+							"title": "Business Income Ordinary Payroll",
+							"type": "string",
+							"default": "60"
+						},
+						"PropDamageLiabDedType": {
+							"title": "Property Damage Liability Deductible Type ",
+							"type": "string",
+							"default": "Not Applicable"
+						},
+						"TerrorismCoverage": {
+							"title": "Terrorism",
+							"type": "string",
+							"default": "Yes"
+						},
+						"TerrsmSubLimit": {
+							"title": "Terrorism Liability Sub Limit",
+							"type": "string",
+							"default": ""
+						},
+						"BOPExclAccessOrDisclosureLimitedBodilyInjuryExceptionNotIncluded": {
+							"title": "Exclusion - Access Or Disclosure Of Confidential Or Prsnl Info And Data-Related Liab - Limited Bodily Injury Excptn Not Included",
+							"type": "string",
+							"default": "No"
+						},
+						"EachOccLimit": {
+							"title": "General Liability",
+							"type": "string",
+							"default": "1000000",
+							"enum": [
+								"300000",
+								"500000",
+								"1000000",
+								"2000000"
+							]
+						},
+						"TerrorismCoverageSpecificLimits": {
+							"title": "Accept Certified Acts Terrorism Coverage Provided With Specific Limitations",
+							"type": "string",
+							"default": "No"
+						},
+						"AggregateLimit": {
+							"title": "Aggregate Limit",
+							"type": "string",
+							"default": "2000000",
+							"enum": [
+								"600000",
+								"1000000",
+								"2000000",
+								"4000000"
+							]
+						},
+						"HiredAutoAndNonOwnedAutoLiability": {
+							"type": "object",
+							"properties": {
+								"BOPHiredNonOwnedAutoHiredCoverageLiabilityCoverage": {
+									"title": "Hired Auto",
+									"type": "string",
+									"default": "No",
+									"enum": [
+										"Yes",
+										"No"
+									]
+								},
+								"BOPHiredNonOwnedAutoNonOwnedCoverageLiabilityCoverage": {
+									"title": "Non-Owned",
+									"type": "string",
+									"default": "No",
+									"enum": [
+										"Yes",
+										"No"
+									]
+								}
+							}
+						},
+						"BOPContrctrsInstalltnToolsAndEquipmtCov": {
+							"type": "object",
+							"properties": {
+								"BlanketSubLimit": {
+									"type": "string",
+									"default": "2000"
+								},
+								"SubLimitNotInExcess": {
+									"type": "string",
+									"default": "2000"
+								},
+								"BOPContrctrsInstalltnToolsAndEquipmtInstalltnCoverage_EachCoveredJobSiteLimit": {
+									"type": "string",
+									"default": "10000"
+								},
+								"BOPContrctrsInstalltnToolsAndEquipmtBlanketToolsCoverage_Limit": {
+									"type": "string",
+									"default": "500"
+								}
+							}
+						},
+						"BOPForgeryAlterationCoverageLimit": {
+							"title": "Forgery or Alteration",
+							"type": "string",
+							"default": "2500"
+						},
+						"ExcludeTerrorismActOutUS": {
+							"title": "Exclude Acts Of Terrorism Committed Outside Of The US",
+							"type": "string",
+							"default": "No"
+						},
+						"BOPElectronicDataCoverageLimit": {
+							"title": "Electronic Data",
+							"type": "string",
+							"default": "10000"
+						},
+						"BOPEmployeeDishtyCoverageLimit": {
+							"title": "Employee Dishonesty Coverage",
+							"type": "string",
+							"default": "10000"
+						},
+						"ProdsCompldOpsAggregateLimit": {
+							"title": "Products/Completed Operations Aggregate Limit",
+							"type": "string",
+							"default": "2000000"
+						},
+						"PropDamageLiabDed": {
+							"title": "Property Damage Liability Deductible ",
+							"type": "string",
+							"default": "No Deductible"
+						},
+						"TRIAExtended": {
+							"title": "Has TRIA been extended past termination date of TRIP?",
+							"type": "string",
+							"default": "No"
+						},
+						"BOPResidentialCleaningServices": {
+							"title": "Residential Cleaning Services",
+							"type": "string",
+							"default": "No"
+						},
+						"BOPApartmentBuildings": {
+							"title": "ApartmentBuildings",
+							"type": "string",
+							"default": "No"
+						},
+						"BOPRestaurants": {
+							"title": "Restaurants",
+							"type": "string",
+							"default": "No"
+						},
+						"BOPWindstormOrHailExclusion": {
+							"title": "Windstorm Or Hail Exclusion ",
+							"type": "string",
+							"enum": [
+								"Yes",
+								"No"
+							],
+							"default": "No"
+						},
+						"TRIPTerminatesBeforeExpirationDate": {
+							"title": "Terrorism Risk Insurance Program (TRIP) terminates before policy expiration date",
+							"type": "string",
+							"default": "No"
+						},
+						"BOPConditionalExclusionOfTerrorismNuclearBiologicalChemicalDispositionOfAct2002": {
+							"title": "Conditional Exclusion Of Terrorism Nuclear Biological Chemical Disposition Of Act 2002",
+							"type": "string",
+							"default": "No"
+						},
+						"BOPExclAccessOrDisclosurePrsnlAndAdvertisingInjuryOnly": {
+							"title": "Exclusion - Access Or Disclosure Of Confidential Or Personal Information (Personal And Advertising Injury Only)",
+							"type": "string",
+							"default": "No"
+						},
+						"BOPPhotography": {
+							"title": "Photography",
+							"type": "string",
+							"default": "No"
+						},
+						"BOPConditionalExclusionOfTerrorismDispositionOfAct2002": {
+							"title": "Conditiona lExclusion Of Terrorism Disposition Of Act 2002",
+							"type": "string",
+							"default": "No"
+						},
+						"OptionalMedicalCovLimitPerPerson": {
+							"title": "Medical Liability",
+							"type": "string",
+							"default": "5000"
+						},
+						"BOPMineSubsidenceCoverage": {
+							"type": "string",
+							"default": "All Buildings"
+						},
+						"BOPMineSubsidenceCoverageLimit": {
+							"type": "string",
+							"default": "720000"
+						},
+						"Location": {
+							"type": "array",
+							"items": {
+								"properties": {
+									"LocationDetail": {
+										"type": "object",
+										"properties": {
+											"EmployeeDishtyApply": {
+												"title": "Employee Dishonesty Apply",
+												"type": "string",
+												"default": "Yes"
+											},
+											"NumEmployees": {
+												"title": "What is the total no of employees?",
+												"type": "string",
+												"default": "50"
+											},
+											"BOPLocationFireDeptServiceCoverageLimit": {
+												"title": "Fire Department Service Charge",
+												"type": "string",
+												"default": "2500"
+											},
+											"Building": {
+												"type": "array",
+												"items": {
+													"properties": {
+														"BuildingDetail": {
+															"type": "object",
+															"properties": {
+																"BldgCodeEffectivenessGrade": {
+																	"title": "Building Code Effectiveness Grade",
+																	"type": "string",
+																	"enum": [
+																		"1",
+																		"2",
+																		"3",
+																		"4",
+																		"5",
+																		"6",
+																		"7",
+																		"8",
+																		"9",
+																		"10",
+																		"Not Eligible",
+																		"Ungraded"
+																	],
+																	"default": "1"
+																},
+																"BOPOrdinanceOrLawCov2CoverageLimit": {
+																	"title": "Increased Cost of Construction",
+																	"type": "string",
+																	"default": "10000"
+																},
+																"AutomaticSprinklerSystem": {
+																	"title": "Automatic Sprinkler System",
+																	"type": "string",
+																	"enum": [
+																		"Yes",
+																		"No"
+																	],
+																	"default": "Yes"
+																},
+																"DebrisRemovalAdditionalInsurance": {
+																	"type": "object",
+																	"properties": {
+																		"Limit": {
+																			"title": "Additional Debris Removal",
+																			"type": "string",
+																			"default": "10000"
+																		}
+																	}
+																},
+																"BOPTenantsLiabilityLimit": {
+																	"title": "Damage to premises you rented",
+																	"type": "string",
+																	"default": "50000"
+																},
+																"BuildingLimit": {
+																	"title": "Building Limit",
+																	"type": "string",
+																	"default": "70000"
+																},
+																"PropertyType": {
+																	"title": "Property Type",
+																	"type": "string",
+																	"default": "Apartment"
+																},
+																"BldgCodeEffectivenessGradeClass": {
+																	"title": "Community Classification ",
+																	"type": "string",
+																	"enum": [
+																		"Building individually inspected and certified as best grade 1",
+																		"Graded-building constructed before year of community grading",
+																		"Graded-building constructed during or after year of community grading",
+																		"Not GradedBuilding individually inspected and certified as best grade 1",
+																		"Not Graded"
+																	],
+																	"default": "Graded-building constructed before year of community grading"
+																},
+																"RatingBasis": {
+																	"title": "Rating Basis",
+																	"type": "string",
+																	"default": "Replacement Cost"
+																},
+																"MineSubsidenceScheduledCoverageLimit": {
+																	"title": "Mine Subsidence Scheduled CoverageLimit",
+																	"type": "string",
+																	"default": "720000"
+																},
+																"MineSubsidenceCoverage": {
+																	"title": "Mine Subsidence Coverage",
+																	"type": "string",
+																	"default": "All Buildings"
+																},
+																"MineSubsidenceApplies": {
+																	"title": "Mine Subsidence Applies",
+																	"type": "string",
+																	"default": "Yes"
+																},
+																"StructureType": {
+																	"title": "Structure Type",
+																	"type": "string",
+																	"default": "Dwelling"
+																},
+																"OrdinanceOrLawCov2And3CoverageLimit": {
+																	"title": "Ordinance Or Law Cov 2 And 3Coverage Limit",
+																	"type": "string",
+																	"default": "200000"
+																},
+																"OrdinanceOrLawCoverage": {
+																	"title": "Ordinance Or LawCoverage",
+																	"type": "string",
+																	"default": "Coverage 1 with Coverages 2 and 3 Combined"
+																},
+																"Classification": {
+																	"type": "array",
+																	"items": {
+																		"properties": {
+																			"ClassificationDetail": {
+																				"type": "object",
+																				"properties": {
+																					"BOPClassificationOutdoorPropertyCoverageLimit": {
+																						"title": "Outdoor Property ($500 any one plant)",
+																						"type": "string",
+																						"default": "2500"
+																					},
+																					"BOPClassificationValuablePapersCoverageOffLimit": {
+																						"title": "Off Premises",
+																						"type": "string",
+																						"default": "5000"
+																					},
+																					"BOPClassificationBPPTemporarilyInPortableStorageUnitsCoverageLimit": {
+																						"title": "Business Personal Property Temporarily in Portable Storage Units",
+																						"type": "string",
+																						"default": "10000"
+																					},
+																					"FuncBusPerPropValApplies": {
+																						"title": "Functional Business Personal Property Valuation Applies",
+																						"type": "string",
+																						"default": "No"
+																					},
+																					"BusinessIncomeFromSecondaryDependentProperties": {
+																						"title": "Business Income From Secondary Dependent Properties",
+																						"type": "string",
+																						"default": "No"
+																					},
+																					"TotalAnnualGrossSales": {
+																						"title": "Total Annual Gross Sales",
+																						"type": "string",
+																						"default": "1000000"
+																					},
+																					"BOPClassificationAccountsReceivableCoverageLimit": {
+																						"title": "On Premises",
+																						"type": "string",
+																						"default": "10000"
+																					},
+																					"BOPClassificationBusnIncomeDependentPropCoverageLimit": {
+																						"title": "Business Income from Dependent Properties",
+																						"type": "string",
+																						"default": "5000"
+																					},
+																					"ClassDescription": {
+																						"title": "Class Description",
+																						"type": "string",
+																						"default": "AC System or Equip-Dealer or Distbtrs & Install, Srvc or Repair-Office"
+																					},
+																					"ClassCode": {
+																						"title": "Class code",
+																						"type": "string",
+																						"default": "74011",
+																						"enum": [
+																							"50061",
+																							"50081",
+																							"50111",
+																							"50141",
+																							"50171",
+																							"50201",
+																							"50231",
+																							"50261",
+																							"50291",
+																							"50321",
+																							"50333",
+																							"50351",
+																							"50381",
+																							"50391",
+																							"50471",
+																							"50481",
+																							"50501",
+																							"50571",
+																							"50581",
+																							"50641",
+																							"50651",
+																							"50661",
+																							"50671",
+																							"50691",
+																							"50721",
+																							"50741",
+																							"50771",
+																							"50801",
+																							"50811",
+																							"50812",
+																							"50813",
+																							"50815",
+																							"50819",
+																							"50821",
+																							"50901",
+																							"50925",
+																							"50928",
+																							"52114",
+																							"52322",
+																							"52512",
+																							"53127",
+																							"53315",
+																							"53317",
+																							"53983",
+																							"53985",
+																							"53989",
+																							"54116",
+																							"54127",
+																							"54136",
+																							"54216",
+																							"54221",
+																							"54231",
+																							"54241",
+																							"54251",
+																							"54315",
+																							"54321",
+																							"54331",
+																							"54341",
+																							"54351",
+																							"54446",
+																							"54457",
+																							"54467",
+																							"54477",
+																							"54516",
+																							"54606",
+																							"55313",
+																							"55973",
+																							"56113",
+																							"56114",
+																							"56214",
+																							"56311",
+																							"56312",
+																							"56313",
+																							"56319",
+																							"56325",
+																							"56413",
+																							"56613",
+																							"56814",
+																							"56992",
+																							"57121",
+																							"57128",
+																							"57134",
+																							"57155",
+																							"57223",
+																							"57224",
+																							"57326",
+																							"57334",
+																							"57338",
+																							"59116",
+																							"59215",
+																							"59325",
+																							"59425",
+																							"59435",
+																							"59505",
+																							"59526",
+																							"59625",
+																							"59685",
+																							"59695",
+																							"59698",
+																							"59715",
+																							"59906",
+																							"59935",
+																							"59954",
+																							"59955",
+																							"59974",
+																							"59981",
+																							"59982",
+																							"59983",
+																							"59991",
+																							"59992",
+																							"59993",
+																							"59994",
+																							"59995",
+																							"59996",
+																							"59997",
+																							"59998",
+																							"59999",
+																							"71311",
+																							"71332",
+																							"71811",
+																							"71837",
+																							"71842",
+																							"71855",
+																							"71865",
+																							"71877",
+																							"71888",
+																							"71899",
+																							"71912",
+																							"71926",
+																							"71941",
+																							"71952",
+																							"71961",
+																							"71976",
+																							"73905",
+																							"84112",
+																							"9001",
+																							"9011",
+																							"9021",
+																							"9031",
+																							"9041",
+																							"9051",
+																							"9061",
+																							"9071",
+																							"9081",
+																							"9091",
+																							"9101",
+																							"9111",
+																							"9121",
+																							"9131",
+																							"9141",
+																							"9151",
+																							"9161",
+																							"9171",
+																							"9181",
+																							"9191",
+																							"9201",
+																							"9211",
+																							"9221",
+																							"9231",
+																							"9241",
+																							"9251",
+																							"9261",
+																							"9321",
+																							"9331",
+																							"9341",
+																							"9351",
+																							"9361",
+																							"9421",
+																							"9431",
+																							"9441",
+																							"9451",
+																							"9501",
+																							"9521",
+																							"9531",
+																							"9541",
+																							"9611",
+																							"9621",
+																							"9631",
+																							"9641",
+																							"9651",
+																							"9661",
+																							"9671",
+																							"9681",
+																							"9691",
+																							"74011"
+																						]
+																					},
+																					"SquareFootage": {
+																						"title": "Classification Square Footage ",
+																						"type": "string",
+																						"default": "10000"
+																					},
+																					"BOPClassificationValuablePapersCoverageLimit": {
+																						"title": "On Premises",
+																						"type": "string",
+																						"default": "10000"
+																					},
+																					"TerrsmSubLimit": {
+																						"title": "Terrorism BPP Sub Limit",
+																						"type": "string"
+																					},
+																					"BOPClassificationAccountsReceivableCoverageOffLimit": {
+																						"title": "Off Premises",
+																						"type": "string",
+																						"default": "5000"
+																					},
+																					"BusnPrsnlPropLimit": {
+																						"title": "Please enter your Business Personal Property Limit",
+																						"type": "string",
+																						"default": "78000"
+																					},
+																					"BopFunctlBusnPrsnlPropValtnLimit": {
+																						"title": "Total Functional Business Personal Property Valuation Limit",
+																						"type": "string"
+																					}
+																				}
+																			}
+																		}
+																	}
+																},
+																"TerrsmSubLimit": {
+																	"title": "Terrorism BPP Sub Limit",
+																	"type": "string"
+																},
+																"FungiLimit": {
+																	"title": "Fungi Limit - Location ",
+																	"type": "string"
+																},
+																"SeparateAnnualAggregateLimit": {
+																	"title": "Separate Annual Aggregate Limit Applies - Building",
+																	"type": "string",
+																	"default": "No"
+																},
+																"PctOwnerOccupied": {
+																	"title": "Percentage Owner Occupied",
+																	"type": "string",
+																	"default": "Over 10%"
+																},
+																"ConstructionType": {
+																	"title": "Construction Type",
+																	"type": "string",
+																	"enum": [
+																		"Frame Construction",
+																		"Joisted Masonry",
+																		"Non-combustible",
+																		"Masonry Non-combustible",
+																		"Modified Fire-resistive",
+																		"Fire-resistive"
+																	],
+																	"default": "Masonry Non-combustible"
+																},
+																"YearBuilt": {
+																	"title": "Year Built",
+																	"type": "string",
+																	"default": "1979"
+																}
+															}
+														}
+													}
+												}
+											},
+											"BOPLocationOutdoorSignsCoverageLimit": {
+												"title": "Outdoor Signs",
+												"type": "string",
+												"default": "10000"
+											},
+											"WaterBackUpAndSumpOverflow": {
+												"type": "object",
+												"properties": {
+													"BusinessIncomeExtraExpenseAnnualAggregateLimit": {
+														"title": "Business Income / Expense Limit",
+														"type": "string",
+														"default": "5000"
+													},
+													"CoveredPropertyAnnualAggregateLimit": {
+														"title": "Covered Property Annual Aggregate Limit",
+														"type": "string",
+														"default": "5000"
+													},
+													"Limit": {
+														"title": "Water Backup and Sump Overflow Limit",
+														"type": "string",
+														"default": "5000"
+													}
+												}
+											},
+											"AddressLine1": {
+												"title": "AddressLine1",
+												"type": "string"
+											},
+											"AddressLine2": {
+												"title": "AddressLine2",
+												"type": "string"
+											},
+											"State": {
+												"title": "State",
+												"type": "string",
+												"default": "FL",
+												"enum": [
+													"SC",
+													"MI",
+													"PA",
+													"NC",
+													"AL",
+													"MO",
+													"MS",
+													"TN",
+													"IN",
+													"AZ",
+													"MD",
+													"DC",
+													"OH",
+													"CO",
+													"OK",
+													"KS",
+													"NV",
+													"WI",
+													"NM",
+													"IA",
+													"SD",
+													"ID",
+													"UT",
+													"MT",
+													"WY",
+													"ND",
+													"OR",
+													"NE",
+													"DE",
+													"FL"
+												]
+											},
+											"ZipCode": {
+												"title": "ZipCode",
+												"type": "string",
+												"default": "32003"
+											},
+											"RatingTerritory": {
+												"title": "RatingTerritory",
+												"type": "string",
+												"default": "002"
+											},
+											"FireProtectionClassPPC": {
+												"title": "Protection Class ",
+												"type": "string",
+												"enum": [
+													"1",
+													"2",
+													"3",
+													"4",
+													"5",
+													"6",
+													"7",
+													"8",
+													"8B",
+													"9",
+													"10",
+													"1X",
+													"2X",
+													"3X",
+													"4X",
+													"5X",
+													"6X",
+													"7X",
+													"8X",
+													"1Y",
+													"2Y",
+													"3Y",
+													"4Y",
+													"5Y",
+													"6Y",
+													"7Y",
+													"8Y",
+													"10W"
+												],
+												"default": "1"
+											},
+											"WindHailDeductible": {
+												"title": "Wind or Hail Deductible",
+												"type": "string",
+												"enum": [
+													"1%",
+													"2%",
+													"5%",
+													"Not Applicable"
+												],
+												"default": "Not Applicable"
+											},
+											"FungiLimit": {
+												"title": "Fungi Limit - Location ",
+												"type": "string"
+											},
+											"BOPLocationMoneySecuritiesOffPremCoverageLimit": {
+												"title": "Off Premises",
+												"type": "string",
+												"default": "1000"
+											},
+											"SeparateAnnualAggregateLimit": {
+												"title": "Separate Annual Aggregate Limit Applies - Location",
+												"type": "string",
+												"default": "No"
+											},
+											"OptionalDeductible": {
+												"title": "Optional Deductible",
+												"type": "string",
+												"default": "500"
+											},
+											"BOPLocationMoneySecuritiesOnPremCoverageLimit": {
+												"title": "On Premises",
+												"type": "string",
+												"default": "1000"
+											},
+											"City": {
+												"type": "string",
+												"default": "THE VILLAGES"
+											}
+										}
+									}
+								}
+							}
+						},
+						"BOPInterruptionComputerOpsCoverageLimit": {
+							"title": "Interruption of Computer Operations",
+							"type": "string",
+							"default": "10000"
+						},
+						"TRIAExpirationDate": {
+							"title": "Enter current TRIA expiration date",
+							"type": "string",
+							"default": "2020-12-31"
+						},
+						"ChangesLimitedFungiCoverage": {
+							"type": "object",
+							"properties": {
+								"SeparatePremisesLocationsOption": {
+									"title": "Separate Premises or Locations Option ",
+									"type": "string",
+									"default": "No"
+								},
+								"Limit": {
+									"title": "Fungi, Dry Rot and Bacteria",
+									"type": "string",
+									"default": "15000"
+								},
+								"BOPLimitedFungiBacteriaCovBusnIncomeExtraExpenseCoverageNumDays": {
+									"title": "Business Income/Extra Expense Number of Days",
+									"type": "string"
+								}
+							}
+						}
+					}
+				},
+				"OwnerId": {
+					"type": "string",
+					"default": "1"
+				},
+				"ServiceRequestDetail": {
+					"type": "object",
+					"properties": {
+						"ResponseType": {
+							"type": "string",
+							"enum": [
+								"JSON",
+								"XML"
+							],
+							"default": "JSON"
+						},
+						"OwnerId": {
+							"type": "string",
+							"default": "1"
+						},
+						"UserName": {
+							"type": "string",
+							"default": "isorateadmin"
+						},
+						"Token": {
+							"type": "string",
+							"default": "HzhAo4CbF/h3sUqNu9samOpuM/fUjfkVztgESsH7udp80k5yVLm79dKYysDbkulxXUv434aVbgPqr59TTj7RQzRB//HqhOV+Kg7ig72VDD/ofFNP0eMGRzK1wOfvCbR3aKw9qlED61a1lgFAoA2a2n6RQheIHbgBhQtuIoHMn1FE7nDKTBS0KkocOeSUsj8z5zLA8mZnvGmxh4HJbVeqWExdBFyJUz7XJRY9rDW9YV09sOeoJAZddIOJ/Ox3oGX+4u1RH2wEi+vr5YkpgXY1xVRmLdK2SVXrMDedPWZNiqNNjRUUUSq1y4NKyCNxQXjDjiDGofUSvboBuLDE6DT/8oPxVLlKEuu6QNd+Wn2EgxoTfye4Qe71FYzZ6gmgT7Bi09eiWxPkUPcJtrg7KGg23Orp1dqMQWRkgQtjIfQCJapfME56GZbbvXzldsg/xpkz1cUGmko0zdOuDo6rVVSY7l77yj5qBwmKxkV4yJC1b12pie2Yr7xXu7mGPiP19zvahS29HRF5DYYc7sT1GPttRSsZW+9/wrSJiCqoVG0NX9IhHcsN9bAdMn7gzEy4tffqctu1Ix+CpaHNIwia8OelYNDrSVfq7AxSoiQhJjukKOxDcirv00KBIt2SWer42NI5BdfNWDdshrhbme+CEXTh5jdQJUsvnc63erI+Ae0S9noTMBrklNX3N0KrQWc2YZOOyM+LpxwNumqsQuJZjepi8eFgOkfH7dJ2DEcpLAWbSXHAhaP4vBzhGH7ZKia8Zae78bGP72tt3SMc+TgHVbOTcfrzHKz2gGY78EgFmVSzk8yC4A2iI2xyXe7BkX5EfEC2TpbN5pOrbu+gYJWwhutLosJunuvW+cv908fUrBvzOI6ttcS4GqL0su2NawM7pEUBYDvphyZfG99mILy2irt9I4i6LNeyot3EaQ2JG7XdwYx6EyN7cCSruqAMrHdhC4pGXw/27HNlrG8XDi0yv1Lceoi6LNeyot3EaQ2JG7XdwYz2KWF3J+4j5qGwMJQxZQqB5HXuAheyF1X15SFHpFGSUXOHSWYev+OmEAYnkK6tOPtx9gErwTLkhbTD49Ub7omytie2WHF3eq3h0GFuCs3t2g=="
+						},
+						"BrowserIp": {
+							"type": "string",
+							"default": "192.168.3.253"
+						},
+						"ServiceRequestVersion": {
+							"type": "string",
+							"default": "1.0"
+						},
+						"ServiceResponseVersion": {
+							"type": "string",
+							"default": "1.0"
+						},
+						"RegionCode": {
+							"type": "string",
+							"default": "US"
+						},
+						"LanguageCode": {
+							"type": "string",
+							"default": "en"
+						}
+					}
+				}
+			}
+		},
+		"Rating_Success_Response": {
+			"type": "object",
+			"required": [
+				"RequestStatus",
+				"Policy"
+			],
+			"properties": {
+				"messageDetail": {
+					"type": "object"
+				},
+				"RequestStatus": {
+					"type": "string"
+				},
+				"Policy": {
+					"type": "object"
+				}
+			}
+		},
+		"errorModel": {
+			"type": "object",
+			"required": [
+				"RequestStatus",
+				"MessageDetail"
+			],
+			"properties": {
+				"RequestStatus": {
+					"type": "string"
+				},
+				"MessageDetail": {
+					"type": "object",
+					"properties": {
+						"MessageCode": {
+							"type": "string"
+						},
+						"MessageType": {
+							"type": "string"
+						},
+						"UserMessage": {
+							"type": "string"
+						},
+						"MessageLevel": {
+							"type": "string"
+						},
+						"MessageSeverity": {
+							"type": "string"
+						},
+						"MessageList": {
+							"type": "object",
+							"properties": {
+								"Message": {
+									"type": "array",
+									"items": {
+										"type": "string"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

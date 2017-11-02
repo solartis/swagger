@@ -50,7 +50,7 @@
 						"required": true,
 						"type": "string",
 						"format": "string",
-						"default": "ISOGLRate"
+						"default": "ISOGLQuote"
 					},
 					{
 						"name": "Rating Request",
@@ -100,11 +100,7 @@
 						},
 						"EventName": {
 							"type": "string",
-							"default": "ISOGLRate"
-						},
-						"ISOERCVersion": {
-							"type": "string",
-							"default": "RC_GL_AK_06012015_V01"
+							"default": "ISOGLQuote"
 						},
 						"EffectiveDate": {
 							"type": "string",
@@ -114,9 +110,21 @@
 							"type": "string",
 							"default": "2016-06-01"
 						},
+						LastRateLookUpDate:{
+								"type": "string",
+							  "default": "2017-08-01"
+						},  
 						"InsuredName": {
 							"type": "string",
 							"default": "John Smith"
+						},
+						"AddressLine1": {
+							"type": "string",
+							"default": ""
+						},
+						"AddressLine2": {
+							"type": "string",
+							"default": ""
 						},
 						"City": {
 							"type": "string",
@@ -140,83 +148,59 @@
 						},
 						"GLCoverageExtensionCoverageAProductRestorationExpenseManualPremium": {
 							"type": "string",
-							"default": "10"
+							"default": "0"
 						},
 						"GLEmployeeBenefitsLiabCovClaimsMadeManualPremium": {
 							"type": "string",
-							"default": "10"
+							"default": "0"
 						},
 						"GLElectronicDataLiabilityCoverageFormManualPremium": {
 							"type": "string",
-							"default": "10"
+							"default": "0"
 						},
 						"GLEmploymentRelatedPracticesExclusionCoverageManualPremium": {
 							"type": "string",
-							"default": "10"
+							"default": "0"
 						},
 						"GLExtendedReportingPeriodEndorsementForElectronicDataLiabilityCoverageManualPremium": {
 							"type": "string",
-							"default": "10"
+							"default": "0"
 						},
 						"GLExtendedReportingPeriodEndtForEmpBenefitsLiabCovManualPremium": {
 							"type": "string",
-							"default": "10"
+							"default": "0"
 						},
 						"GLExclusionProductTamperingManualPremium": {
 							"type": "string",
-							"default": "10"
+							"default": "0"
 						},
 						"GLExclusionProductReplacementRepairOrRepurchaseManualPremium": {
 							"type": "string",
-							"default": "10"
+							"default": "0"
 						},
 						"GLExclusionOfNewlyAcquiredOrganizationsAsInsuredsManualPremium": {
 							"type": "string",
-							"default": "10"
+							"default": "0"
 						},
 						"GLLiquorLiabManualPremium": {
 							"type": "string",
-							"default": "10"
+							"default": "0"
 						},
 						"GLSupplementalExtendedReportingPeriodEndtLiquorLiabManualPremium": {
 							"type": "string",
-							"default": "10"
+							"default": "0"
+						},
+					  "GeneralAggregateLimit": {
+							"type": "string",
+							"default": "200,000 CSL"
+						},
+						"PremOpsProdsEachOccurrenceLimit": {
+							"type": "string",
+							"default": "100,000 CSL"
 						},
 						"PremOpsProdsCoverageForm": {
 							"type": "string",
 							"default": "Occurrence"
-						},
-						"PremOpsBIDeductible": {
-							"type": "string",
-							"default": "250 Per Claim"
-						},
-						"PremOpsPDDeductible": {
-							"type": "string",
-							"default": "250 Per Claim"
-						},
-						"PremOpsBIPDDeductible": {
-							"type": "string",
-							"default": "250 Per Claim"
-						},
-						"ProdsCompldOpsBIDeductible": {
-							"type": "string",
-							"default": "250 Per Claim"
-						},
-						"ProdsCompldOpsPDDeductible": {
-							"type": "string",
-							"default": "250 Per Claim"
-						},
-						"ProdsCompldOpsBIPDDeductible": {
-							"type": "string",
-							"default": "250 Per Claim"
-						},
-						"GeneralAggregateLimit": {
-							"type": "string",
-							"default": "2,000,000 CSL"
-						},
-						"PremOpsProdsEachOccurrenceLimit": {
-							"type": "string",
-							"default": "1,000,000 CSL"
 						},
 						"PackageModFactor": {
 							"type": "string",
@@ -224,12 +208,187 @@
 						},
 						"MedPayCoverageLimit": {
 							"type": "string",
-							"default": "5000"
+							"default": "10,000"
 						},
 						"GeneralLiabilityAmndmtOfLiquorLiabExcl": {
 							"type": "string",
-							"default": "No"
+							"default": "Yes"
 						},
+						"RetroactiveDateApplies": 
+						{
+						  "type": "string",
+							"default": "Yes"
+						  },
+            "PremOpsProdsRetroactiveDate": 
+            {
+              "type": "string",
+							"default": "2017-08-01"
+              },
+            "CommercialPesticideApplicators": 
+            {
+              "type": "string",
+							"default": "Yes"
+              },
+            "GLStructuralPesticideApplicators_BIEachOccurrenceLimit": 
+            {
+              "type": "string",
+							"default": "500,000"
+              },
+            "GLStructuralPesticideApplicators_PDEachOccurrenceLimit": 
+            {
+              "type": "string",
+							"default": "500,000"
+              },
+            "InspectionAgenciesPerformBoilerPressureVesselInspection": 
+            {
+              "type": "string",
+							"default": "Yes"
+              },
+            "GLInspectionAgenciesBoilerAndPressureVesselUnits_BIEachOccurrenceLimit": 
+            {
+              "type": "string",
+							"default": "500,000"
+              },
+            "GLInspectionAgenciesBoilerAndPressureVesselUnits_PDEachOccurrenceLimit": 
+            {
+              "type": "string",
+							"default": "100,000"
+              },
+            "GLElevatorsContractorsAndInspectorsChangesCancellationAndSplitLimitsOfInsurance": 
+            {
+              "type": "string",
+							"default": "Yes"
+              },
+            "GLElevatorsContractorsAndInspectorsChangesCancellationAndSplitLimitsOfInsurance_BodilyInjuryLimit": 
+            {
+              "type": "string",
+							"default": "500,000"
+              },
+            "GLElevatorsContractorsAndInspectorsChangesCancellationAndSplitLimitsOfInsurance_PropertyDamageLimit": 
+            {
+              "type": "string",
+							"default": "500,000"
+              },
+            "GovernmentalSubdivision": 
+            {
+              "type": "string",
+							"default": "Yes"
+              },
+            "GLExclusionOfCertifiedActsOfNuclearBiologicalChemicalActsTerrorismCapOnLossesFromCertifiedActs": 
+            {
+              "type": "string",
+							"default": "No"
+              },
+            "GLConditionalExclusionOfTerrorismNuclearBiologicalChemicalDispositionOfAct2002": 
+            {
+              "type": "string",
+							"default": "Yes"
+              },
+            "GLExclusionOfTerrorismNuclearBiologicalChemicalTerrorism": 
+            {
+              "type": "string",
+							"default": "Yes"
+              },
+            "GLCertifiedActsOfTerrorismAggregateLimitCapOnLossesFromCertifiedActsOfTerrorismPremOps": 
+            {
+              "type": "string",
+							"default": "No"
+              },
+            "GLConditionalLimitationOfCoverageTerrorismSublimitAnnualAggregateTerrorismAct2002": 
+            {
+              "type": "string",
+							"default": "No"
+              },
+            "GLLimitationOfCoverageForTerrorismSubLimitAnnualAggregateBasis": 
+            { 
+              "type": "string",
+							"default": "Yes"
+              },
+            "PolicyInEffectTRIA": 
+            {
+              "type": "string",
+							"default": "Yes"
+              },
+            "TerrorismCoverage": 
+            {
+              "type": "string",
+							"default": "Yes"
+              },
+            "GLCertifiedActsOfTerrorismAggregateLimitCapOnLossesFromCertifiedActsOfTerrorismPremOps_AggregateLimit": 
+            {
+              "type": "string",
+							"default": "100,000"
+              },
+            "GLConditionalLimitationOfCoverageTerrorismSublimitAnnualAggregateTerrorismAct2002_AggregateLimit": 
+            {
+              "type": "string",
+							"default": "100,000"
+              },
+            "GLLimitationOfCoverageForTerrorismSubLimitAnnualAggregateBasis_AggregateLimit": 
+            {
+              "type": "string",
+							"default": "200,000"
+              },
+            "TRIAExtended": 
+            {
+              "type": "string",
+							"default": "No"
+              },
+            "TRIAExpirationDate": 
+            {
+              "type": "string",
+							"default": "2018-08-01"
+              },
+            "ISOERCVersion": 
+            {
+              "type": "string",
+							"default": "RC_GL_AK_06012015_V01"
+              },
+            "PerPersonLimit": 
+            {
+              "type": "string",
+							"default": "100,000"
+              },
+            "PremOpsProdsEachOccurrenceLimitGovernmentalSubdivision": 
+            {
+              "type": "string",
+							"default": "100,000"
+              },
+            "GeneralAggregateLimitGovernmentalSubdivision": 
+            {
+              "type": "string",
+							"default": "200,000"
+              },
+            "PerPersonLimitOtherThanPD": 
+            {
+              "type": "string",
+							"default": "100,000"
+              },
+            "PDLimitPerOccurrence": 
+            {
+              "type": "string",
+							"default": "100,000"
+              },
+            "ProdsCompldOpsAggregateLimitGovernmentalSubdivision": 
+            {
+              "type": "string",
+							"default": "100,000"
+              },
+            "GLCertifiedActsOfTerrorismAggregateLimitCapOnLossesFromCertifiedActsOfTerrorismProdsCompldOps": 
+            {
+              "type": "string",
+							"default": "Yes"
+              },
+            "GLCertifiedActsOfTerrorismAggregateLimitCapOnLossesFromCertifiedActsOfTerrorismProdsCompldOps_AggregateLimit": 
+            {
+              "type": "string",
+							"default": "100,000"
+              },
+            "ProdsCompldOpsAggregateLimit": 
+            {
+              "type": "string",
+							"default": "200,000 CSL"
+              },
 						"Location": {
 							"type": "array",
 							"items": {
@@ -244,26 +403,125 @@
 														"ClassificationDetail": {
 															"type": "object",
 															"properties": {
-																"PremOpsELPOverride": {
-																	"type": "string",
-																	"default": "0"
-																},
 																"PremOpsExposure": {
 																	"type": "string",
-																	"default": "15000"
+																	"default": "300000"
 																},
 																"ClassCode": {
 																	"type": "string",
-																	"default": "10015"
+																	"default": "10042"
+																},
+																"PremOpsELPOverride": {
+																	"type": "string",
+																	"default": "2"
+																},
+																"GeneralLiabilityExclCovCMedPayLocClassLvl": {
+																	"type": "string",
+																	"default": "No"
 																},
 																"PremOpsAddlCovFactor": {
 																	"type": "string",
 																	"default": "1"
 																},
-																"GeneralLiabilityExclCovCMedPayLocClassLvl": {
-																	"type": "string",
-																	"default": "No"
-																}
+																"PremOpsIncrdLimitFactorOverride": {
+																   "type": "string",
+																	"default": "2"
+																},
+                                "PremOpsIncrdLimitTableAssignmentOverride": {
+                                  "type": "string",
+																	"default": "N/A"
+                                },
+                                "PremOpsBIPDDeductibleFactorOverride": {
+                                  "type": "string",
+																	"default": "0"
+                                },
+                                "PremOpsBIDeductibleFactorOverride": {
+                                  "type": "string",
+																	"default": "0"
+                                },
+                                "PremOpsPDDeductibleFactorOverride": {
+                                  "type": "string",
+																	"default": "0"
+                                },
+                                "Contractor": {
+                                  "type": "string",
+																	"default": "Yes"
+                                },
+                                "GLElevatorsContractors_BodilyInjuryLimit": {
+                                  "type": "string",
+																	"default": "500,000"
+                                },
+                                "GLElevatorsContractors_PropertyDamageLimit": { "type": "string",
+																	"default": "500,000"
+                                },
+                                "ElevatorContractorsClassCategory": {
+                                  "type": "string",
+																	"default": "Class I"
+                                },
+                              "PremOpsBIDeductible": {
+                    							"type": "string",
+                    							"default": "No Deductible"
+                    						},
+                    					"PremOpsPDDeductible": {
+                    							"type": "string",
+                    							"default": "1,000 Per Claim"
+                    						},
+                    					"PremOpsBIPDDeductible": {
+                    							"type": "string",
+                    							"default": "No Deductible"
+                    						},
+                              "SprayPainting": {
+                                "type": "string",
+                    						"default": "No"
+                                },
+                              "ProdsCompldOpsExposure": {
+                                "type": "string",
+                    						"default": "0"
+                                },
+                              "ProdsCompldOpsELPOverride": {
+                                "type": "string",
+                    						"default": "3"
+                                },
+                              "ProdsCompldOpsAddlCovFactor": {
+                                "type": "string",
+                    						"default": "10"
+                                },
+                              "ProdsCompldOpsBIDeductible": {
+                  							"type": "string",
+                  							"default": "250 Per Claim"
+                  						},
+                  						"ProdsCompldOpsPDDeductible": {
+                  							"type": "string",
+                  							"default": "250 Per Claim"
+                  						},
+                  						"ProdsCompldOpsBIPDDeductible": {
+                  							"type": "string",
+                  							"default": "No Deductible"
+                  						},
+                              "ProdsCompldOpsBIDeductibleFactorOverride": 
+                              {
+                                "type": "string",
+                  							"default": "0"
+                                },
+                              "ProdsCompldOpsPDDeductibleFactorOverride": 
+                              {
+                                "type": "string",
+                  							"default": "0"
+                                },
+                              "ProdsCompldOpsBIPDDeductibleFactorOverride": 
+                              {
+                                "type": "string",
+                  							"default": "0"
+                              },
+                              "ProdsCompldOpsIncrdLimitFactorOverride": 
+                              {
+                                "type": "string",
+                  							"default": "20"
+                              },
+                              "ProdsCompldOpsIncrdLimitTableAssignmentOverride": {
+                                "type": "string",
+                  							"default": "A"
+                                }
 															}
 														}
 													}
@@ -281,6 +539,10 @@
 												"type": "string",
 												"default": "Adak"
 											},
+										  "County": {
+										    "type": "string",
+												"default": "Maricopa County"
+										    },
 											"ZipCode": {
 												"type": "string",
 												"default": "99546"
@@ -292,7 +554,27 @@
 											"PremisesOperationsTerritory": {
 												"type": "string",
 												"default": "001"
-											}
+											},
+											"GLExclCovCMedPayLocClassLvl": 
+											{
+											  "type": "string",
+												"default": "Yes"
+											 },
+                      "CertifiedActsOfTerrorismTerr": 
+                      {
+                        "type": "string",
+												"default": "Yes"
+                      },
+                      "CertifiedActsOfTerrorismManhattan": 
+                      {
+                        "type": "string",
+												"default": "Yes"
+                      },
+                      "ProdsCompldOpsTerritory": 
+                      {
+                        "type": "string",
+												"default": "999"
+                      }
 										}
 									}
 								}

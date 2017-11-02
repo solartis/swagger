@@ -1,0 +1,644 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"version": "1.0.0",
+		"title": "Solartis Rate API for ISO CUP",
+		"description": "To get rate for Commercial Umbrella from Solartis Rate API with ISO ERC.Umbrella insurance is extra liability insurance. It is designed to help protect you from major claims and lawsuits and as a result it helps protect your assets and your future. It generally is written over various primary liability policies, such as the business auto policy (BAP), commercial general liability (CGL) policy, watercraft and aircraft liability policies, and employers liability coverage."
+	},
+	"host": "isocupkbv4-2.solartis.net",
+	"basePath": "/DroolsV4_2/DroolsService",
+	"schemes": [
+		"https"
+	],
+	"produces": [
+		"application/json"
+	],
+	"consumes": [
+		"application/json"
+	],
+	"paths": {
+		"/FireEventV2": {
+			"post": {
+				"description": "Gets Rate for Commercial Umbrella Policy based on ISO ERC",
+				"operationId": "getRates",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"name": "Token",
+						"in": "header",
+						"description": "Authentication Token",
+						"required": true,
+						"type": "string",
+						"format": "string",
+						"default": "HzhAo4CbF/h3sUqNu9samOpuM/fUjfkVztgESsH7udp80k5yVLm79dKYysDbkulxijt7MrjSLR/8ldtLSbvw6NZOKZsOVOceFhBMIvQMIGu9XpolBeZCCyX0Mo3EGxgHVm24YeE78M0I5lbGRltrJQBkCw8eFdR2BCiRmqdX/WNLhvltmzFzpKeybx4xIGlaf9T0L9gzYlzmCN0QMGch5GfbJHzbKdKYMvpZmUg8+OReaKE0eJVCsE0rcuJn1DXb/n7zvljW7FJUfWOat7o0QUAajvRdGSP9KUHV0cnQcWQRjecN5Ab3yrijlOSvSUT5FIiaKKWG6CuW4BqOD4iV94e1+ZflIXic3/BnehPQLF2kr4+ZeZJumz2QiZ6wpPnYx2k0ahjSDhwis9pYllVn46k3HV/Mx8nIDhCf6IxtnVTMIGX5cKUpu2Vuh1aMdcWIhHJiudrQRefSxdXgvx4h4KCFi3BjqKJCWWRh9iM6qZLaYNcv5ueOMsK4upqU1bx0K/QH78iXjE6G6yO2qjlx5oO/AGqeWOc3/vP5tHir5ZfvPznWcQ1azdgCpT9NHNr8bpsBrs92UHKeOf9LNt4TGQeYuCa/XcfDUTOSWzIRyq9AvE95e/fzO4+TBapV0enBhAD2yAN3XwIhmz7OSIk5bEeHthWFiAXEpBL4c6nPMzx1BO1e/tJJqVeGQzGFCCzy43q6En9krxalqGeZkM2Q5wh095uf3bvoaItHMfXAfqapIekUhIe6C4vgzg62uvkbi2M+La25H6ZwgNYSXSgG7wGBNdRlNebXBMfzGf/ZFKvQu9Bc5A4GoYWZPV1NDkkAjcQh7jtqsD5xtacc5s92Pb9MH2JkeEk/oZ1M+8OpdD9O4MRXadArbjjcAVsBRmQyRIiZDY4ut+qxw8OEJ0PrAk3d32saoiHXZaIEyWweWtit83ZxrBG6ZQL3qbX+wwgroY9TJOd0OatXTEhdZ6karN4u8ywywJ9oZK2WdSAtD6G4L1rJ0Q0ybb5WCPGnJILNJrjRIQpliQOwdaGjMRW+nj/E7BcaVM0RxxhrUz6Fb0e7NnHMzTrNK9lPihJQXZcdQNEn8oXP2RrFKl2EbrEz2A22=="
+					},
+					{
+						"name": "Content-Type",
+						"in": "header",
+						"description": "Content Type",
+						"required": true,
+						"type": "string",
+						"format": "string",
+						"default": "application/json"
+					},
+					{
+						"name": "EventName",
+						"in": "header",
+						"description": "EventName",
+						"required": true,
+						"type": "string",
+						"format": "string",
+						"default": "ISOCUPRate"
+					},
+					{
+						"name": "Rating Request",
+						"in": "body",
+						"description": "For rating request",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/Rating_Request"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"schema": {
+							"$ref": "#/definitions/Rating_Success_Response"
+						}
+					},
+					"default": {
+						"description": "unexpected error",
+						"schema": {
+							"$ref": "#/definitions/errorModel"
+						}
+					}
+				}
+			}
+		}
+	},
+	"definitions": {
+		"Rating_Request": {
+			"type": "object",
+			"properties": {
+				"EndClientUserUniqueSessionId": {
+					"type": "string",
+					"default": "Uniquesession"
+				},
+				"Policy": {
+					"type": "object",
+					"properties": {
+						"ProductNumber": {
+							"type": "string",
+							"default": "ISOCUP"
+						},
+						"ProductVerNumber": {
+							"type": "string",
+							"default": "ISO_CUP_V1"
+						},
+						"EventName": {
+							"type": "string",
+							"default": "ISOCUPRate"
+						},
+						"ISOERCVersion": {
+							"type": "string",
+							"default": "RC_CU_WI_03012016_V01"
+						},
+						"ISOCWVersion": {
+							"type": "string",
+							"default": ""
+						},
+						"EffectiveDate": {
+							"type": "string",
+							"default": "2016-03-01"
+						},
+						"ExpirationDate": {
+							"type": "string",
+							"default": "2017-03-01"
+						},
+						"InsuredName": {
+							"type": "string",
+							"default": "John Smith"
+						},
+						"AddressLine1": {
+							"type": "string",
+							"default": "American Consul General"
+						},
+						"AddressLine2": {
+							"type": "string",
+							"default": "7100 Athens Place"
+						},
+						"City": {
+							"type": "string",
+							"default": "Ashippun"
+						},
+						"County": {
+							"type": "string",
+							"default": "Dodge County"
+						},
+						"State": {
+							"type": "string",
+							"default": "WI"
+						},
+						"ZipCode": {
+							"type": "string",
+							"default": "53003"
+						},
+						"Limit": {
+							"type": "string",
+							"default": "5,000,000"
+						},
+						"PercentCommercialAuto": {
+							"type": "string",
+							"default": "3%"
+						},
+						"PercentGeneralLiability": {
+							"type": "string",
+							"default": "5%"
+						},
+						"PercentAircraft": {
+							"type": "string",
+							"default": "8%"
+						},
+						"PercentGarage": {
+							"type": "string",
+							"default": "7%"
+						},
+						"PercentLiquor": {
+							"type": "string",
+							"default": "25%"
+						},
+						"PercentOther": {
+							"type": "string",
+							"default": "20%"
+						},
+						"PercentWatercraft": {
+							"type": "string",
+							"default": "1%"
+						},
+						"PercentEmployersLiability": {
+							"type": "string",
+							"default": "11%"
+						},
+						"PercentBOP": {
+							"type": "string",
+							"default": "5%"
+						},
+						"ExcessLiabilityCoverageManualPremium": {
+							"type": "string",
+							"default": "4200"
+						},
+						"GeneralLiability": {
+							"type": "array",
+							"items": {
+								"properties": {
+									"GeneralLiabilityDetail": {
+										"type": "object",
+										"properties": {
+											"Carrier": {
+												"type": "string",
+												"default": "Solartis CUP"
+											},
+											"UnderlyingPolicyNumber": {
+												"type": "string",
+												"default": "POL1562385422"
+											},
+											"UnderlyingPolicyEffectiveDate": {
+												"type": "string",
+												"default": "2017-05-12"
+											},
+											"UnderlyingPolicyExpirationDate": {
+												"type": "string",
+												"default": "2019-05-12"
+											},
+											"UnderlyingHiredAndNonOwnedAutoPremium": {
+												"type": "string",
+												"default": "300"
+											},
+											"LiabilityPremiumPremisesTable1": {
+												"type": "string",
+												"default": "500"
+											},
+											"LiabilityPremiumPremisesTable2": {
+												"type": "string",
+												"default": "800"
+											},
+											"LiabilityPremiumPremisesTable3": {
+												"type": "string",
+												"default": "850"
+											},
+											"LiabilityPremiumProductsTableA": {
+												"type": "string",
+												"default": "450"
+											},
+											"LiabilityPremiumProductsTableB": {
+												"type": "string",
+												"default": "400"
+											},
+											"LiabilityPremiumProductsTableC": {
+												"type": "string",
+												"default": "650"
+											}
+										}
+									}
+								}
+							}
+						},
+						"Aircraft": {
+							"type": "array",
+							"items": {
+								"properties": {
+									"AircraftDetail": {
+										"type": "object",
+										"properties": {
+											"Carrier": {
+												"type": "string",
+												"default": "Solartis CUP"
+											},
+											"UnderlyingPolicyNumber": {
+												"type": "string",
+												"default": "POL1566685477"
+											},
+											"UnderlyingPolicyEffectiveDate": {
+												"type": "string",
+												"default": "2017-05-12"
+											},
+											"UnderlyingPolicyExpirationDate": {
+												"type": "string",
+												"default": "2019-05-12"
+											},
+											"UnderlyingLiabilityPremiumAircraft": {
+												"type": "string",
+												"default": "600"
+											}
+										}
+									}
+								}
+							}
+						},
+						"CommercialAuto": {
+							"type": "array",
+							"items": {
+								"properties": {
+									"CommercialAutoDetail": {
+										"type": "object",
+										"properties": {
+											"Carrier": {
+												"type": "string",
+												"default": "Solartis CUP"
+											},
+											"UnderlyingPolicyNumber": {
+												"type": "string",
+												"default": "POL1544385477"
+											},
+											"UnderlyingPolicyEffectiveDate": {
+												"type": "string",
+												"default": "2017-05-12"
+											},
+											"UnderlyingPolicyExpirationDate": {
+												"type": "string",
+												"default": "2019-05-12"
+											},
+											"LiabilityPremiumPrivatePassengerTypes": {
+												"type": "string",
+												"default": "250"
+											},
+											"LiabilityPremiumLightTrucks": {
+												"type": "string",
+												"default": "200"
+											},
+											"LiabilityPremiumMediumTrucks": {
+												"type": "string",
+												"default": "250"
+											},
+											"LiabilityPremiumHeavyTrucks": {
+												"type": "string",
+												"default": "150"
+											},
+											"LiabilityPremiumExtraHeavyTrucks": {
+												"type": "string",
+												"default": "350"
+											},
+											"LiabilityPremiumExtraHeavyTruckTractors": {
+												"type": "string",
+												"default": "250"
+											},
+											"LiabilityPremiumTrailers": {
+												"type": "string",
+												"default": "300"
+											},
+											"LiabilityPremiumZoneRated": {
+												"type": "string",
+												"default": "250"
+											},
+											"LiabilityPremiumPublicTransportation": {
+												"type": "string",
+												"default": "650"
+											},
+											"LiabilityPremiumOther": {
+												"type": "string",
+												"default": "500"
+											},
+											"LiabilityPremiumTruckTractors": {
+												"type": "string",
+												"default": "200"
+											}
+										}
+									}
+								}
+							}
+						},
+						"Garage": {
+							"type": "array",
+							"items": {
+								"properties": {
+									"GarageDetail": {
+										"type": "object",
+										"properties": {
+											"Carrier": {
+												"type": "string",
+												"default": "Solartis CUP"
+											},
+											"UnderlyingPolicyNumber": {
+												"type": "string",
+												"default": "POL1562385477"
+											},
+											"UnderlyingPolicyEffectiveDate": {
+												"type": "string",
+												"default": "2017-05-12"
+											},
+											"UnderlyingPolicyExpirationDate": {
+												"type": "string",
+												"default": "2019-05-12"
+											},
+											"UnderlyingLiabilityPremiumGarage": {
+												"type": "string",
+												"default": "200"
+											}
+										}
+									}
+								}
+							}
+						},
+						"Liquor": {
+							"type": "array",
+							"items": {
+								"properties": {
+									"LiquorDetail": {
+										"type": "object",
+										"properties": {
+											"Carrier": {
+												"type": "string",
+												"default": "Solartis CUP"
+											},
+											"UnderlyingPolicyNumber": {
+												"type": "string",
+												"default": "POL1562385488"
+											},
+											"UnderlyingPolicyEffectiveDate": {
+												"type": "string",
+												"default": "2017-05-12"
+											},
+											"UnderlyingPolicyExpirationDate": {
+												"type": "string",
+												"default": "2019-05-12"
+											},
+											"UnderlyingLiabilityPremiumLiquor": {
+												"type": "string",
+												"default": "350"
+											}
+										}
+									}
+								}
+							}
+						},
+						"Other": {
+							"type": "array",
+							"items": {
+								"properties": {
+									"OtherDetail": {
+										"type": "object",
+										"properties": {
+											"Carrier": {
+												"type": "string",
+												"default": "Solartis CUP"
+											},
+											"UnderlyingPolicyNumber": {
+												"type": "string",
+												"default": "POL2552385488"
+											},
+											"UnderlyingPolicyEffectiveDate": {
+												"type": "string",
+												"default": "2017-05-12"
+											},
+											"UnderlyingPolicyExpirationDate": {
+												"type": "string",
+												"default": "2019-05-12"
+											},
+											"UnderlyingLiabilityPremiumOther": {
+												"type": "string",
+												"default": "500"
+											}
+										}
+									}
+								}
+							}
+						},
+						"Watercraft": {
+							"type": "array",
+							"items": {
+								"properties": {
+									"WatercraftDetail": {
+										"type": "object",
+										"properties": {
+											"Carrier": {
+												"type": "string",
+												"default": "Solartis CUP"
+											},
+											"UnderlyingPolicyNumber": {
+												"type": "string",
+												"default": "POL1262385488"
+											},
+											"UnderlyingPolicyEffectiveDate": {
+												"type": "string",
+												"default": "2017-05-12"
+											},
+											"UnderlyingPolicyExpirationDate": {
+												"type": "string",
+												"default": "2019-05-12"
+											},
+											"UnderlyingLiabilityPremiumWatercraft": {
+												"type": "string",
+												"default": "550"
+											}
+										}
+									}
+								}
+							}
+						},
+						"EmployersLiability": {
+							"type": "array",
+							"items": {
+								"properties": {
+									"EmployersLiabilityDetail": {
+										"type": "object",
+										"properties": {
+											"Carrier": {
+												"type": "string",
+												"default": "Solartis CUP"
+											},
+											"UnderlyingPolicyNumber": {
+												"type": "string",
+												"default": "POL1542385488"
+											},
+											"UnderlyingPolicyEffectiveDate": {
+												"type": "string",
+												"default": "2017-05-12"
+											},
+											"UnderlyingPolicyExpirationDate": {
+												"type": "string",
+												"default": "2019-05-12"
+											},
+											"UnderlyingLiabilityPremiumEmployersLiability": {
+												"type": "string",
+												"default": "420"
+											}
+										}
+									}
+								}
+							}
+						},
+						"BOP": {
+							"type": "array",
+							"items": {
+								"properties": {
+									"BOPDetail": {
+										"type": "object",
+										"properties": {
+											"Carrier": {
+												"type": "string",
+												"default": "Solartis CUP"
+											},
+											"UnderlyingPolicyNumber": {
+												"type": "string",
+												"default": "POL1562385499"
+											},
+											"UnderlyingPolicyEffectiveDate": {
+												"type": "string",
+												"default": "2017-05-12"
+											},
+											"UnderlyingPolicyExpirationDate": {
+												"type": "string",
+												"default": "2019-05-12"
+											},
+											"UnderlyingLiabilityPremiumBOP": {
+												"type": "string",
+												"default": "420"
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				},
+				"OwnerId": {
+					"type": "string",
+					"default": "1"
+				},
+				"ServiceRequestDetail": {
+					"type": "object",
+					"properties": {
+						"ResponseType": {
+							"type": "string",
+							"enum": [
+								"JSON",
+								"XML"
+							],
+							"default": "JSON"
+						},
+						"OwnerId": {
+							"type": "string",
+							"default": "1"
+						},
+						"UserName": {
+							"type": "string",
+							"default": "isorateadmin"
+						},
+						"Token": {
+							"type": "string",
+							"default": "HzhAo4CbF/h3sUqNu9samOpuM/fUjfkVztgESsH7udp80k5yVLm79dKYysDbkulxijt7MrjSLR/8ldtLSbvw6NZOKZsOVOceFhBMIvQMIGu9XpolBeZCCyX0Mo3EGxgHVm24YeE78M0I5lbGRltrJQBkCw8eFdR2BCiRmqdX/WNLhvltmzFzpKeybx4xIGlaf9T0L9gzYlzmCN0QMGch5GfbJHzbKdKYMvpZmUg8+OReaKE0eJVCsE0rcuJn1DXb/n7zvljW7FJUfWOat7o0QUAajvRdGSP9KUHV0cnQcWQRjecN5Ab3yrijlOSvSUT5FIiaKKWG6CuW4BqOD4iV94e1+ZflIXic3/BnehPQLF2kr4+ZeZJumz2QiZ6wpPnYx2k0ahjSDhwis9pYllVn46k3HV/Mx8nIDhCf6IxtnVTMIGX5cKUpu2Vuh1aMdcWIhHJiudrQRefSxdXgvx4h4KCFi3BjqKJCWWRh9iM6qZLaYNcv5ueOMsK4upqU1bx0K/QH78iXjE6G6yO2qjlx5oO/AGqeWOc3/vP5tHir5ZfvPznWcQ1azdgCpT9NHNr8bpsBrs92UHKeOf9LNt4TGQeYuCa/XcfDUTOSWzIRyq9AvE95e/fzO4+TBapV0enBhAD2yAN3XwIhmz7OSIk5bEeHthWFiAXEpBL4c6nPMzx1BO1e/tJJqVeGQzGFCCzy43q6En9krxalqGeZkM2Q5wh095uf3bvoaItHMfXAfqapIekUhIe6C4vgzg62uvkbi2M+La25H6ZwgNYSXSgG7wGBNdRlNebXBMfzGf/ZFKvQu9Bc5A4GoYWZPV1NDkkAjcQh7jtqsD5xtacc5s92Pb9MH2JkeEk/oZ1M+8OpdD9O4MRXadArbjjcAVsBRmQyRIiZDY4ut+qxw8OEJ0PrAk3d32saoiHXZaIEyWweWtit83ZxrBG6ZQL3qbX+wwgroY9TJOd0OatXTEhdZ6karN4u8ywywJ9oZK2WdSAtD6G4L1rJ0Q0ybb5WCPGnJILNJrjRIQpliQOwdaGjMRW+nj/E7BcaVM0RxxhrUz6Fb0e7NnHMzTrNK9lPihJQXZcdQNEn8oXP2RrFKl2EbrEz2A22=="
+						},
+						"BrowserIp": {
+							"type": "string",
+							"default": "127.0.0.1"
+						},
+						"ServiceRequestVersion": {
+							"type": "string",
+							"default": "1.0"
+						}
+					}
+				}
+			}
+		},
+		"Rating_Success_Response": {
+			"type": "object",
+			"properties": {
+				"messageDetail": {
+					"type": "object"
+				},
+				"ResponseStatus": {
+					"type": "string"
+				},
+				"Policy": {
+					"type": "object"
+				}
+			}
+		},
+		"errorModel": {
+			"type": "object",
+			"required": [
+				"RequestStatus",
+				"MessageDetail"
+			],
+			"properties": {
+				"RequestStatus": {
+					"type": "string"
+				},
+				"MessageDetail": {
+					"type": "object",
+					"properties": {
+						"MessageCode": {
+							"type": "string"
+						},
+						"MessageType": {
+							"type": "string"
+						},
+						"UserMessage": {
+							"type": "string"
+						},
+						"MessageLevel": {
+							"type": "string"
+						},
+						"MessageSeverity": {
+							"type": "string"
+						},
+						"MessageList": {
+							"type": "object",
+							"properties": {
+								"Message": {
+									"type": "array",
+									"items": {
+										"type": "string"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

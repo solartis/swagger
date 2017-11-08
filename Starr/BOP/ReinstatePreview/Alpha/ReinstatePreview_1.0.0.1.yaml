@@ -41,14 +41,6 @@ paths:
           type: string
           format: string
           default: "ReinstatePreview"
-          
-        - name: EventVersion
-          in: header
-          description: Version of the event to be invoked
-          required: true
-          type: string
-          format: string
-          default: "1.0.0.1"
         
         - name: Reinstate_Request
           in: body
@@ -134,10 +126,6 @@ definitions:
             title: "Event Name"
             type: string
             default: "ReinstatePreview"
-          EventVersion:
-            title: "Event Version"
-            type: string
-            default: "1.0.0.1"
           PolicyNumber:
             title: "Policy Number"
             type: string

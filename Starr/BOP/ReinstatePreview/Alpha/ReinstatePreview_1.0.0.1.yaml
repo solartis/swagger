@@ -1,7 +1,7 @@
 swagger: '2.0'
 info:
   version: "1.0.0.1"
-  title: STARR Business Owners Property - Reinstate Preview API
+  title: STARR Business Owners Policy - Reinstate Preview API
   description: The reinstate API is used for  putting back the insurance policy back in action after a lapse.
 host: starrbop.alpha.solartis.net
 basePath: /DroolsV6/DroolsService

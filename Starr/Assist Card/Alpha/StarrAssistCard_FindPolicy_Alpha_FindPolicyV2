@@ -122,10 +122,8 @@ definitions:
         default: "FindPolicyV2"
       AgencyName:
         type: string
-        default: Starr Agency
       AgentName:
         type: string
-        default: Starr Agent
       BatchNumber:
         type: string
       PolicyNumber:
@@ -151,30 +149,23 @@ definitions:
         type: string
       PolicyEffectiveDateForm:
         type: string
-        format: date
       PolicyEffectiveDateTo:
         type: string
-        format: date
       ReturnDateFrom:
         type: string
-        format: date
       ReturnDateTo:
         type: string
-        format: date
       CreatedDateFrom:
         type: string
-        format: date
       CreatedDateTo:
         type: string
-        format: date
       Count:
         type: integer
         default: 10
       Offset:
         type: string
         default: "0"
-      Email:
-        type: string
+
   FindPolicy_Success_Response:
     type: object
     required:

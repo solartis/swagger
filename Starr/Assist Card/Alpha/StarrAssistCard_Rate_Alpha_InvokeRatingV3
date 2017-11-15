@@ -131,22 +131,14 @@ definitions:
           - EventName
           - ProductNumber
           - ProductVerNumber
-          - ProductID
-          - ProductVerID
           - TravelerList
         properties:
-          ProductID:
-            type: string
-            default: "619"
-          ProductVerID:
-            type: string
-            default: "706"
           ProductNumber:
             type: string
             default: "ILT"
           ProductVerNumber:
             type: string
-            default: "1.0"
+            default: "2.0"
           AgentID:
             type: string
             default: "62"

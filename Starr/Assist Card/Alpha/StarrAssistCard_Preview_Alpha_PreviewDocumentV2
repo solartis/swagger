@@ -1,0 +1,201 @@
+swagger: '2.0'
+info:
+  version: 'PreviewDocumentV2'
+  title: Assist Card - Preview Document API
+  description: |
+    This API provides the option to view the specimen of Policy PDF.
+  
+    Features:
+    1. Provides preivew document of Poliy PDF
+    
+  contact:
+    name: Solartis Support
+    email: solartis_assist_support@solartis.com
+
+
+host: scistarrsakbv2.solartis.net
+basePath: /DroolsV4_2/DroolsService
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /FireEventV2:
+    post:
+      description: Preview Document is used to view specimen of Policy PDF
+      operationId: PreviewDocument
+      produces:
+        - application/json
+      parameters:
+        - name: Token
+          in: header
+          description: Authentication Token
+          required: true
+          type: string
+          format: string
+          default: >-
+            iMgdpnp436QjuYQ2tn9HU+SgJDsyFW8kDSoLHGwadQKpl/wr4yKoVMjkSfJB/FKqjFqrLmebBUqmHM/dVAMv+DDPaXOt/GY7mjWZXGT2z0ArRvyiojuQz8LrhVYihPok4SNftJWQa7rNrqjh5PWJcVbnbLVHo4e9WNp/4X9Sai/5LrKZ1J99H71yIi/9rXsAKhCk5lGzFaO3SXLwJluxpsUM+5MiljDi4NFM+/K0KPeUOuL8R2FZD9RobXBVvR7xPdH1oZ71jBgOmg59/75ugVgJ/35PRXWc1Emi9SPqQHHEmsD4AoH2xj45UGMY3hjx0sz/uABSHKxNwA8DwPTBS7jaN2XqKLCayPsSWHVH04XW+ZeDaw1iRLb/0euQfXT97fiPQgPQSjtDvxif6cFXZQX/BHYIcAUjZtdcuv098quieEPaIWri6DUFEIzf/uRM7R4itGHIU7/B0cMwwQNFhxjtMVAgSBq7Kw4a8kf5s+2XOip5XV3KeT5U4u8HX6/xdKxhpP8gLng6PoGj0MEnSugWYicqO81QJH2UISAaI3iDgNxzCSFmsAChwURz5g/RRmHqLknkxHh4lvFfjQGlTIfdNwW+CwHbg0EQFt/c/4M6CofYIAQVzElcVRih/j88U7EqGr8v1mrTPel1sBXl+auuXSlODNRoeDVogcqA1Fr9504oM1kbCEmrVIqjUxUmK9a8CWsZEjIYiNuY0KncVKuuXSlODNRoeDVogcqA1Foa9LkTsAlC3ItSy+gbt0NdLaJdXbWS8ClBkbddTRCbeWRNMZNDq/vS1JTb8FKCl5OsniK5MZQnMbZdqNHlqbv2WOw2j+jUU0BThnDgEX6XEjSt7SoS1Xd6+F4DyPRZsQbD7XGhOWwTgbKALHDL6LviA3K4dHjVKHv1xOd8L284LsWKpOWqHf8xYqRIiCHZgQEtSRZCdfQPbklkXKGNaTjD
+        - name: EventName
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: PreviewDocumentV2
+        - name: PreviewDocument
+          in: body
+          description: Preview Document
+          required: true
+          schema:
+            $ref: '#/definitions/PreviewDocument_Request'
+      responses:
+        '200':
+          description: Success Response
+          schema:
+            $ref: '#/definitions/PreviewDocument_Success_Response'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/errorModel'
+            
+definitions:
+  PreviewDocument_Request:
+    type: object
+    required:
+      - ServiceRequestDetail
+      - CustomerInformation
+    properties:
+      EndClientUserUniqueSessionId:
+        type: string
+      EndClientUserBrowserSessionId:
+        type: string
+      EndClientUserBrowserInformation:
+        type: string
+      PaaSClientIPAddress:
+        type: string
+      ClientUniqueRequestID:
+        type: string
+      ServiceRequestDetail:
+        type: object
+        required:
+          - OwnerId
+          - RegionCode
+          - Token
+          - ServiceRequestVersion
+          - ServiceResponseVersion
+          - ResponseType
+        properties:
+          ServiceRequestVersion:
+            type: string
+            default: '1.0'
+          ServiceResponseVersion:
+            type: string
+            default: '1.0'
+          OwnerId:
+            type: string
+            default: '15'
+            enum: ["15"]
+          ResponseType:
+            type: string
+            enum:
+              - JSON
+              - XML
+            default: JSON
+          RegionCode:
+            type: string
+            default: US
+          Token:
+            type: string
+            default: >-
+              iMgdpnp436QjuYQ2tn9HU+SgJDsyFW8kDSoLHGwadQKpl/wr4yKoVMjkSfJB/FKqjFqrLmebBUqmHM/dVAMv+DDPaXOt/GY7mjWZXGT2z0ArRvyiojuQz8LrhVYihPok4SNftJWQa7rNrqjh5PWJcVbnbLVHo4e9WNp/4X9Sai/5LrKZ1J99H71yIi/9rXsAKhCk5lGzFaO3SXLwJluxpsUM+5MiljDi4NFM+/K0KPeUOuL8R2FZD9RobXBVvR7xPdH1oZ71jBgOmg59/75ugVgJ/35PRXWc1Emi9SPqQHHEmsD4AoH2xj45UGMY3hjx0sz/uABSHKxNwA8DwPTBS7jaN2XqKLCayPsSWHVH04XW+ZeDaw1iRLb/0euQfXT97fiPQgPQSjtDvxif6cFXZQX/BHYIcAUjZtdcuv098quieEPaIWri6DUFEIzf/uRM7R4itGHIU7/B0cMwwQNFhxjtMVAgSBq7Kw4a8kf5s+2XOip5XV3KeT5U4u8HX6/xdKxhpP8gLng6PoGj0MEnSugWYicqO81QJH2UISAaI3iDgNxzCSFmsAChwURz5g/RRmHqLknkxHh4lvFfjQGlTIfdNwW+CwHbg0EQFt/c/4M6CofYIAQVzElcVRih/j88U7EqGr8v1mrTPel1sBXl+auuXSlODNRoeDVogcqA1Fr9504oM1kbCEmrVIqjUxUmK9a8CWsZEjIYiNuY0KncVKuuXSlODNRoeDVogcqA1Foa9LkTsAlC3ItSy+gbt0NdLaJdXbWS8ClBkbddTRCbeWRNMZNDq/vS1JTb8FKCl5OsniK5MZQnMbZdqNHlqbv2WOw2j+jUU0BThnDgEX6XEjSt7SoS1Xd6+F4DyPRZsQbD7XGhOWwTgbKALHDL6LviA3K4dHjVKHv1xOd8L284LsWKpOWqHf8xYqRIiCHZgQEtSRZCdfQPbklkXKGNaTjD
+          UserName:
+            type: string
+            default: travelagent
+          LanguageCode:
+            type: string
+            default: en
+          BrowserIp:
+            type: string
+      CustomerInformation:
+        type: object
+        required:
+          - OwnerId
+          - EventName
+          - PlanCode
+          - PlanName
+          - StateCode
+          - StateName
+          - PolicyEffectiveDate
+        properties:
+          OwnerId:
+            type: string
+            default: '15'
+            enum: ["15"]
+          EventName:
+            type: string
+            default: PreviewDocumentV2
+            enum: ["PreviewDocumentV2"]
+          PlanCode:
+            type: string
+            enum: ["1", "2", "3", "4", "9", "10", "11"]
+          PlanName:
+            type: string
+            enum:
+              - Air Ticket Protector
+              - Classic Plus
+              - Premier
+              - Premier Annual
+              - Basic Annual
+              - Medical Only Annual
+              - Renter's Collision
+          StateCode:
+            type: string
+          StateName:
+            type: string
+          PolicyEffectiveDate:
+            type: string
+            
+  PreviewDocument_Success_Response:
+    type: object
+    required:
+      - DocumentInfo
+    properties:
+      DocumentInfo:
+        type: array
+        items:
+          properties:
+            DocumentName:
+              type: string
+            DocumentURL:
+              type: string
+         
+  errorModel:
+    type: object
+    required:
+      - RequestStatus
+      - MessageDetail
+    properties:
+      RequestStatus:
+        type: string
+      MessageDetail:
+        type: object
+        properties:
+          MessageCode:
+            type: string
+          MessageType:
+            type: string
+          UserMessage:
+            type: string
+          MessageLevel:
+            type: string
+          MessageSeverity:
+            type: string
+          MessageList:
+            type: object
+            properties:
+              Message:
+                type: array
+                items:
+                  type: string

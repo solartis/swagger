@@ -24,7 +24,7 @@ info:
 host: sademokb.uat.solartis.net
 basePath: /DroolsV4_2/DroolsService
 schemes:
-  - http
+  - https
 consumes:
   - application/json
 produces:

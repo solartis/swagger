@@ -27,8 +27,10 @@ schemes:
   - https
 consumes:
   - application/json
+  - application/xml
 produces:
   - application/json
+  - application/xml
 paths:
   /FireEvent:
     post:
@@ -36,6 +38,7 @@ paths:
       operationId: Pay_Issue
       produces:
         - application/json
+        - application/xml
       parameters:
         - name: Token
           in: header

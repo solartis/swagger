@@ -1,13 +1,28 @@
 swagger: '2.0'
 info:
-  version: '1.0.0'
-  title: Business Owners Policy (BOP) - API
-  description: BOP Worflow API(s)
+  version: '2.0'
+  title: Individual Leisure Travel - Quote API
+  description: |
+    Create Quote for the Travel plans. 
+    
+    New Features:
+    1. Added CFAR Premium even if CFAR is not opted
+    2. Similary added TripCancellation Premium even if CFAR is opted
+    3. Added coverage information to the response
+  
+    Features:
+    1. Accept input as JSON request with Plan information
+    2. Respond back with premium information
+    3. Respond with erorr message incase of invalid request or failure scenarios
+    4. Added coverage information along with response
+    5. Enhaced Rate API to respond with proper error messages
+    
   contact:
     name: Solartis Support
-    email: info@solartis.net
-host: preprodstarrbopkb.solartis.net
-basePath: /DroolsV4_1/DroolsService
+    email: info@solartis.com
+    
+host: sademokb.uat.solartis.net
+basePath: /DroolsV4_2/DroolsService
 schemes:
   - http
 consumes:

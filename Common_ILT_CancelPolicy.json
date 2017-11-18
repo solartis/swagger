@@ -1,9 +1,9 @@
 swagger: '2.0'
 info:
   version: '2.0'
-  title: Individual Leisure Travel - Issue Policy API
+  title: Individual Leisure Travel - Cancel Policy API
   description: |
-    Issue Policy for the Travel plans. 
+    Cancel Policy for the Travel plans. 
     
     New Features:
     1. Added CFAR Premium even if CFAR is not opted

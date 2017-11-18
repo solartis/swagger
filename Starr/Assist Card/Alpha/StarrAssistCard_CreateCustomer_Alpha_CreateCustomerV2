@@ -41,7 +41,7 @@ paths:
           required: true
           type: string
           format: string
-          default: "CreateCustomer"
+          default: "CreateCustomerV2"
         - name: CreateCustomer
           in: body
           description: Save customer/traveler details
@@ -142,7 +142,7 @@ definitions:
             default: "1.0"
           ProducerCode:
             type: string
-            default: "86201"
+            default: "1558"
           OwnerId:
             type: string
             default: "15"
@@ -192,7 +192,7 @@ definitions:
             default: "New Business"
           EventName:
             type: string
-            default: "CreateCustomer"
+            default: "CreateCustomerV2"
           TravelerList:
             type: array
             items:

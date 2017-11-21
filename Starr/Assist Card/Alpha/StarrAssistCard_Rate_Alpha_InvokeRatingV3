@@ -159,7 +159,10 @@ definitions:
             default: "User"
           ProducerCode:
             type: string
-            default: "86201"
+            default: "3391"
+          MGACode:
+            type: string
+            default: "0129"
           OwnerId:
             type: string
             default: "15"

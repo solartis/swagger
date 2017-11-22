@@ -145,7 +145,7 @@ definitions:
             default: "3391"
           MGACode:
             type: string
-            default: "0129"
+            default: "1558"
           OwnerId:
             type: string
             default: "15"
@@ -159,7 +159,7 @@ definitions:
             enum: ["1","2","3","4","9","10","11"]
           PlanType:
             type: string
-            enum: ["Single Trip","Annual","Renter's Collision"]
+            enum: ["Single Trip","Annual","Renter's Collision","Air Ticket"]
           DepartureDate:
             type: string
           ReturnDate:

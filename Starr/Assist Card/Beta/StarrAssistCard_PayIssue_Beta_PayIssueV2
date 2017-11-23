@@ -183,13 +183,6 @@ definitions:
             type: string
           ExpiryYear:
             type: string
-            enum:
-              - '2018'
-              - '2019'
-              - '2020'
-              - '2021'
-              - '2022'
-              - '2023'
           PayerName:
             type: string
           PayerAddress1:
@@ -200,6 +193,7 @@ definitions:
             type: string
           PayerState:
             type: string
+            description: Provide Payer State Code
           PayerCountry:
             type: string
             default: US

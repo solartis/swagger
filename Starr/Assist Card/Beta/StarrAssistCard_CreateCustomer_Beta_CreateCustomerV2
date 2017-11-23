@@ -182,10 +182,10 @@ definitions:
             type: string
           RentalLimit:
             type: string
-            default: "35000"
+            enum: ["35000"]
           NumberOfRentalCars:
             type: string
-            default: "1"
+            enum: ["1"]
           StateCode:
             type: string
           StateName:

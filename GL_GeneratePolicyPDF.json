@@ -3,7 +3,7 @@
     "info": {
         "version": "2.0",
         "title": "General Liability - GeneratePolicyPDF API",
-        "description": "GeneratePolicyPDF API accepts the List of forms  as input along with\nPremium information and issues the Issuance PDF\n\nFeatures:\n1. Accept input as JSON request with Plan information\n2. Respond back with premium information\n3. Respond with erorr message incase of invalid request or failure scenarios\n4. Added coverage information along with response\n5. Enhaced Rate API to respond with proper error messages\n",
+        "description": "GeneratePolicyPDF API accepts the List of forms  as input along with\nPremium information and issues the Issuance PDF\n\nFeatures:\n1. Accept input as JSON request with Forms and Premium information\n2. Respond with erorr message incase of invalid request or failure scenarios\n3. Generates Document based on the forms selected\n",
         "contact": {
             "name": "Solartis Support",
             "email": "info@solartis.com"

@@ -1,0 +1,286 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "2.0",
+        "title": "General Liability - GeneratePolicyPDF API",
+        "description": "GeneratePolicyPDF API accepts the List of forms  as input along with\nPremium information and issues the Issuance PDF\n\nFeatures:\n1. Accept input as JSON request with Plan information\n2. Respond back with premium information\n3. Respond with erorr message incase of invalid request or failure scenarios\n4. Added coverage information along with response\n5. Enhaced Rate API to respond with proper error messages\n",
+        "contact": {
+            "name": "Solartis Support",
+            "email": "info@solartis.com"
+        }
+    },
+    "host": "starrsgl.rc.solartis.net",
+    "basePath": "/DroolsV6/DroolsService",
+    "schemes": [
+        "https"
+    ],
+    "consumes": [
+        "application/json",
+        "application/xml"
+    ],
+    "produces": [
+        "application/json",
+        "application/xml"
+    ],
+    "paths": {
+        "/FireEvent": {
+            "post": {
+                "description": "This API issues the PDF for specified Forms List",
+                "operationId": "GeneratePolicyPDF",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Token",
+                        "in": "header",
+                        "description": "Authentication Token",
+                        "required": true,
+                        "type": "string",
+                        "format": "string",
+                        "default": "EySuBJRPdaKYIPkH6PG4/vnyGLhb/haYvMiZAGZgmlBJLHfvy3Sj+LSNNv66eEASKuiZ+7ssBlsCCbco5yu8jnhY5aqnkZYLEzIT57BGZjl1xF38IjA4fHbiZDzMZLucREebYEFwibeKlAt/04PcQwgy5in8onoPTUyLNhYVOpdnojrKX10MODxG/uxXozMpg/PP2i2wPKjqordlOSjsHImqCEkpER+zafc5Kx5ZUyjwrfNKfHgbLz2tSfdnVBOWnOWMgaFaCGtkT6hERJsHtviBmXL4I+MaLogE8yUixpprm7BqqBFHvFrKvTl+Ov1A9osYLnIKacTb9vPV359ZvznIxTYolDZUWyx7+IivL6j7pNUw8nwaKSEyEQkP/s/edeQC+nx9Aaf04RoxJve1Y1YTJIDAcVKKvfgk1xDrEoP2WdKVETJK46i/OjSt5Nt0GVeWr4TMBNechcU8Ag/5x8DeZOcmRDgpT8T6Mtqi9ytLHi9lSFRKrs36LPRh2lauJQvVeMKSYo6+GBWl8zbYmkqiM8olDiLO2p4NOk4/FMLEGa9jSfy9rE19xpV5LkWDLnSAu0sHh18IOK3Mk1ufwMPY8FnONkeiUOQa1BLnnmB7UHzTKmsI/KwvM9Kx8HgOrBxIVgT7itqOiGKp32BwLkB20+WlrxnMGoq/Q7f/nzYNr5JsmWyGyGfImJX4ZjAp7forD9UG7EgcL2/I3Jo3DlO6NkB+AIZnm7gExjPyBl3Hky2tF/9bfhrYne529zOih/iH+BbzALjXqFNLVg4kAd/8N+6Oi11QDzE0xcb6l7iXOip5XV3KeT5U4u8HX6/xmJ5zePPgR52q3vvWRSlcGo+KlQwXhD+UmmgEhJ34pVvXiekjGZcVp0vIXfGX2f1P+Lj9sdQCOCQxit+zsTjpagXoxp0VCyB/gXDDMcADxZ2oyz2gCUbxghY0lhT9Lv19O5xdn3KjbZiw6zKDBiHSUmd5mrmWs6dpi2SKFSYm0RJEdnsz33tquAmrMKR7cRFpLHL8RV1mDMGIw5ogV9t48TfsHqSmHFBk7aLZEcs1febaO+kFLgFNpTA/GW85v7Ypb+8JADD0liuWZwkzlGMXmycai28L6NVwEEg9WJ57MwdkejljWhp0feVJ20xNCdpTwl516yxSSxoGEX6TjtiQ9mc2RoCIE4MzOJhVFFfMoYxkwFg6UaYaSjFWXYH/TFiGknn/I/EgXhgmIoOFUgl1h4d5bRBabLuWMBev3XxQ8yT6W0ycufn7qI3nWDRKLZ2zoKJzdNV8RlwPEoohkdnDjMqleG239c6gUFQ7RtIaosUf3QiuYTul2kdtcHY+kgwEKxZcm9hrBKp+KJG39SJ8a8EIeyO+cku/NhPieMqQW0runoUnZJZK/OuqrnBEKIMBunno8uDcG0180W9kkYEjPENHhbxmQntLBUq9rmHbWvD4+RV2DOz/KwHx4pNcQqrd0AhPtRS1gBcxXL9e4XbJPbgDRJHUuXrTTxgGLPRN7wohh7Qa6iV4EyYJ2FmftBKBzMvEWCJt6asvwIiHVGqwPIoNBoZNcaXtEJ8buqBCewAnsj/t0PVZZv9S4g5ZQIn4B2mXTnbjAds0NmWk+oErPGYZQAKeND/OQ4Gm+1SqN3ARVqyBG0fX8nMgvs1sTYw42kmNoMF+X9ecC954ycdUvLwrGX7b3wc7phd/MvXQ8oVgHqxiPs9NUAlXsANVavRjsZzuEEMz9FhHRAPfhoarqzZeyYKyalGh1aMgyPNy8fBDU3zsXIU9TQqZGP0T5LL9RWfZPl7y3m3THQzVpb6HsoFNCCgs0yspbBNfNvfzTXQYXYIRcRgBz9D4Qz+/t/QUA4oUmYGGz4FHpPEFrzuZ91dA0lTVmsqCJjsMH1lTSwdA6im3SM75VqP9JPQdda/wJrHMWcKK6NMe4lPWL4dtrIW08MeEpQgaKa2ZG/tSn+JCvUdRfTsuhbEYQy2WJfOwJ3vFwoq/WUYzJRzJWTNwHehHmGl4j0YghvXT4V9O6qrngwr3+UHbS2E4cEwtO1kN9KFl6cz7Wiaypbfc0kwxDFHledl62Ds1056guai6qKyA0Qcp1Qpu4AOnBXfKPNHQXLtoQjAAfy72NQ32Z/7JGABjL0KOU9hk5yKDh+McwmUqPZA5AqFYx0hUBsAzXfPFS4MEhmBtspnyhi7vWxrBYPEuorew8LCnez2ZNeTsE7Dlcg0Qzk0HECN+A6oo0wxdhXj2RaVkYhVstdyP3mjuwzrk4HG2lYsr3FUFr0uOvSS3KJSNvaSmXky+Y9xy6beKaujK4f4Ym0W8LOKlot77SViNj2OsABw+weVZND9fxtvKTwDAoxdAE5VvbksjQYqLWSCvsI1ynzXuqfXOIwqHhLm8+n+RgQC/U83Ofx1r9c+syD+yr393rz/DW0T2otWL+e9JeGcDdSbwNVwaLSULmNxjSFpFSbh0TYdjUUqTah+KVvA5A5v+4NZ/YGw/sgfs5ts3umOSj/Nfosew13d+LlexQ2oBtq/QAvh7j1/O+82rw7WhtS674UJibiIv9nVCniiyaCDiHWjMApXNZiF0SH5rSDFc+QwQSbII0B7iAXRCbiXlgCCMkcGcrYKG4DRd3EIeMScVMtyKYj67jAYhwADV84qGXZwnX11yYp8fzkRILPxylhfrH1mnROHTfca0sCwqc/Dlr9wVQ8MM0EM3EvAGOnOyuJcm3XLvPhHiXD1ZrW0fkupvT7P+jKcvNJl9qPRoNG+7Tab0E5ngY/5yzzqmrd7GY0By0TE+1IydmNSLwq+/w2GbSVLY1ZH3b8UyRLlJH+q6oPRCucO2sawRLBzjJCB7MK1hqATqi5wkoLXkI+YbDP8qPlb28VSossFBftxHqnn+Z9G6GMwGw5yH/BZL7XvMpksaKEy3NMaVRLLk7O+BgFBQfQ88LFvd9sTv9lpujdmrvhPnL66TFyG1sapgA9YD2heO667x6CieWCee3vFJNc46zCyheVT1ZgU+xDHZLo0UkeTvRGklDRIZ587spE3KXgjkwkJNWe6NmtFI+iB5bZIS2VU4z5RuSuEzhgxr+WRbD/hNw891C74K+QNEGyCsDhBV2PNuRAasJp5cE79NnPg5uuUNAPAtxGUigCxZaqC7QC4iGrPn2CG/eH/Ej8f36warZPzI8j4EY6A/IsCbVuY7FUPEypgaCSmOH45K3y/qRRta6FZq+3lV0xYEAo4FHUni4LyHap3EatdLirM4L0VXPXmel2ZzsrmF2V5PW42br+6nIjK5/syUBz4PDpLAWOA6U9H4T6ipL3j1CeGi7b6YXZLHjbT2OrYxq3EyNHs4ndztrFEZ9a0Hui5QtC5K17KJHUaUvYdvaOEKdgYhWeDtIMQI1jx0ooOENsG86uex9tgcPoghnujwcsAD6DslRUlD0JW59/qt0lHiw+/vF4u7ldARHtBq8PrI1BVXu8WinM3MDOt0mYg2gqMKVNel7tOFdB9nxi76lvKjFTlRRSc5acd68d/w+PxCdOiAIdLVHpKh9p9GQ5BLPpCHjdcMEpKudd9QhnNr+Tg="
+                    },
+                    {
+                        "name": "RequestModel",
+                        "in": "body",
+                        "description": "Generate Policy PDF",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/RequestModel"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success Response",
+                        "schema": {
+                            "$ref": "#/definitions/ResponseModel"
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/errorModel"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "RequestModel": {
+            "type": "object",
+            "required": [
+                "ServiceRequestDetail"
+            ],
+            "properties": {
+                "ServiceRequestDetail": {
+                    "type": "object",
+                    "required": [
+                        "OwnerId",
+                        "RegionCode",
+                        "Token",
+                        "ServiceRequestVersion",
+                        "ServiceResponseVersion",
+                        "ResponseType"
+                    ],
+                    "properties": {
+                        "ServiceRequestVersion": {
+                            "type": "string",
+                            "default": "1.0"
+                        },
+                        "ServiceResponseVersion": {
+                            "type": "string",
+                            "default": "1.0"
+                        },
+                        "OwnerId": {
+                            "type": "string",
+                            "default": "30"
+                        },
+                        "ResponseType": {
+                            "type": "string",
+                            "enum": [
+                                "JSON",
+                                "XML"
+                            ],
+                            "default": "JSON"
+                        },
+                        "RegionCode": {
+                            "type": "string",
+                            "default": "US"
+                        },
+                        "Token": {
+                            "type": "string",
+                            "default": "EySuBJRPdaKYIPkH6PG4/vnyGLhb/haYvMiZAGZgmlBJLHfvy3Sj+LSNNv66eEASKuiZ+7ssBlsCCbco5yu8jnhY5aqnkZYLEzIT57BGZjl1xF38IjA4fHbiZDzMZLucREebYEFwibeKlAt/04PcQwgy5in8onoPTUyLNhYVOpdnojrKX10MODxG/uxXozMpg/PP2i2wPKjqordlOSjsHImqCEkpER+zafc5Kx5ZUyjwrfNKfHgbLz2tSfdnVBOWnOWMgaFaCGtkT6hERJsHtviBmXL4I+MaLogE8yUixpprm7BqqBFHvFrKvTl+Ov1A9osYLnIKacTb9vPV359ZvznIxTYolDZUWyx7+IivL6j7pNUw8nwaKSEyEQkP/s/edeQC+nx9Aaf04RoxJve1Y1YTJIDAcVKKvfgk1xDrEoP2WdKVETJK46i/OjSt5Nt0GVeWr4TMBNechcU8Ag/5x8DeZOcmRDgpT8T6Mtqi9ytLHi9lSFRKrs36LPRh2lauJQvVeMKSYo6+GBWl8zbYmkqiM8olDiLO2p4NOk4/FMLEGa9jSfy9rE19xpV5LkWDLnSAu0sHh18IOK3Mk1ufwMPY8FnONkeiUOQa1BLnnmB7UHzTKmsI/KwvM9Kx8HgOrBxIVgT7itqOiGKp32BwLkB20+WlrxnMGoq/Q7f/nzYNr5JsmWyGyGfImJX4ZjAp7forD9UG7EgcL2/I3Jo3DlO6NkB+AIZnm7gExjPyBl3Hky2tF/9bfhrYne529zOih/iH+BbzALjXqFNLVg4kAd/8N+6Oi11QDzE0xcb6l7iXOip5XV3KeT5U4u8HX6/xmJ5zePPgR52q3vvWRSlcGo+KlQwXhD+UmmgEhJ34pVvXiekjGZcVp0vIXfGX2f1P+Lj9sdQCOCQxit+zsTjpagXoxp0VCyB/gXDDMcADxZ2oyz2gCUbxghY0lhT9Lv19O5xdn3KjbZiw6zKDBiHSUmd5mrmWs6dpi2SKFSYm0RJEdnsz33tquAmrMKR7cRFpLHL8RV1mDMGIw5ogV9t48TfsHqSmHFBk7aLZEcs1febaO+kFLgFNpTA/GW85v7Ypb+8JADD0liuWZwkzlGMXmycai28L6NVwEEg9WJ57MwdkejljWhp0feVJ20xNCdpTwl516yxSSxoGEX6TjtiQ9mc2RoCIE4MzOJhVFFfMoYxkwFg6UaYaSjFWXYH/TFiGknn/I/EgXhgmIoOFUgl1h4d5bRBabLuWMBev3XxQ8yT6W0ycufn7qI3nWDRKLZ2zoKJzdNV8RlwPEoohkdnDjMqleG239c6gUFQ7RtIaosUf3QiuYTul2kdtcHY+kgwEKxZcm9hrBKp+KJG39SJ8a8EIeyO+cku/NhPieMqQW0runoUnZJZK/OuqrnBEKIMBunno8uDcG0180W9kkYEjPENHhbxmQntLBUq9rmHbWvD4+RV2DOz/KwHx4pNcQqrd0AhPtRS1gBcxXL9e4XbJPbgDRJHUuXrTTxgGLPRN7wohh7Qa6iV4EyYJ2FmftBKBzMvEWCJt6asvwIiHVGqwPIoNBoZNcaXtEJ8buqBCewAnsj/t0PVZZv9S4g5ZQIn4B2mXTnbjAds0NmWk+oErPGYZQAKeND/OQ4Gm+1SqN3ARVqyBG0fX8nMgvs1sTYw42kmNoMF+X9ecC954ycdUvLwrGX7b3wc7phd/MvXQ8oVgHqxiPs9NUAlXsANVavRjsZzuEEMz9FhHRAPfhoarqzZeyYKyalGh1aMgyPNy8fBDU3zsXIU9TQqZGP0T5LL9RWfZPl7y3m3THQzVpb6HsoFNCCgs0yspbBNfNvfzTXQYXYIRcRgBz9D4Qz+/t/QUA4oUmYGGz4FHpPEFrzuZ91dA0lTVmsqCJjsMH1lTSwdA6im3SM75VqP9JPQdda/wJrHMWcKK6NMe4lPWL4dtrIW08MeEpQgaKa2ZG/tSn+JCvUdRfTsuhbEYQy2WJfOwJ3vFwoq/WUYzJRzJWTNwHehHmGl4j0YghvXT4V9O6qrngwr3+UHbS2E4cEwtO1kN9KFl6cz7Wiaypbfc0kwxDFHledl62Ds1056guai6qKyA0Qcp1Qpu4AOnBXfKPNHQXLtoQjAAfy72NQ32Z/7JGABjL0KOU9hk5yKDh+McwmUqPZA5AqFYx0hUBsAzXfPFS4MEhmBtspnyhi7vWxrBYPEuorew8LCnez2ZNeTsE7Dlcg0Qzk0HECN+A6oo0wxdhXj2RaVkYhVstdyP3mjuwzrk4HG2lYsr3FUFr0uOvSS3KJSNvaSmXky+Y9xy6beKaujK4f4Ym0W8LOKlot77SViNj2OsABw+weVZND9fxtvKTwDAoxdAE5VvbksjQYqLWSCvsI1ynzXuqfXOIwqHhLm8+n+RgQC/U83Ofx1r9c+syD+yr393rz/DW0T2otWL+e9JeGcDdSbwNVwaLSULmNxjSFpFSbh0TYdjUUqTah+KVvA5A5v+4NZ/YGw/sgfs5ts3umOSj/Nfosew13d+LlexQ2oBtq/QAvh7j1/O+82rw7WhtS674UJibiIv9nVCniiyaCDiHWjMApXNZiF0SH5rSDFc+QwQSbII0B7iAXRCbiXlgCCMkcGcrYKG4DRd3EIeMScVMtyKYj67jAYhwADV84qGXZwnX11yYp8fzkRILPxylhfrH1mnROHTfca0sCwqc/Dlr9wVQ8MM0EM3EvAGOnOyuJcm3XLvPhHiXD1ZrW0fkupvT7P+jKcvNJl9qPRoNG+7Tab0E5ngY/5yzzqmrd7GY0By0TE+1IydmNSLwq+/w2GbSVLY1ZH3b8UyRLlJH+q6oPRCucO2sawRLBzjJCB7MK1hqATqi5wkoLXkI+YbDP8qPlb28VSossFBftxHqnn+Z9G6GMwGw5yH/BZL7XvMpksaKEy3NMaVRLLk7O+BgFBQfQ88LFvd9sTv9lpujdmrvhPnL66TFyG1sapgA9YD2heO667x6CieWCee3vFJNc46zCyheVT1ZgU+xDHZLo0UkeTvRGklDRIZ587spE3KXgjkwkJNWe6NmtFI+iB5bZIS2VU4z5RuSuEzhgxr+WRbD/hNw891C74K+QNEGyCsDhBV2PNuRAasJp5cE79NnPg5uuUNAPAtxGUigCxZaqC7QC4iGrPn2CG/eH/Ej8f36warZPzI8j4EY6A/IsCbVuY7FUPEypgaCSmOH45K3y/qRRta6FZq+3lV0xYEAo4FHUni4LyHap3EatdLirM4L0VXPXmel2ZzsrmF2V5PW42br+6nIjK5/syUBz4PDpLAWOA6U9H4T6ipL3j1CeGi7b6YXZLHjbT2OrYxq3EyNHs4ndztrFEZ9a0Hui5QtC5K17KJHUaUvYdvaOEKdgYhWeDtIMQI1jx0ooOENsG86uex9tgcPoghnujwcsAD6DslRUlD0JW59/qt0lHiw+/vF4u7ldARHtBq8PrI1BVXu8WinM3MDOt0mYg2gqMKVNel7tOFdB9nxi76lvKjFTlRRSc5acd68d/w+PxCdOiAIdLVHpKh9p9GQ5BLPpCHjdcMEpKudd9QhnNr+Tg="
+                        },
+                        "UserName": {
+                            "type": "string",
+                            "default": "StarrGLagent"
+                        },
+                        "LanguageCode": {
+                            "type": "string",
+                            "default": "en"
+                        },
+                        "BrowserIp": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "RepeatedAttributeListDetail": {
+                    "type": "array",
+                    "items": {
+                        "properties": {
+                            "Key": {
+                                "type": "string"
+                            },
+                            "AttributeDetailList": {
+                                "type": "array",
+                                "items": {
+                                    "properties": {
+                                        "AttributeDetail": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "Key": {
+                                                        "type": "string"
+                                                    },
+                                                    "Value": {
+                                                        "type": "string"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "AttributeDetailList": {
+                    "type": "array",
+                    "items": {
+                        "properties": {
+                            "AttributeDetail": {
+                                "type": "array",
+                                "items": {
+                                    "properties": {
+                                        "Key": {
+                                            "type": "string"
+                                        },
+                                        "Value": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "ResponseModel": {
+            "type": "object",
+            "required": [
+                "ResponseStatus"
+            ],
+            "properties": {
+                "ResponseStatus": {
+                    "type": "string"
+                },
+                "attributeListDetail": {
+                    "type": "array",
+                    "items": {
+                        "properties": {
+                            "AttributeDetail": {
+                                "type": "array",
+                                "items": {
+                                    "properties": {
+                                        "Key": {
+                                            "type": "string"
+                                        },
+                                        "Value": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            },
+                            "repeatedAttributeListDetail": {
+                                "type": "array",
+                                "items": {
+                                    "properties": {
+                                        "Key": {
+                                            "type": "string"
+                                        },
+                                        "AttributeDetailList": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "AttributeDetail": {
+                                                        "type": "array",
+                                                        "items": {
+                                                            "properties": {
+                                                                "Key": {
+                                                                    "type": "string"
+                                                                },
+                                                                "Value": {
+                                                                    "type": "string"
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "errorModel": {
+            "type": "object",
+            "required": [
+                "ResponseStatus",
+                "MessageDetail"
+            ],
+            "properties": {
+                "ResponseStatus": {
+                    "type": "string"
+                },
+                "MessageDetail": {
+                    "type": "object",
+                    "properties": {
+                        "MessageCode": {
+                            "type": "string"
+                        },
+                        "MessageType": {
+                            "type": "string"
+                        },
+                        "UserMessage": {
+                            "type": "string"
+                        },
+                        "MessageLevel": {
+                            "type": "string"
+                        },
+                        "MessageSeverity": {
+                            "type": "string"
+                        },
+                        "MessageList": {
+                            "type": "object",
+                            "properties": {
+                                "Message": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

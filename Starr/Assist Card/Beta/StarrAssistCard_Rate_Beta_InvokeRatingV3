@@ -162,7 +162,7 @@ definitions:
             default: "3391"
           MGACode:
             type: string
-            default: "1558"
+            default: "3391"
           OwnerId:
             type: string
             default: "15"

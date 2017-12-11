@@ -9,8 +9,8 @@
             "email": "info@solartis.com"
         }
     },
-    "host": "starrbop.rc.solartis.net",
-    "basePath": "/DroolsV6/DroolsService",
+    "host": "preprodstarrbopkb.solartis.net",
+    "basePath": "/DroolsV4_1/DroolsService",
     "schemes": [
         "https"
     ],

@@ -153,13 +153,13 @@ definitions:
             type: string
           PlanName:
             type: string
-            enum: ["Air Ticket Protector","Classic Plus","Premier","Premier Annual","Basic Annual","Medical Only Annual","Renter's Collision","Car Rental"]
+            enum: ["Air Ticket Protector","Classic Plus","Premier","Premier Annual","Basic Annual","Medical Only Annual","Renter's Collision"]
           PlanCode:
             type: string
             enum: ["1","2","3","4","9","10","11"]
           PlanType:
             type: string
-            enum: ["Single Trip","Annual","Renter's Collision"]
+            enum: ["Single Trip","Annual","Renter's Collision","Car Rental"]
           DepartureDate:
             type: string
           ReturnDate:

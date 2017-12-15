@@ -182,7 +182,7 @@ definitions:
         LastRateLookUpDate:
          title: "Last Rate Look Up Date"
          type: string
-         default: "2017-12-01"
+         default: "2017-12-16"
         EffectiveDate: 
          title: "Policy Start Date"
          type: string
@@ -771,6 +771,15 @@ definitions:
          type: string
         TotalCommission:
          title: "Total Commission"
+         type: string
+        MinPolicyWritingPremium:
+         title: "Policy writing minimum premium"
+         type: string
+        MinEarnedPremiumInd:
+         title: "Minimum Earned Premium indicator"
+         type: string
+        MinEarnedPremium:
+         title: "Minimum Earned Premium"
          type: string
         LCM:
          title: "LCM"

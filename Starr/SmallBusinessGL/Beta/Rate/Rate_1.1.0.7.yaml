@@ -679,6 +679,15 @@ definitions:
         LCM:
          title: "LCM"
          type: string
+        MinPolicyWritingPremium:
+         title: "Policy writing minimum premium"
+         type: string
+        MinEarnedPremiumInd:
+         title: "Minimum Earned Premium indicator"
+         type: string
+        MinEarnedPremium:
+         title: "Minimum Earned Premium"
+         type: string
         ReductionfactorList:
          type: array
          items:

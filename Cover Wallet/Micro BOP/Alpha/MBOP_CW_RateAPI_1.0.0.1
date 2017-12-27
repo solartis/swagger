@@ -98,37 +98,31 @@ definitions:
             type: string
             default: "1.0"
           Location:
-            type: object
-            required:
-              - LocationDetail
-            properties:
-              LocationDetail:
-                type: array
-                items:
+            type: array
+            items:
+              properties:
+                LocationDetail:
+                  type: object
                   properties:
                     LocationId:
                       title: "Location Id"
                       type: string
                     Building:
-                      type: object
-                      required:
-                        - BuildingDetail
-                      properties:
-                        BuildingDetail:
-                          type: array
-                          items:
+                      type: array
+                      items:
+                        properties:
+                          BuildingDetail:
+                            type: object
                             properties:
                               BuildingId:
                                 title: "Building Id"
                                 type: string
                               Classification:
-                                type: object
-                                required:
-                                  - ClassificationDetail
-                                properties:
-                                  ClassificationDetail:
-                                    type: array
-                                    items:
+                                type: array
+                                items:
+                                  properties:
+                                    ClassificationDetail:
+                                      type: object
                                       properties:
                                         ClassificationId:
                                           title: "ClassificationId"         
@@ -224,37 +218,31 @@ definitions:
           TotalTFSAmount:
             type: string
           Location:
-            type: object
-            required:
-              - LocationDetail
-            properties:
-              LocationDetail:
-                type: array
-                items:
+            type: array
+            items:
+              properties:
+                LocationDetail:
+                  type: object
                   properties:
                     LocationId:
                       title: "Location Id"
                       type: string
                     Building:
-                      type: object
-                      required:
-                        - BuildingDetail
-                      properties:
-                        BuildingDetail:
-                          type: array
-                          items:
+                      type: array
+                      items:
+                        properties:
+                          BuildingDetail:
+                            type: object
                             properties:
                               BuildingId:
                                 title: "Building Id"
                                 type: string
                               Classification:
-                                type: object
-                                required:
-                                  - ClassificationDetail
-                                properties:
-                                  ClassificationDetail:
-                                    type: array
-                                    items:
+                                type: array
+                                items:
+                                  properties:
+                                    ClassificationDetail:
+                                      type: object
                                       properties:
                                         ClassificationId:
                                           title: "ClassificationId"         

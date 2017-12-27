@@ -1,0 +1,345 @@
+swagger: '2.0'
+info:
+  version: "1.0.0"
+  title: Solartis Rate API for Coverwallet
+  description: To get rate for Micro BOP from Solartis Rate API with ISO ERC.
+  
+  
+host: cwmicrobop.beta.solartis.net
+basePath: /KnowledgeEngineV6_2/KnowledgeBase/FireEventV2
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /FireEventV2:
+    post:
+      description: Get Rates for the given input
+      operationId: getRates
+      produces:
+        - application/json
+      parameters:
+        - name: Token
+          in: header
+          description: Authentication Token
+          required: true
+          type: string
+          format: string
+          default: "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"
+        - name: EventName
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "MicroBOPCalculateRate"
+        - name: EventVersion
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "1.0.0.1"
+        - name: Rating
+          in: body
+          description: Rating content
+          required: true
+          schema:
+            $ref: '#/definitions/Rating_Request'
+      responses:
+        '200':
+          description: Success Response
+          schema:
+            $ref: '#/definitions/Rating_Success_Response'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/errorModel'
+
+definitions:
+  Rating_Request:
+    type: object
+    required:
+      - Policy
+    properties:
+      Policy:
+        type: object
+        required: 
+          - State
+          - Location
+        properties:
+          EventName:
+            title: "Event Name"
+            type: string
+            default: "MicroBOPCalculateRate"
+          EventVersion:
+            title: "Event Version"
+            type: string
+            default: "1.0.0.1"
+          LastRateLookUpDate:
+            title: "Last Rate LookUp Date"
+            type: string
+            default: ""
+          PolicyEffectiveDate:
+           title: "Policy Effective Date"
+           type: string
+          State:
+            title: "State"
+            type: string
+            default: ""
+          ProductNumber:
+            title: "Product Number"
+            type: string
+            default: "HC_PLI"
+          ProductVerNumber:
+            title: "Product Version Number"
+            type: string
+            default: "1.0"
+          Location:
+            type: object
+            required:
+              - LocationDetail
+            properties:
+              LocationDetail:
+                type: array
+                items:
+                  properties:
+                    LocationId:
+                      title: "Location Id"
+                      type: string
+                    Building:
+                      type: object
+                      required:
+                        - BuildingDetail
+                      properties:
+                        BuildingDetail:
+                          type: array
+                          items:
+                            properties:
+                              BuildingId:
+                                title: "Building Id"
+                                type: string
+                              Classification:
+                                type: object
+                                required:
+                                  - ClassificationDetail
+                                properties:
+                                  ClassificationDetail:
+                                    type: array
+                                    items:
+                                      properties:
+                                        ClassificationId:
+                                          title: "ClassificationId"         
+                                          type: string
+                                        Description:
+                                          title: "Description"
+                                          type: string
+                                          enum: ["Architectural Services Office","Engineering Services Office","Consultants - Decorating Services, Interior","Consultants-Advertising","Consultants-Audio/Visual","Consultants-Business/Management","Consultants-Communications, Media and Public Relations","Consultants-Compensation & Benefits","Consultants-Educational","Consultants-Event Planning","Consultants-Executive Coaching","Consultants-Graphic Design","Consultants-Human Resources","Consultants-Image","Consultants-Market Research","Consultants-Procurement","Consultants-Project Management","Consultants-Recruiting","Consultants-Sales & Marketing","Consultants-Strategic Planning","Consultants-Training & Development","Accounting & Bookkeeping Offices","Answering Service","Auditors Offices","Auto Appraisers Offices","Certified Public Accountants Office","Claim Adjuster - Independent","Court Reporter","Graphic Design Services Office","Inspection and Appraisal Companies","Insurance Adjusters Offices","Interpreter or Translator","Learning Center - Other Educational Programs","Learning Center - Test Prep and Test Administration","Learning Center - Tutoring Services","Market Research Firm","Mortgage Brokers Offices","Notaries Office","Real Estate Agents & Brokers Office","Stenographic & Secretarial Services","Surveying/Mapping Service Office","Tax Preparation Services","Training - Professional & Mgmt Development","Travel Agencies","Pet Grooming","Pet Grooming Services - Mobile","Pet Training","Photo Studios - Portrait","Photography (Commercial)","Veterinary Services Domestic Only","Videographers","Computer Consultants","Computer Related Services – Low Hazard","Computer Related Services – Medium Hazard","Computer Systems Integrators","Computer Training","Custom Computer Programming","Packaged Software Development","Software Research And Development - No Products","Website Design"]
+                                        ClassGroup:
+                                          title: "Class Group"
+                                          type: string
+                                          enum: ["Architects, Engineers & Surveyors","Consultants","Office Professional","Service","Technology"]
+                                        ExposureBase:
+                                          title: "Exposure Base"
+                                          type: string
+                                          enum: ["Area","Payroll","Sales"]
+                                        Exposure:
+                                          title: "Exposure"
+                                          type: string
+      OwnerId:
+        type: string
+        default: "27"
+      ServiceRequestDetail:
+        type: object
+        required:
+          - Token
+        properties:
+          ServiceRequestVersion:
+            title: "Service Request Version"
+            type: string
+            default: "1.0"
+          UserName:
+            title: "User Name"
+            type: string
+            default: "CWAgent"
+          OwnerId:
+            title: "Owner Id"
+            type: string
+            default: "27"
+          RegionCode:
+            title: "Region Code"
+            type: string
+            default: "US"
+          Token:
+            title: "Token"
+            type: string
+            default: "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"
+          BrowserIp:
+            title: "Browser Ip"
+            type: string
+            default: "127.0.0.1"
+          ResponseType:
+            title: "Response Type"
+            type: string
+            default: "JSON"
+      EndClientUserUniqueSessionId:
+        type: string
+        default: "Uniquesession"
+
+  Rating_Success_Response:
+    type: object
+    required:
+      - Policy
+    properties:
+      Policy:
+        type: object
+        properties:
+          EventName:
+            title: "Event Name"
+            type: string
+          EventVersion:
+            title: "Event Version"
+            type: string
+          BasePremium:
+            type: string
+          Premium:
+            type: string
+          ProductNumber:
+            title: "Product Number"
+            type: string
+          State:
+            title: "State"
+            type: string
+          ProductVerNumber:
+            title: "Product Version Number"
+            type: string
+          PolicyEffectiveDate:
+            title: "Policy Effective Date"
+            type: string
+          LastRateLookUpDate:
+            title: "Last Rate LookUp Date"
+            type: string
+          TotalTFSAmount:
+            type: string
+          Location:
+            type: object
+            required:
+              - LocationDetail
+            properties:
+              LocationDetail:
+                type: array
+                items:
+                  properties:
+                    LocationId:
+                      title: "Location Id"
+                      type: string
+                    Building:
+                      type: object
+                      required:
+                        - BuildingDetail
+                      properties:
+                        BuildingDetail:
+                          type: array
+                          items:
+                            properties:
+                              BuildingId:
+                                title: "Building Id"
+                                type: string
+                              Classification:
+                                type: object
+                                required:
+                                  - ClassificationDetail
+                                properties:
+                                  ClassificationDetail:
+                                    type: array
+                                    items:
+                                      properties:
+                                        ClassificationId:
+                                          title: "ClassificationId"         
+                                          type: string
+                                        Description:
+                                          title: "Description"
+                                          type: string
+                                        ClassGroup:
+                                          title: "Class Group"
+                                          type: string
+                                        ExposureBase:
+                                          title: "Exposure Base"
+                                          type: string
+                                        Exposure:
+                                          title: "Exposure"
+                                          type: string
+
+      OwnerId:
+        type: string
+      ServiceRequestDetail:
+        type: object
+        required:
+          - Token
+        properties:
+          ServiceRequestVersion:
+            title: "Service Request Version"
+            type: string
+            default: "1.0"
+          UserName:
+            title: "User Name"
+            type: string
+            default: "CWAgent"
+          OwnerId:
+            title: "Owner Id"
+            type: string
+            default: "27"
+          RegionCode:
+            title: "Region Code"
+            type: string
+            default: "US"
+          Token:
+            title: "Token"
+            type: string
+            default: "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"
+          BrowserIp:
+            title: "Browser Ip"
+            type: string
+            default: "127.0.0.1"
+          ResponseType:
+            title: "Response Type"
+            type: string
+            default: "JSON"
+            
+      EndClientUserUniqueSessionId:
+        type: string
+        default: "Uniquesession"       
+      
+       
+  errorModel:
+    type: object
+    required:
+      - RequestStatus
+      - MessageDetail
+    properties:
+      RequestStatus:
+        type: string
+      MessageDetail:
+        type: object
+        properties:
+          MessageCode:
+            type: string
+          MessageType:
+            type: string
+          UserMessage:
+            type: string
+          MessageLevel:
+            type: string
+          MessageSeverity:
+            type: string
+          MessageList:
+            type: object
+            properties:
+              Message:
+                type: array
+                items:
+                  type: string      
+
+ 

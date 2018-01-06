@@ -44,7 +44,7 @@ paths:
           required: true
           type: string
           format: string
-          default: "ISOCARate"
+          default: "ISOCARate_1.0.0.2"
           
         - name: Rating Request
           in: body
@@ -79,7 +79,7 @@ definitions:
             default: "ISO_CA_V1"
           EventName:
             type: string
-            default: "ISOCARate"
+            default: "ISOCARate_1.0.0.2"
           ISOERCVersion:
             type: string
             default: "RC_CA_AZ_11012016_V01"

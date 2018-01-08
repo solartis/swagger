@@ -2,7 +2,7 @@
 	"swagger": "2.0",
 	"info": {
 		"version": "1.0.0",
-		"title": "Solartis Rate API for ISO GL",
+		"title": "Solartis Rate API for ISO-GL",
 		"description": "To get rate for General Liability from Solartis Rate API with ISO ERC. General Liability Insurance is a business insurance policy that is applicable to most contractors and business owners because it protects them. When a business has this type of insurance policy, they're covered when it comes to claims of bodily injury, associated medical costs and damage to property that occurred as a result of your business operations."
 	},
 	"host": "isoglkbv4-2.solartis.net",

@@ -1,0 +1,685 @@
+swagger: '2.0'
+info:
+  version: "1.0.0"
+  title: Solartis Rate API for ISO Commercial Auto
+  description: To get rate for Commercial Auto from Solartis Rate 
+    API with ISO ERC.
+    
+    Commercial Vehicle Insurance is a policy of physical damage and liability coverages for amounts, situations, and usage not covered by a personal auto policy. Insurance that protects the insured against financial loss because of legal liability for automobile-related injuries to others or damage to their property by an auto.
+host: isocakbv4-2.solartis.net
+basePath: /DroolsV4_2/DroolsService
+schemes:
+  - https
+produces:
+  - application/json
+consumes:
+  - application/json
+paths:
+  /FireEventV2:
+    post:
+      description: Gets Rate for Commercial Automobile
+      operationId: getRates
+      produces: 
+        - application/json
+      parameters:
+        - name: Token
+          in: header
+          description: Authentication Token
+          required: true
+          type: string
+          format: string
+          default: "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"
+          
+        - name: Content-Type
+          in: header
+          description: Content Type
+          required: true
+          type: string
+          format: string
+          default: "application/json"
+          
+        - name: EventName
+          in: header
+          description: EventName
+          required: true
+          type: string
+          format: string
+          default: "ISOCARate_1.0.0.2"
+          
+        - name: Rating Request
+          in: body
+          description: For rating request
+          required: true
+          schema:
+            $ref: '#/definitions/Rating_Request'
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            $ref: '#/definitions/Rating_Success_Response'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/errorModel'
+definitions:
+  Rating_Request:
+    type: object
+    properties:
+      EndClientUserUniqueSessionId:
+        type: string
+        default: "Uniquesession"
+      Policy:
+        type: object
+        properties:
+          ProductNumber:
+            type: string
+            default: "ISO Commercial Automobile"
+          ProductVerNumber:
+            type: string
+            default: "ISO_CA_V1"
+          EventName:
+            type: string
+            default: "ISOCARate_1.0.0.2"
+          ISOERCVersion:
+            type: string
+            default: "RC_CA_AZ_11012016_V01"
+          ISOCWVersion:
+            type: string
+            default: "RC_CA_CW_11012016_V01"
+          EffectiveDate:
+            type: string
+            default: "2016-11-01"
+          ExpirationDate:
+            type: string
+            default: "2017-11-01"
+          InsuredName:
+            type: string
+            default: "John Smith"
+          AddressLine1:
+            type: string
+            default: "27TH ST"
+          AddressLine2:
+            type: string
+            default: "PHOENIX"
+          City:
+            type: string
+            default: "PRESCOTT VALLEY"
+          County:
+            type: string
+            default: "YAVAPAI"
+          ZipCode:
+            type: string
+            default: "85005"
+          State:
+            type: string
+            default: "AZ"
+          Territory:
+            type: string
+            default: "105"
+          OptionalClassPlan:
+            type: string
+            default: "No"
+            enum: ["Yes","No"]
+          PolicyType:
+            type: string
+            default: "Business Auto Coverage Form"
+          IndividualNamedInsuredOnThePolicy:
+            type: string
+            default: "Yes"
+            enum: ["Yes","No"]
+          CommercialAutomobilePublicTransportationAutos:
+            type: string
+            default: "Yes"
+            enum: ["Yes","No"]
+          CommercialAutomobilePublicOrLiveryPassengerConveyanceExclusion:
+            type: string
+            default: "No"
+            enum: ["Yes","No"]
+          CommercialAutomobilePublicOrLiveryPassengerConveyanceAndOnDemandDeliveryServicesExclusion:
+            type: string
+            default: "No"
+            enum: ["Yes","No"]
+          NonOwnedAutoWanted:
+            type: string
+            default: "Yes"
+            enum: ["Yes","No"]
+          LegalEntity:
+            type: string
+            default: "Partnership"
+          HiredAutoWanted:
+            type: string
+            default: "Yes"
+          UnderinsuredMotoristsCoverageType:
+            type: string
+            default: "Combined Single Limit"
+          UnderinsuredMotoristsCoverageCombinedSingleLimit:
+            type: string
+            default: "100,000"
+          UnderinsuredMotoristsCoverageSplitLimit:
+            type: string
+            default: "Not Applicable"
+          UninsuredMotoristsCoverageType:
+            type: string
+            default: "Combined Single Limit"
+          UninsuredMotoristsCoverageSplitLimit:
+            type: string
+            default: "Not Applicable"
+          UninsuredMotoristsCoverageCombinedSingleLimit:
+            type: string
+            default: "100,000"
+          Truck:
+            type: array
+            items:
+              properties:
+                TruckDetail:
+                  type: object
+                  required:
+                    - TruckVIN
+                  properties:
+                    AddressLine1:
+                      type: string
+                      default: "8TH"
+                    AddressLine2:
+                      type: string
+                      default: "BROADWAY"
+                    City:
+                      type: string
+                      default: "CAPE NEDDICK"
+                    County:
+                      type: string
+                      default: "YORK"
+                    State:
+                      type: string
+                      default: "NE"
+                    ZipCode:
+                      type: string
+                      default: "83234"
+                    Territory:
+                      type: string
+                      default: "104"
+                    VehicleType:
+                      type: string
+                      default: "Truck"
+                    TruckSizeClass:
+                      type: string
+                      default: "Light Truck"
+                    TruckTrailerHowUsed:
+                      type: string
+                      default: "Amusement Device Mounted On"
+                    TruckUsedAsTNCOrOnDemand:
+                      type: string
+                      default: "Not Used In A Transportation Network Company Or On-Demand Capacity"
+                    TruckPercentageOfTransportationNetworkServiceAutoUse:
+                      type: string
+                      default: "80% or More"
+                    TruckSafetyScoreDiscountApplies: 
+                      type: string
+                      default: "Yes"
+                      enum: ["Yes","No"]
+                    TruckSafetyScore:
+                      type: string
+                      default: "38 - 42"
+                    TruckBusinessUseClass:
+                      type: string
+                      default: "Commercial"
+                    TruckRadiusClass:
+                      type: string
+                      default: "Local"
+                    TruckFleet:
+                      type: string
+                      default: "Yes"
+                      enum: ["Yes","No"]
+                    TruckSecondaryClassCode:
+                      type: string
+                      default: "99"
+                    TruckSecondaryClass:
+                      type: string
+                      default: "Not Otherwise Specified - All Other"
+                    TruckAutosLeasedOrRentedToOthersForUseInTruckingAndMotorCarrierOperations:
+                      type: string
+                      default: "No"
+                      enum: ["Yes","No"]
+                    TruckOriginalCostNew:
+                      type: string
+                      default: "16,000"
+                    TruckStatedAmount:
+                      type: string
+                      default: "0"
+                    TruckYear:
+                      type: string
+                      default: "2010"
+                    TruckMake:
+                      type: string
+                      default: "test"
+                    TruckModel:
+                      type: string
+                      default: "test"
+                    TruckVIN:
+                      type: string
+                      default: "12"
+                    TruckStartOfOperations:
+                      type: string
+                      default: "2017-01-01"
+                    TruckEndOfOperations:
+                      type: string
+                      default: "2017-01-01"
+                    TruckMedicalPaymentsCoverageLimit:
+                      type: string
+                      default: "No Coverage"
+                    TruckLiabilityCoveragePercentOfMilesDrivenInGreenZone:
+                      type: string
+                      default: "Not Applicable"
+                    TruckLiabilityCoverageType:
+                      type: string
+                      default: "No Coverage"
+                    TruckLiabilityCoverageLimit:
+                      type: string
+                      default: "Not Applicable"
+                    TruckLiabilityCoverageDeductible:
+                      type: string
+                      default: "Not Applicable"
+                    TruckHiredAutosSpecifiedAsCoveredAutosYouOwn:
+                      type: string
+                      default: "No"
+                      enum: ["Yes","No"]
+                    TruckLessorAdditionalInsuredAndLossPayee:
+                      type: string
+                      default: "No"
+                      enum: ["Yes","No"]
+                    TruckUnderinsuredMotoristsCoverageType:
+                      type: string
+                      default: "Combined Single Limit"
+                    TruckUnderinsuredMotoristsCoverageCombinedSingleLimit:
+                      type: string
+                      default: "125,000" 
+                    TruckUnderinsuredMotoristsCoverageSplitLimit:
+                      type: string
+                      default: "Not Applicable"
+                    TruckUninsuredMotoristsCoverageType:
+                      type: string
+                      default: "Combined Single Limit"
+                    TruckUninsuredMotoristsCoverageSplitLimit:
+                      type: string
+                      default: "Not Applicable"
+                    TruckUninsuredMotoristsCoverageCombinedSingleLimit:
+                      type: string
+                      default: "2,000,000"
+                    TruckPrimaryClassCode:
+                      type: string
+                      default: "334"
+                    TruckAutoRentedToOtherMotorCarriers:
+                      type: string
+                      default: "No"
+                      enum: ["Yes","No"]
+                    TruckAgriculturalProduceTrailersSeasonal:
+                      type: string
+                      default: "No"
+                      enum: ["Yes","No"]
+                    TruckUninsuredMotoristsCoverageWanted:
+                       type: string
+                       default: "No"
+                       enum: ["Yes","No"]
+                    TruckZipCodeOverride:
+                      type: string
+                      default: "other"
+                    TruckCollisionCoverageCoverageType:
+                      type: string
+                      default: "Stated Amount"
+                    TruckCollisionCoveragePercentOfMilesDrivenInGreenZone:
+                      type: string
+                      default: "0 - 50%"
+                    TruckCollisionCoverageDeductible:
+                      type: string
+                      default: "500"
+                    TruckOtherThanCollisionCoverageCoverageType:
+                      type: string
+                      default: "ACV"
+                    TruckOtherThanCollisionCoverageDeductible:
+                      type: string
+                      default: "500"
+                    TruckOtherThanCollisionCoveragePercentOfMilesDrivenInGreenZone:
+                      type: string
+                      default: "61 - 70%"
+                    AudioVisualAndDataElectronicEquipmentCoverage:
+                      type: array
+                      items:
+                        properties:
+                          AudioVisualAndDataElectronicEquipmentCoverageDetail:
+                            type: object
+                            properties:
+                              AudioVisualAndDataElectronicEquipmentCoverageLimit:
+                                type: string
+                                default: "500"
+                    RentalReimbursementCoverage:
+                      type: array
+                      items:
+                        properties:
+                          RentalReimbursementCoverageDetail:
+                            type: object
+                            properties:
+                              RentalReimbursementCoverageDailyRentalAmount:
+                                type: string
+                                default: "55"  
+                              RentalReimbursementCoverageMaximumRentalDays:
+                                type: string
+                                default: "45"
+                    
+          PrivatePassenger:
+            type: array
+            items:
+              properties:
+                PrivatePassengerDetail:
+                  type: object
+                  required: 
+                    - PrivatePassengerVIN
+                  properties:
+                    AddressLine1:
+                      type: string
+                      default: "test"
+                    AddressLine2:
+                      type: string
+                      default: "test"
+                    City:
+                      type: string
+                      default: "STEVENS POINT"
+                    County:
+                      type: string
+                      default: "PORTAGE"
+                    State:
+                     type: string
+                     default: "AZ"
+                    ZipCode:
+                      type: string
+                      default: "83234"
+                    Territory:
+                      type: string
+                      default: "104"
+                    VehicleType:
+                      type: string
+                      default: "Private Passenger"
+                    PrivatePassengerType:
+                      type: string
+                      default: "Business Use - Nonfleet Vehicle"
+                    PrivatePassengerLiabilityCoveragePercentOfMilesDrivenInGreenZone:
+                      type: string
+                      default: "0 - 50%"
+                    PrivatePassengerSafetyScoreDiscountApplies:
+                      type: string
+                      default: "No"
+                      enum: ["Yes","No"]
+                    PrivatePassengerSafetyScore:
+                      type: string
+                      default: "1 - 26"
+                    PrivatePassengerOperatorExperience:
+                      type: string
+                      default: "Not Applicable"
+                    PrivatePassengerUse:
+                      type: string
+                      default: "Not Applicable"
+                    PrivatePassengerOriginalCostNew:
+                      type: string
+                      default: "25,000"
+                    PrivatePassengerStatedAmount:
+                      type: string
+                      default: "0"
+                    PrivatePassengerUsedAsTNCOrOnDemand:
+                      type: string
+                      default: "Used As On-Demand And Not As Transportation Network Company"
+                    PrivatePassengerPercentageOfTransportationNetworkServiceAutoUse:
+                      type: string
+                      default: "Under 20%"
+                    PrivatePassengerMake:
+                      type: string
+                      default: "2005"
+                    PrivatePassengerModel:
+                      type: string
+                      default: "tes"
+                    PrivatePassengerYear:
+                      type: string
+                      default: "2005"
+                    PrivatePassengerVIN:
+                      type: string
+                      default: "t123"
+                    PrivatePassengerFleet:
+                      type: string
+                      default: "No"
+                    PrivatePassengerLiabilityCoverageType:
+                      type: string
+                      default: "Combined Single Limit"
+                    PrivatePassengerLiabilityCoverageLimit:
+                      type: string
+                      default: "65,000"
+                    PrivatePassengerLiabilityCoverageDeductible:
+                      type: string
+                      default: "250 Combined Single Limit"
+                    PrivatePassengerMedicalPaymentsCoverageLimit:
+                      type: string
+                      default: "5,000"
+                    PrivatePassengerHiredAutosSpecifiedAsCoveredAutosYouOwn:
+                      type: string
+                      default: "No"
+                      enum: ["Yes","No"]
+                    PrivatePassengerLessorAdditionalInsuredAndLossPayee:
+                      type: string
+                      default: "No"
+                      enum: ["Yes","No"]
+                    PrivatePassengerClassCode:
+                      type: string
+                      default: "7391"
+                    PrivatePassengerUnderinsuredMotoristsCoverageType:
+                      type: string
+                      default: "Combined Single Limit"
+                    PrivatePassengerUnderinsuredMotoristsCoverageCombinedSingleLimit:
+                      type: string
+                      default: "125,000"
+                    PrivatePassengerUnderinsuredMotoristsCoverageSplitLimit:
+                      type: string
+                      default: "Not Applicable"
+                    PrivatePassengerUninsuredMotoristsCoverageType:
+                      type: string
+                      default: "Combined Single Limit"
+                    PrivatePassengerUninsuredMotoristsCoverageSplitLimit:
+                      type: string
+                      default: "Not Applicable"
+                    PrivatePassengerUninsuredMotoristsCoverageCombinedSingleLimit:
+                      type: string
+                      default: "200,000"
+                    PrivatePassengerUninsuredMotoristsCoverageWanted:
+                      type: string
+                      default: "No"
+                      enum: ["Yes","No"]
+                    PrivatePassengerZipCodeOverride:
+                      type: string
+                      default: "other"
+                    PrivatePassengerCollisionCoverageCoverageType:
+                      type: string
+                      default: "ACV"
+                    PrivatePassengerCollisionCoveragePercentOfMilesDrivenInGreenZone:
+                      type: string
+                      default: "61 - 70%"
+                    PrivatePassengerCollisionCoverageDeductible:
+                      type: string
+                      default: "500"
+                    PrivatePassengerOtherThanCollisionCoverageCoverageType:
+                      type: string
+                      default: "ACV"
+                    PrivatePassengerOtherThanCollisionCoverageDeductible:
+                      type: string
+                      default: "500"
+                    PrivatePassengerOtherThanCollisionCoveragePercentOfMilesDrivenInGreenZone:
+                      type: string
+                      default: "61 - 70%"
+                    PrivatePassengerOtherThanCollisionCoverageFullGlassCoverage:
+                      type: string
+                      default: "yes"
+                    PrivatePassengerTowingLaborCoverageLimit:
+                      type: string
+                      default: "50"
+                    AudioVisualAndDataElectronicEquipmentCoverage:
+                      type: array
+                      items:
+                        properties:
+                          AudioVisualAndDataElectronicEquipmentCoverageDetail:
+                            type: object
+                            properties:
+                              AudioVisualAndDataElectronicEquipmentCoverageLimit:
+                                type: string
+                                default: "500"
+                    RentalReimbursementCoverage:
+                      type: array
+                      items:
+                        properties:
+                          RentalReimbursementCoverageDetail:
+                            type: object
+                            properties:
+                              RentalReimbursementCoverageDailyRentalAmount:
+                                type: string
+                                default: "25"  
+                              RentalReimbursementCoverageMaximumRentalDays:
+                                type: string
+                                default: "35"
+          HiredAuto:
+            type: array
+            items:
+              properties:
+                HiredAutoDetail:
+                  type: object
+                  properties:
+                    HiredAutoTotalCostOfHireInsuredPrimary:
+                      type: string
+                      default: "1000"
+                    HiredAutoTotalCostOfHireOwnerPrimary:
+                      type: string
+                      default: "750"
+                    HiredAutoLiabilityCoverageLimit:
+                      type: string
+                      default: "100,000"
+                    HiredAutoLiabilityCoverageDeductible:
+                      type: string
+                      default: "5,000 Property Damage Per Accident"
+                    HiredAutoCollisionCoverageTotalCostOfHire:
+                      type: string
+                      default: "1000"
+                    HiredAutoCollisionCoverageDeductible:
+                      type: string
+                      default: "500"
+                    HiredAutoOtherThanCollisionCoverageTotalCostOfHire:
+                      type: string
+                      default: "5000"
+                    HiredAutoOtherThanCollisionCoverageCoverageType:
+                      type: string
+                      default: "Specified Causes of Loss"
+                    HiredAutoOtherThanCollisionCoverageDeductible:
+                      type: string
+                      default: "Full Coverage"
+                    HiredAutoTruckersLiabilityCoverageTotalNumberOfVehicles:
+                      type: string
+                      default: "1"
+                    HiredAutoTruckersLiabilityCoverageTruckersPremium:
+                      type: string
+                      default: "550"
+                    HiredAutoTruckersLiabilityCoveragePrimaryCostOfHireTruckers:
+                      type: string
+                      default: "5000"
+                    HiredAutoTruckersLiabilityCoverageExcessCostOfHireTruckers:
+                      type: string
+                      default: "15000"
+          NonOwnedAuto:
+            type: array
+            items:
+              properties:
+                NonOwnedAutoDetail:
+                  type: object
+                  properties:
+                    NonOwnedAutoNumberOfEmployees:
+                      type: string
+                      default: "26"
+                    NonOwnedAutoEmployeesAsInsureds:
+                      type: string
+                      default: "Yes"
+                    NonOwnedAutoSocialServiceAgency:
+                      type: string
+                      default: "Yes"
+                    NonOwnedAutoNumberOfPartners:
+                      type: string
+                      default: "4"
+                    NonOwnedAutoNumberOfVolunteers:
+                      type: string
+                      default: "8"
+                    NonOwnedAutoTerritory:
+                      type: string
+                      default: "117"
+                    NonOwnedAutoVolunteersAsInsureds:
+                      type: string
+                      default: "No"
+                    NonOwnedAutoLiabilityCoverageDeductible:
+                      type: string
+                      default: "500 Combined Single Limit"
+                    NonOwnedAutoLiabilityCoverageLimit:
+                      type: string
+                      default: "100,000"
+      OwnerId:
+        type: string
+        default: "1"
+      ServiceRequestDetail:
+        type: object
+        properties:
+          ResponseType:
+            type: string
+            enum: ["JSON","XML"]
+            default: "JSON"
+          OwnerId:
+            type: string
+            default: "1"
+          UserName:
+            type: string
+            default: "isorateadmin"
+          Token:
+            type: string
+            default: "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"
+          BrowserIp:
+            type: string
+            default: "127.0.0.1"
+          ServiceRequestVersion:
+            type: string
+            default: "1.0"
+  
+
+  Rating_Success_Response:
+    type: object
+    properties:
+      messageDetail:
+        type: object
+      ResponseStatus:
+        type: string
+      Policy:
+        type: object
+      
+  errorModel:
+    type: object
+    required:
+      - RequestStatus
+      - MessageDetail
+    properties:
+      RequestStatus:
+        type: string
+      MessageDetail:
+        type: object
+        properties:
+          MessageCode:
+            type: string
+          MessageType:
+            type: string
+          UserMessage:
+            type: string
+          MessageLevel:
+            type: string
+          MessageSeverity:
+            type: string
+          MessageList:
+            type: object
+            properties:
+              Message:
+                type: array
+                items:
+                  type: string

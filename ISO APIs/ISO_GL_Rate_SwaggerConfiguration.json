@@ -110,7 +110,7 @@
 							"type": "string",
 							"default": "2016-06-01"
 						},
-						LastRateLookUpDate:{
+						"LastRateLookUpDate":{
 								"type": "string",
 							  "default": "2017-08-01"
 						},  

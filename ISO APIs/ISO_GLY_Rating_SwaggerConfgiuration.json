@@ -110,8 +110,8 @@
 							"type": "string",
 							"default": "2016-06-01"
 						},
-						LastRateLookUpDate:{
-								"type": "string",
+						"LastRateLookUpDate": {
+							  "type": "string",
 							  "default": "2017-08-01"
 						},  
 						"InsuredName": {

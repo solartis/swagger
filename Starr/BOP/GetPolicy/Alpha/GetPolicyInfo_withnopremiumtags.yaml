@@ -46,6 +46,12 @@ paths:
         required: true
         schema:
           $ref: "#/definitions/GetPolicyInfo_Request"
+      - name: "EventName"
+        in: "header"
+        description: "Eventname"
+        required: true
+        type: "string"
+        default: "GetPolicyInfo"
       responses:
         200:
           description: "Successful Response"

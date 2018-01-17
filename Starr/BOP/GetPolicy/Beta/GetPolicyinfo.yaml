@@ -7,7 +7,7 @@ info:
     \ Owners Policy "
   version: "V2"
   title: "Solartis GetPolicyInfo API for STARR Business Owners Policy"
-host: "qasbopkbv6.beta.solartis.net"
+host: "starrbop.beta.solartis.net"
 basePath: "/DroolsV6/DroolsService"
 schemes:
 - "https"

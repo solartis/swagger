@@ -141,11 +141,6 @@ definitions:
         format: "string"
         title: "EndClientUserUniqueSessionId"
         default: "Uniquesession"
-      Debug:
-        type: "string"
-        format: "string"
-        title: "Debug"
-        default: "Yes"
   Rating_Success_Response:
     type: "object"
     properties:

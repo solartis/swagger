@@ -8,7 +8,7 @@ info:
     \ Owners Policy "
   version: "1.1.0.1"
   title: "Solartis Renewal Rate API for STARR Business Owners Policy"
-host: "qasbopkbv6.beta.solartis.net"
+host: "starrbop.beta.solartis.net"
 basePath: "/DroolsV6/DroolsService"
 schemes:
 - "https"

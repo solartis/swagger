@@ -1398,6 +1398,7 @@ definitions:
             type: "string"
             format: "string"
             title: "TerrorismCoverage"
+            enum: ["Yes","No"]
           BusnIncomeOrdinaryPayrollNumDays:
             type: "string"
             format: "string"
@@ -1450,6 +1451,7 @@ definitions:
             type: "string"
             format: "string"
             title: "EachOccLimit"
+            enum: ["300000","500000","1000000","2000000"]
           ExcludeTerrorismActOutUS:
             type: "string"
             format: "string"
@@ -1459,11 +1461,12 @@ definitions:
             type: "string"
             format: "string"
             title: "WaiverofTransferofRightsOfRecoveryAgainstOthersToUsIncluded"
+            enum: ["Yes","No"]
           BOPNewlyAcquiredPropertyBppLimit:
             type: "string"
             format: "string"
             title: "BOPNewlyAcquiredPropertyBppLimit"
-            default: "1000000"
+            default: "100000"
           TRIAExtended:
             type: "string"
             format: "string"
@@ -1701,6 +1704,7 @@ definitions:
             type: "string"
             format: "string"
             title: "PrimaryandNoncontributoryOtherInsuranceConditionIncluded"
+            enum: ["Yes","No"]
           EventName:
             type: "string"
             format: "string"
@@ -1772,6 +1776,7 @@ definitions:
             type: "string"
             format: "string"
             title: "BOPEmployeeDishtyCoverageLimit"
+            enum: ["5000","10000","25000","50000","100000"]
           InsuredMailingAddress:
             type: "string"
             format: "string"
@@ -1927,10 +1932,6 @@ definitions:
                       format: "string"
                       title: "BuildingUpdatedIn26Years"
                       default: "No"
-                    OptnlDedFactor:
-                      type: "string"
-                      format: "string"
-                      title: "OptnlDedFactor"
                     BOPOrdinanceOrLawCov2CoverageLimit:
                       type: "string"
                       format: "string"

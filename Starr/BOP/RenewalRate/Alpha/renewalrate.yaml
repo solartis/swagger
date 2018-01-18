@@ -1,5 +1,6 @@
 
 
+
 ---
 swagger: "2.0"
 info:
@@ -1687,6 +1688,7 @@ definitions:
             type: "string"
             format: "string"
             title: "AggregateLimit"
+            enum: ["600000","1000000","2000000","4000000"]
           FormOfBusiness:
             type: "string"
             format: "string"
@@ -1867,6 +1869,7 @@ definitions:
                           type: "string"
                           format: "string"
                           title: "BOPClassificationOutdoorPropertyCoverageLimit"
+                          default: "2500"
                         BOPClassificationAccountsReceivableCoverageLimit:
                           type: "string"
                           format: "string"
@@ -1906,6 +1909,7 @@ definitions:
                       type: "string"
                       format: "string"
                       title: "BurglaryAlarmCentral"
+                      enum: ["Yes","No"]
                     BldgCodeEffectivenessGrade:
                       type: "string"
                       format: "string"
@@ -1954,10 +1958,12 @@ definitions:
                       type: "string"
                       format: "string"
                       title: "OrdinanceOrLawCoverage"
+                      default: "Coverage 1 with Coverages 2 and 3 Combined"
                     AutomaticSprinklerSystem:
                       type: "string"
                       format: "string"
                       title: "AutomaticSprinklerSystem"
+                      enum: ["Yes","No"]
                     SinkholeLossIncluded:
                       type: "string"
                       format: "string"
@@ -1970,6 +1976,7 @@ definitions:
                       type: "string"
                       format: "string"
                       title: "OrdinanceOrLawCov2And3CoverageLimit"
+                      default: "25000"
                     SeparateAnnualAggregateLimit:
                       type: "string"
                       format: "string"
@@ -1983,10 +1990,12 @@ definitions:
                       type: "string"
                       format: "string"
                       title: "FireAlarm"
+                      enum: ["Yes","No"]
                     MineSubsidenceScheduledCoverageLimit:
                       type: "string"
                       format: "string"
                       title: "MineSubsidenceScheduledCoverageLimit"
+                      default: "25000"
                     ConstructionType:
                       type: "string"
                       format: "string"
@@ -1995,6 +2004,7 @@ definitions:
                       type: "string"
                       format: "string"
                       title: "MineSubsidenceCoverage"
+                      enum:["All Buildings","Scheduled Buildings","No Coverage"]
                     MineSubsidenceApplies:
                       type: "string"
                       format: "string"
@@ -2003,6 +2013,7 @@ definitions:
                       type: "string"
                       format: "string"
                       title: "BuildingLimit"
+                      default: "25000"
                     FungiLimit:
                       type: "string"
                       format: "string"
@@ -2011,6 +2022,7 @@ definitions:
                       type: "string"
                       format: "string"
                       title: "RatingBasis"
+                      default: "Replacement Cost"
                     PctOwnerOccupied:
                       type: "string"
                       format: "string"
@@ -2020,6 +2032,7 @@ definitions:
                       type: "string"
                       format: "string"
                       title: "StructureType"
+                      enum: ["Non-Dwelling","Dwelling"]
                     BldgCodeEffectivenessGradeClass:
                       type: "string"
                       format: "string"
@@ -2065,6 +2078,7 @@ definitions:
                       type: "string"
                       format: "string"
                       title: "OptionalDeductible"
+                      default: "500"
                     BOPLocationMoneySecuritiesOnPremCoverageLimit:
                       type: "string"
                       format: "string"
@@ -2125,6 +2139,7 @@ definitions:
                       type: "string"
                       format: "string"
                       title: "WindHailDeductible"
+                      enum: ["1%","2%","5%","Not Applicable"]
                     EmployeeDishtyApply:
                       type: "string"
                       format: "string"

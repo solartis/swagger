@@ -3,8 +3,7 @@
 ---
 swagger: "2.0"
 info:
-  description: "To fetch all the latest changes made to a policy for Starr Business\
-    \ Owners Policy "
+  description: "To Rate the Renewing policy consolidating all the changes made it"
   version: "1.1.0.1"
   title: "Solartis Renewal Rate API for STARR Business Owners Policy"
 host: "starrbop.alpha.solartis.net"

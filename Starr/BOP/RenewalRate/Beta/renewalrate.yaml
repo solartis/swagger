@@ -2004,7 +2004,7 @@ definitions:
                       type: "string"
                       format: "string"
                       title: "MineSubsidenceCoverage"
-                      enum:["All Buildings","Scheduled Buildings","No Coverage"]
+                      enum: ["All Buildings","Scheduled Buildings","No Coverage"]
                     MineSubsidenceApplies:
                       type: "string"
                       format: "string"

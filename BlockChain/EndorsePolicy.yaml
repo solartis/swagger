@@ -252,6 +252,13 @@ definitions:
           WCDiseaseEmployeeLimit:
             title: "WCDiseaseEmployeeLimit"
             type: string
+          WCStatutoryOrOtherLimit:
+            title: "WCStatutoryOrOtherLimit"
+            type: string   
+          WCOthers:
+            title: "WCStatutoryOrOtherLimit"
+            type: string
+            default: "yes"
           WCDiseasePolicyLimit:
             title: "WCDiseasePolicyLimit"
             type: string

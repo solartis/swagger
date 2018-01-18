@@ -256,7 +256,7 @@ definitions:
             title: "WCStatutoryOrOtherLimit"
             type: string   
           WCOthers:
-            title: "WCStatutoryOrOtherLimit"
+            title: "WCOthers"
             type: string
             default: "yes"
           WCDiseasePolicyLimit:

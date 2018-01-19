@@ -1,7 +1,7 @@
 
 swagger: '2.0'
 info:
-  version: '1.1.0.1'
+  version: '1.0.0.1'
   title: Starr BOP - Renewal Policy  Issuance API
   description: Issuance API will validate the Payment & Quote Info & Process the Payment and on successful payment, Issues the Policy for the given Quote.  
 host: starrbop.alpha.solartis.net                     
@@ -45,7 +45,7 @@ paths:
           required: true
           type: string
           format: string
-          default: "1.1.0.1"
+          default: "1.0.0.1"
         - name: RenewalPolicy_Issuance
           in: body
           description: Renewal_Policy_Issuance
@@ -142,11 +142,11 @@ definitions:
             default: "RenewalPolicyIssuance"
           EventVersion:
              type: string
-             default: "1.1.0.1"
+             default: "1.0.0.1"
           QuoteNumber:
             title: "Quote Number"
             type: string
-            default: "QOT-45324"
+            default: "QOT-501487"
           PaymentCardNumber:
             title: "Payment Card Number"
             type: string
@@ -220,28 +220,25 @@ definitions:
   Policy_Issuance_Success_Response:
     type: object
     required:
-      - RequestStatus
+      - ResponseStatus
       - PaymentStatus
       - PolicyNumber
-      - PolicyStatus
       - EmailStatus
       - DocumentsInfoList
     properties:
-      RequestStatus:
-        type: string
-      QuoteNumber:
+      ResponseStatus:
         type: string
       Premium:
         type: string
-      QuoteStatus:
+      PolicyNumber:
         type: string
-      PaymentStatus:
+      QuoteNumber:
         type: string
         default: "Paid"
-      PolicyStatus:
+      QuoteStatus:
         type: string
         default: "ISSUED"
-      PolicyNumber: 
+      PaymentStatus: 
         type: string
       EmailStatus:
         type: string

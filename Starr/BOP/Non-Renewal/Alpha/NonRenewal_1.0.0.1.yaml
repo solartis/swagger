@@ -4,7 +4,7 @@ info:
   title: STARR Business Owners Policy - non - renewal API
   description: Non renewal API is used to generate the non renewal pdf to insured.
   
-host: starrbop.alpha.solartis.net
+host: starrbop.beta.solartis.net
 basePath: /DroolsV6/DroolsService
 schemes:
   - https

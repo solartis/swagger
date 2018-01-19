@@ -41,7 +41,7 @@ paths:
           required: true
           type: string
           format: string
-          default: "Nonrenewal"
+          default: "IssueNonrenewal"
           
         - name: EventVersion
           in: header
@@ -121,7 +121,7 @@ definitions:
          properties:
            EventName:
             type: string
-            default: "Nonrenewal"
+            default: "IssueNonrenewal"
            EventVersion: 
             type: string
             default: "1.0.0.1"

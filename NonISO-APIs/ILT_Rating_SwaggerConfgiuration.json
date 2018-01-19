@@ -1,0 +1,271 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"version": "1.0.0",
+		"title": "Solartis Rate API for ILT",
+		"description": "To get rate for Leisure Travel from Solartis Rate API.Umbrella insurance is extra liability insurance."
+	},
+	"host": "sademokb.uat.solartis.net",
+	"basePath": "/DroolsV4_2/DroolsService",
+	"schemes": [
+		"https"
+	],
+	"produces": [
+		"application/json"
+	],
+	"consumes": [
+		"application/json"
+	],
+	"paths": {
+		"/FireEventV2": {
+			"post": {
+				"description": "Gets Rate for Leisure Travel",
+				"operationId": "getRates",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"name": "Token",
+						"in": "header",
+						"description": "Authentication Token",
+						"required": true,
+						"type": "string",
+						"format": "string",
+						"default": "iMgdpnp436QjuYQ2tn9HU+SgJDsyFW8kDSoLHGwadQKpl/wr4yKoVMjkSfJB/FKqjFqrLmebBUqmHM/dVAMv+DDPaXOt/GY7mjWZXGT2z0C5cMldq5ghrNRFqvYrAXiI506Ue4quZZNMZosssVnBIFbnbLVHo4e9WNp/4X9Sai/5LrKZ1J99H71yIi/9rXsAKhCk5lGzFaO3SXLwJluxpsUM+5MiljDi4NFM+/K0KPeUOuL8R2FZD9RobXBVvR7xPdH1oZ71jBgOmg59/75ugVgJ/35PRXWc1Emi9SPqQHHEmsD4AoH2xj45UGMY3hjx0sz/uABSHKxNwA8DwPTBS7jaN2XqKLCayPsSWHVH04XW+ZeDaw1iRLb/0euQfXT97fiPQgPQSjtDvxif6cFXZQX/BHYIcAUjZtdcuv098quieEPaIWri6DUFEIzf/uRM7R4itGHIU7/B0cMwwQNFhxjtMVAgSBq7Kw4a8kf5s+2XOip5XV3KeT5U4u8HX6/xdKxhpP8gLng6PoGj0MEnSugWYicqO81QJH2UISAaI3iDgNxzCSFmsAChwURz5g/RRmHqLknkxHh4lvFfjQGlTIfdNwW+CwHbg0EQFt/c/4M6CofYIAQVzElcVRih/j88U7EqGr8v1mrTPel1sBXl+auuXSlODNRoeDVogcqA1Fr9504oM1kbCEmrVIqjUxUmK9a8CWsZEjIYiNuY0KncVKuuXSlODNRoeDVogcqA1Foa9LkTsAlC3ItSy+gbt0NdLaJdXbWS8ClBkbddTRCbeWRNMZNDq/vS1JTb8FKCl5OsniK5MZQnMbZdqNHlqbv2WOw2j+jUU0BThnDgEX6XEjSt7SoS1Xd6+F4DyPRZsQbD7XGhOWwTgbKALHDL6LviA3K4dHjVKHv1xOd8L284LsWKpOWqHf8xYqRIiCHZgQEtSRZCdfQPbklkXKGNaTjD"
+					},
+					{
+						"name": "Content-Type",
+						"in": "header",
+						"description": "Content Type",
+						"required": true,
+						"type": "string",
+						"format": "string",
+						"default": "application/json"
+					},
+					{
+						"name": "EventName",
+						"in": "header",
+						"description": "EventName",
+						"required": true,
+						"type": "string",
+						"format": "string",
+						"default": "InvokeRatingV2"
+					},
+					{
+						"name": "Rating Request",
+						"in": "body",
+						"description": "For rating request",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/Rating_Request"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"schema": {
+							"$ref": "#/definitions/Rating_Success_Response"
+						}
+					},
+					"default": {
+						"description": "unexpected error",
+						"schema": {
+							"$ref": "#/definitions/errorModel"
+						}
+					}
+				}
+			}
+		}
+	},
+	"definitions": {
+		"Rating_Request": {
+			"type": "object",
+			"properties": {
+			  				"ServiceRequestDetail": {
+					"type": "object",
+					"properties": {
+						"ServiceRequestVersion": {
+							"type": "string",
+							"default": "1.0"
+						},
+						"ServiceResponseVersion": {
+							"type": "string",
+							"default": "1.0"
+						},
+						"OwnerId": {
+							"type": "string",
+							"default": "15"
+						},
+						"ResponseType": {
+							"type": "string",
+							"enum": [
+								"JSON",
+								"XML"
+							],
+							"default": "JSON"
+						},
+						"RegionCode": {
+							"type": "string",
+							"default": "US"
+						},
+						"Token": {
+							"type": "string",
+							"default": "iMgdpnp436QjuYQ2tn9HU+SgJDsyFW8kDSoLHGwadQKpl/wr4yKoVMjkSfJB/FKqjFqrLmebBUqmHM/dVAMv+DDPaXOt/GY7mjWZXGT2z0C5cMldq5ghrNRFqvYrAXiI506Ue4quZZNMZosssVnBIFbnbLVHo4e9WNp/4X9Sai/5LrKZ1J99H71yIi/9rXsAKhCk5lGzFaO3SXLwJluxpsUM+5MiljDi4NFM+/K0KPeUOuL8R2FZD9RobXBVvR7xPdH1oZ71jBgOmg59/75ugVgJ/35PRXWc1Emi9SPqQHHEmsD4AoH2xj45UGMY3hjx0sz/uABSHKxNwA8DwPTBS7jaN2XqKLCayPsSWHVH04XW+ZeDaw1iRLb/0euQfXT97fiPQgPQSjtDvxif6cFXZQX/BHYIcAUjZtdcuv098quieEPaIWri6DUFEIzf/uRM7R4itGHIU7/B0cMwwQNFhxjtMVAgSBq7Kw4a8kf5s+2XOip5XV3KeT5U4u8HX6/xdKxhpP8gLng6PoGj0MEnSugWYicqO81QJH2UISAaI3iDgNxzCSFmsAChwURz5g/RRmHqLknkxHh4lvFfjQGlTIfdNwW+CwHbg0EQFt/c/4M6CofYIAQVzElcVRih/j88U7EqGr8v1mrTPel1sBXl+auuXSlODNRoeDVogcqA1Fr9504oM1kbCEmrVIqjUxUmK9a8CWsZEjIYiNuY0KncVKuuXSlODNRoeDVogcqA1Foa9LkTsAlC3ItSy+gbt0NdLaJdXbWS8ClBkbddTRCbeWRNMZNDq/vS1JTb8FKCl5OsniK5MZQnMbZdqNHlqbv2WOw2j+jUU0BThnDgEX6XEjSt7SoS1Xd6+F4DyPRZsQbD7XGhOWwTgbKALHDL6LviA3K4dHjVKHv1xOd8L284LsWKpOWqHf8xYqRIiCHZgQEtSRZCdfQPbklkXKGNaTjD"
+						},
+						"UserName": {
+							"type": "string",
+							"default": "travelagent"
+						},
+						"LanguageCode": {
+							"type": "string",
+							"default": "en"
+						},
+					}
+				},
+				"QuoteInformation": {
+					"type": "object",
+					"properties": {
+						"ProductID": {
+							"type": "string",
+							"default": "619"
+						},
+						"ProductVerID": {
+							"type": "string",
+							"default": "706"
+						},
+						"ProductNumber": {
+							"type": "string",
+							"default": "ILT"
+						},
+						"ProductVerNumber": {
+							"type": "string",
+							"default": "1.0"
+						},
+						"ProducerCode": {
+							"type": "string",
+							"default": "86201"
+						},
+						"OwnerId": {
+							"type": "string",
+							"default": "15"
+						},
+						"PlanName": {
+							"type": "string",
+							"default": "Air Ticket Protector"
+						},
+						"PlanCode": {
+							"type": "string",
+							"default": "1"
+						},
+						"DepartureDate": {
+							"type": "string",
+							"default": "06/25/2017"
+						},
+						"ReturnDate": {
+							"type": "string",
+							"default": "06/31/2017"
+						},
+						"DepositDate": {
+							"type": "string",
+							"default": "06/03/2017"
+						},
+						"DestinationCountry": {
+							"type": "string",
+							"default": "France"
+						},
+						"PolicyEffectiveDate": {
+							"type": "string",
+							"default": "06/25/2017"
+						},
+						"StateCode": {
+							"type": "string",
+							"default": "GA"
+						},
+						"QuoteType": {
+							"type": "string",
+							"default": "New Business"
+						},
+						"EventName": {
+							"type": "string",
+							"default": "InvokeRatingV2"
+						},
+				"TravelerList":{
+					"type": "array",
+					"items":{
+					  "properties": {
+						  "TravelerDOB": {
+							  "type": "string",
+							  "default": "02/14/1990"
+						  },
+						  "TravelCost": {
+							  "type": "string",
+							  "default": "2500"
+						  }
+					}
+				}
+				}
+					}
+				}
+			}
+		},
+		"Rating_Success_Response": {
+			"type": "object",
+			"properties": {
+				"messageDetail": {
+					"type": "object"
+				},
+				"ResponseStatus": {
+					"type": "string"
+				},
+				"Policy": {
+					"type": "object"
+				}
+			}
+		},
+		"errorModel": {
+			"type": "object",
+			"required": [
+				"RequestStatus",
+				"MessageDetail"
+			],
+			"properties": {
+				"RequestStatus": {
+					"type": "string"
+				},
+				"MessageDetail": {
+					"type": "object",
+					"properties": {
+						"MessageCode": {
+							"type": "string"
+						},
+						"MessageType": {
+							"type": "string"
+						},
+						"UserMessage": {
+							"type": "string"
+						},
+						"MessageLevel": {
+							"type": "string"
+						},
+						"MessageSeverity": {
+							"type": "string"
+						},
+						"MessageList": {
+							"type": "object",
+							"properties": {
+								"Message": {
+									"type": "array",
+									"items": {
+										"type": "string"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -3,7 +3,7 @@
 	"info": {
 		"version": "1.0.0",
 		"title": "Solartis Rate API for ILT",
-		"description": "To get rate for Leisure Travel from Solartis Rate API.Umbrella insurance is extra liability insurance."
+		"description": "To get rate for Leisure Travel from Solartis Rate API."
 	},
 	"host": "sademokb.uat.solartis.net",
 	"basePath": "/DroolsV4_2/DroolsService",

@@ -410,67 +410,67 @@ definitions:
                     format: "string"
                     title: "UWQuestionId"
              AdditionalInsuredList:
-                  type: array
-                  items:
-                    properties:
-                      AdditionalInsuredType:
-                        type: string
-                        title: "AdditionalInsuredType"
-                      AdditionalInsuredDetail:
-                        type: array
-                        items:
-                         properties:
-                           AINumber:
-                             type: string
-                             title: "AINumber"
-                           AIName:
-                             type: string
-                             title: "AIName"
-                           Action:
-                             type: string
-                             title: "Action"
-                           TypeRisk:
-                            type: string
-                            title: "TypeRisk"
-                           AddressLine1:
-                            type: string
-                            title: "AddressLine1"
-                           AddressLine2:
-                            type: string
-                            title: "AddressLine2"
-                           County:
-                            type: string
-                            title: "County"
-                           City:
-                            type: string
-                            title: "City"
-                           ZipCode:
-                            type: string
-                            title: "ZipCode"
-                           State:
-                            type: string
-                            title: "State"
-                           YourProducts:
-                            type: string
-                            title: "YourProducts"
-                           LocAndDescOfCompOperations:
-                            type: string
-                            title: "LocAndDescOfCompOperations"
-                           DescOfLeasedEquipment:
-                            type: string
-                            title: "DescOfLeasedEquipment"
-                           LossPayableApplicableClause:
-                            type: string
-                            title: "LossPayableApplicableClause"
-                           DescOfProperty:
-                            type: string
-                            title: "DescOfProperty"
-                           COIDescription:
-                            type: string
-                            title: "COIDescription"
-                           AdditionalInsuredPolicyTermPremium:
-                            type: string
-                            title: "AdditionalInsuredPolicyTermPremium"
+               type: array
+               items:
+                properties:
+                  AdditionalInsuredType:
+                    type: string
+                    title: "AdditionalInsuredType"
+                  AdditionalInsuredDetail:
+                    type: array
+                    items:
+                     properties:
+                       AINumber:
+                         type: string
+                         title: "AINumber"
+                       AIName:
+                         type: string
+                         title: "AIName"
+                       Action:
+                         type: string
+                         title: "Action"
+                       TypeRisk:
+                         type: string
+                         title: "TypeRisk"
+                       AddressLine1:
+                         type: string
+                         title: "AddressLine1"
+                       AddressLine2:
+                         type: string
+                         title: "AddressLine2"
+                       County:
+                         type: string
+                         title: "County"
+                       City:
+                         type: string
+                         title: "City"
+                       ZipCode:
+                         type: string
+                         title: "ZipCode"
+                       State:
+                         type: string
+                         title: "State"
+                       YourProducts:
+                         type: string
+                         title: "YourProducts"
+                       LocAndDescOfCompOperations:
+                         type: string
+                         title: "LocAndDescOfCompOperations"
+                       DescOfLeasedEquipment:
+                         type: string
+                         title: "DescOfLeasedEquipment"
+                       LossPayableApplicableClause:
+                         type: string
+                         title: "LossPayableApplicableClause"
+                       DescOfProperty:
+                         type: string
+                         title: "DescOfProperty"
+                       COIDescription:
+                         type: string
+                         title: "COIDescription"
+                       AdditionalInsuredPolicyTermPremium:
+                         type: string
+                         title: "AdditionalInsuredPolicyTermPremium"   
              TRIPTerminatesBeforeExpirationDate:
                type: "string"
                format: "string"

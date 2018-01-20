@@ -1,0 +1,382 @@
+swagger: '2.0'
+info:
+  version: "1.0.0"
+  title: Solartis Service to Create Policy in BlockChain
+  description: To create Policy in BlockChain network using Solartis Service
+  
+  
+host: starrbopucikbv4-3.solartis.net
+basePath: /BCService/service
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /createPolicy:
+    post:
+      description: Create Policy in BlockChain
+      operationId: createPolicy
+      produces:
+        - application/json
+      parameters:
+        - name: Create Policy
+          in: body
+          description: Create Policy
+          required: true
+          schema:
+            $ref: '#/definitions/CreatePolicy_Request'
+      responses:
+        '200':
+          description: Success Response
+          schema:
+            $ref: '#/definitions/CreatePolicy_Success_Response'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/errorModel'
+
+definitions:
+  CreatePolicy_Request:
+    type: object
+    required:
+      - ServiceRequestDetail
+    properties:
+      BlockChainURL:
+        title: "BlockChainURL"
+        type: string
+        default: "http://solbctify.westus.cloudapp.azure.com:8545"
+      InsuredContractAddress:
+        title: "Insured Contract Address"
+        type: string
+      ProductName:
+        title: "ProductName"
+        type: string
+        default: "General Liability Policy"
+      ProductNumber:
+        title: "ProductNumber"
+        type: string
+        default: "GL101"
+      ProductVerNumber:
+        title: "ProductVerNumber"
+        type: string
+        default: "2.0"
+      InsurerName: 
+        title: "Insurer Name"
+        type: string
+        default: "General Liability Carrier B"
+      InsurerNAICNumber: 
+        title: "Insurer NAIC Number"
+        type: string
+        default: "399999"
+      InsuranceType: 
+        title: "InsuranceType"
+        type: string
+        default: "GeneralLiability"
+      InsurerCommunicationDetail: 
+        type: object
+        properties:
+            Address: 
+                title: "Address"
+                type: string
+                default: "399 park avenue, New York, NY, 10222, USA"
+            Phone: 
+                title: "Phone"
+                type: string
+                default: "+1 444 555 5512"
+            Email: 
+                title: "Email"
+                type: string
+                default: "test@solartis.net"
+            Fax: 
+                title: "Fax"
+                type: string
+                default: "+1 444 555 5512"
+      AgencyName:
+        title: "AgencyName"
+        type: string
+        default: "ABC Insure"
+      AgencyCode:
+        title: "AgencyCode"
+        type: string
+        default: "AG1234"
+      AgencyCommunicationDetail:
+        type: object
+        properties:
+          Address:
+            title: "Address"
+            type: string
+            default: "399 park avenue, New York, NY, 10222, USA"
+          Phone:
+            title: "Phone"
+            type: string
+            default: "+1 444 555 5512"
+          Email:
+            title: "Email"
+            type: string
+            default: "test@solartis.net"
+          Fax:
+            title: "Fax"
+            type: string
+            default: "+1 444 555 5512"
+      AgentName:
+        title: "AgentName"
+        type: string
+        default: "Ned Stark"
+      AgentCode:
+        title: "AgentCode"
+        type: string
+        default: "AT12345"
+      AgentCommunicationDetail:
+        type: object
+        properties:
+          Address:
+            title: "Address"
+            type: string
+            default: "399 park avenue, New York, NY, 10222, USA"
+          Phone:
+            title: "Phone"
+            type: string
+            default: "+1 444 555 5512"
+          Email:
+            title: "Email"
+            type: string
+            default: "test@solartis.net"
+          Fax:
+            title: "Fax"
+            type: string
+            default: "+1 444 555 5512"
+      InsuredName:
+        title: "InsuredName"
+        type: string
+        default: "Westfield Topanga & The Village Mall"
+      AddressLine1: 
+        title: "AddressLine1"
+        type: string
+        default: "1388 park street"
+      AddressLine2: 
+        title: "AddressLine2"
+        type: string
+        default: "Blvd. Opp to Bloomingdale"
+      City: 
+        title: "City"
+        type: string
+        default: "Portage"
+      State: 
+        title: "State"
+        type: string
+        default: "MI"
+      Zipcode: 
+        title: "Zipcode"
+        type: string
+        default: "49002"
+      Country: 
+        title: "Country"
+        type: string
+        default: "United States"
+      Phone: 
+        title: "Phone"
+        type: string
+        default: "+1 404 555 5512"
+      Email: 
+        title: "Email"
+        type: string
+        default: "test@solartis.com"
+      InsuredContactAddress: 
+        title: "InsuredContactAddress"
+        type: string
+        default: "1388 park street, Portage, MI, 49002, USA"
+      InsuredContactPhone: 
+        title: "InsuredContactPhone"
+        type: string
+        default: "+1 405 555 5512"
+      InsuredContactEmail: 
+        title: "InsuredContactEmail"
+        type: string
+        default: "test@solartis.com"
+      InsuredCommunicationDetail:
+        type: object
+        properties:
+          Address:
+            title: "Address"
+            type: string
+            default: "399 park avenue, New York, NY, 10222, USA"
+          Phone:
+            title: "Phone"
+            type: string
+            default: "+1 444 555 5512"
+          Email:
+            title: "Email"
+            type: string
+            default: "test@solartis.net"
+          Fax:
+            title: "Fax"
+            type: string
+            default: "+1 444 555 5512"
+      InsuredContactName:
+        title: "InsuredContactName"
+        type: string
+        default: "Westfield Topanga & The Village Mall"
+      InsuredContactCommunicationDetail:
+        type: object
+        properties:
+          Address:
+            title: "Address"
+            type: string
+            default: "399 park avenue, New York, NY, 10222, USA"
+          Phone:
+            title: "Phone"
+            type: string
+            default: "+1 444 555 5512"
+          Email:
+            title: "Email"
+            type: string
+            default: "test@solartis.net"
+          Fax:
+            title: "Fax"
+            type: string
+            default: "+1 444 555 5512"
+      PolicyNumber:
+        title: "PolicyNumber"
+        type: string
+        default: "991000207109"
+      PolicyDocumentURL:
+        title: "PolicyDocumentURL"
+        type: string
+        default: "https://pdfservice.solartis.net/DocRetriever/Document/Starr/BOP/QuotePDFs/895643/StarrInsure_ISSUANCE_AUG-11-2017-16-13-47.pdf"
+      PolicyEffectiveDate:
+        title: "PolicyEffectiveDate"
+        type: string
+        default: "2017-03-01"
+      PolicyExpirationDate:
+        title: "PolicyExpirationDate"
+        type: string
+        default: "2018-03-02"
+      PolicyPremium:
+        title: "PolicyPremium"
+        type: string
+        default: "1327.00"
+      PolicyStatus:
+        title: "PolicyStatus"
+        type: string
+        default: "ISSUED"
+      CoverageInformation:
+        title: "CoverageInformation"
+        type: object
+        properties:
+          GLCommercialGeneralLiabilityAvailable:
+            title: "GLCommercialGeneralLiabilityAvailable"
+            type: string
+            enum: ["Yes","No"]
+            default: "Yes"
+          GLClaimsMade:
+            title: "GLClaimsMade"
+            type: string
+            enum: ["Yes","No"]
+            default: "No"
+          GLOccuranceMade:
+            title: "GLOccuranceMade"
+            type: string
+            enum: ["Yes","No"]
+            default: "Yes"
+          GLAdditionalCoverage1:
+            title: "GLAdditionalCoverage1"
+            type: string
+          GLAdditionalCoverage2:
+            title: "GLAdditionalCoverage2"
+            type: string
+          GLAggregateLimitAppliesPerPolicy:
+            title: "GLAggregateLimitAppliesPerPolicy"
+            type: string
+            enum: ["Yes","No"]
+            default: "Yes"
+          GLAggregateLimitAppliesPerProject:
+            title: "GLAggregateLimitAppliesPerProject"
+            type: string
+            enum: ["Yes","No"]
+            default: "No"
+          GLAggregateLimitAppliesPerLocation:
+            title: "GLAggregateLimitAppliesPerLocation"
+            type: string
+            enum: ["Yes","No"]
+            default: "No"
+          GLAdditionalInsuredAvailable:
+            title: "GLAdditionalInsuredAvailable"
+            type: string
+            enum: ["Yes","No"]
+            default: "Yes"
+          GLWaiverOfSubragationApplicable:
+            title: "GLWaiverOfSubragationApplicable"
+            type: string
+            enum: ["Yes","No"]
+            default: "Yes"
+          GLEachOccuranceLimit:
+            title: "GLEachOccuranceLimit"
+            type: string
+            enum: ["300000","500000","1000000","2000000"]
+            default: "500000"
+          GLMedicalExpensesLimit:
+            title: "GLMedicalExpensesLimit"
+            type: string
+            default: "5000"
+          GLPersonalAndAdventureInjuryLimit:
+            title: "GLPersonalAndAdventureInjuryLimit"
+            type: string
+            default: ""
+          GLGeneralAggregateLimit:
+            title: "GLGeneralAggregateLimit"
+            type: string
+            enum: ["600000","1000000","2000000","4000000"]
+            default: "1000000"
+          GLProductsAggregateLimit:
+            title: "GLProductsAggregateLimit"
+            type: string
+            enum: ["600000","900000","1000000","1500000","2000000","3000000","4000000","6000000"]
+            default: "1000000"
+      ServiceRequestDetail:
+        type: object
+        properties:
+          ServiceRequestVersion:
+            type: string
+            default: "1.0"
+          LanguageCode:
+            type: string
+            default: "en"
+          UserName:
+            type: string
+            default: "BOPAgent"
+          OwnerId:
+            type: string
+            default: "24"
+          Token:
+            type: string
+            default: "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"
+          ServiceResponseVersion:
+            type: string 
+            default: "1.0"
+          BrowserIp:
+            type: string 
+            default: "111.44.20.341"
+          ResponseType:
+            type: string
+            enum: ["JSON","XML"]
+            default: "JSON"
+            
+  CreatePolicy_Success_Response:
+    type: object
+    properties:
+      Status:
+        title: "Status"
+        type: string
+        default: "SUCCESS"
+      PolicyContractAddress:
+        title: "PolicyContractAddress"
+        type: string
+      FirstSavePolicyTransactionHash:
+        title: "FirstSavePolicyTransactionHash"
+        type: string
+                    
+       
+  errorModel:
+    type: string

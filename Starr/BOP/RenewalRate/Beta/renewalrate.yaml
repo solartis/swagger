@@ -15,7 +15,7 @@ produces:
 paths:
   /FireEventV2:
     post:
-      description: Gets Quote for General Liability based on ISO ERC
+      description: To Rate the Renewing policy with the latest changes made to it 
       operationId: getRates
       produces:
         - application/json

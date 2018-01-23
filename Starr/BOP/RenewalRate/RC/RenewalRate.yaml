@@ -116,15 +116,15 @@ definitions:
         RenewingPolicyNumber:
          title: "Renewing Policy Number"
          type: string
-         default: "1000206243"
+         default: "1000207728"
         RenewalEffectiveDate: 
          title: "Renewal Effective Date"
          type: string
-         default: "2018-10-01"
+         default: "2018-04-01"
         RenewalExpirationDate:
          title: "Renewal Expiration Date"
          type: string
-         default: "2019-10-01"
+         default: "2019-04-01"
         ProductVerNumber:
          title: "Product Version Number"
          type: string
@@ -252,7 +252,7 @@ definitions:
         LastRateLookUpDate:
          title: "LastRateLookUpDate"
          type: string
-         default: "2018-01-19"
+         default: "2018-01-23"
         InsuredState:
          title: "InsuredState"
          type: string

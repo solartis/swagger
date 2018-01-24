@@ -4,8 +4,7 @@ info:
   title: Solartis Service to Endorse Policy in BlockChain
   description: To endorse Policy in BlockChain network using Solartis Service
   
-  
-host: starrbopucikbv4-3.solartis.net
+host: blchdemov4-3.solartis.net
 basePath: /BCService/service
 schemes:
   - https
@@ -14,7 +13,7 @@ consumes:
 produces:
   - application/json
 paths:
-  /createPolicy:
+  /createPolicyV2:
     post:
       description: Endorse Policy in BlockChain
       operationId: endorsePolicy
@@ -177,100 +176,150 @@ definitions:
           ALAdditionalCoverage1:
             title: "ALAdditionalCoverage1"
             type: string
+            default: "Theft Coverage"
           ALAdditionalCoverage2:
             title: "ALAdditionalCoverage2"
             type: string
+            default: "Fire Coverage"
           ALAdditionalInsuredAvailable:
             title: "ALAdditionalInsuredAvailable"
             type: string
+            enum: ["Yes","No"]
+            default: "Yes"
           ALAutomobileAvailable:
             title: "ALAutomobileAvailable"
             type: string
+            enum: ["Yes","No"]
+            default: "Yes"
           ALBodilyInjuryPerAccidentLimit:
             title: "ALBodilyInjuryPerAccidentLimit"
             type: string
+            default: "10000"
           ALBodilyInjuryPerPersonLimit:
             title: "ALBodilyInjuryPerPersonLimit"
             type: string
+            default: "20000"
           ALCombinedSingleLimit:
             title: "ALCombinedSingleLimit"
             type: string
+            default: "50000"
           ALHiredAutos:
             title: "ALHiredAutos"
             type: string
+            enum: ["Yes","No"]
+            default: "Yes"
           ALNonOwnedAuots:
             title: "ALNonOwnedAuots"
             type: string
+            enum: ["Yes","No"]
+            default: "Yes"
           ALOwnedAutos:
             title: "ALOwnedAutos"
             type: string
+            enum: ["Yes","No"]
+            default: "Yes"
           ALPropertyDamageLimit:
             title: "ALPropertyDamageLimit"
             type: string
+            default: "450000"
           ALScheduledAutos:
             title: "ALScheduledAutos"
             type: string
           ALWaiverOfSubragationApplicable:
             title: "ALWaiverOfSubragationApplicable"
             type: string
+            enum: ["Yes","No"]
+            default: "Yes"
           ULAdditionalInsuredAvailable:
             title: "ULAdditionalInsuredAvailable"
             type: string
+            enum: ["Yes","No"]
+            default: "Yes"
           ULAggregateLimit:
             title: "ULAggregateLimit"
             type: string
+            default: "100000"
           ULClaimsMade:
             title: "ULClaimsMade"
             type: string
+            enum: ["Yes","No"]
+            default: "Yes"
           ULDeduction:
             title: "ULDeduction"
             type: string
+            enum: ["Yes","No"]
+            default: "Yes"
           ULEachOccuranceLimit:
             title: "ULEachOccuranceLimit"
             type: string
+            default: "50000"
           ULExcessLiability:
             title: "ULExcessLiability"
             type: string
+            enum: ["Yes","No"]
+            default: "Yes"
           ULOccuranceMade:
             title: "ULOccuranceMade"
             type: string
+            enum: ["Yes","No"]
+            default: "Yes"
           ULRetention:
             title: "ULRetention"
             type: string
+            enum: ["Yes","No"]
+            default: "Yes"
           ULUmbrellaLiabilityAvailable:
             title: "ULUmbrellaLiabilityAvailable"
             type: string
+            enum: ["Yes","No"]
+            default: "Yes"
           ULWaiverOfSubragationApplicable:
             title: "ULWaiverOfSubragationApplicable"
             type: string
+            enum: ["Yes","No"]
+            default: "Yes"
           WCAdditionalInsuredAvailable:
             title: "WCAdditionalInsuredAvailable"
             type: string
+            enum: ["Yes","No"]
+            default: "Yes"
           WCAnyProprietorMemberIncluded:
             title: "WCAnyProprietorMemberIncluded"
             type: string
+            enum: ["Yes","No"]
+            default: "Yes"
           WCDiseaseEmployeeLimit:
             title: "WCDiseaseEmployeeLimit"
             type: string
+            default: "100000"
           WCStatutoryOrOtherLimit:
             title: "WCStatutoryOrOtherLimit"
-            type: string   
+            type: string 
+            default: "100000"
           WCOthers:
             title: "WCOthers"
             type: string
-            default: "yes"
+            enum: ["Yes","No"]
+            default: "Yes"
           WCDiseasePolicyLimit:
             title: "WCDiseasePolicyLimit"
             type: string
+            enum: ["Yes","No"]
+            default: "Yes"
           WCEachAccident:
             title: "WCEachAccident"
             type: string
+            default: "100000"
           WCStatutoryLimits:
             title: "WCStatutoryLimits"
             type: string
+            enum: ["Yes","No"]
+            default: "Yes"
           WCWaiverOfSubragationApplicable:
             title: "WCWaiverOfSubragationApplicable"
             type: string
+            enum: ["Yes","No"]
+            default: "Yes"
 
 
   EndorsePolicy_Success_Response:

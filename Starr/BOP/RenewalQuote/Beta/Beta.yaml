@@ -4,7 +4,7 @@ info:
   title: Solartis Renewal Quote API for STARR Business Owners Policy
   description: To create quote for the Renewing policy with the latest changes made to it
 
-host: starrbop.beta.solartis.net
+host: qasbopkbv6.beta.solartis.net
 basePath: /DroolsV6/DroolsService
 schemes:
   - https

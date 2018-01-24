@@ -5,7 +5,7 @@ info:
   description: To create Policy in BlockChain network using Solartis Service
   
   
-host: starrbopucikbv4-3.solartis.net
+host: blchdemov4-3.solartis.net
 basePath: /BCService/service
 schemes:
   - https
@@ -14,7 +14,7 @@ consumes:
 produces:
   - application/json
 paths:
-  /createPolicy:
+  /createPolicyV2:
     post:
       description: Create Policy in BlockChain
       operationId: createPolicy

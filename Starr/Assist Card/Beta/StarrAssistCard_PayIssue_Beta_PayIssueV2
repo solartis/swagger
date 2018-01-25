@@ -14,7 +14,7 @@ info:
     name: Solartis Support
     email: solartis_solartis_support@solartis.com
 
-host: sakb.solartis.net
+host: qasakbv4-2.solartis.net
 basePath: /DroolsV4_2/DroolsService
 schemes:
   - https

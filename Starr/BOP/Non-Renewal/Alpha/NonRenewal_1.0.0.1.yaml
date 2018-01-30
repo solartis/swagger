@@ -139,7 +139,10 @@ definitions:
             default: "Not Interested"
            GroupingofNonrenewalReason:
             type: string
-            default: "Block Withdrawal of Business"
+            default: "None of the Above"
+           SendEmail:
+            type: string
+            default: "Yes"
            
   non-renewal_Success_Response:
     type: object

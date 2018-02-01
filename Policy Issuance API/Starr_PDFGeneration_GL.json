@@ -1,0 +1,635 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"version": "1.0.0",
+		"title": "Solartis PDF Generation for General Liability",
+		"description": "To generate PDF Generation for General Liability."
+	},
+	"host": "starrsgl.rc.solartis.net",
+	"basePath": "/DroolsV6/DroolsService",
+	"schemes": [
+		"https"
+	],
+	"produces": [
+		"application/json"
+	],
+	"consumes": [
+		"application/json"
+	],
+	"paths": {
+		"/FireEventV2": {
+			"post": {
+				"description": "generate PDF Generation for General Liability",
+				"operationId": "generatepdf",
+				"produces": [
+					"application/json"
+				],
+				"parameters":[
+				  {
+						"name": "Token",
+						"in": "header",
+						"description": "Authentication Token",
+						"required": true,
+						"type": "string",
+						"format": "string",
+						"default": "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"
+					},
+					{
+						"name": "Content-Type",
+						"in": "header",
+						"description": "Content Type",
+						"required": true,
+						"type": "string",
+						"format": "string",
+						"default": "application/json"
+					},
+					{
+						"name": "EventName",
+						"in": "header",
+						"description": "EventName",
+						"required": true,
+						"type": "string",
+						"format": "string",
+						"default": "GeneratePolicyPDF_V1"
+					},
+					{
+						"name": "Rating Request",
+						"in": "body",
+						"description": "For rating request",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/Request"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"schema": {
+							"$ref": "#/definitions/Success_Response"
+						}
+					},
+					"default": {
+						"description": "unexpected error",
+						"schema": {
+							"$ref": "#/definitions/errorModel"
+						}
+					}
+				}
+			}
+		}
+	},
+	"definitions": {
+		"Request": {
+			"type": "object",
+			"properties": {
+				"ServiceRequestDetail": {
+					"type": "object",
+					"properties": {
+						"ServiceRequestVersion": {
+							"type": "string",
+							"default": "1.0"
+						},
+						"LanguageCode": {
+							"type": "string",
+							"default": "en"
+						},
+						"UserName": {
+							"type": "string",
+							"default": "StarrGLagent"
+						},
+						"OwnerId": {
+							"type": "string",
+							"default": "30"
+						},
+						"RegionCode": {
+							"type": "string",
+							"default": "US"
+						},
+						"Token": {
+							"type": "string",
+							"default": "quDy6DutWhAE0Rd5Tt88sSBBUI1k1zz3sqOKqy3mIo/7GYS1mgyQwmWKRKuwgGuBzl4ENRvqwDmLSAn4/m/L5NsMCtnC0R5U3Q7euxBBmB2Jqb9VWHSb2O2SwIfnyizjCTwoDGAvcvz4qDNYaBhrIfKXrtSYYt7SJuO461vVCTiIB7pzAypPafFKsGJa84hB3vpmLsVxh6FAJ+phs8c+0DK2oAcQtzaCOFByuZ4+XQ1vgMiCpzYgOruahP+cSYckHwDbro+XhBNRfHlOTdp50tUxqvV2t9Pexgu6NrEMz6yMTdLF2Mk5xOzbiXMxJyX5k0LReWL8wd3DxT47Ic799wGGPma2X4X5Dl0k/pIJNxPHi4hIuT/FeMRT+Sv5PdiGLMRloMlTqWWQHx1xMvq5ZWtvhQFd0/e7LO2PH1E0eTcttwCa9p4z3uhYcfOyvKzgciAiEK/41QgPegRwQTQgt8+DMseTnKTEJCEokI4qUwaBcBsZyTIqRBr+IaBtQpIEsarCnNsEpzNpX4h3nUeLxwDQPc0Bdmfh9HPltrNhFUPXzzSkaGMx9UyWDg3JPA8rxiq2DRdukMPfuw9tNqK6qipIqhLHHaq66anBQ5T2cuKYDhaKNusc1s0oxW7YSkjDWLkXDXVXsXfaZaSSgPo5h5RTH66tBq/QkzLnWlpCPuLsaMELWXBiXp6PRoD/d2SAgh+iEnE/07MQorzv3C3S3pQxYT8mJ8ys53MaZyP0M/tAdtPlpa8ZzBqKv0O3/582gpbQEv3N814OZWIOO97FrHSyC1hTtYvNArNHCQqk6stLYSidO4L/7kjf76XBJg8CdXaLdBpz+LcK6o/vVDiC7A5os+7m/xnw8jMEoQb4mWaGT7HsZ6O0nnu7zsQhU5fngI2RwFy9bwNl0pUdxzfbulO4Wq4AzRyvaHYrnYt7QRgEAhUob2KM7jZtSEIzCIY+xXXSP9kYFbIlRJ25vCPJV4GhFstLwf+o0So7dFKTk8BEhY/N8d3dS2+fGGy8Hs+mfy8wJrz3gu+QFYbeaGiTPgfq/IT2FtW7I124VBcWJEsNc45fwBYjECp4zghKA2rkm0z1l5zqJV0lX/NhJtl/w4lFAkS5M0bc5Vsg+9YeRycFICllMHeBHheIQmL43oaBDG4LFzXiV1vxDoJaNHlHUOmfetqsjpZeddyHiDaTps6wNF9OOBToZZDDlz0SNPDzYLVfNJFGWiZSLNX2/J3tWFrtcBDp1qE8zvWmVNCvaH67acOLcDFbNo26872WR9z8XGAsbCP0zQqYSppMEXaz5Jta6iIaer/WQk/EWy/W1Ab1Y8xyb1zepLexNkMEl8nlUh3qVafObcTBgH+9kIF5HaNzo0SJzcMA4BsMSJR8wzFrjIEHhpda1BN2mqRR1ZsHzIQbj9aoYAxgkBt5IAen94DxMDhNUh+RSo70ofrwUb50NqSeDUNUm4DAh1/A4Of6mGI28/uzvyEmBCLKeYY+H7739FsydS85et0kCajWlU28DEsFJ7t7QMq+LzNuT7UyCzipQbyqLhq5Uv5Dh5ZwuJ9AOkoGpLt89wAKMH5Psqaz0erSCrGQx+lhs+/3Ne73j1pYvZWJqTotGfypRJ6/oBr0uROwCULci1LL6Bu3Q10tol1dtZLwKUGRt11NEJt5BKTVIJ5SW40lx5mKzXnigJ2eXjVDoWH8cFDcHNg2EJdYmcEYz/3bPT780vbZXT7o1c+klNyYfatkBlnXzzDJWGm0qtxcIC6uPNkQ6biy2Fx8MKk8ncO7Dil/nVH+3rCIVMOPZ0twh4NfGOdE/zLOyGNNbTlQhvRb7UYEl1nVQtG+o0sMr8u1Excbf0d4iMQarGmn4ELkcTByR7gCE3YuuPZScyKm+O07tvwimyCmv/f+xdU+W00DMBV1sHORgZjeIDZBE+vMU/xsaS8wRyt225KxYD6mEZ5KHVX8UQGZRLXEqjCUDHIN6/UEiZmmp82/lCOK2+xPinBV/zRIsXl79WtMXcnL40NzavpzryK/FLxPf+I/WyEyQn8MJRsHUyb2TEq8mcWY+W9uGKjktKPf2Q6o5r5AYxClpJiJwQ5p6Ng3wfdzIa7j5Sa+CgmLSXH3nzz9uE86MQOZb4T7A0StXqoMA8IYDlJ+01KWwsj/ytVIMikNOfuZuu/qaSJCGVr15T3jjXgf2t2d3TI9BBzsl7JvDa5MXhlCXVQl9H71VIJVGhyifkUH3NlqTSe0p7I1kc7JVeAMTNX+v/gjLWEtevHhZubmcuIDH2cmChxSYnJx6RbjZon0r8kB8vkzu4KL8Qy/+HZB05C5bXLDsdMOQ+Jq/NESSGvay+CZkXl7bls2EcdHMXKdbt4XJ0pC/eSOh+MOUXxI6TF7/WMYLbyAx1AhczsFVaD7W/LxMw2PZBGSNxj0KOBbwmgArCRmZ+mWzV5Vz0DCvdQmd14xj8wvZvLaHKxGduYIm+9n1fGN6cEpQJYr+doZkwICTa6kms0cyTzdgaKYhwqEPx1ZMZRepZOKpZRs2Pn72SSpNgph0KIt8UxJYu2SowkBq4ddqoJ8Me9z2sRMDlNvoCBW94aYEQGQHcMOpknl+RhuAqoIu6EixY+1ordoZ575MgmpqyJxJLXg+VACMeLonnXE6F751mSa5Ou7bF9Mphpt8Gd1dgg+MIru8QJ6e3rs1SXFGeIXNK6D3+DLstEbCP4JB7z8uXW/B1BJI03dBY9MQ0yP4USSdID+FwhjjQPodf4hRd36nPVnMRLP1iguI0OH9tKj6fjcpQhK6uaqPNF4kL0j8AHoPuDEvzJ+gIdVjNSzfVOQtqpPup5PMOOcenVi/C9/gTbFSr+Jlo2sEiys92t2vmL3YvxeRB6z5wxuBYiDBUGIwRPs/nufwq/4lYGOJedfFwUY/UtGY0E0WhdBR4BCnwL964NidKIZYj9noQEME5ZavtAoTdIbSWcX6kEhdFrrB2hoxyB5mLqkDA02sEJlhi18brl5CUsPzS/8gSOm/5ALKXWuSYWBYSgfC6mOmleWqx/BAuG9IJXn7swO+zPPixLFk6oyZx2e/jNV8W/QKBCfnPEF5jEzsZZD7+VMIcutvkiN0eNaT2JpwCZaCvluGF1ot5IILfyqaxOm194iiKw2QNbUtMsFGDb4fqE4alMMkGfqOqRKG7v2EgYKYPEIZzqFh/IQGXZR2KNsJGApSaQIP1mVpAeGV5TV3oZCA03uxJZh/LzIm23SfCl/L8SJSrjZhSh8JKtbX/MadrFn5BHjiyy0rvAFgI1wNRF7QqaEfk0BPFrn9CGKDkDpcFjiY+BLPvJb+PjdS/iKW9ZjsS1VCqJaeXUA0lgaznWkN5NOv4nUUtj4wWcno5DyrYzgDugsQFaEVcotjdOUH6tFp4zhN3N1lSqzdvBSD1zBXC3IOd8yTJbS925ymrXI6EQa9HT8yj77SOPipfoncRSIUimftzbw0a8OSaedpEDuHDRk9RubDTSkxLODsZ+QD2n9YQIgU3ZZyvG4EmjHXW/YLoaEDrg4ltVO25Y+2FQRCVbtl9mV99L0ep2dA35FzELFe1s="
+						},
+						"BrowserIp": {
+							"type": "string",
+							"default": "127.0.0.1"
+						},
+						"ResponseType": {
+							"type": "string",
+							"enum": [
+								"json",
+								"xml"
+							],
+							"default": "json"
+						},
+						"ServiceResponseVersion": {
+							"type": "string",
+							"default": "1.0"
+						},
+					}
+				},
+				"EndClientUserUniqueSessionId": {
+					"type": "string",
+					"default": "Uniquesession"
+				},
+				"OwnerId": {
+					"type": "string",
+					"default": "30"
+				},
+				"Policy": {
+					"type": "object",
+					"properties": {
+						"EventName": {
+							"type": "string",
+							"default": "GeneratePolicyPDF_V1"
+						},
+						"EventVersion": {
+							"type": "string"
+						},
+						"ProductNumber": {
+							"type": "string",
+							"default": "STARR_SGL_V1"
+						},
+						"ProductVerNumber": {
+							"type": "string",
+							"default": "STARR_SGL_2017_V1"
+						},
+						"AdditionalInsuredList": {
+							"type": "array",
+							"items": {
+								"properties": {
+									"AdditionalInsuredDetail": {
+										"type": "array",
+										"items": {
+											"properties": {
+												"AdditionalInsuredZipCode": {
+													"type": "string"
+												},
+												"AdditionalInsuredAction": {
+													"type": "string"
+												},
+												"AdditionalInsuredCounty": {
+													"type": "string"
+												},
+												"AdditionalInsuredName": {
+													"type": "string"
+												},
+												"AdditionalInsuredNumber": {
+													"type": "string"
+												},
+												"AdditionalInsuredAddressLine2": {
+													"type": "string"
+												},
+												"AdditionalInsuredAddressLine1": {
+													"type": "string"
+												},
+												"AdditionalInsuredState": {
+													"type": "string"
+												},
+												"COIDescription": {
+													"type": "string"
+												},
+												"AdditionalInsuredCity": {
+													"type": "string"
+												}
+											}
+										}
+									},
+									"AdditionalInsuredType": {
+										"type": "string",
+										"default": "Owners, Lessees Or Contractors - Scheduled Person Or Organization"
+									}
+
+
+								}
+							}
+						},
+						"DocumentTypeList": {
+							"type": "array",
+							"items": {
+								"properties": {
+									"DocumentType": {
+										"type": "string"
+									}
+								}
+							}
+						},
+						"ScheduleOfFormsList": {
+							"type": "array",
+							"items": {
+								"properties": {
+									"FormNumber": {
+										"type": "string"
+									},
+									"FormName": {
+										"type": "string"
+									}
+								}
+							}
+						},
+						"AdditionalInfoList": {
+							"type": "array",
+							"items": {
+								"properties": {
+									"AttributeAliasName": {
+										"type": "string"
+									},
+									"AttributeValue": {
+										"type": "string"
+									}
+								}
+							}
+						},
+						"DocumentInformationList": {
+							"type": "array",
+							"items": {
+								"properties": {
+									"DocumentType": {
+										"type": "string"
+									},
+									"DocumentPath": {
+										"type": "string"
+									},
+									"DocumentName": {
+										"type": "string"
+									},
+									"DocumentEdition": {
+										"type": "string"
+									},
+									"DocumentNumber": {
+										"type": "string"
+									},
+									"DocumentFileType": {
+										"type": "string"
+									},
+									"OrderIndex": {
+										"type": "string"
+									},
+									"DocumentCategoryOrderIndex": {
+										"type": "string"
+									},
+									"DocumentSubNumber": {
+										"type": "string"
+									}
+								}
+							}
+						},
+						"LocationList": {
+							"type": "array",
+							"items": {
+								"properties": {
+									"City": {
+										"type": "string",
+										"default": "Melbourne"
+									},
+									"State": {
+										"type": "string"
+									},
+									"LocationAddressLine1": {
+										"type": "string"
+									},
+									"LocationAddressLine2": {
+										"type": "string"
+									},
+									"LocationZipCode": {
+										"type": "string"
+									},
+									"ClassificationList": {
+										"type": "array",
+										"items": {
+											"properties": {
+												"PremOpsBIPDDeductible": {
+													"type": "string"
+												},
+												"PremOpsCoveragePremium": {
+													"type": "string"
+												},
+												"SprayPainting": {
+													"type": "string"
+												},
+												"PremOpsBIDeductible": {
+													"type": "string"
+												},
+												"ProdsCompldOpsCoveragePremium": {
+													"type": "string"
+												},
+												"PremOpsCoverageFinalRate": {
+													"type": "string"
+												},
+												"PremOpsPremiumBasis": {
+													"type": "string"
+												},
+												"ClassDescription": {
+													"type": "string"
+												},
+												"PremOpsPDDeductible": {
+													"type": "string"
+												},
+												"ClassDescriptionByClassCode": {
+													"type": "string"
+												},
+												"ClassCode": {
+													"type": "string"
+												},
+												"ProdsCompldOpsCoverageFinalRate": {
+													"type": "string"
+												},
+												"TerrorismPolicyTermPremium": {
+													"type": "string"
+												}
+											}
+										}
+									}
+								}
+							}
+						},
+						"PremOpsProdsEachOccurrenceLimit": {
+							"type": "string",
+							"default": "1,000,000"
+						},
+						"EffectiveDate": {
+							"type": "string",
+							"default": "2018-01-01"
+						},
+						"AttributeAliasName": {
+							"type": "string",
+							"default": "ContentFilledBy"
+						},
+						"GeneralAggregateLimit": {
+							"type": "string",
+							"default": "2,000,000"
+						},
+						"OutputPDFRelativePath": {
+							"type": "string",
+							"default": "Document/Starr/GL/QuotePDFs/928764/"
+						},
+						"TemplateRootPath": {
+							"type": "string",
+							"default": "/opt/CI/SharedData/Shared/Configuration/"
+						},
+						"PDFServiceURL": {
+							"type": "string",
+							"default": "https://pdfservice.solartis.net/PDFGenerationService-3.0/PDFGenerationService/3_0/generatePDF"
+						},
+						"MemoryPdfRootPath": {
+							"type": "string",
+							"default": "/opt/CI/SharedData/Shared/PDF_TEMP/"
+						},
+						"TerrorismAggregateLimit": {
+							"type": "string",
+							"default": "1000"
+						},
+						"PolicyId": {
+							"type": "string",
+							"default": "664070"
+						},
+						"RetroactiveDate": {
+							"type": "string",
+							"default": "2017-12-01"
+						},
+						"PaymentEmail": {
+							"type": "string",
+							"default": "divyaratna_ka@solartis.com"
+						},
+						"InsuredAddressLine1": {
+							"type": "string",
+							"default": "123 6th St."
+						},
+						"LimitEachEmployeeInt": {
+							"type": "string",
+							"default": "2,000,000"
+						},
+						"InsuredAddressLine2": {
+							"type": "string",
+							"default": "Melbourne, FL 32904"
+						},
+						"PaymentType": {
+							"type": "string",
+							"default": "Annual"
+						},
+						"GeneralLiabilityExclusionOfTerrorismNuclearBiologicalChemicalTerrorism": {
+							"type": "string",
+							"default": "No"
+						},
+						"ManuscriptDescription": {
+							"type": "string",
+							"default": "Sudden and Accidental Pollution Coverage, as appropriate"
+						},
+						"EmailGeneralInquiries": {
+							"type": "string",
+							"default": "844-215-9923"
+						},
+						"OwnerId": {
+							"type": "string",
+							"default": "30"
+						},
+						"QuoteID": {
+							"type": "string",
+							"default": "928764"
+						},
+						"LastRateLookUpDate": {
+							"type": "string",
+							"default": "2018-01-01"
+						},
+						"ProductionChannel": {
+							"type": "string",
+							"default": "SGL CW"
+						},
+						"InsuredFormOfBusiness": {
+							"type": "string",
+							"default": "Building I Own(Not my residence)"
+						},
+						"GeneralLiabilityDamageToPremisesRentedToYouCoverageLimit": {
+							"type": "string",
+							"default": "25,000"
+						},
+						"InsuredName": {
+							"type": "string",
+							"default": "Acme Corporation"
+						},
+						"EmailGeneralInquiriesMail": {
+							"type": "string",
+							"default": "support@starrinsure.com"
+						},
+						"GLAggregateLimitInt": {
+							"type": "string",
+							"default": "2,000,000"
+						},
+						"GeneralLiabilityExclusionOfCertifiedActsOfNuclearBiologicalChemicalActsTerrorismCapOnLossesFromCertifiedActs": {
+							"type": "string",
+							"default": "No"
+						},
+						"BusinessName": {
+							"type": "string",
+							"default": "Acme Corporation"
+						},
+						"EmployeeBenefitsLiabCovPremium": {
+							"type": "string",
+							"default": "433"
+						},
+						"BusinessEntityType": {
+							"type": "string",
+							"default": "Partnership"
+						},
+						"EmailClaimsInquiries": {
+							"type": "string",
+							"default": "866-391-9675"
+						},
+						"InsuredState": {
+							"type": "string",
+							"default": "FL"
+						},
+						"POLICYVERID": {
+							"type": "string",
+							"default": "693631"
+						},
+						"ISSUED_BY": {
+							"type": "string",
+							"default": "SGL CW"
+						},
+						"ProductType": {
+							"type": "string",
+							"default": "GL"
+						},
+						"PolicyStatus": {
+							"type": "string",
+							"default": "ISSUED"
+						},
+						"ContentFilledBy": {
+							"type": "string",
+							"default": "jon_e"
+						},
+						"DocumentType": {
+							"type": "string",
+							"default": "ISSUANCE"
+						},
+						"PolicyNumber": {
+							"type": "string",
+							"default": "1000602272"
+						},
+						"TotalPremium": {
+							"type": "string",
+							"default": "11733"
+						},
+						"EmailClaimsMail": {
+							"type": "string",
+							"default": "starrinsure7993@yorkrsg.com"
+						},
+						"PolicyType": {
+							"type": "string",
+							"default": "ISSUED"
+						},
+						"QuoteExpirationDate": {
+							"type": "string",
+							"default": "2019-01-01"
+						},
+						"PurchaseDate": {
+							"type": "string",
+							"default": "2017-12-04"
+						},
+						"QuoteInsuredID": {
+							"type": "string",
+							"default": "898054"
+						},
+						"QuoteNumber": {
+							"type": "string",
+							"default": "QOT-928765"
+						},
+						"InsuredZipCode": {
+							"type": "string",
+							"default": "32904"
+						},
+						"GeneralLiabilityLimitationOfCoverageForTerrorismSubLimitAnnualAggregateBasis": {
+							"type": "string",
+							"default": "No"
+						},
+						"DeductibleInt": {
+							"type": "string",
+							"default": "1000"
+						},
+						"InsuredCity": {
+							"type": "string",
+							"default": "Melbourne"
+						},
+						"GeneralLiabilityMedPayCoverageLimit": {
+							"type": "string",
+							"default": "5,000"
+						},
+						"PersonalAndAdvertisingInjuryLimit": {
+							"type": "string",
+							"default": "200,000"
+						},
+						"MinimumPremium": {
+							"type": "string",
+							"default": "650.0000"
+						},
+						"TerrorismCoverage": {
+							"type": "string",
+							"default": "Yes"
+						}
+					}
+
+				}
+			}
+
+		},
+		"Success_Response": {
+			"type": "object",
+			"properties": {
+				"messageDetail": {
+					"type": "object"
+				},
+				"ResponseStatus": {
+					"type": "string"
+				},
+				"Policy": {
+					"type": "object"
+				}
+			}
+		},
+		"errorModel": {
+			"type": "object",
+			"required": [
+				"RequestStatus",
+				"MessageDetail"
+			],
+			"properties": {
+				"RequestStatus": {
+					"type": "string"
+				},
+				"MessageDetail": {
+					"type": "object",
+					"properties": {
+						"MessageCode": {
+							"type": "string"
+						},
+						"MessageType": {
+							"type": "string"
+						},
+						"UserMessage": {
+							"type": "string"
+						},
+						"MessageLevel": {
+							"type": "string"
+						},
+						"MessageSeverity": {
+							"type": "string"
+						},
+						"MessageList": {
+							"type": "object",
+							"properties": {
+								"Message": {
+									"type": "array",
+									"items": {
+										"type": "string"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+	}
+}

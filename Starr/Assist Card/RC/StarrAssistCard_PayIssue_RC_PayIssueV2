@@ -143,7 +143,7 @@ definitions:
             default: '1.0'
           ProducerCode:
             type: string
-            default: '3391'
+            default: '1558'
           MGACode:
             type: string
             default: "3391"
@@ -172,9 +172,9 @@ definitions:
             type: string
             enum:
               - '5555555555554444'
+              - '4012888888881881'
               - '6011000990139424'
               - '3530111333300000'
-              - '4012888888881881'
               - '347712669659320'
           CVV:
             type: string

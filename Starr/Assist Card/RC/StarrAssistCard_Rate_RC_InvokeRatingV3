@@ -159,7 +159,7 @@ definitions:
             default: "User"
           ProducerCode:
             type: string
-            default: "3391"
+            default: "1558"
           MGACode:
             type: string
             default: "3391"

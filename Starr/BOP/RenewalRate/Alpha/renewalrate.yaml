@@ -87,6 +87,14 @@ definitions:
             type: "string"
             format: "string"
             title: "LastRateLookUpDate"
+          GenerateQuoteLetter:
+            title: "Generate Quote Letter"
+            type: string
+            default: "Y"
+          SendMail:
+            title: "SendMail"
+            type: string
+            default: "Y"
           ProdsCompldOpsAggregateLimit:
             type: "string"
             format: "string"

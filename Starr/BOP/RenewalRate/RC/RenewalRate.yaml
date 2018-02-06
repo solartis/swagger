@@ -133,6 +133,14 @@ definitions:
          title: "Product Number"
          type: string
          default: "StarrBasicBOPENDR-4"
+        GenerateQuoteLetter:
+         title: "Generate Quote Letter"
+         type: string
+         default: "Y"
+        SendMail:
+         title: "SendMail"
+         type: string
+         default: "Y"
         TerrorismCoverage:
          title: "Terrorism Coverage"
          type: string

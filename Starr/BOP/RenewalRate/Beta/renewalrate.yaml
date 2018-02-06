@@ -135,10 +135,12 @@ definitions:
         GenerateQuoteLetter:
          title: "Generate Quote Letter"
          type: string
+         enum: ["Y","N"]
          default: "Y"
         SendMail:
          title: "SendMail"
          type: string
+         enum: ["Y","N"]
          default: "Y"
         TerrorismCoverage:
          title: "Terrorism Coverage"

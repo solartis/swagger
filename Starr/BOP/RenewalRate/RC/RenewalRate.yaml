@@ -260,7 +260,7 @@ definitions:
         LastRateLookUpDate:
          title: "LastRateLookUpDate"
          type: string
-         default: "2018-01-23"
+         default: "2018-02-07"
         InsuredState:
          title: "InsuredState"
          type: string

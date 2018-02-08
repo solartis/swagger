@@ -116,15 +116,15 @@ definitions:
         RenewingPolicyNumber:
          title: "Renewing Policy Number"
          type: string
-         default: "1000207735"
+         default: "1000208243"
         RenewalEffectiveDate: 
          title: "Renewal Effective Date"
          type: string
-         default: "2018-04-01"
+         default: "2018-02-01"
         RenewalExpirationDate:
          title: "Renewal Expiration Date"
          type: string
-         default: "2019-04-01"
+         default: "2019-02-01"
         ProductVerNumber:
          title: "Product Version Number"
          type: string
@@ -329,7 +329,7 @@ definitions:
         ContentFilledBy:
          title: "ContentFilledBy"
          type: string
-         default: "Name"
+         default: "Udayakumar"
         BusinessName:
          title: "BusinessName"
          type: string
@@ -630,7 +630,7 @@ definitions:
                       type: string
                       format: string
                       title: "County"
-                      default: "Anderson"
+                      default: "Albany"
                     BOPWaterBackUpAndSumpOverflowLocationBusinessIncomeExtraExpenseAnnualAggregateLimit:
                       type: string
                       format: string
@@ -676,12 +676,12 @@ definitions:
                       type: string
                       format: string
                       title: "StateRegion"
-                      default: "West Virginia"
+                      default: "Texas"
                     ZipCode:
                       type: string
                       format: string
                       title: "ZipCode"
-                      default: "123"
+                      default: "99502"
                     NumEmployees:
                       type: string
                       format: string
@@ -701,18 +701,18 @@ definitions:
                       type: string
                       format: string
                       title: "City"
-                      default: "AK"
+                      default: "Bear Point"
                     RatingTerritory:
                       type: string
                       format: string
                       title: "RatingTerritory"
-                      default: "701"
+                      default: "009"
                     FireProtectionClassPPC:
                       type: string
                       format: string
                       title: "FireProtectionClassPPC"
-                      enum: ["1","2","3","4","5","6","7","8","8B","9","10"]
-                      default: "8"
+                      enum: ["1","2","3","4","5","6","7","8","8B","9","10","5Y"]
+                      default: "5Y"
                     EmployeeDishtyApply:
                       type: string
                       format: string
@@ -774,7 +774,7 @@ definitions:
                                 type: string
                                 format: string
                                 title: "OrdinanceOrLawCov1Limit"
-                                default: "25000"
+                                default: "1000"
                               BldgCodeEffectivenessGrade:
                                 type: string
                                 format: string
@@ -811,7 +811,7 @@ definitions:
                               OptnlDedFactor:
                                 type: string
                                 title: "OptnlDedFactor"
-                                default: "5000.0000"
+                                default: "5000"
                               BOPOrdinanceOrLawCov2CoverageLimit:
                                 type: string
                                 format: string
@@ -837,8 +837,8 @@ definitions:
                                 type: string
                                 format: string
                                 title: "OrdinanceOrLawCoverage"
-                                enum: ["Coverage 1 Only","Coverage 3 Only","Coverage 1 with Coverages 2 and 3 Combined","Coverages 1 and 2","Coverages 1,2 and 3","Neither Coverage 1, 2, or 3"]
-                                default: "Coverage 1 Only"
+                                enum: ["Coverage 1 only","Coverage 3 Only","Coverage 1 with Coverages 2 and 3 Combined","Coverages 1 and 2","Coverages 1,2 and 3","Neither Coverage 1, 2, or 3"]
+                                default: "Coverage 1 only"
                               SinkholeLossIncluded:
                                 type: string
                                 format: string
@@ -914,7 +914,7 @@ definitions:
                                 format: string
                                 title: "BldgCodeEffectivenessGradeClass"
                                 enum: ["Building individually inspected and certified as best grade 1","Graded-building constructed before year of community grading","Graded-building constructed during or after year of community grading","Not Graded"]
-                                default: "Building individually inspected and certified as best grade 1"
+                                default: "Not Graded"
                               BuildingID:
                                 type: string
                                 format: string
@@ -963,7 +963,7 @@ definitions:
                                           type: string
                                           format: string
                                           title: "TotalAnnualGrossSales"
-                                          default: "100000"
+                                          default: "2500000"
                                         TerrsmSubLimit:
                                           type: string
                                           format: string
@@ -978,12 +978,12 @@ definitions:
                                           type: string
                                           format: string
                                           title: "BusnPrsnlPropLimit"
-                                          default: "1202100"
+                                          default: "1000000"
                                         SquareFootage:
                                           type: string
                                           format: string
                                           title: "SquareFootage"
-                                          default: "250"
+                                          default: "5000"
                                         BOPClassificationAccountsReceivableCoverageOffLimit:
                                           type: string
                                           format: string

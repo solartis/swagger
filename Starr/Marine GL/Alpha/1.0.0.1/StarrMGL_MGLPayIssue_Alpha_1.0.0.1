@@ -146,6 +146,8 @@ definitions:
             default: '34'
             enum:
               - '34'
+          RoleName:
+            type: string
           QuoteNumber:
             type: string
           EventName:
@@ -171,6 +173,9 @@ definitions:
             type: string
           ExpiryYear:
             type: string
+          IsPaymentNeeded:
+            type: string
+            enum: ["Yes","No"]
           PayerName:
             type: string
           PayerAddress1:

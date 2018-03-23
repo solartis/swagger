@@ -121,7 +121,7 @@
 						"LanguageCode": {
 							"type": "string",
 							"default": "en"
-						},
+						}
 					}
 				},
 				"PolicyInformation": {

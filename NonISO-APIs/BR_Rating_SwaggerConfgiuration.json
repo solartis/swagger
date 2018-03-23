@@ -342,7 +342,7 @@
 						"ServiceRequestVersion": {
 							"type": "string",
 							"default": "1.0"
-						},
+						}
 					}
 				}
 			}

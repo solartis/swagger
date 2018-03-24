@@ -1,8 +1,8 @@
 swagger: '2.0'
 info:
   version: 1.0.0
-  title: Solartis Rate API for Renter's Program
-  description: To get rate for Renter's Program from Solartis Rate API.
+  title: Solartis Rate and Form Selection API for Renter's Program
+  description: To get rate and forms for Renter's Program from Solartis Rate and Form Selection API.
 host: solartisdemokbv6-2.solartis.net
 basePath: /KnowledgeEngineV6_2/KnowledgeBase
 schemes:
@@ -14,8 +14,8 @@ consumes:
 paths:
   /FireEventV2:
     post:
-      description: Gets Rate for Renter's Program
-      operationId: getRates
+      description: Gets Rate and Form Selection for Renter's Program
+      operationId: getRatesForms
       produces:
         - application/json
       parameters:

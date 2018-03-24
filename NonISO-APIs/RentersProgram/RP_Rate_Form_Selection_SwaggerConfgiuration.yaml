@@ -1,0 +1,248 @@
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: Solartis Rate API for Renter's Program
+  description: To get rate for Renter's Program from Solartis Rate API.
+host: solartisdemokbv6-2.solartis.net
+basePath: /KnowledgeEngineV6_2/KnowledgeBase
+schemes:
+  - https
+produces:
+  - application/json
+consumes:
+  - application/json
+paths:
+  /FireEventV2:
+    post:
+      description: Gets Rate for Renter's Program
+      operationId: getRates
+      produces:
+        - application/json
+      parameters:
+        - name: Token
+          in: header
+          description: Authentication Token
+          required: true
+          type: string
+          format: string
+          default: >-
+            VLOouMoPSJR1WT5DF489lo+U19gRsGs6p9dSX8+actIVVH2tXLPiA53dz002/lITGTZvoNr0rpDsMrJPTOO5fk2KhDcb2FbtZOqxGESpQqFV1FN2lxvwbe/H8vHkOrCKOkOpHdJm/J4pllWgNa6jWXGZDVHCWzOwXKGCVssQM81CEoQBSVQGZYzXR1amm50lLplkIHDT7RPe+14gjvaPO1LxHFpvJF+c4svSQ7/R1nMH2HCR8o6y8vDoTDdkYe5HZ5EshW3rZCpHonG2vmGxPu2gVz/SRhNP5ODPqs88n13IswG5c0y1cYIWWoc/vdLvDUrSqf4AQQE31LyBlGGTg6uPCY4eYWCcrNtoQ2MK5364UpGP5paRHJ5oFDQ5XABqky5c+WgnIlXW2bTWejQfCzjc+L5gNhfm8EYjot10PvhYYRSqk9/rEpdMhUeu2hsGwk0nIiloccvspNV0WHM4s54t8h8VHiDqlVDglEYuqQvoEoq+1PjrtE/qtia2/bSJ0GDl0pVafvC88hWUkdE2873/gVtGR6m4PHGlIgrLrZCQZaRQqbBg4UAMeqJBBtYNf4fjTq+c2aQKHd3qufejMJSI8yJKK8QGX3CO5x4LO9k9XkKL1SGjqeYrTmDhVl//Ed2LVBysLR/yPKRneWR5BUyN7pGtXZUexlQLKC3FlEGfXgtcb9pJ0EcnE0vcfrMhso8DQvuuONAB2pJqOvmKSXc0qYiqYBHzwpMM5sijrpIEIzR/PBHaQwu5BR63dvFz26MFnUHO7H7ZMd/oPQeOlmtKy5DvH03M2rvURTvGpjdcphzuSmL8g8WsqyGKKIdycLk54H+BI+6UURrLi5Wk2LdUBS8eXazSrDIS5DcfPtzkhWEmryuyMT7xoGX18+AF+SDKuexmtMdjv5L8tmhRwPXj7vAXTdCToARTduzXExD+u+LXDF7/neunxsq7/V8/DXeyepuNSO8SPAqVbRdcJgWZbEN9BJdPHr05nn7OTSc2IrMP1J3lbhFoDS79cbbuFQP60uSRJ5K5yKKPuoYqtfYmXbPwHfRNwdqi7wCN3xw=
+        - name: Content-Type
+          in: header
+          description: Content Type
+          required: true
+          type: string
+          format: string
+          default: application/json
+        - name: EventName
+          in: header
+          description: EventName
+          required: true
+          type: string
+          format: string
+          default: Renters_CreateQuote
+        - name: Rating Request
+          in: body
+          description: For rating request
+          required: true
+          schema:
+            $ref: '#/definitions/Rating_Request'
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            $ref: '#/definitions/Rating_Success_Response'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/errorModel'
+definitions:
+  Rating_Request:
+    type: object
+    properties:
+      EndClientUserUniqueSessionId:
+        type: string
+        default: Uniquesession
+      RentersProperty:
+        type: object
+        properties:
+          EventName:
+            type: string
+            default: Renters_CreateQuote
+          Environment:
+            type: string
+            default: PROD
+          ProductName:
+            type: string
+            default: Renters Rater V1
+          Carrier:
+            type: string
+            default: Liberty Mutual - Renters Program
+          PolicyEffectiveDate:
+            type: string
+            default: 03/01/2018
+          PolicyExpirationDate:
+            type: string
+            default: 03/01/2019
+          QuoteType:
+            type: string
+            default: NEW_BUSINESS
+          InsuredName:
+            type: string
+            default: John
+          AddressLine1:
+            type: string
+            default: 4740 Reed Road
+          AddressLine2:
+            type: string
+            default: Suite 109
+          City:
+            type: string
+            default: Upper Arlington
+          County:
+            type: string
+            default: Franklin
+          StateCode:
+            type: string
+            default: OH
+          ZipCode:
+            type: string
+            default: '43220'
+          ServiceRequestVersion:
+            type: string
+            default: '1.0'
+          OwnerId:
+            type: string
+            default: '33'
+          UserName:
+            type: string
+            default: uwmanager
+          EnableValidation:
+            type: string
+            default: Y			
+          Property:
+            type: array
+            items:
+              properties:
+                PropertyDetail:
+                  type: object
+                  properties:
+                    ZipCode:
+                      type: string
+                      default: '43220'
+                    CustomerBirthday:
+                      type: string
+                      default: 5/23/1994
+                    NoOfUnits:
+                      type: string
+                      default: '1'
+                    ProtectionClass:
+                      type: string
+                      default: '2'
+                    ConstructionType:
+                      type: string
+                      default: Poured Concrete
+                    CreditScore:
+                      type: string
+                      default: '721-725'
+                    PriorLosses:
+                      type: string
+                      default: Unknown
+                    SeverityPriorLosses:
+                      type: string
+                      default: '3999'
+                    LossesWithLM:
+                      type: string
+                      default: '2'
+                    PersonalPropertyLimit:
+                      type: string
+                      default: '10000'
+                    PersonalLiabiltyLimit:
+                      type: string
+                      default: '100000'
+                    MedicalPaymentLimit:
+                      type: string
+                      default: '1000'
+                    Deductible:
+                      type: string
+                      default: '500'
+                    AddressLine1:
+                      type: string
+                      default: '4740 Reed Road'
+                    AddressLine2:
+                      type: string
+                      default: 'Suite 109'
+                    City:
+                      type: string
+                      default: Upper Arlington
+                    County:
+                      type: string
+                      default: Franklin
+                    StateCode:
+                      type: string
+                      default: OH
+      OwnerId:
+        type: string
+        default: '33'
+      ServiceRequestDetail:
+        type: object
+        properties:
+          ResponseType:
+            type: string
+            enum:
+              - JSON
+              - XML
+            default: JSON
+          OwnerId:
+            type: string
+            default: '33'
+          UserName:
+            type: string
+            default: uwmanager
+          Token:
+            type: string
+            default: >-
+              VLOouMoPSJR1WT5DF489lo+U19gRsGs6p9dSX8+actIVVH2tXLPiA53dz002/lITGTZvoNr0rpDsMrJPTOO5fk2KhDcb2FbtZOqxGESpQqFV1FN2lxvwbe/H8vHkOrCKOkOpHdJm/J4pllWgNa6jWXGZDVHCWzOwXKGCVssQM81CEoQBSVQGZYzXR1amm50lLplkIHDT7RPe+14gjvaPO1LxHFpvJF+c4svSQ7/R1nMH2HCR8o6y8vDoTDdkYe5HZ5EshW3rZCpHonG2vmGxPu2gVz/SRhNP5ODPqs88n13IswG5c0y1cYIWWoc/vdLvDUrSqf4AQQE31LyBlGGTg6uPCY4eYWCcrNtoQ2MK5364UpGP5paRHJ5oFDQ5XABqky5c+WgnIlXW2bTWejQfCzjc+L5gNhfm8EYjot10PvhYYRSqk9/rEpdMhUeu2hsGwk0nIiloccvspNV0WHM4s54t8h8VHiDqlVDglEYuqQvoEoq+1PjrtE/qtia2/bSJ0GDl0pVafvC88hWUkdE2873/gVtGR6m4PHGlIgrLrZCQZaRQqbBg4UAMeqJBBtYNf4fjTq+c2aQKHd3qufejMJSI8yJKK8QGX3CO5x4LO9k9XkKL1SGjqeYrTmDhVl//Ed2LVBysLR/yPKRneWR5BUyN7pGtXZUexlQLKC3FlEGfXgtcb9pJ0EcnE0vcfrMhso8DQvuuONAB2pJqOvmKSXc0qYiqYBHzwpMM5sijrpIEIzR/PBHaQwu5BR63dvFz26MFnUHO7H7ZMd/oPQeOlmtKy5DvH03M2rvURTvGpjdcphzuSmL8g8WsqyGKKIdycLk54H+BI+6UURrLi5Wk2LdUBS8eXazSrDIS5DcfPtzkhWEmryuyMT7xoGX18+AF+SDKuexmtMdjv5L8tmhRwPXj7vAXTdCToARTduzXExD+u+LXDF7/neunxsq7/V8/DXeyepuNSO8SPAqVbRdcJgWZbEN9BJdPHr05nn7OTSc2IrMP1J3lbhFoDS79cbbuFQP60uSRJ5K5yKKPuoYqtfYmXbPwHfRNwdqi7wCN3xw=
+          BrowserIp:
+            type: string
+            default: 111.93.250.10
+          ServiceRequestVersion:
+            type: string
+            default: '1.0'
+  Rating_Success_Response:
+    type: object
+    properties:
+      messageDetail:
+        type: object
+      ResponseStatus:
+        type: string
+      Policy:
+        type: object
+  errorModel:
+    type: object
+    required:
+      - RequestStatus
+      - MessageDetail
+    properties:
+      RequestStatus:
+        type: string
+      MessageDetail:
+        type: object
+        properties:
+          MessageCode:
+            type: string
+          MessageType:
+            type: string
+          UserMessage:
+            type: string
+          MessageLevel:
+            type: string
+          MessageSeverity:
+            type: string
+          MessageList:
+            type: object
+            properties:
+              Message:
+                type: array
+                items:
+                  type: string

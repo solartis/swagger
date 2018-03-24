@@ -1,408 +1,376 @@
 {
-	"swagger": "2.0",
-	"info": {
-		"version": "1.0.0",
-		"title": "Solartis Rate API for Builder's Risk",
-		"description": "To get rate for Builder's Risk from Solartis Rate API."
-	},
-	"host": "markelbrdemokbv6-2.solartis.net",
-	"basePath": "/KnowledgeEngineV6_2/KnowledgeBase",
-	"schemes": [
-		"https"
-	],
-	"produces": [
-		"application/json"
-	],
-	"consumes": [
-		"application/json"
-	],
-	"paths": {
-		"/FireEventV2": {
-			"post": {
-				"description": "Gets Rate for Builder's Risk",
-				"operationId": "getRates",
-				"produces": [
-					"application/json"
-				],
-				"parameters": [
-					{
-						"name": "Token",
-						"in": "header",
-						"description": "Authentication Token",
-						"required": true,
-						"type": "string",
-						"format": "string",
-						"default": "VLOouMoPSJR1WT5DF489lo+U19gRsGs6p9dSX8+actIVVH2tXLPiA53dz002/lITMsdtwGQ3y7c7fmt5rRAS2lYe0EwwmF8GUd7m+OxgjvBA0UC2TzdRGUt2E1m3HF+fFMsA4fA+r8UsdkXHzOxzAL/wpsyjY1XH1DYXqHDzITWLLa3MhV8SfrJ84+g0c4dJuj9BeyB02zPGKGO+3S7yojnIPpfpamzEmQMR5XY2iB4UEyLtWCuR9wtM5FtbWHIbzj/bnmLCK6pb8HpH9fDqD3/NUXwW9f8LB/d+oCPp3dUsnCP5Awut2j7mq3nQhacg7xN56OlEJTqV+byM4WsBSYUu+RCiXbic0kx+kBFEW0zB3ahSzo9l23f2dqI051gX1nCpJ0SFfuA6qQ+JirUL1jxPPxcTvBG0/HPpfkkPTKPZU88p+Yb8ORL/EybDpFGLo9Gj8WEQ6xA0vtW6E3T3A+gTaB69IuhYVuc0c/gsT/Xruy4MxK5msWuyl3qBMhPI8hsA6w3kZlO+F0CLAP1DEse0tvatujJVoOFwDpwxK7e5/B9FgTmfHNP5kIJt7Fmk3f4JQF+J1+SAxYX2HiycMuNpVONnNcG1UEF3p0rvYK1Q1jeTdCTWRgnfGIX6Or71dgvFDpOBK7nm15ewleMliNF1j9wnbe5xr44dTGmMg89WWSfdC0IC7FId9uT2fMqdODclhHeTdFAvBo3n6hRB2taefVUCx0VIWSpEPst9QoDTc2uW8r59HXNBT/De/cLzyC1lIbaGsjFoi02vBRMqA5EFLcxssYRXbtJd+gerS0bWyly2V83pbvJRrUFCxaJM7mdfMmEIFx3eLUCD6rU6ES51tu9zxk4pXpXYbyb89qZPLJYXuU6PdJ6hjy2kPsaTlxxZHuBf0bq7JpcHNl9MbIYf4qhbSXKd6TSooT0oqjh3NKmIqmAR88KTDObIo66SNqo+3WKaY1TOnKja1jeCfknDfV4wei9SGaoIVhiHnr97KKorxRxUHr8jh4nIWsuOu6KI7IdftH2AisEG5+J1olYt2UfX4Ofd16DfD4Jeask="
-					},
-					{
-						"name": "Content-Type",
-						"in": "header",
-						"description": "Content Type",
-						"required": true,
-						"type": "string",
-						"format": "string",
-						"default": "application/json"
-					},
-					{
-						"name": "EventName",
-						"in": "header",
-						"description": "EventName",
-						"required": true,
-						"type": "string",
-						"format": "string",
-						"default": "BR_CalculateRate"
-					},
-					{
-						"name": "Rating Request",
-						"in": "body",
-						"description": "For rating request",
-						"required": true,
-						"schema": {
-							"$ref": "#/definitions/Rating_Request"
-						}
-					}
-				],
-				"responses": {
-					"200": {
-						"description": "Successful response",
-						"schema": {
-							"$ref": "#/definitions/Rating_Success_Response"
-						}
-					},
-					"default": {
-						"description": "unexpected error",
-						"schema": {
-							"$ref": "#/definitions/errorModel"
-						}
-					}
-				}
-			}
-		}
-	},
-	"definitions": {
-		"Rating_Request": {
-			"type": "object",
-			"properties": {
-				"EndClientUserUniqueSessionId": {
-					"type": "string",
-					"default": "Uniquesession"
-				},
-				"BuildersRisk": {
-					"type": "object",
-					"properties":{
-						"ProductName": {
-							"type": "string",
-							"default":"Builders Risk V1"
-							},
-						"EventName": {
-							"type": "string",
-							"default": "BR_CalculateRate"
-							},
-						"CompanyName": {
-							"type": "string",
-							"default": "Solartis"
-							},
-						"State": {
-							"type": "string",
-							"default": "AL"
-							},
-						"City": {
-							"type": "string",
-							"default": "COOSAWATCHIE"
-							},
-						"County": {
-							"type": "string",
-							"default": "JASPER"
-							},
-						"Zip": {
-							"type": "string",
-							"default": "29912"
-							},
-						"QuoteEffectiveDate": {
-							"type": "string",
-							"default": "02/01/2018"
-							},
-						"NewQuoteLockDate": {
-							"type": "string",
-							"default": "01/03/2018"
-							},
-						"NewRatingDate": {
-							"type": "string",
-							"default": "02/01/2018"
-							},
-						"EffectiveDate": {
-							"type": "string",
-							"default": "02/01/2018"
-							},
-						"QuoteStartDate": {
-							"type": "string",
-							"default": "02/01/2018"
-							},
-						"QuoteType": {
-							"type": "string",
-							"default": "NEW_BUSINESS"
-							},
-						"PolicyEffectiveDate": {
-							"type": "string",
-							"default": "12/30/2017"
-							},
-						"PolicyExpiryDate": {
-							"type": "string",
-							"default": "10/30/2018"
-							},
-						"ProtectionClass": {
-							"type": "string",
-							"default": "8"
-							},
-						"ConstructionType": {
-							"type": "string",
-							"default": "Fire Resistive"
-							},
-						"Form": {
-							"type": "string",
-							"default": "Builders Risk"
-							},
-						"Environment": {
-							"type": "string",
-							"default": "PROD"
-							},
-						"Risk": {
-							"type": "array",
-							"items":{
-								"properties":{
-										"RiskDetail": {
-											"type": "object",
-											"properties":{
-												"ProductName": {
-													"type": "string",
-													"default":"Builders Risk V1"
-													},
-												"State": {
-													"type": "string",
-													"default":"AL"
-													},
-												"City": {
-													"type": "string",
-													"default":"COOSAWATCHIE"
-													},
-												"County": {
-													"type": "string",
-													"default":"JASPER"
-													},
-												"Zip": {
-													"type": "string",
-													"default":"29912"
-													},
-												"QuoteEffectiveDate": {
-													"type": "string",
-													"default":"02/01/2018"
-													},
-												"NewQuoteLockDate": {
-													"type": "string",
-													"default":"01/03/2018"
-													},
-												"NewRatingDate": {
-													"type": "string",
-													"default":"02/01/2018"
-													},
-												"EffectiveDate": {
-													"type": "string",
-													"default":"02/01/2018"
-													},
-												"QuoteStartDate": {
-													"type": "string",
-													"default":"02/01/2018"
-													},
-												"ProtectionClass": {
-													"type": "string",
-													"default":"8"
-													},
-												"ConstructionType": {
-													"type": "string",
-													"default":"Fire Resistive"
-													},
-												"Form": {
-													"type": "string",
-													"default":"Builders Risk"
-													},
-												"InsuredName": {
-													"type": "string",
-													"default":"ABC Insurance"
-													},
-												"LimitofInsurance": {
-													"type": "string",
-													"default":"350000"
-													},
-												"CoinsurancePercentage": {
-													"type": "string",
-													"default":"100"
-													},
-												"EarthQuakeScore": {
-													"type": "string",
-													"default":"9"
-													},
-												"FloodZone": {
-													"type": "string",
-													"default":"All Other Flood Zones"
-													},
-												"TheftExclusion": {
-													"type": "string",
-													"default":"No"
-													},
-												"Deductible": {
-													"type": "string",
-													"default":"5000"
-													},
-												"LocationNumber": {
-													"type": "string",
-													"default":"1"
-													},
-												"LocationName": {
-													"type": "string",
-													"default":"Location 1"
-													},
-												"NumberofStories": {
-													"type": "string",
-													"default":"1"
-													},
-												"SquareFeet": {
-													"type": "string",
-													"default":"1"
-													},
-												"DistancefromCostal": {
-													"type": "string",
-													"default":"1"
-													},
-												"Occupancy": {
-													"type": "string",
-													"default":"Builders Risk"
-													},
-												"TypeOfRenovation": {
-													"type": "string",
-													"default":"New Construction (Ground Up)"
-													},
-												"NumberoflossesinPast3Years": {
-													"type": "string",
-													"default":"2"
-													},
-												"RoofShape": {
-													"type": "string",
-													"default":"Hip Roof"
-													},
-												"Alarm": {
-													"type": "string",
-													"default":"Central Station Burglar Alarm"
-													},
-												"IntentionForProperty": {
-													"type": "string",
-													"default":"Rent the Property"
-													},
-												"IsSprinklerSystem": {
-													"type": "string",
-													"default":"Yes"
-													}
-											}
-										}	
-								}
-							}
-						}
-			}	
-      },
-				"OwnerId":{
-					"type": "string",
-					"default": "33"
-				},
-			  	"ServiceRequestDetail": {
-					"type": "object",
-					"properties": {
-						"ResponseType": {
-							"type": "string",
-							"enum": [
-								"JSON",
-								"XML"
-							],
-							"default": "JSON"
-						},
-						"OwnerId": {
-							"type": "string",
-							"default": "33"
-						},
-						"UserName": {
-							"type": "string",
-							"default": "uwmanager"
-						},
-						"Token": {
-							"type": "string",
-							"default": "VLOouMoPSJR1WT5DF489lo+U19gRsGs6p9dSX8+actIVVH2tXLPiA53dz002/lITVsp5VBmYfbE6dGRO/Ha4gsyy5Ol5yHHr6lA/aNpm/uvfucKSbNsSLmYbRuCY0hBEp3wyXmOTQnoaFgftkx77t6tLvDl5Av/p+AyXPq+ATVPmmpKvTnYzHS3r1L7/BfBCPCvff90O76hRamcE/Td2met9ksucPUlrMNWYWG/mUkr0BJPqSe5sh6sYTqHAx0mxBadDY5sC25kXhsd7BsWJNS1NIJvzIPy4mABphiAFgmuTnP/5To98qcqQNLOoCpFbMKzjOoXxaKGaTDEmQtXsIHRNVKiCxGP4PsL6aSakEb36UOskEF5jzgkIifS1OT8t0n6udho7WAs6TuRD3kJadArqqm8+cfQLosv+UgRuoChVxjUFUYjt/6pIMIsXlA5AZakKeUYhksf28iI7hqTqPK10sx10pUSNHTMjPe49uGtkPy9jEh8CZvY/n5yyN5YybZap3+hLiuzViMjJWcdnP4mGr/l+zGT0RR8VwBrLKhFvDBISAd4LsUL75etvd0e+t8zTWfiwZWGris5sBN4o4/tkLSMLUe8EDFmzU+qmCzHYdVDhndvdz7q+XZyfB1DNA34p/MRuFU3I2bown/JxzsDN9phHAuwLzo9BpjBSLZNVWF/V3ugRSKlCVCnSXFF8rYTS94n95NeNoCVSgrdoqHVb07XYI4lruRcCMlEcJk4JwreGsvjzHbya1+YQeS8J1PEP//vGLJnA/Rf5CeSFZcqOqog1MRTszvcAClxfckc/mp8x2qhLb0uSd9YBXfkHT2ZGs26+nQFJlfbbPkE8QGx7hQ9SE9PhaaTfqWY0K/0wtQSnGtsNaAXzM49gDRmGQtSLCcYPVg0SE49CO7LMkZqGmVAyji68ZXfGvp6yxXsrYN+xU11lOW0EB2dM4+Ra/ZPPxJZ4o6sTMao6XsLhyOt9XWhgoRQlmGlVYMgNWRis36hcNRtRXagIU0GjjGfreZzDoEXD8oBBiBjgznAN4hKyR3ZbxJhTCVBXd9dg7pg="
-						},
-						"BrowserIp": {
-							"type": "string",
-							"default": "111.93.250.10"
-						},
-						"ServiceRequestVersion": {
-							"type": "string",
-							"default": "1.0"
-						}
-					}
-				}
-			}
-		},
-		"Rating_Success_Response": {
-			"type": "object",
-			"properties": {
-				"messageDetail": {
-					"type": "object"
-				},
-				"ResponseStatus": {
-					"type": "string"
-				},
-				"Policy": {
-					"type": "object"
-				}
-			}
-		},
-		"errorModel": {
-			"type": "object",
-			"required": [
-				"RequestStatus",
-				"MessageDetail"
-			],
-			"properties": {
-				"RequestStatus": {
-					"type": "string"
-				},
-				"MessageDetail": {
-					"type": "object",
-					"properties": {
-						"MessageCode": {
-							"type": "string"
-						},
-						"MessageType": {
-							"type": "string"
-						},
-						"UserMessage": {
-							"type": "string"
-						},
-						"MessageLevel": {
-							"type": "string"
-						},
-						"MessageSeverity": {
-							"type": "string"
-						},
-						"MessageList": {
-							"type": "object",
-							"properties": {
-								"Message": {
-									"type": "array",
-									"items": {
-										"type": "string"
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Solartis Rate API for Builder's Risk",
+    "description": "To get rate for Builder's Risk from Solartis Rate API."
+  },
+  "host": "solartisdemokbv6-2.solartis.net",
+  "basePath": "/KnowledgeEngineV6_2/KnowledgeBase",
+  "schemes": [
+    "https"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "paths": {
+    "/FireEventV2": {
+      "post": {
+        "description": "Gets Rate for Builder's Risk",
+        "operationId": "getRates",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Token",
+            "in": "header",
+            "description": "Authentication Token",
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "VLOouMoPSJR1WT5DF489lo+U19gRsGs6p9dSX8+actIVVH2tXLPiA53dz002/lITtsq0jr4hGMefAJtuWLOgeEmDKvT38DNvQGOvjmRIymWUnKMTIBP2jYpcFwmgzNriNVISU9+1CPF+xbHXIFZ+R6tLvDl5Av/p+AyXPq+ATVPmmpKvTnYzHS3r1L7/BfBCPCvff90O76hRamcE/Td2met9ksucPUlrMNWYWG/mUkr0BJPqSe5sh6sYTqHAx0mxBadDY5sC25kXhsd7BsWJNS1NIJvzIPy4mABphiAFgmuTnP/5To98qcqQNLOoCpFbMKzjOoXxaKGaTDEmQtXsIHRNVKiCxGP4PsL6aSakEb36UOskEF5jzgkIifS1OT8t0n6udho7WAs6TuRD3kJadArqqm8+cfQLosv+UgRuoChVxjUFUYjt/6pIMIsXlA5AZakKeUYhksf28iI7hqTqPK10sx10pUSNHTMjPe49uGtkPy9jEh8CZvY/n5yyN5YybZap3+hLiuzViMjJWcdnP4mGr/l+zGT0RR8VwBrLKhFvDBISAd4LsUL75etvd0e+t8zTWfiwZWGris5sBN4o4/tkLSMLUe8EDFmzU+qmCzHYdVDhndvdz7q+XZyfB1DNA34p/MRuFU3I2bown/JxzsDN9phHAuwLzo9BpjBSLZNVWF/V3ugRSKlCVCnSXFF8rYTS94n95NeNoCVSgrdoqHVb07XYI4lruRcCMlEcJk4JwreGsvjzHbya1+YQeS8J1PEP//vGLJnA/Rf5CeSFZcqOqog1MRTszvcAClxfckc/mp8x2qhLb0uSd9YBXfkHT2ZGs26+nQFJlfbbPkE8QGx7hQ9SE9PhaaTfqWY0K/0wtQSnGtsNaAXzM49gDRmGQtSLCcYPVg0SE49CO7LMkZqGmVAyji68ZXfGvp6yxXsrYN+xU11lOW0EB2dM4+Ra/ZPPxJZ4o6sTMao6XsLhyOt9XWhgoRQlmGlVYMgNWRis36hcNRtRXagIU0GjjGfreZzDoEXD8oBBiBjgznAN4hKyR3ZbxJhTCVBXd9dg7pgii="
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "description": "Content Type",
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "application/json"
+          },
+          {
+            "name": "EventName",
+            "in": "header",
+            "description": "EventName",
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "BR_CalculateRate"
+          },
+          {
+            "name": "Rating Request",
+            "in": "body",
+            "description": "For rating request",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Rating_Request"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "$ref": "#/definitions/Rating_Success_Response"
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/errorModel"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Rating_Request": {
+      "type": "object",
+      "properties": {
+        "EndClientUserUniqueSessionId": {
+          "type": "string",
+          "default": "Uniquesession"
+        },
+        "BuildersRisk": {
+          "type": "object",
+          "properties": {
+            "EventName": {
+              "type": "string",
+              "default": "BR_CalculateRate"
+            },
+            "ProductName": {
+              "type": "string",
+              "default": "Builders Risk V1"
+            },
+            "CompanyName": {
+              "type": "string",
+              "default": "Solartis"
+            },
+            "InsuredName": {
+              "type": "string",
+              "default": "ABC Insurance"
+            },
+            "AddressLine1": {
+              "type": "string",
+              "default": "4740 Reed Road"
+            },
+            "AddressLine2": {
+              "type": "string",
+              "default": "Suite 109"
+            },
+            "State": {
+              "type": "string",
+              "default": "AL"
+            },
+            "City": {
+              "type": "string",
+              "default": "COOSAWATCHIE"
+            },
+            "County": {
+              "type": "string",
+              "default": "JASPER"
+            },
+            "ZipCode": {
+              "type": "string",
+              "default": "29912"
+            },
+            "QuoteType": {
+              "type": "string",
+              "default": "NEW_BUSINESS"
+            },
+            "PolicyEffectiveDate": {
+              "type": "string",
+              "default": "01/01/2018"
+            },
+            "PolicyExpiryDate": {
+              "type": "string",
+              "default": "01/01/2019"
+            },
+            "ConstructionType": {
+              "type": "string",
+              "default": "Fire Resistive"
+            },
+            "Form": {
+              "type": "string",
+              "default": "Builders Risk"
+            },
+            "Environment": {
+              "type": "string",
+              "default": "PROD"
+            },
+            "Risk": {
+              "type": "array",
+              "items": {
+                "properties": {
+                  "RiskDetail": {
+                    "type": "object",
+                    "properties": {
+                      "ProductName": {
+                        "type": "string",
+                        "default": "Builders Risk V1"
+                      },
+                      "AddressLine1": {
+                        "type": "string",
+                        "default": "4740 Reed Road"
+                      },
+                      "AddressLine2": {
+                        "type": "string",
+                        "default": "Suite 109"
+                      },
+                      "State": {
+                        "type": "string",
+                        "default": "AL"
+                      },
+                      "City": {
+                        "type": "string",
+                        "default": "COOSAWATCHIE"
+                      },
+                      "County": {
+                        "type": "string",
+                        "default": "JASPER"
+                      },
+                      "ZipCode": {
+                        "type": "string",
+                        "default": "29912"
+                      },
+                      "ProtectionClass": {
+                        "type": "string",
+                        "default": "8"
+                      },
+                      "ConstructionType": {
+                        "type": "string",
+                        "default": "Fire Resistive"
+                      },
+                      "LimitofInsurance": {
+                        "type": "string",
+                        "default": "350000"
+                      },
+                      "CoinsurancePercentage": {
+                        "type": "string",
+                        "default": "100"
+                      },
+                      "EarthQuakeScore": {
+                        "type": "string",
+                        "default": "9"
+                      },
+                      "FloodZone": {
+                        "type": "string",
+                        "default": "All Other Flood Zones"
+                      },
+                      "TheftExclusion": {
+                        "type": "string",
+                        "default": "No"
+                      },
+                      "Deductible": {
+                        "type": "string",
+                        "default": "5000"
+                      },
+                      "LocationNumber": {
+                        "type": "string",
+                        "default": "1"
+                      },
+                      "LocationName": {
+                        "type": "string",
+                        "default": "Location 1"
+                      },
+                      "NumberofStories": {
+                        "type": "string",
+                        "default": "1"
+                      },
+                      "SquareFeet": {
+                        "type": "string",
+                        "default": "1"
+                      },
+                      "DistancefromCostal": {
+                        "type": "string",
+                        "default": "1"
+                      },
+                      "Occupancy": {
+                        "type": "string",
+                        "default": "Builders Risk"
+                      },
+                      "TypeOfRenovation": {
+                        "type": "string",
+                        "default": "New Construction (Ground Up)"
+                      },
+                      "NumberoflossesinPast3Years": {
+                        "type": "string",
+                        "default": "2"
+                      },
+                      "RoofShape": {
+                        "type": "string",
+                        "default": "Hip Roof"
+                      },
+                      "Alarm": {
+                        "type": "string",
+                        "default": "Central Station Burglar Alarm"
+                      },
+                      "IntentionForProperty": {
+                        "type": "string",
+                        "default": "Rent the Property"
+                      },
+                      "IsSprinklerSystem": {
+                        "type": "string",
+                        "default": "Yes"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "OwnerId": {
+          "type": "string",
+          "default": "33"
+        },
+        "ServiceRequestDetail": {
+          "type": "object",
+          "properties": {
+            "ResponseType": {
+              "type": "string",
+              "enum": [
+                "JSON",
+                "XML"
+              ],
+              "default": "JSON"
+            },
+            "OwnerId": {
+              "type": "string",
+              "default": "33"
+            },
+            "UserName": {
+              "type": "string",
+              "default": "uwmanager"
+            },
+            "Token": {
+              "type": "string",
+              "default": "VLOouMoPSJR1WT5DF489lo+U19gRsGs6p9dSX8+actIVVH2tXLPiA53dz002/lITtsq0jr4hGMefAJtuWLOgeEmDKvT38DNvQGOvjmRIymWUnKMTIBP2jYpcFwmgzNriNVISU9+1CPF+xbHXIFZ+R6tLvDl5Av/p+AyXPq+ATVPmmpKvTnYzHS3r1L7/BfBCPCvff90O76hRamcE/Td2met9ksucPUlrMNWYWG/mUkr0BJPqSe5sh6sYTqHAx0mxBadDY5sC25kXhsd7BsWJNS1NIJvzIPy4mABphiAFgmuTnP/5To98qcqQNLOoCpFbMKzjOoXxaKGaTDEmQtXsIHRNVKiCxGP4PsL6aSakEb36UOskEF5jzgkIifS1OT8t0n6udho7WAs6TuRD3kJadArqqm8+cfQLosv+UgRuoChVxjUFUYjt/6pIMIsXlA5AZakKeUYhksf28iI7hqTqPK10sx10pUSNHTMjPe49uGtkPy9jEh8CZvY/n5yyN5YybZap3+hLiuzViMjJWcdnP4mGr/l+zGT0RR8VwBrLKhFvDBISAd4LsUL75etvd0e+t8zTWfiwZWGris5sBN4o4/tkLSMLUe8EDFmzU+qmCzHYdVDhndvdz7q+XZyfB1DNA34p/MRuFU3I2bown/JxzsDN9phHAuwLzo9BpjBSLZNVWF/V3ugRSKlCVCnSXFF8rYTS94n95NeNoCVSgrdoqHVb07XYI4lruRcCMlEcJk4JwreGsvjzHbya1+YQeS8J1PEP//vGLJnA/Rf5CeSFZcqOqog1MRTszvcAClxfckc/mp8x2qhLb0uSd9YBXfkHT2ZGs26+nQFJlfbbPkE8QGx7hQ9SE9PhaaTfqWY0K/0wtQSnGtsNaAXzM49gDRmGQtSLCcYPVg0SE49CO7LMkZqGmVAyji68ZXfGvp6yxXsrYN+xU11lOW0EB2dM4+Ra/ZPPxJZ4o6sTMao6XsLhyOt9XWhgoRQlmGlVYMgNWRis36hcNRtRXagIU0GjjGfreZzDoEXD8oBBiBjgznAN4hKyR3ZbxJhTCVBXd9dg7pgii="
+            },
+            "BrowserIp": {
+              "type": "string",
+              "default": "111.93.250.10"
+            },
+            "ServiceRequestVersion": {
+              "type": "string",
+              "default": "1.0"
+            }
+          }
+        }
+      }
+    },
+    "Rating_Success_Response": {
+      "type": "object",
+      "properties": {
+        "messageDetail": {
+          "type": "object"
+        },
+        "ResponseStatus": {
+          "type": "string"
+        },
+        "Policy": {
+          "type": "object"
+        }
+      }
+    },
+    "errorModel": {
+      "type": "object",
+      "required": [
+        "RequestStatus",
+        "MessageDetail"
+      ],
+      "properties": {
+        "RequestStatus": {
+          "type": "string"
+        },
+        "MessageDetail": {
+          "type": "object",
+          "properties": {
+            "MessageCode": {
+              "type": "string"
+            },
+            "MessageType": {
+              "type": "string"
+            },
+            "UserMessage": {
+              "type": "string"
+            },
+            "MessageLevel": {
+              "type": "string"
+            },
+            "MessageSeverity": {
+              "type": "string"
+            },
+            "MessageList": {
+              "type": "object",
+              "properties": {
+                "Message": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

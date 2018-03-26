@@ -32,7 +32,7 @@
 						"required": true,
 						"type": "string",
 						"format": "string",
-						"default": "HzhAo4CbF/h3sUqNu9samOpuM/fUjfkVztgESsH7udp80k5yVLm79dKYysDbkulxQ2fJ1UiXAuvNqcbXvy3xtUs/G2H+iTaibVS7MsZQcP0Fq9f9UmDxl6+N+IrrIkNxa9at6iuLrxdsCoBUvuXsthpkZSFvNjltXeTLpaWlyRZE7nDKTBS0KkocOeSUsj8z5zLA8mZnvGmxh4HJbVeqWExdBFyJUz7XJRY9rDW9YV09sOeoJAZddIOJ/Ox3oGX+4u1RH2wEi+vr5YkpgXY1xVRmLdK2SVXrMDedPWZNiqNNjRUUUSq1y4NKyCNxQXjDjiDGofUSvboBuLDE6DT/8oPxVLlKEuu6QNd+Wn2EgxoTfye4Qe71FYzZ6gmgT7Bi09eiWxPkUPcJtrg7KGg23Orp1dqMQWRkgQtjIfQCJapfME56GZbbvXzldsg/xpkz1cUGmko0zdOuDo6rVVSY7l77yj5qBwmKxkV4yJC1b12pie2Yr7xXu7mGPiP19zvahS29HRF5DYYc7sT1GPttRSsZW+9/wrSJiCqoVG0NX9IhHcsN9bAdMn7gzEy4tffqctu1Ix+CpaHNIwia8OelYNDrSVfq7AxSoiQhJjukKOxDcirv00KBIt2SWer42NI5BdfNWDdshrhbme+CEXTh5jdQJUsvnc63erI+Ae0S9noTMBrklNX3N0KrQWc2YZOOyM+LpxwNumqsQuJZjepi8eFgOkfH7dJ2DEcpLAWbSXHAhaP4vBzhGH7ZKia8Zae78bGP72tt3SMc+TgHVbOTcfrzHKz2gGY78EgFmVSzk8yC4A2iI2xyXe7BkX5EfEC2TpbN5pOrbu+gYJWwhutLosJunuvW+cv908fUrBvzOI6ttcS4GqL0su2NawM7pEUBYDvphyZfG99mILy2irt9I4i6LNeyot3EaQ2JG7XdwYx6EyN7cCSruqAMrHdhC4pGXw/27HNlrG8XDi0yv1Lceoi6LNeyot3EaQ2JG7XdwYz2KWF3J+4j5qGwMJQxZQqB5HXuAheyF1X15SFHpFGSUXOHSWYev+OmEAYnkK6tOPtx9gErwTLkhbTD49Ub7omytie2WHF3eq3h0GFuCs3t2g=="
+						"default": "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"
 					},
 					{
 						"name": "Content-Type",
@@ -100,19 +100,19 @@
 						},
 						"EventName": {
 							"type": "string",
-							"default": "ISOGLQuote"
+							"default": "ISOGLQuoteV5"
 						},
 						"EffectiveDate": {
 							"type": "string",
-							"default": "2015-06-01"
+							"default": "2018-03-01"
 						},
 						"ExpirationDate": {
 							"type": "string",
-							"default": "2016-06-01"
+							"default": "2019-03-01"
 						},
 						"LastRateLookUpDate":{
 								"type": "string",
-							  "default": "2017-08-01"
+							  "default": "2018-04-01"
 						},  
 						"InsuredName": {
 							"type": "string",
@@ -120,27 +120,27 @@
 						},
 						"AddressLine1": {
 							"type": "string",
-							"default": ""
+							"default": "Address1"
 						},
 						"AddressLine2": {
 							"type": "string",
-							"default": ""
+							"default": "Address2"
 						},
 						"City": {
 							"type": "string",
-							"default": "Adak"
+							"default": "Hammond"
 						},
 						"County": {
 							"type": "string",
-							"default": "Aleutians West Census Area"
+							"default": "Lake"
 						},
 						"ZipCode": {
 							"type": "string",
-							"default": "99546"
+							"default": "46325"
 						},
 						"State": {
 							"type": "string",
-							"default": "AK"
+							"default": "IN"
 						},
 						"Subline": {
 							"type": "string",
@@ -148,47 +148,47 @@
 						},
 						"GLCoverageExtensionCoverageAProductRestorationExpenseManualPremium": {
 							"type": "string",
-							"default": "0"
+							"default": "10"
 						},
 						"GLEmployeeBenefitsLiabCovClaimsMadeManualPremium": {
 							"type": "string",
-							"default": "0"
+							"default": "10"
 						},
 						"GLElectronicDataLiabilityCoverageFormManualPremium": {
 							"type": "string",
-							"default": "0"
+							"default": "10"
 						},
 						"GLEmploymentRelatedPracticesExclusionCoverageManualPremium": {
 							"type": "string",
-							"default": "0"
+							"default": "10"
 						},
 						"GLExtendedReportingPeriodEndorsementForElectronicDataLiabilityCoverageManualPremium": {
 							"type": "string",
-							"default": "0"
+							"default": "10"
 						},
 						"GLExtendedReportingPeriodEndtForEmpBenefitsLiabCovManualPremium": {
 							"type": "string",
-							"default": "0"
+							"default": "10"
 						},
 						"GLExclusionProductTamperingManualPremium": {
 							"type": "string",
-							"default": "0"
+							"default": "10"
 						},
 						"GLExclusionProductReplacementRepairOrRepurchaseManualPremium": {
 							"type": "string",
-							"default": "0"
+							"default": "10"
 						},
 						"GLExclusionOfNewlyAcquiredOrganizationsAsInsuredsManualPremium": {
 							"type": "string",
-							"default": "0"
+							"default": "10"
 						},
 						"GLLiquorLiabManualPremium": {
 							"type": "string",
-							"default": "0"
+							"default": "10"
 						},
 						"GLSupplementalExtendedReportingPeriodEndtLiquorLiabManualPremium": {
 							"type": "string",
-							"default": "0"
+							"default": "10"
 						},
 					  "GeneralAggregateLimit": {
 							"type": "string",
@@ -262,7 +262,7 @@
             "GLElevatorsContractorsAndInspectorsChangesCancellationAndSplitLimitsOfInsurance_BodilyInjuryLimit": 
             {
               "type": "string",
-							"default": "500,000"
+							"default": "1,000,000"
               },
             "GLElevatorsContractorsAndInspectorsChangesCancellationAndSplitLimitsOfInsurance_PropertyDamageLimit": 
             {
@@ -272,7 +272,7 @@
             "GovernmentalSubdivision": 
             {
               "type": "string",
-							"default": "Yes"
+							"default": "No"
               },
             "GLExclusionOfCertifiedActsOfNuclearBiologicalChemicalActsTerrorismCapOnLossesFromCertifiedActs": 
             {
@@ -282,22 +282,22 @@
             "GLConditionalExclusionOfTerrorismNuclearBiologicalChemicalDispositionOfAct2002": 
             {
               "type": "string",
-							"default": "Yes"
+							"default": "No"
               },
             "GLExclusionOfTerrorismNuclearBiologicalChemicalTerrorism": 
             {
               "type": "string",
-							"default": "Yes"
+							"default": "No"
               },
             "GLCertifiedActsOfTerrorismAggregateLimitCapOnLossesFromCertifiedActsOfTerrorismPremOps": 
             {
               "type": "string",
-							"default": "No"
+							"default": "Yes"
               },
             "GLConditionalLimitationOfCoverageTerrorismSublimitAnnualAggregateTerrorismAct2002": 
             {
               "type": "string",
-							"default": "No"
+							"default": "Yes"
               },
             "GLLimitationOfCoverageForTerrorismSubLimitAnnualAggregateBasis": 
             { 
@@ -342,7 +342,7 @@
             "ISOERCVersion": 
             {
               "type": "string",
-							"default": "RC_GL_AK_06012015_V01"
+							"default": "RC_GL_IN_03012018_V01"
               },
             "PerPersonLimit": 
             {
@@ -387,8 +387,916 @@
             "ProdsCompldOpsAggregateLimit": 
             {
               "type": "string",
-							"default": "200,000 CSL"
+			  "default": "200,000 CSL"
               },
+			   	"PackagePolicy": {
+ 		"type": "string",
+ 		"default": "No"
+ 	},
+ 	"Multistate": {
+ 		"type": "string",
+ 		"default": "No"
+ 	},
+ 	"PremOpsMinPremiumOverride": {
+ 		"type": "string",
+ 		"default": "320"
+ 	},
+ 	"GeneralLiabilityAddlInsdCharitableInstitns": {
+ 		"type": "string",
+ 		"default": "Yes"
+ 	},
+ 	"GeneralLiabilityAddlInsdChurchMbrOffcrVolunWrkr": {
+ 		"type": "string",
+ 		"default": "Yes"
+ 	},
+ 	"GeneralLiabilityAddlInsdClubMembers": {
+ 		"type": "string",
+ 		"default": "Yes"
+ 	},
+ 	"GeneralLiabilityAddlInsdConcessionaires": {
+ 		"type": "string",
+ 		"default": "Yes"
+ 	},
+ 	"GeneralLiabilityAddlInsdControllingInt": {
+ 		"type": "string",
+ 		"default": "Yes"
+ 	},
+ 	"GeneralLiabilityAddlInsdDesigntdPersonOrg": {
+ 		"type": "string",
+ 		"default": "Yes"
+ 	},
+ 	"GeneralLiabilityAddlInsdElectiveOrAppointiveExecutiveOfficersOfPublicCorps": {
+ 		"type": "string",
+ 		"default": "Yes"
+ 	},
+ 	"GeneralLiabilityAddlInsdEngrsArchsSrvyrs": {
+ 		"type": "string",
+ 		"default": "Yes"
+ 	},
+ 	"GeneralLiabilityAddlInsdEngrsArchsSrvyrsNotEngagedInsd": {
+ 		"type": "string",
+ 		"default": "Yes"
+ 	},
+ 	"GeneralLiabilityAddlInsdEngrsArchsSrvyrsOwnersContractors": {
+ 		"type": "string",
+ 		"default": "No"
+ 	},
+ 	"GeneralLiabilityAddlInsdExecsAdminsTrstesBenefics": {
+ 		"type": "string",
+ 		"default": "No"
+ 	},
+ 	"GeneralLiabilityAddlInsdGrantorFranchise": {
+ 		"type": "string",
+ 		"default": "No"
+ 	},
+ 	"GeneralLiabilityAddlInsdGrantorLicenses": {
+ 		"type": "string",
+ 		"default": "Yes"
+ 	},
+ 	"GeneralLiabilityAddlInsdGrantorOfLicensesAutomaticStatusReqdLicensor": {
+ 		"type": "string",
+ 		"default": "Yes"
+ 	},
+ 	"GeneralLiabilityAddlInsdLessorLeasedEquipmt": {
+ 		"type": "string",
+ 		"default": "Yes"
+ 	},
+ 	"GeneralLiabilityAddlInsdLessorOfLeasedEquipmtAutomtcStatusWhenReqdInLeaseAgrmtWithYou": {
+ 		"type": "string",
+ 		"default": "Yes"
+ 	},
+ 	"GeneralLiabilityAddlInsdOwnersLesseesContrctrsAutomtcStatusWhenReqInConstrctnAgrmtWithYou": {
+ 		"type": "string",
+ 		"default": "Yes"
+ 	},
+ 	"GeneralLiabilityAddlInsdOwnersLesseesContrctrsScheddPersonOrg": {
+ 		"type": "string",
+ 		"default": "Yes"
+ 	},
+ 	"GeneralLiabilityAddlInsdStatePolitlSubdPermits": {
+ 		"type": "string",
+ 		"default": "Yes"
+ 	},
+ 	"GeneralLiabilityAddlInsdStatePolitlSubdPermitsOwnersContractors": {
+ 		"type": "string",
+ 		"default": "Yes"
+ 	},
+ 	"GeneralLiabilityAddlInsdStatePolitlSubdPermitsRelatingPrem": {
+ 		"type": "string",
+ 		"default": "Yes"
+ 	},
+ 	"GeneralLiabilityAddlInsdTownhouseAssocs": {
+ 		"type": "string",
+ 		"default": "Yes"
+ 	},
+ 	"GeneralLiabilityAddlInsdUsersGolfmobiles": {
+ 		"type": "string",
+ 		"default": "Yes"
+ 	},
+ 	"GeneralLiabilityAddlInsdUsersOfTeamsDraftOrSaddleAnimals": {
+ 		"type": "string",
+ 		"default": "Yes"
+ 	},
+ 	"GeneralLiabilityAddlInsdVendors": {
+ 		"type": "string",
+ 		"default": "Yes"
+ 	},
+ 	"ProdsCompldOpsMinPremiumOverride": {
+ 		"type": "string",
+ 		"default": "62"
+ 	},
+ 	"SpecialCombinedMinPremiumOverride": {
+ 		"type": "string",
+ 		"default": "30"
+ 	},
+ 	"GeneralLiabilityAbuseMolestationExclManualPremium": {
+ 		"type": "string",
+ 		"default": "0"
+ 	},
+ 	"GeneralLiabilityAbuseOrMolestationExclusionSpecifiedProfessionalServicesManualPremium": {
+ 		"type": "string",
+ 		"default": "0"
+ 	},
+ 	"GeneralLiabilityAddlInsdLessorOfLeasedEquipmtAutomtcStatusWhenReqdInLeaseAgrmtWithYouManualPremium": {
+ 		"type": "string",
+ 		"default": "0"
+ 	},
+ 	"GeneralLiabilityAddlInsdOwnersLesseesContrctrsAutomtcStatusForOtherPartiesWhenReqInConstrctnAgrmtManualPremium": {
+ 		"type": "string",
+ 		"default": "0"
+ 	},
+ 	"GeneralLiabilityAddlInsdOwnersLesseesContrctrsAutomtcStatusWhenReqInConstrctnAgrmtWithYouManualPremium": {
+ 		"type": "string",
+ 		"default": "0"
+ 	},
+ 	"GeneralLiabilityAmendmentOfInsuredContractDefinitionManualPremium": {
+ 		"type": "string",
+ 		"default": "0"
+ 	},
+ 	"GeneralLiabilityAmendmentOfPersonalAndAdvertisingInjuryDefinitionManualPremium": {
+ 		"type": "string",
+ 		"default": "0"
+ 	},
+ 	"GeneralLiabilityAmndmtOfCovTerrWorldwideCovManualPremium": {
+ 		"type": "string",
+ 		"default": "0"
+ 	},
+ 	"GeneralLiabilityAmndmtOfCovTerrWorldwideCovWithSpecdExcptnsManualPremium": {
+ 		"type": "string",
+ 		"default": "0"
+ 	},
+ 	"GeneralLiabilityAmndmtOfLimitsOfInsManualPremium": {
+ 		"type": "string",
+ 		"default": "0"
+ 	},
+ 	"GeneralLiabilityAmndmtOfLiquorLiabExclManualPremium": {
+ 		"type": "string",
+ 		"default": "0"
+ 	},
+ 	"GeneralLiabilityAmndmtOfLiquorLiabExclExcptnScheddActivsProductsCompletedOpsManualPremium": {
+ 		"type": "string",
+ 		"default": "0"
+ 	},
+ 	"GeneralLiabilityAmndmtOfLiquorLiabExclProdsCompldOpsManualPremium": {
+ 		"type": "string",
+ 		"default": "0"
+ 	},
+ 	"GeneralLiabilityAmndmtTravelAgencyToursLimitationOfCovManualPremium": {
+ 		"type": "string",
+ 		"default": "0"
+ 	},
+ 	"GeneralLiabilityBindingArbitrationManualPremium": {
+ 		"type": "string",
+ 		"default": "0"
+ 	},
+ 	"GeneralLiabilityBoatsManualPremium": {
+ 		"type": "string",
+ 		"default": "0"
+ 	},
+ 	"GeneralLiabilityCapOnLossesFromCertifiedActsOfTerrorismManualPremium": {
+ 		"type": "string",
+ 		"default": "0"
+	},
+ 	"GeneralLiabilityCertifiedActsOfTerrorismAggregateLimitCapOnLossesFromCertifiedActsOfTerrorismPremOpsManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityCertifiedActsOfTerrorismAggregateLimitCapOnLossesFromCertifiedActsOfTerrorismProdsCompldOpsManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityCollegeSchoolManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityCollegeSchoolLimitedFormManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityCommunicableDiseaseExclusionManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityCommunicableDiseaseExclusionProdsCompldOpsManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityConditionalExclusionOfTerrorismNuclearBiologicalChemicalDispositionOfAct2002ManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityConditionalLimitationOfCoverageTerrorismSublimitAnnualAggregateTerrorismAct2002ManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityConstrctnProjMngmtProtvLiabCovManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityContractualLiabLimitationManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityContractualLiabRailroadsManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityCovForInjuryLeasedWorkersManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityCovForInjuryLeasedWorkersUndergroundStorageTanksManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityDruggistsBroadenedCovManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityEarlierNoticeOfCancellationProvidedByUsManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityEarlierNoticeOfCancellationProvidedByUsOwnersContractorsManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityElectronicDataLiabEndtManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityEmploymentRelatedPracticesExclusionOwnersContrctrsPollutionManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityExcessProvisionVendorsManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityExclAdultDayCareCentersManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityExclAthleticSportsParticipantsManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityExclBodilyInjuryToRailroadPassengersManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityExclConstructionMngmtErrorsOmissionsManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityExclDamageToPremRentedToYouManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityExclDamageToWorkPerformedBySubcontractorsOnYourBehalfManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityExclDescribedHazardsCarnivalsCircusesFairsManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityExclDesignatedOngoingOpsManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityExclDesignatedOpsCovByConsolidatedWrapUpInsProgramPolLvlManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityExclDesignatedProductsManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityExclDesignatedProfessionalServicesManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityExclDesignatedWorkManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityExclDiagnosticTestingLabsManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityExclEmployeesAndVolunteerWorkersAsInsuredsManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityExclExistenceOrMaintenanceOfStreetsRdsHwysOrBridgesManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityExclFiduciaryOrRepLiabOfFinclInstitutionsManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityExclFinancialServManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityExclFuneralServManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityExclInjuryToVolunteerFirefightersManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityExclIntercompanyProductsSuitsManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityExclInternetServicePrvdrsAndInternetAccessPrvdrsErrorsOmissionsManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityExclLawEnforcementActivitiesManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityExclMedPayCovInmatesPatientsPrisonersManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityExclMedPayToChildrenDayCareCentersManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityExclNewEntitiesManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityExclOilGasProducingOpsManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityExclPersonalAdvertisingInjuryManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityExclProductsCompletedOperationsHazardManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityExclProductsProfessionalServicesDruggistsManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityExclProductsProfessionalServicesOpticalHearingAidEstablishmentsManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityExclProfessionalServicesBloodBanksManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+ 		},
+ 		"GeneralLiabilityExclProfessionalVeterinarianServicesManualPremium": {
+ 			"type": "string",
+ 			"default": "0"
+		},
+ 			"GeneralLiabilityExclRiotCivilCommotionMobActionGovtSubdivisionManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityExclRollingStockRailroadConstructionManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityExclSalineSubstancesContaminationManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityExclSpecificAccidentsProdsWorkOrLocationManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityExclSpecificAccidentsProdsWorkOrLocationProdsCompldOpsManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityExclTestingConsultingErrorsOmissionsManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityExclUndergroundStorageTankIncidentsManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityExclVolunteerWorkersManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityExclYear2000ComputerReltdElectronicProblemsManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityExclYear2000ComputerReltdOtherElectronicProblemsProdsCompldOpsManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityExclYear2000ComputerReltdOtherElectronicProblemsWithExceptionForBIOnYourPremManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityExclusionAccessOrDisclosureOfConfidentialOrPersonalInfoAndDataRelatedLiabLmtdBIExcptnNotInclddCGLManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityExclusionAccessOrDisclosureOfConfidentialOrPersonalInformationCovBOnlyManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityExclusionExteriorInsulationAndFinishSystemsOwnersContractorsManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityExclusionExteriorInsulationAndFinishSystemsPremOpsProdsManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityExclusionExteriorInsulationAndFinishSystemsProdsCompldOpsManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityExclusionOfCertifiedActsOfNuclearBiologicalChemicalActsTerrorismCapOnLossesFromCertifiedActsManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityExclusionOfCertifiedActsOfTerrorismManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityExclusionOfPunitiveDamagesRelatedToACertifiedActOfTerrorismManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityExclusionOfTerrorismNuclearBiologicalChemicalTerrorismManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityExclusionUnmannedAircraftManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityExclusionUnmannedAircraftCovAOnlyManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityExclusionUnmannedAircraftCovBOnlyManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityExclusionUnmannedAircraftOwnersAndContractorsManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityExtendedReportingPeriodEndtManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityExtendedReportingPeriodForTerrorismCoverageManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityFinancialInstitutionsRptgProvisionLmtnToFiduciaryOrRepInterestManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityFungiOrBacteriaExclusionManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityFungiOrBacteriaExclusionOwnersContractorsProductsCompletedManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityGovernmentalSubdivisionsManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityHazardousMaterialContractorsManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityInsuredSiteDefinitionManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityLawnCareServicesCovManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityLimitationOfCovToDesignatedPremOrProjectManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityLimitationOfCoverageForTerrorismSubLimitAnnualAggregateBasisManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityLimitedContractualLiabCovPersonalAdvertisingInjManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityLimitedContractualLiabilityRailroadsManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityLimitedCovForDesignatedUnmannedAircraftManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityLimitedCovForDesignatedUnmannedAircraftCovAOnlyManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityLimitedCovForDesignatedUnmannedAircraftCovBOnlyManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityLimitedExclContractorsProfessionalLiabManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityLimitedExclDesignatedOpsCovByConsolidatedWrapUpInsProgramManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityLimitedExclPersonalAdvertisingInjLawyersManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityLimitedFungiOrBacteriaCoverageManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityLimitedFungiOrBacteriaCoverageOwnersContractorsProductsCompletedManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityLimitedPollutionLiabExtensionEndtManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityLimitedTerrorismExclOtherThanCertifiedActsOfTerrorismCapOnLossesFromCertifiedActsOfTerrorismManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityLiquorLiabManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityNonBindingArbitrationManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityOpticalHearingAidEstablishmentsManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityPersonalInjuryLiabManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityPesticideOrHerbicideApplicatorCovManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityPesticideOrHerbicideApplicatorCovOwnersContractorsManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityPollutionExclLimitedExceptionForDesigntdPollutantsManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityPollutionExclLimitedExceptionShortTermEventManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityPollutionExclNamedPerilLimitedExcptnShortTermPollutionEventManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityPollutionLiabCovExtensionManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityPrimaryAndNoncontributoryOtherInsuranceConditionManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityPrincipalsProtectiveLiabCovManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityProfessionalLiabExclElectronicDataProcgSrvcCompuConsultingProgrammingSrvcManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityProfessionalLiabExclWebSiteDesignersManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilityProflLiabExclSpasOrPersonalEnhancementFacilitiesManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilitySeedMerchantsCovForErroneousDeliveryMixtureAndRsltgFailrOfSeedGerminManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilitySeedMerchantsCovForErroneousDeliveryMixtureAndRsltgFailrOfSeedGerminNotInclddManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+ 			},
+ 			"GeneralLiabilitySeedMerchantsCovForErroneousDeliveryMixtureAndRsltgFailrOfSeedGerminNotInclddProdsCompldOpsManualPremium": {
+ 				"type": "string",
+ 				"default": "0"
+				},
+ 				"GeneralLiabilitySeedMerchantsCovForErroneousDeliveryMixtureAndRsltgFailrOfSeedGerminProdsCompldOpsManualPremium": {
+ 					"type": "string",
+ 					"default": "0"
+					},
+ 					"GeneralLiabilitySilicaOrSilicaRelatedDustExclusionOwnersContractorsProdsCompldOpsManualPremium": {
+ 						"type": "string",
+ 						"default": "0"
+ 					},
+ 					"GeneralLiabilitySilicaOrSilicaRelatedDustExclusionPremOpsProdsManualPremium": {
+ 						"type": "string",
+ 						"default": "0"
+ 					},
+ 					"GeneralLiabilitySilicaOrSilicaRelatedDustExclusionRailroadManualPremium": {
+ 						"type": "string",
+ 						"default": "0"
+ 					},
+ 					"GeneralLiabilityStevedoringOperationsManualPremium": {
+ 						"type": "string",
+ 						"default": "0"
+ 					},
+ 					"GeneralLiabilitySupplementalExtendedReportingPeriodEndorsementCG3057ManualPremium": {
+ 						"type": "string",
+ 						"default": "0"
+ 					},
+ 					"GeneralLiabilitySupplementalExtendedReportingPeriodEndtManualPremium": {
+ 						"type": "string",
+ 						"default": "0"
+ 					},
+ 					"GeneralLiabilitySupplementalExtendedReportingPeriodEndtProdsCompldOpsManualPremium": {
+ 						"type": "string",
+ 						"default": "0"
+ 					},
+ 					"GeneralLiabilitySupplementalExtendedReportingPeriodEndtSpecificAccsProdsWorkOrLocationsManualPremium": {
+ 						"type": "string",
+ 						"default": "0"
+ 					},
+ 					"GeneralLiabilitySupplementalExtendedReportingPeriodEndtSpecificAccsProdsWorkOrLocsProdsCompldOpsManualPremium": {
+ 						"type": "string",
+ 						"default": "0"
+ 					},
+ 					"GeneralLiabilityTotalPollutionExclEndtManualPremium": {
+ 						"type": "string",
+ 						"default": "0"
+ 					},
+ 					"GeneralLiabilityTotalPollutionExclWithABldgHeatgEquipmtExcptnHostileFireExcptnManualPremium": {
+ 						"type": "string",
+ 						"default": "0"
+ 					},
+ 					"GeneralLiabilityTotalPollutionExclWithAHostileFireExcptnManualPremium": {
+ 						"type": "string",
+ 						"default": "0"
+ 					},
+ 					"GeneralLiabilityTotalPollutionExclusionProdsCompldOpsManualPremium": {
+ 						"type": "string",
+ 						"default": "0"
+ 					},
+ 					"GeneralLiabilityUndergroundResourcesAndEquipmtCovManualPremium": {
+ 						"type": "string",
+ 						"default": "0"
+ 					},
+ 					"GeneralLiabilityVoluntaryCleanUpCostsReimbursementManualPremium": {
+ 						"type": "string",
+ 						"default": "0"
+ 					},
+ 					"GeneralLiabilityWaiverCharitableImmunityManualPremium": {
+ 						"type": "string",
+ 						"default": "0"
+ 					},
+ 					"GeneralLiabilityWaiverGovernmentalImmunityManualPremium": {
+ 						"type": "string",
+ 						"default": "0"
+ 					},
+ 					"GeneralLiabilityWaiverOfTransferOfRightsOfRecoveryAgainstOthersToUsOwnersContrctrsManualPremium": {
+ 						"type": "string",
+ 						"default": "0"
+ 					},
+ 					"GeneralLiabilityWaiverTransferRightsRecoveryManualPremium": {
+ 						"type": "string",
+ 						"default": "0"
+ 					},
+ 					"GeneralLiabilityYear2000CompuReltdAndOtherElectronicProblemsExclDesigntdLocsOpsProdsSrvcsManualPremium": {
+ 						"type": "string",
+ 						"default": "0"
+ 					},
+ 					"GeneralLiabilityYear2000CompuReltdAndOtherElectronicProblemsExclProdsCompldOpsManualPremium": {
+ 						"type": "string",
+ 						"default": "0"
+ 					},
+ 					"GeneralLiabilitySupplementalExtendedReportingPeriodEndtElectronicDataLiabilityManualPremium": {
+ 						"type": "string",
+ 						"default": "0"
+ 					},
+ 					"GeneralLiabilityExtendedReportingPeriodEndorsementPollutionLiabilityManualPremium": {
+ 						"type": "string",
+ 						"default": "0"
+ 					},
+ 					"GeneralLiabilityColoradoAmendmentOfSectionVExtendedReportingPerSpecificAccidentsProdsWorkOrLocClaimsMadeManualPremium": {
+ 						"type": "string",
+ 						"default": "0"
+ 					},
+ 					"GeneralLiabilityChangesExtendedReportingPeriodForEmployeeBenefitsLiabilityCovManualPremium": {
+ 						"type": "string",
+ 						"default": "0"
+ 					},
+ 					"GeneralLiabilityChangesExtendedReportingPeriodForPremOpsManualPremium": {
+ 						"type": "string",
+ 						"default": "0"
+ 					},
+ 					"GeneralLiabilityChangesExtendedReportingPeriodForProdCompldOpsLiabManualPremium": {
+ 						"type": "string",
+ 						"default": "0"
+ 					},
+ 					"GeneralLiabilityChangesExtendedReportingPeriodUSTManualPremium": {
+ 						"type": "string",
+ 						"default": "0"
+ 					},
+ 					"GeneralLiabilityConnecticutExtendedReportingPeriodEndorsementPollutionLiabLimitedManualPremium": {
+ 						"type": "string",
+ 						"default": "0"
+ 					},
+ 					"GeneralLiabilityGeorgiaLimitedFungiOrBacteriaCoverageSmallBusinessesOwnersContractorsProdsCompldOpsManualPremium": {
+ 						"type": "string",
+ 						"default": "0"
+						},
+ 						"GeneralLiabilityGeorgiaLimitedFungiOrBacteriaCoverageSmallBusinessesPremOpsProdsCompldOpsManualPremium": {
+ 							"type": "string",
+ 							"default": "0"
+ 						},
+ 						"GeneralLiabilityIllinoisChangesAdditionalInsuredCityOfChicagoScaffoldingManualPremium": {
+ 							"type": "string",
+ 							"default": "0"
+ 						},
+ 						"GeneralLiabilityAmendmentOfDefinitionOfPollutantsManualPremium": {
+ 							"type": "string",
+ 							"default": "0"
+ 						},
+ 						"GeneralLiabilityAmendmentOfDefinitionOfPollutantsRailRoadCovManualPremium": {
+ 							"type": "string",
+ 							"default": "0"
+ 						},
+ 						"GeneralLiabilityMassachusettsResidentialFuelTankCoverageManualPremium": {
+ 							"type": "string",
+ 							"default": "0"
+ 						},
+ 						"GeneralLiabilityMassachusettsResidentialFuelTankCoverageSeparateDefenseLimitManualPremium": {
+ 							"type": "string",
+ 							"default": "0"
+ 						},
+ 						"GeneralLiabilityPollutantsDefinitionAmendmentManualPremium": {
+ 							"type": "string",
+ 							"default": "0"
+ 						},
+ 						"GeneralLiabilityMontanaExtendedReportingPeriodEndorsementEmployeeBenefitsLiabilityCovManualPremium": {
+ 							"type": "string",
+ 							"default": "0"
+ 						},
+ 						"GeneralLiabilityNorthCarolinaExtendedReportingPeriodEndorsementPollutionLiabManualPremium": {
+ 							"type": "string",
+ 							"default": "0"
+ 						},
+ 						"GeneralLiabilityNorthCarolinaExtendedReportingPeriodEndorsementPollutionLiabLimitedManualPremium": {
+ 							"type": "string",
+ 							"default": "0"
+ 						},
+ 						"GeneralLiabilityNorthCarolinaSupplementalExtddRptgPerEndtSpecificAccsProdsWorkLocsPremOpsProdsCompldOpsClaimsMadeManualPremium": {
+ 							"type": "string",
+ 							"default": "0"
+ 						},
+ 						"GeneralLiabilityNorthCarolinaSupplementalExtddRptgPerEndtSpecificAccsProdsWorkLocsProdsCompldOpsClaimsMadeManualPremium": {
+ 							"type": "string",
+ 							"default": "0"
+ 						},
+ 						"GeneralLiabilityNorthCarolinaSupplementalExtendedReportingPeriodEndorsementLiquorClaimsMadeManualPremium": {
+ 							"type": "string",
+ 							"default": "0"
+ 						},
+ 						"GeneralLiabilityNorthCarolinaSupplementalExtendedReportingPeriodEndorsementPremOpsProdsCompldOpsClaimsMadeManualPremium": {
+ 							"type": "string",
+ 							"default": "0"
+ 						},
+ 						"GeneralLiabilityNorthCarolinaSupplementalExtendedReportingPeriodEndorsementProdsCompldOpsClaimsMadeManualPremium": {
+ 							"type": "string",
+ 							"default": "0"
+ 						},
+ 						"GeneralLiabilityNorthCarolinaSupplementalExtendedReportingPeriodEndorsementUSTManualPremium": {
+ 							"type": "string",
+ 							"default": "0"
+ 						},
+ 						"GeneralLiabilityStateChangesSupplementalExtendedReportingPeriodEndorsementManualPremium": {
+ 							"type": "string",
+ 							"default": "0"
+ 						},
+ 						"GeneralLiabilityStateChangesSupplementalExtendedReportingPeriodEndorsementForPollutionLiabilityManualPremium": {
+ 							"type": "string",
+ 							"default": "0"
+ 						},
+ 						"GeneralLiabilityStateChangesVolunteerWorkersExclusionManualPremium": {
+ 							"type": "string",
+ 							"default": "0"
+ 						},
+ 						"GeneralLiabilityNewJerseyChangesCoverageAndExclusionLiabilityForHazardsLeadMultiplePremisesManualPremium": {
+ 							"type": "string",
+ 							"default": "0"
+ 						},
+ 						"GeneralLiabilityChangesBindingArbitrationManualPremium": {
+ 							"type": "string",
+ 							"default": "0"
+ 						},
+ 						"GeneralLiabilityChangesNonBindingArbitrationManualPremium": {
+ 							"type": "string",
+ 							"default": "0"
+ 						},
+ 						"GeneralLiabilityTexasChangesAirportLiabilityManualPremium": {
+ 							"type": "string",
+ 							"default": "0"
+ 						},
+ 						"GeneralLiabilityTexasChangesPesticideOrHerbicideApplicatorCovManualPremium": {
+ 							"type": "string",
+ 							"default": "0"
+ 						},
+ 						"GeneralLiabilityTexasChangesPesticideOrHerbicideApplicatorCoverageOwnersAndContractorsManualPremium": {
+ 							"type": "string",
+ 							"default": "0"
+ 						},
+ 						"GeneralLiabilityChangesSupplementalExtendedReportingPeriodEndtForEmployeeBenefitsLiabCovManualPremium": {
+ 							"type": "string",
+ 							"default": "0"
+ 						},
+ 						"GeneralLiabilityChangesSuppllExtendedReportingPeriodForExcldOrRemovedElectronicDataLiabilityCovManualPremium": {
+ 							"type": "string",
+ 							"default": "0"
+ 						},
+ 						"GeneralLiabilitySupplementalExtendedReportingPeriodEndtForProdCompldOpsLiabManualPremium": {
+ 							"type": "string",
+ 							"default": "0"
+ 						},
+ 						"GeneralLiabilitySupplementalExtendedReportingPeriodEndtTerrorismManualPremium": {
+ 							"type": "string",
+ 							"default": "0"
+ 						},
+ 						"GeneralLiabilitySupplementalExtendedReportingPeriodForExcldCovManualPremium": {
+ 							"type": "string",
+ 							"default": "0"
+ 						},
+ 						"GeneralLiabilitySupplementalExtendedReportingPeriodForExcldLiquorLiabCovManualPremium": {
+ 							"type": "string",
+ 							"default": "0"
+ 						},
+ 						"GeneralLiabilitySupplementalExtendedReportingPeriodForExcldProdCompldOpsLiabCovManualPremium": {
+ 							"type": "string",
+ 							"default": "0"
+ 						},
+ 						"GeneralLiabilityExtendedReportingPeriodEndorsementPollutionLiabilityLimitedManualPremium": {
+ 							"type": "string",
+ 							"default": "0"
+ 						},
 						"Location": {
 							"type": "array",
 							"items": {
@@ -409,7 +1317,7 @@
 																},
 																"ClassCode": {
 																	"type": "string",
-																	"default": "10042"
+																	"default": "54077"
 																},
 																"PremOpsELPOverride": {
 																	"type": "string",
@@ -425,7 +1333,7 @@
 																},
 																"PremOpsIncrdLimitFactorOverride": {
 																   "type": "string",
-																	"default": "2"
+																	"default": "10"
 																},
                                 "PremOpsIncrdLimitTableAssignmentOverride": {
                                   "type": "string",
@@ -476,7 +1384,7 @@
                                 },
                               "ProdsCompldOpsExposure": {
                                 "type": "string",
-                    						"default": "0"
+                    						"default": "1000"
                                 },
                               "ProdsCompldOpsELPOverride": {
                                 "type": "string",
@@ -520,8 +1428,20 @@
                               },
                               "ProdsCompldOpsIncrdLimitTableAssignmentOverride": {
                                 "type": "string",
-                  							"default": "A"
-                                }
+                  							"default": "C"
+                                },
+												"IfAnyBasis": {
+					"type": "string",
+					"default":"No"},
+                "IfAnyBasisProdsCompldOps": {
+					"type": "string",
+					"default":"No"},
+                "GeneralLiabilityCanoesOrRowboatsManualPremium": {
+					"type": "string",
+					"default":"0"},
+                "GeneralLiabilitySnowplowOperationsCoverageManualPremium":{
+					"type": "string", 
+					"default":"0"}
 															}
 														}
 													}
@@ -529,15 +1449,15 @@
 											},
 											"AddressLine1": {
 												"type": "string",
-												"default": ""
+												"default": "Addr1"
 											},
 											"AddressLine2": {
 												"type": "string",
-												"default": ""
+												"default": "Addr2"
 											},
 											"City": {
 												"type": "string",
-												"default": "Adak"
+												"default": "Hammond"
 											},
 										  "County": {
 										    "type": "string",
@@ -545,15 +1465,15 @@
 										    },
 											"ZipCode": {
 												"type": "string",
-												"default": "99546"
+												"default": "46325"
 											},
 											"State": {
 												"type": "string",
-												"default": "AK"
+												"default": "IN"
 											},
 											"PremisesOperationsTerritory": {
 												"type": "string",
-												"default": "001"
+												"default": "502"
 											},
 											"GLExclCovCMedPayLocClassLvl": 
 											{
@@ -574,7 +1494,44 @@
                       {
                         "type": "string",
 												"default": "999"
-                      }
+                      },
+					  		  "GeneralLiabilityAddlInsdCoOwnerInsdPrem": {
+                        "type": "string",
+						"default":"Yes"},
+          "GeneralLiabilityAddlInsdMgrsLessorsPrem": {
+                        "type": "string", 
+						"default":"Yes"},
+          "GeneralLiabilityAddlInsdMortgageeAssigneeOrRecvr": {
+                        "type": "string", 
+						"default":"Yes"},
+          "GeneralLiabilityAddlInsdOwnersLesseesContrctrsCompldOpsLocLvl": {
+                        "type": "string", 
+						"default":"Yes"},
+          "GeneralLiabilityAddlInsdOwnersOrOtherIntsFromWhomLandLeased": {
+                        "type": "string", 
+						"default":"No"},
+          "GeneralLiabilityExclAllHazardsInConnectionWithDesignatedPremManualPremium": {
+                        "type": "string", 
+						"default":"0"},
+          "GeneralLiabilityDesignatedLocGeneralAggLimitManualPremium": {
+                        "type": "string", 
+						"default":"0"},
+          "GeneralLiabilityDesignatedLocLiquorAggLimitManualPremium": {
+                        "type": "string", 
+						"default":"0"},
+          "GeneralLiabilityExclDamageToWorkPerformedBySubcontractorsOnYourBehalfDesignSitesOpsManualPremium": {
+                        "type": "string", 
+						"default":"0"},
+          "GeneralLiabilityExclExplosionCollapseUndrgrdPropDmgHazardSpecifiedOpsManualPremium": {
+                        "type": "string", 
+						"default":"0"},
+          "GeneralLiabilityExclExplosionCollapseUndrgrdPropDmgHazardSpecifiedOpsExceptedManualPremium":  {
+                        "type": "string",
+						"default":"0"},
+          "GeneralLiabilityLimitationOfCoverageToInsuredPremisesLocLvlManualPremium": {
+                        "type": "string", 
+						"default":"0"}
+					  
 										}
 									}
 								}
@@ -607,11 +1564,11 @@
 						},
 						"Token": {
 							"type": "string",
-							"default": "HzhAo4CbF/h3sUqNu9samOpuM/fUjfkVztgESsH7udp80k5yVLm79dKYysDbkulxQ2fJ1UiXAuvNqcbXvy3xtUs/G2H+iTaibVS7MsZQcP0Fq9f9UmDxl6+N+IrrIkNxa9at6iuLrxdsCoBUvuXsthpkZSFvNjltXeTLpaWlyRZE7nDKTBS0KkocOeSUsj8z5zLA8mZnvGmxh4HJbVeqWExdBFyJUz7XJRY9rDW9YV09sOeoJAZddIOJ/Ox3oGX+4u1RH2wEi+vr5YkpgXY1xVRmLdK2SVXrMDedPWZNiqNNjRUUUSq1y4NKyCNxQXjDjiDGofUSvboBuLDE6DT/8oPxVLlKEuu6QNd+Wn2EgxoTfye4Qe71FYzZ6gmgT7Bi09eiWxPkUPcJtrg7KGg23Orp1dqMQWRkgQtjIfQCJapfME56GZbbvXzldsg/xpkz1cUGmko0zdOuDo6rVVSY7l77yj5qBwmKxkV4yJC1b12pie2Yr7xXu7mGPiP19zvahS29HRF5DYYc7sT1GPttRSsZW+9/wrSJiCqoVG0NX9IhHcsN9bAdMn7gzEy4tffqctu1Ix+CpaHNIwia8OelYNDrSVfq7AxSoiQhJjukKOxDcirv00KBIt2SWer42NI5BdfNWDdshrhbme+CEXTh5jdQJUsvnc63erI+Ae0S9noTMBrklNX3N0KrQWc2YZOOyM+LpxwNumqsQuJZjepi8eFgOkfH7dJ2DEcpLAWbSXHAhaP4vBzhGH7ZKia8Zae78bGP72tt3SMc+TgHVbOTcfrzHKz2gGY78EgFmVSzk8yC4A2iI2xyXe7BkX5EfEC2TpbN5pOrbu+gYJWwhutLosJunuvW+cv908fUrBvzOI6ttcS4GqL0su2NawM7pEUBYDvphyZfG99mILy2irt9I4i6LNeyot3EaQ2JG7XdwYx6EyN7cCSruqAMrHdhC4pGXw/27HNlrG8XDi0yv1Lceoi6LNeyot3EaQ2JG7XdwYz2KWF3J+4j5qGwMJQxZQqB5HXuAheyF1X15SFHpFGSUXOHSWYev+OmEAYnkK6tOPtx9gErwTLkhbTD49Ub7omytie2WHF3eq3h0GFuCs3t2g=="
+							"default": "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"
 						},
 						"BrowserIp": {
 							"type": "string",
-							"default": "124.124.63.209"
+							"default": "122.183.228.146"
 						},
 						"ServiceRequestVersion": {
 							"type": "string",

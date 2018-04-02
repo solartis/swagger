@@ -280,39 +280,30 @@ definitions:
             type: string
           ClassType:
             type: string
-            enum: ["Small Marine","Artisan Contractor"]
           QuoteNumber:
             type: string
           ProductionChannel:
             type: string
           LimiteachOccurrenceincludingSupplementaryPayments:
             type: string
-            default: "1,000,000 CSL"
           ProductsHazardorCompletedOperationsHazardorwithrespecttoliabilityarisingoutofindependentcontractorsAggregateLimit:
             type: string
-            default: "2,000,000"
           PersonalInjuryandAdvertisingInjuryLimit:
             type: string
-            default: "1,000,000"
           DamagetoPremisesRentedtoyouLimit:
             type: string
-            default: "100,000 ANY ONE OCCURRENCE"
           PremisesMedicalPaymentsLimit:
             type: string
-            default: "10,000 ANY ONE PERSON"
           GeneralAggregateLimitOtherThanProductsCompletedOperations:
             type: string
-            default: "2,000,000"
           PolicyEffectiveDate:
             type: string
           Deductible:
             type: string
-            enum: ["1500", "2500"]
           AnnualGrossReceipts:
             type: string
           IsTRIAApplicable:
             type: string
-            enum: ["Yes", "No"]
           InsuredFirstName:
             type: string
           InsuredLastName:
@@ -323,7 +314,7 @@ definitions:
             type: string
           City:
             type: string
-          County:
+          Country:
             type: string
           StateCode:
             type: string
@@ -341,24 +332,18 @@ definitions:
             type: string
           DoAnyofTheFlowingApply:
             type: string
-            enum: ["Yes", "No"]
           DoYouOwnOperateorCharterAnyVessels:
             type: string
-            enum: ["Yes", "No"]
           HaveYouHadLiabilityClaimsBroughtAgainstYouInTheLast3Years?:
             type: string
-            enum: ["Yes", "No"]
           OrganizationType:
             type: string
           QuoteType:
             type: string
-            default: "New Business"
           EventName:
             type: string
-            default: "MGLCreateQuote"
           EventVersion:
             type: string
-            default: "1.0.0.1"
           DescriptionOfOperations:
                       type: object
                       properties:
@@ -383,7 +368,7 @@ definitions:
                       type: string
                     City:
                       type: string
-                    County:
+                    Country:
                       type: string
                     State:
                       type: string
@@ -398,7 +383,6 @@ definitions:
                             properties:
                               ClassCode:
                                 type: string
-                                default: "1629"
   
   errorModel:
     type: object

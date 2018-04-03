@@ -168,6 +168,7 @@ definitions:
             default: "2,000,000"
           PolicyEffectiveDate:
             type: string
+            title: Effective Date (MM/DD/YYYY)
           Deductible:
             type: string
             enum: ["1500", "2500"]
@@ -188,6 +189,7 @@ definitions:
             type: string
           Country:
             type: string
+            default: United States
           StateCode:
             type: string
           State:
@@ -343,6 +345,8 @@ definitions:
           EventName:
             type: string
           EventVersion:
+            type: string
+          TotalPolicyPremium:
             type: string
           DescriptionOfOperations:
                       type: object

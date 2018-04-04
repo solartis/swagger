@@ -1,0 +1,419 @@
+swagger: '2.0'
+info:
+  version: 'RC 1.1.1.1'
+  title: Marine GL - Quote API
+  description: |
+    Get Quote for the Marine GL class types. 
+  
+    Features:
+    1. Accept input as JSON request with Class Type, Deductible, Gross Receipts, Insured and location details
+    2. Provided information will be saved and Quote Number will be generated.
+    3. Error handling included at each attribute level
+    
+  contact:
+    name: Solartis Support
+    email: solartis_assist_support@solartis.com
+
+host: starrmarinegl.rc.solartis.net
+basePath: /KnowledgeEngineV6_2/KnowledgeBase
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /FireEventV2:
+    post:
+      description: Create Quote for the given input
+      operationId: createQuote
+      produces:
+        - application/json
+      parameters:
+        - name: Token
+          in: header
+          description: Authentication Token
+          required: true
+          type: string
+          format: string
+          default: "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"
+        - name: EventName
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "MGLCreateQuote"
+        - name: EventVersion
+          in: header
+          description: Name of the version to be invoked
+          required: true
+          type: string
+          format: string
+          default: '1.1.1.1'
+        - name: Quote
+          in: body
+          description: Quoting content
+          required: true
+          schema:
+            $ref: '#/definitions/Quote_Request'
+      responses:
+        '200':
+          description: Success Response
+          schema:
+            $ref: '#/definitions/Quote_Success_Response'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/errorModel'
+definitions:
+  Quote_Request:
+    type: object
+    required:
+     - ServiceRequestDetail
+     - QuoteInformation
+    properties:
+      EndClientUserUniqueSessionId:
+        type: string
+      EndClientUserBrowserSessionId:
+        type: string
+      EndClientUserBrowserInformation:
+        type: string
+      PaaSClientIPAddress:
+        type: string
+      ClientUniqueRequestID:
+        type: string
+      ServiceRequestDetail:
+        type: object
+        required:
+          - OwnerId
+          - RegionCode
+          - Token
+          - ServiceRequestVersion
+          - ServiceResponseVersion
+          - ResponseType
+        properties:
+          ServiceRequestVersion:
+            type: string
+            default: "1.0"
+          ServiceResponseVersion:
+            type: string
+            default: "1.0"
+          OwnerId:
+            type: string
+            default: "34"
+          ResponseType:
+            type: string
+            default: "JSON"
+          RegionCode:
+            type: string
+            default: "US"
+          Token:
+            type: string
+            default: "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"
+          UserName:
+            type: string
+            default: "mglagent"
+          LanguageCode:
+            type: string
+            default: "en"
+          BrowserIp:
+            type: string
+      QuoteInformation:
+        type: object
+        required:
+          - OwnerId
+          - StateCode
+          - EventName
+          - EventVersion
+          - ClassType
+          - Deductible
+          - AnnualGrossReceipts
+          - ProductNumber
+          - ProductVerNumber
+          - Location
+        properties:
+          ProductNumber:
+            type: string
+            enum: ["MGL_SM", "MGL_MA"]
+          ProductVerNumber:
+            type: string
+            default: "1.0"
+          OwnerId:
+            type: string
+            default: "34"
+          ProductionChannel:
+            type: string
+            default: MGL_DTC
+          ClassType:
+            type: string
+            enum: ["Small Marine","Marine Artisan"]
+          LimitEachOccurrenceIncludingSupplementaryPayments:
+            type: string
+            default: "1,000,000 CSL"
+          ProductsHazardorCompletedOperations:
+            type: string
+            default: "2,000,000"
+          PersonalInjuryandAdvertisingInjuryLimit:
+            type: string
+            default: "1,000,000"
+          DamagetoPremisesRentedtoyouLimit:
+            type: string
+            default: "100,000 ANY ONE OCCURRENCE"
+          PremisesMedicalPaymentsLimit:
+            type: string
+            default: "10,000 ANY ONE PERSON"
+          GeneralAggregateLimitOtherThanProductsCompletedOperations:
+            type: string
+            default: "2,000,000"
+          PolicyEffectiveDate:
+            type: string
+            title: Effective Date (MM/DD/YYYY)
+          Deductible:
+            type: string
+            enum: ["1500", "2500"]
+          AnnualGrossReceipts:
+            type: string
+          IsTRIAApplicable:
+            type: string
+            enum: ["Yes", "No"]
+          InsuredFirstName:
+            type: string
+          InsuredLastName:
+            type: string
+          AddressLine1:
+            type: string
+          AddressLine2:
+            type: string
+          City:
+            type: string
+          Country:
+            type: string
+            default: United States
+          StateCode:
+            type: string
+          State:
+            type: string
+          ZipCode:
+            type: string
+          PhoneNumber:
+            type: string
+          EmailAddress:
+            type: string
+          MunicipalityName:
+            type: string
+          MunicipalityCode:
+            type: string
+          DoAnyofTheFollowingApply:
+            type: string
+            enum: ["Yes", "No"]
+          DoYouOwnOperateorCharterAnyVessels:
+            type: string
+            enum: ["Yes", "No"]
+          HaveYouHadLiabilityClaimsBroughtAgainstYouInTheLast3Years?:
+            type: string
+            enum: ["Yes", "No"]
+          OrganizationType:
+            type: string
+          QuoteType:
+            type: string
+            default: "New Business"
+          EventName:
+            type: string
+            default: "MGLCreateQuote"
+          EventVersion:
+            type: string
+            default: "1.1.1.1"
+          DescriptionOfOperations:
+                      type: object
+                      properties:
+                        DescriptionOfOperationsList:
+                          type: array
+                          items:
+                            properties:
+                              Operations:
+                                type: string
+          Location:
+            type: object
+            properties:
+              LocationDetail:
+                type: array
+                items:
+                  properties:
+                    LocationID:
+                      type: string
+                    AddressLine1:
+                      type: string
+                    AddressLine2:
+                      type: string
+                    City:
+                      type: string
+                    Country:
+                      type: string
+                      default: United States
+                    State:
+                      type: string
+                    ZipCode:
+                      type: string
+                    Classification:
+                      type: object
+                      properties:
+                        ClassificationDetail:
+                          type: array
+                          items:
+                            properties:
+                              ClassCode:
+                                type: string
+                                default: "1629"
+                  
+  Quote_Success_Response:
+    type: object
+    required:
+      - RequestStatus
+      - PremiumInformation
+    properties:
+      messageDetail:
+        type: object
+      RequestStatus:
+        type: string
+      PremiumInformation:
+        type: object
+        properties:
+          OwnerId:
+            type: string
+          ClassType:
+            type: string
+          QuoteNumber:
+            type: string
+          ProductionChannel:
+            type: string
+          LimiteachOccurrenceincludingSupplementaryPayments:
+            type: string
+          ProductsHazardorCompletedOperationsHazardorwithrespecttoliabilityarisingoutofindependentcontractorsAggregateLimit:
+            type: string
+          PersonalInjuryandAdvertisingInjuryLimit:
+            type: string
+          DamagetoPremisesRentedtoyouLimit:
+            type: string
+          PremisesMedicalPaymentsLimit:
+            type: string
+          GeneralAggregateLimitOtherThanProductsCompletedOperations:
+            type: string
+          PolicyEffectiveDate:
+            type: string
+          Deductible:
+            type: string
+          AnnualGrossReceipts:
+            type: string
+          IsTRIAApplicable:
+            type: string
+          InsuredFirstName:
+            type: string
+          InsuredLastName:
+            type: string
+          AddressLine1:
+            type: string
+          AddressLine2:
+            type: string
+          City:
+            type: string
+          Country:
+            type: string
+          StateCode:
+            type: string
+          State:
+            type: string
+          ZipCode:
+            type: string
+          PhoneNumber:
+            type: string
+          EmailAddress:
+            type: string
+          MunicipalityName:
+            type: string
+          MunicipalityCode:
+            type: string
+          DoAnyofTheFlowingApply:
+            type: string
+          DoYouOwnOperateorCharterAnyVessels:
+            type: string
+          HaveYouHadLiabilityClaimsBroughtAgainstYouInTheLast3Years?:
+            type: string
+          OrganizationType:
+            type: string
+          QuoteType:
+            type: string
+          EventName:
+            type: string
+          EventVersion:
+            type: string
+          TotalPolicyPremium:
+            type: string
+          DescriptionOfOperations:
+                      type: object
+                      properties:
+                        DescriptionOfOperationsList:
+                          type: array
+                          items:
+                            properties:
+                              Operations:
+                                type: string
+          Location:
+            type: object
+            properties:
+              LocationDetail:
+                type: array
+                items:
+                  properties:
+                    LocationID:
+                      type: string
+                    AddressLine1:
+                      type: string
+                    AddressLine2:
+                      type: string
+                    City:
+                      type: string
+                    Country:
+                      type: string
+                    State:
+                      type: string
+                    ZipCode:
+                      type: string
+                    Classification:
+                      type: object
+                      properties:
+                        ClassificationDetail:
+                          type: array
+                          items:
+                            properties:
+                              ClassCode:
+                                type: string
+  
+  errorModel:
+    type: object
+    required:
+      - RequestStatus
+      - MessageDetail
+    properties:
+      RequestStatus:
+        type: string
+      MessageDetail:
+        type: object
+        properties:
+          MessageCode:
+            type: string
+          MessageType:
+            type: string
+          UserMessage:
+            type: string
+          MessageLevel:
+            type: string
+          MessageSeverity:
+            type: string
+          MessageList:
+            type: object
+            properties:
+              Message:
+                type: array
+                items:
+                  type: string

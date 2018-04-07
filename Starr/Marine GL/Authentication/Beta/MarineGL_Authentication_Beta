@@ -49,6 +49,7 @@ definitions:
           OwnerId:
             type: string
             default: "34"
+            enum: ["34"]
           ResponseType:
             type: string
             enum: ["JSON","XML"]

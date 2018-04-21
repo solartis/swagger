@@ -80,10 +80,6 @@ definitions:
     properties:
        EndClientUserUniqueSessionId:
         type: string
-       OwnerId:
-        type: string
-        default: "34"
-        enum: ["34"]
        ServiceRequestDetail:
         type: object
         properties:
@@ -133,6 +129,10 @@ definitions:
            ProductVerNumber:
             type: string
             default: "1.0"
+           OwnerId:
+            type: string
+            default: "34"
+            enum: ["34"]
            EventName:
             type: string
             default: "MGLCancel"

@@ -1,0 +1,671 @@
+swagger: '2.0'
+info:
+  version: "1.0.0"
+  title: Solartis Rate API for Coverwallet
+  description: To get rate for Profesional Liability from Solartis Rate API with ISO ERC.
+  
+  
+host: cw.rc.solartis.net
+basePath: /DroolsV6/DroolsService
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /FireEventV2:
+    post:
+      description: Get Rates for the given input
+      operationId: getRates
+      produces:
+        - application/json
+      parameters:
+        - name: Token
+          in: header
+          description: Authentication Token
+          required: true
+          type: string
+          format: string
+          default: "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"
+        - name: EventName
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "PLICalculateRate"
+        - name: EventVersion
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "2.2.2.1"
+        - name: Rating
+          in: body
+          description: Rating content
+          required: true
+          schema:
+            $ref: '#/definitions/Rating_Request'
+      responses:
+        '200':
+          description: Success Response
+          schema:
+            $ref: '#/definitions/Rating_Success_Response'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/errorModel'
+
+definitions:
+  Rating_Request:
+    type: object
+    required:
+      - ServiceRequestDetail
+      - Policy
+    properties:
+      EndClientUserUniqueSessionId:
+        type: string
+        default: "Uniquesession"
+      EndClientUserBrowserSessionId:
+        type: string
+      EndClientUserBrowserInformation:
+        type: string
+      PaaSClientIPAddress:
+        type: string
+      ClientUniqueRequestID:
+        type: string
+      ServiceRequestDetail:
+        type: object
+        properties:
+          OwnerId:
+            type: string
+            default: "27"
+          ResponseType:
+            type: string
+            enum: ["JSON","XML"]
+            default: "JSON"
+          UserName:
+            type: string
+            default: "CWAgent"
+          Token:
+            type: string
+            default: "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"
+          BrowserIp:
+            type: string 
+            default: "127.0.0.1"
+          ServiceRequestVersion:
+            type: string
+            default: "1.0"
+          RegionCode:
+            type: string
+            default: "US"
+      Policy:
+        type: object
+        required: 
+          - ProgramName
+          - PolicyType
+          - ZipCode
+          - State
+          - EventName
+          - EventVersion
+          - NumOfProviders
+          - SharedOrSeparateLimit
+          - PLOrWLCoverageType
+          - LiabilityLimitsOfInsurance
+          - WorkplaceLiabilityInsurance
+          - CorporationOrPartnershipCoverage
+          - EmploymentCategory
+          - EffectiveDate
+        properties:
+          ProgramName:
+            title: "Program Name"
+            type: string
+            enum: ["Healthcare","Non Healthcare","ASID"]
+          PolicyType:
+            title: "Policy Type"
+            type: string
+            enum: ["Individual","Group"]
+          ZipCode:
+            title: "Zip Code"
+            type: string
+          State:
+            title: "State"
+            type: string
+            enum: ["AL","AK","AR","AZ","CA","CO","CT","DC","DE","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA","MA","MD","ME","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","WA","WI","WV","WY","VA"]
+          EffectiveDate:
+            title: "Effective Date"
+            type: string
+          EventName:
+            title: "Event Name"
+            type: string
+            default: "PLICalculateRate"
+          EventVersion:
+            title: "Event Version"
+            type: string
+            default: "2.2.2.1"
+          ApplicableFromDate:
+            title: "Applicable From Date"
+            type: string
+            default: ""
+          NumOfProviders:
+            title: "Number of Providers"
+            type: string
+          SharedOrSeparateLimit:
+            title: "Shared or Separate Limit"
+            type: string
+            enum: ["Shared","Separate"]
+          PLOrWLCoverageType:
+            title: "Coverage Type"
+            type: string
+            enum: ["Claims-Made","Occurrence","PL Claims-Made and WL Occurrence"]
+          LiabilityLimitsOfInsurance:
+            title: "Liability Limit of Insurance"
+            type: string
+            enum: ["$1M/$3M","$1M/$5M","$1M/$6M","$2M/$4M","$2M/$5M","$2M/$6M","$2.3M/$6.9M","$2.35M/$7.05M","$2.4M/$7.2M","$2.45M/$7.35M","$2.5M/$7.5M","$2.55M/$7.65M","$2.6M/$7.8M","$2.65M/$7.95M","$2.7M/$8.1M","$2.75M/$8.25M","$2.8M/$8.4M","$2.85M/$8.55M","$2.9M/$8.7M","$2.95M/$8.85M","$3M/$9M","$250K/$750K","$400K/$1.2M","$500K/$1.5M","$200k/$600k","$100K/$300K","100000","250000","500000","1000000","2000000","3000000","4000000","5000000","6000000","7000000","8000000","9000000","10000000","$25,000/$25,000","$50,000/$50,000","$100,000/$100,000","$250,000/$250,000","$500,000/$500,000","$750,000/$750,000","$1,000,000/$1,000,000"]
+          WorkplaceLiabilityInsurance:
+            title: "Workplace Liability Insurance"
+            type: string
+            enum: ["Yes","No"]
+          CorporationOrPartnershipCoverage:
+            title: "Corporation or Partnership Coverage"
+            type: string
+            enum: ["Yes","No"]
+          AdditionalInsuredCoverage:
+            title: "Additional Insured Coverage"
+            type: string
+            enum: ["Yes","No"]
+          EmploymentCategory:
+            title: "Employment Category"
+            type: string
+            enum: ["Employed","Self-Employed"]
+          TransitionFactor:
+            title: "Transition Factor"
+            type: string
+          ProductNumber:
+            title: "Product Number"
+            type: string
+            default: "HC_PLI"
+          ProductVerNumber:
+            title: "Product Version Number"
+            type: string
+            default: "2.0"
+          ExpensesInsideOrOutside:
+            title: "Expenses Inside Or Outside"
+            type: string
+            enum: ["Select one","Inside","Outside"]
+          DeductibleAmount:
+            title: "Deductible Amount"
+            type: string
+            enum: ["0","500","1000","2500","5000","7500","10000"]
+          NumberOfClaimsinPast5Yrs:
+            title: "Number Of Claims in Past 5Yrs"
+            type: string
+          TotalReportedIncurredLossandExpense:
+            title: "Total Reported Incurred Loss and Expense"
+            type: string
+          RetroDate:
+            title: "Retro Date"
+            type: string
+            enum: ["Select One","Inception","Full Prior Acts","Date"]
+          Revenue:
+            title: "Revenue"
+            type: string
+          ResidentialOrCommercialBusinessModifier:
+            title: "Residential Or Commercial Business Modifier"
+            type: string
+          ProjectSizeModifier:
+            title: "Project Size Modifier"
+            type: string
+          WrittenContractsModifier:
+            title: "Written Contracts Modifier"
+            type: string
+          RiskManagementModifier:
+            title: "Risk Management Modifier"
+            type: string
+          FinancialStrength:
+            title: "Financial Strength"
+            type: string
+          UseofSubcontractors:
+            title: "Use of Subcontractors"
+            type: string
+          HistoryofDisciplinaryAction:
+            title: "History of Disciplinary Action"
+            type: string
+          MergersandAcquisitions:
+            title: "Mergers and Acquisitions"
+            type: string
+          ExperienceofPrincipals:
+            title: "Experience of Principals"
+            type: string
+          ClientSize:
+            title: "Client Size"
+            type: string
+          RequireSubstoShowProofOfEAndO:
+            title: "Require Subs to Show Proof Of E And O"
+            type: string
+          RequireAandEstoShowProofOfEandO:
+            title: "Require A and E s to Show Proof Of E and O"
+            type: string
+          KYLocalGovernmentTaxRate:
+            title: "KY Local Government Tax Rate"
+            type: string
+          KYLocalGovernmentTaxOverridden:
+            title: "KY Local Government Tax Overridden"
+            type: string
+            enum: ["Yes","No"]
+          Provider:
+            type: array
+            items:
+              properties:
+                ProviderDetail:
+                  type: object
+                  required:
+                    - ProviderClass
+                    - ProfessionalAssociation
+                    - YearsInPractice
+                    - HoursWorkPerWeek
+                  properties:
+                    FirstName:
+                      title: "First Name"
+                      type: string
+                    MiddleInitial:
+                      title: "Middle Initial"
+                      type: string
+                      default: ""
+                    LastName:
+                      title: "Last Name"
+                      type: string
+                    ProviderClass:
+                      title: "Provider Class"
+                      type: string
+                      enum: ["Athletic Trainer","Audiologist (excluding IONM)","Biomedical Technician/Technologist","Blood Bank Technician/Technologist","Cardiology Technician/Technologist","Certified Fitness Professional","Certified Lab Technician/Technologist","Certified Medical Assistant","Clinical Lab Technician/Technologist","Community Health Assistant","Community Health Technician/Technologist","Counselor","Diagnostic Medical Sonographer","Dialysis Technician/Technologist","Dietitian / Nutritionist","EEG Technician/Technologist","EKG Technician/Technologist","Electrologist","EMT - Basic / Intermediate","EMT - Paramedic","EMT - Volunteer","Hearing Therapis","Histologic Technician/Technologist","Licensed Practical Nurse","Licensed Vocational Nurse","Marriage / Family Therapist","Medical Assistant","Medical Laboratory Technician/Technologist","Medical Records Administrator","Medical Records Technician/Technologist","Medical Technician - NOC","Medical Technician/Technologist Assistant - NOC","Medical Technologist - NOC","Non-certified","Fitness Professional","Nuclear Medical Technician/Technologist","Occupational Therapist","Occupational Therapy Assistant","Ophthalmic Technologist","Optician","Optometric Technician","Optometrist","Orthopedic Technician","Orthotist / Prosthetist","Pathology Assistant","Pharmacist","Pharmacy Technician","Phlebotomist","Physical Therapist","Physical Therapy Assistant","Polysomnographic Sleep Technician","Psychologist","Radiation Therapist","Radiology Technician/Technologist","Registered Nurse","Respiratory Therapist","Respiratory Therapy Assistant / Technician / Technologist","Social Worker","Sonographic Technician/Technologist","Speech Pathologist","Speech Therapist","Surgical Technician/Technologist","X-Ray Machine Technician/Technologist","Yoga / Pilates Instructor"]
+                    ProfessionalAssociation:
+                      title: "Professional Association"
+                      type: string
+                      enum: ["Licensed","Student"]
+                    YearsOfPolicy:
+                      title: "Years of Policy"
+                      type: string
+                      default: "1"
+                      enum: ["1","2","3","4","4+"]
+                    YearsInPractice:
+                      title: "Years In Practice"
+                      type: string
+                      enum: ["1","2","2+"]
+                    RiskManagementDiscount:
+                      title: "Risk Management Discount"
+                      type: string
+                      enum: ["Yes","No"]
+                    PatientCompensationFund:
+                      title: "Patient Compensation Fund"
+                      type: string
+                      enum: ["Yes","No"]
+                    HoursWorkPerWeek:
+                      title: "Hours Work Per Week"
+                      type: string
+                    ScheduleRatingFactor: 
+                      title: "Schedule Rating Factor"
+                      type: string
+                    ProviderEmailId:
+                      title: "Provider Email ID"
+                      type: string
+                    MeetsStudentQualification:
+                      title: "Meets Student Qualification"
+                      type: string
+                      enum: ["Yes","No"]
+                    UseofWrittenContractsFactor:
+                      title: "Use of Written Contracts Factor"
+                      type: string
+                    TrainingorEducationFactor:
+                      title: "Training or Education Factor"
+                      type: string
+                    ProfessionalReputationFactor:
+                      title: "Professional Reputation Factor"
+                      type: string
+                    NatureofOperationsFactor:
+                      title: "Nature of Operations Factor"
+                      type: string
+  
+      OwnerId:
+        type: string
+        default: "27"
+
+  Rating_Success_Response:
+    type: object
+    required:
+      - ServiceRequestDetail
+      - Policy
+    properties:
+      OwnerId:
+        type: string
+        default: "27"
+      EndClientUserUniqueSessionId:
+        type: string
+        default: "Uniquesession"
+      EndClientUserBrowserSessionId:
+        type: string
+        default: "7Eadfad4444"
+      EndClientUserBrowserInformation:
+        type: string
+        default: "Mozilla/..."
+      PaaSClientIPAddress:
+        type: string
+        default: "125.25.25.2"
+      ClientUniqueRequestID:
+        type: string
+        default: ""
+      ServiceRequestDetail:
+        type: object
+        properties:
+          ResponseType:
+            type: string
+            enum: ["JSON","XML"]
+            default: "JSON"
+          UserName:
+            type: string
+            default: "CWAgent"
+          Token:
+            type: string
+            default: "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"
+          BrowserIp:
+            type: string 
+            default: "127.0.0.1"
+          ServiceRequestVersion:
+            type: string
+            default: "1.0"
+          RegionCode:
+            type: string
+            default: "US"
+      Policy:
+        type: object
+        properties:
+          ProgramName:
+            title: "Program Name"
+            type: string
+          PolicyType:
+            title: "Policy Type"
+            type: string
+          ZipCode:
+            title: "Zip Code"
+            type: string
+          State:
+            title: "State"
+            type: string
+          EffectiveDate:
+            title: "Effective Date"
+            type: string
+          EventName:
+            title: "Event Name"
+            type: string
+          EventVersion:
+            title: "Event Version"
+            type: string
+          ApplicableFromDate:
+            title: "Applicable From Date"
+            type: string
+          NumOfProviders:
+            title: "Number of Providers"
+            type: string
+          SharedOrSeparateLimit:
+            title: "Shared or Separate Limit"
+            type: string
+          PLOrWLCoverageType:
+            title: "Coverage Type"
+            type: string
+          LiabilityLimitsOfInsurance:
+            title: "Liability Limit of Insurance"
+            type: string
+          TransitionFactor:
+            title: "Transition Factor"
+            type: string
+          WorkplaceLiabilityInsurance:
+            title: "Workplace Liability Insurance"
+            type: string
+          CorporationOrPartnershipCoverage:
+            title: "Corporation or Partnership Coverage"
+            type: string
+          AdditionalInsuredCoverage:
+            title: "Additional Insured Coverage"
+            type: string
+          EmploymentCategory:
+            title: "Employment Category"
+            type: string
+          AdditionalInsuredCoveragePremium:
+            type: string
+          Territory:
+            type: string
+          WorkplaceLiabilityStepFactor:
+            type: string
+          ProfessionalLiabilityIncreasedLimitFactor:
+            type: string
+          TerritoryRelativityFactor:
+            type: string
+          SharedSeparateCredit:
+            type: string
+          SharedSeparateCreditCap:
+            type: string
+          GroupDiscountFactor:
+            type: string
+          EntityCoveragePremium:
+            type: string
+          WorkplaceLiabilityBaseRate:
+            type: string
+          ASIDBaseRate:
+            type: string
+          WorkplaceLiabilityCoveragePremium:
+            type: string
+          ProfessionalLiabilityCoveragePremium:
+            type: string
+          TotalProviderPremium:
+            type: string
+          BasePremium:
+            type: string
+          Premium:
+            type: string
+          TotalTFSAmount:
+            type: string
+          ProductNumber:
+            title: "Product Number"
+            type: string
+          ProductVerNumber:
+            title: "Product Version Number"
+            type: string
+          Environment:
+            title: "Environment"
+            type: string
+          ExpensesInsideOrOutside:
+            title: "Expenses Inside Or Outside"
+            type: string
+          DeductibleAmount:
+            type: string
+          NumberOfClaimsinPast5Yrs:
+            type: string
+          TotalReportedIncurredLossandExpense:
+            type: string
+          RetroDate: 
+            type: string
+          Revenue:
+            type: string
+          ResidentialOrCommercialBusinessModifier:
+            type: string
+          ProjectSizeModifier:
+            type: string
+          WrittenContractsModifier:
+            type: string
+          RiskManagementModifier:
+            type: string
+          FinancialStrength:
+            type: string
+          UseofSubcontractors: 
+            type: string
+          HistoryofDisciplinaryAction:
+            type: string
+          MergersandAcquisitions:
+            type: string
+          ExperienceofPrincipals:
+            type: string
+          ClientSize:
+            type: string
+          RequireSubstoShowProofOfEAndO:
+            type: string
+          RequireAandEstoShowProofOfEandO:
+            type: string
+          ExperienceRatingFactor:
+            type: string
+          RevenueFactor:
+            type: string
+          DeductibleFactor:
+            type: string
+          LossHistoryFactor:
+            type: string
+          ResidentialCommercialBusinessModifierFactor:
+            type: string
+          ProjectSizeModifierFactor:
+            type: string
+          WrittenContractsModifierFactor:
+            type: string
+          RiskManagementModifierFactor:
+            type: string
+          IRPM:
+            type: string
+          KYLocalGovernmentTaxOverridden: 
+            title: "KY Local Government Tax Overridden"
+          KYLocalGovernmentTaxRate:
+            title: "KY Local Government Tax Rate"
+          PatientCompensationFundProfessionalLiabilitySurcharge:
+            title: "Patient Compensation Fund Professional Liability Surcharge"
+            type: string
+          TFSList:
+            type: array 
+            items:
+              properties:
+                TFSDetail:
+                  type: object
+                  properties:
+                    TFSName:
+                      title: "TFS Name"
+                      type: string
+                    TFSType:
+                      title: "TFS Type"
+                      type: string
+                    TFSRate:
+                      title: "TFS Rate"
+                      type: string
+                    TFSAmount:
+                      title: "TFS Amount"
+                      type: string
+                    TFSAppliedDate:
+                      title: "TFScAppliedDate"
+                      type: string
+                    TFSDescription:
+                      title: "TFS Description"
+                      type: string
+                    TFSCode:
+                      title: "TFS Code"
+                      type: string
+          Provider:
+            type: array 
+            items:
+              properties:
+                ProviderDetail:
+                  type: object
+                  properties:
+                    FirstName:
+                      title: "First Name"
+                      type: string
+                    MiddleInitial:
+                      title: "Middle Initial"
+                      type: string
+                    LastName:
+                      title: "Last Name"
+                      type: string
+                    ProviderEmailId:
+                      title: "Provider Email ID"
+                      type: string
+                    ProviderClass:
+                      title: "Provider Class"
+                      type: string
+                    ProfessionalAssociation:
+                      title: "Professional Association"
+                      type: string
+                    YearsOfPolicy:
+                      title: "Years of Policy"
+                      type: string
+                    YearsInPractice:
+                      title: "Years Of Practice"
+                      type: string
+                    HoursWorkPerWeek:
+                      title: "Hours Work Per Week"
+                      type: string
+                    ScheduleRatingFactor:
+                      type: string
+                    RiskManagementDiscount:
+                      type: string
+                    PatientCompensationFund:
+                      type: string
+                    ProfessionalLiabilityBaseRate:
+                      type: string
+                    ProfessionalLiabilityIncreasedLimitFactor:
+                      type: string
+                    ProfessionalLiabilityStepFactor:
+                      type: string
+                    StudentDiscountFactor:
+                      type: string
+                    NewProviderDiscountFactor:
+                      type: string
+                    PartTimeDiscountFactor:
+                      type: string
+                    TotalCappedCredits:
+                      type: string
+                    RiskManagementCredit:
+                      type: string
+                    ProfessionalLiabilityCoveragePremium:
+                      type: string
+                    CoverageFee:
+                      type: string
+                    PatientCompensationFundSurcharge:
+                      type: string
+                    MeetsStudentQualification:
+                      type: string
+                    UseofWrittenContractsFactor:
+                      type: string
+                    TrainingorEducationFactor:
+                      type: string
+                    ProfessionalReputationFactor:
+                      type: string
+                    NatureofOperationsFactor:
+                      type: string
+                    CappedDiscountFactor:
+                      type: string
+                    
+       
+  errorModel:
+    type: object
+    required:
+      - RequestStatus
+      - MessageDetail
+    properties:
+      RequestStatus:
+        type: string
+      MessageDetail:
+        type: object
+        properties:
+          MessageCode:
+            type: string
+          MessageType:
+            type: string
+          UserMessage:
+            type: string
+          MessageLevel:
+            type: string
+          MessageSeverity:
+            type: string
+          MessageList:
+            type: object
+            properties:
+              Message:
+                type: array
+                items:
+                  type: string      

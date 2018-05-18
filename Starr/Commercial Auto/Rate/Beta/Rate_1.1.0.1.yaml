@@ -4,7 +4,7 @@ info:
   title: Solartis Rate API for STARR Commercial Auto
   description: To rate a commercial auto policy per the inputs provided
 
-host: starrca.alpha.solartis.net
+host: starrca.beta.solartis.net
 basePath: /KnowledgeEngineV6_2/KnowledgeBase
 schemes:
   - https
@@ -134,7 +134,7 @@ definitions:
         LastRateLookUpDate:
          title: "LastRateLookUpDate"
          type: string
-         default: "2018-05-04"
+         default: "2018-05-18"
         InsuredName:
          title: "InsuredName"
          type: string
@@ -1031,8 +1031,8 @@ definitions:
            AdditionalInsuredType:
               title: "Additional Insured Type"
               type: string
-              enum: ["Owners, Lessees Or Contractors - Scheduled Person Or Organization","Managers Or Lessors Of Premises","Designated Person Or Organization","Co-Owner Of Insured Premises","Lessor Of Leased Equipment","Owners, Lessees or Contractors - Automatic Status When Required In Construction Agreement With You","Lessor Of Leased Equipment - Automatic Status When Required In Lease Agreement With You","Club Members","Users of Golfmobiles"]
-              default: "Lessor Of Leased Equipment - Automatic Status When Required In Lease Agreement With You"
+              enum: ["Additional Insured - General Liability Coverages - Lessor Of Leased Equipment - Automatic Status When Required In Lease Agreement With You","Additional Insured - General Liability Coverages - Concessionaires Trading Under Your Name "]
+              default: "Additional Insured - General Liability Coverages - Lessor Of Leased Equipment - Automatic Status When Required In Lease Agreement With You"
            AdditionalInsuredDetail:
             type: array
             items:
@@ -1056,7 +1056,7 @@ definitions:
               AdditionalInsuredAddressLine1:
                title: "Additional Insured Address Line1"
                type: string
-               default: ""
+               default: "70 Bowman St"
               AdditionalInsuredAddressLine2:
                title: "Additional Insured Address Line2"
                type: string
@@ -1076,7 +1076,7 @@ definitions:
               AdditionalInsuredState: 
                title: "Additional Insured State"
                type: string
-               default: "WA" 
+               default: "CA" 
             
   errorModel:
     type: object

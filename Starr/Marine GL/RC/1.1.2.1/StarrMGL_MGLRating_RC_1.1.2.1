@@ -123,7 +123,6 @@ definitions:
       QuoteInformation:
         type: object
         required:
-          - ProducerCode
           - OwnerId
           - EventName
           - EventVersion
@@ -139,15 +138,12 @@ definitions:
           ProductVerNumber:
             type: string
             default: "1.0"
-          ProducerCode:
-            type: string
-            default: "5"
           OwnerId:
             type: string
             default: "34"
           ProductionChannel:
             type: string
-            default: MGL_DTC
+            enum: ["MGL_DTC", "MGL_BTIS"]
           ClassType:
             type: string
             enum: ["Small Marine","Marine Artisan"]
@@ -173,7 +169,7 @@ definitions:
             type: string
           Deductible:
             type: string
-            enum: ["1500", "2500"]
+            enum: ["1500", "2500", "5000", "10000"]
           AnnualGrossReceipts:
             type: string
           IsTRIAApplicable:

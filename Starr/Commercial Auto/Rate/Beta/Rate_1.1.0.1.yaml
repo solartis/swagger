@@ -198,7 +198,7 @@ definitions:
          title: "NonOwnedAutoWanted"
          type: string
          enum: ["Yes","No"]
-         default: "No"
+         default: "Yes"
         HiredAutoWanted:
          title: "HiredAutoWanted"
          type: string
@@ -316,7 +316,7 @@ definitions:
              State:
               title: "State"
               type: string
-              default: "CA"
+              default: "AZ"
              ZipCode:
               title: "ZipCode"
               type: string
@@ -324,7 +324,7 @@ definitions:
              Territory:
               title: "Territory"
               type: string
-              default: "101"
+              default: "107"
              VehicleType:
               title: "VehicleType"
               type: string
@@ -493,7 +493,7 @@ definitions:
               title: "TruckOtherThanCollisionCoverageCoverageType"
               type: string
               enum: ["No Coverage","ACV","ACV - Fire Only","ACV - Fire and Theft Only","ACV - Fire, Theft and Windstorm Only","ACV - Limited Specified Causes of Loss","ACV - Specified Causes of Loss","Stated Amount","Stated Amount - Specified Causes of Loss"]
-              default: "ACV - Fire Only"
+              default: "ACV"
              TruckOtherThanCollisionCoverageDeductible:
               title: "TruckOtherThanCollisionCoverageDeductible"
               type: string
@@ -727,8 +727,8 @@ definitions:
              PrivatePassengerLiabilityCoverageLimit:
               title: "PrivatePassengerLiabilityCoverageLimit"
               type: string
-              enum: ["Not Applicable" , "65000" , "100000" , "125000" , "150000" , "200000" , "250000" , "300000" , "350000" , "400000" , "500000" , "600000" , "750000" , "1000000" , "1500000" , "2000000" , "2500000" , "3000000" , "5000000" , "7500000" , "10000000"]
-              default: "100000"
+              enum: ["Not Applicable" , "65,000" , "100,000" , "125,000" , "150,000" , "200,000" , "250,000" , "300,000" , "350,000" , "400,000" , "500,000" , "600,000" , "750,000" , "1,000,000" , "1,500,000" , "2,000,000" , "2,500,000" , "3,000,000" , "5,000,000" , "7,500,000" , "10,000,000"]
+              default: "100,000"
              PrivatePassengerLiabilityCoverageDeductible:
               title: "PrivatePassengerLiabilityCoverageDeductible"
               type: string
@@ -977,7 +977,7 @@ definitions:
              NonOwnedAutoNumberOfEmployees:
               title: "NonOwnedAutoNumberOfEmployees"
               type: string
-              default: "305"
+              default: "101"
              NonOwnedAutoEmployeesAsInsureds:
               title: "NonOwnedAutoEmployeesAsInsureds"
               type: string

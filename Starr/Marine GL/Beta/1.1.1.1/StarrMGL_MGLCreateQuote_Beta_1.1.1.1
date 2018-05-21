@@ -144,7 +144,7 @@ definitions:
             default: "34"
           ProductionChannel:
             type: string
-            default: MGL_DTC
+            enum: ["MGL_DTC", "MGL_BTIS"]
           ClassType:
             type: string
             enum: ["Small Marine","Marine Artisan"]
@@ -171,7 +171,7 @@ definitions:
             title: Effective Date (MM/DD/YYYY)
           Deductible:
             type: string
-            enum: ["1500", "2500"]
+            enum: ["1500", "2500", "5000", "10000"]
           AnnualGrossReceipts:
             type: string
           IsTRIAApplicable:

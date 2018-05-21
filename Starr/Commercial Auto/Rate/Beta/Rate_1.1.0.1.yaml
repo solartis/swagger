@@ -163,11 +163,11 @@ definitions:
          title: "State"
          type: string
          enum: ["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","HI","ID","IL","IA","IN","KS","KY","LA","MD","ME","MI","MT","MO","MN","MS","NE","NV","NH","ND","NC","NJ","NM","OH","OK","OR","PA","RI","SC","SD","TN","UT","VT","VA","WA","WV","WI","WY"]
-         default: "CA"
+         default: "AZ"
         Territory:
          title: "Territory"
          type: string
-         default: "101"
+         default: "107"
         OptionalClassPlan:
          title: "OptionalClassPlan"
          type: string

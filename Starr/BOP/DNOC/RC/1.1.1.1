@@ -1,0 +1,230 @@
+swagger: '2.0'
+info:
+  version: "1.0.0.1"
+  title: STARR Business Owners Policy - DNOC API
+  description: DNOC API is used to generate the Direct Notice of Cancellation pdf to insured.
+  
+host: starrbop.rc.solartis.net
+basePath: /DroolsV6/DroolsService
+schemes:
+  - https
+consumes:
+  - application/json  
+produces:
+  - application/json
+paths:
+  /FireEventV2:
+    post:
+      description: DNOC API for Business Owners Policy
+      operationId: DNOC
+      produces:
+        - application/json
+      parameters:
+        - name: Token
+          in: header
+          description: Authentication Token
+          required: true
+          type: string
+          format: string
+          default: "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"
+        
+        - name: Content-Type
+          in: header
+          description: Content Type
+          required: true
+          type: string
+          default: "application/json"
+          
+        - name: EventName
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "GenerateNotice"
+          
+        - name: EventVersion
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "1.1.1.1"
+        
+        - name: DNOC_request
+          in: body
+          description: For DNOC_request
+          schema:
+            $ref: '#/definitions/DNOC_request'
+      responses:
+        '200':
+          description: Success Response
+          schema:
+            $ref: '#/definitions/DNOC_Success_Response'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/errorModel'
+definitions:
+  DNOC_request:
+    type: object
+    properties:
+       EndClientUserUniqueSessionId: 
+        title: "Client User Unique Session ID"
+        type: string
+        default: "Uniqusession"
+       OwnerId:
+        type: string
+        default: "24"
+       ServiceRequestDetail:
+        type: object
+        properties:
+          ServiceRequestVersion:
+           type: string
+           default: "1.0"
+          ServiceResponseVersion:
+           type: string
+           default: "1.0"
+          OwnerId:
+            type: string
+            default: "24"
+          ResponseType:
+           title: "Response Type"
+           type: string
+           default: "json"
+          UserName:
+           title: "User Name"
+           type: string
+           default: "BOPAgent"
+          Token:
+           type: string
+           default: "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"
+          BrowserIp:
+            type: string
+            default: "127.0.0.1"
+          LanguageCode:
+            title: "Language Code"
+            type: string
+            default: "en"    
+          RegionCode:
+            title: "Region Code"
+            type: string
+            default: "US"  
+       Notice:
+         type: object
+         required:
+          - EventName
+          - EventVersion
+          - ObjectType
+          - ObjectNumber
+          - Reason
+         properties:
+           EventName:
+            type: string
+            default: "GenerateNotice"
+           EventVersion: 
+            type: string
+            default: "1.1.1.1"
+           NoticeType: 
+            type: string
+            default: "DNOC"
+           ObjectType:
+            type: string
+            default: "Policy"
+           ObjectNumber:
+            type: string
+            default: "1000202169"
+           Reason:
+            type: string
+            default: "Non Payment of Premium"
+           GroupingofReason:
+            type: string
+            default: "Non Payment of Premium"
+           DueDate:
+            type: string
+            default: "04-23-2018"
+           DueAmount:
+            type: string
+            default: "500"
+           DateofCancellation:
+            type: string
+            default: "04-23-2018"
+           SendMail:
+            type: string
+            default: "Yes"
+           
+  DNOC_Success_Response:
+    type: object
+    required:
+      - RequestStatus
+      - Policy
+    properties:
+      messageDetail:
+        type: object
+      RequestStatus:
+        type: string
+      Policy:
+       type: object
+       properties:
+        EventName: 
+         type: string
+        EventVersion:
+         type: string
+        NoticeType:
+         type: string
+        Reason:
+         type: string
+        ObjectType:
+         type: string
+        ObjectNumber:
+         type: string
+        GroupingofReason:
+         type: string
+        DueDate:
+         type: string
+        DueAmount:
+         type: string
+        DateofCancellation:
+         type: string
+        EndClientUserUniqueSessionId:
+         type: string
+        OwnerId:
+          type: string
+        ResponseStatus:
+          type: string
+        DocumentsInfoList:
+          type: array
+          items:
+            properties:
+              DocumentURL:
+                type: string
+  errorModel:
+    type: object
+    required:
+      - RequestStatus
+      - MessageDetail
+    properties:
+      RequestStatus:
+        type: string
+        default: "FAILED"
+      MessageDetail:
+        type: object
+        properties:
+          MessageCode:
+            type: string
+          MessageType:
+            type: string
+          UserMessage:
+            type: string
+          MessageLevel:
+            type: string
+          MessageSeverity:
+            type: string
+          MessageList:
+            type: object
+            properties:
+              Message:
+                type: array
+                items:
+                  type: string
+        

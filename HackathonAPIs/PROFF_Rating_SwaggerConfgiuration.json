@@ -1,0 +1,313 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"version": "1.0.0",
+		"title": "Solartis Rate API for Professional Liability",
+		"description": "To get rate for Professional Liability from Solartis Rate API."
+	},
+	"host": "profapihk.solartis.net",
+	"basePath": "/DroolsV6/DroolsService",
+	"schemes": [
+		"https"
+	],
+	"produces": [
+		"application/json"
+	],
+	"consumes": [
+		"application/json"
+	],
+	"paths": {
+		"/FireEventV2": {
+			"post": {
+				"description": "Gets Rate for Professional Liability",
+				"operationId": "getRates",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"name": "Token",
+						"in": "header",
+						"description": "Authentication Token",
+						"required": true,
+						"type": "string",
+						"format": "string",
+						"default": "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"
+					},
+					{
+						"name": "Content-Type",
+						"in": "header",
+						"description": "Content Type",
+						"required": true,
+						"type": "string",
+						"format": "string",
+						"default": "application/json"
+					},
+					{
+						"name": "EventName",
+						"in": "header",
+						"description": "EventName",
+						"required": true,
+						"type": "string",
+						"format": "string",
+						"default": "PLICalculateRate"
+					},
+					{
+						"name": "EventVersion",
+						"in": "header",
+						"description": "EventVersion",
+						"required": true,
+						"type": "string",
+						"format": "string",
+						"default": "1.1.1.3"
+					},
+					{
+						"name": "Rating Request",
+						"in": "body",
+						"description": "For rating request",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/Rating_Request"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"schema": {
+							"$ref": "#/definitions/Rating_Success_Response"
+						}
+					},
+					"default": {
+						"description": "unexpected error",
+						"schema": {
+							"$ref": "#/definitions/errorModel"
+						}
+					}
+				}
+			}
+		}
+	},
+	"definitions": {
+		"Rating_Request": {
+			"type": "object",
+			"properties": {
+				"EndClientUserUniqueSessionId": {
+					"type": "string",
+					"default": "Uniquesession"
+				},
+			  	"ServiceRequestDetail": {
+					"type": "object",
+					"properties": {
+						"OwnerId": {
+							"type": "string",
+							"default": "27"
+						},
+						"ResponseType": {
+							"type": "string",
+							"enum": [
+								"JSON",
+								"XML"
+							],
+							"default": "JSON"
+						},
+						"UserName": {
+							"type": "string",
+							"default": "CWAgent"
+						},
+						"Token": {
+							"type": "string",
+							"default": "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"
+						},
+						"BrowserIp": {
+							"type": "string",
+							"default": "127.0.0.1"
+						},
+						"ServiceRequestVersion": {
+							"type": "string",
+							"default": "1.0"
+						},
+						"RegionCode": {
+							"type": "string",
+							"default": "US"
+						}
+					}
+				},
+				"Policy": {
+					"type": "object",
+					"properties": {
+						"PolicyType": {
+							"type": "string",
+							"default": "Individual"
+						},
+						"ZipCode": {
+							"type": "string",
+							"default": "15610"
+						},
+						"State": {
+							"type": "string",
+							"default": "PA"
+						},
+						"EffectiveDate": {
+							"type": "string",
+							"default": "2017-07-27"
+						},
+						"EventName": {
+							"type": "string",
+							"default": "PLICalculateRate"
+						},
+						"EventVersion": {
+							"type": "string",
+							"default": "1.1.1.3"
+						},
+						"ApplicableFromDate": {
+							"type": "string",
+							"default": "2017-07-01"
+						},
+						"NumOfProviders": {
+							"type": "string",
+							"default": "1"
+						},
+						"SharedOrSeparateLimit": {
+							"type": "string",
+							"default": "Shared"
+						},
+						"PLOrWLCoverageType": {
+							"type": "string",
+							"default": "Occurrence"
+						},
+						"LiabilityLimitsOfInsurance": {
+							"type": "string",
+							"default": "$1M/$5M"
+						},
+						"WorkplaceLiabilityInsurance": {
+							"type": "string",
+							"default": "Yes"
+						},
+						"CorporationOrPartnershipCoverage": {
+							"type": "string",
+							"default": "Yes"
+						},
+						"TransitionFactor": {
+							"type": "string",
+							"default": "16"
+						},
+						"AdditionalInsuredCoverage": {
+							"type": "string",
+							"default": "Yes"
+						},
+						"EmploymentCategory": {
+							"type": "string",
+							"default": "Employed"
+						},
+						"ProductNumber": {
+							"type": "string",
+							"default": "HC_PLI"
+						},
+						"ProductVerNumber": {
+							"type": "string",
+							"default": "1.0"
+						},
+				"Provider":{
+					"type": "array",
+					"items":{
+					  "properties": {
+						"ProviderDetail": {
+							"type": "object",
+							"properties": {
+							  "ProviderClass": {
+								  "type": "string",
+								  "default": "Blood Bank Technician/Technologist"
+							  },
+							  "ProfessionalAssociation": {
+								  "type": "string",
+								  "default": "Licensed"
+							  },
+							  "YearsOfPolicy": {
+								  "type": "string",
+								  "default": "1"
+							  },
+							  "YearsInPractice": {
+								  "type": "string",
+								  "default": "1"
+							  },
+							  "HoursWorkPerWeek": {
+								  "type": "string",
+								  "default": "15"
+							  },
+							  "ScheduleRatingFactor": {
+								  "type": "string",
+								  "default": "15"
+							  }
+							}
+						}	
+					}
+				}
+				}
+					}
+				},
+				"OwnerId":{
+					"type": "string",
+					"default": "27"
+				}
+			}
+		},
+		"Rating_Success_Response": {
+			"type": "object",
+			"properties": {
+				"messageDetail": {
+					"type": "object"
+				},
+				"ResponseStatus": {
+					"type": "string"
+				},
+				"Policy": {
+					"type": "object"
+				}
+			}
+		},
+		"errorModel": {
+			"type": "object",
+			"required": [
+				"RequestStatus",
+				"MessageDetail"
+			],
+			"properties": {
+				"RequestStatus": {
+					"type": "string"
+				},
+				"MessageDetail": {
+					"type": "object",
+					"properties": {
+						"MessageCode": {
+							"type": "string"
+						},
+						"MessageType": {
+							"type": "string"
+						},
+						"UserMessage": {
+							"type": "string"
+						},
+						"MessageLevel": {
+							"type": "string"
+						},
+						"MessageSeverity": {
+							"type": "string"
+						},
+						"MessageList": {
+							"type": "object",
+							"properties": {
+								"Message": {
+									"type": "array",
+									"items": {
+										"type": "string"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

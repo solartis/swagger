@@ -456,22 +456,53 @@ definitions:
           WorkplaceLiabilityLimitsOfInsurance:
             title: "Workplace Liability Limit of Insurance"
             type: string
-          TransitionFactor:
-            title: "Transition Factor"
-            type: string
           WorkplaceLiabilityInsurance:
             title: "Workplace Liability Insurance"
             type: string
+          LimitedGeneralLiabilityInsurance:
+            title: "Limited General Liability Insurance"
+            type: string
+          LimitedGeneralLiabilityLimitsOfInsurance:
+            title: "Limited General Liability Limits Of Insurance"
+            type: string
+          LimitedGeneralLiabilityDeductible:
+            title: "Limited General Liability Deductible"
+            type: string
+          LimitedGeneralLiabilityBaseRate:
+            title: "Limited General Liability Base Rate"
+            type: string
+          LimitedGeneralLiabilityIncreasedLimitFactor:
+            title: "Limited General Liability Increased Limit Factor"
+            type: string
+          LimitedGeneralLiabilityDeductibleFactor:
+            title: "Limited General Liability Deductible Factor"
+            type: string
+          PriorActsFactor:
+            title: "Prior Acts Factor"
+            type: string
+          OfficeLocationCredit:
+            title: "Office Location Credit"
+            type: string
+          LimitedGeneralLiabilitySeperateLimitFactor:
+            title: "Limited General Liability Seperate Limit Factor"
+            type: string
+          LimitedGeneralLiabilityPremium:
+            title: "Limited General Liability Premium"
+            type: string
+          OfficeLocationAvailable:
+            title: "Office Location Available"
+            type: string
           CorporationOrPartnershipCoverage:
             title: "Corporation or Partnership Coverage"
+            type: string
+          TransitionFactor:
+            title: "Transition Factor"
             type: string
           AdditionalInsuredCoverage:
             title: "Additional Insured Coverage"
             type: string
           EmploymentCategory:
             title: "Employment Category"
-            type: string
-          AdditionalInsuredCoveragePremium:
             type: string
           Territory:
             type: string
@@ -495,9 +526,11 @@ definitions:
             type: string
           WorkplaceLiabilityCoveragePremium:
             type: string
-          ProfessionalLiabilityCoveragePremium:
+          AdditionalInsuredCoveragePremium:
             type: string
           TotalProviderPremium:
+            type: string
+          ProfessionalLiabilityCoveragePremium:
             type: string
           BasePremium:
             type: string
@@ -637,6 +670,12 @@ definitions:
                       type: string
                     HoursWorkPerWeek:
                       title: "Hours Work Per Week"
+                      type: string
+                    HazardGroup:
+                      title: "HazardGroup"
+                      type: string
+                    AssociationDiscount:
+                      title: "Association Discount"
                       type: string
                     ScheduleRatingFactor:
                       type: string

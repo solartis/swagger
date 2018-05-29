@@ -5,7 +5,7 @@
 		"title": "Solartis Rate API for ILT",
 		"description": "To get rate for Leisure Travel from Solartis Rate API."
 	},
-	"host": "sademokb.uat.solartis.net",
+	"host": "travelapihk.solartis.net",
 	"basePath": "/DroolsV4_2/DroolsService",
 	"schemes": [
 		"https"
@@ -17,7 +17,7 @@
 		"application/json"
 	],
 	"paths": {
-		"/FireEventV2": {
+		"/FireEvent": {
 			"post": {
 				"description": "Gets Rate for Leisure Travel",
 				"operationId": "getRates",

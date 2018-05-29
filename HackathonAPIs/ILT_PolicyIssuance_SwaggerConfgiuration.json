@@ -17,7 +17,7 @@
 		"application/json"
 	],
 	"paths": {
-		"/FireEventV2": {
+		"/FireEvent": {
 			"post": {
 				"description": "Policy Issuance for Leisure Travel",
 				"operationId": "policyissuance",

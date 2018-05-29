@@ -5,7 +5,7 @@
 		"title": "Solartis Create Customer API for ILT",
 		"description": "To create customer for Leisure Travel from Solartis Rate API.Umbrella insurance is extra liability insurance."
 	},
-	"host": "sademokb.uat.solartis.net",
+	"host": "travelapihk.solartis.net",
 	"basePath": "/DroolsV4_2/DroolsService",
 	"schemes": [
 		"https"
@@ -17,7 +17,7 @@
 		"application/json"
 	],
 	"paths": {
-		"/FireEventV2": {
+		"/FireEvent": {
 			"post": {
 				"description": "Create customer for Leisure Travel",
 				"operationId": "createcustomer",

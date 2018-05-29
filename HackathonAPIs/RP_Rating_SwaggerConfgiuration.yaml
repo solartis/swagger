@@ -12,7 +12,7 @@ produces:
 consumes:
   - application/json
 paths:
-  /FireEvent:
+  /FireEventV2:
     post:
       description: Gets Rate for Renter's Program
       operationId: getRates

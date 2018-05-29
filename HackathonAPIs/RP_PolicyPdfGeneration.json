@@ -17,7 +17,7 @@
 		"application/json"
 	],
 	"paths": {
-		"/FireEvent": {
+		"/FireEventV2": {
 			"post": {
 				"description": "generate PDF Generation for Renters Program",
 				"operationId": "generatepdf",

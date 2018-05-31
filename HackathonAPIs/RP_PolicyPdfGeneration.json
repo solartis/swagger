@@ -204,47 +204,47 @@
 						},
 						"PolicyNumber": {
 							"type": "string",
-							"default": "874562"
+							"default": "123456"
 						},
 						"CustomerName": {
 							"type": "string",
-							"default": "John"
+							"default": "Kevin"
 						},
 						"AddressLine1": {
 							"type": "string",
-							"default": "4740 Reed Road"
+							"default": "LLC, 1601 N. Sepulveda Blvd"
 						},
 						"AddressLine2": {
 							"type": "string",
-							"default": "Suite 109"
+							"default": "#606"
 						},
 						"City": {
 							"type": "string",
-							"default": "Upper Arlington"
+							"default": "Manhattan Beach"
 						},
 						"State": {
 							"type": "string",
-							"default": "OH"
+							"default": "CA"
 						},
 						"ZipCode": {
 							"type": "string",
-							"default": "43220"
+							"default": "90266"
 						},
 						"EffectiveDate": {
 							"type": "string",
-							"default": "03/01/2018"
+							"default": "2018-06-05"
 						},
 						"ExpirationDate": {
 							"type": "string",
-							"default": "03/01/2019"
+							"default": "2019-06-05"
 						},
 						"CustomerSupportMailID": {
 							"type": "string",
-							"default": "luo@libertyMutual.com"
+							"default": "solartissupport@solartis.com"
 						},
 						"ClaimsMail": {
 							"type": "string",
-							"default": "luo@libertyMutual.com"
+							"default": "solartissupport@solartis.com"
 						},
 						"PersonalPropertyLimit": {
 							"type": "string",
@@ -252,23 +252,23 @@
 						},
 						"PersonalLiabiltyLimit": {
 							"type": "string",
-							"default": "100000"
+							"default": "200000"
 						},
 						"MedicalPaymentLimit": {
 							"type": "string",
-							"default": "1000"
+							"default": "3000"
 						},
 						"Deductible": {
 							"type": "string",
-							"default": "500"
+							"default": "20000"
 						},
 						"LossOfUse": {
 							"type": "string",
-							"default": "2000"
+							"default": "4000"
 						},
 						"PolicyTermPremium": {
 							"type": "string",
-							"default": "361.00"
+							"default": "373.85"
 						},
 						"OwnerId": {
 							"type": "string",

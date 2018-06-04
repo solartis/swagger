@@ -179,6 +179,26 @@
 							"type": "string",
 							"default": "06/25/2017"
 						},
+						"RentalStartDate" : {
+							"type": "string",
+							"default":"06/25/2017"
+						},		
+						"RentalEndDate" : {
+							"type": "string",
+							"default":"06/31/2017"
+						},		
+						"RentalLimit" : {
+							"type": "string",
+							"default":"35000"
+						},		
+						"NumberOfRentalCars" : {
+							"type": "string",
+							"default":"1"
+						},		
+						"TripCancellationCoverage": {
+							"type": "string",
+							"default":"With Trip Cancellation"
+						},
 						"StateCode": {
 							"type": "string",
 							"default": "GA"

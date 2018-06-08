@@ -850,64 +850,6 @@ definitions:
               title: "RentalReimbursementCoverageMaximumRentalDays"
               type: string
               default: "15"
-         type: array
-         items:
-          properties:
-           GarageServicesDetail:
-            type: object
-            properties:
-             State:
-              title: "State"
-              type: string
-              default: ""
-             City:
-              title: "City"
-              type: string
-              default: ""
-             County:
-              title: "County"
-              type: string
-              default: ""
-             ZipCode:
-              title: "ZipCode"
-              type: string
-              default: ""
-             VehicleType:
-              title: "VehicleType"
-              type: string
-              default: ""
-             GarageServicesLiabilityCoverageDeductible:
-              title: "GarageServicesLiabilityCoverageDeductible"
-              type: string
-              default: ""
-             GarageServicesLiabilityCoverageLimitText:
-              title: "GarageServicesLiabilityCoverageLimitText"
-              type: string
-              default: ""
-             GarageServicesLiabilityCoverageCoverageType:
-              title: "GarageServicesLiabilityCoverageCoverageType"
-              type: string
-              default: ""
-             GarageServicesPhysicalDamageClassification:
-              title: "GarageServicesPhysicalDamageClassification"
-              type: string
-              default: ""
-             GarageServicesCollisionCoverageCoverageType:
-              title: "GarageServicesCollisionCoverageCoverageType"
-              type: string
-              default: ""
-             GarageServicesSupplementaryType:
-              title: "GarageServicesSupplementaryType"
-              type: string
-              default: ""
-             GarageServicesEmployeesAsInsureds:
-              title: "GarageServicesEmployeesAsInsureds"
-              type: string
-              default: ""
-             GarageServicesNumberOfEmployees:
-              title: "GarageServicesNumberOfEmployees"
-              type: string
-              default: ""
         HiredAuto:
          type: array
          items:
@@ -2801,51 +2743,6 @@ definitions:
                 type: string
                 format: string
                 title: "NonOwnedAutoLiabilityCoveragePropertyDamagePremium"  
-         type: array
-         items:
-          properties:
-           GarageServicesDetail:
-            type: object
-            properties:
-             State:
-              title: "State"
-              type: string
-             City:
-              title: "City"
-              type: string
-             County:
-              title: "County"
-              type: string
-             ZipCode:
-              title: "ZipCode"
-              type: string
-             VehicleType:
-              title: "VehicleType"
-              type: string
-             GarageServicesLiabilityCoverageDeductible:
-              title: "GarageServicesLiabilityCoverageDeductible"
-              type: string
-             GarageServicesLiabilityCoverageLimitText:
-              title: "GarageServicesLiabilityCoverageLimitText"
-              type: string
-             GarageServicesLiabilityCoverageCoverageType:
-              title: "GarageServicesLiabilityCoverageCoverageType"
-              type: string
-             GarageServicesPhysicalDamageClassification:
-              title: "GarageServicesPhysicalDamageClassification"
-              type: string
-             GarageServicesCollisionCoverageCoverageType:
-              title: "GarageServicesCollisionCoverageCoverageType"
-              type: string
-             GarageServicesSupplementaryType:
-              title: "GarageServicesSupplementaryType"
-              type: string
-             GarageServicesEmployeesAsInsureds:
-              title: "GarageServicesEmployeesAsInsureds"
-              type: string
-             GarageServicesNumberOfEmployees:
-              title: "GarageServicesNumberOfEmployees"
-              type: string
         AdditionalInsuredList:
          type: array
          items:
@@ -2901,4 +2798,4 @@ definitions:
               AdditionalInsuredCommission:
                title: "AdditionalInsuredCommission"
                type: string     
-   
+  

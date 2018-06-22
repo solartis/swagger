@@ -16,8 +16,8 @@ produces:
 paths:
   /FireEventV2:
     post:
-      description: To Rate the Renewing policy with the latest changes made to it 
-      operationId: getRates
+      description: To Issue a policy with the premiums and limits passed in the request 
+      operationId: IssuePolicy
       produces:
         - application/json
       parameters:
@@ -127,8 +127,8 @@ definitions:
           default: "AGY1068"
         AnnualWageroll:
           type: string
-          title: "Phone Number"
-          default: "8449445441"
+          title: "Annual Wageroll"
+          default: "1000"
         BasePremium:
           type: string
           title: "Base Premium"
@@ -342,13 +342,13 @@ definitions:
                       type: string
                       title: "Business Interruption Coverage Premium"
                       default: "B"
-                    ComputerBreakdownCoveageLimit:
+                    ComputerBreakdownCoverageLimit:
                       type: string
-                      title: "Computer Breakdown Coveage Limit"
+                      title: "Computer Breakdown Coverage Limit"
                       default: "10,000"
-                    ComputerBreakdownCoveagePremium:
+                    ComputerBreakdownCoveragePremium:
                       type: string
-                      title: "Computer Breakdown Coveage Premium"
+                      title: "Computer Breakdown Coverage Premium"
                       default: ""
                     LocationID:
                       type: string
@@ -400,8 +400,8 @@ definitions:
                                       properties:
                                         ClassificationID:
                                           type: string
-                                          title: "Property Risk Score Value"
-                                          default: "B"
+                                          title: "ClassificationID"
+                                          default: "1"
                                         BusinessContentsLimit:
                                           type: string
                                           title: "Business Contents Limit"

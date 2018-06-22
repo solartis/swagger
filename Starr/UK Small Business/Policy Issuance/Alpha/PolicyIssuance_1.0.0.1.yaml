@@ -341,7 +341,7 @@ definitions:
                     BusinessInterruptionCoveragePremium:
                       type: string
                       title: "Business Interruption Coverage Premium"
-                      default: "B"
+                      default: ""
                     ComputerBreakdownCoverageLimit:
                       type: string
                       title: "Computer Breakdown Coverage Limit"

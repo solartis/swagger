@@ -282,18 +282,22 @@ definitions:
                   type: string
                   format: string
                   title: "Amount Paid For Claim"
+                  default: "10000"
                 ClaimOccurenceDate:
                   type: string
                   format: string
                   title: "Claim Occurence Date"
+                  default: "2016-10-15"
                 IsClaimClosed:
                   type: string
                   format: string
                   title: "Is Claim Closed"
+                  default: "N"
                 LossCause:
                   type: string
                   format: string
                   title: "Loss Cause"
+                  default: "test"
         Location:
             type: "array"
             items:

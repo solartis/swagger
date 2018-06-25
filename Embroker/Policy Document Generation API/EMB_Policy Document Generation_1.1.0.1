@@ -238,7 +238,6 @@ definitions:
           DirectorsAndOfficersRetention:
             title: "Directors And Officers Retention"
             type: string
-            enum: ["10000","25000","50000","75000","100000","150000","250000"]
           IsEmploymentPracticesLiabilityInsuranceIncluded: 
             title: "IsEmploymentPracticesLiabilityInsuranceIncluded"
             type: string
@@ -250,7 +249,6 @@ definitions:
           EmploymentPracticesLiabilityInsuranceRetention:
             title: "Employment Practices Liability Insurance Retention"
             type: string
-            enum: ["10000","25000","50000","75000","100000","150000","250000"]
           IsFiduciaryCoverageIncluded:
             title: "Is Fiduciary Coverage Included"
             type: string
@@ -261,10 +259,6 @@ definitions:
             enum: ["1000000","2000000","3000000","4000000","5000000"]
           FiduciaryRetention:
             title: "Fiduciary Retention"
-            type: string
-            enum: ["10000","25000","50000","75000","100000","150000","250000"]
-          TaxesFeesAndSurcharges:
-            title: "Taxes Fees And Surcharges"
             type: string
           AnnualPremium:
             title: "Annual Premium"
@@ -506,6 +500,12 @@ definitions:
             type: string
           FiduciaryRetention:
             title: "Fiduciary Retention"
+            type: string
+          TotalTaxes:
+            title: "Total Taxes"
+            type: string
+          TotalFees:
+            title: "Total Fees"
             type: string
           TaxesFeesAndSurcharges:
             title: "Taxes Fees And Surcharges"

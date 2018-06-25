@@ -1,0 +1,624 @@
+swagger: '2.0'
+info:
+  version: "1.0."
+  title: Solartis Policy Document for Embroker
+  description: To generate policy document for Embroker
+  
+host: embroker.alpha.solartis.net
+basePath: /KnowledgeEngineV6_2/KnowledgeBase
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /FireEventV2:
+    post:
+      description: Generate Policy Documents for the given input
+      operationId: generatepdf
+      produces:
+        - application/json
+      parameters:
+        - name: Token
+          in: header
+          description: Authentication Token
+          required: true
+          type: string
+          format: string
+          default: "{
+  "ServiceRequestDetail": {
+    "ServiceRequestVersion": "1.0",
+    "LanguageCode": "en",
+    "UserName": "EmbrokerAgent",
+    "OwnerId": "36",
+    "RegionCode": "US",
+    "Token": "ubtmNhb6iP3EVYpVzA0cG6uJEl+in5Huh0cS+CLndfy+4m82ZwGrPI58uSH0CYZssZNIbPfLkTYi4JAms0uQjdJ71fV5/1VkQigEuoZJXwXNwnpUlU1MufwIHjZGLwdz/iicItusVxIi1PIUDRCdO7Nw4YvRVCswWMvJfKLKm4QjPW1hdS3XXYAcy+WdM5qGUamp2sq0w2BT3vVGmr6r1Z2v1naRyU5szKnl3fSfhBjHPar2j0bY+h+RMkNFy5rl6po1l9cARvDblUSbmpIK/hTke2hTwnXcvbIRJXzQmVD4KfY9OHNSNHT5rbshPCWV5yNCVz3qKrhW4rDZXgO6djIhH7BBmT0q9Dg9HFTy07CQeZfT6AADzwd6VlUgSwW98BXb6p/x0ZHKEAuLrP/wB1Svbn/n3TwZxrOeVkDtnKt0owSj1UKqBwSWlpt1s6MKuwSNEoO4B6bkj2vn5QtNOZeNI6dfKyMPnD2H17mB9hbBh8s6Rp8l/6LIMhK1iifdGqm4HENuXkGcc32zlwmddREjRxDXVOAY/tYAxQlId75BHIU/AJTI8d391oKL/jDJkvE+r8vwxsxAcUYtV2HMNsrdm2UaLlGCN20MlItxQNFY+xBrg2uuqqjaLdgHHDLp2HKutJyB/2+EySKqe7e7nacfT6bes0j+VfpymOYR9AhZ9zeHhUGdOgLAEebqC7uFu9gsJtqoyZ6I0RgEVS6RVzcHAYQoZNbkacWV96vere5zKWmLe2/b6dDTZMr4fkHWjCYCreU0BbmyCQNO49PhxRiP/NBTiZB4XRIpC+ViQ7u9ZCxUkQ78r4WmCnjr9m24d07UqnKy9OTrCeZ5UTi4WyKaq1LFvLrwKSWaYGAijJXamC3hom6hCiV1XTTNYwSH13kz+N4dxpQ6FWZhrQJFieXh5t4ylBWns4OLO1AXzlzapFxoZOWYq3FVC6yf53L6Y2LTNZTR66LZB7lXje+Z7iqRUe8xRC5u2GK1m63t2QaBE5Qi+20AfV64HU400UNTk2QO0CKcuysWGtZvb02Ly5bnn22vhc7qnUZpxUh/jrjXyMJNC6TiR6ct8VfVrOW55/J9o3yCIepfYrV6NVHrjXn/Ko1puy9UnK8SMnVwSxeUz1GauCZZFTFczWr0gHwt1MSQfdFSglPY5fSr1ADNARjPWUsATajTaYXl5z6z0x6w+9eLA+yIcvk+hSPvk1c7izVvZMpgubFRUJxobW6vCXHwI5illpVMJ84GgrflDudlbiSGNPBv9mKtbxWhlnRHm/EPyRaV/UTJgif1es8lFha37fkt/bSSTo1OapyQM/6AtD4eamPdWLjSjNkqkAWNtAINp122MKYm7RK65cCc/GQLIZjsU4mLWrd/y5i8AiLEbsf5T0OJsU2gGI+WXl4yQCW1wBP4N5fKS8dCJa34YWuzH0UkCz0OPeqD5GnvPcAj7bQwsbQzHjPn56yrqWrXwMYC8wFOMV5eMSCbpmBhV98YC1rKAUY/bUEePIuNZXwzDB/Ug7AnqZhgrikqrzHwvUh+3uVmVe+it4SN1PJG3Ntlvok3BKslY0jv0bxR2ZCDSmFn6c66WlQNRK2N1qLf5RtKxeehD56pt/dzAfFnOHOPKqxQpCSiQ9VwzhGIvUo4zP0622SsnqpqKRiEtGOeAPjDEovE1bYBHdZTEJCQ8XYpWuOwtFKIPij+/I6ZmMyTt4hv8GoUSBMG37CAfgXptYrVT/AlO/oLqxtmiA0S1Q==
+        - name: EventName
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "EmbrokerPolicyPDFGeneration"
+        - name: EventVersion
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "1.1.0.1"
+        - name: Policy
+          in: body
+          description: Policy content
+          required: true
+          schema:
+            $ref: '#/definitions/Policy_Request'
+      responses:
+        '200':
+          description: Success Response
+          schema:
+            $ref: '#/definitions/Policy_Success_Response'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/errorModel'
+definitions:
+  Policy_Request:
+    type: object
+    required:
+      - ServiceRequestDetail
+      - Policy
+    properties:
+      EndClientUserUniqueSessionId:
+        type: string
+        default: "Uniquesession"
+      EndClientUserBrowserSessionId:
+        type: string
+      EndClientUserBrowserInformation:
+        type: string
+      PaaSClientIPAddress:
+        type: string
+      ClientUniqueRequestID:
+        type: string
+      ServiceRequestDetail:
+        type: object
+        properties:
+          OwnerId:
+            type: string
+            default: "36"
+          ResponseType:
+            type: string
+            enum: ["JSON","XML"]
+            default: "JSON"
+          UserName:
+            type: string
+            default: "EmbrokerAgent"
+          Token:
+            type: string
+            default: "ubtmNhb6iP3EVYpVzA0cG6uJEl+in5Huh0cS+CLndfy+4m82ZwGrPI58uSH0CYZssZNIbPfLkTYi4JAms0uQjdJ71fV5/1VkQigEuoZJXwXNwnpUlU1MufwIHjZGLwdz/iicItusVxIi1PIUDRCdO7Nw4YvRVCswWMvJfKLKm4QjPW1hdS3XXYAcy+WdM5qGUamp2sq0w2BT3vVGmr6r1Z2v1naRyU5szKnl3fSfhBjHPar2j0bY+h+RMkNFy5rl6po1l9cARvDblUSbmpIK/hTke2hTwnXcvbIRJXzQmVD4KfY9OHNSNHT5rbshPCWV5yNCVz3qKrhW4rDZXgO6djIhH7BBmT0q9Dg9HFTy07CQeZfT6AADzwd6VlUgSwW98BXb6p/x0ZHKEAuLrP/wB1Svbn/n3TwZxrOeVkDtnKt0owSj1UKqBwSWlpt1s6MKuwSNEoO4B6bkj2vn5QtNOZeNI6dfKyMPnD2H17mB9hbBh8s6Rp8l/6LIMhK1iifdGqm4HENuXkGcc32zlwmddREjRxDXVOAY/tYAxQlId75BHIU/AJTI8d391oKL/jDJkvE+r8vwxsxAcUYtV2HMNsrdm2UaLlGCN20MlItxQNFY+xBrg2uuqqjaLdgHHDLp2HKutJyB/2+EySKqe7e7nacfT6bes0j+VfpymOYR9AhZ9zeHhUGdOgLAEebqC7uFu9gsJtqoyZ6I0RgEVS6RVzcHAYQoZNbkacWV96vere5zKWmLe2/b6dDTZMr4fkHWjCYCreU0BbmyCQNO49PhxRiP/NBTiZB4XRIpC+ViQ7u9ZCxUkQ78r4WmCnjr9m24d07UqnKy9OTrCeZ5UTi4WyKaq1LFvLrwKSWaYGAijJXamC3hom6hCiV1XTTNYwSH13kz+N4dxpQ6FWZhrQJFieXh5t4ylBWns4OLO1AXzlzapFxoZOWYq3FVC6yf53L6Y2LTNZTR66LZB7lXje+Z7iqRUe8xRC5u2GK1m63t2QaBE5Qi+20AfV64HU400UNTk2QO0CKcuysWGtZvb02Ly5bnn22vhc7qnUZpxUh/jrjXyMJNC6TiR6ct8VfVrOW55/J9o3yCIepfYrV6NVHrjXn/Ko1puy9UnK8SMnVwSxeUz1GauCZZFTFczWr0gHwt1MSQfdFSglPY5fSr1ADNARjPWUsATajTaYXl5z6z0x6w+9eLA+yIcvk+hSPvk1c7izVvZMpgubFRUJxobW6vCXHwI5illpVMJ84GgrflDudlbiSGNPBv9mKtbxWhlnRHm/EPyRaV/UTJgif1es8lFha37fkt/bSSTo1OapyQM/6AtD4eamPdWLjSjNkqkAWNtAINp122MKYm7RK65cCc/GQLIZjsU4mLWrd/y5i8AiLEbsf5T0OJsU2gGI+WXl4yQCW1wBP4N5fKS8dCJa34YWuzH0UkCz0OPeqD5GnvPcAj7bQwsbQzHjPn56yrqWrXwMYC8wFOMV5eMSCbpmBhV98YC1rKAUY/bUEePIuNZXwzDB/Ug7AnqZhgrikqrzHwvUh+3uVmVe+it4SN1PJG3Ntlvok3BKslY0jv0bxR2ZCDSmFn6c66WlQNRK2N1qLf5RtKxeehD56pt/dzAfFnOHOPKqxQpCSiQ9VwzhGIvUo4zP0622SsnqpqKRiEtGOeAPjDEovE1bYBHdZTEJCQ8XYpWuOwtFKIPij+/I6ZmMyTt4hv8GoUSBMG37CAfgXptYrVT/AlO/oLqxtmiA0S1Q=="
+          BrowserIp:
+            type: string 
+            default: "127.0.0.1"
+          ServiceRequestVersion:
+            type: string
+            default: "1.0"
+          RegionCode:
+            type: string
+            default: "US"
+      Policy:
+        type: object
+        required: 
+          - InsuredName
+          - InsuredAddressLine1
+          - InsuredCity
+          - InsuredState
+          - InsuredZipCode 
+          -BusinessType
+          - IsDirectorsAndOfficersCoverageIncluded
+          - IsEmploymentPracticesLiabilityInsuranceIncluded
+          - IsFiduciaryCoverageIncluded
+          - EffectiveDate
+          - ExpirationDate
+          - AnnualPremium
+          - ProratedPremium
+          - TotalPremium
+        properties:
+          SubmissionID:
+            title: "Submission ID"
+            type: string
+          CarrierName:
+            title: "Carrier Name"
+            type: string
+          CarrierCode:
+            title: "Carrier Code"
+            type: string
+          CarrierAddressLine1:
+            title: "Carrier Address Line 1"
+            type: string 
+          CarrierSuite:
+            title: "Carrier Suite"
+            type: string
+          CarrierAddressLine2:
+            title: "Carrier Address Line2"
+            type: string 
+          CarrierCity:
+            title: "Carrier City"
+            type: string
+          CarrierState:
+            title: "Carrier State"
+            type: string
+            enum: ["AL","AK","AR","AZ","CA","CO","CT","DC","DE","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA","MA","MD","ME","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","WA","WI","WV","WY","VA"]
+          CarrierZipCode:
+            title: "Carrier Zip Code"
+            type: string
+          AgencyName:
+            title: "Agency Name"
+            type: string
+          AgencyAddressLine1:
+            title: "Agency Address Line 1"
+            type: string 
+          AgencySuite:
+            title: "Agency Suite"
+            type: string
+          AgencyAddressLine2:
+            title: "Agency Address Line 2"
+            type: string 
+          AgencyCity:
+            title: "Agency City"
+            type: string
+          AgencyState:
+            title: "Agency State"
+            type: string
+            enum: ["AL","AK","AR","AZ","CA","CO","CT","DC","DE","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA","MA","MD","ME","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","NY","OH","OK","OR","PA","PR","RI","SC","SD","TN","TX","UT","VT","WA","WI","WV","WY","VA",""VI"]
+          AgencyZipCode:
+            title: "Agency Zip Code"
+            type: string
+          AgentName:
+            title: "Agent Name"
+            type: string
+          AgentAddressLine1:
+            title: "Agent Address Line 1"
+            type: string 
+          AgentSuite:
+            title: "Agent Suite"
+            type: string
+          AgentAddressLine2:
+            title: "Agent Address Line 2"
+            type: string 
+          AgentCity:
+            title: "Agent City"
+            type: string
+          AgentState:
+            title: "Agenct State"
+            type: string
+            enum: ["AL","AK","AR","AZ","CA","CO","CT","DC","DE","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA","MA","MD","ME","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","NY","OH","OK","OR","PA","PR","RI","SC","SD","TN","TX","UT","VT","WA","WI","WV","WY","VA",""VI"]
+          AgentZipCode:
+            title: "Agent Zip Code"
+            type: string
+          BusinessType:
+            title: "Business Type"
+            type: string
+          InsuredName:
+            title: "Insured Name"
+            type: string
+          InsuredAddressLine1:
+            title: "Insured Address Line 1"
+            type: string
+          InsuredSuite:
+            title: "Insured Suite"
+            type: string
+          InsuredAddressLine2:
+            title: "Insured Address Line 2"
+            type: string
+          InsuredCity:
+            title: "Insured City"
+            type: string
+          InsuredState:
+            title: "Insured State"
+            type: string 
+            enum: ["AL","AK","AR","AZ","CA","CO","CT","DC","DE","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA","MA","MD","ME","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","NY","OH","OK","OR","PA","PR","RI","SC","SD","TN","TX","UT","VT","WA","WI","WV","WY","VA",""VI"]
+          InsuredZipCode:
+            title: "Insured ZipCode"
+            type: string
+          EffectiveDate:
+            title: "Effective Date"
+            type: string
+          ExpirationDate:
+            title: "Expiration Date"
+            type: string
+          IsDirectorsAndOfficersCoverageIncluded:
+            title: "Is Directors And Officers Coverage Included"
+            type: string
+            enum: ["Yes","No"]
+          DirectorsAndOfficersLimitOfLiability:
+            title: "Directors And Officers Limit Of Liability"
+            type: string
+            enum: ["1000000","2000000","3000000","4000000","5000000"]
+          DirectorsAndOfficersRetention:
+            title: "Directors And Officers Retention"
+            type: string
+            enum: ["10000","25000","50000","75000","100000","150000","250000"]
+          IsEmploymentPracticesLiabilityInsuranceIncluded: 
+            title: "IsEmploymentPracticesLiabilityInsuranceIncluded"
+            type: string
+            enum: ["Yes","No"]
+          EmploymentPracticesLiabilityInsuranceLimitOfLiability: 
+            title: "Employment Practices Liability Insurance Limit Of Liability"
+            type: string
+            enum: ["1000000","2000000","3000000","4000000","5000000"]
+          EmploymentPracticesLiabilityInsuranceRetention:
+            title: "Employment Practices Liability Insurance Retention"
+            type: string
+            enum: ["10000","25000","50000","75000","100000","150000","250000"]
+          IsFiduciaryCoverageIncluded:
+            title: "Is Fiduciary Coverage Included"
+            type: string
+            enum: ["Yes","No"]
+          FiduciaryLimitOfLiability: 
+            title: "Fiduciary Limit Of Liability"
+            type: string
+            enum: ["1000000","2000000","3000000","4000000","5000000"]
+          FiduciaryRetention:
+            title: "Fiduciary Retention"
+            type: string
+            enum: ["10000","25000","50000","75000","100000","150000","250000"]
+          TaxesFeesAndSurcharges:
+            title: "Taxes Fees And Surcharges"
+            type: string
+          AnnualPremium:
+            title: "Annual Premium"
+            type: string
+          ProratedPremium:
+            title: "Prorated Premium"
+            type: string
+          TotalPremium:
+            title: "Total Premium"
+            type: string
+          Preview:
+            title: Preview
+            type: string
+            default: "No"
+          Watermark:
+            title: Watermark
+            type: string
+          OutputTypeList:
+            type: array
+            items:
+              properties:
+                OutputTypeDetail:
+                  type: object
+                  required:
+                    - Type
+                  properties:
+                    Type:
+                      title: "Type"
+                      type: string
+                      default: "POLICY"
+          FormsList:
+            type: array
+            items:
+              properties:
+                FormsDetail:
+                  type: object
+                  required:
+                    - Type
+                    - Name
+                    - Number
+                    - OrderIndex
+                  properties:
+                    Type:
+                      title: "Type"
+                      type: string
+                      default: "POLICY"
+                    Name:
+                      title: "Type"
+                      type: string
+                      enum: ["Declarations","Embroker General Terms and Conditions","Embroker Directors, Officers and Organization Liability Policy","Embroker Employment Practices Liability Insurance Coverage Part","Embroker Fiduciary Liability Insurance Coverage Part","Section XX -- Definitions","State Disclosure","Service of Suit"]
+                    Edition:
+                      title: "Edition"
+                      type: string
+                    Number:
+                      title: "Number"
+                      type: string
+                      enum: ["EMB 001","EMB 002","EMB 003","EMB 004","EMB 005","EMB 006","SOS AL 0416","SOS DOI 0416","SOS DOI 0416","SOS AR 0416","SOS CA 0616","SOS DOI 0416","SOS DOI 0416","SOS DOI 0416","SOS DOI 0416","SOS FL 0416","SOS GA 0416","SOS HI 0416","SOS DOI 0416","SOS DOI 0416","SOS IN 0416","SOS DOI 0416","SOS DOI 0416","SOS SS 0416","SOS SS 0416","SOS ME 0416","SOS DOI 0416","SOS DOI 0416","SOS MI 0416","SOS MN 0416","SOS MS 0416","SOS DOI 0416","SOS DOI 0416","SOS NE 0416","SOS DOI 0416","SOS DOI 0416","SOS DOI 0416","SOS DOI 0416","SOS DOI 0416","SOS DOI 0416","SOS OH 0416","SOS DOI 0416","SOS OR 0416","SOS PA 0416","SOS DOI 0416","SOS DOI 0416","SOS DOI 0416","SOS DOI 0416","SOS TX 0416","SOS UT 0416","SOS SS 0416","SOS VA 0416","SOS DOI 0416","SOS SS 0416","SOS WI 0616","SOS DOI 0416"]
+                    OrderIndex:
+                      title: "Order Index"
+                      type: string
+                      enum: ["1","2","3","4","5","6","7","8"]
+          TFSList:
+            type: array
+            items:
+              properties:
+                TFSDetail:
+                  type: object
+                  required:
+                    - Type
+                    - Rate
+                    - Description
+                    - Amount
+                  properties:
+                    Type:
+                      title: "Type"
+                      type: string
+                      enum: ["Tax","Fees","Surcharge"]
+                    Rate:
+                      title: "Rate"
+                      type: string
+                    Description:
+                      title: "Description"
+                      type: string
+                    Amount:
+                      title: "Amount"
+                      type: string
+      OwnerId:
+        type: string
+        default: "36"
+  Policy_Success_Response:
+    type: object
+    required:
+      - ServiceRequestDetail
+      - Policy
+    properties:
+      OwnerId:
+        type: string
+        default: "36"
+      EndClientUserUniqueSessionId:
+        type: string
+        default: "Uniquesession"
+      EndClientUserBrowserSessionId:
+        type: string
+        default: ""
+      EndClientUserBrowserInformation:
+        type: string
+        default: ""
+      PaaSClientIPAddress:
+        type: string
+        default: ""
+      ClientUniqueRequestID:
+        type: string
+        default: ""
+      ServiceRequestDetail:
+        type: object
+        properties:
+          ResponseType:
+            type: string
+            enum: ["JSON","XML"]
+            default: "JSON"
+          UserName:
+            type: string
+            default: "EmbrokerAgent"
+          Token:
+            type: string
+            default: "ubtmNhb6iP3EVYpVzA0cG6uJEl+in5Huh0cS+CLndfy+4m82ZwGrPI58uSH0CYZssZNIbPfLkTYi4JAms0uQjdJ71fV5/1VkQigEuoZJXwXNwnpUlU1MufwIHjZGLwdz/iicItusVxIi1PIUDRCdO7Nw4YvRVCswWMvJfKLKm4QjPW1hdS3XXYAcy+WdM5qGUamp2sq0w2BT3vVGmr6r1Z2v1naRyU5szKnl3fSfhBjHPar2j0bY+h+RMkNFy5rl6po1l9cARvDblUSbmpIK/hTke2hTwnXcvbIRJXzQmVD4KfY9OHNSNHT5rbshPCWV5yNCVz3qKrhW4rDZXgO6djIhH7BBmT0q9Dg9HFTy07CQeZfT6AADzwd6VlUgSwW98BXb6p/x0ZHKEAuLrP/wB1Svbn/n3TwZxrOeVkDtnKt0owSj1UKqBwSWlpt1s6MKuwSNEoO4B6bkj2vn5QtNOZeNI6dfKyMPnD2H17mB9hbBh8s6Rp8l/6LIMhK1iifdGqm4HENuXkGcc32zlwmddREjRxDXVOAY/tYAxQlId75BHIU/AJTI8d391oKL/jDJkvE+r8vwxsxAcUYtV2HMNsrdm2UaLlGCN20MlItxQNFY+xBrg2uuqqjaLdgHHDLp2HKutJyB/2+EySKqe7e7nacfT6bes0j+VfpymOYR9AhZ9zeHhUGdOgLAEebqC7uFu9gsJtqoyZ6I0RgEVS6RVzcHAYQoZNbkacWV96vere5zKWmLe2/b6dDTZMr4fkHWjCYCreU0BbmyCQNO49PhxRiP/NBTiZB4XRIpC+ViQ7u9ZCxUkQ78r4WmCnjr9m24d07UqnKy9OTrCeZ5UTi4WyKaq1LFvLrwKSWaYGAijJXamC3hom6hCiV1XTTNYwSH13kz+N4dxpQ6FWZhrQJFieXh5t4ylBWns4OLO1AXzlzapFxoZOWYq3FVC6yf53L6Y2LTNZTR66LZB7lXje+Z7iqRUe8xRC5u2GK1m63t2QaBE5Qi+20AfV64HU400UNTk2QO0CKcuysWGtZvb02Ly5bnn22vhc7qnUZpxUh/jrjXyMJNC6TiR6ct8VfVrOW55/J9o3yCIepfYrV6NVHrjXn/Ko1puy9UnK8SMnVwSxeUz1GauCZZFTFczWr0gHwt1MSQfdFSglPY5fSr1ADNARjPWUsATajTaYXl5z6z0x6w+9eLA+yIcvk+hSPvk1c7izVvZMpgubFRUJxobW6vCXHwI5illpVMJ84GgrflDudlbiSGNPBv9mKtbxWhlnRHm/EPyRaV/UTJgif1es8lFha37fkt/bSSTo1OapyQM/6AtD4eamPdWLjSjNkqkAWNtAINp122MKYm7RK65cCc/GQLIZjsU4mLWrd/y5i8AiLEbsf5T0OJsU2gGI+WXl4yQCW1wBP4N5fKS8dCJa34YWuzH0UkCz0OPeqD5GnvPcAj7bQwsbQzHjPn56yrqWrXwMYC8wFOMV5eMSCbpmBhV98YC1rKAUY/bUEePIuNZXwzDB/Ug7AnqZhgrikqrzHwvUh+3uVmVe+it4SN1PJG3Ntlvok3BKslY0jv0bxR2ZCDSmFn6c66WlQNRK2N1qLf5RtKxeehD56pt/dzAfFnOHOPKqxQpCSiQ9VwzhGIvUo4zP0622SsnqpqKRiEtGOeAPjDEovE1bYBHdZTEJCQ8XYpWuOwtFKIPij+/I6ZmMyTt4hv8GoUSBMG37CAfgXptYrVT/AlO/oLqxtmiA0S1Q=="
+          BrowserIp:
+            type: string 
+            default: "127.0.0.1"
+          ServiceRequestVersion:
+            type: string
+            default: "1.0"
+          RegionCode:
+            type: string
+            default: "US"
+      Policy:
+        type: object
+        properties:
+         SubmissionID:
+            title: "Submission ID"
+         PolicyNumber:
+            title: "Policy Number"
+            type: string
+          CarrierName:
+            title: "Carrier Name"
+            type: string
+          CarrierCode:
+            title: "Carrier Code"
+            type: string
+          CarrierAddressLine1:
+            title: "Carrier Address Line 1"
+            type: string 
+          CarrierSuite:
+            title: "Carrier Suite"
+            type: string
+          CarrierAddressLine2:
+            title: "Carrier Address Line2"
+            type: string 
+          CarrierCity:
+            title: "Carrier City"
+            type: string
+          CarrierState:
+            title: "Carrier State"
+            type: string
+          CarrierZipCode:
+            title: "Carrier Zip Code"
+            type: string
+          AgencyName:
+            title: "Agency Name"
+            type: string
+          AgencyAddressLine1:
+            title: "Agency Address Line 1"
+            type: string 
+          AgencySuite:
+            title: "Agency Suite"
+            type: string
+          AgencyAddressLine2:
+            title: "Agency Address Line 2"
+            type: string 
+          AgencyCity:
+            title: "Agency City"
+            type: string
+          AgencyState:
+            title: "Agency State"
+            type: string
+          AgencyZipCode:
+            title: "Agency Zip Code"
+            type: string
+          BusinessType"
+            title: "Business Type"
+            type: strinng
+          InsuredName:
+            title: "Insured Name"
+            type: string
+          InsuredAddressLine1:
+            title: "Insured Address Line 1"
+            type: string
+          InsuredSuite:
+            title: "Insured Suite"
+            type: string
+          InsuredAddressLine2:
+            title: "Insured Address Line 2"
+            type: string
+          InsuredCity:
+            title: "Insured City"
+            type: string
+          InsuredState:
+            title: "Insured State"
+            type: string
+          EffectiveDate:
+            title: "Effective Date"
+            type: string
+          ExpirationDate:
+            title: "Expiration Date"
+            type: string
+          IsDirectorsAndOfficersCoverageIncluded:
+            title: "Is Directors And Officers Coverage Included"
+            type: string
+          DirectorsAndOfficersLimitOfLiability:
+            title: "Directors And Officers Limit Of Liability"
+            type: string
+          DirectorsAndOfficersRetention:
+            title: "Directors And Officers Retention"
+            type: string
+          IsEmploymentPracticesLiabilityInsuranceIncluded: 
+            title: "IsEmploymentPracticesLiabilityInsuranceIncluded"
+            type: string
+          EmploymentPracticesLiabilityInsuranceLimitOfLiability: 
+            title: "Employment Practices Liability Insurance Limit Of Liability"
+            type: string
+          EmploymentPracticesLiabilityInsuranceRetention:
+            title: "Employment Practices Liability Insurance Retention"
+            type: string
+          IsFiduciaryCoverageIncluded:
+            title: "Is Fiduciary Coverage Included"
+            type: string
+          FiduciaryLimitOfLiability: 
+            title: "Fiduciary Limit Of Liability"
+            type: string
+          FiduciaryRetention:
+            title: "Fiduciary Retention"
+            type: string
+          TaxesFeesAndSurcharges:
+            title: "Taxes Fees And Surcharges"
+            type: string
+          AnnualPremium:
+            title: "Annual Premium"
+            type: string
+          ProratedPremium:
+            title: "Prorated Premium"
+            type: string
+          TotalPremium:
+            title: "Total Premium"
+            type: string
+          Preview:
+            title: Preview
+            type: string
+          Watermark:
+            title: Watermark
+            type: string
+          OutputTypeList:
+            type: array
+            items:
+              properties:
+                OutputTypeDetail:
+                  type: object
+                  required:
+                    - Type
+                  properties:
+                    Type:
+                      title: "Type"
+                      type: string
+                    URL:
+                      title: "URL"
+                      type: string
+                    Name:
+                      title: "Name"
+                      type: string
+                    Path:
+                      title: "Path"
+                      type: string
+          FormsList:
+            type: array
+            items:
+              properties:
+                FormsDetail:
+                  type: object
+                  required:
+                    - Type
+                    - Name
+                    - Number
+                    - OrderIndex
+                  properties:
+                    Type:
+                      title: "Type"
+                      type: string
+                      default: "POLICY"
+                    Name:
+                      title: "Type"
+                      type: string
+                    Edition:
+                      title: "Edition"
+                      type: string
+                    Number:
+                      title: "Number"
+                      type: string
+                    OrderIndex:
+                      title: "Order Index"
+                      type: string
+          TFSList:
+            type: array
+            items:
+              properties:
+                TFSDetail:
+                  type: object
+                  properties:
+                    Type:
+                      title: "Type"
+                      type: string
+                    Rate:
+                      title: "Rate"
+                      type: string
+                    Description:
+                      title: "Description"
+                      type: string
+                    Amount:
+                      title: "Amount"
+                      type: string
+                
+  errorModel:
+    type: object
+    required:
+      - RequestStatus
+      - MessageDetail
+    properties:
+      RequestStatus:
+        type: string
+      MessageDetail:
+        type: object
+        properties:
+          MessageCode:
+            type: string
+          MessageType:
+            type: string
+          UserMessage:
+            type: string
+          MessageLevel:
+            type: string
+          MessageSeverity:
+            type: string
+          MessageList:
+            type: object
+            properties:
+              Message:
+                type: array
+                items:
+                  type: string      

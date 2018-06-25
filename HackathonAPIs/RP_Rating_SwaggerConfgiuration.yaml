@@ -77,7 +77,7 @@ definitions:
             default: Renters Rater V1
           Carrier:
             type: string
-            default: Liberty Mutual - Renters Program
+            default: Solartis - Renters Program - Renters Program
           PolicyEffectiveDate:
             type: string
             default: 03/01/2018

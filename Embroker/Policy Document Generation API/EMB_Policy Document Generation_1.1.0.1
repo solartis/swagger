@@ -1,6 +1,6 @@
 swagger: '2.0'
 info:
-  version: "1.1.0.1"
+  version: "1.0"
   title: Solartis Policy Document for Embroker
   description: To generate policy document for Embroker
   
@@ -103,7 +103,6 @@ definitions:
       Policy:
         type: object
         required:
-          - BusinessType
           - InsuredName
           - InsuredAddressLine1
           - InsuredCity
@@ -117,9 +116,6 @@ definitions:
           - ProratedPremium
           - TotalPremium
         properties:
-          SubmissionID:
-            title: "Submission ID"
-            type: string
           CarrierName:
             title: "Carrier Name"
             type: string
@@ -189,10 +185,6 @@ definitions:
           AgentZipCode:
             title: "Agent Zip Code"
             type: string
-          BusinessType:
-            title: "Business Type"
-            type: string
-            enum: ["Technology", "Non Profit"]
           InsuredName:
             title: "Insured Name"
             type: string
@@ -210,6 +202,9 @@ definitions:
             type: string
           InsuredState:
             title: "Insured State"
+            type: string
+          InsuredStateRegionCode:
+            title: "Insured State Region Code"
             type: string 
             enum: ["AL","AK","AR","AZ","CA","CO","CT","DC","DE","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA","MA","MD","ME","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","WA","WI","WV","WY","VA","VI","PR","NY"]
           InsuredZipCode:
@@ -262,6 +257,9 @@ definitions:
           FiduciaryRetention:
             title: "Fiduciary Retention"
             type: string
+          AnnualPremium:
+            title: "Annual Premium"
+            type: string
           ProratedPremium:
             title: "Prorated Premium"
             type: string
@@ -280,12 +278,12 @@ definitions:
             title: "Product Ver Number"
             type: string
             default: "EMBRKR_2018_V1"
-          OwnerID:
-            title: "Owner ID"
+          OwnerId:
+            title: "Owner Id"
             type: string
             default: "36"
-          Watermark:
-            title: Watermark
+          WaterMark:
+            title: "WaterMark"
             type: string
           OutputTypeList:
             type: array
@@ -366,9 +364,6 @@ definitions:
       - ServiceRequestDetail
       - Policy
     properties:
-      OwnerId:
-        type: string
-        default: "36"
       EndClientUserUniqueSessionId:
         type: string
         default: "Uniquesession"
@@ -387,6 +382,9 @@ definitions:
       ServiceRequestDetail:
         type: object
         properties:
+          OwnerId:
+            type: string
+            default: "36"
           ResponseType:
             type: string
             enum: ["JSON","XML"]
@@ -411,9 +409,6 @@ definitions:
         properties:
           PolicyNumber:
             title: "Policy Number"
-            type: string
-          SubmissionID:
-            title: "Submission ID"
             type: string
           CarrierName:
             title: "Carrier Name"
@@ -460,9 +455,6 @@ definitions:
           AgencyZipCode:
             title: "Agency Zip Code"
             type: string
-          BusinessType:
-            title: "Business Type"
-            type: string
           InsuredName:
             title: "Insured Name"
             type: string
@@ -480,6 +472,9 @@ definitions:
             type: string
           IsuredState:
             title: "Insured State"
+            type: string
+          InsuredStateRegionCode:
+            title: "Insured State Region Code"
             type: string
           EffectiveDate:
             title: "Effective Date"
@@ -529,6 +524,9 @@ definitions:
           TaxesFeesAndSurcharges:
             title: "Taxes Fees And Surcharges"
             type: string
+          AnnualPremium:
+            title: "Annual Premium"
+            type: string
           ProratedPremium:
             title: "Prorated Premium"
             type: string
@@ -544,11 +542,11 @@ definitions:
           ProductVerNumber:
             title: "Product Ver Number"
             type: string
-          OwnerID:
-            title: "Owner ID"
+          OwnerId:
+            title: "Owner Id"
             type: string
-          Watermark:
-            title: Watermark
+          WaterMark:
+            title: "WaterMark"
             type: string
           OutputTypeList:
             type: array

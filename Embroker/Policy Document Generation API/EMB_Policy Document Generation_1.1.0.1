@@ -1,6 +1,6 @@
 swagger: '2.0'
 info:
-  version: "1.0."
+  version: "1.1.0.1"
   title: Solartis Policy Document for Embroker
   description: To generate policy document for Embroker
   
@@ -56,6 +56,7 @@ paths:
           description: unexpected error
           schema:
             $ref: '#/definitions/errorModel'
+            
 definitions:
   Policy_Request:
     type: object
@@ -182,7 +183,7 @@ definitions:
             title: "Agent City"
             type: string
           AgentState:
-            title: "Agenct State"
+            title: "Agent State"
             type: string
             enum: ["AL","AK","AR","AZ","CA","CO","CT","DC","DE","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA","MA","MD","ME","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","WA","WI","WV","WY","VA","VI","PR","NY"]
           AgentZipCode:
@@ -250,6 +251,14 @@ definitions:
             title: "Fiduciary Limit Of Liability"
             type: string
             enum: ["1000000","2000000","3000000","4000000","5000000"]
+          EventName:
+            title: "Event Name"
+            type: string
+            default: "EmbrokerPolicyPDFGeneration"
+          EventVersion:
+            title: "Event Version"
+            type: string
+            default: "1.1.0.1"
           FiduciaryRetention:
             title: "Fiduciary Retention"
             type: string
@@ -260,9 +269,21 @@ definitions:
             title: "Total Premium"
             type: string
           Preview:
-            title: Preview
+            title: "Preview"
             type: string
             default: "No"
+          ProductNumber:
+            title: "Product Number"
+            type: string
+            default: "EMBRKR"
+          ProductVerNumber:
+            title: "Product Ver Number"
+            type: string
+            default: "EMBRKR_2018_V1"
+          OwnerID:
+            title: "Owner ID"
+            type: string
+            default: "36"
           Watermark:
             title: Watermark
             type: string
@@ -298,7 +319,7 @@ definitions:
                     Name:
                       title: "Type"
                       type: string
-                      enum: ["Declarations","Embroker General Terms and Conditions","Embroker Directors, Officers and Organization Liability Policy","Embroker Employment Practices Liability Insurance Coverage Part","Embroker Fiduciary Liability Insurance Coverage Part","Section XX -- Defenitions","State Disclosure","Service of Suit"]
+                      enum: ["Declarations","Embroker General Terms and Conditions","Embroker Directors, Officers and Organization Liability Policy","Embroker Employment Practices Liability Insurance Coverage Part","Embroker Fiduciary Liability Insurance Coverage Part","Section XX -- Definitions","State Disclosure","Service of Suit"]
                     Edition:
                       title: "Edition"
                       type: string
@@ -309,7 +330,7 @@ definitions:
                     OrderIndex:
                       title: "Order Index"
                       type: string
-                      enum: ["1","2","3","4","5","6"]
+                      enum: ["1","2","3","4","5","6","7","8"]
           TFSList:
             type: array
             items:
@@ -325,7 +346,7 @@ definitions:
                     Type:
                       title: "Type"
                       type: string
-                      enum: ["Tax","Fees","Surcharge"]
+                      enum: ["Taxes","Fees","Surcharge"]
                     Rate:
                       title: "Rate"
                       type: string
@@ -338,6 +359,7 @@ definitions:
       OwnerId:
         type: string
         default: "36"
+        
   Policy_Success_Response:
     type: object
     required:
@@ -492,6 +514,12 @@ definitions:
           FiduciaryRetention:
             title: "Fiduciary Retention"
             type: string
+          EventName:
+            title: "Event Name"
+            type: string
+          EventVersion:
+            title: "Event Version"
+            type: string
           TotalTaxes:
             title: "Total Taxes"
             type: string
@@ -510,6 +538,15 @@ definitions:
           Preview:
             title: Preview
             type: string
+          ProductNumber:
+            title: "Product Number"
+            type: string
+          ProductVerNumber:
+            title: "Product Ver Number"
+            type: string
+          OwnerID:
+            title: "Owner ID"
+            type: string
           Watermark:
             title: Watermark
             type: string
@@ -519,8 +556,6 @@ definitions:
               properties:
                 OutputTypeDetail:
                   type: object
-                  required:
-                    - Type
                   properties:
                     Type:
                       title: "Type"
@@ -540,16 +575,10 @@ definitions:
               properties:
                 FormsDetail:
                   type: object
-                  required:
-                    - Type
-                    - Name
-                    - Number
-                    - OrderIndex
                   properties:
                     Type:
                       title: "Type"
                       type: string
-                      default: "POLICY"
                     Name:
                       title: "Type"
                       type: string

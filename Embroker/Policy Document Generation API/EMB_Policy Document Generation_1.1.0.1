@@ -116,6 +116,10 @@ definitions:
           - ProratedPremium
           - TotalPremium
         properties:
+          BusinessType:
+            title: "Business Type"
+            type: string
+            enum: ["Technology","Non Profit"]
           CarrierName:
             title: "Carrier Name"
             type: string
@@ -138,6 +142,9 @@ definitions:
             title: "Carrier State"
             type: string
             enum: ["AL","AK","AR","AZ","CA","CO","CT","DC","DE","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA","MA","MD","ME","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","WA","WI","WV","WY","VA","VI","PR","NY"]
+          CarrierZipcode:
+            title: "Carrier Zip Code"
+            type: string
           AgencyName:
             title: "Agency Name"
             type: string
@@ -157,6 +164,9 @@ definitions:
             title: "Agency State"
             type: string
             enum: ["AL","AK","AR","AZ","CA","CO","CT","DC","DE","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA","MA","MD","ME","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","WA","WI","WV","WY","VA","VI","PR","NY"]
+          AgencyZipCode:
+            title: "Agent Zip Code"
+            type: string
           AgentName:
             title: "Agent Name"
             type: string
@@ -176,6 +186,9 @@ definitions:
             title: "Agent State"
             type: string
             enum: ["AL","AK","AR","AZ","CA","CO","CT","DC","DE","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA","MA","MD","ME","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","WA","WI","WV","WY","VA","VI","PR","NY"]
+          AgentZipCode:
+            title: "Agent Zip Code"
+            type: string
           InsuredName:
             title: "Insured Name"
             type: string
@@ -199,7 +212,7 @@ definitions:
             type: string 
             enum: ["AL","AK","AR","AZ","CA","CO","CT","DC","DE","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA","MA","MD","ME","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","WA","WI","WV","WY","VA","VI","PR","NY"]
           InsuredZipCode:
-            title: "Insured ZipCode"
+            title: "Insured Zip Code"
             type: string
           EffectiveDate:
             title: "Effective Date"
@@ -280,71 +293,50 @@ definitions:
             type: array
             items:
               properties:
-                OutputTypeDetail:
-                  type: object
-                  required:
-                    - Type
-                  properties:
-                    Type:
-                      title: "Type"
-                      type: string
-                      default: "POLICY"
+                Type:
+                  title: "Type"
+                  type: string
+                  default: "POLICY"
           FormsList:
             type: array
             items:
               properties:
-                FormsDetail:
-                  type: object
-                  required:
-                    - Type
-                    - Name
-                    - Number
-                    - OrderIndex
-                  properties:
-                    Type:
-                      title: "Type"
-                      type: string
-                      default: "POLICY"
-                    Name:
-                      title: "Type"
-                      type: string
-                      enum: ["Declarations","Embroker General Terms and Conditions","Embroker Directors, Officers and Organization Liability Policy","Embroker Employment Practices Liability Insurance Coverage Part","Embroker Fiduciary Liability Insurance Coverage Part","Section XX -- Definitions","State Disclosure","Service of Suit"]
-                    Edition:
-                      title: "Edition"
-                      type: string
-                    Number:
-                      title: "Number"
-                      type: string
-                      enum: ["EMB 001","EMB 002","EMB 003","EMB 004","EMB 005","EMB 006","SOS AL 0416","SOS DOI 0416","SOS AR 0416","SOS CA 0616","SOS FL 0416","SOS GA 0416","SOS HI 0416","SOS IN 0416","SOS SS 0416","SOS ME 0416","SOS MI 0416","SOS MN 0416","SOS MS 0416","SOS NE 0416","SOS OH 0416","SOS OR 0416","SOS PA 0416","SOS TX 0416","SOS UT 0416","SOS VA 0416","SOS WI 0616"]
-                    OrderIndex:
-                      title: "Order Index"
-                      type: string
-                      enum: ["1","2","3","4","5","6","7","8"]
+                Type:
+                  title: "Type"
+                  type: string
+                  default: "POLICY"
+                Name:
+                  title: "Type"
+                  type: string
+                  enum: ["Declarations","Embroker General Terms and Conditions","Embroker Directors, Officers and Organization Liability Policy","Embroker Employment Practices Liability Insurance Coverage Part","Embroker Fiduciary Liability Insurance Coverage Part","Section XX -- Definitions","State Disclosure","Service of Suit"]     
+                Edition:
+                  title: "Edition"
+                  type: string
+                Number:
+                  title: "Number"
+                  type: string
+                  enum: ["EMB 001","EMB 002","EMB 003","EMB 004","EMB 005","EMB 006","SOS AL 0416","SOS DOI 0416","SOS AR 0416","SOS CA 0616","SOS FL 0416","SOS GA 0416","SOS HI 0416","SOS IN 0416","SOS SS 0416","SOS ME 0416","SOS MI 0416","SOS MN 0416","SOS MS 0416","SOS NE 0416","SOS OH 0416","SOS OR 0416","SOS PA 0416","SOS TX 0416","SOS UT 0416","SOS VA 0416","SOS WI 0616"]
+                OrderIndex:
+                    title: "Order Index"
+                    type: string
+                    enum: ["1","2","3","4","5","6","7","8"]
           TFSList:
             type: array
             items:
               properties:
-                TFSDetail:
-                  type: object
-                  required:
-                    - Type
-                    - Rate
-                    - Description
-                    - Amount
-                  properties:
-                    Type:
-                      title: "Type"
-                      type: string
-                      enum: ["Taxes","Fees","Surcharge"]
-                    Rate:
-                      title: "Rate"
-                      type: string
-                    Description:
-                      title: "Description"
-                      type: string
-                    Amount:
-                      title: "Amount"
-                      type: string
+                Type:
+                   title: "Type"
+                   type: string
+                   enum: ["Taxes","Fees","Surcharge"]
+                Rate:
+                    title: "Rate"
+                    type: string
+                Description:
+                    title: "Description"
+                    type: string
+                Amount:
+                    title: "Amount"
+                    type: string
       OwnerId:
         type: string
         default: "36"
@@ -401,6 +393,9 @@ definitions:
           PolicyNumber:
             title: "Policy Number"
             type: string
+          BusinessType:
+            title: "Business Type"
+            type: string
           CarrierName:
             title: "Carrier Name"
             type: string
@@ -440,6 +435,9 @@ definitions:
           AgencyState:
             title: "Agency State"
             type: string
+          AgencyZipCode:
+            title: "Agent Zip Code"
+            type: string
           AgentName:
             title: "Agent Name"
             type: string
@@ -458,6 +456,9 @@ definitions:
           AgentState:
             title: "Agency State"
             type: string
+          AgentZipCode:
+            title: "Agent Zip Code"
+            type: string
           InsuredName:
             title: "Insured Name"
             type: string
@@ -473,11 +474,14 @@ definitions:
           InsuredCity:
             title: "Insured City"
             type: string
-          IsuredState:
+          InsuredState:
             title: "Insured State"
             type: string
           InsuredStateRegionCode:
             title: "Insured State Region Code"
+            type: string
+          InsuredZipCode:
+            title: "Insured Zip Code"
             type: string
           EffectiveDate:
             title: "Effective Date"
@@ -555,62 +559,53 @@ definitions:
             type: array
             items:
               properties:
-                OutputTypeDetail:
-                  type: object
-                  properties:
-                    Type:
-                      title: "Type"
-                      type: string
-                    URL:
-                      title: "URL"
-                      type: string
-                    Name:
-                      title: "Name"
-                      type: string
-                    Path:
-                      title: "Path"
-                      type: string
+                Type:
+                  title: "Type"
+                  type: string
+                URL:
+                  title: "URL"
+                  type: string
+                Name:
+                  title: "Name"
+                  type: string
+                Path:
+                  title: "Path"
+                  type: string
           FormsList:
             type: array
             items:
               properties:
-                FormsDetail:
-                  type: object
-                  properties:
-                    Type:
-                      title: "Type"
-                      type: string
-                    Name:
-                      title: "Type"
-                      type: string
-                    Edition:
-                      title: "Edition"
-                      type: string
-                    Number:
-                      title: "Number"
-                      type: string
-                    OrderIndex:
-                      title: "Order Index"
-                      type: string
+                Type:
+                  title: "Type"
+                  type: string
+                Name:
+                  title: "Type"
+                  type: string
+                Edition:
+                  title: "Edition"
+                  type: string
+                Number:
+                  title: "Number"
+                  type: string
+                OrderIndex:
+                  title: "Order Index"
+                  type: string
           TFSList:
             type: array
             items:
               properties:
-                TFSDetail:
-                  type: object
-                  properties:
-                    Type:
-                      title: "Type"
-                      type: string
-                    Rate:
-                      title: "Rate"
-                      type: string
-                    Description:
-                      title: "Description"
-                      type: string
-                    Amount:
-                      title: "Amount"
-                      type: string
+                Type:
+                  title: "Type"
+                  type: string
+                Rate:
+                  title: "Rate"
+                  type: string
+                Description:
+                  title: "Description"
+                  type: string
+                Amount:
+                  title: "Amount"
+                  type: string
                 
   errorModel:
     type: object

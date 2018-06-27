@@ -94,6 +94,9 @@ definitions:
           BrowserIp:
             type: string 
             default: "127.0.0.1"
+          LanguageCode:
+            type: string
+            default: "en"
           ServiceRequestVersion:
             type: string
             default: "1.0"
@@ -117,7 +120,7 @@ definitions:
           - AddressLine1
           - City
           - State
-          - Zipcode
+          - ZipCode
           - NumberOfEmployees
           - EffectiveDate
           - ExpirationDate
@@ -278,11 +281,14 @@ definitions:
             title: "Does NonProfit Have A Defined Benefit Or Pension Plan"
             type: string
             enum: ["Yes","No"]
+          DefinedBenefitPlan:
+            title: "Defined Benefit Plan"
+            type: string
           Coverage:
             type: array
             items:
               properties:
-                CovergeDetail:
+                CoverageDetail:
                   type: object
                   required:
                     - CoverageName
@@ -345,6 +351,9 @@ definitions:
           BrowserIp:
             type: string 
             default: "127.0.0.1"
+          LanguageCode:
+            type: string
+            default: "en"
           ServiceRequestVersion:
             type: string
             default: "1.0"
@@ -489,11 +498,14 @@ definitions:
           DoesNonProfitHaveADefinedBenefitOrPensionPlan:
             title: "Does NonProfit Have A Defined Benefit Or Pension Plan"
             type: string
+          DefinedBenefitPlan:
+            title: "Defined Benefit Plan"
+            type: string
           Coverage:
             type: array
             items:
               properties:
-                CovergeDetail:
+                CoverageDetail:
                   type: object
                   required:
                     - CoverageName

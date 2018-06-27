@@ -179,6 +179,9 @@ definitions:
           AddressLine1:
             title: "Address Line 1"
             type: string
+          SuiteNumber:
+            title: "Suite Number"
+            type: string
           AddressLine2:
             title: "Address Line 2"
             type: string
@@ -275,7 +278,7 @@ definitions:
             title: "Does NonProfit Have A Defined Benefit Or Pension Plan"
             type: string
             enum: ["Yes","No"]
-          CoverageList:
+          Coverage:
             type: array
             items:
               properties:
@@ -363,9 +366,6 @@ definitions:
           EventVersion:
             title: "Event Version"
             type: string
-          SubmissionNumber:
-            title: "Submission Number"
-            type: string
           BusinessName:
             title: "Business Name"
             type: string
@@ -404,6 +404,9 @@ definitions:
             type: string
           AddressLine2:
             title: "Address Line 2"
+            type: string
+          SuiteNumber:
+            title: "Suite Number"
             type: string
           City:
             title: "City"
@@ -486,7 +489,7 @@ definitions:
           Does NonProfit Have A Defined Benefit Or Pension Plan:
             title: "Does NonProfit Have A Defined Benefit Or Pension Plan"
             type: string
-          CoverageList:
+          Coverage:
             type: array
             items:
               properties:

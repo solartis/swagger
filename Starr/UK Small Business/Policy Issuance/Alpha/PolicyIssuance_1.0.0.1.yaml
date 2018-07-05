@@ -149,10 +149,6 @@ definitions:
           type: string
           title: "Business Name"
           default: "Udayakumar"
-        CommercialCombinedRiskScoreValue:
-          type: string
-          title: "Commercial Combined Risk Score Value"
-          default: "A"
         CompensationforCourtAttendance:
           type: string
           title: "Compensation for Court Attendance"
@@ -165,6 +161,18 @@ definitions:
           type: string
           title: "Data Protection Legislation claim costs"
           default: "100,000"
+        CompensationforCourtAttendanceExcesslimit:
+          type: string
+          title: "Compensation for Court Attendance Excess Limit"
+          default: "0"
+        CorporateManslaughterandCorporateHomicideExcessLimit:
+          type: string
+          title: "Corporate Mans laughter and Corporate Homicide Excess Limit"
+          default: "0"
+        DataProtectionLegislationclaimcostsExcessLimit:
+          type: string
+          title: "Data Protection Legislation claim costs Excess Limit"
+          default: "0"
         EffectiveDate:
           type: string
           title: "Effective Date"
@@ -181,6 +189,10 @@ definitions:
           type: string
           title: "Employers Liability Limit"
           default: "10,000,000"
+        EmployersLiabilityExcessLimit:
+          type: string
+          title: "Employers Liability Excess Limit"
+          default: "0"
         EventName:
           type: string
           title: "Event Name"
@@ -197,6 +209,10 @@ definitions:
           type: string
           title: "Health and Safety at Work Legal Defence Costs"
           default: "1,000,000"
+        HealthandSafetyatWorkLegalDefenceCostsExcessLimit:
+          type: string
+          title: "Health and Safety at Work Legal Defence Costs Excess Limit"
+          default: "0"
         InsuredCity:
           type: string
           title: "Insured City"
@@ -217,18 +233,14 @@ definitions:
           type: string
           title: "Last Rate LookUp Date"
           default: "22-06-2018"
-        LegalExpensesCoveragePremium:
-          type: string
-          title: "Legal Expenses Coverage Premium"
-          default: ""
-        LiabilityRiskScoreValue:
-          type: string
-          title: "Liability Risk Score Value"
-          default: "A"
         NumberOfEmployees:
           type: string
           title: "Number Of Employees"
           default: "10"
+        TotalAnnualTurnOver:
+          type: string
+          title: "TotalAnnualTurnOver"
+          default: "10,000"
         PriorClaims:
           type: string
           title: "Prior Claims"
@@ -253,14 +265,14 @@ definitions:
           type: string
           title: "Public Liability Limit"
           default: "2,000,000"
+        PublicLiabilityExcessLimit:
+          type: string
+          title: "Public Liability Excess Limit"
+          default: ""
         SendMail:
           type: string
           title: "Send Mail"
-          default: "Y"
-        TotalAmountDue:
-          type: string
-          title: "Total Amount Due"
-          default: ""
+          default: "Yes"
         TotalCommission:
           type: string
           title: "Total Commission"
@@ -272,7 +284,7 @@ definitions:
         TotalTax:
           type: string
           title: "Total Tax"
-          default: "30"
+          default: ""
         ClaimsList:
             type: "array"
             items:
@@ -330,14 +342,18 @@ definitions:
                       type: string
                       title: "Money Extension Limit"
                       default: "10,000"
-                    MoneyExtensionCoveragePremium:
+                    MoneyExtensionExcessLimit:
                       type: string
-                      title: "Money Extension Coverage Premium"
-                      default: ""
+                      title: "Money Extension Excess Limit"
+                      default: "0"
                     BusinessInterruptionCoverageLimit:
                       type: string
                       title: "Business Interruption Coverage Limit"
                       default: "10,000"
+                    BusinessInterruptionCoverageExcessLimit:
+                      type: string
+                      title: "Business Interruption Coverage Excess Limit"
+                      default: "0"
                     BusinessInterruptionCoveragePremium:
                       type: string
                       title: "Business Interruption Coverage Premium"
@@ -346,10 +362,10 @@ definitions:
                       type: string
                       title: "Computer Breakdown Coverage Limit"
                       default: "10,000"
-                    ComputerBreakdownCoveragePremium:
+                    ComputerBreakdownCoverageExcessLimit:
                       type: string
-                      title: "Computer Breakdown Coverage Premium"
-                      default: ""
+                      title: "Computer Breakdown Coverage Excess Limit"
+                      default: "0"
                     LocationID:
                       type: string
                       title: "Location ID"
@@ -358,14 +374,6 @@ definitions:
                       type: string
                       title: "Country"
                       default: "GB"
-                    WindstormRiskScoreValue:
-                      type: string
-                      title: "Windstorm Risk Score Value"
-                      default: "B"
-                    FloodRiskScoreValue:
-                      type: string
-                      title: "Flood Risk Score Value"
-                      default: "B"
                     Building:
                       type: "array"
                       items:
@@ -374,10 +382,6 @@ definitions:
                           BuildingDetail:
                             type: "object"
                             properties:
-                              PropertyRiskScoreValue:
-                                type: string
-                                title: "Property Risk Score Value"
-                                default: "B"
                               BuildingID:
                                 type: string
                                 title: "Building ID"
@@ -386,6 +390,10 @@ definitions:
                                 type: string
                                 title: "Building Limit"
                                 default: "10,000"
+                              BuildingExcessLimit:
+                                type: string
+                                title: "Building Excess Limit"
+                                default: "100"
                               BuildingPremium:
                                 type: string
                                 title: "Building Premium"
@@ -406,10 +414,10 @@ definitions:
                                           type: string
                                           title: "Business Contents Limit"
                                           default: "10,000"
-                                        TotalAnnualTurnOver:
+                                        BusinessContentsExcessLimit:
                                           type: string
-                                          title: "TotalAnnualTurnOver"
-                                          default: "10,000"
+                                          title: "Business Contents Excess Limit"
+                                          default: "250"
                                         BusinessContentsCoveragePremium: 
                                           type: string
                                           title: "Business Contents Coverage Premium"

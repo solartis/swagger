@@ -5,7 +5,7 @@ info:
   title: Solartis Policy Issuance API for STARR UK Small Business
   description: To create a quote and the policy for the given rates and limits
   
-host: starruksb.alpha.solartis.net
+host: starruksb.beta.solartis.net
 basePath: /KnowledgeEngineV6_2/KnowledgeBase
 schemes:
   - https

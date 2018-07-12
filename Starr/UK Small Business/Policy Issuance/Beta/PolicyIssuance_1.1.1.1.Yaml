@@ -180,7 +180,7 @@ definitions:
         EmployersLiabilityCoverage:
           type: string
           title: "Employers Liability Coverage"
-          default: "True"
+          default: "Yes"
         EmployersLiabilityCoveragePremium:
           type: string
           title: "Employers Liability Coverage Premium"

@@ -1,10 +1,10 @@
 swagger: '2.0'
 info:
   version: "1.0.0.1"
-  title: STARR UK Small Business - Cancel Issuance API
+  title: STARR UK Small Business - Cancel Preview API
   description: Cancel API is used by the customer to cancel the issued policy
   
-host: starruksb.beta.solartis.net
+host: starruksb.alpha.solartis.net
 basePath: /KnowledgeEngineV6_2/KnowledgeBase
 schemes:
   - https
@@ -34,7 +34,6 @@ paths:
           required: true
           type: string
           default: "application/json"
-          
         - name: EventName
           in: header
           description: Name of the event to be invoked
@@ -42,7 +41,6 @@ paths:
           type: string
           format: string
           default: "CancelPreview"
-          
         - name: EventVersion
           in: header
           description: Name of the event to be invoked
@@ -50,7 +48,6 @@ paths:
           type: string
           format: string
           default: "1.0.0.1"
-        
         - name: Cancel_request
           in: body
           description: For cancel_request
@@ -113,7 +110,6 @@ definitions:
             default: "US"  
        Policy:
          type: object
-         required:
          properties:
            ProductNumber:
             type: string
@@ -157,13 +153,12 @@ definitions:
             title: "Admin Charge"  
   Cancellation_Success_Response:
     type: object
-    required:
     properties:
       RequestStatus:
         type: string
       ProductVerNumber:
         type: string
-      ProductNumber:.
+      ProductNumber:
         type: string
       EventName:
         type: string
@@ -186,8 +181,6 @@ definitions:
       TotalReturnpremium:
         type: string
       ProRataFactor:
-        type: string
-      TotalReturnpremium:
         type: string
   errorModel:
     type: object

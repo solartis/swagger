@@ -147,10 +147,6 @@ definitions:
             type: string
             default: "Flat"
             title: "Cancel Type"
-           SendMail:
-            type: string
-            default: "Yes"
-            title: "Send Email"
            TotalPremium:
             type: string
             default: ""

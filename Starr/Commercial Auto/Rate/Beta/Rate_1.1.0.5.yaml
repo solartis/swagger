@@ -134,7 +134,7 @@ definitions:
         LastRateLookUpDate:
          title: "LastRateLookUpDate"
          type: string
-         default: "2018-06-27"
+         default: "2018-07-13"
         InsuredName:
          title: "InsuredName"
          type: string

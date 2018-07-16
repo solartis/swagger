@@ -333,40 +333,6 @@ definitions:
           DoesNonProfitHaveADefinedBenefitOrPensionPlan:
             title: "Does NonProfit Have A Defined Benefit Or Pension Plan"
             type: string
-          Coverage:
-            type: array
-            items:
-              properties:
-                CoverageDetail:
-                  type: object
-                  properties:
-                    CoverageName:
-                      title: "Coverage Name"
-                      type: string
-                    LimitOfLiability:
-                      title: "Limit Of Liability"
-                      type: string
-                    Retention:
-                      title: "Retention"
-                      type: string
-                    Premium:
-                      title: "Premium"
-                      type: string
-                    RetentionFactor:
-                      title: "Retention Factor"
-                      type: string
-                    RetentionPremium:
-                      title: "Retention Premium"
-                      type: string
-                    IncreasedLimitFactor:
-                      title: "Increased Limit Factor"
-                      type: string
-                    IncreasedLimitPremium:
-                      title: "Increased Limit Premium"
-                      type: string
-                    BasePremium:
-                      title: "Base Premium"
-                      type: string
           TotalBasePremium:
             title: "Total Base Premium"
             type: string
@@ -418,15 +384,55 @@ definitions:
           FinalPremium:
             title: "Final Premium"
             type: string
-          TotalTFS:
-            title: "Total TFS"
+          TotalTaxes:
+            title: "Total Taxes"
             type: string
-          TotalPolicyPremium:
-            title: "Total Policy Premium"
+          TotalFees:
+            title: "Total Fees"
+            type: string
+          TaxesFeesAndSurcharges:
+            title: "Taxes, Fees and Surcharges"
+            type: string
+          TotalPremium:
+            title: "Total Premium"
             type: string
           Commission:
             title: "Commission"
             type: string
+          Coverage:
+            type: array
+            items:
+              properties:
+                CoverageDetail:
+                  type: object
+                  properties:
+                    CoverageName:
+                      title: "Coverage Name"
+                      type: string
+                    LimitOfLiability:
+                      title: "Limit Of Liability"
+                      type: string
+                    Retention:
+                      title: "Retention"
+                      type: string
+                    Premium:
+                      title: "Premium"
+                      type: string
+                    RetentionFactor:
+                      title: "Retention Factor"
+                      type: string
+                    RetentionPremium:
+                      title: "Retention Premium"
+                      type: string
+                    IncreasedLimitFactor:
+                      title: "Increased Limit Factor"
+                      type: string
+                    IncreasedLimitPremium:
+                      title: "Increased Limit Premium"
+                      type: string
+                    BasePremium:
+                      title: "Base Premium"
+                      type: string
           TFSList:
             type: array
             items:
@@ -434,25 +440,25 @@ definitions:
                 TFSDetail:
                   type: object
                   properties:
-                    Type:
-                      title: "Type"
+                    TFSType:
+                      title: "TFS Type"
                       type: string
-                    Rate:
-                      title: "Rate"
+                    TFSRate:
+                      title: "TFS Rate"
                       type: string
-                    Code:
-                      title: "Code"
+                    TFSCode:
+                      title: "TFS Code"
                       type: string
-                    AppliedDate:
-                      title: "Applied Date"
+                    TFSAppliedDate:
+                      title: "TFS Applied Date"
                       type: string
-                    Name:
-                      title: "Name"
+                    TFSName:
+                      title: "TFS Name"
                       type: string
-                    Description:
-                      title: "Description"
+                    TFSDescription:
+                      title: "TFS Description"
                       type: string
-                    Amount:
+                    TFSAmount:
                       title: "Amount"
                       type: string
           

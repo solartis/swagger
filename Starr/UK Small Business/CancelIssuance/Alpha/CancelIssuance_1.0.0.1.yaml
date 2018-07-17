@@ -150,10 +150,6 @@ definitions:
             type: string
             default: "Yes"
             title: "Send Email"
-           TotalPremium:
-            type: string
-            default: ""
-            title: "Total Premium"
            AdminCharge:
             type: string
             default: "25"
@@ -182,8 +178,6 @@ definitions:
       CancelEffectiveDate:
         type: string
       CancelReason:
-        type: string
-      TotalPremium:
         type: string
       TotalReturnpremium:
         type: string

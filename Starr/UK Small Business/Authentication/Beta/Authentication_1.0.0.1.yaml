@@ -4,7 +4,7 @@ info:
   title: Solartis Authentication Service
   description: To get token from Authentication Service
   
-host: qacommonservice.solartis.net
+host: authentication.uat.solartis.net
 basePath: /CommonServiceV2_1/AuthenticationServiceV2
 schemes:
   - https

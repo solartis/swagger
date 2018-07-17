@@ -143,10 +143,6 @@ definitions:
             type: string
             default: "Flat"
             title: "Cancel Type"
-           TotalPremium:
-            type: string
-            default: ""
-            title: "Total Premium"
            AdminCharge:
             type: string
             default: "25"
@@ -175,8 +171,6 @@ definitions:
       CancelEffectiveDate:
         type: string
       CancelReason:
-        type: string
-      TotalPremium:
         type: string
       TotalReturnpremium:
         type: string

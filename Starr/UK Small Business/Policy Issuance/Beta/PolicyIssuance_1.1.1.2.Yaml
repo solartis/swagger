@@ -354,11 +354,11 @@ definitions:
                       type: string
                       title: "Optional Cover Loss of Gross Revenue Limit"
                       default: "1000"
-		                StandardCoverIncreasedCostofWorkingExcessLimit
+		    StandardCoverIncreasedCostofWorkingExcessLimit:
                       type: string
                       title: "Standard Cover Increased Cost of Working Excess Limit"
                       default: "1000"
-		                OptionalCoverLossofGrossRevenueExcessLimit
+		    OptionalCoverLossofGrossRevenueExcessLimit:
                       type: string
                       title: "Optional Cover Loss of Gross Revenue Excess Limit"
                       default: "1000"

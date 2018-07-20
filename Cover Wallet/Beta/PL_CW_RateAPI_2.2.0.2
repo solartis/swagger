@@ -163,7 +163,7 @@ definitions:
           ProfessionalLiabilityLimitsOfInsurance:
             title: "ProfessionalLiability Limit of Insurance"
             type: string
-            enum: ["$1M/$3M","$1M/$5M","$1M/$6M","$2M/$4M","$2M/$5M","$2M/$6M","$2.3M/$6.9M","$2.35M/$7.05M","$2.4M/$7.2M","$2.45M/$7.35M","$2.5M/$7.5M","$2.55M/$7.65M","$2.6M/$7.8M","$2.65M/$7.95M","$2.7M/$8.1M","$2.75M/$8.25M","$2.8M/$8.4M","$2.85M/$8.55M","$2.9M/$8.7M","$2.95M/$8.85M","$3M/$9M","$250K/$750K","$400K/$1.2M","$500K/$1.5M","$200k/$600k","$100K/$300K","100000","250000","500000","1000000","2000000","3000000","4000000","5000000","6000000","7000000","8000000","9000000","10000000","$25,000/$25,000","$50,000/$50,000","$100,000/$100,000","$250,000/$250,000","$500,000/$500,000","$750,000/$750,000","$1,000,000/$1,000,000","$10,000/$20,000","$25,000/$50,000","$50,000/$100,000","$100,000/$200,000","$10,000/$10,000","$15,000/$15,000","$30,000/$30,000"]
+            enum: ["$1M/$3M","$1M/$5M","$1M/$6M","$2M/$4M","$2M/$5M","$2M/$6M","$2.3M/$6.9M","$2.35M/$7.05M","$2.4M/$7.2M","$2.45M/$7.35M","$2.5M/$7.5M","$2.55M/$7.65M","$2.6M/$7.8M","$2.65M/$7.95M","$2.7M/$8.1M","$2.75M/$8.25M","$2.8M/$8.4M","$2.85M/$8.55M","$2.9M/$8.7M","$2.95M/$8.85M","$3M/$9M","$250K/$750K","$400K/$1.2M","$500K/$1.5M","$200K/$600K","$100K/$300K","$100K","$250K","$500K","$1M","$2M","$3M","$4M","$5M","$6M","$7M","$8M","$9M","$10M","$25K/$25K","$50K/$50K","$100K/$100K","$250K/$250K","$500K/$500K","$750K/$750K","$1M/$1M","$10K/$20K","$25K/$50K","$50K/$100K","$100K/$200K","$10K/$10K","$15K/$15K","$30K/$30K"]
           WorkplaceLiabilityLimitsOfInsurance:
             title: "WorkplaceLiability Limit of Insurance"
             type: string
@@ -199,8 +199,8 @@ definitions:
             title: "Professional Liability Deductible"
             type: string
             enum: ["0","500","1000","2500","5000","7500","10000"]
-          NumberOfClaimsinPast5Yrs:
-            title: "Number Of Claims in Past 5Yrs"
+          ClaimsinPast5Yrs:
+            title: "Claims in Past 5Yrs"
             type: string
           TotalReportedIncurredLossandExpense:
             title: "Total Reported Incurred Loss and Expense"
@@ -264,7 +264,7 @@ definitions:
           LimitedGeneralLiabilityLimitsOfInsurance:
             title: "Limited General Liability Limits Of Insurance"
             type: string
-            enum: ["$10,000/$10,000","$10,000/$20,000","$15,000/$15,000","$25,000/$50,000","$30,000/$30,000","$50,000/$100,000","$100,000/$100,000","$100,000/$200,000","$250,000/$250,000","$500,000/$500,000","1,000,000/$1,000,000"]
+            enum: ["$100K/$100K","$250K/$250K","$500K/$500K","$1M/$1M"]
           MergersandAcquisitions:
             title: "Mergers and Acquisitions"
             type: string
@@ -561,7 +561,7 @@ definitions:
             type: string
           ProfessionalLiabilityDeductible:
             type: string
-          NumberOfClaimsinPast5Yrs:
+          ClaimsinPast5Yrs:
             type: string
           TotalReportedIncurredLossandExpense:
             type: string

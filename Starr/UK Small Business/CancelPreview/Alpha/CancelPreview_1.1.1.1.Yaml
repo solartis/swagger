@@ -4,7 +4,7 @@ info:
   title: STARR UK Small Business - Cancel Preview API
   description: Cancel API is used by the customer to cancel the issued policy
   
-host: starruksb.beta.solartis.net
+host: starruksb.alpha.solartis.net
 basePath: /KnowledgeEngineV6_2/KnowledgeBase
 schemes:
   - https

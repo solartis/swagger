@@ -140,7 +140,7 @@ definitions:
             title: "Cancel Effective Date"
            CancelReason:
             type: string
-            default: "Insured's Option - No insurable interest"
+            default: "Cancel - Policy Change"
             title: "Cancel Reason"
            CancelType:
             type: string

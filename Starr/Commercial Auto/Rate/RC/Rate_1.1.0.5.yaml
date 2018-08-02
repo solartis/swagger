@@ -204,6 +204,12 @@ definitions:
               type: string
               enum: ["Light Truck","Medium Truck","Heavy Truck","Heavy Truck-Tractor","Extra-Heavy Truck","Extra-Heavy Truck-Tractor","Semitrailer","Trailer","Service or Utility Trailer"]
               default: "Light Truck"
+             MunicipalityCode:
+              title: "MunicipalityCode"
+              type: string
+             MunicipalityName:
+              title: "MunicipalityName"
+              type: string
              TruckBusinessUseClass:
               title: "TruckBusinessUseClass"
               type: string
@@ -269,6 +275,12 @@ definitions:
               type: string
               enum: ["Personal Use or Farm Use - Nonfleet Vehicle","Business Use - Nonfleet Vehicle","Personal Use or Business Use - Fleet Vehicle","Farm Use - Fleet Vehicle"]
               default: "Personal Use or Farm Use - Nonfleet Vehicle"
+             MunicipalityCode:
+              title: "MunicipalityCode"
+              type: string
+             MunicipalityName:
+              title: "MunicipalityName"
+              type: string
              PrivatePassengerUse:
               title: "PrivatePassengerUse"
               type: string

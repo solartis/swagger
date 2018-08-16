@@ -1,8 +1,8 @@
 swagger: '2.0'
 info:
   version: "1.0.0.1"
-  title: Solartis Renewal Quote API for STARR Small Business General Liability
-  description: To get rate and issue the renewal quote for Small Business General Liability from Solartis Quote 
+  title: Solartis Renewal Rate API for STARR Small Business General Liability
+  description: To get renewal rate  for Small Business General Liability from Solartis Quote 
                API with ISO ERC
 
 host: starrsgl.alpha.solartis.net
@@ -16,7 +16,7 @@ produces:
 paths:
   /FireEventV2:
     post:
-      description: Gets Quote for General Liability based on ISO ERC
+      description: Gets Renewal Rates for General Liability based on ISO ERC
       operationId: getRates
       produces:
         - application/json

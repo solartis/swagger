@@ -143,7 +143,7 @@ definitions:
            DateofCancellation:
             type: string
             default: "08-16-2018"
-           SendEmail:
+           SendMail:
             type: string
             default: "Yes"
            

@@ -1,6 +1,6 @@
 swagger: '2.0'
 info:
-  version: "1.0.0.1"
+  version: "1.1.0.1"
   title: Solartis Renewal Rate API for STARR Small Business General Liability
   description: To get renewal rate  for Small Business General Liability from Solartis Quote 
                API with ISO ERC
@@ -47,7 +47,7 @@ paths:
           required: true
           type: string
           format: string
-          default: "1.0.0.1"       
+          default: "1.1.0.1"       
         - name: Rating Request
           in: body
           description: For rating request
@@ -128,7 +128,7 @@ definitions:
         EventVersion:
          title: "Event Version"
          type: string
-         default: "1.0.0.1"
+         default: "1.1.0.1"
         ProductionChannel:
          title: "Production Channel"
          type: string
@@ -140,15 +140,23 @@ definitions:
         RenewalEffectiveDate: 
          title: "Renewal Start Date"
          type: string
-         default: "2017-12-01"
+         default: "2019-08-17"
         RenewalExpirationDate: 
          title: "Renewal Expiry Date"
          type: string
-         default: "2018-12-01"
+         default: "2019-08-17"
         RenewingPolicyNumber:
          title: "Renewing Policy Number"
          type: string
-         default: "1000603154"
+         default: "1000601462"
+        GenerateQuoteLetter:
+         title: "Generate Quote Letter"
+         type: string
+         default: "Y"
+        SendMail:
+         title: "Send Mail"
+         type: string
+         default: "Y"
         InsuredName: 
          title: "InsuredName"
          type: string

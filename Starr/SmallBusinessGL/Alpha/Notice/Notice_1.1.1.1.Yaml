@@ -122,6 +122,7 @@ definitions:
            NoticeType: 
             type: string
             default: "DNOC"
+            enum: ["DNOC","NONRENEWAL"
            ObjectType:
             type: string
             default: "Policy"

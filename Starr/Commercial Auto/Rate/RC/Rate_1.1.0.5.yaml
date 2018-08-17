@@ -202,7 +202,7 @@ definitions:
              TruckSizeClass:
               title: "TruckSizeClass"
               type: string
-              enum: ["Light Truck","Medium Truck","Heavy Truck","Heavy Truck-Tractor","Extra-Heavy Truck","Extra-Heavy Truck-Tractor","Semitrailer","Trailer","Service or Utility Trailer"]
+              enum: ["Light Truck","Medium Truck","Heavy Truck","Heavy Truck-Tractor","Extra-Heavy Truck","Extra Heavy Truck-Tractor","Semitrailer","Trailer","Service or Utility Trailer"]
               default: "Light Truck"
              MunicipalityCode:
               title: "MunicipalityCode"

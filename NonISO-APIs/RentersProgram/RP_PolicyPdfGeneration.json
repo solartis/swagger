@@ -1,354 +1,257 @@
-{
-	"swagger": "2.0",
-	"info": {
-		"version": "1.0.0",
-		"title": "Solartis PDF Generation for Renters Program",
-		"description": "To generate PDF Generation for Renters Program."
-	},
-	"host": "solartisdemokbv6-2.solartis.net",
-	"basePath": "/KnowledgeEngineV6_2/KnowledgeBase",
-	"schemes": [
-		"https"
-	],
-	"produces": [
-		"application/json"
-	],
-	"consumes": [
-		"application/json"
-	],
-	"paths": {
-		"/FireEventV2": {
-			"post": {
-				"description": "generate PDF Generation for Renters Program",
-				"operationId": "generatepdf",
-				"produces": [
-					"application/json"
-				],
-				"parameters":[
-				  {
-						"name": "Token",
-						"in": "header",
-						"description": "Authentication Token",
-						"required": true,
-						"type": "string",
-						"format": "string",
-						"default": "VLOouMoPSJR1WT5DF489lo+U19gRsGs6p9dSX8+actIVVH2tXLPiA53dz002/lITGTZvoNr0rpDsMrJPTOO5fk2KhDcb2FbtZOqxGESpQqFV1FN2lxvwbe/H8vHkOrCKOkOpHdJm/J4pllWgNa6jWXGZDVHCWzOwXKGCVssQM81CEoQBSVQGZYzXR1amm50lLplkIHDT7RPe+14gjvaPO1LxHFpvJF+c4svSQ7/R1nMH2HCR8o6y8vDoTDdkYe5HZ5EshW3rZCpHonG2vmGxPu2gVz/SRhNP5ODPqs88n13IswG5c0y1cYIWWoc/vdLvDUrSqf4AQQE31LyBlGGTg6uPCY4eYWCcrNtoQ2MK5364UpGP5paRHJ5oFDQ5XABqky5c+WgnIlXW2bTWejQfCzjc+L5gNhfm8EYjot10PvhYYRSqk9/rEpdMhUeu2hsGwk0nIiloccvspNV0WHM4s54t8h8VHiDqlVDglEYuqQvoEoq+1PjrtE/qtia2/bSJ0GDl0pVafvC88hWUkdE2873/gVtGR6m4PHGlIgrLrZCQZaRQqbBg4UAMeqJBBtYNf4fjTq+c2aQKHd3qufejMJSI8yJKK8QGX3CO5x4LO9k9XkKL1SGjqeYrTmDhVl//Ed2LVBysLR/yPKRneWR5BUyN7pGtXZUexlQLKC3FlEGfXgtcb9pJ0EcnE0vcfrMhso8DQvuuONAB2pJqOvmKSXc0qYiqYBHzwpMM5sijrpIEIzR/PBHaQwu5BR63dvFz26MFnUHO7H7ZMd/oPQeOlmtKy5DvH03M2rvURTvGpjdcphzuSmL8g8WsqyGKKIdycLk54H+BI+6UURrLi5Wk2LdUBS8eXazSrDIS5DcfPtzkhWEmryuyMT7xoGX18+AF+SDKuexmtMdjv5L8tmhRwPXj7vAXTdCToARTduzXExD+u+LXDF7/neunxsq7/V8/DXeyepuNSO8SPAqVbRdcJgWZbEN9BJdPHr05nn7OTSc2IrMP1J3lbhFoDS79cbbuFQP60uSRJ5K5yKKPuoYqtfYmXbPwHfRNwdqi7wCN3xw="
-					},
-					{
-						"name": "Content-Type",
-						"in": "header",
-						"description": "Content Type",
-						"required": true,
-						"type": "string",
-						"format": "string",
-						"default": "application/json"
-					},
-					{
-						"name": "EventName",
-						"in": "header",
-						"description": "EventName",
-						"required": true,
-						"type": "string",
-						"format": "string",
-						"default": "Renters_Property_GenerateDocumentV1"
-					},
-					{
-						"name": "Rating Request",
-						"in": "body",
-						"description": "For rating request",
-						"required": true,
-						"schema": {
-							"$ref": "#/definitions/Request"
-						}
-					}
-				],
-				"responses": {
-					"200": {
-						"description": "Successful response",
-						"schema": {
-							"$ref": "#/definitions/Success_Response"
-						}
-					},
-					"default": {
-						"description": "unexpected error",
-						"schema": {
-							"$ref": "#/definitions/errorModel"
-						}
-					}
-				}
-			}
-		}
-	},
-	"definitions": {
-		"Request": {
-			"type": "object",
-			"properties": {
-				"ServiceRequestDetail": {
-					"type": "object",
-					"properties": {
-						"ServiceRequestVersion": {
-							"type": "string",
-							"default": "1.0"
-						},
-						"LanguageCode": {
-							"type": "string",
-							"default": "en"
-						},
-						"UserName": {
-							"type": "string",
-							"default": "uwmanager"
-						},
-						"OwnerId": {
-							"type": "string",
-							"default": "33"
-						},
-						"RegionCode": {
-							"type": "string",
-							"default": "US"
-						},
-						"Token": {
-							"type": "string",
-							"default": "VLOouMoPSJR1WT5DF489lo+U19gRsGs6p9dSX8+actIVVH2tXLPiA53dz002/lITGTZvoNr0rpDsMrJPTOO5fk2KhDcb2FbtZOqxGESpQqFV1FN2lxvwbe/H8vHkOrCKOkOpHdJm/J4pllWgNa6jWXGZDVHCWzOwXKGCVssQM81CEoQBSVQGZYzXR1amm50lLplkIHDT7RPe+14gjvaPO1LxHFpvJF+c4svSQ7/R1nMH2HCR8o6y8vDoTDdkYe5HZ5EshW3rZCpHonG2vmGxPu2gVz/SRhNP5ODPqs88n13IswG5c0y1cYIWWoc/vdLvDUrSqf4AQQE31LyBlGGTg6uPCY4eYWCcrNtoQ2MK5364UpGP5paRHJ5oFDQ5XABqky5c+WgnIlXW2bTWejQfCzjc+L5gNhfm8EYjot10PvhYYRSqk9/rEpdMhUeu2hsGwk0nIiloccvspNV0WHM4s54t8h8VHiDqlVDglEYuqQvoEoq+1PjrtE/qtia2/bSJ0GDl0pVafvC88hWUkdE2873/gVtGR6m4PHGlIgrLrZCQZaRQqbBg4UAMeqJBBtYNf4fjTq+c2aQKHd3qufejMJSI8yJKK8QGX3CO5x4LO9k9XkKL1SGjqeYrTmDhVl//Ed2LVBysLR/yPKRneWR5BUyN7pGtXZUexlQLKC3FlEGfXgtcb9pJ0EcnE0vcfrMhso8DQvuuONAB2pJqOvmKSXc0qYiqYBHzwpMM5sijrpIEIzR/PBHaQwu5BR63dvFz26MFnUHO7H7ZMd/oPQeOlmtKy5DvH03M2rvURTvGpjdcphzuSmL8g8WsqyGKKIdycLk54H+BI+6UURrLi5Wk2LdUBS8eXazSrDIS5DcfPtzkhWEmryuyMT7xoGX18+AF+SDKuexmtMdjv5L8tmhRwPXj7vAXTdCToARTduzXExD+u+LXDF7/neunxsq7/V8/DXeyepuNSO8SPAqVbRdcJgWZbEN9BJdPHr05nn7OTSc2IrMP1J3lbhFoDS79cbbuFQP60uSRJ5K5yKKPuoYqtfYmXbPwHfRNwdqi7wCN3xw="
-						},
-						"ServiceResponseVersion": {
-							"type": "string",
-							"default": "1.0"
-						},
-						"BrowserIp": {
-							"type": "string",
-							"default": "127.0.0.1"
-						},
-						"ResponseType": {
-							"type": "string",
-							"enum": [
-								"json",
-								"xml"
-							],
-							"default": "json"
-						}
-					}
-				},
-				"EndClientUserUniqueSessionId": {
-					"type": "string",
-					"default": "Uniquesession"
-				},
-				"OwnerId": {
-					"type": "string",
-					"default": "33"
-				},
-				"Policy": {
-					"type": "object",
-					"properties": {
-						"EventName": {
-							"type": "string",
-							"default": "Renters_Property_GenerateDocumentV1"
-						},
-						"ProductNumber": {
-							"type": "string",
-							"default": "Renters Rater"
-						},
-						"ProductVerNumber": {
-							"type": "string",
-							"default": "Renters Rater V1"
-						},
-						"ScheduleOfFormsList": {
-							"type": "array",
-							"items": {
-								"properties": {
-									"FormNumber": {
-										"type": "string"
-									},
-									"FormName": {
-										"type": "string"
-									}
-								}
-							}
-						},						
-						"DocumentInformationList": {
-							"type": "array",
-							"items": {
-								"properties": {
-									"DocumentType": {
-										"type": "string"
-									},
-									"DocumentPath": {
-										"type": "string"
-									},
-									"DocumentName": {
-										"type": "string"
-									},
-									"DocumentEdition": {
-										"type": "string"
-									},
-									"DocumentNumber": {
-										"type": "string"
-									},
-									"DocumentFileType": {
-										"type": "string"
-									},
-									"OrderIndex": {
-										"type": "string"
-									},
-									"DocumentCategoryOrderIndex": {
-										"type": "string"
-									},
-									"DocumentSubNumber": {
-										"type": "string"
-									}
-								}
-							}
-						},
-						"DocumentType": {
-							"type": "string",
-							"default": "ISSUANCE"
-						},
-						"PolicyNumber": {
-							"type": "string",
-							"default": "874562"
-						},
-						"CustomerName": {
-							"type": "string",
-							"default": "John"
-						},
-						"AddressLine1": {
-							"type": "string",
-							"default": "4740 Reed Road"
-						},
-						"AddressLine2": {
-							"type": "string",
-							"default": "Suite 109"
-						},
-						"City": {
-							"type": "string",
-							"default": "Upper Arlington"
-						},
-						"State": {
-							"type": "string",
-							"default": "OH"
-						},
-						"ZipCode": {
-							"type": "string",
-							"default": "43220"
-						},
-						"EffectiveDate": {
-							"type": "string",
-							"default": "03/01/2018"
-						},
-						"ExpirationDate": {
-							"type": "string",
-							"default": "03/01/2019"
-						},
-						"CustomerSupportMailID": {
-							"type": "string",
-							"default": "luo@libertyMutual.com"
-						},
-						"ClaimsMail": {
-							"type": "string",
-							"default": "luo@libertyMutual.com"
-						},
-						"PersonalPropertyLimit": {
-							"type": "string",
-							"default": "10000"
-						},
-						"PersonalLiabiltyLimit": {
-							"type": "string",
-							"default": "100000"
-						},
-						"MedicalPaymentLimit": {
-							"type": "string",
-							"default": "1000"
-						},
-						"Deductible": {
-							"type": "string",
-							"default": "500"
-						},
-						"LossOfUse": {
-							"type": "string",
-							"default": "2000"
-						},
-						"PolicyTermPremium": {
-							"type": "string",
-							"default": "361.00"
-						},
-						"OwnerId": {
-							"type": "string",
-							"default": "33"
-						},
-						"QuoteID": {
-							"type": "string",
-							"default": "986523"
-						},
-						"WaterMark": {
-							"type": "string",
-							"default": "SPECIMEN"
-						},
-						"Preview": {
-							"type": "string",
-							"default": "No"
-						}
-					}
-
-				}
-			}
-
-		},
-		"Success_Response": {
-			"type": "object",
-			"properties": {
-				"messageDetail": {
-					"type": "object"
-				},
-				"ResponseStatus": {
-					"type": "string"
-				},
-				"Policy": {
-					"type": "object"
-				}
-			}
-		},
-		"errorModel": {
-			"type": "object",
-			"required": [
-				"RequestStatus",
-				"MessageDetail"
-			],
-			"properties": {
-				"RequestStatus": {
-					"type": "string"
-				},
-				"MessageDetail": {
-					"type": "object",
-					"properties": {
-						"MessageCode": {
-							"type": "string"
-						},
-						"MessageType": {
-							"type": "string"
-						},
-						"UserMessage": {
-							"type": "string"
-						},
-						"MessageLevel": {
-							"type": "string"
-						},
-						"MessageSeverity": {
-							"type": "string"
-						},
-						"MessageList": {
-							"type": "object",
-							"properties": {
-								"Message": {
-									"type": "array",
-									"items": {
-										"type": "string"
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-
-	}
-}
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: Solartis PDF Generation for Renters Program
+  description: To generate PDF Generation for Renters Program.
+host: rentersapihk.solartis.net
+basePath: /KnowledgeEngineV6_2/KnowledgeBase
+schemes:
+  - https
+produces:
+  - application/json
+consumes:
+  - application/json
+paths:
+  /FireEventV2:
+    post:
+      description: generate PDF Generation for Renters Program
+      operationId: generatepdf
+      produces:
+        - application/json
+      parameters:
+        - name: Token
+          in: header
+          description: Authentication Token
+          required: true
+          type: string
+          format: string
+          default: >-
+            VLOouMoPSJR1WT5DF489lo+U19gRsGs6p9dSX8+actIVVH2tXLPiA53dz002/lITGTZvoNr0rpDsMrJPTOO5fk2KhDcb2FbtZOqxGESpQqE7QMvPQixXzdULSGtpLBlj90fB0DhSrCoCQiCTymaDLxajnSIn6627vQ7IpK5mZ5RCEoQBSVQGZYzXR1amm50lLplkIHDT7RPe+14gjvaPO1LxHFpvJF+c4svSQ7/R1nMH2HCR8o6y8vDoTDdkYe5HZ5EshW3rZCpHonG2vmGxPu2gVz/SRhNP5ODPqs88n13IswG5c0y1cYIWWoc/vdLvDUrSqf4AQQE31LyBlGGTg6uPCY4eYWCcrNtoQ2MK5364UpGP5paRHJ5oFDQ5XABqky5c+WgnIlXW2bTWejQfCzjc+L5gNhfm8EYjot10PvhYYRSqk9/rEpdMhUeu2hsGwk0nIiloccvspNV0WHM4s54t8h8VHiDqlVDglEYuqQvoEoq+1PjrtE/qtia2/bSJ0GDl0pVafvC88hWUkdE2873/gVtGR6m4PHGlIgrLrZCQZaRQqbBg4UAMeqJBBtYNf4fjTq+c2aQKHd3qufejMJSI8yJKK8QGX3CO5x4LO9k9XkKL1SGjqeYrTmDhVl//Ed2LVBysLR/yPKRneWR5BUyN7pGtXZUexlQLKC3FlEGfXgtcb9pJ0EcnE0vcfrMhso8DQvuuONAB2pJqOvmKSXc0qYiqYBHzwpMM5sijrpIEIzR/PBHaQwu5BR63dvFz26MFnUHO7H7ZMd/oPQeOlmtKy5DvH03M2rvURTvGpjdcphzuSmL8g8WsqyGKKIdycLk54H+BI+6UURrLi5Wk2LdUBS8eXazSrDIS5DcfPtzkhWEmryuyMT7xoGX18+AF+SDKuexmtMdjv5L8tmhRwPXj7vAXTdCToARTduzXExD+u+LXDF7/neunxsq7/V8/DXeyepuNSO8SPAqVbRdcJgWZbEN9BJdPHr05nn7OTSc2IrMP1J3lbhFoDS79cbbuFQP60uSRJ5K5yKKPuoYqtfYmXbPwHfRNwdqi7wCN3xw=
+        - name: Content-Type
+          in: header
+          description: Content Type
+          required: true
+          type: string
+          format: string
+          default: application/json
+        - name: EventName
+          in: header
+          description: EventName
+          required: true
+          type: string
+          format: string
+          default: Renters_Property_GenerateDocumentV1
+        - name: Rating Request
+          in: body
+          description: For rating request
+          required: true
+          schema:
+            $ref: '#/definitions/Request'
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            $ref: '#/definitions/Success_Response'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/errorModel'
+definitions:
+  Request:
+    type: object
+    properties:
+      ServiceRequestDetail:
+        type: object
+        properties:
+          ServiceRequestVersion:
+            type: string
+            default: '1.0'
+          LanguageCode:
+            type: string
+            default: en
+          UserName:
+            type: string
+            default: uwmanager
+          OwnerId:
+            type: string
+            default: '33'
+          RegionCode:
+            type: string
+            default: US
+          Token:
+            type: string
+            default: >-
+              VLOouMoPSJR1WT5DF489lo+U19gRsGs6p9dSX8+actIVVH2tXLPiA53dz002/lITGTZvoNr0rpDsMrJPTOO5fk2KhDcb2FbtZOqxGESpQqE7QMvPQixXzdULSGtpLBlj90fB0DhSrCoCQiCTymaDLxajnSIn6627vQ7IpK5mZ5RCEoQBSVQGZYzXR1amm50lLplkIHDT7RPe+14gjvaPO1LxHFpvJF+c4svSQ7/R1nMH2HCR8o6y8vDoTDdkYe5HZ5EshW3rZCpHonG2vmGxPu2gVz/SRhNP5ODPqs88n13IswG5c0y1cYIWWoc/vdLvDUrSqf4AQQE31LyBlGGTg6uPCY4eYWCcrNtoQ2MK5364UpGP5paRHJ5oFDQ5XABqky5c+WgnIlXW2bTWejQfCzjc+L5gNhfm8EYjot10PvhYYRSqk9/rEpdMhUeu2hsGwk0nIiloccvspNV0WHM4s54t8h8VHiDqlVDglEYuqQvoEoq+1PjrtE/qtia2/bSJ0GDl0pVafvC88hWUkdE2873/gVtGR6m4PHGlIgrLrZCQZaRQqbBg4UAMeqJBBtYNf4fjTq+c2aQKHd3qufejMJSI8yJKK8QGX3CO5x4LO9k9XkKL1SGjqeYrTmDhVl//Ed2LVBysLR/yPKRneWR5BUyN7pGtXZUexlQLKC3FlEGfXgtcb9pJ0EcnE0vcfrMhso8DQvuuONAB2pJqOvmKSXc0qYiqYBHzwpMM5sijrpIEIzR/PBHaQwu5BR63dvFz26MFnUHO7H7ZMd/oPQeOlmtKy5DvH03M2rvURTvGpjdcphzuSmL8g8WsqyGKKIdycLk54H+BI+6UURrLi5Wk2LdUBS8eXazSrDIS5DcfPtzkhWEmryuyMT7xoGX18+AF+SDKuexmtMdjv5L8tmhRwPXj7vAXTdCToARTduzXExD+u+LXDF7/neunxsq7/V8/DXeyepuNSO8SPAqVbRdcJgWZbEN9BJdPHr05nn7OTSc2IrMP1J3lbhFoDS79cbbuFQP60uSRJ5K5yKKPuoYqtfYmXbPwHfRNwdqi7wCN3xw=
+          ServiceResponseVersion:
+            type: string
+            default: '1.0'
+          BrowserIp:
+            type: string
+            default: 127.0.0.1
+          ResponseType:
+            type: string
+            enum:
+              - json
+              - xml
+            default: json
+      EndClientUserUniqueSessionId:
+        type: string
+        default: Uniquesession
+      OwnerId:
+        type: string
+        default: '33'
+      Policy:
+        type: object
+        properties:
+          EventName:
+            type: string
+            default: Renters_Property_GenerateDocumentV1
+          ProductNumber:
+            type: string
+            default: Renters Rater
+          ProductVerNumber:
+            type: string
+            default: Renters Rater V1
+          ScheduleOfFormsList:
+            type: array
+            items:
+              properties:
+                FormNumber:
+                  type: string
+                  default: ''
+                FormName:
+                  type: string
+                  default: Renter's Policy Cover Page
+          DocumentInformationList:
+            type: array
+            items:
+              properties:
+                DocumentType:
+                  type: string
+                  default: ISSUANCE
+                DocumentPath:
+                  type: string
+                  default: Forms/RentersRater/Templates/Common/Solartis Renter's Policy Cover Page.pdf
+                DocumentName:
+                  type: string
+                  default: Solartis Renter's Policy Cover Page
+                DocumentEdition:
+                  type: string
+                  default: ''
+                DocumentNumber:
+                  type: string
+                  default: ''
+                DocumentFileType:
+                  type: string
+                  default: pdf
+                OrderIndex:
+                  type: string
+                  default: '1'
+                DocumentCategoryOrderIndex:
+                  type: string
+                  default: '1'
+                DocumentSubNumber:
+                  type: string
+          DocumentType:
+            type: string
+            default: ISSUANCE
+          PolicyNumber:
+            type: string
+            default: '123456'
+          CustomerName:
+            type: string
+            default: Kevin
+          AddressLine1:
+            type: string
+            default: 'LLC, 1601 N. Sepulveda Blvd'
+          AddressLine2:
+            type: string
+            default: '#606'
+          City:
+            type: string
+            default: Manhattan Beach
+          State:
+            type: string
+            default: CA
+          ZipCode:
+            type: string
+            default: '90266'
+          EffectiveDate:
+            type: string
+            default: '2018-06-05'
+          ExpirationDate:
+            type: string
+            default: '2019-06-05'
+          CustomerSupportMailID:
+            type: string
+            default: solartissupport@solartis.com
+          ClaimsMail:
+            type: string
+            default: solartissupport@solartis.com
+          PersonalPropertyLimit:
+            type: string
+            default: '10000'
+          PersonalLiabiltyLimit:
+            type: string
+            default: '200000'
+          MedicalPaymentLimit:
+            type: string
+            default: '3000'
+          Deductible:
+            type: string
+            default: '20000'
+          LossOfUse:
+            type: string
+            default: '4000'
+          PolicyTermPremium:
+            type: string
+            default: '373.85'
+          OwnerId:
+            type: string
+            default: '33'
+          QuoteID:
+            type: string
+            default: '986523'
+          WaterMark:
+            type: string
+            default: SPECIMEN
+          Preview:
+            type: string
+            default: 'No'
+  Success_Response:
+    type: object
+    properties:
+      messageDetail:
+        type: object
+      ResponseStatus:
+        type: string
+      Policy:
+        type: object
+  errorModel:
+    type: object
+    required:
+      - RequestStatus
+      - MessageDetail
+    properties:
+      RequestStatus:
+        type: string
+      MessageDetail:
+        type: object
+        properties:
+          MessageCode:
+            type: string
+          MessageType:
+            type: string
+          UserMessage:
+            type: string
+          MessageLevel:
+            type: string
+          MessageSeverity:
+            type: string
+          MessageList:
+            type: object
+            properties:
+              Message:
+                type: array
+                items:
+                  type: string

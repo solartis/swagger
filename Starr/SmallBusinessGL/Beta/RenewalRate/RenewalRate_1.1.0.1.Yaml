@@ -140,11 +140,11 @@ definitions:
         RenewalEffectiveDate: 
          title: "Renewal Start Date"
          type: string
-         default: "2019-08-17"
+         default: "2018-08-01"
         RenewalExpirationDate: 
          title: "Renewal Expiry Date"
          type: string
-         default: "2019-08-17"
+         default: "2019-08-01"
         RenewingPolicyNumber:
          title: "Renewing Policy Number"
          type: string

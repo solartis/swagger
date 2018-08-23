@@ -164,7 +164,7 @@ definitions:
         AddressLine1: 
          title: "Address Line 1"
          type: string
-         default: ""
+         default: "88 East Street"
         AddressLine2: 
          title: "Address Line 2"
          type: string
@@ -314,23 +314,23 @@ definitions:
         EntityType:
          title: "Entity Type"
          type: string
-         default: ""
+         default: "DBA"
         FormOfBusiness:
          title: "Form Of Business"
          type: string
-         default: ""
+         default: "Building I Own(Not my residence)"
         AgencyCode:
          title: "Agency Code"
          type: string
-         default: ""
+         default: "1068"
         AgentCode:
          title: "Agent Code"
          type: string
-         default: ""
+         default: "1068"
         BusinessName:
          title: "Business Name"
          type: string
-         default: ""
+         default: "businessname test"
         InsuredMailingAddress:
          title: "Insured Mailing Address"
          type: string

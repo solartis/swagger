@@ -137,13 +137,13 @@ definitions:
             default: "Nonpayment of Premium"
            DueDate:
             type: string
-            default: "08-16-2018"
+            default: "08-01-2018"
            DueAmount:
             type: string
             default: "500"
            DateofCancellation:
             type: string
-            default: "08-16-2018"
+            default: "08-01-2018"
            SendMail:
             type: string
             default: "Yes"

@@ -125,7 +125,7 @@ definitions:
           QuoteNumber:
             title: "Quote Number"
             type: string
-            default: "QOT-45324"
+            default: "QOT-555698"
           PaymentCardNumber:
             title: "Payment Card Number"
             type: string

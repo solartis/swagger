@@ -1,0 +1,261 @@
+swagger: '2.0'
+info:
+  version: '1.1.0.1'
+  title: Starr GL - Renewal Issuance API
+  description: Issuance API will validate the Payment & Quote Info & Process the Payment and on successful payment, Issues the Policy for the given Quote.  
+host: starrsgl.alpha.solartis.net
+basePath: /DroolsV6/DroolsService
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /FireEventV2:
+    post:
+      operationId: Policy Issuance
+      produces:
+        - application/json
+      parameters:
+        - name: Token
+          in: header
+          description: Authentication Token
+          required: true
+          type: string
+          format: string
+          default: "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"
+        - name: Content-Type
+          in: header
+          description: Content Type
+          required: true
+          type: string
+          default: "application/json"
+        - name: EventName
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "Renewal_PolicyIssuance"
+        - name: EventVersion
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "1.1.0.1"
+        - name: Policy_Issuance
+          in: body
+          description: Policy_Issuance_Request
+          required: true
+          schema:
+            $ref: '#/definitions/Policy_Issuance_Request'
+      responses:
+        '200':
+          description: Success Response
+          schema:
+            $ref: '#/definitions/Policy_Issuance_Success_Response'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/errorModel'
+definitions:
+  Policy_Issuance_Request:
+    type: object
+    properties:
+      EndClientUserUniqueSessionId: 
+        title: "Client User Unique Session ID"
+        type: string
+        default: "Uniquesession"
+      OwnerId:
+        title: "Owner ID"
+        type: string
+        default: "30"
+      ServiceRequestDetail:
+        type: object
+        properties:
+          ServiceRequestVersion:
+            type: string
+            default: "1.0"
+          ServiceResponseVersion:
+            type: string
+            default: "1.0"
+          OwnerId:
+            type: string
+            default: "30"
+          ResponseType:
+            title: "Response Type"
+            type: string
+            enum: ["json","XML"]
+            default: "json"
+          UserName:
+            title: "User Name"
+            type: string
+            default: "StarrGLagent"
+          Token:
+            type: string
+            default: "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"
+          BrowserIp:
+            type: string
+            default: "127.0.0.1"
+          LanguageCode:
+            title: "Language Code"
+            type: string
+            default: "en"    
+          RegionCode:
+            title: "Region Code"
+            type: string
+            default: "US"  
+      Policy:
+         type: object
+         properties:
+          ProductNumber:
+            type: string
+            default: "StarrSGLREN-1"
+          ProductVerNumber:
+            type: string
+            default: "STARR_SGL_2017_V1"
+          EventName:
+            type: string
+            default: "Renewal_PolicyIssuance"
+          EventVersion:
+             type: string
+             default: "1.1.0.1"
+          QuoteNumber:
+            title: "Quote Number"
+            type: string
+            default: "QOT-45324"
+          PaymentCardNumber:
+            title: "Payment Card Number"
+            type: string
+            default: "55555555554444"
+          PaymentCardCVV:
+            title: "Payment Card CVV"
+            type: string
+            default: "333"
+          PaymentCardExpirationDate:
+            title: "Card Expiration Date"
+            type: string
+            default: "11-2019"
+          CardHolderPayerName:
+            title: "Card Holder name"
+            type: string
+            default: "Jhon Doe"
+          CardHolderAddress1:
+            title: "Card Holder Address Line 1"
+            type: string
+            default: "60 East Street"
+          CardHolderAddress2:
+            title: "Card Holder Address Line 2"
+            type: string
+            default: "Avenue of America"
+          CardHolderCity:
+            title: "Card Holder city"
+            type: string
+            default: "New York"
+          CardHolderState:
+            title: "Card Holder state"
+            type: string
+            default: "New York"
+          CardHolderStateCode:
+            title: "card Holder State Code"
+            type: string
+            default: "NY"
+          CardHolderZipCode:
+            title: "card Holder zip code"
+            type: string
+            default: "10022"
+          PaymentEmail:
+            title: "card Holder email"
+            type: string
+            default: "abc@xyz.com"
+          CardHolderPhone:
+            title: "card Holder phone number"
+            type: string
+            default: "8459999999"
+          PaymentMethod:
+            title: "Payment Method"
+            type: string
+            enum: ["Debit Card", "Credit Card","Cheque"]
+            default: "Credit Card"
+          PaymentCardType:
+            title: "Payment Card Type"
+            type: string
+            default: "MasterCard"
+          PaymentPlanCode:
+            title: "Payment Plan code"
+            type: string
+            default: ""
+          PaymentType:
+            title: "Payment type"
+            type: string
+            default: "Annual"
+          SendMail:
+            title: "send email"
+            type: string
+            enum: ["Yes","No"]
+            default: "No"   
+  Policy_Issuance_Success_Response:
+    type: object
+    properties:
+      RequestStatus:
+        type: string
+      QuoteNumber:
+        type: string
+      Premium:
+        type: string
+      QuoteStatus:
+        type: string
+      PaymentStatus:
+        type: string
+        default: "Paid"
+      PolicyStatus:
+        type: string
+        default: "ISSUED"
+      PolicyNumber: 
+        type: string
+      EmailStatus:
+        type: string
+        default: "Success"
+      DocumentsInfoList:
+        type: object
+        properties:
+          DocumentsInfoList:
+            type: array
+            items:
+              properties:
+                DocumentType:
+                  type: string
+                DocumentURL:
+                  type: string
+              
+  errorModel:
+    type: object
+    required:
+      - RequestStatus
+      - MessageDetail
+    properties:
+      RequestStatus:
+        type: string
+        default: "FAILED"
+      MessageDetail:
+        type: object
+        properties:
+          MessageCode:
+            type: string
+          MessageType:
+            type: string
+          UserMessage:
+            type: string
+          MessageLevel:
+            type: string
+          MessageSeverity:
+            type: string
+          MessageList:
+            type: object
+            properties:
+              Message:
+                type: array
+                items:
+                  type: string

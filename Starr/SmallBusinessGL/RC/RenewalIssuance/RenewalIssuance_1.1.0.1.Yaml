@@ -37,7 +37,7 @@ paths:
           required: true
           type: string
           format: string
-          default: "Renewal_PolicyIssuance"
+          default: "RenewalPolicyIssuance"
         - name: EventVersion
           in: header
           description: Name of the event to be invoked
@@ -118,7 +118,7 @@ definitions:
             default: "STARR_SGL_2017_V1"
           EventName:
             type: string
-            default: "Renewal_PolicyIssuance"
+            default: "RenewalPolicyIssuance"
           EventVersion:
              type: string
              default: "1.1.0.1"

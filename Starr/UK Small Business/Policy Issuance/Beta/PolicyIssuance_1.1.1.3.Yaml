@@ -176,7 +176,7 @@ definitions:
         EffectiveDate:
           type: string
           title: "Effective Date"
-          default: "2018-07-19"
+          default: "2018-09-03"
         EmployersLiabilityCoverage:
           type: string
           title: "Employers Liability Coverage"
@@ -204,7 +204,7 @@ definitions:
         ExpirationDate:
           type: string
           title: "Expiration Date"
-          default: "2019-07-19"
+          default: "2019-08-03"
         HealthandSafetyatWorkLegalDefenceCosts:
           type: string
           title: "Health and Safety at Work Legal Defence Costs"

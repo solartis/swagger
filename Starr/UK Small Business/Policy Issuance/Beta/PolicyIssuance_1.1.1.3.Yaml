@@ -1,0 +1,547 @@
+
+swagger: '2.0'
+info:
+  version: "1.1.1.3"
+  title: Solartis Policy Issuance API for STARR UK Small Business
+  description: To create a quote and the policy for the given rates and limits
+  
+host: starruksb.beta.solartis.net
+basePath: /KnowledgeEngineV6_2/KnowledgeBase
+schemes:
+  - https
+consumes:
+  - application/json  
+produces:
+  - application/json
+paths:
+  /FireEventV2:
+    post:
+      description: To Issue a policy with the premiums and limits passed in the request 
+      operationId: IssuePolicy
+      produces:
+        - application/json
+      parameters:
+        - name: Token
+          in: header
+          description: Authentication Token
+          required: true
+          type: string
+          format: string
+          default: "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"
+        - name: Content-Type
+          in: header
+          description: Content Type
+          required: true
+          type: string
+          default: "application/json"
+        - name: EventName
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "PolicyIssuance"
+        - name: EventVersion
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "1.1.1.3"       
+        - name: Rating Request
+          in: body
+          description: For rating request
+          schema:
+            $ref: '#/definitions/PolicyIssuance_Request'
+            
+      responses:
+       '200':
+        description: Success Response
+        schema:
+         $ref: '#/definitions/Policy_Success_Response'
+       default:
+        description: unexpected error
+        schema:
+          $ref: '#/definitions/errorModel'
+definitions:
+  PolicyIssuance_Request:
+    type: object
+    properties:
+      EndClientUserUniqueSessionId: 
+       title: "Client User Unique Session ID"
+       type: string
+       default: "Uniquesession"
+      OwnerId:
+       title: "Owner ID"
+       type: string
+       default: "38"
+      ServiceRequestDetail:
+        type: object
+        properties:
+         ServiceRequestVersion:
+          title: "ServiceRequestVersion"
+          type: string
+          default: "1.0"
+         ServiceResponseVersion:
+          title: "ServiceResponseVersion"
+          type: string
+          default: "1.0"
+         OwnerId:
+          title: "Owner ID"
+          type: string
+          default: "38"
+         ResponseType:
+          title: "Response Type"
+          type: string
+          default: "json"
+         UserName:
+          title: "User Name"
+          type: string
+          default: "StarrUKSBagent"
+         Token:
+          type: string
+          default: "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"
+         BrowserIp:
+          type: string
+          default: "127.0.0.1"
+         LanguageCode:
+          type: string
+          default: "en"
+         RegionCode:
+          type: string
+          default: "UK" 
+      Policy:
+       type: object
+       properties:
+        PhoneNumber:
+          type: string
+          title: "Phone Number"
+          default: "8449445441"
+        AgencyCode:
+          type: string
+          title: "Agency Code"
+          default: "1068"
+        AgentCode:
+          type: string
+          title: "Agent Coder"
+          default: "AGY1068"
+        AnnualWageroll:
+          type: string
+          title: "Annual Wageroll"
+          default: "1000"
+        BasePremium:
+          type: string
+          title: "Base Premium"
+          default: "650"
+        BuildingName:
+          type: string
+          title: "Building Name"
+          default: "Chancery House"
+        BuildingNumber:
+          type: string
+          title: "Building Number"
+          default: "30"
+        BusinessCategory:
+          type: string
+          title: "Business Category"
+          default: "Retail"
+        BusinessName:
+          type: string
+          title: "Business Name"
+          default: "Udayakumar"
+        CompensationforCourtAttendance:
+          type: string
+          title: "Compensation for Court Attendance"
+          default: "5000"
+        CorporateManslaughterandCorporateHomicide:
+          type: string
+          title: "Corporate Mans laughter and Corporate Homicide"
+          default: "1000000"
+        DataProtectionLegislationclaimcosts:
+          type: string
+          title: "Data Protection Legislation claim costs"
+          default: "100000"
+        CompensationforCourtAttendanceExcessLimit:
+          type: string
+          title: "Compensation for Court Attendance Excess Limit"
+          default: "0"
+        CorporateManslaughterandCorporateHomicideExcessLimit:
+          type: string
+          title: "Corporate Mans laughter and Corporate Homicide Excess Limit"
+          default: "0"
+        DataProtectionLegislationclaimcostsExcessLimit:
+          type: string
+          title: "Data Protection Legislation claim costs Excess Limit"
+          default: "0"
+        EffectiveDate:
+          type: string
+          title: "Effective Date"
+          default: "2018-07-19"
+        EmployersLiabilityCoverage:
+          type: string
+          title: "Employers Liability Coverage"
+          default: "Yes"
+        EmployersLiabilityCoveragePremium:
+          type: string
+          title: "Employers Liability Coverage Premium"
+          default: "0"
+        EmployersLiabilityLimit:
+          type: string
+          title: "Employers Liability Limit"
+          default: "10000000"
+        EmployersLiabilityExcessLimit:
+          type: string
+          title: "Employers Liability Excess Limit"
+          default: "0"
+        EventName:
+          type: string
+          title: "Event Name"
+          default: "PolicyIssuance"
+        EventVersion:
+          type: string
+          title: "Event Version"
+          default: "1.1.1.3"
+        ExpirationDate:
+          type: string
+          title: "Expiration Date"
+          default: "2019-07-19"
+        HealthandSafetyatWorkLegalDefenceCosts:
+          type: string
+          title: "Health and Safety at Work Legal Defence Costs"
+          default: "1000000"
+        HealthandSafetyatWorkLegalDefenceCostsExcessLimit:
+          type: string
+          title: "Health and Safety at Work Legal Defence Costs Excess Limit"
+          default: "0"
+        InsuredCity:
+          type: string
+          title: "Insured City"
+          default: "Woking"
+        InsuredMailingAddress:
+          type: string
+          title: "Insured Mailing Address"
+          default: "udayakumar_k@solartis.com"
+        InsuredPostCode:
+          type: string 
+          title: "Insured Post Code"
+          default: "GU21 7SA"
+        InsuredStreetName:
+          type: string
+          title: "Insured Street Name"
+          default: "St.Johns Road"
+        LastRateLookUpDate:
+          type: string
+          title: "Last Rate LookUp Date"
+          default: "2018-07-19"
+        NumberOfEmployees:
+          type: string
+          title: "Number Of Employees"
+          default: "10"
+        TotalAnnualTurnOver:
+          type: string
+          title: "TotalAnnualTurnOver"
+          default: "10000"
+        PriorClaims:
+          type: string
+          title: "Prior Claims"
+          default: "0"
+        ProductionChannel:
+          type: string
+          title: "Production Channelr"
+          default: "DTC"
+        ProductNumber:
+          type: string
+          title: "Product Number"
+          default: "UK Small Business"
+        ProductVerNumber:
+          type: string
+          title: "Product Version Number"
+          default: "1.0"
+        PublicLiabilityCoveragePremium:
+          type: string
+          title: "Public Liability Coverage Premium"
+          default: "0"
+        PublicLiabilityLimit:
+          type: string
+          title: "Public Liability Limit"
+          default: "2000000"
+        PublicLiabilityExcessLimit:
+          type: string
+          title: "Public Liability Excess Limit"
+          default: "0"
+        SendMail:
+          type: string
+          title: "Send Mail"
+          default: "Yes"
+        TotalCommission:
+          type: string
+          title: "Total Commission"
+          default: "0"
+        TotalPremium:
+          type: string
+          title: "Total Premium"
+          default: "620"
+        TotalTax:
+          type: string
+          title: "Total Tax"
+          default: "0"
+        ClaimsList:
+            type: "array"
+            items:
+              type: "object"
+              properties:
+                AmountPaidForClaim:
+                  type: string
+                  format: string
+                  title: "Amount Paid For Claim"
+                  default: "10000"
+                ClaimOccurenceDate:
+                  type: string
+                  format: string
+                  title: "Claim Occurence Date"
+                  default: "2016-10-15"
+                IsClaimClosed:
+                  type: string
+                  format: string
+                  title: "Is Claim Closed"
+                  default: "N"
+                LossCause:
+                  type: string
+                  format: string
+                  title: "Loss Cause"
+                  default: "test"
+        Location:
+            type: "array"
+            items:
+              type: "object"
+              properties:
+                LocationDetail:
+                  type: "object"
+                  properties:
+                    PostCode:
+                      type: string
+                      title: "Post Code"
+                      default: "GU21 7SA"
+                    BuildingName:
+                      type: string
+                      title: "Building Name"
+                      default: "Chancery House"
+                    BuildingNumber:
+                      type: string
+                      title: "Building Number"
+                      default: "30"
+                    StreetName:
+                      type: string
+                      title: "Street Name"
+                      default: "St.Johns Road"
+                    City:
+                      type: string
+                      title: "City"
+                      default: "Woking"
+                    MoneyExtensionLimit:
+                      type: string
+                      title: "Money Extension Limit"
+                      default: "10000"
+                    MoneyExtensionExcessLimit:
+                      type: string
+                      title: "Money Extension Excess Limit"
+                      default: "0"
+                    StandardCoverIncreasedCostofWorkingLimit:
+                      type: string
+                      title: "Standard Cover Increased Cost of Working Limit"
+                      default: "1000"
+                    OptionalCoverLossofGrossRevenueLimit:
+                      type: string
+                      title: "Optional Cover Loss of Gross Revenue Limit"
+                      default: "1000"
+                    StandardCoverIncreasedCostofWorkingExcessLimit:
+                      type: string
+                      title: "Standard Cover Increased Cost of Working Excess Limit"
+                      default: "1000"
+                    OptionalCoverLossofGrossRevenueExcessLimit:
+                      type: string
+                      title: "Optional Cover Loss of Gross Revenue Excess Limit"
+                      default: "1000"
+                    BusinessInterruptionCoveragePremium:
+                      type: string
+                      title: "Business Interruption Coverage Premium"
+                      default: "0"
+                    ComputerBreakdownCoverageLimit:
+                      type: string
+                      title: "Computer Breakdown Coverage Limit"
+                      default: "10000"
+                    ComputerBreakdownCoverageExcessLimit:
+                      type: string
+                      title: "Computer Breakdown Coverage Excess Limit"
+                      default: "0"
+                    LocationID:
+                      type: string
+                      title: "Location ID"
+                      default: "1"
+                    Country:
+                      type: string
+                      title: "Country"
+                      default: "GB"
+                    Building:
+                      type: "array"
+                      items:
+                        type: "object"
+                        properties:
+                          BuildingDetail:
+                            type: "object"
+                            properties:
+                              BuildingID:
+                                type: string
+                                title: "Building ID"
+                                default: "1"
+                              BuildingLimit:
+                                type: string
+                                title: "Building Limit"
+                                default: "10000"
+                              BuildingExcessLimit:
+                                type: string
+                                title: "Building Excess Limit"
+                                default: "100"
+                              BuildingPremium:
+                                type: string
+                                title: "Building Premium"
+                                default: "0"
+                              Classification:
+                                type: "array"
+                                items:
+                                  type: "object"
+                                  properties:
+                                    ClassificationDetail:
+                                      type: "object"
+                                      properties:
+                                        ClassificationID:
+                                          type: string
+                                          title: "ClassificationID"
+                                          default: "1"
+                                        BusinessContentsLimit:
+                                          type: string
+                                          title: "Business Contents Limit"
+                                          default: "10000"
+                                        BusinessContentsExcessLimit:
+                                          type: string
+                                          title: "Business Contents Excess Limit"
+                                          default: "250"
+                                        BusinessContentsCoveragePremium: 
+                                          type: string
+                                          title: "Business Contents Coverage Premium"
+                                          default: "0"
+  errorModel:
+    type: object
+    required:
+      - RequestStatus
+      - MessageDetail
+    properties:
+      RequestStatus:
+        type: string
+      MessageDetail:
+        type: object
+        properties:
+          MessageCode:
+            type: string
+          MessageType:
+            type: string
+          UserMessage:
+            type: string
+          MessageLevel:
+            type: string
+          MessageSeverity:
+            type: string
+          MessageList:
+            type: object
+            properties:
+              Message:
+                type: array
+                items:
+                  type: string
+  Policy_Success_Response:
+    type: object
+    properties:
+      RuleInformation:
+        type: string
+        format: string
+        title: "RuleInformation"
+      OwnerId:
+        type: string
+        format: string
+        title: "OwnerId"
+        default: "38"
+      ResponseStatus:
+        type: string
+        format: string
+        title: "ResponseStatus"
+      DocumentsInfoList:
+        type: object
+        properties:
+          DocumentURL:
+            type: string
+            format: string
+            title: "DocumentURL"
+      EndClientUserUniqueSessionId:
+        type: string
+        format: string
+        title: "EndClientUserUniqueSessionId"
+        default: "Uniquesession"
+      Policy:
+        type: object
+        properties:
+          SendMail:
+            type: string
+          EmployeersLiabilityCoverage:
+           type: string
+          EmployeersLiabilityCoveragePremium:
+           type: string
+          PublicLiabilityCoveragePremium:
+           type: string
+          TotalPremium:
+           type: string
+          TotalTax:
+           type: string
+          TotalCommission:
+           type: string
+          PolicyNumber:
+           type: string
+          PolicyStatus:
+           type: string
+          QuoteNumber:
+            type: string
+          Location:
+            type: array
+            items:
+              type: object
+              properties:
+                LocationDetail:
+                  type: object
+                  properties:
+                    BusinessInterruptionCoveragePremium:
+                     type: string
+                    LocationID:
+                     type: string
+                    Building:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          BuildingDetail:
+                            type: object
+                            properties:
+                              BuildingID:
+                                type: string
+                              BuildingPremium:
+                                type: string
+                              Classification:
+                                type: array
+                                items:
+                                  type: object
+                                  properties:
+                                    ClassificationDetail:
+                                      type: object
+                                      properties:
+                                        ClassificationID:
+                                          type: string
+                                        BusinessContentsCoveragePremium:
+                                          type: string

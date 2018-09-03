@@ -129,11 +129,11 @@ definitions:
             title: "Event Version"
            PolicyNumber:
             type: string
-            default: "SI180000322UK"
+            default: "SI180001602UK"
             title: "Policy Number"
            CancelEffectiveDate:
             type: string
-            default: "2018-07-23"
+            default: "2018-09-03"
             title: "Cancel Effective Date"
            LastRateLookUpDate:
             type: string

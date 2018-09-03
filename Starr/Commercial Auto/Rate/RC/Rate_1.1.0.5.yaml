@@ -195,9 +195,6 @@ definitions:
               title: "ZipCode"
               type: string
               default: "86506"
-             Territory:
-              title: "Territory"
-              type: string             
              VehicleType:
               title: "VehicleType"
               type: string
@@ -269,9 +266,6 @@ definitions:
               title: "ZipCode"
               type: string
               default: "86556"
-             Territory:
-              title: "Territory"
-              type: string
              VehicleType:
               title: "VehicleType"
               type: string

@@ -1,0 +1,233 @@
+swagger: '2.0'
+info:
+  version: "1.1.1.2"
+  title: STARR UK Small Business - Cancel Issuance API
+  description: Cancel API is used by the customer to cancel the issued policy
+  
+host: starruksb.rc.solartis.net
+basePath: /KnowledgeEngineV6_2/KnowledgeBase
+schemes:
+  - https
+consumes:
+  - application/json  
+produces:
+  - application/json
+paths:
+  /FireEventV2:
+    post:
+      description: Cancel Issuance API for issued SGL policies.
+      operationId: CancelIssuance
+      produces:
+        - application/json
+      parameters:
+        - name: Token
+          in: header
+          description: Authentication Token
+          required: true
+          type: string
+          format: string
+          default: "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"
+        
+        - name: Content-Type
+          in: header
+          description: Content Type
+          required: true
+          type: string
+          default: "application/json"
+          
+        - name: EventName
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "CancelIssuance"
+          
+        - name: EventVersion
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "1.1.1.2"
+        
+        - name: Cancel_request
+          in: body
+          description: For cancel_request
+          schema:
+            $ref: '#/definitions/cancel_request'
+      responses:
+        '200':
+          description: Success Response
+          schema:
+            $ref: '#/definitions/Cancellation_Success_Response'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/errorModel'
+definitions:
+  cancel_request:
+    type: object
+    properties:
+       EndClientUserUniqueSessionId: 
+        title: "Client User Unique Session ID"
+        type: string
+        default: "Uniqusession"
+       OwnerId:
+        type: string
+        default: "38"
+       ServiceRequestDetail:
+        type: object
+        properties:
+          ServiceRequestVersion:
+           type: string
+           default: "1.0"
+          ServiceResponseVersion:
+           type: string
+           default: "1.0"
+          OwnerId:
+            type: string
+            default: "38"
+          ResponseType:
+           title: "Response Type"
+           type: string
+           enum: ["JSON","XML"]
+           default: "JSON"
+          UserName:
+           title: "User Name"
+           type: string
+           default: "StarrUKSBagent"
+          Token:
+           type: string
+           default: "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"
+          BrowserIp:
+            type: string
+            default: "127.0.0.1"
+          LanguageCode:
+            title: "Language Code"
+            type: string
+            default: "en"    
+          RegionCode:
+            title: "Region Code"
+            type: string
+            default: "US"  
+       Policy:
+         type: object
+         properties:
+           ProductNumber:
+            type: string
+            default: "UK Small Business"
+            title: "Product Number"
+           ProductVerNumber:
+            type: string
+            default: "1.0"
+            title: "Product Version Number"
+           EventName:
+            type: string
+            default: "CancelIssuance"
+            title: "Event Name"
+           EventVersion: 
+            type: string
+            default: "1.1.1.2"
+            title: "Event Version"
+           PolicyNumber:
+            type: string
+            default: "SI180001510UK"
+            title: "Policy Number"
+           LastRateLookUpDate:
+            type: string
+            default: "2018-08-03"
+            title: "LastRateLookUpDate"
+           CancelEffectiveDate:
+            type: string
+            default: "2018-07-27"
+            title: "Cancel Effective Date"
+           CancelReason:
+            type: string
+            default: "Cancel - Policy Change"
+            title: "Cancel Reason"
+           CancelType:
+            type: string
+            default: "Flat"
+            title: "Cancel Type"
+           SendMail:
+            type: string
+            default: "Yes"
+            title: "Send Email"
+           AdminCharge:
+            type: string
+            default: "25"
+            title: "Admin Charge"  
+  Cancellation_Success_Response:
+    type: object
+    properties:
+      RequestStatus:
+        type: string
+      ProductVerNumber:
+        type: string
+      ProductNumber:
+        type: string
+      EventName:
+        type: string
+      EventVersion:
+        type: string
+      SendMail:
+        type: string
+      PolicyNumber:
+        type: string
+      CancelType:
+        type: string
+      AdminCharge:
+        type: string
+      LastRateLookUpDate:
+        type: string
+      CancelEffectiveDate:
+        type: string
+      CancelReason:
+        type: string
+      TotalReturnpremium:
+        type: string
+      ProRataFactor:
+        type: string
+      DocumentsInfoList:
+        type: object
+        properties:
+          DocumentsInfoList:
+            type: array
+            items:
+              properties:
+                DocumentType:
+                  type: string
+                DocumentURL:
+                  type: string
+              
+  errorModel:
+    type: object
+    required:
+      - RequestStatus
+      - MessageDetail
+    properties:
+      RequestStatus:
+        type: string
+        default: "FAILED"
+      MessageDetail:
+        type: object
+        properties:
+          MessageCode:
+            type: string
+          MessageType:
+            type: string
+          UserMessage:
+            type: string
+          MessageLevel:
+            type: string
+          MessageSeverity:
+            type: string
+          MessageList:
+            type: object
+            properties:
+              Message:
+                type: array
+                items:
+                  type: string
+        

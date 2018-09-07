@@ -63,6 +63,180 @@ definitions:
   Rate_1.0.0.1:
     type: "object"
     properties:
+      Policy:
+        type: "object"
+        properties:
+          RideSharingArrangementsEndorsementIndicator:
+            type: "string"
+            format: "string"
+            title: "RideSharingArrangementsEndorsementIndicator"
+          PrivatePassenger:
+            type: "array"
+            items:
+              type: "object"
+              properties:
+                PrivatePassengerDetail:
+                  type: "object"
+                  properties:
+                    Stated Amount:
+                      type: "string"
+                      format: "string"
+                      title: "Stated Amount"
+                      default: "0.0"
+                    ZipCode:
+                      type: "string"
+                      format: "string"
+                      title: "ZipCode"
+                    Original Cost new of Vehicle:
+                      type: "string"
+                      format: "string"
+                      title: "Original Cost new of Vehicle"
+                    Make:
+                      type: "string"
+                      format: "string"
+                      title: "Make"
+                    City:
+                      type: "string"
+                      format: "string"
+                      title: "City"
+                    County:
+                      type: "string"
+                      format: "string"
+                      title: "County"
+                    State:
+                      type: "string"
+                      format: "string"
+                      title: "State"
+                    Model:
+                      type: "string"
+                      format: "string"
+                      title: "Model"
+                    Territory Zipcode:
+                      type: "string"
+                      format: "string"
+                      title: "Territory Zipcode"
+                    Vehicle Year:
+                      type: "string"
+                      format: "string"
+                      title: "Vehicle Year"
+                    Vehicle Identification Number:
+                      type: "string"
+                      format: "string"
+                      title: "Vehicle Identification Number"
+                    Address Line 1:
+                      type: "string"
+                      format: "string"
+                      title: "Address Line 1"
+                    Address Line 2:
+                      type: "string"
+                      format: "string"
+                      title: "Address Line 2"
+          ZipCode:
+            type: "string"
+            format: "string"
+            title: "ZipCode"
+          Rate With Optional Class Plan:
+            type: "string"
+            format: "string"
+            title: "Rate With Optional Class Plan"
+            default: "No"
+            enum:
+            - "Yes "
+            - " No"
+          InsuredName:
+            type: "string"
+            format: "string"
+            title: "InsuredName"
+          Vehicle Type:
+            type: "string"
+            format: "string"
+            title: "Vehicle Type"
+          ProductNumber:
+            type: "string"
+            format: "string"
+            title: "ProductNumber"
+          City:
+            type: "string"
+            format: "string"
+            title: "City"
+          County:
+            type: "string"
+            format: "string"
+            title: "County"
+          Policy Type:
+            type: "string"
+            format: "string"
+            title: "Policy Type"
+            default: "Business Auto Coverage Form"
+            enum:
+            - "Business Auto Coverage Form"
+            - "\nMotor Carrier Coverage Form"
+            - "\nAuto Dealers Coverage Form"
+          Public Transportation Autos:
+            type: "string"
+            format: "string"
+            title: "Public Transportation Autos"
+            default: "No"
+            enum:
+            - "Yes "
+            - " No"
+          ExpirationDate:
+            type: "string"
+            format: "string"
+            title: "ExpirationDate"
+          Public Or Livery Passenger Conveyance And On-demand Delivery Services Exclusion:
+            type: "string"
+            format: "string"
+            title: "Public Or Livery Passenger Conveyance And On-demand Delivery Services\
+              \ Exclusion"
+            default: "No"
+            enum:
+            - "Yes "
+            - " No"
+          State:
+            type: "string"
+            format: "string"
+            title: "State"
+          ProductVerNumber:
+            type: "string"
+            format: "string"
+            title: "ProductVerNumber"
+          Territory Zipcode:
+            type: "string"
+            format: "string"
+            title: "Territory Zipcode"
+          Individual Named Insured On The Policy:
+            type: "string"
+            format: "string"
+            title: "Individual Named Insured On The Policy"
+            default: "No"
+            enum:
+            - "Yes "
+            - " No"
+          ISOERCVersion:
+            type: "string"
+            format: "string"
+            title: "ISOERCVersion"
+          Address Line 1:
+            type: "string"
+            format: "string"
+            title: "Address Line 1"
+          Address Line 2:
+            type: "string"
+            format: "string"
+            title: "Address Line 2"
+          Public Or Livery Passenger Conveyance Exclusion:
+            type: "string"
+            format: "string"
+            title: "Public Or Livery Passenger Conveyance Exclusion"
+            default: "No"
+            enum:
+            - "Yes "
+            - " No"
+          EffectiveDate:
+            type: "string"
+            format: "string"
+            title: "EffectiveDate"
       EndClientUserBrowserInformation:
         type: "string"
         format: "string"
@@ -75,10 +249,41 @@ definitions:
         type: "string"
         format: "string"
         title: "OwnerId"
+      ServiceRequestDetail:
+        type: "object"
+        properties:
+          ServiceRequestVersion:
+            type: "string"
+            format: "string"
+            title: "ServiceRequestVersion"
+          UserName:
+            type: "string"
+            format: "string"
+            title: "UserName"
+          OwnerId:
+            type: "string"
+            format: "string"
+            title: "OwnerId"
+          Token:
+            type: "string"
+            format: "string"
+            title: "Token"
+          BrowserIp:
+            type: "string"
+            format: "string"
+            title: "BrowserIp"
+          ResponseType:
+            type: "string"
+            format: "string"
+            title: "ResponseType"
       EndClientUserUniqueSessionId:
         type: "string"
         format: "string"
         title: "EndClientUserUniqueSessionId"
+      EventName:
+        type: "string"
+        format: "string"
+        title: "EventName"
       EndClientUserBrowserSessionId:
         type: "string"
         format: "string"
@@ -90,6 +295,248 @@ definitions:
   Rating_Success_Response:
     type: "object"
     properties:
+      Policy:
+        type: "object"
+        properties:
+          RideSharingArrangementsEndorsementIndicator:
+            type: "string"
+            format: "string"
+            title: "RideSharingArrangementsEndorsementIndicator"
+          PrivatePassenger:
+            type: "array"
+            items:
+              type: "object"
+              properties:
+                PrivatePassengerDetail:
+                  type: "object"
+                  properties:
+                    PrivatePassengerUnderinsuredMotoristsCoverageFarmersAutosFactor:
+                      type: "string"
+                      format: "string"
+                      title: "PrivatePassengerUnderinsuredMotoristsCoverageFarmersAutosFactor"
+                    PrivatePassengerLiabilityCoverageFarmersAutosFactor:
+                      type: "string"
+                      format: "string"
+                      title: "PrivatePassengerLiabilityCoverageFarmersAutosFactor"
+                    PrivatePassengerMedicalPaymentsCoverageLiabilityCombinedRatingFactor:
+                      type: "string"
+                      format: "string"
+                      title: "PrivatePassengerMedicalPaymentsCoverageLiabilityCombinedRatingFactor"
+                    PrivatePassengerUnderinsuredMotoristsCoverageBasePremium:
+                      type: "string"
+                      format: "string"
+                      title: "PrivatePassengerUnderinsuredMotoristsCoverageBasePremium"
+                    County:
+                      type: "string"
+                      format: "string"
+                      title: "County"
+                    PrivatePassengerUninsuredMotoristsCoverageBasePremium:
+                      type: "string"
+                      format: "string"
+                      title: "PrivatePassengerUninsuredMotoristsCoverageBasePremium"
+                    PrivatePassengerLiabilityCoverageLiabilityCoverageForOwnerOfHiredAutoFactor:
+                      type: "string"
+                      format: "string"
+                      title: "PrivatePassengerLiabilityCoverageLiabilityCoverageForOwnerOfHiredAutoFactor"
+                    PrivatePassengerLiabilityCoverageGreenZoneDiscountFactor:
+                      type: "string"
+                      format: "string"
+                      title: "PrivatePassengerLiabilityCoverageGreenZoneDiscountFactor"
+                    PrivatePassengerUninsuredMotoristsCoverageFarmersAutosFactor:
+                      type: "string"
+                      format: "string"
+                      title: "PrivatePassengerUninsuredMotoristsCoverageFarmersAutosFactor"
+                    PrivatePassengerMedicalPaymentsCoverageCoverageUseFactor:
+                      type: "string"
+                      format: "string"
+                      title: "PrivatePassengerMedicalPaymentsCoverageCoverageUseFactor"
+                    Territory Zipcode:
+                      type: "string"
+                      format: "string"
+                      title: "Territory Zipcode"
+                    PrivatePassengerLiabilityCoverageLiabilityTotalModificationFactor:
+                      type: "string"
+                      format: "string"
+                      title: "PrivatePassengerLiabilityCoverageLiabilityTotalModificationFactor"
+                    Stated Amount:
+                      type: "string"
+                      format: "string"
+                      title: "Stated Amount"
+                      default: "0.0"
+                    PrivatePassengerMedicalPaymentsCoverageSafetyScoreDiscountFactor:
+                      type: "string"
+                      format: "string"
+                      title: "PrivatePassengerMedicalPaymentsCoverageSafetyScoreDiscountFactor"
+                    ZipCode:
+                      type: "string"
+                      format: "string"
+                      title: "ZipCode"
+                    Original Cost new of Vehicle:
+                      type: "string"
+                      format: "string"
+                      title: "Original Cost new of Vehicle"
+                    PrivatePassengerLiabilityCoverageBasePremium:
+                      type: "string"
+                      format: "string"
+                      title: "PrivatePassengerLiabilityCoverageBasePremium"
+                    Make:
+                      type: "string"
+                      format: "string"
+                      title: "Make"
+                    PrivatePassengerLiabilityCoveragePremiumILFDeductible:
+                      type: "string"
+                      format: "string"
+                      title: "PrivatePassengerLiabilityCoveragePremiumILFDeductible"
+                    City:
+                      type: "string"
+                      format: "string"
+                      title: "City"
+                    PrivatePassengerLiabilityCoverageSafetyScoreDiscountFactor:
+                      type: "string"
+                      format: "string"
+                      title: "PrivatePassengerLiabilityCoverageSafetyScoreDiscountFactor"
+                    PrivatePassengerLiabilityCoverageCoverageUseFactor:
+                      type: "string"
+                      format: "string"
+                      title: "PrivatePassengerLiabilityCoverageCoverageUseFactor"
+                    PrivatePassengerMedicalPaymentsCoverageBasePremium:
+                      type: "string"
+                      format: "string"
+                      title: "PrivatePassengerMedicalPaymentsCoverageBasePremium"
+                    PrivatePassengerLiabilityCoverageLiabilityCombinedRatingFactor:
+                      type: "string"
+                      format: "string"
+                      title: "PrivatePassengerLiabilityCoverageLiabilityCombinedRatingFactor"
+                    State:
+                      type: "string"
+                      format: "string"
+                      title: "State"
+                    Model:
+                      type: "string"
+                      format: "string"
+                      title: "Model"
+                    Vehicle Year:
+                      type: "string"
+                      format: "string"
+                      title: "Vehicle Year"
+                    Vehicle Identification Number:
+                      type: "string"
+                      format: "string"
+                      title: "Vehicle Identification Number"
+                    Address Line 1:
+                      type: "string"
+                      format: "string"
+                      title: "Address Line 1"
+                    Address Line 2:
+                      type: "string"
+                      format: "string"
+                      title: "Address Line 2"
+          ZipCode:
+            type: "string"
+            format: "string"
+            title: "ZipCode"
+          Rate With Optional Class Plan:
+            type: "string"
+            format: "string"
+            title: "Rate With Optional Class Plan"
+            default: "No"
+            enum:
+            - "Yes "
+            - " No"
+          InsuredName:
+            type: "string"
+            format: "string"
+            title: "InsuredName"
+          Vehicle Type:
+            type: "string"
+            format: "string"
+            title: "Vehicle Type"
+          ProductNumber:
+            type: "string"
+            format: "string"
+            title: "ProductNumber"
+          City:
+            type: "string"
+            format: "string"
+            title: "City"
+          County:
+            type: "string"
+            format: "string"
+            title: "County"
+          Policy Type:
+            type: "string"
+            format: "string"
+            title: "Policy Type"
+            default: "Business Auto Coverage Form"
+            enum:
+            - "Business Auto Coverage Form"
+            - "\nMotor Carrier Coverage Form"
+            - "\nAuto Dealers Coverage Form"
+          Public Transportation Autos:
+            type: "string"
+            format: "string"
+            title: "Public Transportation Autos"
+            default: "No"
+            enum:
+            - "Yes "
+            - " No"
+          ExpirationDate:
+            type: "string"
+            format: "string"
+            title: "ExpirationDate"
+          Public Or Livery Passenger Conveyance And On-demand Delivery Services Exclusion:
+            type: "string"
+            format: "string"
+            title: "Public Or Livery Passenger Conveyance And On-demand Delivery Services\
+              \ Exclusion"
+            default: "No"
+            enum:
+            - "Yes "
+            - " No"
+          State:
+            type: "string"
+            format: "string"
+            title: "State"
+          ProductVerNumber:
+            type: "string"
+            format: "string"
+            title: "ProductVerNumber"
+          Territory Zipcode:
+            type: "string"
+            format: "string"
+            title: "Territory Zipcode"
+          Individual Named Insured On The Policy:
+            type: "string"
+            format: "string"
+            title: "Individual Named Insured On The Policy"
+            default: "No"
+            enum:
+            - "Yes "
+            - " No"
+          ISOERCVersion:
+            type: "string"
+            format: "string"
+            title: "ISOERCVersion"
+          Address Line 1:
+            type: "string"
+            format: "string"
+            title: "Address Line 1"
+          Address Line 2:
+            type: "string"
+            format: "string"
+            title: "Address Line 2"
+          Public Or Livery Passenger Conveyance Exclusion:
+            type: "string"
+            format: "string"
+            title: "Public Or Livery Passenger Conveyance Exclusion"
+            default: "No"
+            enum:
+            - "Yes "
+            - " No"
+          EffectiveDate:
+            type: "string"
+            format: "string"
+            title: "EffectiveDate"
       EndClientUserBrowserInformation:
         type: "string"
         format: "string"
@@ -102,18 +549,45 @@ definitions:
         type: "string"
         format: "string"
         title: "OwnerId"
-      RateRequestDateTime:
+      ResponseStatus:
         type: "string"
         format: "string"
-        title: "RateRequestDateTime"
+        title: "ResponseStatus"
+      ServiceRequestDetail:
+        type: "object"
+        properties:
+          ServiceRequestVersion:
+            type: "string"
+            format: "string"
+            title: "ServiceRequestVersion"
+          UserName:
+            type: "string"
+            format: "string"
+            title: "UserName"
+          OwnerId:
+            type: "string"
+            format: "string"
+            title: "OwnerId"
+          Token:
+            type: "string"
+            format: "string"
+            title: "Token"
+          BrowserIp:
+            type: "string"
+            format: "string"
+            title: "BrowserIp"
+          ResponseType:
+            type: "string"
+            format: "string"
+            title: "ResponseType"
       EndClientUserUniqueSessionId:
         type: "string"
         format: "string"
         title: "EndClientUserUniqueSessionId"
-      RateResponseDateTime:
+      EventName:
         type: "string"
         format: "string"
-        title: "RateResponseDateTime"
+        title: "EventName"
       messageDetail:
         type: "string"
         format: "string"
@@ -122,10 +596,6 @@ definitions:
         type: "string"
         format: "string"
         title: "EndClientUserBrowserSessionId"
-      requestStatus:
-        type: "string"
-        format: "string"
-        title: "requestStatus"
       ClientUniqueRequestID:
         type: "string"
         format: "string"

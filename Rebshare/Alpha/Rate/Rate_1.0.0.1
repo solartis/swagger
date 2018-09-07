@@ -1,7 +1,7 @@
 swagger: "2.0"
 info:
   description: "Rebshare Rating Stub api"
-  version: ""
+  version: "V2"
   title: "Solartis Rate Stub API for Rebshare"
 host: "rebshare.alpha.solartis.net"
 basePath: "/KnowledgeEngineV6_2/KnowledgeBase"
@@ -37,18 +37,19 @@ paths:
         description: "API Version"
         required: true
         type: "string"
+        default: "1.0.0.1"
       - in: "body"
         name: "Rating Request"
         description: ""
         required: true
         schema:
-          $ref: "#/definitions/Rate_1.0.0.1"
+          $ref: "#/definitions/Rate"
       - name: "EventName"
         in: "header"
         description: "Event name"
         required: true
         type: "string"
-        default: "Rate_1.0.0.1"
+        default: "Rate"
       responses:
         200:
           description: "Successful Response"
@@ -59,7 +60,7 @@ paths:
           schema:
             $ref: "#/definitions/errorModel"
 definitions:
-  Rate_1.0.0.1:
+  Rate:
     type: "object"
     properties:
       Policy:

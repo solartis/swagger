@@ -1,0 +1,262 @@
+swagger: "2.0"
+info:
+  description: "To Cancel the policy"
+  version: "V2"
+  title: "Solartis Cancel API for RebShare Owners Policy"
+host: "rebshare.uci.solartis.net"
+basePath: "/DroolsV6/DroolsService"
+schemes:
+- "https"
+consumes:
+- "application/json"
+produces:
+- "application/json"
+paths:
+  /FireEventV2:
+    post:
+      description: "Cancel API"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "Token"
+        in: "header"
+        description: "Authentication Token"
+        required: true
+        type: "string"
+        default: "5KkU7S/a+fY5AykdICx/rquJEl+in5Huh0cS+CLndfwgcKxuTzJrxUAd4v3nVNDRSrjgPKN3KKxBO5zPcjyB8RTX+h482fJaQ7anGD0ETMowwUZqil+RYZ80bNaiTmmHzAoTKVADHW959M+NamAFALwt405M0vjRLlib8xvXEXXQxIAX8MsndeN8qTrycX9tXpLm/h6lhb5sTbFcZQzshu7vvqVCfnraZOEY18kBntpFHOZ+ESItpphZg8sUfQl"
+      - name: "Content-Type"
+        in: "header"
+        description: "Content Type"
+        required: true
+        type: "string"
+        default: "application/json"
+      - name: "EventVersion"
+        in: "header"
+        description: "API Version"
+        required: true
+        type: "string"
+        default: "V2"
+      - in: "body"
+        name: "Cancel Request"
+        description: ""
+        required: true
+        schema:
+          $ref: "#/definitions/Cancel_Request"
+      - name: "EventName"
+        in: "header"
+        description: "Event name"
+        required: true
+        type: "string"
+        default: "Cancel_1.0.0.1"
+      responses:
+        200:
+          description: "Successful Response"
+          schema:
+            $ref: "#/definitions/Rating_Success_Response"
+        default:
+          description: "Error Response"
+          schema:
+            $ref: "#/definitions/errorModel"
+definitions:
+  Cancel_Request:
+    type: "object"
+    properties:
+      Policy:
+        type: "object"
+        properties:
+          CancelType:
+            type: "string"
+            format: "string"
+            title: "CancelType"
+            default: "Short Rate"
+            enum:
+            - "Short Rate"
+            - "Non Payment"
+            - "Underwriting Reason"
+            - "Insured Request"
+            - "Replacement of Coverage"
+          CancelReason:
+            type: "string"
+            format: "string"
+            title: "CancelReason"
+            default: "Insured's Option - No insurable interest"
+            enum:
+            - "Insured's Option - No insurable interest"
+            - "Prorata"
+            - "Non Payment"
+          PolicyNumber:
+            type: "string"
+            format: "string"
+            title: "PolicyNumber"
+            default: "POL-12345"
+          CancelEffectiveDate:
+            type: "string"
+            format: "string"
+            title: "CancelEffectiveDate"
+            default: "43383.0"
+      OwnerId:
+        type: "string"
+        format: "string"
+        title: "OwnerId"
+        default: "37.0"
+      ServiceRequestDetail:
+        type: "object"
+        properties:
+          ServiceRequestVersion:
+            type: "string"
+            format: "string"
+            title: "ServiceRequestVersion"
+            default: "1.0"
+          UserName:
+            type: "string"
+            format: "string"
+            title: "UserName"
+            default: "rebshareagent"
+          Token:
+            type: "string"
+            format: "string"
+            title: "Token"
+            default: "5KkU7S/a+fY5AykdICx/rquJEl+in5Huh0cS+CLndfwgcKxuTzJrxUAd4v3nVNDRSrjgPKN3KKxBO5zPcjyB8RTX+h482fJaQ7anGD0ETMowwUZqil+RYZ80bNaiTmmHzAoTKVADHW959M+NamAFALwt405M0vjRLlib8xvXEXXQxIAX8MsndeN8qTrycX9tXpLm/h6lhb5sTbFcZQzshu7vvqVCfnraZOEY18kBntpFHOZ+ESItpphZg8sUfQl"
+          BrowserIp:
+            type: "string"
+            format: "string"
+            title: "BrowserIp"
+          ResponseType:
+            type: "string"
+            format: "string"
+            title: "ResponseType"
+            default: "JSON"
+      EventName:
+        type: "string"
+        format: "string"
+        title: "EventName"
+        default: "Cancel_1.0.0.1"
+  Rating_Success_Response:
+    type: "object"
+    properties:
+      Policy:
+        type: "object"
+        properties:
+          CancelType:
+            type: "string"
+            format: "string"
+            title: "CancelType"
+            default: "Short Rate"
+            enum:
+            - "Short Rate"
+            - "Non Payment"
+            - "Underwriting Reason"
+            - "Insured Request"
+            - "Replacement of Coverage"
+          ProRataFactor:
+            type: "string"
+            format: "string"
+            title: "ProRataFactor"
+            default: "0.7274"
+          CancelReason:
+            type: "string"
+            format: "string"
+            title: "CancelReason"
+            default: "Insured's Option - No insurable interest"
+            enum:
+            - "Insured's Option - No insurable interest"
+            - "Prorata"
+            - "Non Payment"
+          OwnerId:
+            type: "string"
+            format: "string"
+            title: "OwnerId"
+            default: "37.0"
+          PolicyNumber:
+            type: "string"
+            format: "string"
+            title: "PolicyNumber"
+            default: "POL-34855"
+          ProductVerNumber:
+            type: "string"
+            format: "string"
+            title: "ProductVerNumber"
+            default: "Rebshare_2018_V1"
+          TotalReturnPremium:
+            type: "string"
+            format: "string"
+            title: "TotalReturnPremium"
+            default: "6651.35"
+          CancelEffectiveDate:
+            type: "string"
+            format: "string"
+            title: "CancelEffectiveDate"
+            default: "43383.0"
+          ProductNumber:
+            type: "string"
+            format: "string"
+            title: "ProductNumber"
+            default: "Rebshare"
+          EventName:
+            type: "string"
+            format: "string"
+            title: "EventName"
+            default: "Cancel_1.0.0.1"
+      Documents:
+        type: "object"
+        properties:
+          DocumentURL:
+            type: "string"
+            format: "string"
+            title: "DocumentURL"
+            default: "https://pdfservice.solartis.net/DocRetriever/Document/rebshare/QuotePDFs/01/Cancellation\
+              \ Effective_09-06-2018.pdf"
+          DocumentType:
+            type: "string"
+            format: "string"
+            title: "DocumentType"
+            default: "ISSUANCE"
+          DocumentName:
+            type: "string"
+            format: "string"
+            title: "DocumentName"
+            default: "Cancellation Effective_09-06-2018"
+  errorModel:
+    type: "object"
+    properties:
+      ResponseStatus:
+        type: "string"
+        format: "string"
+        title: "ResponseStatus"
+      MessageDetail:
+        type: "object"
+        properties:
+          MessageSeverity:
+            type: "string"
+            format: "string"
+            title: "MessageSeverity"
+          MessageCode:
+            type: "object"
+            properties: {}
+          UserMessage:
+            type: "string"
+            format: "string"
+            title: "UserMessage"
+          MessageLevel:
+            type: "string"
+            format: "string"
+            title: "MessageLevel"
+          MessageType:
+            type: "string"
+            format: "string"
+            title: "MessageType"
+          MessageList:
+            type: "array"
+            items:
+              type: "object"
+              properties:
+                Message:
+                  type: "string"
+                  format: "string"
+                  title: "Message"
+      RequestStatus:
+        type: "string"
+        format: "string"
+        title: "RequestStatus"

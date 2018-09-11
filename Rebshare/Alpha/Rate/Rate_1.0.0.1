@@ -1,7 +1,7 @@
 swagger: "2.0"
 info:
   description: "Rebshare Rating Stub api"
-  version: "V2"
+  version: ""
   title: "Solartis Rate Stub API for Rebshare"
 host: "rebshare.alpha.solartis.net"
 basePath: "/KnowledgeEngineV6_2/KnowledgeBase"
@@ -32,24 +32,18 @@ paths:
         required: true
         type: "string"
         default: "application/json"
-      - name: "EventVersion"
-        in: "header"
-        description: "API Version"
-        required: true
-        type: "string"
-        default: "1.0.0.1"
       - in: "body"
         name: "Rating Request"
         description: ""
         required: true
         schema:
-          $ref: "#/definitions/Rate"
+          $ref: "#/definitions/Rate_1.0.0.1"
       - name: "EventName"
         in: "header"
         description: "Event name"
         required: true
         type: "string"
-        default: "Rate"
+        default: "Rate_1.0.0.1"
       responses:
         200:
           description: "Successful Response"
@@ -60,7 +54,7 @@ paths:
           schema:
             $ref: "#/definitions/errorModel"
 definitions:
-  Rate:
+  Rate_1.0.0.1:
     type: "object"
     properties:
       Policy:
@@ -135,7 +129,6 @@ definitions:
             type: "string"
             format: "string"
             title: "ZipCode"
-            default: "83201.0"
           Rate With Optional Class Plan:
             type: "string"
             format: "string"
@@ -148,7 +141,6 @@ definitions:
             type: "string"
             format: "string"
             title: "InsuredName"
-            default: "43282.0"
           Vehicle Type:
             type: "string"
             format: "string"
@@ -157,17 +149,14 @@ definitions:
             type: "string"
             format: "string"
             title: "ProductNumber"
-            default: "Rebshare"
           City:
             type: "string"
             format: "string"
             title: "City"
-            default: "MERIDIAN"
           County:
             type: "string"
             format: "string"
             title: "County"
-            default: "ADA"
           Policy Type:
             type: "string"
             format: "string"
@@ -189,7 +178,6 @@ definitions:
             type: "string"
             format: "string"
             title: "ExpirationDate"
-            default: "42917.0"
           Public Or Livery Passenger Conveyance And On-demand Delivery Services Exclusion:
             type: "string"
             format: "string"
@@ -203,12 +191,10 @@ definitions:
             type: "string"
             format: "string"
             title: "State"
-            default: "ID"
           ProductVerNumber:
             type: "string"
             format: "string"
             title: "ProductVerNumber"
-            default: "Rabshare_2018_V1"
           Territory Zipcode:
             type: "string"
             format: "string"
@@ -225,7 +211,6 @@ definitions:
             type: "string"
             format: "string"
             title: "ISOERCVersion"
-            default: "RC_AU_ID_07012017_V01"
           Address Line 1:
             type: "string"
             format: "string"
@@ -246,12 +231,11 @@ definitions:
             type: "string"
             format: "string"
             title: "EffectiveDate"
-            default: "RC_CW_07012017_V01"
       EndClientUserBrowserInformation:
         type: "string"
         format: "string"
         title: "EndClientUserBrowserInformation"
-      PaaSClientIPAddress:
+      PaaSClientIPAddress:  
         type: "string"
         format: "string"
         title: "PaaSClientIPAddress"
@@ -259,7 +243,6 @@ definitions:
         type: "string"
         format: "string"
         title: "OwnerId"
-        default: "37.0"
       ServiceRequestDetail:
         type: "object"
         properties:
@@ -277,7 +260,7 @@ definitions:
             type: "string"
             format: "string"
             title: "OwnerId"
-            default: "37.0"
+            default: "37"
           Token:
             type: "string"
             format: "string"
@@ -301,7 +284,6 @@ definitions:
         type: "string"
         format: "string"
         title: "EventName"
-        default: "Rate"
       EndClientUserBrowserSessionId:
         type: "string"
         format: "string"

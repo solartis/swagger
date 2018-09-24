@@ -1,0 +1,1095 @@
+swagger: '2.0'
+info:
+  version: "1.1.0.13"
+  title: Solartis Rate API for STARR Small Business General Liability
+  description: To get rate for Small Business General Liability from Solartis Quote 
+               API with ISO ERC
+
+host: starrsgl.rc.solartis.net
+basePath: /DroolsV6/DroolsService
+schemes:
+  - https
+consumes:
+  - application/json  
+produces:
+  - application/json
+paths:
+  /FireEventV2:
+    post:
+      description: Gets Quote for General Liability based on ISO ERC
+      operationId: getRates
+      produces:
+        - application/json
+      parameters:
+        - name: Token
+          in: header
+          description: Authentication Token
+          required: true
+          type: string
+          format: string
+          default: "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"
+        - name: Content-Type
+          in: header
+          description: Content Type
+          required: true
+          type: string
+          default: "application/json"
+        - name: EventName
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "QuoteWorkflow"
+        - name: EventVersion
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "1.1.0.13"       
+        - name: Rating Request
+          in: body
+          description: For rating request
+          schema:
+            $ref: '#/definitions/Rating_Request'
+            
+      responses:
+       '200':
+        description: Success Response
+        schema:
+         $ref: '#/definitions/Rating_Success_Response'
+       default:
+        description: unexpected error
+        schema:
+          $ref: '#/definitions/errorModel'
+definitions:
+  Rating_Request:
+    type: object
+    required:
+    - EndClientUserUniqueSessionId
+    - OwnerId
+    - ServiceRequestDetail
+    properties:
+      EndClientUserUniqueSessionId: 
+       title: "Client User Unique Session ID"
+       type: string
+       default: "Uniquesession"
+      OwnerId:
+       title: "Owner ID"
+       type: string
+       default: "30"
+      ServiceRequestDetail:
+        type: object
+        required:
+         - ServiceRequestVersion
+         - ServiceResponseVersion
+         - ResponseType
+         - OwnerId
+         - UserName
+         - Token
+         - LanguageCode
+         - RegionCode
+        properties:
+         ServiceRequestVersion:
+          title: "ServiceRequestVersion"
+          type: string
+          default: "1.0"
+         ServiceResponseVersion:
+          title: "ServiceResponseVersion"
+          type: string
+          default: "1.0"
+         OwnerId:
+          title: "Owner ID"
+          type: string
+          default: "30"
+         ResponseType:
+          title: "Response Type"
+          type: string
+          default: "json"
+         UserName:
+          title: "User Name"
+          type: string
+          default: "StarrGLagent"
+         Token:
+          type: string
+          default: "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"
+         BrowserIp:
+          type: string
+          default: "127.0.0.1"
+         LanguageCode:
+          type: string
+          default: "en"
+         RegionCode:
+          type: string
+          default: "US" 
+      Policy:
+       type: object
+       required:
+        - ProductNumber
+        - ProductVerNumber
+        - EventName
+        - EventVersion
+        - LastRateLookUpDate
+        - EffectiveDate
+        - ExpirationDate
+        - InsuredName
+        - City
+        - County
+        - State
+        - ZipCode
+        - GeneralLiabilityMedPayCoverageLimit
+        - PremOpsProdsCoverageForm
+        - EachOccurrenceLimit
+        - GeneralAggregateLimit
+        - TerrorismCoverage
+        - TRIAExtended
+        - TRIAExpirationDate
+        - EmployeeBenefitsLiability
+        - LimitEachEmployeeInt
+        - AggregateLimitInt
+        - DeductibleInt
+        - NumEmployees
+        - AdditionalInsuredList
+        - GeneralLiabilityDamageToPremisesRentedToYouCoverageLimit
+        - PersonalAndAdvertisingInjuryLimit
+        - LeadHaveAllPremisesConstructedInOrAfter1978
+        - ProdsCompldOpsAggregateLimit
+        - LeadIsMultiplePremieseRiskConstructedBefore1978AndInOrAfter1978
+        - LeadWishToPurchaseCoverageForPremisesCertifiedAsLeadFree
+        - ProductionChannel
+       properties:
+        ProductNumber:
+         title: "ProductNumber"
+         type: string
+         default: "STARR_SGL_V1"
+        ProductVerNumber: 
+         title: "ProductVerNumber"
+         type: string
+         default: "STARR_SGL_2017_V1"
+        EventName: 
+         title: "EventName"
+         type: string
+         default: "QuoteWorkflow"
+        EventVersion:
+         title: "Event Version"
+         type: string
+         default: "1.1.0.13"
+        ProductionChannel:
+         title: "Production Channel"
+         type: string
+         default: "SGL CW"
+        LastRateLookUpDate:
+         title: "Last Rate Look Up Date"
+         type: string
+         default: "2017-12-16"
+        EffectiveDate: 
+         title: "Policy Start Date"
+         type: string
+         default: "2017-12-01"
+        ExpirationDate: 
+         title: "PolicyExpiryDate"
+         type: string
+         default: "2018-12-01"
+        InsuredName: 
+         title: "InsuredName"
+         type: string
+         default: "John Smith"
+        AddressLine1: 
+         title: "Address Line 1"
+         type: string
+         default: ""
+        AddressLine2: 
+         title: "Address Line 2"
+         type: string
+        City: 
+         title: "City"
+         type: string
+         default: "Adamsville"
+        County: 
+         title: "County"
+         type: string
+         default: "Jefferson"
+        State: 
+         title: "State"
+         type: string
+         default: "AL"
+         enum: ["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IA","IN","KS","KY","LA","MD","MA","ME","MI","MT","MO","MN","MS","NE","NV","NH","ND","NC","NJ","NY","NM","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"]
+        ZipCode: 
+         title: "Zip"
+         type: string
+         default: "35005"
+        Subline:
+         title: "Subline"
+         type: string
+         enum: [ "Premises/Operations and Products/Completed Operations","Premises/Operations","Products/Completed Operations"]
+         default: "Premises/Operations and Products/Completed Operations"
+        GeneralLiabilityMedPayCoverageLimit:
+         title: "Medical Payments Limit"
+         type: string
+         default: "5,000"
+        PremOpsProdsCoverageForm:
+         title: "Coverage Form"
+         type: string
+         default: "Occurrence"
+        EachOccurrenceLimit:
+         title: "Each Occurrence Limit"
+         type: string
+         enum: [ "300,000 CSL", "500,000 CSL","1,000,000 CSL","2,000,000 CSL"]
+         default: "1,000,000 CSL"
+        GeneralAggregateLimit:
+         title: "General Aggregate Limit"
+         type: string
+         default: "2,000,000 CSL"
+        TerrorismCoverage:
+         title: "Accept Certified Acts of Terrorism Coverage"
+         type: string
+         enum: ["Yes","No"]
+         default: "No"
+        GeneralLiabilityExclusionOfCertifiedActsOfNuclearBiologicalChemicalActsTerrorismCapOnLossesFromCertifiedActs:
+         title: " Exclusion Of Certified Nuclear, Biological, Chemical Or Radiological Acts Of Terrsm; Cap On Losses From Certified Acts Of Terrsm"
+         type: string
+         enum: ["Yes", "No"]
+         default: "No"
+        GeneralLiabilityConditionalExclusionOfTerrorismNuclearBiologicalChemicalDispositionOfAct2002 : 
+         title: "Conditional Exclusion Of Terrorism Involving Nuclear, Biological Or Chemical Terrorism "
+         type: string
+         enum: ["Yes","No"]
+         default: "No"
+        GeneralLiabilityExclusionOfTerrorismNuclearBiologicalChemicalTerrorism:
+         title: "Exclusion Of Terrorism Involving Nuclear, Biological Or Chemical Terrorism"
+         type: string
+         enum: ["Yes","No"]
+         default: "No"
+        GeneralLiabilityCertifiedActsOfTerrorismAggregateLimitCapOnLossesFromCertifiedActsOfTerrorismPremOps:
+         title: "Certified Acts Of Terrorism Aggregate Limit; Cap On Losses From Certified Acts Of Terrorism"
+         type: string
+         enum: [ "Yes", "No"]
+         default: "No"
+        GeneralLiabilityConditionalLimitationOfCoverageTerrorismSublimitAnnualAggregateTerrorismAct2002:
+         title: "Conditional Limitation Of Coverage For Terrorism On An Annual Aggregate Basis"
+         type: string
+         enum: ["Yes","No"]
+         default: "No"
+        GeneralLiabilityLimitationOfCoverageForTerrorismSubLimitAnnualAggregateBasis:
+         title: "Limitation Of Coverage For Terrorism On An Annual Aggregate Basis"
+         type: string
+         enum: ["Yes","No"]
+         default: "No"
+        TRIAExtended:
+         title: "Has TRIA been extended past termination date of TRIP?"
+         type: string
+         enum: ["Yes","No"]
+         default: "No"
+        TRIAExpirationDate :
+         title: "TRIA Expiration Date"
+         type: string
+         default: "2020-12-31"
+        TerrorismAggregateLimit:
+         title: "Terrorism Aggregate Limit"
+         type: string
+         default: ""
+        EmployeeBenefitsLiability:
+         title: "Employee Benefits Liability"
+         type: string
+         enum: ["Yes","No"]
+         default: "Yes"
+        LimitEachEmployeeInt:
+         title: "Employee Benefits Liability Limit of Insurance - each Employee"
+         type: string
+         default: "300,000 CSL"
+        AggregateLimitInt:
+         title: "Employee Benefits Liability Limit of Insurance - Aggregate"
+         type: string
+         default: "600,000 CSL"
+        DeductibleInt:
+         title: "Employee Benefits Liability Deductible"
+         type: string
+         default: "1000"
+        NumEmployees:
+         title: "Number of Employees"
+         type: string
+         default: "20"
+        RetroactiveDate:
+         title: "RetroactiveDate"
+         type: string
+         default: "2017-09-01"
+        GeneralLiabilityDamageToPremisesRentedToYouCoverageLimit:
+         title: "Damage To Premises Rented To You Limit"
+         type: string
+         default: "25,000"
+        PersonalAndAdvertisingInjuryLimit: 
+         title: "Personal And Advertising Injury Limit"
+         type: string
+         default: "100,000"
+        ProdsCompldOpsAggregateLimit:
+         title: "Products-Completed Operations Aggregate Limit"
+         type: string
+         default: "2,000,000 CSL"
+        LeadHaveAllPremisesConstructedInOrAfter1978:
+         title: "Have all the premises been constructed in or after 1978?"
+         type: string
+         enum: ["Yes","No"]
+         default: "No"
+        LeadIsMultiplePremieseRiskConstructedBefore1978AndInOrAfter1978:
+         title: "Is this a multiple premises risk that has buildings constructed before 1978 and in or after 1978?"
+         type: string
+         enum: ["Yes","No"]
+         default: "No"
+        LeadWishToPurchaseCoverageForPremisesCertifiedAsLeadFree:
+         title: "Does the insured wish to purchase coverage for premises that  are certified as being lead free?"
+         type: string
+         enum: ["Yes","No"]
+         default: "No"
+        RiskAgreedtoPollutionExclusion:
+         title: "Did the risk agree to the policy pollution exclusion or the attachment of a pollution exclusion endorsement?"
+         type: string
+         default: "No"
+        EntityType:
+         title: "Entity Type"
+         type: string
+         default: ""
+        FormOfBusiness:
+         title: "Form Of Business"
+         type: string
+         default: ""
+        AgencyCode:
+         title: "Agency Code"
+         type: string
+         default: ""
+        AgentCode:
+         title: "Agent Code"
+         type: string
+         default: ""
+        BusinessName:
+         title: "Business Name"
+         type: string
+         default: ""
+        InsuredMailingAddress:
+         title: "Insured Mailing Address"
+         type: string
+         default: ""
+        PhoneNumber:
+         title: "Phone Number"
+         type: string
+         default: ""
+        ContentFilledBy:
+         title: "Content Filled By"
+         type: string
+         default: ""
+        DoesThisRiskPerformHomeRepairAndRemodeling:
+         title: "Does This Risk Perform Home Repair And Remodeling"
+         type: string
+         default: "No"
+        AdditionalInsuredList:
+         type: array
+         items:
+          required:
+           - AdditionalInsuredType
+          properties:
+           AdditionalInsuredType:
+              title: "Additional Insured Type"
+              type: string
+              enum: ["Owners, Lessees Or Contractors - Scheduled Person Or Organization","Managers Or Lessors Of Premises","Designated Person Or Organization","Co-Owner Of Insured Premises","Lessor Of Leased Equipment","Owners, Lessees or Contractors - Automatic Status When Required In Construction Agreement With You","Lessor Of Leased Equipment - Automatic Status When Required In Lease Agreement With You","Club Members","Users of Golfmobiles"]
+              default: "Lessor Of Leased Equipment"
+           AdditionalInsuredDetail:
+            type: array
+            items:
+             required: 
+              - AdditionalInsuredAction
+              - AdditionalInsuredNumber
+              - COIDescription
+              - AdditionalInsuredName
+              - AdditionalInsuredAddressLine1
+              - AdditionalInsuredCounty
+              - AdditionalInsuredCity
+              - AdditionalInsuredState
+             properties: 
+              AdditionalInsuredAction:
+               title: " Additional Insured Action"
+               type: string
+               default: "Add"
+              AdditionalInsuredNumber:
+               title: "Additional Insured Number"
+               type: string
+               default: "b76fa989-8d95-4e3e-a630-35fda14254b3"
+              COIDescription:
+               title: "COI Description"
+               type: string
+               default: "Adding Vendors"
+              AdditionalInsuredName:
+               title: "Additional Insured Name"
+               type: string
+               default: "Jhon Smith"
+              AdditionalInsuredAddressLine1:
+               title: "Additional Insured Address Line1"
+               type: string
+               default: "70 Bowman St"
+              AdditionalInsuredAddressLine2:
+               title: "Additional Insured Address Line2"
+               type: string
+               default: ""
+              AdditionalInsuredCounty:
+               title: "Additional Insured County"
+               type: string
+               default: "Seattle"
+              AdditionalInsuredCity:
+               title: "Additional Insured City"
+               type: string
+               default: "Seattle"
+              AdditionalInsuredZipCode: 
+               title: "Additional Insured ZipCode"
+               type: string
+               default: "98104"
+              AdditionalInsuredState: 
+               title: "Additional Insured State"
+               type: string
+               default: "WA"
+               enum: ["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IA","IN","KS","KY","LA","MD","MA","ME","MI","MT","MO","MN","MS","NE","NV","NH","ND","NC","NJ","NY","NM","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"]
+        Location:
+         type: object
+         properties: 
+          LocationDetail:
+            type: array
+            items:
+              required:
+               - LocationID
+               - City
+               - County
+               - State
+               - ZipCode
+               - PremisesOperationsTerritory
+              properties:
+                LocationID:
+                    title: "Location ID"
+                    type: string
+                    default: "1"
+                AddressLine1:
+                    title: "Address Line 1"
+                    type: string
+                    default: "70 Bowman St."
+                AddressLine2:
+                    title: "Address Line 2"
+                    type: string
+                    default: ""
+                City:
+                    title: "City"
+                    type: string
+                    default: "Adamsville"
+                County:
+                    title: "County"
+                    type: string
+                    default: "Jefferson"
+                State:
+                    title: "State"
+                    type: string
+                    default: "AL"
+                    enum: ["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IA","IN","KS","KY","LA","MD","MA","ME","MI","MT","MO","MN","MS","NE","NV","NH","ND","NC","NJ","NY","NM","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"]
+                ZipCode:
+                    title: "Zip Code"
+                    type: string
+                    default: "35005"
+                PremisesOperationsTerritory:
+                    title: "Premises Operations Territory"
+                    type: string
+                    default: "503"
+                MunicipalityCode:
+                    title: "Municipality Code"
+                    type: string
+                    default: ""
+                MunicipalityName:
+                    title: "Municipality Name"
+                    type: string
+                    default: ""		
+                Classification:
+                  type: object
+                  properties:	
+                      ClassificationDetail:
+                          type: array
+                          items:
+                            required:
+                             - ClassificationID
+                             - Classcode
+                             - PremOpsExposure
+                             - GeneralLiabilityExclCovCMedPayLocClassLvl
+                             - PremOpsAddlCovFactor
+                             - PremOpsBIDeductible
+                             - PremOpsPDDeductible
+                             - PremOpsBIPDDeductible
+                             - SprayPainting
+                            properties:
+                              ClassificationID:
+                                  title: "ClassificationID"
+                                  type: string
+                                  default: "1"
+                              Classcode:
+                                  title: "Class code"
+                                  type: string
+                                  default: "10010"
+                              PremOpsExposure:
+                                  title: "Premises Operations Exposure"
+                                  type: string
+                                  default: "15000"
+                              ProdsCompldOpsExposure:
+                                  title: "Products completed Operations Exposure"
+                                  type: string
+                                  default: "15000"
+                              GeneralLiabilityExclCovCMedPayLocClassLvl:
+                                  title: "Exclusion - Coverage C - Medical Payments"
+                                  type: string
+                                  default: "No"
+                              PremOpsAddlCovFactor:
+                                  title: "Premises Operations Additional Coverage Factor"
+                                  type: string
+                                  default: "1"
+                              PremOpsBIDeductible:
+                                  title: "Premises Operations BI Deductible"
+                                  type: string
+                                  default: "No Deductible"
+                              PremOpsPDDeductible:
+                                  title: "Premises Operations PD Deductible"
+                                  type: string
+                                  default: "No Deductible"
+                              PremOpsBIPDDeductible:
+                                  title: "Premises Operations BIPD Deductible" 
+                                  type: string
+                                  default: "No Deductible"
+                              ProdsCompldOpsAddlCovFactor:
+                                  title: "Premises Operations Additional Coverage Factor"
+                                  type: string
+                                  default: "1"
+                              ProdsCompldOpsBIDeductible:
+                                  title: "Products completed Operations BI Deductible"
+                                  type: string
+                                  default: "No Deductible"
+                              ProdsCompldOpsPDDeductible:
+                                  title: "Products completed Operations PD Deductible"
+                                  type: string
+                                  default: "No Deductible"
+                              ProdsCompldOpsBIPDDeductible:
+                                  title: "Products completed Operations BIPD Deductible" 
+                                  type: string
+                                  default: "No Deductible"
+                              SprayPainting:
+                                  title: "Spray Painting"
+                                  type: string
+                                  default: "No"
+                              LeadRentalPropertyDefinedinRhodeIslandGeneralLaws:
+                                  title: "Is this a rental property as defined in Rhode Island General Laws?"
+                                  type: string
+                                  default: "No"
+                              LeadConstructedPriorto1978PrimaFacieEvidenceofCompliance:
+                                  title: "Have any premises constructed prior to 1978 received a Prima Facie Evidence of Compliance?"
+                                  type: string
+                                  default: "No" 
+  errorModel:
+    type: object
+    required:
+      - RequestStatus
+      - MessageDetail
+    properties:
+      RequestStatus:
+        type: string
+      MessageDetail:
+        type: object
+        properties:
+          MessageCode:
+            type: string
+          MessageType:
+            type: string
+          UserMessage:
+            type: string
+          MessageLevel:
+            type: string
+          MessageSeverity:
+            type: string
+          MessageList:
+            type: object
+            properties:
+              Message:
+                type: array
+                items:
+                  type: string
+  Rating_Success_Response:
+    type: object
+    required:
+      - RequestStatus
+      - Policy
+    properties:
+      messageDetail:
+        type: object
+      RequestStatus:
+        type: string
+      Policy:
+       type: object
+       properties:
+        ProductNumber:
+         title: "ProductNumber"
+         type: string
+        ProductVerNumber: 
+         title: "ProductVerNumber"
+         type: string
+        EventName: 
+         title: "EventName"
+         type: string
+        EventVersion:
+         title: "Event Version"
+         type: string
+        ProductionChannel:
+         title: "Production Channel"
+         type: string
+        LastRateLookUpDate:
+         title: "Last Rate Look Up Date"
+         type: string
+        EffectiveDate: 
+         title: "Policy Start Date"
+         type: string
+        ExpirationDate: 
+         title: "PolicyExpiryDate"
+         type: string
+        GeneralLiabilityIllinoisChangesContractorsHomeRepairAndRemodelingRate:
+         title: "GeneralLiability Illinois Changes Contractors Home Repair And Remodeling Rate"
+         type: string
+        DoesThisRiskPerformHomeRepairAndRemodeling:
+         title: "Does This Risk Perform Home Repair And Remodeling"
+         type: string
+        GeneralLiabilityIllinoisChangesContractorsHomeRepairAndRemodelingPremium:
+         title: "GeneralLiabilityIllinoisChangesContractorsHomeRepairAndRemodelingPremium"
+         type: string
+        GeneralLiabilityIllinoisChangesContractorsHomeRepairAndRemodelingCalculatedPremium:
+         title: "GeneralLiabilityIllinoisChangesContractorsHomeRepairAndRemodelingCalculatedPremium"
+         type: string
+        GeneralLiabilityIllinoisChangesContractorsHomeRepairAndRemodelingAgencyCommission:
+         title: "GeneralLiabilityIllinoisChangesContractorsHomeRepairAndRemodelingAgencyCommission"
+         type: string
+        GeneralLiabilityIllinoisChangesContractorsHomeRepairAndRemodelingBillingBrokerCommission:
+         title: "GeneralLiabilityIllinoisChangesContractorsHomeRepairAndRemodelingBillingBrokerCommission"
+         type: string
+        GeneralLiabilityIllinoisChangesContractorsHomeRepairAndRemodelingCommission:
+         title: "GeneralLiabilityIllinoisChangesContractorsHomeRepairAndRemodelingCommission"
+         type: string
+        InsuredName: 
+         title: "InsuredName"
+         type: string
+        Addressline1: 
+         title: "Address Line 1"
+         type: string
+        Addressline2: 
+         title: "Address Line 2"
+         type: string
+        City: 
+         title: "City"
+         type: string
+        County: 
+         title: "County"
+         type: string
+        State: 
+         title: "State"
+         type: string
+        ZipCode: 
+         title: "Zip"
+         type: string
+        Subline:
+         title: "Subline"
+         type: string
+        GeneralLiabilityMedPayCoverageLimit:
+         title: "Medical Payments Limit"
+         type: string
+        PremOpsProdsCoverageForm:
+         title: "Coverage Form"
+         type: string
+        EachOccurrenceLimit:
+         title: "Each Occurrence Limit"
+         type: string
+        GeneralAggregateLimit:
+         title: "General Aggregate Limit"
+         type: string
+        ProdsCompldOpsAggregateLimit:
+         title: "Products Completed Operations Aggregate Limit"
+         type: string
+        TerrorismCoverage:
+         title: "Accept Certified Acts of Terrorism Coverage"
+         type: string
+        GeneralLiabilityExclusionOfCertifiedActsOfNuclearBiologicalChemicalActsTerrorismCapOnLossesFromCertifiedActs:
+         title: " Exclusion Of Certified Nuclear, Biological, Chemical Or Radiological Acts Of Terrsm; Cap On Losses From Certified Acts Of Terrsm"
+         type: string
+        GeneralLiabilityConditionalExclusionOfTerrorismNuclearBiologicalChemicalDispositionOfAct2002 : 
+         title: "Conditional Exclusion Of Terrorism Involving Nuclear, Biological Or Chemical Terrorism "
+         type: string
+        GeneralLiabilityExclusionOfTerrorismNuclearBiologicalChemicalTerrorism:
+         title: "Exclusion Of Terrorism Involving Nuclear, Biological Or Chemical Terrorism"
+         type: string
+        GeneralLiabilityCertifiedActsOfTerrorismAggregateLimitCapOnLossesFromCertifiedActsOfTerrorismPremOps:
+         title: "Certified Acts Of Terrorism Aggregate Limit; Cap On Losses From Certified Acts Of Terrorism"
+         type: string
+        GeneralLiabilityConditionalLimitationOfCoverageTerrorismSublimitAnnualAggregateTerrorismAct2002:
+         title: "Conditional Limitation Of Coverage For Terrorism On An Annual Aggregate Basis"
+         type: string
+        GeneralLiabilityLimitationOfCoverageForTerrorismSubLimitAnnualAggregateBasis:
+         title: "Limitation Of Coverage For Terrorism On An Annual Aggregate Basis"
+         type: string
+        TRIAExtended:
+         title: "Has TRIA been extended past termination date of TRIP?"
+         type: string
+        TRIAExpirationDate :
+         title: "TRIA Expiration Date"
+         type: string
+        TerrorismAggregateLimit:
+         title: "Terrorism Aggregate Limit"
+         type: string
+        EmployeeBenefitsLiability:
+         title: "Employee Benefits Liability"
+         type: string
+        LimitEachEmployeeInt:
+         title: "Employee Benefits Liability Limit of Insurance - each Employee"
+         type: string
+        AggregateLimitInt:
+         title: "Employee Benefits Liability Limit of Insurance - Aggregate"
+         type: string
+        DeductibleInt:
+         title: "Employee Benefits Liability Deductible"
+         type: string
+        NumEmployees:
+         title: "Number of Employees"
+         type: string
+        GeneralLiabilityDamageToPremisesRentedToYouCoverageLimit:
+         title: "Damage To Premises Rented To You Limit"
+         type: string
+        PersonalAndAdvertisingInjuryLimit: 
+         title: "Personal And Advertising Injury Limit"
+         type: string
+        LeadHaveAllPremisesConstructedInOrAfter1978:
+         title: "Have all the premises been constructed in or after 1978?"
+         type: string
+        LeadIsMultiplePremieseRiskConstructedBefore1978AndInOrAfter1978:
+         title: "Is this a multiple premises risk that has buildings constructed before 1978 and in or after 1978?"
+         type: string
+        LeadWishToPurchaseCoverageForPremisesCertifiedAsLeadFree:
+         title: "Does the insured wish to purchase coverage for premises that  are certified as being lead free?"
+         type: string
+        BasePremium:
+         title: "Base Premium"
+         type: string
+        EmployeeBenefitsLiabCovCalculatedPremium:
+         title: "Employee Benedits Liability Covearge Calculated Premium"
+         type: string
+        EmployeeBenefitsLiabCovPremium:
+         title: "Employee Benedits Liability Covearge Premium"
+         type: string
+        EmployeeBenefitsLiabCovAgencyCommission:
+         title: "Employee Benedits Liability Agency Commission"
+         type: string
+        EmployeeBenefitsLiabCovBillingBrokerCommission:
+         title: "Employee Benedits Liability Billing broker Commission"
+         type: string
+        EmployeeBenefitsLiabCovCommission:
+         title: "Employee Benedits Liability Covearge Commission"
+         type: string
+        TotalPremium:
+         title: "Total Premium"
+         type: string
+        TotalBillingBrokerCommission:
+         title: "Total Billing Broker Commission"
+         type: string
+        TotalAgencyCommission:
+         title: "Total Agency Commission"
+         type: string
+        TotalCommission:
+         title: "Total Commission"
+         type: string
+        MinPolicyWritingPremium:
+         title: "Policy writing minimum premium"
+         type: string
+        MinEarnedPremiumInd:
+         title: "Minimum Earned Premium indicator"
+         type: string
+        MinEarnedPremium:
+         title: "Minimum Earned Premium"
+         type: string
+        LCM:
+         title: "LCM"
+         type: string
+        QuoteNumber:
+         title: "Quote Number"
+         type: string
+        ReductionfactorList:
+         type: array
+         items:
+          properties:
+            Reductionfactor1:
+              title: "Reductionfactor1"
+              type: string
+            Reductionfactor2:
+              title: "Reductionfactor2"
+              type: string
+            Reductionfactor3:
+              title: "Reductionfactor3"
+              type: string
+        TFSList:
+          type: array
+          items:
+           properties:
+             TFSRate:
+               title: "Tax Rate"
+               type: string
+             TFSDescription:
+               title: "Tax Description"
+               type: string
+             TFSAmount:
+                title: "TFS Amount"
+                type: string
+             TotalProratedTFSAmount:
+                 title: "Total Prorated TFS Amount"
+                 type: string
+        AdditionalInsuredCalculatedPremium:
+          type: string
+        AdditionalInsuredPremium:
+          type: string
+        AdditionalInsuredList:
+         type: array
+         items:
+          required:
+           - AdditionalInsuredType
+          properties:
+           AdditionalInsuredType:
+              title: "Additional Insured Type"
+              type: string
+           AdditionalInsuredDetail:
+            type: array
+            items:
+             properties: 
+              AdditionalInsuredAction:
+               title: " Additional Insured Action"
+               type: string
+              AdditionalInsuredNumber:
+               title: "Additional Insured Number"
+               type: string
+              COIDescription:
+               title: "COI Description"
+               type: string
+              AdditionalInsuredName:
+               title: "Additional Insured Name"
+               type: string
+              AdditionalInsuredAddressLine1:
+               title: "Additional Insured Address Line1"
+               type: string
+              AdditionalInsuredAddressLine2:
+               title: "Additional Insured Address Line2"
+               type: string
+              AdditionalInsuredCounty:
+               title: "Additional Insured County"
+               type: string
+              AdditionalInsuredCity:
+               title: "Additional Insured City"
+               type: string
+              AdditionalInsuredZipCode: 
+               title: "Additional Insured ZipCode"
+               type: string
+              AdditionalInsuredState: 
+               title: "Additional Insured State"
+               type: string
+              AdditionalInsuredRate:
+               title: "Additional Insured Rate"
+               type: string
+              AdditionalInsuredAgencyCommission:
+                title: "Additional Insured Agency Commission"
+                type: string
+              AdditionalInsuredBillingBrokerCommission:
+                title: "AdditionalInsured Billing broker Commission"
+                type: string
+              AdditionalInsuredCommission:
+                title: "AdditionalInsured  Commission"
+                type: string       
+        Location:
+         type: object
+         properties: 
+          LocationDetail:
+            type: array
+            items:
+              properties:
+                LocationID:
+                    title: "Location ID"
+                    type: string
+                AddressLine1:
+                    title: "Address Line 1"
+                    type: string
+                AddressLine2:
+                    title: "Address Line 2"
+                    type: string
+                City:
+                    title: "City"
+                    type: string
+                County:
+                    title: "County"
+                    type: string
+                State:
+                    title: "State"
+                    type: string
+                ZipCode:
+                    title: "Zip Code"
+                    type: string
+                PremisesOperationsTerritory:
+                    title: "Premises Operations Territory"
+                    type: string
+                MunicipalityCode:
+                    title: "Municipality Code"
+                    type: string
+                MunicipalityName:
+                    title: "Municipality Name"
+                    type: string
+                Classification:
+                  type: object
+                  properties:	
+                      ClassificationDetail:
+                          type: array
+                          items:
+                            properties:
+                              ClassificationID:
+                                  title: "ClassificationID"
+                                  type: string
+                              Classcode:
+                                  title: "Class code"
+                                  type: string
+                              PremOpsExposure:
+                                  title: "Premises Operations Exposure"
+                                  type: string
+                              ProdsCompldOpsExposure:
+                                  title: "Products completed Operations Exposure"
+                                  type: string
+                              GeneralLiabilityExclCovCMedPayLocClassLvl:
+                                  title: "Exclusion - Coverage C - Medical Payments"
+                                  type: string
+                              PremOpsAddlCovFactor:
+                                  title: "Products completed Operations Additional Coverage Factor"
+                                  type: string
+                              ProdsCompldOpsAddlCovFactor:
+                                  title: "Premises Operations Additional Coverage Factor"
+                                  type: string
+                              PremOpsBIDeductible:
+                                  title: "Premises Operations BI Deductible"
+                                  type: string
+                              PremOpsPDDeductible:
+                                  title: "Premises Operations PD Deductible"
+                                  type: string
+                              PremOpsBIPDDeductible:
+                                  title: "Premises Operations BIPD Deductible" 
+                                  type: string
+                              ProdsCompldOpsBIDeductible:
+                                  title: "Products completed Operations BI Deductible"
+                                  type: string
+                              ProdsCompldOpsPDDeductible:
+                                  title: "Products completed Operations PD Deductible"
+                                  type: string
+                              ProdsCompldOpsBIPDDeductible:
+                                  title: "Products completed Operations BIPD Deductible" 
+                                  type: string
+                              SprayPainting:
+                                  title: "Spray Painting"
+                                  type: string
+                              PremOpsCoverageCalculatedPremium:
+                                  type: string
+                              PremOpsCoverageClasslevelPremium:
+                                  type: string
+                              PremOpsCoveragePremium:
+                                  type: string
+                              ILFPremOps:
+                                  type: string
+                              PremiumBasePremOps:
+                                  type: string
+                              FinalRate:
+                                  type: string
+                              BaseRate:
+                                  type: string
+                              FinalILF:
+                                  type: string
+                              PremOpsELPFactor:
+                                  type: string
+                              CSLILF:
+                                  type: string
+                              DeductibleFactor:
+                                  type: string
+                              PremOpsIncrdLimitFactor:
+                                  type: string
+                              MedicalPaymentsCharge:
+                                  type: string
+                              FinalPremOpsIncrdLimitTableAssignment:
+                                  type: string
+                              PremOpsCoverageAgencyCommission:
+                                  type: string
+                              PremOpsCoverageBillingBrokerCommission:
+                                  type: string
+                              PremOpsCoverageCommission:
+                                  type: string
+                              LeadRentalPropertyDefinedinRhodeIslandGeneralLaws:
+                                  type: string
+                              LeadConstructedPriorto1978PrimaFacieEvidenceofCompliance:
+                                  type: string
+                              ClassDescription:
+                                  type: string
+                              PremOpsLossCost:
+                                  type: string
+                              CertifiedActsOfTerrorismExposureClassFactorPremises:
+                                  type: string
+                              TerrorismILF:
+                                  type: string
+                              TerrorismAgencyCommission:
+                                  title: "Terrorism Agency Commission"
+                                  type: string
+                              TerrorismBillingBrokerCommission:
+                                  title: "Terrorism Billing broker Commission"
+                                  type: string
+                              TerrorismCommission:
+                                  title: "Terrorism  Commission"
+                                  type: string
+                              TerrorismCalculatedPremium:
+                                  title: "Terrorism Calculated Premium"
+                                  type: string
+                              TerrorismPremium:
+                                  title: "Terrorism Premium"
+                                  type: string
+                              FinalProdsCompldOpsIncrdLimitTableAssignment:
+                                  type: string
+                              ProdsCompldOpsFinalRate:
+                                  type: string
+                              ProdsCompldOpsBaseRate:
+                                  type: string
+                              ProdsCompldOpsLossCost:
+                                  type: string
+                              ProdsCompldOpsFinalILF:
+                                  type: string
+                              ProdsCompldOpsCSLILF:
+                                  type: string
+                              ProdsCompldOpsDeductibleFactor:
+                                  type: string
+                              ProdsCompldOpsIncrdLimitFactor:
+                                  type: string
+                              ProdsCompldOpsELP:
+                                  type: string
+                              ProdsCompldOpsCoverageCalculatedPremium:
+                                  type: string
+                              ProdsCompldOpsCoverageClasslevelPremium:
+                                  type: string
+                              ProdsCompldOpsCoveragePremium:
+                                  type: string
+                              CertifiedActsOfTerrorismExposureClassFactorProducts:
+                                  type: string
+                              TerrorismProdsCompldOpsPremium:
+                                  type: string
+                              TerrorismProdsCompldOpsCalculatedPremium:
+                                  type: string
+                              TerrorismTotalPremium:
+                                  type: string
+                              ILFProds:
+                                  type: string
+                              ProdsCompldOpsCoverageAgencyCommission:
+                                  type: string
+                              ProdsCompldOpsCoverageBillingBrokerCommission:
+                                  type: string
+                              ProdsCompldOpsCoverageCommission:
+                                  type: string
+                              TerrorismAllOtherSublinePremium:
+                                  type: string
+                              SpecialCombinedMinimumPremiumIndicator:
+                                  type: string
+                              CertifiedActsOfTerrorismExposureClassFactorAllOtherSubline:
+                                  type: string

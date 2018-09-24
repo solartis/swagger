@@ -160,6 +160,9 @@ definitions:
             ProductionChannel:
              title: "Production Channel"
              type: string
+            DoesThisRiskPerformHomeRepairAndRemodeling:
+             title: "Does This Risk Perform Home Repair And Remodeling"
+             type: string
             LastRateLookUpDate:
              title: "Last Rate Look Up Date"
              type: string

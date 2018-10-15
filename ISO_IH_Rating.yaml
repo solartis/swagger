@@ -8,7 +8,7 @@ info:
                
                Property insurance for property in transit over land, certain types of moveable property, instrumentalities of transportation (such as bridges, roads), and legal liability exposures of bailees. “Non-Filed” is a term that refers to inland marine products not generally subject to the filing requirements for forms, rates and rules in a given state. A given class or line of business is referred to as non-filed or non-controlled because the coverage encompasses too many variables to fit a standard rating structure. The coverage forms are not filed in order that the insurance protection can be adjusted to match and respond to a given exposure or situation.
   
-host: isoihkbv4-2.uat.solartis.net
+host: isoihkbv4-2.solartis.net
 basePath: /DroolsV4_2/DroolsService
 schemes:
   - https

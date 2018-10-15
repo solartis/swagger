@@ -7,7 +7,7 @@ info:
     
     
     Umbrella insurance is extra liability insurance. It is designed to help protect you from major claims and lawsuits and as a result it helps protect your assets and your future. It generally is written over various primary liability policies, such as the business auto policy (BAP), commercial general liability (CGL) policy, watercraft and aircraft liability policies, and employers liability coverage.
-host: isocupkbv4-2.uat.solartis.net
+host: isocupkbv4-2.solartis.net
 basePath: /DroolsV4_2/DroolsService
 schemes:
   - https

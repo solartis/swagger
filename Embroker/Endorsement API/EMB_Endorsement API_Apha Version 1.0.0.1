@@ -2,7 +2,7 @@ swagger: '2.0'
 info:
   version: "1.0"
   title: Solartis Endorsement API for Embroker
-  description: To generate policy document for Embroker
+  description: To create endorsement for Embroker
   
 host: embroker.alpha.solartis.net
 basePath: /KnowledgeEngineV6_2/KnowledgeBase
@@ -33,7 +33,7 @@ paths:
           required: true
           type: string
           format: string
-          default: "EmbrokerSubmission"
+          default: "EmbrokerCreateEndorsement"
         - name: EventVersion
           in: header
           description: Name of the event to be invoked
@@ -110,7 +110,6 @@ definitions:
           - ProductVerNumber
           - EventName
           - EventVersion
-          - BusinessName
           - PolicyNumber
         properties:
           ProductNumber:
@@ -124,7 +123,7 @@ definitions:
           EventName:
             title: "Event Name"
             type: string
-            default: "EmbrokerSubmission"
+            default: "EmbrokerCreateEndorsement"
           EndorsementEffectiveDate:
             title: "Endorsement Effective Date"
             type: string

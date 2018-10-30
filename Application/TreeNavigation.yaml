@@ -1,0 +1,241 @@
+swagger: '2.0'
+info:
+  version: "5.0.0.1"
+  title: Tree Navigation API
+  description: To get the list of navigation nodes on the Runtime
+
+host: nskb.solartis.net
+basePath: /KnowledgeEngineV6_2/KnowledgeBase
+schemes:
+  - https
+consumes:
+  - application/json  
+produces:
+  - application/json
+paths:
+  /FireEventV2:
+    post:
+      description: Get the navigation nodes and its page param to invoke Metadata with given params
+      operationId: FireEventV2
+      produces:
+        - application/json
+      parameters:
+        - name: Token
+          in: header
+          description: Authentication Token
+          required: true
+          type: string
+          default: "UMq6ClOyOz5vg3kYsKVI4fZ8gHSyHdCEzJ28f5f84en7SUq6mA/MxaC9cj3yr0tdXNWKFpYftaIPoYQ+eVG6b8BK7518qNfWWx8gOhx3ilmGvthXUC+R/Q+PK5zNfoskxTU5fc26dlxyI1oBVVKrcB92r0ZuGmaAe813LN1xk54NCWtY3XDA6zIHErFqlB/1vXTdGISFs3CvQ2FLJko1NvTDkLH0a1D1RedR4p9OBCDcKKGtNpWw1X094je1dz8KQ0vFKaO3wuuz1foFxXbxOsDsdmB1cp4NxLBw20uDzevMKJ6TuyGucgTOff7ghnW6ncFE0F0+mdbP75B8wtK5ibauRnxeylxWXOA7Dj/i7uSRn6z+k2EJ+9Kns3483lrwGj7uHOLVreKa4BUJqq9G3GxAqWa7rxNBv9AYcoO8fI38LJrw4oNTAZ1FiwiICU+VDHjIz8rkAS6XGi2rsn5gKsm9Ot4f7RAWCiOeSZvE1TLdOemiSu0In2D3tyYrSzwfcXZQhY0TVePE30ujvvqWXHlUyb5igbcVYzeL/vtMawlGkXnOeLNKv9siS+QN+J2Z1k8eSUv3x/awFChMvKTeV2IutqagUoS2vb7gsFdLD6TwJ7tg1sDqJOsYoihiuDV1wPsi0DZnELdX7J6Cks+2gnDTg2sy3ABAKJQPc6U1sRSPYvKXKh27jaCvPbdsgbNG"
+        - name: EventName
+          in: header
+          description: Event Name
+          required: true
+          type: string
+          default: "GetUINavigationTreeV1"
+        - name: Content-Type
+          in: header
+          description: Content Type
+          required: true
+          type: string
+          default: "application/json"
+        - name: MODE
+          in: header
+          description: denotes which mode to select
+          required: true
+          type: string
+          format: string
+          default: "LIVE"
+        - name: ENVIRONMENT
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "15" 
+        - name: Metadata Request
+          in: body
+          description: For metadata request
+          schema:
+            $ref: '#/definitions/TreeNavigation_Request'
+            
+      responses:
+       '200':
+        description: Success Response
+        schema:
+         $ref: '#/definitions/TreeNavigation_Success_Response'
+       default:
+        description: unexpected error
+        schema:
+          $ref: '#/definitions/errorModel'
+definitions:
+  TreeNavigation_Request:
+    type: object
+    required:
+      - ServiceRequestDetail
+    properties:
+      ProductName:
+        title: "Product Name"
+        type: string
+        default: "CA"
+      ProductNumber:
+        title: "Product Number"
+        type: string
+        default: "11"
+      ProductVerNumber:
+        title: "Product Ver Number"
+        type: string
+        default: "11"
+      ObjectType:
+        title: "Object Type"
+        type: string
+        default: "EVO_V1"
+      ObjectId:
+        title: "Object ID"
+        type: string
+      Lob:
+        title: "LOB"
+        type: string
+        default: "CA"
+      State:
+        title: "State"
+        type: string
+        default: "AL"
+      ServiceRequestDetail:
+        type: object
+        properties:
+         ServiceName:
+          title: "Service Name"
+          type: string
+          default: "GetUINavigationTreeV1"
+         ServiceRequestVersion:
+          title: "ServiceRequestVersion"
+          type: string
+          default: "1.0"
+         ServiceResponseVersion:
+          title: "ServiceResponseVersion"
+          type: string
+          default: "1.0"
+         OwnerId:
+          title: "Owner ID"
+          type: string
+          default: "35"
+         ResponseType:
+          title: "Response Type"
+          type: string
+          default: "JSON"
+         UserName:
+          title: "User Name"
+          type: string
+          default: "StarrCAagent"
+         Token:
+          type: string
+          default: "UMq6ClOyOz5vg3kYsKVI4fZ8gHSyHdCEzJ28f5f84en7SUq6mA/MxaC9cj3yr0tdXNWKFpYftaIPoYQ+eVG6b8BK7518qNfWWx8gOhx3ilmGvthXUC+R/Q+PK5zNfoskxTU5fc26dlxyI1oBVVKrcB92r0ZuGmaAe813LN1xk54NCWtY3XDA6zIHErFqlB/1vXTdGISFs3CvQ2FLJko1NvTDkLH0a1D1RedR4p9OBCDcKKGtNpWw1X094je1dz8KQ0vFKaO3wuuz1foFxXbxOsDsdmB1cp4NxLBw20uDzevMKJ6TuyGucgTOff7ghnW6ncFE0F0+mdbP75B8wtK5ibauRnxeylxWXOA7Dj/i7uSRn6z+k2EJ+9Kns3483lrwGj7uHOLVreKa4BUJqq9G3GxAqWa7rxNBv9AYcoO8fI38LJrw4oNTAZ1FiwiICU+VDHjIz8rkAS6XGi2rsn5gKsm9Ot4f7RAWCiOeSZvE1TLdOemiSu0In2D3tyYrSzwfcXZQhY0TVePE30ujvvqWXHlUyb5igbcVYzeL/vtMawlGkXnOeLNKv9siS+QN+J2Z1k8eSUv3x/awFChMvKTeV2IutqagUoS2vb7gsFdLD6TwJ7tg1sDqJOsYoihiuDV1wPsi0DZnELdX7J6Cks+2gnDTg2sy3ABAKJQPc6U1sRSPYvKXKh27jaCvPbdsgbNG"
+         BrowserIp:
+          type: string
+          default: "111.93.119.74"
+         LanguageCode:
+          type: string
+          default: "en"
+  errorModel:
+    type: object
+    required:
+      - RequestStatus
+      - MessageDetail
+    properties:
+      RequestStatus:
+        type: string
+      MessageDetail:
+        type: object
+        properties:
+          MessageCode:
+            type: string
+          MessageType:
+            type: string
+          UserMessage:
+            type: string
+          MessageLevel:
+            type: string
+          MessageSeverity:
+            type: string
+          MessageList:
+            type: object
+            properties:
+              Message:
+                type: array
+                items:
+                  type: string
+  TreeNavigation_Success_Response:
+    type: object
+    properties:
+      component:
+        type: string
+      view:
+        type: string
+      data:
+        type: array
+        items:
+          $ref: '#/definitions/NodeData'
+  NodeData:
+    type: object
+    properties:
+      name:
+        type: string
+      key:
+        type: string
+      parentKey:
+        type: string
+      icon:
+        type: string
+      node:
+        type: string
+      id:
+        type: integer
+      templateType:
+        type: string
+      render:
+        type: boolean
+      validation:
+        type: string
+      page:
+        type: string
+      index:
+        type: integer
+      isExpanded:
+        type: boolean
+      privilegeName:
+        type: string
+      navigationParams:
+        type: object
+        properties:
+          applicationNumber:
+            type: string
+          applicationSubNumber:
+            type: string
+          subApplicationNumber:
+            type: string
+          subApplicationSubNumber:
+            type: string
+          applicationType:
+            type: string
+          applicationSubType:
+            type: string
+          subApplicationVersion:
+            type: string
+          applicationObjectType:
+            type: string
+          applicationObjectName:
+            type: string
+          subApplicationType:
+            type: string
+          subApplicationName:
+            type: string
+          rateVersion:
+            type: string
+          isoRateVersion:
+            type: string
+          customerRateVersion:
+            type: string
+      valueList:
+        type: array
+        items:
+          $ref: '#/definitions/TreeNavigation_Success_Response'

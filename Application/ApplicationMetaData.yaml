@@ -1,0 +1,418 @@
+swagger: '2.0'
+info:
+  version: "5.0.0.1"
+  title: MetaData API Definition
+  description: To retrieve Metadata information about Page and Page fields details
+
+host: uciapplicationservice.solartis.net
+basePath: /ApplicationServiceV5/ApplicationService5
+schemes:
+  - https
+consumes:
+  - application/json  
+produces:
+  - application/json
+paths:
+  /getMetaDataV2:
+    post:
+      description: Get metadata details for a specific page/page fields
+      operationId: getMetaDataV2
+      produces:
+        - application/json
+      parameters:
+        - name: Token
+          in: header
+          description: Authentication Token
+          required: true
+          type: string
+          default: "UMq6ClOyOz5vg3kYsKVI4fZ8gHSyHdCEzJ28f5f84en7SUq6mA/MxaC9cj3yr0tdXNWKFpYftaIPoYQ+eVG6b8BK7518qNfWWx8gOhx3ilmGvthXUC+R/Q+PK5zNfoskxTU5fc26dlxyI1oBVVKrcB92r0ZuGmaAe813LN1xk54NCWtY3XDA6zIHErFqlB/1vXTdGISFs3CvQ2FLJko1NvTDkLH0a1D1RedR4p9OBCDcKKGtNpWw1X094je1dz8KQ0vFKaO3wuuz1foFxXbxOsDsdmB1cp4NxLBw20uDzevMKJ6TuyGucgTOff7ghnW6ncFE0F0+mdbP75B8wtK5ibauRnxeylxWXOA7Dj/i7uSRn6z+k2EJ+9Kns3483lrwGj7uHOLVreKa4BUJqq9G3GxAqWa7rxNBv9AYcoO8fI38LJrw4oNTAZ1FiwiICU+VDHjIz8rkAS6XGi2rsn5gKsm9Ot4f7RAWCiOeSZvE1TLdOemiSu0In2D3tyYrSzwfcXZQhY0TVePE30ujvvqWXHlUyb5igbcVYzeL/vtMawlGkXnOeLNKv9siS+QN+J2Z1k8eSUv3x/awFChMvKTeV2IutqagUoS2vb7gsFdLD6TwJ7tg1sDqJOsYoihiuDV1wPsi0DZnELdX7J6Cks+2gnDTg2sy3ABAKJQPc6U1sRSPYvKXKh27jaCvPbdsgbNG"
+        - name: Content-Type
+          in: header
+          description: Content Type
+          required: true
+          type: string
+          default: "application/json"
+        - name: MODE
+          in: header
+          description: denotes which mode to select
+          required: true
+          type: string
+          format: string
+          default: "LIVE"
+        - name: ENVIRONMENT
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "15" 
+        - name: Metadata Request
+          in: body
+          description: For metadata request
+          schema:
+            $ref: '#/definitions/Metadata_Request'
+            
+      responses:
+       '200':
+        description: Success Response
+        schema:
+         $ref: '#/definitions/Metadata_Success_Response'
+       default:
+        description: unexpected error
+        schema:
+          $ref: '#/definitions/errorModel'
+definitions:
+  Metadata_Request:
+    type: object
+    required:
+      - SubApplicationNameList
+      - ApplicationType
+      - SubApplicationNumber
+      - OwnerId
+      - SubApplicationSubNumber
+      - State
+      - SubApplicationType
+      - ApplicationNumber
+      - ObjectId
+      - ObjectVerId
+      - ObjectName
+      - ServiceRequestDetail
+    properties:
+      ApplicationType: 
+       title: "Application Type"
+       type: string
+       default: "ISO_CA"
+      SubApplicationNumber:
+       title: "SubApplication Number"
+       type: string
+       default: "1.0"
+      SubApplicationNameList:
+        title: Page List
+        type: array
+        items:
+          $ref: '#/definitions/SubApplicationNames'
+        default:
+          - SubApplicationName: CommercialAutoToggle
+      AttributeList:
+        title: Use this in case you need metadata for a or set of specific Attributes?
+        type: 
+         - array
+         - 'null'
+        items:
+          type: string
+      ApplicationSubNumber:
+        title: "Application Sub Number"
+        type: string
+        default: "1.0"
+      OwnerId:
+        title: "Owner ID"
+        type: string
+        default: "35"
+      SubApplicationSubNumber:
+        title: "SubApplication Sub Number"
+        type: string
+        default: "1.0"
+      ObjectType:
+        title: "ObjectType"
+        type: string
+      State:
+        title: "State"
+        type: string
+        default: "AL"
+        enum:
+          - AL
+      SubApplicationType:
+        title: "Subapplication Type"
+        type: string
+        default: "Detail"
+      WorkflowType:
+        title: "Workflow Type"
+        type: string
+      Territory:
+        title: "Territory"
+        type: string
+      ApplicationNumber:
+        title: "Application Number"
+        type: string
+        default: "1.0"
+      ObjectId:
+        title: "Object ID"
+        type: integer
+        default: 11
+      ObjectVerId:
+        title: "Object Ver ID"
+        type: integer
+        default: 11
+      IsDataNeeded:
+        title: "Is Transaction Data needed"
+        type: string
+        default: "Y"
+        enum:
+          - "Y"
+          - "N"
+      ApplicationSubType:
+        title: "Application Sub Type"
+        type: string
+      ObjectName:
+        title: "Object Name"
+        type: string
+        default: "PRODUCT"
+      Zone:
+        title: "Zone"
+        type: string
+      IsRenderedAttributeNeeded:
+        title: Should the response contain non-rendered attribute definitions?
+        type: boolean
+        default: true
+        enum:
+          - true
+          - false
+      TransactionPrimaryKey:
+        title: "Form data in Key/Value pair"
+        type: object
+        properties: 
+          application:
+            type: array
+            items:
+              $ref: '#/definitions/FormData'
+            default:
+              - key: "Object::Quote::EffectiveDate"
+                value: "2018-09-26"
+              - key: "Object::Application::RateVersion"
+                value: "'RC_CA_AL_11012016_V01','RC_CA_AL_02012017_V01','RC_CA_AL_02012018_V01','STARR_CA_AL_V01','RC_CA_CW_11012016_V01','RC_CA_CW_10012014_V02','STARR_CA_CW_V01'"
+              - key: "Object::Application::ISORateVersion"
+                value: "'RC_CA_AL_02012018_V01','RC_CA_CW_11012016_V01'"
+              - key: "Object::Application::CustomerRateVersion"
+                value: "'STARR_CA_V1_AL_10192018_V5','STARR_CA_V1_CW_10192018_V5'"
+      ServiceRequestDetail:
+        type: object
+        properties:
+         ServiceName:
+          title: "Service Name"
+          type: string
+          default: "GET_APPLICATION_META_DATA"
+         ServiceRequestVersion:
+          title: "ServiceRequestVersion"
+          type: string
+          default: "1.0"
+         ServiceResponseVersion:
+          title: "ServiceResponseVersion"
+          type: string
+          default: "1.0"
+         OwnerId:
+          title: "Owner ID"
+          type: string
+          default: "35"
+         ResponseType:
+          title: "Response Type"
+          type: string
+          default: "JSON"
+         UserName:
+          title: "User Name"
+          type: string
+          default: "StarrCAagent"
+         Token:
+          type: string
+          default: "UMq6ClOyOz5vg3kYsKVI4fZ8gHSyHdCEzJ28f5f84en7SUq6mA/MxaC9cj3yr0tdXNWKFpYftaIPoYQ+eVG6b8BK7518qNfWWx8gOhx3ilmGvthXUC+R/Q+PK5zNfoskxTU5fc26dlxyI1oBVVKrcB92r0ZuGmaAe813LN1xk54NCWtY3XDA6zIHErFqlB/1vXTdGISFs3CvQ2FLJko1NvTDkLH0a1D1RedR4p9OBCDcKKGtNpWw1X094je1dz8KQ0vFKaO3wuuz1foFxXbxOsDsdmB1cp4NxLBw20uDzevMKJ6TuyGucgTOff7ghnW6ncFE0F0+mdbP75B8wtK5ibauRnxeylxWXOA7Dj/i7uSRn6z+k2EJ+9Kns3483lrwGj7uHOLVreKa4BUJqq9G3GxAqWa7rxNBv9AYcoO8fI38LJrw4oNTAZ1FiwiICU+VDHjIz8rkAS6XGi2rsn5gKsm9Ot4f7RAWCiOeSZvE1TLdOemiSu0In2D3tyYrSzwfcXZQhY0TVePE30ujvvqWXHlUyb5igbcVYzeL/vtMawlGkXnOeLNKv9siS+QN+J2Z1k8eSUv3x/awFChMvKTeV2IutqagUoS2vb7gsFdLD6TwJ7tg1sDqJOsYoihiuDV1wPsi0DZnELdX7J6Cks+2gnDTg2sy3ABAKJQPc6U1sRSPYvKXKh27jaCvPbdsgbNG"
+         BrowserIp:
+          type: string
+          default: "111.93.119.74"
+         LanguageCode:
+          type: string
+          default: "en"
+  errorModel:
+    type: object
+    required:
+      - RequestStatus
+      - MessageDetail
+    properties:
+      RequestStatus:
+        type: string
+      MessageDetail:
+        type: object
+        properties:
+          MessageCode:
+            type: string
+          MessageType:
+            type: string
+          UserMessage:
+            type: string
+          MessageLevel:
+            type: string
+          MessageSeverity:
+            type: string
+          MessageList:
+            type: object
+            properties:
+              Message:
+                type: array
+                items:
+                  type: string
+  Metadata_Success_Response:
+    type: object
+    properties:
+      ResponseStatus:
+        type: string
+        enum:
+         - "PROCESSED"
+         - "ERROR"
+         - "FAILED"
+      ApplicationDetail:
+        type: object
+        properties:
+          ProductName:
+            type: string
+          ApplicationId:
+            type: integer
+          OwnerId:
+            type: integer
+          Description:
+            type: string
+          ApplicationVerId:
+            type: integer
+          ObjectId:
+            type: integer
+          ObjectVerId:
+            type: integer
+          ObjectName:
+            type: string
+          State:
+            type: string
+          SubApplicationDetailList:
+            type: array
+            items:
+              type: object
+              properties:
+                IsExpandable:
+                  type: string
+                PageNameUrl:
+                  type: string
+                LookUpInstance:
+                  type: string
+                FileName:
+                  type: string
+                TileName:
+                  type: string
+                SubApplicationId:
+                  type: integer
+                OwnerId:
+                  type: integer
+                ApplicationNumber:
+                  type: string
+                ApplicationSubNumber:
+                  type: string
+                ApplicationName:
+                  type: string
+                Description:
+                  type: string
+                Type:
+                  type: string
+                NumberOfRowsFixed:
+                  type: string
+                NumberOfRowsAvailable:
+                  type: string
+                CurrentVersionId:
+                  type: string
+                SubApplicationVersionNumber:
+                  type: string
+                SubApplicationVersionId:
+                  type: integer
+                AttributeDetailList:
+                  type: array
+                  items:
+                    $ref: '#/definitions/AttributeList'
+  AttributeList:
+    type: object
+    properties:
+      SubApplicationName:
+        type: string
+      ComponentType:
+        type: string
+      DefaultValue:
+        type: string
+      IsRequired:
+        type: string
+      Order:
+        type: string
+      ComponentLabel:
+        type: string
+      StyleClass:
+        type: string
+      AttributeStyleClass:
+        type: string
+      MinValue:
+        type: string
+      MaxValue:
+        type: string
+      Size:
+        type: string
+      MaxLength:
+        type: string
+      ComponentId:
+        type: string
+      Tooltip:
+        type: string
+      AttributeName:
+        type: string
+      RequiredMessage:
+        type: string
+      ValidatorMessage:
+        type: string
+      RenderValue:
+        type: boolean
+      IsDisabled:
+        type: boolean
+      AttributeParams:
+        type: string
+      LookupInstanceName:
+        type: string
+      LookupType:
+        type: string
+      ChildComponent:
+        type: string
+      LookupItemLableTemplate:
+        type: string
+      ParentComponentInstance:
+        type: string
+      ParentAttributeParams:
+        type: string
+      ItemTipParams:
+        type: string
+      ParentComponent:
+        type: array
+        items:
+          type: string
+      UpdateComponent:
+        type: array
+        items:
+          type: string
+      IsInvisible:
+        type: string
+      IsReadonly:
+        type: boolean
+      SubApplicationAttributeValueList:
+        type: array
+        items:
+          type: object
+          properties:
+            DisplayValue:
+              type: string
+            Sequence:
+              type: string
+            Value:
+              type: string
+  SubApplicationNames:
+    type: object
+    properties:
+      SubApplicationName:
+        title: Page Name
+        type: string
+  FormData:
+    type: object
+    properties:
+      key:
+        title: Key
+        type: string
+      value:
+        title: Value
+        type: string

@@ -4,7 +4,7 @@ info:
   title: MetaData API Definition
   description: To retrieve Metadata information about Page and Page fields details
 
-host: uciapplicationservice.solartis.net
+host: nsapplicationservice.solartis.net
 basePath: /ApplicationServiceV5/ApplicationService5
 schemes:
   - https

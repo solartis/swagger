@@ -1,0 +1,688 @@
+swagger: '2.0'
+info:
+  version: '1.1.0.1'
+  title: EFL Document Generation API
+  description: |
+    Document Generation API will generate a PDF with all the forms listed and the input values provided
+    
+  contact:
+    name: Solartis Support
+    email: solartis_assist_support@solartis.com
+    
+host: starrefl.rc.solartis.net
+basePath: /KnowledgeEngineV6_2/KnowledgeBase
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /FireEventV2:
+    post:
+      description: Forms generation API for EFL
+      operationId: generateForms
+      produces:
+        - application/json
+      parameters:
+        - name: Token
+          in: header
+          description: Authentication Token
+          required: true
+          type: string
+          format: string
+          default: "LtGElwuNtgIqF1BpOuXhauQxpuNgzcN67JXG7Lm+VfCFvfxr8mw70M0saUJivZGymqO9+AsxWQ/c8H8BbCmrrE6ntEddXbx7nXrjCupYlRsFPwMPVuQNKoPWYKfqrNHdtaCwbimRNNqrqnwN+RqQWkggF3Ne8Iqx75xsUhrYbg/+RyMmdOYE+npuO4b2bAcliMRp1Jgb7mseCwR7lOhb/JkL2U3XyZBmMn3xBPQa0feUYdwkHjr2LWU4DoNdiHIxspOsDz0A/KT/PtmQsybkk0se4AAnIdSLM2aw43SiKDq2VfFt13pz+OnwHwQhldLaV69wSo23l/K9PGBgkAnYkG+6A2nGbor2743mqj4U5T44qDDyQNx4n1b6bB1EfpfYzJPVJKuLXD8H97MIqTjlN5umgDkD9VsNHkQglwEIF6mrdVqSmocq7yk8vT2ThZLIyiCGFEvnlyryhsUU1SQAxEHFNGJCtFy34A9wEN2ElwH8LUe1BfEpDLWnOgOcs1OkPquwb4F0THK0FEy/EbCJLXAHODmOk6hYlWOGekPOwAPOItNS9/BJWhD+saXN0Nvxl6kmWyb4noDW5qv4c/juHNqNdyCLenr656KaRfJjNckCUrbrq/bvPvHyqxk/Z9SdAYh/NOqAOyCLVK37M8p/BVbJ3bE0/0rREP/NsISuxgPAz90DRY2f4fWOGwAMRexAJLm1EvE7DBl+yADIsvb35jZGvmnyDvPXEd3nAj3VMtXfHUYL5WgEF/r/sJrxVpKolT9HjwuHCdOokLYMaq4ZvFkdzZf8CTyCnIf69sZnL5nK/C8v0SwB4Gn0a/vLuqFARp7LxZSAXr1dudSEPZhMvBkJnfWrfxX10qTkEVr2NBnepRsyJmTfUwKTvL3coywlyTxPsKx//zDx7OT2XA516yLF07Zcpb+/+YNfId3eh+fe+JyOBN0AdjfdJM1AkaQ8w/0j7UD6YvDiJTeTWBdY4CLF07Zcpb+/+YNfId3eh+eqpwij4phtLKp3+F+FDIuSbZkDyVrjeKI74J+dGfauaeCeLDj5KNSZ8aIMwfwCCMclR5OhIc0QIvKRoHNIThUE94Jdbujumv696EopQWu3kKuOHslLGtcCFRgmXlE9G73gwrr9mzqXBI/YO4RlKkyN+C8R7wa+ku5+HoDWEUWmD2sojDdfcwDBYTympWD57Yjut7IO39KsiCC8esycXZvsAdLn0r/46krWdjdx1jwOJwW1hHwaGX7UnS2wHHV1pPc+FZQ0lSle9rtEa8EkV4cSi76dHhM/rX2jSLxTPC9A6JlagJHGoOCcP1fWINJIF/Xo6L3rRihLaCf3dE/7YxlK10sGexWbVOf3RQhQ3zCbLV0r992IgoNIF/j+pKpR0B5qUT+9ABqxhuW6oosIXGD1UuI4F4uqeOasW16+q9AcKewclPeTkpsQWnYkVoHf4E+gP3ZMQmFjIaa/byOxL4rFhEI8D0doxd2/c+upTisOr3/wjXhzB11Kg3dVnNC9p9DrLwlyYQkX7+tywY6yc3fLSyUQ1DDJIMfimcR2r75Ya9nfhPl8FTotT3lp6R4at6w1zQT2l/H123CI7PgIpWp1HDHuReFrPPwv02lAO7JpC1iFvZPXRmz4rLtyKQ6zaliO80yBhV8G365fB7YZsRBAE2dnG7FNzaWfuGD14rhdkDHE7boSuwl0cGPDfcKGXNECJZjx9aFySq2PzR943etaOKN92sN3C9xBLlze773CGyvjj5l4FUOYe2/Cjz6zrUxJfjio1VTf2uPL/UU0Wf5rq90H2XhUpqrKRthRwVIOaMGoB8Fws6K+iwVW+kVYBS1Oe11/TdCEsJwWlILpylD/9HYDJTVBCcDmaLV3ltUsTJDhg3ITRxgfGjjnpeHOR3/T9GOFWBYwDTKDPgaFA1C9j9X5G3hMgFXZG3hFI5yrQOY8nH9AfcoKTv2TfPCqWBSXj85TyqdQxLdwXAMOHU1x45gf3/kuH6jEnz4mlHoYR7jdA5fmqxAD9/K22PsmfhOHP8f0QuTDRwdNVY2uj6/hGz3qa/SJyEwHWzcyZrGRFSBiC2ei8Z0ZCugXmSzvOI0TZ/U/R6vE3kdE2V5YI1ptNZGOY2Elf8FPduCyF0Blaay7BJ6maIO+FeFJ5Ie6ubCXpNTfEorwS3g/Q0xd4z4gRVVWs6c1rxR1owegLnZ59NcExOUKbQtJB0xI7kvrJGZDx8rMSdpTeMdhwuSarsWrVImE8OPpR848bLXkJJ70gUhbx6uiZ2gt4vUYILvVuibv5vLMbo5BfLxsAbrsNbqOBM9EGANfM9rmcBbp2oNSELTf2OOmjaeEMtBZAWTCh90elOfAT5xpeI2UiOScf6qUYDGQNHKBEqSMct1qx8yVnHf1se+Yce2BnoHW/id1RPJ4p2CQIjYGLa92TN6yq55P9lXpxYtefDix3KZK3agk7STcyA89yYREOGt/7s0VwMJHRyKKRujVYkZP5iF1UFIaolA0BFndplDZSy9ZO7KmMOZ0elQYGerngWDunCwyGBovV2izNKcn9rUCQRzJm2Gg0cJkjXBmaVFfk37Uk7LDewz9mzT1wEjfYoSIU0m5OIx01nZC8sYBrg6nBhmqdaYRdriFOzNCoJ6rkcEth2zd0JnS2RzdIaAVHQs9kMLJTaSaNjUzY3Wjve9rtsL5KQQ49ssubLnDHNQjTbWxo6tSTPQ/+TzARY0D3mBsmg6zXpvjiUdH/8roFs80xrD2Fiz0JnCm7IANZNrhjlgLgsabng=="
+        - name: Content-Type
+          in: header
+          description: Content Type
+          required: true
+          type: string
+          default: "application/json"
+        - name: EventName
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "GenerateDocument"
+        - name: EventVersion
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "1.1.0.1"       
+        - name: Rating Request
+          in: body
+          description: For rating request
+          schema:
+            $ref: '#/definitions/DocGeneration_Request'
+            
+      responses:
+       '200':
+        description: Success Response
+        schema:
+         $ref: '#/definitions/DocGeneration_Success_Response'
+       default:
+        description: unexpected error
+        schema:
+          $ref: '#/definitions/errorModel'
+          
+definitions:
+  DocGeneration_Request:
+    type: object
+    properties:
+      ConsumerOwnerId:
+       title: "Owner ID"
+       type: string
+       default: "39"
+      ServiceRequestDetail:
+        type: object
+        properties:
+         ServiceRequestVersion:
+          title: "ServiceRequestVersion"
+          type: string
+          default: "1.0"
+         ServiceResponseVersion:
+          title: "ServiceResponseVersion"
+          type: string
+          default: "1.0"
+         OwnerId:
+          title: "Owner ID"
+          type: string
+          default: "39"
+         ResponseType:
+          title: "Response Type"
+          type: string
+          default: "json"
+         UserName:
+          title: "User Name"
+          type: string
+          default: "StarrEFLagent"
+         Token:
+          type: string
+          default: "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"
+         BrowserIp:
+          type: string
+          default: "127.0.0.1"
+         LanguageCode:
+          type: string
+          default: "en"
+         RegionCode:
+          type: string
+          default: "US"
+         EventName:
+          type: string
+          default: "DocumentGeneration"
+         EventVersion:
+          type: string
+          default: "1.1.0.1"
+         ProductNumber:
+          type: string
+          default: "STARR_EFL"
+         ProductVerNumber:
+          type: string
+          default: "STARR_EFL_1.0"
+      Policy:
+       type: object
+       required:
+        - EffectiveDt
+        - ExpirationDt
+       properties:
+        Addfirstandsecondreinstatedlimitsofliabilityexcesssideadic.FirstReinstatedLimitOfLiability:
+         type: string
+        Addfirstandsecondreinstatedlimitsofliabilityexcesssideadic.SecondReinstatedLimitOfLiability: 
+         type: string
+        AgencyOrBrokerageName:
+         type: string
+        AgencyTaxpayerIDSocialSecurityNo:
+          type: string
+        AgentBrokerAddress:
+          type: string
+        AgentBrokerLicenseNo:
+          type: string
+        Amenddeclarationspage.ItemNo:
+          type: string
+        AmenddeclarationspageBreakoutsharedAndSeparatelimitsforspecifiedcoveragesDeclarations.AggregatePolicyLimitOfLiability:
+          type: string
+        AmenddeclarationspageBreakoutsharedAndSeparatelimitsforspecifiedcoveragesDeclarations.SeparateLimitOfLiability:
+          type: string
+        AmenddeclarationspageBreakoutsharedAndSeparatelimitsforspecifiedcoveragesDeclarations.SharedLimitOfLiabilityDOCoverage:
+          type: string
+        AmenddeclarationspageBreakoutsharedAndSeparatelimitsforspecifiedcoveragesDeclarations.SharedLimitOfLiabilityEmploymentPracticesLiabCoverage:
+          type: string
+        AuthorizedRepresentative:
+          type: string
+        AuthorizedRepresentativeDate:
+          type: string
+          description: Provide date in YYYY-MM-DD format
+        AuthorizedRepresentativePrinted:
+          type: string
+        AuthorizedRepresentativeTitle:
+          type: string
+        ChangeEffectiveDt:
+          type: string
+          description: Provide date in YYYY-MM-DD format
+        CrimeAndFidelityconversionendorsement.InTheAggregate:
+          type: string
+        CrimeAndFidelityconversionendorsement.PerOccurrenceOrLoss:
+          type: string
+        Defensecostsdisclosure.NamedInsuredDt:
+          type: string
+          description: Provide date in YYYY-MM-DD format
+        Deleteendorsement.EndorsementNo:
+          type: string
+        DeleteendorsementPuertorico.EndorsementNo:
+          type: string
+        Deletepolicyprovisionsandfollowfollowedpolicy.ProvisionDeleted:
+          type: array
+          items:
+            properties:
+                ProvisionDeleted:
+                  type: string
+        Differenceinconditionsendorsement.FollowedPolicyAttachment:
+          type: string
+        Differenceinconditionsendorsement.FollowedPolicyInsurer:
+          type: string
+        Differenceinconditionsendorsement.FollowedPolicyLimits:
+          type: string
+        Differenceinconditionsendorsement.FollowedPolicyPolicyNumber:
+          type: string
+        Differenceinconditionsendorsement.UnderlyingPolicyAttachment:
+          type: string
+        Differenceinconditionsendorsement.UnderlyingPolicyInsurer:
+          type: string
+        Differenceinconditionsendorsement.UnderlyingPolicyLimits:
+          type: string
+        Differenceinconditionsendorsement.UnderlyingPolicyPolicyNumber:
+          type: string
+        EffectiveCancellationDt:
+          type: string
+          description: Provide date in YYYY-MM-DD format
+        EffectiveDt: 
+         type: string
+         description: Provide date in YYYY-MM-DD format
+        EndorsementNo:
+          type: string
+        ExpirationDt: 
+         type: string
+         description: Provide date in YYYY-MM-DD format
+        FloridaStarrsecureexcessliabilitypolicy.ExcessPolicyInsurer:
+          type: string
+        FloridaStarrsecureexcessliabilitypolicy.ExcessPolicyLimits:
+          type: string
+        FloridaStarrsecureexcessliabilitypolicy.ExcessPolicyPolicyNumber:
+          type: string
+        FloridaStarrsecureexcessliabilitypolicy.ExcessPolicyPolicyPeriod:
+          type: string
+          description: Provide From - To date in YYYY-MM-DD format
+        FloridaStarrsecureexcessliabilitypolicy.FollowedPolicyInsurer:
+          type: string
+        FloridaStarrsecureexcessliabilitypolicy.FollowedPolicyLimits:
+          type: string
+        FloridaStarrsecureexcessliabilitypolicy.FollowedPolicyPolicyNumber:
+          type: string
+        FloridaStarrsecureexcessliabilitypolicy.FollowedPolicyPolicyPeriod:
+          type: string
+          description: Provide From - To date in YYYY-MM-DD format
+        FloridaStarrsecureexcessliabilitypolicy.LimitOfLiability:
+          type: string
+        FloridaStarrsecureexcessliabilitypolicy.PriorPolicyNumberWithInsurer:
+          type: string
+        Followformtoderivativeinvestigationcostssublimit.SubLimitOfLiability:
+          type: string
+        Followformtoderivativeinvestigationcostssublimit.UnderlyingPolicyInsurer:
+          type: string
+        Followformtoderivativeinvestigationcostssublimit.UnderlyingSubLimit:
+          type: string
+        Followformtomidtermendorsementfollowedpolicy.AsOfDt:
+          type: string
+          description: Provide date in YYYY-MM-DD format
+        Followformtomidtermendorsementfollowedpolicy.EndorsementNo:
+          type: string
+        Followformtomidtermendorsementfollowedpolicy.Premium:
+          type: string
+        FollowformtospecifiedsublimitSEndorsement.SublimitAmt:
+          type: string
+        FollowformtospecifiedsublimitSEndorsement.SublimitFor:
+          type: string
+        FollowformtospecifiedsublimitSEndorsement.TotalUnderlyingSpecifiedSublimitAmt:
+          type: string
+        FollowformtospecifiedsublimitSEndorsement.TotalUnderlyingSpecifiedSublimitFor:
+          type: string
+        FollowformtospecifiedsublimitSEndorsementPuertorico.SpecifiedSublimitOfLiabilityPremium:
+          type: string
+        FollowformtospecifiedsublimitSEndorsementPuertorico.TotalUnderlyingSpecifiedSublimitOfLiability:
+          type: string
+        FollowformtospecifiedsublimitSEndorsementPuertorico.TotalUnderlyingSpecifiedSublimitOfLiabilityPremium:
+          type: string
+        GeorgiaInvertedrepresentationendorsementwithseverability.AsOfFirstDt:
+          type: string
+          description: Provide date in YYYY-MM-DD format
+        GeorgiaInvertedrepresentationendorsementwithseverability.AsOfSecondDt:
+          type: string
+          description: Provide date in YYYY-MM-DD format
+        GeorgiaInvertedrepresentationendorsementwithseverability.AsOfThirdDt:
+          type: string
+          description: Provide date in YYYY-MM-DD format
+        GeorgiaInvertedrepresentationendorsementwithseverability.Title1:
+          type: string
+        GeorgiaInvertedrepresentationendorsementwithseverability.Title2:
+          type: string
+        IllinoisStarrsecureexcessliabilitypolicy.ExcessPolicyInsurer:
+          type: string
+        IllinoisStarrsecureexcessliabilitypolicy.ExcessPolicyLimits:
+          type: string
+        IllinoisStarrsecureexcessliabilitypolicy.ExcessPolicyPolicyNumber:
+          type: string
+        IllinoisStarrsecureexcessliabilitypolicy.ExcessPolicyPolicyPeriod:
+          type: string
+          description: Provide From - To date in YYYY-MM-DD format
+        IllinoisStarrsecureexcessliabilitypolicy.FollowedPolicyInsurer:
+          type: string
+        IllinoisStarrsecureexcessliabilitypolicy.FollowedPolicyLimits:
+          type: string
+        IllinoisStarrsecureexcessliabilitypolicy.FollowedPolicyPolicyNumber:
+          type: string
+        IllinoisStarrsecureexcessliabilitypolicy.FollowedPolicyPolicyPeriod:
+          type: string
+          description: Provide From - To date in YYYY-MM-DD format
+        IllinoisStarrsecureexcessliabilitypolicy.LimitOfLiability:
+          type: string
+        IllinoisStarrsecureexcessliabilitypolicy.PriorPolicyNumberWithInsurer:
+          type: string
+        InsuredAddressLine1:
+          type: string
+        InsuredAddressLine2:
+          type: string
+        InsuredAddressCity:
+          type: string
+        InsuredAddressState:
+          type: string
+        InsuredAddressZipCode:
+          type: string
+        Invertedwarrantyendorsementwithseverability.AsOfFirstDt:
+          type: string
+          description: Provide date in YYYY-MM-DD format
+        Invertedwarrantyendorsementwithseverability.AsOfSecondDt:
+          type: string
+          description: Provide date in YYYY-MM-DD format
+        Invertedwarrantyendorsementwithseverability.AsOfThirdDt:
+          type: string
+          description: Provide date in YYYY-MM-DD format
+        Invertedwarrantyendorsementwithseverability.Title1:
+          type: string
+        Invertedwarrantyendorsementwithseverability.Title2:
+          type: string
+        KansasInvertedrepresentationendorsementwithseverability.AsOfFirstDt:
+          type: string
+          description: Provide date in YYYY-MM-DD format
+        KansasInvertedrepresentationendorsementwithseverability.AsOfSecondDt:
+          type: string
+          description: Provide date in YYYY-MM-DD format
+        KansasInvertedrepresentationendorsementwithseverability.AsOfThirdDt:
+          type: string
+          description: Provide date in YYYY-MM-DD format
+        KansasInvertedrepresentationendorsementwithseverability.Title1:
+          type: string
+        KansasInvertedrepresentationendorsementwithseverability.Title2:
+          type: string
+        Louisianacertificationofexemptcommercialpolicyholderstatuspursuanttolouisianaregulation72.NamedInsuredSignature:
+          type: string
+        Louisianacertificationofexemptcommercialpolicyholderstatuspursuanttolouisianaregulation73.NamedInsuredDt:
+          type: string
+        Louisianacertificationofexemptcommercialpolicyholderstatuspursuanttolouisianaregulation76.RiskManager:
+          type: string
+        MarylandInsuredcancellationendorsement.EffectiveCancellationDt:
+          type: string
+          description: Provide date in YYYY-MM-DD format
+        MarylandInsuredcancellationendorsement.ReturnPremium:
+          type: string
+        MissouriStarrsecureexcessliabilitypolicy.ExcessPolicyInsurer: 
+          type: string
+        MissouriStarrsecureexcessliabilitypolicy.ExcessPolicyLimits:
+          type: string
+        MissouriStarrsecureexcessliabilitypolicy.ExcessPolicyPolicyNumber:
+          type: string
+        MissouriStarrsecureexcessliabilitypolicy.ExcessPolicyPolicyPeriod:
+          type: string
+          description: Provide From - To date in YYYY-MM-DD format
+        MissouriStarrsecureexcessliabilitypolicy.FollowedPolicyInsurer:
+          type: string
+        MissouriStarrsecureexcessliabilitypolicy.FollowedPolicyLimits:
+          type: string
+        MissouriStarrsecureexcessliabilitypolicy.FollowedPolicyPolicyNumber:
+          type: string
+        MissouriStarrsecureexcessliabilitypolicy.FollowedPolicyPolicyPeriod:
+          type: string
+          description: Provide From - To date in YYYY-MM-DD format
+        MissouriStarrsecureexcessliabilitypolicy.LimitOfLiability:
+          type: string
+        MissouriStarrsecureexcessliabilitypolicy.PolicyPremium:
+          type: string
+        MissouriStarrsecureexcessliabilitypolicy.PriorPolicyNumberWithInsurer:
+          type: string
+        MissouriStarrsecureexcessliabilitypolicy.UnderlyingCoverage:
+          type: string
+        MontanaRun-Offfollowformendorsement.EndorsementNo:
+          type: string
+        MontanaRun-Offfollowformendorsement.Premium:
+          type: string
+        MontanaRun-Offfollowformendorsement.RunOffEffectiveDt:
+          type: string
+          description: Provide date in YYYY-MM-DD format
+        NamedInsured:
+          type: string
+        NewHampshireStarrsecureexcessliabilitypolicy.ExcessPolicyInsurer:
+          type: string
+        NewHampshireStarrsecureexcessliabilitypolicy.ExcessPolicyLimits:
+          type: string
+        NewHampshireStarrsecureexcessliabilitypolicy.ExcessPolicyPolicyNumber:
+          type: string
+        NewHampshireStarrsecureexcessliabilitypolicy.ExcessPolicyPolicyPeriod:
+          type: string
+          description: Provide From - To date in YYYY-MM-DD format
+        NewHampshireStarrsecureexcessliabilitypolicy.FollowedPolicyInsurer:
+          type: string
+        NewHampshireStarrsecureexcessliabilitypolicy.FollowedPolicyLimits:
+          type: string
+        NewHampshireStarrsecureexcessliabilitypolicy.FollowedPolicyPolicyNumber:
+          type: string
+        NewHampshireStarrsecureexcessliabilitypolicy.FollowedPolicyPolicyPeriod:
+          type: string
+          description: Provide From - To date in YYYY-MM-DD format
+        NewHampshireStarrsecureexcessliabilitypolicy.LimitOfLiability:
+          type: string
+        NewHampshireStarrsecureexcessliabilitypolicy.PriorPolicyNumberWithInsurer:
+          type: string
+        NonFollowformendorsementButrecognizeerosion.TermsConditionsEndts:
+          type: array
+          items:
+            properties:
+              TermsConditionsEndts:
+                type: string
+        NumberOfYears:
+          type: string
+        Pendingorpriorexclusion.FirstDt:
+          type: string
+          description: Provide date in YYYY-MM-DD format
+        Pendingorpriorexclusion.PendingOrPriorDt:
+          type: string
+          description: Provide date in YYYY-MM-DD format
+        Pendingorpriorexclusion.SecondDt:
+          type: string
+          description: Provide date in YYYY-MM-DD format
+        Pendingorpriorexclusion.ThirdDt:
+          type: string
+          description: Provide date in YYYY-MM-DD format
+        PendingorpriorexclusionSplitcoveragesAndLimits.Excessofthefirst:
+          type: string
+        PendingorpriorexclusionSplitcoveragesAndLimits.ExcessAmt2:
+          type: string
+        PendingorpriorexclusionSplitcoveragesAndLimits.ExcessAmt3:
+          type: string
+        PendingorpriorexclusionSplitcoveragesAndLimits.ExcessLayer2:
+          type: string
+        PendingorpriorexclusionSplitcoveragesAndLimits.ExcessLayer3:
+          type: string
+        PendingorpriorexclusionSplitcoveragesAndLimits.FirstDt:
+          type: string
+          description: Provide date in YYYY-MM-DD format
+        PendingorpriorexclusionSplitcoveragesAndLimits.FirstLimitOfLiability2:
+          type: string
+        PendingorpriorexclusionSplitcoveragesAndLimits.FirstLimitOfLiability3:
+          type: string
+        PendingorpriorexclusionSplitcoveragesAndLimits.FollowedPolicyCoverageName:
+          type: string
+        PendingorpriorexclusionSplitcoveragesAndLimits.SecondDt:
+          type: string
+          description: Provide date in YYYY-MM-DD format
+        PendingorpriorexclusionSplitcoveragesAndLimits.ThirdDt:
+          type: string
+          description: Provide date in YYYY-MM-DD format
+        Pendingorpriorlitigationexclusion.AsOfDt:
+          type: string
+          description: Provide date in YYYY-MM-DD format
+        PendingorpriorlitigationexclusionIncreasedlimits.FirstLiabilityLimit:
+          type: string
+        PendingorpriorlitigationexclusionIncreasedlimits.LiabilityLimit:
+          type: string
+        PendingorpriorlitigationexclusionPuertorico.AsOfDt: 
+          type: string
+          description: Provide date in YYYY-MM-DD format
+        PolicyInsurerName:
+          type: string
+        PolicyNumber:
+          type: string
+        PolicyPremium:
+          type: string
+        Prioractsexclusion.PriorToDt:
+          type: string
+          description: Provide date in YYYY-MM-DD format
+        PrioractsexclusionPuertorico.PriorToDt:
+          type: string
+          description: Provide date in YYYY-MM-DD format
+        ProducerName:
+          type: string
+        ProducerSignature:
+          type: string
+        ProgramName:
+          type: string
+        PuertoricoDeletepolicyprovisionsandfollowfollowedpolicy.ProvisionDeleted:
+          type: array
+          items:
+            properties:
+              ProvisionDeleted:
+                type: string
+        PuertoricoFollowformSpecifiedcoverageSOnly.InsuringAgreementsClausesCoverage:
+          type: array
+          items:
+            properties:
+              InsuringAgreementsClausesCoverage:
+                type: string
+        PuertoricoFollowformtospecifiedsublimitSEndorsement.SpecifiedSublimitOfLiability:
+          type: string
+        PuertoricoRelianceendorsementNowarrantySpecifiedapplications.TypeOfPolicyApplicationSignedDt:
+          type: string
+        PuertoRicoStarrsecureexcessliabilitypolicy.ExcessPolicyInsurer:
+          type: string
+        PuertoRicoStarrsecureexcessliabilitypolicy.ExcessPolicyLimits:
+          type: string
+        PuertoRicoStarrsecureexcessliabilitypolicy.ExcessPolicyPolicyNumber:
+          type: string
+        PuertoRicoStarrsecureexcessliabilitypolicy.ExcessPolicyPolicyPeriod:
+          type: string
+          description: Provide From - To date in YYYY-MM-DD format
+        PuertoRicoStarrsecureexcessliabilitypolicy.FollowedPolicyInsurer:
+          type: string
+        PuertoRicoStarrsecureexcessliabilitypolicy.FollowedPolicyLimits:
+          type: string
+        PuertoRicoStarrsecureexcessliabilitypolicy.FollowedPolicyPolicyNumber:
+          type: string
+        PuertoRicoStarrsecureexcessliabilitypolicy.FollowedPolicyPolicyPeriod:
+          type: string
+          description: Provide From - To date in YYYY-MM-DD format
+        PuertoRicoStarrsecureexcessliabilitypolicy.LimitOfLiability:
+          type: string
+        PuertoRicoStarrsecureexcessliabilitypolicy.PriorPolicyNumberWithInsurer:
+          type: string
+        Quotashareendorsement.InsurerName:
+          type: string
+        Quotashareendorsement.LimitOfLiability:
+          type: string
+        Quotashareendorsement.TotalQuotaShareLayerLimitOfLiability:
+          type: string
+        QuotashareendorsementPuertorico.InsurerName:
+          type: string
+        QuotashareendorsementPuertorico.LimitOfLiability: 
+          type: string
+        QuotashareendorsementPuertorico.TotalQuotaShareLayerLimitOfLiability:
+          type: string
+        RelianceendorsementNewhampshireSpecifiedapplications.InsurerName:
+          type: string
+        RelianceendorsementNewhampshireSpecifiedapplications.SignedDt:
+          type: string
+          description: Provide date in YYYY-MM-DD format
+        RelianceendorsementNewhampshireSpecifiedapplications.TypeOfPolicyApplication:
+          type: string
+        RelianceendorsementNowarrantyPuertoricoSpecifiedapplications.SignedDt:
+          type: string
+          description: Provide date in YYYY-MM-DD format
+        RelianceendorsementSpecifiedapplications.PolicyInsurerName: 
+          type: string
+        RelianceendorsementSpecifiedapplications.SignedDt:
+          type: string
+          description: Provide date in YYYY-MM-DD format
+        RelianceendorsementSpecifiedapplications.TypeOfPolicyApplication:
+          type: string
+        RelianceendorsementSpecifiedapplications.TypeOfPolicyApplicationSignedDt:
+          type: string
+          description: Provide date in YYYY-MM-DD format
+        ReturnPremium:
+          type: string
+        Rhodeislanddefensecostsdisclosure.NamedInsuredDt:
+          type: string
+          description: Provide date in YYYY-MM-DD format
+        Run-Offfollowformendorsement.EndorsementNo:
+          type: string
+        Run-Offfollowformendorsement.Premium:
+          type: string
+        Run-Offfollowformendorsement.RunOffEffectiveDt:
+          type: string
+          description: Provide date in YYYY-MM-DD format
+        Starrsecureexcessliabilitypolicy.ClassCd:
+          type: string
+        Starrsecureexcessliabilitypolicy.ExcessPolicyInsurer:
+          type: string
+        Starrsecureexcessliabilitypolicy.ExcessPolicyLimits:  
+          type: string
+        Starrsecureexcessliabilitypolicy.ExcessPolicyPolicyNumber:
+          type: string
+        Starrsecureexcessliabilitypolicy.ExcessPolicyPolicyPeriod:
+          type: string
+          description: Provide From - To date in YYYY-MM-DD format
+        Starrsecureexcessliabilitypolicy.FollowedPolicyInsurer:
+          type: string
+        Starrsecureexcessliabilitypolicy.FollowedPolicyLimits:
+          type: string
+        Starrsecureexcessliabilitypolicy.FollowedPolicyPolicyNumber:
+          type: string
+        Starrsecureexcessliabilitypolicy.FollowedPolicyPolicyPeriod:
+          type: string
+          description: Provide From - To date in YYYY-MM-DD format
+        Starrsecureexcessliabilitypolicy.LiabilityLimit:
+          type: string
+        Starrsecureexcessliabilitypolicy.LimitOfLiability:
+          type: string
+        Starrsecureexcessliabilitypolicy.PolicyPremium:
+          type: string
+        Starrsecureexcessliabilitypolicy.PriorPolicyNumberWithInsurer:
+          type: string
+        Starrsecureexcessliabilitypolicy.StatCd:
+          type: string
+        Starrsecureexcessliabilitypolicy.UnderlyingCoverage:
+          type: array
+          items:
+            properties:
+              UnderlyingCoverage:
+                type: string
+        TypeOfPolicyApplicationSignedDt:
+          type: string
+          description: Provide date in YYYY-MM-DD format
+        Virginiaaddendumtodeclarations.DiscoveryPeriodForMidTermReductionInCoverage:
+          type: string
+        Virginiaaddendumtodeclarations.DiscoveryPeriodForMidTermReductionInCoveragePremium:
+          type: string
+        Virginiaaddendumtodeclarations.LengthofDiscoveryPeriodForMidTermReductionInCoverage:
+          type: string
+        Virginiaaddendumtodeclarations.ReinstatedLimitofLiabilityPurchasedbyNamedInsuredItem7:  
+          type: string
+        Virginiaaddendumtodeclarations.ReinstatedLimitofLiabilityPurchasedbyNamedInsuredItem:
+          type: string
+        Virginiapurchaseofdiscoveryperiodwithreinstatedlimitofliability.NumberOfYears:
+          type: string
+        Virginiapurchaseofmid-Termreductionincoveragewithreinstatedlimitofliability.NumberOfYears:
+          type: string
+        VirginiaStarrsecureexcesspolicy.ExcessPolicyInsurer:
+          type: string
+        VirginiaStarrsecureexcesspolicy.ExcessPolicyLimits:
+          type: string
+        VirginiaStarrsecureexcesspolicy.ExcessPolicyPolicyNumber:
+          type: string
+        VirginiaStarrsecureexcesspolicy.ExcessPolicyPolicyPeriod: 
+          type: string
+          description: Provide From - To date in YYYY-MM-DD format
+        VirginiaStarrsecureexcesspolicy.FollowedPolicyLimits:
+          type: string
+        VirginiaStarrsecureexcesspolicy.FollowedPolicyPolicyNumber:
+          type: string
+        VirginiaStarrsecureexcesspolicy.FollowedPolicyPolicyPeriod:
+          type: string
+          description: Provide From - To date in YYYY-MM-DD format
+        VirginiaStarrsecureexcesspolicy.PriorPolicyNumberWithInsurer:
+          type: string
+        VirginiaStarrsecureexcesspolicy.FollowedPolicyInsurer:
+          type: string
+        VirginiaStarrsecureexcesspolicy.LimitOfLiability:
+          type: string
+        VirginiaStarrsecureexcesspolicy.UnderlyingCoverage:
+          type: array
+          items:
+            properties:
+              UnderlyingCoverage:
+                type: string
+        DocGenerationFormsList:
+          type: array
+          items:
+            properties:
+              FormNumber:
+                type: string
+              FormName:
+                type: string
+          
+          
+
+  errorModel:
+    type: object
+    required:
+      - RequestStatus
+      - MessageDetail
+    properties:
+      RequestStatus:
+        type: string
+      MessageDetail:
+        type: object
+        properties:
+          MessageCode:
+            type: string
+          MessageType:
+            type: string
+          UserMessage:
+            type: string
+          MessageLevel:
+            type: string
+          MessageSeverity:
+            type: string
+          MessageList:
+            type: object
+            properties:
+              Message:
+                type: array
+                items:
+                  type: string
+                  
+  DocGeneration_Success_Response:
+    type: object
+    properties:
+      ResponseStatus:
+        type: string
+      CustomerOwnerID:
+        type: string
+      Status:
+        type: string
+      DocumentURL:
+        type: string
+      PolicNumber:
+        type: string
+
+        

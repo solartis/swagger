@@ -111,18 +111,6 @@ definitions:
          RegionCode:
           type: string
           default: "US"
-         EventName:
-          type: string
-          default: "DocumentGeneration"
-         EventVersion:
-          type: string
-          default: "1.1.0.1"
-         ProductNumber:
-          type: string
-          default: "STARR_EFL"
-         ProductVerNumber:
-          type: string
-          default: "STARR_EFL_1.0"
       Policy:
        type: object
        required:
@@ -149,7 +137,7 @@ definitions:
           type: string
         AmenddeclarationspageBreakoutsharedAndSeparatelimitsforspecifiedcoveragesDeclarations.SharedLimitOfLiabilityDOCoverage:
           type: string
-        AmenddeclarationspageBreakoutsharedAndSeparatelimitsforspecifiedcoveragesDeclarations.SharedLimitOfLiabilityEmploymentPracticesLiabCoverage:
+        AmenddeclarationspageBreakoutsharedAndSeparatelimitsforspecifiedcoveragesDeclarations.SharedLimitOfLiabilityEmploymentPracticesLiabCoverage :
           type: string
         AuthorizedRepresentative:
           type: string
@@ -443,6 +431,9 @@ definitions:
         Pendingorpriorlitigationexclusion.AsOfDt:
           type: string
           description: Provide date in YYYY-MM-DD format
+        PendingorpriorlitigationexclusionIncreasedlimits.AsOfDt:
+          type: string
+          description: Provide date in YYYY-MM-DD format
         PendingorpriorlitigationexclusionIncreasedlimits.FirstLiabilityLimit:
           type: string
         PendingorpriorlitigationexclusionIncreasedlimits.LiabilityLimit:
@@ -510,13 +501,13 @@ definitions:
           type: string
         Quotashareendorsement.LimitOfLiability:
           type: string
-        Quotashareendorsement.TotalQuotaShareLayerLimitOfLiability:
+        Quotashareendorsement.TotalQuotaShareLayerLimitOf Liability:
           type: string
         QuotashareendorsementPuertorico.InsurerName:
           type: string
         QuotashareendorsementPuertorico.LimitOfLiability: 
           type: string
-        QuotashareendorsementPuertorico.TotalQuotaShareLayerLimitOfLiability:
+        QuotashareendorsementPuertorico.TotalQuotaShareLayerLimitOf Liability:
           type: string
         RelianceendorsementNewhampshireSpecifiedapplications.InsurerName:
           type: string
@@ -597,7 +588,7 @@ definitions:
           type: string
         Virginiaaddendumtodeclarations.ReinstatedLimitofLiabilityPurchasedbyNamedInsuredItem7:  
           type: string
-        Virginiaaddendumtodeclarations.ReinstatedLimitofLiabilityPurchasedbyNamedInsuredItem:
+        Virginiaaddendumtodeclarations.ReinstatedLimitofLiabilityPurchasedbyNamedInsuredItem8:
           type: string
         Virginiapurchaseofdiscoveryperiodwithreinstatedlimitofliability.NumberOfYears:
           type: string
@@ -631,6 +622,18 @@ definitions:
             properties:
               UnderlyingCoverage:
                 type: string
+        EventName:
+          type: string
+          default: "DocumentGeneration"
+        EventVersion:
+          type: string
+          default: "1.1.0.1"
+        ProductNumber:
+          type: string
+          default: "STARR_EFL"
+        ProductVerNumber:
+          type: string
+          default: "STARR_EFL_1.0"
         DocGenerationFormsList:
           type: array
           items:
@@ -639,6 +642,7 @@ definitions:
                 type: string
               FormName:
                 type: string
+      
           
           
 

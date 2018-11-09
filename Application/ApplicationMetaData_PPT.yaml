@@ -92,7 +92,7 @@ definitions:
         items:
           $ref: '#/definitions/SubApplicationNames'
         default:
-          - SubApplicationName: PrivatePassenger
+          - SubApplicationName: PrivatePassengerDetail
       AttributeList:
         title: Use this in case you need metadata for a or set of specific Attributes?
         type: 

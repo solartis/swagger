@@ -1,0 +1,4196 @@
+swagger: '2.0'
+info:
+  version: "1.1.0.8"
+  title: Solartis Rate API for STARR Commercial Auto
+  description: To rate a commercial auto policy per the inputs provided
+
+host: starrca.rc.solartis.net
+basePath: /DroolsV4_2/DroolsService
+schemes:
+  - https
+consumes:
+  - application/json  
+produces:
+  - application/json
+paths:
+  /FireEventV2:
+    post:
+      description: Gets Rates for Commercial Auto based on ISO ERC
+      operationId: getRates
+      produces:
+        - application/json
+      parameters:
+        - name: Token
+          in: header
+          description: Authentication Token
+          required: true
+          type: string
+          format: string
+          default: "D7wFK43aGA/4kKZKSbnoBPo521l9qQ3zIs57/ZEVIfjfn9VKDXY2lE4Lh1u22cUEg23BfKOsREYOUyU4jYq4T5fyGvM7i4wRu8gJXWtMonWpYBR7cakzXflQ5qf31qJ2rovsfLCyBGNhTi7BsA2gT+4CVusbyEfEpk37+z32AU8zSxyIb3TXyRdvFV5oWbpd+CJ6ZcCje069JJ5iH5R2icCtL8nhNcleSOlBg7u+0kwauUEGP72afI5I70ie3233U2beljAmfuPHuwrS+Xo2tE1vZg207SQCYFEY/kKHh5EdjYUcjFb9Z5D4RjxcYjn4t4KrGlwvCyo0W1HpeenY81EDIE1do2qULIoTSAQZlsznONjVyZY13cfC4PagN45uTv1vgL+ms7In+v5C5DuVCOKsKnaAHhQsGedWbeTT9+FPQYpGzX8PUsW1bdXvZI3fQNnvbmQzYn4tmRAO2e0APsrbjukrqNz01k7a+wCJoBOnMggW3EwIpF8BAJv/rRsXI2SVkdBL6d4RVncvSJ2XvInrS7lpOM6C3A1iNdeitV5yHCHVszudlTrOQ81ybcyatWo72tElkYxxG/MoGAE74q3Cb3A7fFMmlFPGCwU+nmumjmh2xRcUtKlTEKHJCpgIaablHcWUV9r1vNLDvSrCdOS/mCZI1oxSKrTaX9yPJ8rzK3VM7N9Yo7E9hBYtxXR/pzRt9aXevoWDm58cmb7Fo3bZotNseYHfA82CLtfuWCTMqI9wQ8SfDmy/ZB80iZqZFRG/oE8VkLxqGEjJWh7k0GIyhRiRAymDgf7cWjZaHs9TVXXJdTpWEv9COwM0spur1xOcefC0WHxPiBjxKpZJtEPGTlBNkRf1gqpYmjyruRLax83biU7kWfo32tMyGfaTqzrQBthtUKKU07Zbizn2zD6VEbA4HMErNsFpHlERbwK7ieLBUJng83XD9qkUY+bET6dFriMQ1VSt9bwwSPqD1Kex6/Q0rTUdEj/i5qLohrdOfJSeQuaKPOLH+7OGZLWwj+1kM5R8vYXO9S3rLZFRSKT7PQj4t5y+PRiP5u5yAhzydtIZcR7o3IOSHOvkUBO70zyIJFaCVRYPgySvFn+5HIEsHzYM8TAYwT71QUCkB7M1fQtQm3qvJtQj/seFz/xfyBMwrgvc51M7OBaEbIGm8a+6d4qqxL17I1WC1v8FEI2v/HYdboULdekFc5ntCJTr5IHmAak3l06sMVPKEMU0M3zlKTAbMFVjEWMPbsGy/lBAGXTJFzMj8iZhMSKRRtjNk6c5mrDyjHfZTrUQ648p0+9MhPnFhEiez9ttCVZ24PElngJeo3HcFAk2OqRuhmvLGUsHbJluFOcCMt9dRyFpcjwp7YvvYCTL1tXXtCy6Coo+2FuTW1ZxZ8x9hpXyoW4KJchNwCBl3RVXrCuMo0tf2454xXVib3Vrc2+e85q+QLrHuxB691TyVXGvKfVV0JRO31F2AhHjfqx++vYOD7Frk43dw3eJ1D7+LpnCMBDtwhPWE7BBdCKalV78HZFI2Ekgip2O6+bIzYFRUpGEb2hFR3fzJ+44bp4FG52tpSmaEELeAabtP3VQPGPl4qrJ35fzZizuhT+dJCjt94+wGTjSzd0xH/5l7j4bJN0a0yGlpGJXFMNN1tJM4JgJ7NwZUQGU0BpZ45+sbR2D0Cnf9TOtsXsY5ceTwl0BXSSG00quEnKWoc6NeLZ7TBDP0fnqgsYPrEis+1GClzPwFGfy1wyNWMjNa2VyrkOHanZeiz4Ofyq+P46NeCqBEsWc05kb3IvrQ0OKvTEzWoibHPkCWCqfFjTm5Xw7rHAIrW9BtQXYThFedLPfnTdcca4M77DiQImHL3hUzD519fpq120RxqIK+1ASgEYMPE0PK7ItrnveqFKvnKE8YBAC/1p9fzTkkTT7+bK0kla+N31OtZDNuf7fs8GJDgKhXc2wv3SnLFJy5tTPmPySqZkZQTIy8IYtambSj4H6VIoBV3v8LTbQrb1Ts2OM9fbQgHcvuZ0OcAKs0Z8ffhpH5DQVT8UfPCzmmEs2+jxy2wP1nPpzDrQS+vIIJ17E9qJxAUAH6F/YC0otOw8M2yoLABRT0AeCrrmJa+pxq+Sa1Rpw8kNm00lPQ6qikEXRi9A3n3Cla3/FxdmPmn9oUMt3yXvKZ9aREjBwJmCdhhroUHzUPQVVo73XgiRl4ScWiHQgcWy2s5JBNYEWqGkHQqN6x19aBqFtLPOSGwNqZ8u4sbzXB7/PqRf/GrP1tctlVu7pwx52UbR1huxv0UCDPKnxWhgbUhOKZHqwtw1G59zIChxCcdB4icJiQ/blC1F9kXQOyRgKVWTNlDwOekpmHgIWOYMJnzLB6iOU5H3uNkhenHdjImDKjk7+hP9uQSbzQ1OhLUMcsNoCwyzOPwz0FuWoBvLRwtfgrXnYKQxkF9WJKXEOm/tcZgjnbx2ydmge9pmNezyic9IgQ+bL3Iz4PanpaGko3Feecpbd5lepOZ4AMBCltEk99dwy8fmJefHlbh1lO3PpT5pNct6JWIBUSmyWNBnqP7aeWD6jAucznMmgIctjTQttCEZTrje/PFRKbJY0Geo/tp5YPqMC5zPZxbh17NP3/S+gRyXuwvgyXRpTz5Hg2RJortERrqJkxDLOFJjvPVWCpZGeVn9TMw5q15j5FQkFTBiYHt7EVS4wWU6VmwFaIb105GXzfu5C0XHIItfDTUILxgSmuaaqEa6qARg6FFFQK53hEvv6n+trVxnRbqiWJSZWEK2a5Xge2QTqkl8ZxU1YDfWpmTPuuvYo3ny6d68hG0dqgE21BukxhPAZiETEUyxF53FuBaUEDUabgz38sYzZGzH/YCPv6V+Vv8lL59hCZhbyG6Skqt8+qtYMFwbn362p5vJHWuv69rmfqLLo+TpVG35f3lDXCcnuJmJETo9Jo9275friYK+F5TNgeWXoQo6oF84ndNYHG+iZ9XIoBoWxRQtb954U/Up6BygXrHoeEjclrVFebWi7cykG0wvm9DIg9L0yIEkpDuKdyADrMn1rqWhY9/7TMMLXLPkmivIipBVGIIaVNJAc4jBSa1TTREvMs8tmfiIUqxzGOBS8Ja/v19BpbEIhqOQ/kBtVzO/l4bJXQSrOlJiGdAgHWFtzB309B5Y+qMqsjV8aVQaw9NNV103HjlCj6URf2MSvwxhzUlfCz1sUShmR0jcB34zrmEOm3Rieqe21rzjJoeHR8AVI3Nb6CAXPpwXcdx4jYuIQ85t3EuQVy9f605a06NZRG6mtE8/7LDJGUgHEb/Yy3s7/LhzfLvaV4QM3ZWssOq2i5Q7oZ3kx0qmE1gPiOxFAn6F7C0/CUJhPR2/1I/ub8jLwyTbZKcVU+b2jGwYQaXsc0+i3G+skG4nU39BNeqmeGfhYFjtWgi3atm/1I/ub8jLwyTbZKcVU+b0S5rj0fBXTVe531ZoxGQvMELyfk94vdP4V2Ve0aTins65lRG4aMvvkfyHoGNGQK/grow2j8lpTepHT5KDzHr0c"
+        - name: Content-Type
+          in: header
+          description: Content Type
+          required: true
+          type: string
+          default: "application/json"
+        - name: EventName
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "StarrCARate_1.1.0.8"
+        - name: Rating Request
+          in: body
+          description: For rating request
+          schema:
+            $ref: '#/definitions/Rating_Request'
+            
+      responses:
+       '200':
+        description: Success Response
+        schema:
+         $ref: '#/definitions/Rating_Success_Response'
+       default: 
+        description: unexpected error
+        schema:
+          $ref: '#/definitions/errorModel'
+definitions:
+  Rating_Request:
+    type: object
+    properties:
+      EndClientUserUniqueSessionId: 
+       title: "Client User Unique Session ID"
+       type: string
+       default: "Uniquesession"
+      OwnerId:
+       title: "Owner ID"
+       type: string
+       default: "35"
+      ServiceRequestDetail:
+        type: object
+        properties:
+         ServiceRequestVersion:
+          title: "ServiceRequestVersion"
+          type: string
+          default: "1.0"
+         ServiceResponseVersion:
+          title: "ServiceResponseVersion"
+          type: string
+          default: "1.0"
+         OwnerId:
+          title: "Owner ID"
+          type: string
+          default: "35"
+         ResponseType:
+          title: "Response Type"
+          type: string
+          default: "JSON"
+         UserName:
+          title: "User Name"
+          type: string
+          default: "StarrCAagent"
+         Token:
+          type: string
+          default: "D7wFK43aGA/4kKZKSbnoBPo521l9qQ3zIs57/ZEVIfjfn9VKDXY2lE4Lh1u22cUEg23BfKOsREYOUyU4jYq4T5fyGvM7i4wRu8gJXWtMonWpYBR7cakzXflQ5qf31qJ2rovsfLCyBGNhTi7BsA2gT+4CVusbyEfEpk37+z32AU8zSxyIb3TXyRdvFV5oWbpd+CJ6ZcCje069JJ5iH5R2icCtL8nhNcleSOlBg7u+0kwauUEGP72afI5I70ie3233U2beljAmfuPHuwrS+Xo2tE1vZg207SQCYFEY/kKHh5EdjYUcjFb9Z5D4RjxcYjn4t4KrGlwvCyo0W1HpeenY81EDIE1do2qULIoTSAQZlsznONjVyZY13cfC4PagN45uTv1vgL+ms7In+v5C5DuVCOKsKnaAHhQsGedWbeTT9+FPQYpGzX8PUsW1bdXvZI3fQNnvbmQzYn4tmRAO2e0APsrbjukrqNz01k7a+wCJoBOnMggW3EwIpF8BAJv/rRsXI2SVkdBL6d4RVncvSJ2XvInrS7lpOM6C3A1iNdeitV5yHCHVszudlTrOQ81ybcyatWo72tElkYxxG/MoGAE74q3Cb3A7fFMmlFPGCwU+nmumjmh2xRcUtKlTEKHJCpgIaablHcWUV9r1vNLDvSrCdOS/mCZI1oxSKrTaX9yPJ8rzK3VM7N9Yo7E9hBYtxXR/pzRt9aXevoWDm58cmb7Fo3bZotNseYHfA82CLtfuWCTMqI9wQ8SfDmy/ZB80iZqZFRG/oE8VkLxqGEjJWh7k0GIyhRiRAymDgf7cWjZaHs9TVXXJdTpWEv9COwM0spur1xOcefC0WHxPiBjxKpZJtEPGTlBNkRf1gqpYmjyruRLax83biU7kWfo32tMyGfaTqzrQBthtUKKU07Zbizn2zD6VEbA4HMErNsFpHlERbwK7ieLBUJng83XD9qkUY+bET6dFriMQ1VSt9bwwSPqD1Kex6/Q0rTUdEj/i5qLohrdOfJSeQuaKPOLH+7OGZLWwj+1kM5R8vYXO9S3rLZFRSKT7PQj4t5y+PRiP5u5yAhzydtIZcR7o3IOSHOvkUBO70zyIJFaCVRYPgySvFn+5HIEsHzYM8TAYwT71QUCkB7M1fQtQm3qvJtQj/seFz/xfyBMwrgvc51M7OBaEbIGm8a+6d4qqxL17I1WC1v8FEI2v/HYdboULdekFc5ntCJTr5IHmAak3l06sMVPKEMU0M3zlKTAbMFVjEWMPbsGy/lBAGXTJFzMj8iZhMSKRRtjNk6c5mrDyjHfZTrUQ648p0+9MhPnFhEiez9ttCVZ24PElngJeo3HcFAk2OqRuhmvLGUsHbJluFOcCMt9dRyFpcjwp7YvvYCTL1tXXtCy6Coo+2FuTW1ZxZ8x9hpXyoW4KJchNwCBl3RVXrCuMo0tf2454xXVib3Vrc2+e85q+QLrHuxB691TyVXGvKfVV0JRO31F2AhHjfqx++vYOD7Frk43dw3eJ1D7+LpnCMBDtwhPWE7BBdCKalV78HZFI2Ekgip2O6+bIzYFRUpGEb2hFR3fzJ+44bp4FG52tpSmaEELeAabtP3VQPGPl4qrJ35fzZizuhT+dJCjt94+wGTjSzd0xH/5l7j4bJN0a0yGlpGJXFMNN1tJM4JgJ7NwZUQGU0BpZ45+sbR2D0Cnf9TOtsXsY5ceTwl0BXSSG00quEnKWoc6NeLZ7TBDP0fnqgsYPrEis+1GClzPwFGfy1wyNWMjNa2VyrkOHanZeiz4Ofyq+P46NeCqBEsWc05kb3IvrQ0OKvTEzWoibHPkCWCqfFjTm5Xw7rHAIrW9BtQXYThFedLPfnTdcca4M77DiQImHL3hUzD519fpq120RxqIK+1ASgEYMPE0PK7ItrnveqFKvnKE8YBAC/1p9fzTkkTT7+bK0kla+N31OtZDNuf7fs8GJDgKhXc2wv3SnLFJy5tTPmPySqZkZQTIy8IYtambSj4H6VIoBV3v8LTbQrb1Ts2OM9fbQgHcvuZ0OcAKs0Z8ffhpH5DQVT8UfPCzmmEs2+jxy2wP1nPpzDrQS+vIIJ17E9qJxAUAH6F/YC0otOw8M2yoLABRT0AeCrrmJa+pxq+Sa1Rpw8kNm00lPQ6qikEXRi9A3n3Cla3/FxdmPmn9oUMt3yXvKZ9aREjBwJmCdhhroUHzUPQVVo73XgiRl4ScWiHQgcWy2s5JBNYEWqGkHQqN6x19aBqFtLPOSGwNqZ8u4sbzXB7/PqRf/GrP1tctlVu7pwx52UbR1huxv0UCDPKnxWhgbUhOKZHqwtw1G59zIChxCcdB4icJiQ/blC1F9kXQOyRgKVWTNlDwOekpmHgIWOYMJnzLB6iOU5H3uNkhenHdjImDKjk7+hP9uQSbzQ1OhLUMcsNoCwyzOPwz0FuWoBvLRwtfgrXnYKQxkF9WJKXEOm/tcZgjnbx2ydmge9pmNezyic9IgQ+bL3Iz4PanpaGko3Feecpbd5lepOZ4AMBCltEk99dwy8fmJefHlbh1lO3PpT5pNct6JWIBUSmyWNBnqP7aeWD6jAucznMmgIctjTQttCEZTrje/PFRKbJY0Geo/tp5YPqMC5zPZxbh17NP3/S+gRyXuwvgyXRpTz5Hg2RJortERrqJkxDLOFJjvPVWCpZGeVn9TMw5q15j5FQkFTBiYHt7EVS4wWU6VmwFaIb105GXzfu5C0XHIItfDTUILxgSmuaaqEa6qARg6FFFQK53hEvv6n+trVxnRbqiWJSZWEK2a5Xge2QTqkl8ZxU1YDfWpmTPuuvYo3ny6d68hG0dqgE21BukxhPAZiETEUyxF53FuBaUEDUabgz38sYzZGzH/YCPv6V+Vv8lL59hCZhbyG6Skqt8+qtYMFwbn362p5vJHWuv69rmfqLLo+TpVG35f3lDXCcnuJmJETo9Jo9275friYK+F5TNgeWXoQo6oF84ndNYHG+iZ9XIoBoWxRQtb954U/Up6BygXrHoeEjclrVFebWi7cykG0wvm9DIg9L0yIEkpDuKdyADrMn1rqWhY9/7TMMLXLPkmivIipBVGIIaVNJAc4jBSa1TTREvMs8tmfiIUqxzGOBS8Ja/v19BpbEIhqOQ/kBtVzO/l4bJXQSrOlJiGdAgHWFtzB309B5Y+qMqsjV8aVQaw9NNV103HjlCj6URf2MSvwxhzUlfCz1sUShmR0jcB34zrmEOm3Rieqe21rzjJoeHR8AVI3Nb6CAXPpwXcdx4jYuIQ85t3EuQVy9f605a06NZRG6mtE8/7LDJGUgHEb/Yy3s7/LhzfLvaV4QM3ZWssOq2i5Q7oZ3kx0qmE1gPiOxFAn6F7C0/CUJhPR2/1I/ub8jLwyTbZKcVU+b2jGwYQaXsc0+i3G+skG4nU39BNeqmeGfhYFjtWgi3atm/1I/ub8jLwyTbZKcVU+b0S5rj0fBXTVe531ZoxGQvMELyfk94vdP4V2Ve0aTins65lRG4aMvvkfyHoGNGQK/grow2j8lpTepHT5KDzHr0c"
+         BrowserIp:
+          type: string
+          default: "111.93.119.74"
+      Policy:
+       type: object
+       properties:
+        ALAECoverage:
+         type: string
+         default: "Covered 100%"
+        AbuseOrMolestationExclusionForGeneralLiabilityCoveragesManualPremium:
+         type: string
+         default: "100"
+        AddInsGLCoveragesConcessionairesTradingUnderYourNameManualPremium:
+         type: string
+         default: "8000"
+        AddedPIPCoverageType:
+         type: string
+         default: "30,000 Medical Expenses and 20,000 Other PIP Benefits"
+        AddedPersonalInjuryProtection:
+         type: array
+         items:
+          properties:
+           AddedPersonalInjuryProtectionDetail:
+            type: object
+            properties:
+              FamilyMembersName:
+               type: string
+               default: "1"
+        AddedPersonalInjuryProtectionLimitText:
+         type: string
+         default: "10,000"
+        AdditionalChiropracticTreatments:
+         type: string
+         default: Yes
+        AdditionalInsuredGaragesGrantorFranchiseDetailManualPremium:
+         type: string
+         default: "100"
+        AdditionalInsuredLessorOfLeasedEquipmentDetailManualPremium:
+         type: string
+         default: " 100"
+        AdditionalPIPAggregateLimit:
+         type: string
+         default: ""
+        AdditionalPIPCoverageType:
+         type: string
+         default: "Option 1"
+        AdditionalPIPWorkLossOrSurvivorsIncomeLossPerWeek:
+         type: string
+         default: ""
+        AddlInsGLLessorOfLeasedEqpmtAutomtcStatusWhenRqdInLeasedAgrmtWithYouManualPremium:
+         type: string
+         default: "478"
+        AddressLine1:
+         type: string
+         default: "27TH ST"
+        AddressLine2:
+         type: string
+         default: PHOENIX
+        AmendmentOfLimitsOfInsuranceGeneralLiabilityCoveragesManualPremium:
+         type: string
+         default: "100"
+        AutosLeasedHiredRentedWithDriversPhysicalDamageCovCollisionCoverageManualPremium:
+         type: string
+         default: "100"
+        AutosLeasedHiredRentedWithDriversPhysicalDamageCovComprehensiveCoverageManualPremium:
+         type: string
+         default: "100"
+        AutosLeasedHiredRentedWithDriversPhysicalDamageCovSpecifiedCausesOfLossCoverageManualPremium:
+         type: string
+         default: "100"
+        BasicLimitCoLiabilityPremium:
+         type: string
+         default: "1000"
+        BasicLimitCoLiabilityPremiumOverride:
+         type: string
+         default: "2000"
+        BroadFormNamedInsured:
+         type: string
+         default: No
+        CPPIRPMFactor:
+         type: string
+         default: "2"
+        ChangesToTheBankruptcyOrInsolvencyExclusionForActsErrorsOrOmissionsLiabilityCoveragesManualPremium:
+         type: string
+         default: "100"
+        City:
+         type: string
+         default: Brighton
+        CoPhysicalDamagePremium:
+         type: string
+         default: "1000"
+        CoPhysicalDamagePremiumOverride:
+         type: string
+         default: "2000"
+        CommercialAutoChangesAmendmentOfDefinitionOfPollutants:
+         type: string
+         default: "1000"
+        CommercialAutoDriveOtherCarCovBroadenedCovForNamedIndividualsLiabilityCoverageDeductible:
+         type: string
+         default: "1000"
+        CommercialAutoDrivingSchoolPedestrianPIPCoveragePedestrianPIPCoverage:
+         type: string
+         default: "1000"
+        CommercialAutoGrossReceiptsBasisMedicalPaymentsCoverageLimitText:
+         type: string
+         default: "1000"
+        CommercialAutoMinnesotaAddedPersonalInjuryProtection:
+         type: string
+         default: Yes
+        CommercialAutoPublicOrLiveryPassengerConveyanceAndOnDemandDeliveryServicesExclusion:
+         type: string
+         default: No
+        CommercialAutoPublicOrLiveryPassengerConveyanceExclusion:
+         type: string
+         default: No
+        CommercialAutoPublicTransportationAutos:
+         type: string
+         default: Yes
+        CommercialAutoTrailerInterchangeAgreementCollisionCoverageDeductible:
+         type: string
+         default: "1000"
+        CommercialAutoTrailerInterchangeAgreementDetailOtherThanCollisionCoverageType:
+         type: string
+         default: "1000"
+        CommunicableDiseaseExclusionForGeneralLiabilityCoveragesManualPremium:
+         type: string
+         default: "100"
+        ConnecticutChangesLiabilityOfMunicipalitiesManualPremium:
+         type: string
+         default: "100"
+        County:
+         type: string
+         default: Nobles
+        CoverageForInjuryToLeasedWorkersManualPremium:
+         type: string
+         default: "100"
+        CustomerComplaintLegalDefenseCoverageManualPremium:
+         type: string
+         default: "100"
+        CustomerComplaintLegalDefenseCoverageWithNoCoverageForNewlyAcquiredOrFormedAutoDealershipManualPremium:
+         type: string
+         default: "100"
+        DeathBenefitsLimit:
+         type: string
+         default: "25,000"
+        DesignatedLocationsGeneralLiabilityAggregateLimitForCertainGeneralLiabilityCoveragesManualPremium:
+         type: string
+         default: "100"
+        DriveOtherCarCovBroadenedCovForNamedIndividualsMedicalPaymentsCoverageLimitText:
+         type: string
+         default: "1000"
+        DriveOtherCarCovBroadenedCovForNamedIndividualsOtherThanCollisionCoverageFullGlassCoverage:
+         type: string
+         default: "1000"
+        DriveOtherCarCovBroadenedCovForNamedIndividualsUninsuredMotoristsCoverageCoverageType:
+         type: string
+         default: "1000"
+        DriveOtherCarCoverageBroadenedCoverageForNamedIndividualsPedestrianPIPCoveragePedestrianPIPCoverage:
+         type: string
+         default: "1000"
+        EffectiveDate:
+         type: string
+         default: "2018-12-12"
+        EmployeeBenefitsLiabilityCoverageManualpremium:
+         type: string
+         default: "45"
+        EmployeeBenefitsLiabilityCoverageWithNoCoverageForNewlyAcquiredOrFormedAutoDealershipManualPremium:
+         type: string
+         default: "100"
+        EngageInTruckingOperations:
+         type: string
+         default: "1000"
+        EventName:
+         type: string
+         default: StarrCARate_1.1.0.8
+        ExclusionDesignatedProductsManualPremium:
+         type: string
+         default: "100"
+        ExclusionDesignatedWorkYouPerformedManualPremium:
+         type: string
+         default: "100"
+        ExclusionNewlyAcquiredOrFormedAutoDealershipManualPremium:
+         type: string
+         default: "100"
+        ExclusionYear2000ComputerRelatedElectronicProblemsExceptionBodilyInjuryPremisesManualPremium:
+         type: string
+         default: "100"
+        ExclusionYear2000ComputerRelatedElectronicProblemsProductsWorkManualPremium:
+         type: string
+         default: "100"
+        ExpandedCoverageTerritoryForGeneralLiabilityCoveragesAdditionalScheduledCountriesManualPremium:
+         type: string
+         default: "100"
+        ExpenseVariationApplies:
+         type: string
+         default: Yes
+        ExperienceBusinessStartDate:
+         type: string
+         default: "2018-11-11"
+        ExperienceModificationLiabilityOverride:
+         type: string
+         default: "0"
+        ExperienceModificationPhysicalDamagesOverride:
+         type: string
+         default: "0"
+        ExperienceRatingModificationApplies:
+         type: string
+         default: No
+        ExperienceRatingModificationYear1DetailLiabilityAllocatedLossAdjustmentExpense:
+         type: string
+         default: "1000"
+        ExperienceRatingModificationYear2DetailLiabilityAllocatedLossAdjustmentExpense:
+         type: string
+         default: "1500"
+        ExperienceRatingModificationYear3DetailLiabilityAllocatedLossAdjustmentExpense:
+         type: string
+         default: "3000"
+        ExpirationDate:
+         type: string
+         default: "2019-12-12"
+        ExtendedReportingPeriodEndorsementForEmployeeBenefitsLiabilityCoverageManualPremium:
+         type: string
+         default: "100"
+        ExtendedReportingPeriodForEmpBensLiabilityCoverageWithNoCoverageForNewlyAcqrdOrFormedAutoDealershipManualPremium:
+         type: string
+         default: "100"
+        FellowEmployeeCovManualPremium:
+         type: string
+         default: "100"
+        FellowEmployeeCoverageForDesignatedEmployeesPositionsManualPremium:
+         type: string
+         default: "100"
+        FinancialResponsibility:
+         type: string
+         default: "1000"
+        FungiOrBacteriaExclusionGarageOperationsOtherThanCoveredAutosManualPremium:
+         type: string
+         default: "100"
+        GrossReceiptsRatingBasis:
+         type: string
+         default: "1000"
+        HiredAutoWanted:
+         type: string
+         default: Yes
+        IndividualNamedInsuredOnThePolicy:
+         type: string
+         default: Yes
+        InsuredName:
+         type: string
+         default: "John Smith"
+        IstheInsuredaGovernmentalSubdivision:
+         type: string
+         default: No
+        LastRateLookUpDate:
+         type: string
+         default: "2018-11-26"
+        LegalEntity:
+         type: string
+         default: Partnership
+        LimitedContractualLiabilityCoverageForPersonalAndAdvertisingInjuryManualPremium:
+         type: string
+         default: "100"
+        LimitedFungiOrBacteriaCoverageForGarageOperationsOtherThanCoveredAutosManualPremium:
+         type: string
+         default: "100"
+        LimitedMexicoCoverageManualPremium:
+         type: string
+         default: "100"
+        LimitedProductWithdrawalExpenseEndorsementManualPremium:
+         type: string
+         default: "100"
+        NamedIndividualsBroadenedFirstPartyBenefitAccidentalDeathBenefit:
+         type: string
+         default: "25,000"
+        NamedIndividualsBroadenedFirstPartyBenefitsCombinationBenefit:
+         type: string
+         default: "100,000"
+        NamedIndividualsBroadenedFirstPartyBenefitsCoverageType:
+         type: string
+         default: "Additional First Party Benefit"
+        NamedIndividualsBroadenedFirstPartyBenefitsFuneralExpenseBenefit:
+         type: string
+         default: "2,500"
+        NamedIndividualsBroadenedFirstPartyBenefitsMedicalExpenseBenefit:
+         type: string
+         default: "10,000"
+        NamedIndividualsBroadenedFirstPartyBenefitsWorkLossBenefit:
+         type: string
+         default: "1,000 Monthly / 5,000 Total"
+        NamedIndividualsBroadenedPersonalInjuryProtectionCoverageAddedPIPCoverage:
+         type: string
+         default: Yes
+        NamedIndividualsBroadenedPersonalInjuryProtectionCoveragePIPExtendedBenefits:
+         type: string
+        NamedIndividualsBroadenedPersonalInjuryProtectionCoverageRatingBasis:
+         type: string
+         default: "Covered By Workers Comp and Principally Operated by Employees"
+        NonOwnedAutoWanted:
+         type: string
+         default: Yes
+        OptionalClassPlan:
+         type: string
+         default: No
+        OptionalLimitsLossOfUseExpensesManualPremium:
+         type: string
+         default: "100"
+        PersonalInjuryProtectionStacking:
+         type: string
+         default: Yes
+        PersonalInjuryProtectionWorkLoss:
+         type: string
+         default: "Include Work Loss"
+        PolicyType:
+         type: string
+         default: "Business Auto Coverage Form"
+        PollutionLiabBroadenedCovBusinessAutoMotorCarrierTruckersCovFormsManualPremium:
+         type: string
+         default: "100"
+        PollutionLiabilityBroadenedCoverageForCoveredAutosGarageCoverageFormManualPremium:
+         type: string
+         default: "100"
+        ProductNumber:
+         type: string
+         default: "STARR CA V1"
+        ProductVerNumber:
+         type: string
+         default: STARR_CA_2018_V1
+        PropertyDamageLiabilityCoverageBuyback:
+         type: string
+         default: ""
+        RiskAnalyzerWanted:
+         type: string
+         default: ""
+        ScheduleRatingModificationApplies:
+         type: string
+         default: Yes
+        ScheduleRatingModificationDispersionPctPhysicalDamage:
+         type: string
+         default: "41%"
+        ScheduleRatingModificationEmployeesPct:
+         type: string
+         default: "41%"
+        ScheduleRatingModificationEmployeesPctPhysicalDamage:
+         type: string
+         default: "41%"
+        ScheduleRatingModificationEquipmentPct:
+         type: string
+         default: "41%"
+        ScheduleRatingModificationEquipmentPctPhysicalDamage:
+         type: string
+         default: "41%"
+        ScheduleRatingModificationManagementPct:
+         type: string
+         default: "41%"
+        ScheduleRatingModificationManagementPctPhysicalDamage:
+         type: string
+         default: "41%"
+        ScheduleRatingModificationSafetyOrganizationPct:
+         type: string
+         default: "41%"
+        ScheduleRatingModificationSafetyOrganizationPctPhysicalDamage:
+         type: string
+         default: "41%"
+        SilicaOrSilicaRelatedDustExclusionForCoveredAutosExposureManualPremium:
+         type: string
+         default: "100"
+        SilicaOrSilicaRelatedDustExclusionForOtherThanCoveredAutosExposureGarageCoverageFormManualPremium:
+         type: string
+         default: "100"
+        State:
+         type: string
+         default: AZ
+        Territory:
+         type: string
+         default: ""
+        TerrorismCoverage:
+         type: string
+         default: "1000"
+        TortLimitation:
+         type: string
+         default: "Named Insured and all Regular Operators accepted Tort Limitation"
+        TortLimitationCode:
+         type: string
+         default: C
+        TotalBankruptcyOrInsolvencyExclusionForActsErrorsOrOmissionsLiabilityCoveragesManualPremium:
+         type: string
+         default: "100"
+        TrailerInterchangeAgreement:
+         type: string
+         default: "1000"
+        UnderinsuredMotoristPropertyDamageLimitText:
+         type: string
+         default: "25,000"
+        UnderinsuredMotoristsCoverageCombinedSingleLimit:
+         type: string
+         default: "125,000"
+        UnderinsuredMotoristsCoveragePulledByPowerUnit:
+         type: string
+         default: Yes
+        UnderinsuredMotoristsCoverageSplitLimit:
+         type: string
+         default: "Not Applicable"
+        UnderinsuredMotoristsCoverageStacked:
+         type: string
+         default: "Non-Stacked Coverage"
+        UnderinsuredMotoristsCoverageType:
+         type: string
+         default: "Combined Single Limit"
+        UninsuredMotoristPropertyDamageDeductible:
+         type: string
+         default: "Full Coverage"
+        UninsuredMotoristPropertyDamageLimitText:
+         type: string
+         default: "25,000"
+        UninsuredMotoristsCoverageCombinedSingleLimit:
+         type: string
+         default: "100,000"
+        UninsuredMotoristsCoverageSplitLimit:
+         type: string
+         default: "50,000/100,000"
+        UninsuredMotoristsCoverageStacked:
+         type: string
+         default: "Non-Stacked Coverage"
+        UninsuredMotoristsCoverageType:
+         type: string
+         default: "Combined Single Limit"
+        WageLoss:
+         type: string
+         default: Yes
+        WageLossLimit:
+         type: string
+         default: "500/3,000"
+        WorldwideGeneralLiabilityCoveragesManualPremium:
+         type: string
+         default: "100"
+        Year2000ComputerRelatedElectronicProblemsExclusionSpecifiedCoveragesManualPremium:
+         type: string
+         default: "100"
+        Year2000LimitedCoverageOptionsManualPremium:
+         type: string
+         default: "100"
+        ZipCode:
+         type: string
+         default: "85001"
+        Truck:
+         type: array
+         items:
+          properties:
+           TruckDetail:
+            type: object
+            properties:
+              TruckOtherThanCollisionCoverageDeductible:
+                type: string
+                default: "500"
+              ZipCode:
+                type: string
+                default: "85001"
+              VehicleType:
+                type: string
+                default: Truck
+              TruckSizeClass:
+                type: string
+                default: "Light Truck"
+              City:
+                type: string
+                default: Brighton
+              County:
+                type: string
+                default: Surry
+              TruckLiabilityCoverageLimit:
+                type: string
+                default: "500,000"
+              TruckBusinessUseClass:
+                type: string
+                default: Service
+              TruckCollisionCoverageDeductible:
+                type: string
+                default: "2,000"
+              State:
+                type: string
+                default: AZ
+              MunicipalityCode:
+                type: string
+                default: ""
+              MunicipalityName:
+                type: string
+                default: ""
+              TruckRadiusClass:
+                type: string
+                default: Local
+              TruckOriginalCostNew:
+                type: string
+                default: "25001"
+              NoOfVehicles:
+                type: string
+                default: "2"
+              AddressLine1:
+                type: string
+                default: "8TH ST"
+              AddressLine2:
+                type: string
+                default: PHOENIX
+              AudioVisualAndDataElectronicEquipmentCoverageLimit:
+                type: string
+                default: "2500"
+              AuxillaryRunningLampsDiscount:
+                type: string
+                default: Yes
+              CommercialAutoVehicleAdditionalPIPCoverageAdditionalPIPCoverageType:
+                type: string
+                default: "Option B"
+              RentalReimbursementCoverageDailyRentalAmount:
+                type: string
+                default: "55"
+              RentalReimbursementCoverageMaximumRentalDays:
+                type: string
+                default: "45"
+              Territory:
+                type: string
+                default: ""
+              TruckAccidentPreventionDiscount:
+                type: string
+                default: Yes
+              TruckAccidentalDeathBenefitCoverageWanted:
+                type: string
+                default: Yes
+              TruckAdditionalChiropracticTreatmentsCoverageWanted:
+                type: string
+                default: No
+              TruckAdditionalPIPCoverage:
+                type: string
+                default: No
+              TruckAdditionalPersonalInjuryProtectionNewYorkAddedCoverageAdditionalMonthlyWorkLoss:
+                type: string
+                default: "Not Applicable"
+              TruckAdditionalPersonalInjuryProtectionNewYorkAddedCoverageOtherExpensesLimit:
+                type: string
+                default: "Not Applicable"
+              TruckAdditionalPersonalInjuryProtectionNewYorkAddedCoverageTotalAdditionalLimits:
+                type: string
+                default: "Not Applicable"
+              TruckAdditionalPersonalInjuryProtectionNewYorkDeathBenefitCoverageAdditionalDeathBenefit:
+                type: string
+                default: Yes
+              TruckAdditionalPersonalInjuryProtectionNewYorkDeathBenefitCoverageLimit:
+                type: string
+                default: "Not Applicable"
+              TruckAgriculturalProduceTrailersSeasonal:
+                type: string
+                default: No
+              TruckAntiTheftDevice:
+                type: string
+                default: "Alarm Only"
+              TruckAntiTheftVehicleRecoveryDevice:
+                type: string
+                default: "Category I Device"
+              TruckAutoRentedToOtherMotorCarriers:
+                type: string
+                default: No
+              TruckCarnivalParade:
+                type: string
+                default: "Lessee or Hirer's Risks"
+              TruckCollisionCoverageCoverageType:
+                type: string
+                default: ACV
+              TruckCollisionCoveragePercentOfMilesDrivenInGreenZone:
+                type: string
+                default: "61 - 70%"
+              TruckDeathBenefitsCoverageWanted:
+                type: string
+                default: No
+              TruckDefensiveDrivingCourseCredit:
+                type: string
+                default: No
+              TruckEndOfOperations:
+                type: string
+                default: "2019-09-01"
+              TruckFleet:
+                type: string
+                default: Yes
+              TruckHiredAutosSpecifiedAsCoveredAutosYouOwn:
+                type: string
+                default: Yes
+              TruckIncomeLossBenefitsCoverageIncomeLossBenefits:
+                type: string
+                default: No
+              TruckIncomeLossBenefitsCoverageIncomeLossBenefitsRatingBasis:
+                type: string
+                default: "Not Applicable"
+              TruckJunkDealerClass:
+                type: string
+                default: Yes
+              TruckLessorAdditionalInsuredAndLossPayee:
+                type: string
+                default: Yes
+              TruckLiabilityCoverageDeductible:
+                type: string
+                default: "5,000 Combined Single Limit"
+              TruckLiabilityCoverageLocationUse:
+                type: string
+                default: Intrastate
+              TruckLiabilityCoveragePercentOfMilesDrivenInGreenZone:
+                type: string
+                default: "61 - 70%"
+              TruckLiabilityCoverageType:
+                type: string
+                default: "Combined Single Limit"
+              TruckLiabilityCoveragefarecharged:
+                type: string
+                default: Yes
+              TruckLiabilityCoveragefarmRegistrationCertificate:
+                type: string
+                default: No
+              TruckLiabilityCoverageownedByEmployer:
+                type: string
+                default: No
+              TruckLiabilityCoveragetransportationOfEmployees:
+                type: string
+                default: No
+              TruckLiabilitymoreThanOneRoundTrip:
+                type: string
+                default: Yes
+              TruckMake:
+                type: string
+                default: CHEVROLET
+              TruckMatureDriverImprovementCourseDiscount:
+                type: string
+                default: No
+              TruckMedicalPaymentsCoverageLimit:
+                type: string
+                default: "5,000"
+              TruckModel:
+                type: string
+                default: SUBURBAN
+              TruckOptionalBasicEconomicLossCoverageWanted:
+                type: string
+                default: Yes
+              TruckOtherThanCollisionCoverageCoverageType:
+                type: string
+                default: ACV
+              TruckOtherThanCollisionCoveragePercentOfMilesDrivenInGreenZone:
+                type: string
+                default: "Not Applicable"
+              TruckPIPCoverageAccidentalDeathBenefit:
+                type: string
+                default: "Not Applicable"
+              TruckPIPCoverageAdditionalPersonalInjuryProtection:
+                type: string
+                default: No
+              TruckPIPCoverageCombinationFirstPartyBenefit:
+                type: string
+                default: "No Coverage"
+              TruckPIPCoverageCoverageType:
+                type: string
+                default: Yes
+              TruckPIPCoverageCoveredByWorkersCompensation:
+                type: string
+                default: No
+              TruckPIPCoverageDeductible:
+                type: string
+                default: "Not Applicable"
+              TruckPIPCoverageExclusionOfIncomeBenefits:
+                type: string
+                default: No
+              TruckPIPCoverageExclusionOfWorkLoss:
+                type: string
+                default: No
+              TruckPIPCoverageFuneralExpenseBenefits:
+                type: string
+                default: "Not Applicable"
+              TruckPIPCoverageGovernmentOwned:
+                type: string
+                default: No
+              TruckPIPCoverageMedicalExpenseBenefits:
+                type: string
+                default: "Not Applicable"
+              TruckPIPCoverageMedicalExpenseElimination:
+                type: string
+                default: "No Elimination of Coverage"
+              TruckPIPCoveragePercentOfMilesDrivenInGreenZone:
+                type: string
+                default: "Not Applicable"
+              TruckPIPCoveragePrincipalOperQualifiedNameInsrdHadWorkLossBenefitsExcl:
+                type: string
+                default: No
+              TruckPIPCoverageRatingBasis:
+                type: string
+                default: "All Autos"
+              TruckPIPCoverageWorkLossBenefits:
+                type: string
+                default: "Not Applicable"
+              TruckPassengerHazard:
+                type: string
+                default: "Passenger Hazard Included"
+              TruckPercentageOfTransportationNetworkServiceAutoUse:
+                type: string
+                default: "80% or More"
+              TruckPrimaryClassCode:
+                type: string
+                default: "683"
+              TruckPropertyProtectionInsuranceCoverageCoverageType:
+                type: string
+                default: "No Coverage"
+              TruckPropertyProtectionInsuranceCoverageDeductible:
+                type: string
+                default: "Not Applicable"
+              TruckSafetyScore:
+                type: string
+                default: "38 - 42"
+              TruckSafetyScoreDiscountApplies:
+                type: string
+                default: Yes
+              TruckSecondaryClass:
+                type: string
+                default: "Truckers - Tow Trucks For-Hire"
+              TruckSecondaryClassCode:
+                type: string
+                default: "110"
+              TruckStartOfOperations:
+                type: string
+                default: "2018-08-01"
+              TruckStatedAmount:
+                type: string
+                default: "0"
+              TruckSugarCaneHaulersCoverage:
+                type: string
+                default: "Trucks or Tractors with Semi-Trailers"
+              TruckSugarCaneHaulersPeriodOfCoverage:
+                type: string
+                default: "75 Days"
+              TruckTotalPairsJunkDealersPlates:
+                type: string
+                default: "2"
+              TruckTotalSetsOfDealerPlates:
+                type: string
+                default: "4"
+              TruckTrailerHowUsed:
+                type: string
+                default: "Used in Dumping Operations"
+              TruckUnderinsuredMotoristPropertyDamageCoverageWanted:
+                type: string
+                default: No
+              TruckUnderinsuredMotoristsCoverageWanted:
+                type: string
+                default: Yes
+              TruckUninsuredMotoristPropertyDamage:
+                type: string
+                default: No
+              TruckUninsuredMotoristsCoverageWanted:
+                type: string
+                default: Yes
+              TruckUsedAsTNCOrOnDemand:
+                type: string
+                default: "Used As Transportation Network Company Only"
+              TruckVIN:
+                type: string
+                default: "23"
+              TruckWageLossCoverageWanted:
+                type: string
+                default: No
+              TruckWorkLossCoverageWanted:
+                type: string
+                default: No
+              TruckYear:
+                type: string
+                default: "1996"
+              TruckZipCodeOverride:
+                type: string
+                default: ""
+              TruckUninsuredMotoristPropertyDamageCoverageWanted:
+                type: string
+                default: Yes
+              TruckCollisionCoverageCollisiontype:
+                type: string
+                default: "Limited Collision"
+              TruckCollisionCoverageDeductibleWaiver:
+                type: string
+                default: Yes
+              TruckUninsuredMotoristsCoverageType:
+                type: string
+                default: "Split Limit"
+              TruckUninsuredMotoristsCoverageSplitLimit:
+                type: string
+                default: "500,000/500,000"
+              TruckTrailerUsedWith:
+                type: string
+                default: "Light Trucks"
+              TruckOtherThanCollisionCoverageGlass100Deductible:
+                type: string
+                default: Yes
+              CommercialAutoPIPMedicalExpensesCoverageLimitText:
+                type: string
+                default: "2135"
+              CommercialAutoVehicleLiabilityPropertyDamageCoverageDeductible:
+                type: string
+                default: "2135"
+              CommercialAutoFarmLaborContractorsDeductible:
+                type: string
+                default: "2135"
+              CommercialAutoTruckersUniformIntermodalInterchangeEndtFormUIIE1:
+                type: string
+                default: "2135"
+        PrivatePassenger:
+         type: array
+         items:
+          properties:
+           PrivatePassengerDetail:
+            type: object
+            properties:
+              PrivatePassengerOriginalCostNew:
+                type: string
+                default: "300"
+              PrivatePassengerOtherThanCollisionCoverageDeductible:
+                type: string
+                default: "3,000"
+              PrivatePassengerUse:
+                type: string
+                default: "To or From Work 15 or More Miles"
+              PrivatePassengerLiabilityCoverageLimit:
+                type: string
+                default: "100,000"
+              State:
+                type: string
+                default: "AZ"
+              ZipCode:
+                type: string
+                default: "85001"
+              MunicipalityCode:
+                type: string
+                default: ""
+              MunicipalityName:
+                type: string
+                default: ""
+              VehicleType:
+                type: string
+                default: "Private Passenger"
+              PrivatePassengerCollisionCoverageDeductible:
+                type: string
+                default: "300"
+              City:
+                type: string
+                default: "Brighton"
+              PrivatePassengerType:
+                type: string
+                default: "Farm Use - Fleet Vehicle"
+              County:
+                type: string
+                default: "Surry"
+              NoOfVehicles:
+                type: string
+                default: "1"
+              AddressLine1:
+                type: string
+                default: "8TH ST"
+              AddressLine2:
+                type: string
+                default: "PHOENIX"
+              AudioVisualAndDataElectronicEquipmentCoverageLimit:
+                type: string
+                default: "2500"
+              AuxillaryRunningLampsDiscount:
+                type: string
+                default: "Yes"
+              CommercialAutoVehicleAdditionalPIPCoverageAdditionalPIPCoverageType:
+                type: string
+                default: "Option B"
+              PrivatePassengerAccidentPreventionDiscount:
+                type: string
+                default: "No"
+              PrivatePassengerAccidentPreventionRefresherDiscount:
+                type: string
+                default: "No"
+              PrivatePassengerAccidentalDeathBenefitCoverageWanted:
+                type: string
+                default: "Yes"
+              PrivatePassengerAdditionalChiropracticTreatmentsCoverageWanted:
+                type: string
+                default: "No"
+              PrivatePassengerAdditionalPIPCoverage:
+                type: string
+                default: "No"
+              PrivatePassengerAdditionalPersonalInjuryProtectionNewYorkAddedCoverageAdditionalMonthlyWorkLoss:
+                type: string
+                default: "Not Applicable"
+              PrivatePassengerAdditionalPersonalInjuryProtectionNewYorkAddedCoverageOtherExpensesLimit:
+                type: string
+                default: "Not Applicable"
+              PrivatePassengerAdditionalPersonalInjuryProtectionNewYorkAddedCoverageTotalAdditionalLimits:
+                type: string
+                default: "Not Applicable"
+              PrivatePassengerAdditionalPersonalInjuryProtectionNewYorkDeathBenefitCoverageAdditionalDeathBenefit:
+                type: string
+                default: "Yes"
+              PrivatePassengerAdditionalPersonalInjuryProtectionNewYorkDeathBenefitCoverageLimit:
+                type: string
+                default: "Not Applicable"
+              PrivatePassengerAntiTheftDevice:
+                type: string
+                default: "Alarm Only"
+              PrivatePassengerAntiTheftVehicleRecoveryDevice:
+                type: string
+                default: "Category I Device"
+              PrivatePassengerClassCode:
+                type: string
+                default: ""
+              PrivatePassengerCollisionCoverageCoverageType:
+                type: string
+                default: "ACV"
+              PrivatePassengerCollisionCoverageManualPremium:
+                type: string
+                default: "1500"
+              PrivatePassengerCollisionCoveragePercentOfMilesDrivenInGreenZone:
+                type: string
+                default: "91 - 100%"
+              PrivatePassengerDeathBenefitsCoverageWanted:
+                type: string
+                default: "No"
+              PrivatePassengerDefensiveDrivingCourseCredit:
+                type: string
+                default: "No"
+              PrivatePassengerFleet:
+                type: string
+                default: "Yes"
+              PrivatePassengerHiredAutosSpecifiedAsCoveredAutosYouOwn:
+                type: string
+                default: "Yes"
+              PrivatePassengerIncomeLossBenefitsCoverageIncomeLossBenefits:
+                type: string
+                default: "No"
+              PrivatePassengerIncomeLossBenefitsCoverageIncomeLossBenefitsRatingBasis:
+                type: string
+                default: "Not Applicable"
+              PrivatePassengerLessorAdditionalInsuredAndLossPayee:
+                type: string
+                default: "No"
+              PrivatePassengerLiabilityCoverageDeductible:
+                type: string
+                default: "50,000 Combined Single Limit"
+              PrivatePassengerLiabilityCoverageManualPremium:
+                type: string
+                default: "15000"
+              PrivatePassengerLiabilityCoveragePercentOfMilesDrivenInGreenZone:
+                type: string
+                default: "81 - 90%"
+              PrivatePassengerLiabilityCoverageType:
+                type: string
+                default: "Combined Single Limit"
+              PrivatePassengerMake:
+                type: string
+                default: "KENWORTH"
+              PrivatePassengerMatureDriverImprovementCourseDiscount:
+                type: string
+                default: "No"
+              PrivatePassengerMedicalPaymentsCoverageLimit:
+                type: string
+                default: "5,000"
+              PrivatePassengerMedicalPaymentsCoverageManualPremium:
+                type: string
+                default: "457"
+              PrivatePassengerModel:
+                type: string
+                default: "CONSTRUCTION"
+              PrivatePassengerOperatorExperience:
+                type: string
+                default: "No Operator Licensed Less Than 5 Years"
+              PrivatePassengerOptionalBasicEconomicLossCoverageWanted:
+                type: string
+                default: "Yes"
+              PrivatePassengerOtherThanCollisionCoverageCoverageType:
+                type: string
+                default: "ACV"
+              PrivatePassengerOtherThanCollisionCoverageFullGlassCoverage:
+                type: string
+                default: "Yes"
+              PrivatePassengerOtherThanCollisionCoveragePercentOfMilesDrivenInGreenZone:
+                type: string
+                default: "61 - 70%"
+              PrivatePassengerPIPCoverageAccidentalDeathBenefit:
+                type: string
+                default: "Not Applicable"
+              PrivatePassengerPIPCoverageAdditionalMedExpBenefits:
+                type: string
+                default: "No"
+              PrivatePassengerPIPCoverageAdditionalPersonalInjuryProtection:
+                type: string
+                default: "No"
+              PrivatePassengerPIPCoverageCombinationFirstPartyBenefit:
+                type: string
+                default: "No Coverage"
+              PrivatePassengerPIPCoverageCopayment:
+                type: string
+                default: "0%"
+              PrivatePassengerPIPCoverageCoverageType:
+                type: string
+                default: "Employers Subject to MA Workers Compensation Act"
+              PrivatePassengerPIPCoverageCoveredByWorkersCompensation:
+                type: string
+                default: "No"
+              PrivatePassengerPIPCoverageDeductible:
+                type: string
+                default: "Not Applicable"
+              PrivatePassengerPIPCoverageExclusionOfIncomeBenefits:
+                type: string
+                default: "No"
+              PrivatePassengerPIPCoverageExclusionOfWorkLoss:
+                type: string
+                default: "No"
+              PrivatePassengerPIPCoverageFuneralExpenseBenefits:
+                type: string
+                default: "Not Applicable"
+              PrivatePassengerPIPCoverageGovernmentOwned:
+                type: string
+                default: "No"
+              PrivatePassengerPIPCoverageMedExpAsSecondary:
+                type: string
+                default: "No"
+              PrivatePassengerPIPCoverageMedicalExpenseBenefits:
+                type: string
+                default: "Not Applicable"
+              PrivatePassengerPIPCoverageMedicalExpenseElimination:
+                type: string
+                default: "No Elimination of Coverage"
+              PrivatePassengerPIPCoveragePercentOfMilesDrivenInGreenZone:
+                type: string
+                default: "Not Applicable"
+              PrivatePassengerPIPCoveragePrincipalOperQualifiedNameInsrdHadWorkLossBenefitsExcl:
+                type: string
+                default: "No"
+              PrivatePassengerPIPCoverageRatingBasis:
+                type: string
+                default: "Furnished For Regular Use"
+              PrivatePassengerPIPCoverageWorkLossBenefits:
+                type: string
+                default: "Not Applicable"
+              PrivatePassengerPassiveRestraintDiscount:
+                type: string
+                default: "Yes"
+              PrivatePassengerPercentageOfTransportationNetworkServiceAutoUse:
+                type: string
+                default: "80% or More"
+              PrivatePassengerPropertyProtectionInsuranceCoverageCoverageType:
+                type: string
+                default: "No Coverage"
+              PrivatePassengerPropertyProtectionInsuranceCoverageDeductible:
+                type: string
+                default: "Not Applicable"
+              PrivatePassengerSafetyFeatures:
+                type: string
+                default: "Not Applicable/Not Installed"
+              PrivatePassengerSafetyScore:
+                type: string
+                default: "38 - 42"
+              PrivatePassengerSafetyScoreDiscountApplies:
+                type: string
+                default: "Yes"
+              PrivatePassengerStatedAmount:
+                type: string
+                default: "10,000"
+              PrivatePassengerTowingLaborCoverageLimit:
+                type: string
+                default: "No Coverage"
+              PrivatePassengerTowingLaborCoverageManualPremium:
+                type: string
+                default: "35"
+              PrivatePassengerUnderinsuredMotoristPropertyDamageCoverageWanted:
+                type: string
+                default: "No"
+              PrivatePassengerUnderinsuredMotoristsCoverageWanted:
+                type: string
+                default: "Yes"
+              PrivatePassengerUninsuredMotoristsCoverageManualPremium:
+                type: string
+                default: "458"
+              PrivatePassengerUninsuredMotoristsCoverageWanted:
+                type: string
+                default: "Yes"
+              PrivatePassengerUsedAsTNCOrOnDemand:
+                type: string
+                default: "Not Used In A Transportation Network Company Or On-Demand Capacity"
+              PrivatePassengerVIN:
+                type: string
+                default: "1NKDL40X19J239303"
+              PrivatePassengerWageLossCoverageWanted:
+                type: string
+                default: "No"
+              PrivatePassengerWorkLossCoverageWanted:
+                type: string
+                default: No
+              PrivatePassengerYear:
+                type: string
+                default: "1996"
+              PrivatePassengerZipCodeOverride:
+                type: string
+                default: "other"
+              RentalReimbursementCoverageDailyRentalAmount:
+                type: string
+                default: "35"
+              RentalReimbursementCoverageMaximumRentalDays:
+                type: string
+                default: "15"
+              Territory:
+                type: string
+                default: ""
+              PrivatePassengerUninsuredMotoristPropertyDamageCoverageManualPremium:
+                type: string
+                default: "1500"
+              PrivatePassengerUninsuredMotoristPropertyDamageCoverageWanted:
+                type: string
+                default: "Yes"
+              PrivatePassengerCollisionCoverageCollisionType:
+                type: string
+                default: "Limited Collision"
+              PrivatePassengerCollisionCoverageDeductibleWaiver:
+                type: string
+                default: "Yes"
+              PrivatePassengerUninsuredMotoristsCoverageType:
+                type: string
+                default: "Split Limit"
+              PrivatePassengerUninsuredMotoristsCoverageSplitLimit:
+                type: string
+                default: "500,000/500,000"
+              PrivatePassengerOtherThanCollisionCoverageGlass100Deductible:
+                type: string
+                default: "Yes"
+              CommercialAutoFarmLaborContractorsDeductible:
+                type: string
+                default: ""
+              CommercialAutoPIPMedicalExpensesCoverageLimitText:
+                type: string
+                default: ""
+              CommercialAutoVehicleCollisionCoverageCollisionType:
+                type: string
+                default: ""
+              CommercialAutoVehicleLiabilityPropertyDamageCoverageDeductible:
+                type: string
+                default: ""
+        ZoneRated:
+         type: array
+         items:
+          properties:
+           ZoneRatedDetail:
+            type: object
+            properties:
+              AddressLine1:
+                type: string
+                default: ""
+              AddressLine2:
+                type: string
+                default: ""
+              AudioVisualAndDataElectronicEquipmentCoverageLimit:
+                type: string
+                default: "500"
+              AutosFurnishedForRegularUse:
+                type: string
+                default: ""
+              AuxillaryRunningLampsDiscount:
+                type: string
+                default: Yes
+              City:
+                type: string
+                default: Brighton
+              CommercialAutoVehicleAdditionalPIPCoverageAdditionalPIPCoverageType:
+                type: string
+                default: "Option B"
+              County:
+                type: string
+                default: Apache
+              GaragingLocation:
+                type: string
+                default: ""
+              NoOfVehicles:
+                type: string
+                default: "1"
+              RentalReimbursementCoverageDailyRentalAmount:
+                type: string
+                default: "0"
+              RentalReimbursementCoverageMaximumRentalDays:
+                type: string
+                default: "0"
+              State:
+                type: string
+                default: AZ
+              MunicipalityCode:
+                type: string
+                default: ""
+              MunicipalityName:
+                type: string
+                default: ""
+              Territory:
+                type: string
+                default: ""
+              VehicleType:
+                type: string
+                default: "Zone Rated"
+              ZipCode:
+                type: string
+                default: "85001"
+              ZoneRatedAccidentPreventionDiscount:
+                type: string
+                default: Yes
+              ZoneRatedAccidentalDeathBenefitCoverageWanted:
+                type: string
+                default: Yes
+              ZoneRatedAdditionalPIPCoverage:
+                type: string
+                default: No
+              ZoneRatedAdditionalPersonalInjuryProtectionNewYorkAddedCoverageAdditionalMonthlyWorkLoss:
+                type: string
+                default: ""
+              ZoneRatedAdditionalPersonalInjuryProtectionNewYorkAddedCoverageOtherExpensesLimit:
+                type: string
+                default: ""
+              ZoneRatedAdditionalPersonalInjuryProtectionNewYorkAddedCoverageTotalAdditionalLimits:
+                type: string
+                default: ""
+              ZoneRatedAdditionalPersonalInjuryProtectionNewYorkDeathBenefitCoverageAdditionalDeathBenefit:
+                type: string
+                default: Yes
+              ZoneRatedAdditionalPersonalInjuryProtectionNewYorkDeathBenefitCoverageLimit:
+                type: string
+                default: "Not Applicable"
+              ZoneRatedAgriculturalProduceTrailersSeasonal:
+                type: string
+                default: Yes
+              ZoneRatedAntiTheftDevice:
+                type: string
+                default: ""
+              ZoneRatedAntiTheftVehicleRecoveryDevice:
+                type: string
+                default: "Category I Device"
+              ZoneRatedAutoRentedToOtherMotorCarriers:
+                type: string
+                default: No
+              ZoneRatedBusinessUseClass:
+                type: string
+                default: Commercial
+              ZoneRatedCarnivalParade:
+                type: string
+                default: "Owners Risk Only"
+              ZoneRatedCarnivalParadeNumberOfDays:
+                type: string
+                default: "30"
+              ZoneRatedCollisionCoverageCollisionType:
+                type: string
+                default: ""
+              ZoneRatedCollisionCoverageCoverageType:
+                type: string
+                default: ACV
+              ZoneRatedCollisionCoverageDeductible:
+                type: string
+                default: "5,000"
+              ZoneRatedDefensiveDrivingCourseCredit:
+                type: string
+                default: Yes
+              ZoneRatedEndOfOperations:
+                type: string
+                default: "2019-10-04"
+              ZoneRatedFarthestTerminalZone:
+                type: string
+                default: "Zone 01 Atlanta"
+              ZoneRatedFleet:
+                type: string
+                default: Yes
+              ZoneRatedGaragingZone:
+                type: string
+                default: "Zone 29 Phoenix"
+              ZoneRatedHiredAutosSpecifiedAsCoveredAutosYouOwn:
+                type: string
+                default: Yes
+              ZoneRatedIncomeLossBenefitsCoverageIncomeLossBenefits:
+                type: string
+                default: ""
+              ZoneRatedIncomeLossBenefitsCoverageIncomeLossBenefitsRatingBasis:
+                type: string
+                default: ""
+              ZoneRatedLessorAdditionalInsuredAndLossPayee:
+                type: string
+                default: Yes
+              ZoneRatedLiabilityCoverageDeductible:
+                type: string
+                default: "250 Combined Single Limit"
+              ZoneRatedLiabilityCoverageLimitText:
+                type: string
+                default: "500,000"
+              ZoneRatedLiabilityCoverageType:
+                type: string
+                default: "Combined Single Limit"
+              ZoneRatedLocationUse:
+                type: string
+                default: ""
+              ZoneRatedMake:
+                type: string
+                default: BMW
+              ZoneRatedMatureDriverImprovementCourseDiscount:
+                type: string
+                default: Yes
+              ZoneRatedMedicalPaymentsCoverageLimit:
+                type: string
+                default: "5,000"
+              ZoneRatedModel:
+                type: string
+                default: "78965"
+              ZoneRatedOptionalBasicEconomicLossCoverageWanted:
+                type: string
+                default: Yes
+              ZoneRatedOriginalCostNew:
+                type: string
+                default: "25001"
+              ZoneRatedOtherThanCollisionCoverageCoverageType:
+                type: string
+                default: ACV
+              ZoneRatedOtherThanCollisionCoverageFullGlassCoverage:
+                type: string
+                default: "500"
+              ZoneRatedPIPCoverageAccidentalDeathBenefit:
+                type: string
+                default: ""
+              ZoneRatedPIPCoverageAdditionalPersonalInjuryProtection:
+                type: string
+                default: ""
+              ZoneRatedPIPCoverageCombinationFirstPartyBenefit:
+                type: string
+                default: "No Coverage"
+              ZoneRatedPIPCoverageCoveredByWorkersCompensation:
+                type: string
+                default: ""
+              ZoneRatedPIPCoverageDeductible:
+                type: string
+                default: ""
+              ZoneRatedPIPCoverageExclusionOfIncomeBenefits:
+                type: string
+                default: ""
+              ZoneRatedPIPCoverageExclusionOfWorkLoss:
+                type: string
+                default: ""
+              ZoneRatedPIPCoverageFuneralExpenseBenefits:
+                type: string
+                default: ""
+              ZoneRatedPIPCoverageGovernmentOwned:
+                type: string
+                default: ""
+              ZoneRatedPIPCoverageMedicalExpenseBenefits:
+                type: string
+                default: ""
+              ZoneRatedPIPCoverageMedicalExpenseElimination:
+                type: string
+                default: ""
+              ZoneRatedPIPCoveragePrincipalOperQualifiedNameInsrdHadWorkLossBenefitsExcl:
+                type: string
+                default: ""
+              ZoneRatedPIPCoverageRatingBasis:
+                type: string
+                default: "Covered by Workers' Compensation"
+              ZoneRatedPIPCoverageWorkLossBenefits:
+                type: string
+                default: ""
+              ZoneRatedPassengerHazard:
+                type: string
+                default: "Passenger Hazard Included"
+              ZoneRatedPrimaryClassCode:
+                type: string
+                default: ""
+              ZoneRatedPropertyProtectionInsuranceCoverageDeductible:
+                type: string
+                default: ""
+              ZoneRatedSafetyScore:
+                type: string
+                default: Yes
+              ZoneRatedSafetyScoreDiscountApplies:
+                type: string
+                default: Yes
+              ZoneRatedSecondaryClass:
+                type: string
+                default: "Truckers - Carrier Both Private Carriage & Transport Goods/Materials/Commodities"
+              ZoneRatedSecondaryClassCode:
+                type: string
+                default: ""
+              ZoneRatedSizeClass:
+                type: string
+                default: "Medium Truck"
+              ZoneRatedStartOfOperations:
+                type: string
+                default: "2018-10-04"
+              ZoneRatedStatedAmount:
+                type: string
+                default: "100000"
+              ZoneRatedSugarCaneHaulersCoverage:
+                type: string
+                default: "Additional Trailer"
+              ZoneRatedSugarCaneHaulersPeriodOfCoverage:
+                type: string
+                default: "75 Days"
+              ZoneRatedTotalPairsJunkDealersPlates:
+                type: string
+                default: ""
+              ZoneRatedTrailerHowUsed:
+                type: string
+                default: "Used in Dumping Operations"
+              ZoneRatedUnderinsuredMotoristCoverageWanted:
+                type: string
+                default: ""
+              ZoneRatedUnderinsuredMotoristPropertyDamageCoverageWanted:
+                type: string
+                default: ""
+              ZoneRatedUninsuredMotoristPropertyDamage:
+                type: string
+                default: ""
+              ZoneRatedUninsuredMotoristsCoverageWanted:
+                type: string
+                default: Yes
+              ZoneRatedVIN:
+                type: string
+                default: ""
+              ZoneRatedWorkLossCoverageWanted:
+                type: string
+                default: Yes
+              ZoneRatedYear:
+                type: string
+                default: "1992"
+              ZoneRatedZipCodeOverride:
+                type: string
+                default: Other
+              ZoneRatedtotalSetsOfDealerPlates:
+                type: string
+                default: ""
+              ZoneRatedOtherThanCollisionCoverageDeductible:
+                type: string
+                default: "3,000"
+              ZoneRatedUnderinsuredMotoristsCoverageWanted:
+                type: string
+                default: Yes
+              ZoneRatedCoverageType:
+                type: string
+                default: "Full Covered Autos Liability Limit For Customers Coverage"
+              ZoneRatedClass:
+                type: string
+                default: "Franchised Private Passenger Auto Dealer"
+              ZoneRatedUninsuredMotoristPropertyDamageCoverageWanted:
+                type: string
+                default: Yes
+              ZoneRatedUninsuredMotoristsCoverageType:
+                type: string
+                default: "Split Limit"
+              ZoneRatedPIPCoverageCoverageType:
+                type: string
+                default: "Combined Single Limit"
+              ZoneRatedUninsuredMotoristsCoverageSplitLimit:
+                type: string
+                default: "500,000/500,000"
+              CommercialAutoFullSafetyGlassCoverageMinnesota:
+                type: string
+                default: Other
+              CommercialAutoPIPMedicalExpensesCoverageLimitText:
+                type: string
+                default: Other
+              CommercialAutoVehicleCollisionCoverageDeductibleWaiver:
+                type: string
+                default: Other
+              CommercialAutoVehicleLiabilityPropertyDamageCoverageDeductible:
+                type: string
+                default: Other
+              CommercialAutoFarmLaborContractorsDeductible:
+                type: string
+                default: Other
+              CommercialAutoTruckersUniformIntermodalInterchangeEndtFormUIIE1:
+                type: string
+                default: Other
+        Special:
+         type: array
+         items:
+          properties:
+           SpecialDetail:
+            type: object
+            properties:
+              AudioVisualAndDataElectronicEquipmentCoverageLimit:
+                type: string
+                default: "500"
+              AuxillaryRunningLampsDiscount:
+                type: string
+                default: Yes
+              City:
+                type: string
+                default: Brighton
+              CommercialAutoVehicleAdditionalPIPCoverageAdditionalPIPCoverageType:
+                type: string
+                default: "Option B"
+              NoOfVehicles:
+                type: string
+                default: "1"
+              RentalReimbursementCoverageDailyRentalAmount:
+                type: string
+                default: "0"
+              SpecialAccidentPreventionDiscount:
+                type: string
+                default: ""
+              SpecialTotalCostOfHireCollision:
+                type: string
+                default: "63"
+              SpecialTypesAccidentalDeathBenefitCoverageWanted:
+                type: string
+                default: Yes
+              SpecialTypesAdditionalChiropracticTreatmentsCoverageWanted:
+                type: string
+                default: ""
+              SpecialTypesAdditionalPIPCoverage:
+                type: string
+                default: Yes
+              SpecialTypesAdditionalPersonalInjuryProtectionNewYorkAddedCoverageAdditionalMonthlyWorkLoss:
+                type: string
+                default: ""
+              SpecialTypesAdditionalPersonalInjuryProtectionNewYorkAddedCoverageOtherExpensesLimit:
+                type: string
+                default: ""
+              SpecialTypesAdditionalPersonalInjuryProtectionNewYorkAddedCoverageTotalAdditionalLimits:
+                type: string
+                default: ""
+              SpecialTypesAdditionalPersonalInjuryProtectionNewYorkDeathBenefitCoverageAdditionalDeathBenefit:
+                type: string
+                default: Yes
+              SpecialTypesAdditionalPersonalInjuryProtectionNewYorkDeathBenefitCoverageLimit:
+                type: string
+                default: "Not Applicable"
+              SpecialTypesAddressLine1:
+                type: string
+                default: ""
+              SpecialTypesAddressLine2:
+                type: string
+                default: ""
+              MunicipalityCode:
+                type: string
+                default: ""
+              MunicipalityName:
+                type: string
+                default: ""
+              SpecialTypesAlternativeExpensesCoverageManualPremium:
+                type: string
+                default: ""
+              SpecialTypesClass:
+                type: string
+                default: "Leasing or Rental Concerns"
+              SpecialTypesClassCode:
+                type: string
+                default: "7201"
+              SpecialTypesCollisionCoverageCoverageType:
+                type: string
+                default: ACV
+              SpecialTypesCounty:
+                type: string
+                default: Surry
+              SpecialTypesDeathBenefitsCoverageWanted:
+                type: string
+                default: ""
+              SpecialTypesEngineSize:
+                type: string
+                default: "101-200"
+              SpecialTypesGrossReceipts:
+                type: string
+                default: "25"
+              SpecialTypesIncomeLossBenefitsCoverageIncomeLossBenefits:
+                type: string
+                default: ""
+              SpecialTypesIncomeLossBenefitsCoverageIncomeLossBenefitsRatingBasis:
+                type: string
+                default: ""
+              SpecialTypesLiabilityCoverageCoverageType:
+                type: string
+                default: "Combined Single Limit"
+              SpecialTypesLiabilityCoverageDeductible:
+                type: string
+                default: "250 Combined Single Limit"
+              SpecialTypesLiabilityCoverageLimitText:
+                type: string
+                default: "500,000"
+              SpecialTypesMedicalPaymentsCoverageLimitText:
+                type: string
+                default: "2,000"
+              SpecialTypesNumberOfDaysVehicleIsLeased:
+                type: string
+                default: "56"
+              SpecialTypesNumberOfFactoryTestingEmployees:
+                type: string
+                default: "0"
+              SpecialTypesNumberOfRepossessedAutos:
+                type: string
+                default: "0"
+              SpecialTypesOptionalBasicEconomicLossCoverageWanted:
+                type: string
+                default: Yes
+              SpecialTypesOriginalCostNew:
+                type: string
+                default: "15000"
+              SpecialTypesPIPCoverageAccidentalDeathBenefit:
+                type: string
+                default: ""
+              SpecialTypesPIPCoverageAdditionalMedExpBenefits:
+                type: string
+                default: ""
+              SpecialTypesPIPCoverageAdditionalPersonalInjuryProtection:
+                type: string
+                default: ""
+              SpecialTypesPIPCoverageCombinationFirstPartyBenefit:
+                type: string
+                default: ""
+              SpecialTypesPIPCoverageCopayment:
+                type: string
+                default: ""
+              SpecialTypesPIPCoverageCoverageType:
+                type: string
+                default: "Employers Subject to MA Workers Compensation Act"
+              SpecialTypesPIPCoverageCoveredByWorkersCompensation:
+                type: string
+                default: ""
+              SpecialTypesPIPCoverageDeductible:
+                type: string
+                default: "Full Coverage"
+              SpecialTypesPIPCoverageExclusionOfIncomeBenefits:
+                type: string
+                default: ""
+              SpecialTypesPIPCoverageExclusionOfWorkLoss:
+                type: string
+                default: ""
+              SpecialTypesPIPCoverageFuneralExpenseBenefits:
+                type: string
+                default: ""
+              SpecialTypesPIPCoverageGovernmentOwned:
+                type: string
+                default: ""
+              SpecialTypesPIPCoverageMedExpAsSecondary:
+                type: string
+                default: ""
+              SpecialTypesPIPCoverageMedicalExpenseBenefits:
+                type: string
+                default: ""
+              SpecialTypesPIPCoverageMedicalExpenseElimination:
+                type: string
+                default: ""
+              SpecialTypesPIPCoveragePrincipalOperQualifiedNameInsrdHadWorkLossBenefitsExcl:
+                type: string
+                default: ""
+              SpecialTypesPIPCoverageRatingBasis:
+                type: string
+                default: "Covered by Workers Compensation"
+              SpecialTypesPIPCoverageWorkLossBenefits:
+                type: string
+                default: ""
+              SpecialTypesPropertyProtectionInsuranceCoverageCoverageType:
+                type: string
+                default: ""
+              SpecialTypesPropertyProtectionInsuranceCoverageDeductible:
+                type: string
+                default: ""
+              SpecialTypesState:
+                type: string
+                default: AZ
+              SpecialTypesStatedAmount:
+                type: string
+                default: "15000"
+              SpecialTypesSupplementaryType:
+                type: string
+                default: "Non-Dealer Garage Risks"
+              SpecialTypesTotalCostOfHireLiabilityInsuredPrimary:
+                type: string
+                default: "56"
+              SpecialTypesTotalCostOfHireLiabilityOwnerPrimary:
+                type: string
+                default: "72"
+              SpecialTypesTotalCostOfHireOtherThanCollision:
+                type: string
+                default: "89"
+              SpecialTypesType:
+                type: string
+                default: "Short Term – Trucks"
+              SpecialTypesUnderinsuredMotoristCoverageWanted:
+                type: string
+                default: ""
+              SpecialTypesUnderinsuredMotoristPropertyDamageCoverageWanted:
+                type: string
+                default: ""
+              SpecialTypesUninsuredMotoristPropertyDamage:
+                type: string
+                default: ""
+              SpecialTypesVehicleType:
+                type: string
+                default: Special
+              SpecialTypesWageLossCoverageWanted:
+                type: string
+                default: ""
+              SpecialTypesWorkLossCoverageWanted:
+                type: string
+                default: Yes
+              SpecialTypesZipCode:
+                type: string
+                default: "85001"
+              Territory:
+                type: string
+                default: ""
+              SpecialTypesUninsuredMotoristsCoverageWanted:
+                type: string
+                default: Yes
+              SpecialTypesPassiveRestraintDiscount:
+                type: string
+                default: "Air Bags in Only the Driver Side Position"
+              SpecialTypesLocationUse:
+                type: string
+                default: Interstate
+              SpecialTypesUninsuredMotoristPropertyDamageCoverageWanted:
+                type: string
+                default: Yes
+              SpecialTypesFleet:
+                type: string
+                default: Yes
+              SpecialTypesNumberOfAutoBodyManufacturersInstallersPlates:
+                type: string
+                default: "10"
+              SpecialTypesAIBTotalSetsDealerRepairOrGarageTrailerPlates:
+                type: string
+                default: "20"
+              SpecialTypesUninsuredMotoristsCoverageType:
+                type: string
+                default: "Split Limit"
+              SpecialTypesDrivingSchoolsOTPrivatePassenger:
+                type: string
+                default: Yes
+              SpecialTypesUninsuredMotoristsCoverageSplitLimit:
+                type: string
+                default: "500,000/500,000"
+              CommercialAutoPIPMedicalExpensesCoverageLimitText:
+                type: string
+                default: ""
+              CommercialAutoVehicleLiabilityPropertyDamageCoverageDeductible:
+                type: string
+                default: ""
+              SpecialTypesOtherThanCollisionCoverageCoverageType:
+                type: string
+                default: ACV
+              CommercialAutoVehicleOtherThanCollisionCoverageDeductible:
+                type: string
+                default: "3,000"
+              SpecialTypesOtherThanCollisionCoverageFullGlassCoverage:
+                type: string
+                default: ""
+              CommercialAutoVehicleAdditionalPIPCoverageCoverageType:
+                type: string
+                default: ""
+              CommercialAutoFarmLaborContractorsDeductible:
+                type: string
+                default: ""
+              SpecialTypesGaragingLocation:
+                type: string
+                default: Arrowhead
+              SpecialTypesDefensiveDrivingCourseCredit:
+                type: string
+                default: Yes
+              SpecialTypesMotorcycleTrainingCourse:
+                type: string
+                default: Yes
+              SpecialTypesLessorAdditionalInsuredAndLossPayee:
+                type: string
+                default: Yes
+              SpecialTypesHiredAutosSpecifiedAsCoveredAutosYouOwn:
+                type: string
+                default: Yes
+              SpecialTypesLiabilityCoverageNumberOfRepossessedAutos:
+                type: string
+                default: Yes
+              SpecialTypesAntiTheftVehicleRecoveryDevice:
+                type: string
+                default: "Category I Device"
+              SpecialTypesCollisionCoverageDeductible:
+                type: string
+                default: "5,000"
+              SpecialTypesOtherThanCollisionCoverageGlass100Deductible:
+                type: string
+                default: "2,000"
+              SpecialTypesCollisiontype:
+                type: string
+                default: Collision
+              SpecialTypesCollisionCoverageDeductibleWaiver:
+                type: string
+                default: "2,000"
+              specialVehicleUninsuredMotoristCoverageClassFactor:
+                type: string
+                default: ""
+              SpecialTypesUnderinsuredMotoristsCoverageSplitLimit:
+                type: string
+                default: "500,000/1,000,000"
+              SpecialTypesUnderinsuredMotoristsCoverageType:
+                type: string
+                default: "Combined Single Limit"
+              SpecialTypesSnowmobileAuxiliaryLightingSystemDiscount:
+                type: string
+                default: No
+              SpecialTypesExtraordinaryMedicalBenefitsCoverageExtraordinaryMedicalBenefit:
+                type: string
+                default: "Not Applicable"
+              SpecialTypesMatureDriverImprovementCourseDiscount:
+                type: string
+                default: No
+              SpecialTypesExtraordinaryMedicalBenefitsCoverageExtraordinaryMedicalBenefitRatingBasis:
+                type: string
+                default: "Not Applicable"
+              SpecialTypesAccidentPreventionRefresherDiscount:
+                type: string
+                default: No
+              RentalReimbursementCoverageMaximumRentalDays:
+                type: string
+                default: "0"
+              SpecialTypesTowingLaborCoverageManualPremium:
+                type: string
+                default: "0"
+        PublicTransportation:
+         type: array
+         items:
+          properties:
+           PublicTransportationDetail:
+            type: object
+            properties:
+              AddressLine1:
+                type: string
+                default: ""
+              AddressLine2:
+                type: string
+                default: ""
+              AudioVisualAndDataElectronicEquipmentCoverageLimit:
+                type: string
+                default: "500"
+              AuxillaryRunningLampsDiscount:
+                type: string
+                default: Yes
+              City:
+                type: string
+                default: Brighton
+              CommercialAutoVehicleAdditionalPIPCoverageAdditionalPIPCoverageType:
+                type: string
+                default: "Option B"
+              County:
+                type: string
+                default: Surry
+              NoOfVehicles:
+                type: string
+                default: "1"
+              MunicipalityCode:
+                type: string
+                default: ""
+              MunicipalityName:
+                type: string
+                default: ""
+              PublicTransportationAccidentPreventionDiscount:
+                type: string
+                default: ""
+              PublicTransportationAccidentalDeathBenefitCoverageWanted:
+                type: string
+                default: Yes
+              PublicTransportationAdditionalChiropracticTreatmentsCoverageWanted:
+                type: string
+                default: ""
+              PublicTransportationAdditionalPIPCoverage:
+                type: string
+                default: Yes
+              PublicTransportationAdditionalPersonalInjuryProtectionNewYorkAddedCoverageAdditionalMonthlyWorkLoss:
+                type: string
+                default: ""
+              PublicTransportationAdditionalPersonalInjuryProtectionNewYorkAddedCoverageOtherExpensesLimit:
+                type: string
+                default: ""
+              PublicTransportationAdditionalPersonalInjuryProtectionNewYorkAddedCoverageTotalAdditionalLimits:
+                type: string
+                default: ""
+              PublicTransportationAdditionalPersonalInjuryProtectionNewYorkDeathBenefitCoverageAdditionalDeathBenefit:
+                type: string
+                default: Yes
+              PublicTransportationAdditionalPersonalInjuryProtectionNewYorkDeathBenefitCoverageLimit:
+                type: string
+                default: "Not Applicable"
+              PublicTransportationAlternativeExpensesCoverageManualPremium:
+                type: string
+                default: ""
+              PublicTransportationCollisionCoverageCoverageType:
+                type: string
+                default: ACV
+              PublicTransportationDeathBenefitsCoverageWanted:
+                type: string
+                default: ""
+              PublicTransportationFarthestTerminalZone:
+                type: string
+                default: "Zone 01 Atlanta"
+              PublicTransportationFleet:
+                type: string
+                default: No
+              PublicTransportationGaragingZone:
+                type: string
+                default: "Zone 29 Phoenix"
+              PublicTransportationIncomeLossBenefitsCoverageIncomeLossBenefits:
+                type: string
+                default: ""
+              PublicTransportationIncomeLossBenefitsCoverageIncomeLossBenefitsRatingBasis:
+                type: string
+                default: ""
+              PublicTransportationMake:
+                type: string
+                default: BMW
+              PublicTransportationMechanicalLift:
+                type: string
+                default: ""
+              PublicTransportationMedicalPaymentsCoverageLimit:
+                type: string
+                default: "5,000"
+              PublicTransportationModel:
+                type: string
+                default: "78965"
+              PublicTransportationNoOfDaysSchoolYear:
+                type: string
+                default: "200"
+              PublicTransportationOptionalBasicEconomicLossCoverageWanted:
+                type: string
+                default: Yes
+              PublicTransportationOriginalCostNew:
+                type: string
+                default: "15000"
+              PublicTransportationPIPCoverageAccidentalDeathBenefit:
+                type: string
+                default: ""
+              PublicTransportationPIPCoverageAdditionalMedExpBenefits:
+                type: string
+                default: ""
+              PublicTransportationPIPCoverageAdditionalPersonalInjuryProtection:
+                type: string
+                default: ""
+              PublicTransportationPIPCoverageCombinationFirstPartyBenefit:
+                type: string
+                default: ""
+              PublicTransportationPIPCoverageCopayment:
+                type: string
+                default: ""
+              PublicTransportationPIPCoverageCoverageType:
+                type: string
+                default: "Employers Subject to MA Workers Compensation Act"
+              PublicTransportationPIPCoverageCoveredByWorkersCompensation:
+                type: string
+                default: ""
+              PublicTransportationPIPCoverageDeductible:
+                type: string
+                default: ""
+              PublicTransportationPIPCoverageExclusionOfIncomeBenefits:
+                type: string
+                default: ""
+              PublicTransportationPIPCoverageExclusionOfWorkLoss:
+                type: string
+                default: ""
+              PublicTransportationPIPCoverageFuneralExpenseBenefits:
+                type: string
+                default: ""
+              PublicTransportationPIPCoverageGovernmentOwned:
+                type: string
+                default: ""
+              PublicTransportationPIPCoverageInterstateBus:
+                type: string
+                default: ""
+              PublicTransportationPIPCoverageMedExpAsSecondary:
+                type: string
+                default: ""
+              PublicTransportationPIPCoverageMedicalExpenseBenefits:
+                type: string
+                default: ""
+              PublicTransportationPIPCoverageMedicalExpenseElimination:
+                type: string
+                default: ""
+              PublicTransportationPIPCoveragePrincipalOperQualifiedNameInsrdHadWorkLossBenefitsExcl:
+                type: string
+                default: ""
+              PublicTransportationPIPCoverageRatingBasis:
+                type: string
+                default: "Other Than Owner Operated"
+              PublicTransportationPIPCoverageWorkLossBenefits:
+                type: string
+                default: ""
+              PublicTransportationPrimaryClassCode:
+                type: string
+                default: ""
+              PublicTransportationPropertyProtectionInsuranceCoverageCoverageType:
+                type: string
+                default: ""
+              PublicTransportationPropertyProtectionInsuranceCoverageDeductible:
+                type: string
+                default: ""
+              PublicTransportationRadiusClass:
+                type: string
+                default: Local
+              PublicTransportationSafetyScore:
+                type: string
+                default: "1 - 26"
+              PublicTransportationSafetyScoreDiscountApplies:
+                type: string
+                default: Yes
+              PublicTransportationSchoolBusProration:
+                type: string
+                default: Yes
+              PublicTransportationSeatingCapacity:
+                type: string
+                default: "1 to 8"
+              PublicTransportationSecondaryClassCode:
+                type: string
+                default: "2"
+              PublicTransportationStatedAmount:
+                type: string
+                default: "12000"
+              PublicTransportationType:
+                type: string
+                default: "Social Service - All Other"
+              PublicTransportationUnderinsuredMotoristCoverageWanted:
+                type: string
+                default: ""
+              PublicTransportationUnderinsuredMotoristPropertyDamageCoverageWanted:
+                type: string
+                default: ""
+              PublicTransportationUninsuredMotoristsCoverageWanted:
+                type: string
+                default: Yes
+              PublicTransportationVIN:
+                type: string
+                default: ""
+              PublicTransportationWageLossCoverageWanted:
+                type: string
+                default: ""
+              PublicTransportationWorkLossCoverageWanted:
+                type: string
+                default: Yes
+              PublicTransportationYear:
+                type: string
+                default: "1992"
+              PublicTransportationZipCodeOverride:
+                type: string
+                default: ""
+              RentalReimbursementCoverageDailyRentalAmount:
+                type: string
+                default: "0"
+              RentalReimbursementCoverageMaximumRentalDays:
+                type: string
+                default: "0"
+              State:
+                type: string
+                default: AZ
+              Territory:
+                type: string
+                default: ""
+              VehicleType:
+                type: string
+                default: "Public Transportation"
+              ZipCode:
+                type: string
+                default: "85001"
+              PublicTransportationLocationUse:
+                type: string
+                default: Interstate
+              PublicTransportationUninsuredMotoristPropertyDamageCoverageWanted:
+                type: string
+                default: Yes
+              PublicTransportationSchoolCharterRegistrationPlates:
+                type: string
+                default: Yes
+              PublicTransportationMatureDriverImprovementCourseDiscount:
+                type: string
+                default: Yes
+              PublicTransportationUninsuredMotoristsCoverageType:
+                type: string
+                default: "Split Limit"
+              PublicTransportationUninsuredMotoristsCoverageSplitLimit:
+                type: string
+                default: "500,000/500,000"
+              CommercialAutoPIPMedicalExpensesCoverageLimitText:
+                type: string
+                default: ""
+              CommercialAutoVehicleAdditionalPIPCoverageCoverageType:
+                type: string
+                default: ""
+              CommercialAutoVehicleLiabilityCoverageCoverageType:
+                type: string
+                default: ""
+              CommercialAutoVehicleLiabilityPropertyDamageCoverageDeductible:
+                type: string
+                default: ""
+              CommercialAutoVehicleOtherThanCollisionCoverageFullGlassCoverage:
+                type: string
+                default: ""
+              FarmLaborContractor:
+                type: string
+                default: ""
+              MotorBus:
+                type: string
+                default: ""
+              OwnedByNewJerseyTransitCorp:
+                type: string
+                default: ""
+              CommercialAutoVehicleLiabilityCoverageDeductible:
+                type: string
+                default: ""
+              CommercialAutoFarmLaborContractorsDeductible:
+                type: string
+                default: ""
+              PublicTransportationLessorAdditionalInsuredAndLossPayee:
+                type: string
+                default: Yes
+              PublicTransportationHiredAutosSpecifiedAsCoveredAutosYouOwn:
+                type: string
+                default: Yes
+              CommercialAutoVehicleLiabilityCoverageTortLimitation:
+                type: string
+                default: No
+              CommercialAutoVehicleLiabilityCoverageLimitText:
+                type: string
+                default: "100,000"
+              PublicTransportationGaragingLocation:
+                type: string
+                default: "Not Applicable"
+              PublicTransportationIndividuallyOwnedLimo:
+                type: string
+                default: No
+              PublicTransportationFareCharged:
+                type: string
+                default: No
+              PublicTransportationOwnedByEmployer:
+                type: string
+                default: No
+              PublicTransportationDefensiveDrivingCourseCredit:
+                type: string
+                default: No
+              PublicTransportationRideSharingArrangements:
+                type: string
+                default: No
+              PublicTransportationOtherThanCollisionCoverageDeductible:
+                type: string
+                default: "3,000"
+              PublicTransportationOtherThanCollisionCoverageCoverageType:
+                type: string
+                default: ACV
+              PublicTransportationOtherThanCollisionCoverageGlass100Deductible:
+                type: string
+                default: Yes
+              PublicTransportationCollisiontype:
+                type: string
+                default: "Not Applicable"
+              PublicTransportationCollisionCoverageDeductibleWaiver:
+                type: string
+                default: No
+              PublicTransportationCollisionCoverageDeductible:
+                type: string
+                default: "500"
+              PublicTransportationUnderinsuredMotoristsCoverageSplitLimit:
+                type: string
+                default: "500,000/500,000"
+              PublicTransportationUnderinsuredMotoristsCoverageType:
+                type: string
+                default: "No Coverage"
+              PublicTransportationExtraordinaryMedicalBenefitsCoverageSeatingCapacity:
+                type: string
+                default: "1 To 8"
+              PublicTransportationAntiTheftVehicleRecoveryDevice:
+                type: string
+                default: Yes
+              PublicTransportationGrossVehicleWeightOver10000:
+                type: string
+                default: No
+              PublicTransportationExtraordinaryMedicalBenefitsCoverageExtraordinaryMedicalBenefitRatingBasis:
+                type: string
+                default: "Not Applicable"
+              PublicTransportationExtraordinaryMedicalBenefitsCoverageExtraordinaryMedicalBenefit:
+                type: string
+                default: Yes
+        HiredAuto:
+         type: array
+         items:
+          properties:
+           HiredAutoDetail:
+            type: object
+            properties:
+              HiredAutoTotalCostOfHireInsuredPrimary:
+                type: string
+                default: "2500"
+              HiredAutoTotalCostOfHireOwnerPrimary:
+                type: string
+                default: "1500"
+              HiredAutoLiabilityCoverageLimit:
+                type: string
+                default: "500,000"
+              HiredAutoLiabilityCoverageDeductible:
+                type: string
+                default: "100,000 Combined Single Limit"
+              HiredAutoCollisionCoverageTotalCostOfHire:
+                type: string
+                default: "1000"
+              HiredAutoCollisionCoverageDeductible:
+                type: string
+                default: "500"
+              HiredAutoOtherThanCollisionCoverageTotalCostOfHire:
+                type: string
+                default: "1000"
+              HiredAutoOtherThanCollisionCoverageCoverageType:
+                type: string
+                default: Comprehensive
+              HiredAutoOtherThanCollisionCoverageDeductible:
+                type: string
+                default: "Full Coverage"
+              HiredAutoTruckersLiabilityCoverageTotalNumberOfVehicles:
+                type: string
+                default: "1"
+              HiredAutoTruckersLiabilityCoverageTruckersPremium:
+                type: string
+                default: "550"
+              HiredAutoTruckersLiabilityCoveragePrimaryCostOfHireTruckers:
+                type: string
+                default: "5"
+              HiredAutoTruckersLiabilityCoverageExcessCostOfHireTruckers:
+                type: string
+                default: "15000"
+              HiredAutoInsuranceRequired:
+                type: string
+                default: "Yes"
+              HiredAutoLiabilityCoverageType:
+                type: string
+                default: "Combined Single Limit"
+              HiredAutoLiabilityCoveragePropertyDamageLimitText:
+                type: string
+                default: "10,000"
+              HiredAutoPermittedCarrier:
+                type: string
+                default: "No"
+              CommercialAutoHiredAutoRentalReimbursementCoverageDailyRentalAmount:
+                type: string
+                default: "1"
+              CommercialAutoHiredAutoPedestrianPIPCoveragePedestrianPIPCoverage:
+                type: string
+                default: "1"
+        NonOwnedAuto:
+         type: array
+         items:
+          properties:
+           NonOwnedAutoDetail:
+            type: object
+            properties:
+              NonOwnedAutoNumberOfEmployees:
+                type: string
+                default: "305"
+              NonOwnedAutoEmployeesAsInsureds:
+                type: string
+                default: "Yes"
+              NonOwnedAutoSocialServiceAgency:
+                type: string
+                default: "Yes"
+              NonOwnedAutoNumberOfPartners:
+                type: string
+                default: "2"
+              NonOwnedAutoNumberOfVolunteers:
+                type: string
+                default: "15"
+              NonOwnedAutoVolunteersAsInsureds:
+                type: string
+                default: "Yes"
+              NonOwnedAutoLiabilityCoverageDeductible:
+                type: string
+                default: "20,000 Combined Single Limit"
+              NonOwnedAutoLiabilityCoverageLimit:
+                type: string
+                default: "100,000"
+              NonOwnedAutoPropertyDamageLimitText:
+                type: string
+                default: "10,000"
+              NonOwnedAutoLiabilityCoverageType:
+                type: string
+                default: "Split Limit Without Underinsured Motorist Coverage"
+              CommercialAutoNonOwnedAutoPedestrianPIPCoveragePedestrianPIPCoverage:
+                type: string
+                default: "10"
+        AdditionalInsuredList:
+         type: array
+         items:
+          properties:
+           AdditionalInsuredType:
+              title: "Additional Insured Type"
+              type: string
+              enum: ["Concessionaires Trading Under Your Name","Lessor Of Leased Equipment - Automatic Status When Required In Lease Agreement With You"]
+              default: "Lessor Of Leased Equipment - Automatic Status When Required In Lease Agreement With You"
+           AdditionalInsuredDetail:
+            type: array
+            items:
+             properties: 
+              AdditionalInsuredAction:
+               title: " Additional Insured Action"
+               type: string
+               default: "Add"
+              AdditionalInsuredNumber:
+               title: "Additional Insured Number"
+               type: string
+               default: "b76fa989-8d95-4e3e-a630-35fda14254b3"
+              COIDescription:
+               title: "COI Description"
+               type: string
+               default: "Adding Vendors"
+              AdditionalInsuredName:
+               title: "Additional Insured Name"
+               type: string
+               default: "Jhon Smith"
+              AdditionalInsuredAddressLine1:
+               title: "Additional Insured Address Line1"
+               type: string
+               default: "70 Bowman St"
+              AdditionalInsuredAddressLine2:
+               title: "Additional Insured Address Line2"
+               type: string
+               default: "70 Bowman St"
+              AdditionalInsuredCounty:
+               title: "Additional Insured County"
+               type: string
+               default: "Seattle"
+              AdditionalInsuredCity:
+               title: "Additional Insured City"
+               type: string
+               default: "Seattle"
+              AdditionalInsuredZipCode: 
+               title: "Additional Insured ZipCode"
+               type: string
+               default: "98104"
+              AdditionalInsuredState: 
+               title: "Additional Insured State"
+               type: string
+               default: "CA"
+  errorModel:
+    type: object
+    required:
+      - RequestStatus
+      - MessageDetail
+    properties:
+      RequestStatus:
+        type: string
+      MessageDetail:
+        type: object
+        properties:
+          MessageCode:
+            type: string
+          MessageType:
+            type: string
+          UserMessage:
+            type: string
+          MessageLevel:
+            type: string
+          MessageSeverity:
+            type: string
+          MessageList:
+            type: object
+            properties:
+              Message:
+                type: array
+                items:
+                  type: string
+  Rating_Success_Response:
+    type: object
+    required:
+      - ResponseStatus
+      - Policy
+    properties:
+      OwnerId:
+        type: string
+      EndClientUserUniqueSessionId:
+        type: string
+      ResponseStatus:
+        type: string
+      Policy:
+       type: object
+       properties:
+        ProductNumber:
+         type: string
+         format: string
+         title: "ProductNumber"
+        ProductVerNumber:
+         type: string
+         format: string
+         title: "ProductVerNumber"
+        ISOERCVersion:
+         type: string
+         format: string
+         title: "ISOERCVersion"
+        ISOCWVersion:
+         type: string
+         format: string
+         title: "ISOCWVersion"
+        EventName:
+         type: string
+         format: string
+         title: "EventName"
+        EffectiveDate:
+         type: string
+         format: string
+         title: "EffectiveDate"
+        ExpirationDate:
+         type: string
+         format: string
+         title: "ExpirationDate"
+        LastRateLookUpDate:
+         type: string
+         format: string
+         title: "LastRateLookUpDate"
+        InsuredName:
+         type: string
+         format: string
+         title: "InsuredName"
+        AddressLine1:
+         type: string
+         format: string
+         title: "AddressLine1"
+        AddressLine2:
+         type: string
+         format: string
+         title: "AddressLine2"
+        City:
+         type: string
+         format: string
+         title: "City"
+        County:
+         type: string
+         format: string
+         title: "County"
+        ZipCode:
+         type: string
+         format: string
+         title: "ZipCode"
+        State:
+         type: string
+         format: string
+         title: "State"
+        BroadFormNamedInsured:
+         type: string
+         format: string
+         title: "BroadFormNamedInsured"
+        BroadFormNamedInsuredPremium:
+         type: string
+         format: string
+         title: "BroadFormNamedInsuredPremium"
+        ALAECoverage:
+         type: string
+         format: string
+         title: "ALAECoverage"
+        ProrataFactor:
+         type: string
+         format: string
+         title: "ProrataFactor"
+        CommercialAutoTotalPremium:
+         type: string
+         format: string
+         title: "CommercialAutoTotalPremium"
+        CommercialAutoBasePremium:
+         type: string
+         format: string
+         title: "CommercialAutoBasePremium"
+        CommercialAutoTruckTotalPremium:
+         type: string
+         format: string
+         title: "CommercialAutoTruckTotalPremium"
+        CommercialAutoPrivatePassengerTotalPremium:
+         type: string
+         format: string
+         title: "CommercialAutoPrivatePassengerTotalPremium"
+        CommercialAutoHiredAutoTotalPremium:
+         type: string
+         format: string
+         title: "CommercialAutoHiredAutoTotalPremium"
+        CommercialAutoNonOwnedAutoTotalPremium:
+         type: string
+         format: string
+         title: "CommercialAutoNonOwnedAutoTotalPremium"
+        IndividualNamedInsuredOnThePolicy:
+         type: string
+         format: string
+         title: "IndividualNamedInsuredOnThePolicy"
+        OptionalClassPlan:
+         type: string
+         format: string
+         title: "OptionalClassPlan"
+        PolicyType:
+         type: string
+         format: string
+         title: "PolicyType"
+        CommercialAutoPublicTransportationAutos:
+         type: string
+         format: string
+         title: "CommercialAutoPublicTransportationAutos"
+        CommercialAutoPublicOrLiveryPassengerConveyanceExclusion:
+         type: string
+         format: string
+         title: "CommercialAutoPublicOrLiveryPassengerConveyanceExclusion"
+        CommercialAutoPublicOrLiveryPassengerConveyanceAndOnDemandDeliveryServicesExclusion:
+         type: string
+         format: string
+         title: "CommercialAutoPublicOrLiveryPassengerConveyanceAndOnDemandDeliveryServicesExclusion"
+        NonOwnedAutoWanted:
+         type: string
+         format: string
+         title: "NonOwnedAutoWanted"
+        LegalEntity:
+         type: string
+         format: string
+         title: "LegalEntity"
+        HiredAutoWanted:
+         type: string
+         format: string
+         title: "HiredAutoWanted"
+        UnderinsuredMotoristsCoverageType:
+         type: string
+         format: string
+         title: "UnderinsuredMotoristsCoverageType"
+        UnderinsuredMotoristsCoverageCombinedSingleLimit:
+         type: string
+         format: string
+         title: "UnderinsuredMotoristsCoverageCombinedSingleLimit"
+        UnderinsuredMotoristsCoverageSplitLimit:
+         type: string
+         format: string
+         title: "UnderinsuredMotoristsCoverageSplitLimit"
+        UninsuredMotoristsCoverageType:
+         type: string
+         format: string
+         title: "UninsuredMotoristsCoverageType"
+        UninsuredMotoristsCoverageSplitLimit:
+         type: string
+         format: string
+         title: "UninsuredMotoristsCoverageSplitLimit"
+        UninsuredMotoristsCoverageCombinedSingleLimit:
+         type: string
+         format: string
+         title: "UninsuredMotoristsCoverageCombinedSingleLimit"
+        UninsuredMotoristsCoveragePulledByPowerUnit:
+         type: string
+         format: string
+         title: "UninsuredMotoristsCoveragePulledByPowerUnit"
+        AddlInsGLLessorOfLeasedEqpmtAutomtcStatusWhenRqdInLeasedAgrmtWithYouManualPremium:
+         type: string
+         format: string
+         title: "AddlInsGLLessorOfLeasedEqpmtAutomtcStatusWhenRqdInLeasedAgrmtWithYouManualPremium"
+        AddInsGLCoveragesConcessionairesTradingUnderYourNameManualPremium:
+         type: string
+         format: string
+         title: "AddInsGLCoveragesConcessionairesTradingUnderYourNameManualPremium"
+        EmployeeBenefitsLiabilityCoverageManualpremium:
+         type: string
+         format: string
+         title: "EmployeeBenefitsLiabilityCoverageManualpremium"
+        AddlInsGLLessorOfLeasedEqpmtAutomtcStatusWhenRqdInLeasedAgrmtWithYouPolicyTermPremium:
+         type: string
+         format: string
+         title: "AddlInsGLLessorOfLeasedEqpmtAutomtcStatusWhenRqdInLeasedAgrmtWithYouPolicyTermPremium"
+        AddInsGLCoveragesConcessionairesTradingUnderYourNamePolicyTermPremium:
+         type: string
+         format: string
+         title: "AddInsGLCoveragesConcessionairesTradingUnderYourNamePolicyTermPremium"
+        EmployeeBenefitsLiabilityCoveragePolicyTermPremium:
+         type: string
+         format: string
+         title: "EmployeeBenefitsLiabilityCoveragePolicyTermPremium"
+        TortLimitation:
+         type: string
+         format: string
+         title: "TortLimitation"
+        TortLimitationCode:
+         type: string
+         format: string
+         title: "TortLimitationCode"
+        IstheInsuredaGovernmentalSubdivision:
+         type: string
+         format: string
+         title: "IstheInsuredaGovernmentalSubdivision"
+        UninsuredMotoristsCoverageStacked:
+         type: string
+         format: string
+         title: "UninsuredMotoristsCoverageStacked"
+        UninsuredMotoristPropertyDamageDeductible:
+         type: string
+         format: string
+         title: "UninsuredMotoristPropertyDamageDeductible"
+        UnderinsuredMotoristsCoverageStacked:
+         type: string
+         format: string
+         title: "UnderinsuredMotoristsCoverageStacked"
+        UnderinsuredMotoristsCoveragePulledByPowerUnit:
+         type: string
+         format: string
+         title: "UnderinsuredMotoristsCoveragePulledByPowerUnit"
+        PollutionLiabBroadenedCovBusinessAutoMotorCarrierTruckersCovFormsManualPremium:
+         type: string
+         format: string
+         title: "PollutionLiabBroadenedCovBusinessAutoMotorCarrierTruckersCovFormsManualPremium"
+        PollutionLiabBroadenedCovBusinessAutoMotorCarrierTruckersCovFormsPolicyTermPremium:
+         type: string
+         format: string
+         title: "PollutionLiabBroadenedCovBusinessAutoMotorCarrierTruckersCovFormsPolicyTermPremium"
+        Truck:
+           type: array
+           items:
+            properties:
+             TruckDetail:
+              type: object
+              properties:
+               TruckOtherThanCollisionCoverageOTCOnlyPremium:
+                type: string
+                format: string
+                title: "TruckOtherThanCollisionCoverageOTCOnlyPremium"
+               TruckOtherThanCollisionCoverageLoggingPremium:
+                type: string
+                format: string
+                title: "TruckOtherThanCollisionCoverageLoggingPremium"
+               AddressLine1:
+                type: string
+                format: string
+                title: "AddressLine1"
+               AddressLine2:
+                type: string
+                format: string
+                title: "AddressLine2"
+               City:
+                type: string
+                format: string
+                title: "City"
+               County:
+                type: string
+                format: string
+                title: "County"
+               ZipCode:
+                type: string
+                format: string
+                title: "ZipCode"
+               State:
+                type: string
+                format: string
+                title: "State"
+               VehicleType:
+                type: string
+                format: string
+                title: "VehicleType"
+               TruckSizeClass:
+                type: string
+                format: string
+                title: "TruckSizeClass"
+               TruckSafetyScore:
+                type: string
+                format: string
+                title: "TruckSafetyScore"
+               TruckSafetyScoreDiscountApplies:
+                type: string
+                format: string
+                title: "TruckSafetyScoreDiscountApplies"
+               TruckTrailerHowUsed:
+                type: string
+                format: string
+                title: "TruckTrailerHowUsed"
+               TruckOriginalCostNew:
+                type: string
+                format: string
+                title: "TruckOriginalCostNew"
+               TruckStatedAmount:
+                type: string
+                format: string
+                title: "TruckStatedAmount"
+               TruckModel:
+                type: string
+                format: string
+                title: "TruckModel"
+               TruckMake:
+                type: string
+                format: string
+                title: "TruckMake"
+               TruckYear:
+                type: string
+                format: string
+                title: "TruckYear"
+               TruckVIN:
+                type: string
+                format: string
+                title: "TruckVIN"
+               TruckBusinessUseClass:
+                type: string
+                format: string
+                title: "TruckBusinessUseClass"
+               TruckUsedAsTNCOrOnDemand:
+                type: string
+                format: string
+                title: "TruckUsedAsTNCOrOnDemand"
+               TruckPercentageOfTransportationNetworkServiceAutoUse:
+                type: string
+                format: string
+                title: "TruckPercentageOfTransportationNetworkServiceAutoUse"
+               TruckAutoRentedToOtherMotorCarriers:
+                type: string
+                format: string
+                title: "TruckAutoRentedToOtherMotorCarriers"
+               TruckAgriculturalProduceTrailersSeasonal:
+                type: string
+                format: string
+                title: "TruckAgriculturalProduceTrailersSeasonal"
+               TruckMedicalPaymentsCoverageLimit:
+                type: string
+                format: string
+                title: "TruckMedicalPaymentsCoverageLimit"
+               TruckLiabilityCoverageLimit:
+                type: string
+                format: string
+                title: "TruckLiabilityCoverageLimit"
+               TruckLiabilityCoverageType:
+                type: string
+                format: string
+                title: "TruckLiabilityCoverageType"
+               TruckLiabilityCoverageDeductible:
+                type: string
+                format: string
+                title: "TruckLiabilityCoverageDeductible"
+               TruckLiabilityCoveragePercentOfMilesDrivenInGreenZone:
+                type: string
+                format: string
+                title: "TruckLiabilityCoveragePercentOfMilesDrivenInGreenZone"
+               TruckLiabilityCoverageownedByEmployer:
+                type: string
+                format: string
+                title: "TruckLiabilityCoverageownedByEmployer"
+               TruckLiabilitymoreThanOneRoundTrip:
+                type: string
+                format: string
+                title: "TruckLiabilitymoreThanOneRoundTrip"
+               TruckLiabilityCoveragetransportationOfEmployees:
+                type: string
+                format: string
+                title: "TruckLiabilityCoveragetransportationOfEmployees"
+               TruckLiabilityCoveragefarecharged:
+                type: string
+                format: string
+                title: "TruckLiabilityCoveragefarecharged"
+               TruckLiabilityCoveragefarmRegistrationCertificate:
+                type: string
+                format: string
+                title: "TruckLiabilityCoveragefarmRegistrationCertificate"
+               TruckLiabilityCoverageLocationUse:
+                type: string
+                format: string
+                title: "TruckLiabilityCoverageLocationUse"
+               TruckLiabilityCoverageTransportationOfEmployeesAllOtherFactor:
+                type: string
+                format: string
+                title: "TruckLiabilityCoverageTransportationOfEmployeesAllOtherFactor"
+               TruckEndOfOperations:
+                type: string
+                format: string
+                title: "TruckEndOfOperations"
+               TruckStartOfOperations:
+                type: string
+                format: string
+                title: "TruckStartOfOperations"
+               TruckRadiusClass:
+                type: string
+                format: string
+                title: "TruckRadiusClass"
+               TruckSecondaryClass:
+                type: string
+                format: string
+                title: "TruckSecondaryClass"
+               TruckFleet:
+                type: string
+                format: string
+                title: "TruckFleet"
+               TruckLessorAdditionalInsuredAndLossPayee:
+                type: string
+                format: string
+                title: "TruckLessorAdditionalInsuredAndLossPayee"
+               TruckHiredAutosSpecifiedAsCoveredAutosYouOwn:
+                type: string
+                format: string
+                title: "TruckHiredAutosSpecifiedAsCoveredAutosYouOwn"
+               TruckUninsuredMotoristsCoverageWanted:
+                type: string
+                format: string
+                title: "TruckUninsuredMotoristsCoverageWanted"
+               TruckUnderinsuredMotoristsCoverageWanted:
+                type: string
+                format: string
+                title: "TruckUnderinsuredMotoristsCoverageWanted"
+               TruckZipCodeOverride:
+                type: string
+                format: string
+                title: "TruckZipCodeOverride"
+               TruckCollisionCoverageCoverageType:
+                type: string
+                format: string
+                title: "TruckCollisionCoverageCoverageType"
+               TruckCollisionCoveragePercentOfMilesDrivenInGreenZone:
+                type: string
+                format: string
+                title: "TruckCollisionCoveragePercentOfMilesDrivenInGreenZone"
+               TruckCollisionCoverageDeductible:
+                type: string
+                format: string
+                title: "TruckCollisionCoverageDeductible"
+               TruckOtherThanCollisionCoverageCoverageType:
+                type: string
+                format: string
+                title: "TruckOtherThanCollisionCoverageCoverageType"
+               TruckOtherThanCollisionCoverageDeductible:
+                type: string
+                format: string
+                title: "TruckOtherThanCollisionCoverageDeductible"
+               TruckOtherThanCollisionCoveragePercentOfMilesDrivenInGreenZone:
+                type: string
+                format: string
+                title: "TruckOtherThanCollisionCoveragePercentOfMilesDrivenInGreenZone"
+               TruckLiabilityCoveragePolicyTermPremium:
+                type: string
+                format: string
+                title: "TruckLiabilityCoveragePolicyTermPremium"
+               TruckLiabilityCoverageDumpingOperationsPremium:
+                type: string
+                format: string
+                title: "TruckLiabilityCoverageDumpingOperationsPremium"
+               TruckLiabilityCoverageAmusementDevicePremium:
+                type: string
+                format: string
+                title: "TruckLiabilityCoverageAmusementDevicePremium"
+               TruckLiabilityCoverageShowroomPremium:
+                type: string
+                format: string
+                title: "TruckLiabilityCoverageShowroomPremium"
+               TruckLiabilityCoverageAgriculturePremium:
+                type: string
+                format: string
+                title: "TruckLiabilityCoverageAgriculturePremium"
+               TruckLiabilityCoverageNonTruckingOperationsPremium:
+                type: string
+                format: string
+                title: "TruckLiabilityCoverageNonTruckingOperationsPremium"
+               TruckLiabilityCoveragefarmRegistrationCertificatePremium:
+                type: string
+                format: string
+                title: "TruckLiabilityCoveragefarmRegistrationCertificatePremium"
+               TruckLiabilityCoverageNotapplicablePremium:
+                type: string
+                format: string
+                title: "TruckLiabilityCoverageNotapplicablePremium"
+               TruckLiabilityCoverageBasePremium:
+                type: string
+                format: string
+                title: "TruckLiabilityCoverageBasePremium"
+               TruckLiabilityCoveragePremiumILFDeductible:
+                type: string
+                format: string
+                title: "TruckLiabilityCoveragePremiumILFDeductible"
+               TruckLiabilityCoverageLiabilityCombinedRatingFactor:
+                type: string
+                format: string
+                title: "TruckLiabilityCoverageLiabilityCombinedRatingFactor"
+               TruckLiabilityCoverageFleetFactor:
+                type: string
+                format: string
+                title: "TruckLiabilityCoverageFleetFactor"
+               TruckLiabilityCoverageNonTruckingOperationsFactor:
+                type: string
+                format: string
+                title: "TruckLiabilityCoverageNonTruckingOperationsFactor"
+               TruckLiabilityCoverageHiredAutoFactor:
+                type: string
+                format: string
+                title: "TruckLiabilityCoverageHiredAutoFactor"
+               TruckLiabilityCoverageMatureDriverImprovementCourseDiscountFactor:
+                type: string
+                format: string
+                title: "TruckLiabilityCoverageMatureDriverImprovementCourseDiscountFactor"
+               TruckLiabilityCoverageAccidentPreventionDiscountFactor:
+                type: string
+                format: string
+                title: "TruckLiabilityCoverageAccidentPreventionDiscountFactor"
+               TruckLiabilityCoverageGreenZoneDiscountFactor:
+                type: string
+                format: string
+                title: "TruckLiabilityCoverageGreenZoneDiscountFactor"
+               TruckLiabilityCoverageSafetyScoreDiscountFactor:
+                type: string
+                format: string
+                title: "TruckLiabilityCoverageSafetyScoreDiscountFactor"
+               TruckLiabilityCoverageCoverageUseFactor:
+                type: string
+                format: string
+                title: "TruckLiabilityCoverageCoverageUseFactor"
+               TruckLiabilityCoverageSpecifiedAutosRentedToOtherMotorCarriersFactor:
+                type: string
+                format: string
+                title: "TruckLiabilityCoverageSpecifiedAutosRentedToOtherMotorCarriersFactor"
+               TruckLiabilityCoverageLiabilityTotalModificationFactor:
+                type: string
+                format: string
+                title: "TruckLiabilityCoverageLiabilityTotalModificationFactor"
+               TruckLiabilityCoverageSeasonalProduceFactor:
+                type: string
+                format: string
+                title: "TruckLiabilityCoverageSeasonalProduceFactor"
+               TruckLiabilityCoverageSeasonalProduceMonths:
+                type: string
+                format: string
+                title: "TruckLiabilityCoverageSeasonalProduceMonths"
+               TruckLiabilityCoverageAmusementDeviceFactor:
+                type: string
+                format: string
+                title: "TruckLiabilityCoverageAmusementDeviceFactor"
+               TruckLiabilityCoverageShowroomLiabilityFactor:
+                type: string
+                format: string
+                title: "TruckLiabilityCoverageShowroomLiabilityFactor"
+               TruckLiabilityCoverageSugarCaneHaulersPremium:
+                type: string
+                format: string
+                title: "TruckLiabilityCoverageSugarCaneHaulersPremium"
+               TruckLiabilityCoverageCarnivalParadePremium:
+                type: string
+                format: string
+                title: "TruckLiabilityCoverageCarnivalParadePremium"
+               TruckLiabilityCoverageShowroomLiabilityMinimumPremium:
+                type: string
+                format: string
+                title: "TruckLiabilityCoverageShowroomLiabilityMinimumPremium"
+               TruckLiabilityCoverageDefensiveDrivingCourseCreditFactor:
+                type: string
+                format: string
+                title: "TruckLiabilityCoverageDefensiveDrivingCourseCreditFactor"
+               TruckMedicalPaymentsCoveragePolicyTermPremium:
+                type: string
+                format: string
+                title: "TruckMedicalPaymentsCoveragePolicyTermPremium"
+               TruckMedicalPaymentsCoverageBasePremium:
+                type: string
+                format: string
+                title: "TruckMedicalPaymentsCoverageBasePremium"
+               TruckMedicalPaymentsCoverageShowroomFactor:
+                type: string
+                format: string
+                title: "TruckMedicalPaymentsCoverageShowroomFactor"
+               TruckMedicalPaymentsCoveragePrimaryFactor:
+                type: string
+                format: string
+                title: "TruckMedicalPaymentsCoveragePrimaryFactor"
+               TruckMedicalPaymentsCoverageSafetyScoreDiscountFactor:
+                type: string
+                format: string
+                title: "TruckMedicalPaymentsCoverageSafetyScoreDiscountFactor"
+               TruckMedicalPaymentsCoverageCoverageUseFactor:
+                type: string
+                format: string
+                title: "TruckMedicalPaymentsCoverageCoverageUseFactor"
+               TruckUnderinsuredMotoristsCoveragePolicyTermPremium:
+                type: string
+                format: string
+                title: "TruckUnderinsuredMotoristsCoveragePolicyTermPremium"
+               TruckUnderinsuredMotoristsCoverageBasePremium:
+                type: string
+                format: string
+                title: "TruckUnderinsuredMotoristsCoverageBasePremium"
+               TruckUnderinsuredMotoristsCoverageTrailersFactor:
+                type: string
+                format: string
+                title: "TruckUnderinsuredMotoristsCoverageTrailersFactor"
+               TruckUnderinsuredMotoristsCoverageIndividualNamedInsuredFactor:
+                type: string
+                format: string
+                title: "TruckUnderinsuredMotoristsCoverageIndividualNamedInsuredFactor"
+               TruckUnderinsuredMotoristsCoverageJunkDealersPlatesPremium:
+                type: string
+                format: string
+                title: "TruckUnderinsuredMotoristsCoverageJunkDealersPlatesPremium"
+               TruckUnderinsuredMotoristsCoverageJunkDealersAutoDealerPlatesPremium:
+                type: string
+                format: string
+                title: "TruckUnderinsuredMotoristsCoverageJunkDealersAutoDealerPlatesPremium"
+               TruckUninsuredMotoristsCoveragePolicyTermPremium:
+                type: string
+                format: string
+                title: "TruckUninsuredMotoristsCoveragePolicyTermPremium"
+               TruckUninsuredMotoristsCoverageBasePremium:
+                type: string
+                format: string
+                title: "TruckUninsuredMotoristsCoverageBasePremium"
+               TruckUninsuredMotoristsCoverageTrailersFactor:
+                type: string
+                format: string
+                title: "TruckUninsuredMotoristsCoverageTrailersFactor"
+               TruckUninsuredMotoristsCoverageMatureDriverImprovementCourseDiscountFactor:
+                type: string
+                format: string
+                title: "TruckUninsuredMotoristsCoverageMatureDriverImprovementCourseDiscountFactor"
+               TruckUninsuredMotoristsCoverageEconomicLossCoverageFactor:
+                type: string
+                format: string
+                title: "TruckUninsuredMotoristsCoverageEconomicLossCoverageFactor"
+               TruckRentalReimbursementCoveragePolicyTermPremium:
+                type: string
+                format: string
+                title: "TruckRentalReimbursementCoveragePolicyTermPremium"
+               TruckTapesRecordsAndDiscsCoveragePolicyTermPremium:
+                type: string
+                format: string
+                title: "TruckTapesRecordsAndDiscsCoveragePolicyTermPremium"
+               TruckTapesRecordsAndDiscsCoverageBasePremium:
+                type: string
+                format: string
+                title: "TruckTapesRecordsAndDiscsCoverageBasePremium"
+               TruckOtherThanCollisionCoveragePolicyTermPremium:
+                type: string
+                format: string
+                title: "TruckOtherThanCollisionCoveragePolicyTermPremium"
+               TruckOtherThanCollisionCoverageBasePremium:
+                type: string
+                format: string
+                title: "TruckOtherThanCollisionCoverageBasePremium"
+               TruckOtherThanCollisionCoverageFleetFactor:
+                type: string
+                format: string
+                title: "TruckOtherThanCollisionCoverageFleetFactor"
+               TruckOtherThanCollisionCoveragePhysicalDamageCombinedRatingFactor:
+                type: string
+                format: string
+                title: "TruckOtherThanCollisionCoveragePhysicalDamageCombinedRatingFactor"
+               TruckOtherThanCollisionCoverageAdditionalCoverageFactor:
+                type: string
+                format: string
+                title: "TruckOtherThanCollisionCoverageAdditionalCoverageFactor"
+               TruckOtherThanCollisionCoverageGreenZoneDiscountFactor:
+                type: string
+                format: string
+                title: "TruckOtherThanCollisionCoverageGreenZoneDiscountFactor"
+               TruckOtherThanCollisionCoverageCoverageUseFactor:
+                type: string
+                format: string
+                title: "TruckOtherThanCollisionCoverageCoverageUseFactor"
+               TruckCollisionCoveragePolicyTermPremium:
+                type: string
+                format: string
+                title: "TruckCollisionCoveragePolicyTermPremium"
+               TruckCollisionCoverageBasePremium:
+                type: string
+                format: string
+                title: "TruckCollisionCoverageBasePremium"
+               TruckCollisionCoverageFleetFactor:
+                type: string
+                format: string
+                title: "TruckCollisionCoverageFleetFactor"
+               TruckCollisionCoveragephysicalDamageCombinedRatingFactor:
+                type: string
+                format: string
+                title: "TruckCollisionCoveragephysicalDamageCombinedRatingFactor"
+               TruckCollisionCoveragedumpingRelativity:
+                type: string
+                format: string
+                title: "TruckCollisionCoveragedumpingRelativity"
+               TruckCollisionCoverageAccidentPreventionDiscountFactor:
+                type: string
+                format: string
+                title: "TruckCollisionCoverageAccidentPreventionDiscountFactor"
+               TruckCollisionCoverageGreenZoneDiscountFactor:
+                type: string
+                format: string
+                title: "TruckCollisionCoverageGreenZoneDiscountFactor"
+               TruckCollisionCoverageSafetyScoreDiscountFactor:
+                type: string
+                format: string
+                title: "TruckCollisionCoverageSafetyScoreDiscountFactor"
+               TruckCollisionCoverageMatureDriverImprovementCourseDiscountFactor:
+                type: string
+                format: string
+                title: "TruckCollisionCoverageMatureDriverImprovementCourseDiscountFactor"
+               TruckCollisionCoverageCoverageUseFactor:
+                type: string
+                format: string
+                title: "TruckCollisionCoverageCoverageUseFactor"
+               TruckCollisionfleetfactor:
+                type: string
+                format: string
+                title: "TruckCollisionfleetfactor"
+               TruckCollisiontype:
+                type: string
+                format: string
+                title: "TruckCollisiontype"
+               TruckSugarCaneHaulersPeriodOfCoverage:
+                type: string
+                format: string
+                title: "TruckSugarCaneHaulersPeriodOfCoverage"
+               TruckSugarCaneHaulersCoverage:
+                type: string
+                format: string
+                title: "TruckSugarCaneHaulersCoverage"
+               TruckPassengerHazard:
+                type: string
+                format: string
+                title: "TruckPassengerHazard"
+               TruckCarnivalParade:
+                type: string
+                format: string
+                title: "TruckCarnivalParade"
+               TruckAccidentPreventionDiscount:
+                type: string
+                format: string
+                title: "TruckAccidentPreventionDiscount"
+               TruckAntiTheftDevice:
+                type: string
+                format: string
+                title: "TruckAntiTheftDevice"
+               TruckAntiTheftVehicleRecoveryDevice:
+                type: string
+                format: string
+                title: "TruckAntiTheftVehicleRecoveryDevice"
+               TruckOtherThanCollisionCoverageAccidentPreventionDiscountFactor:
+                type: string
+                format: string
+                title: "TruckOtherThanCollisionCoverageAccidentPreventionDiscountFactor"
+               TruckOtherThanCollisionCoverageAntiTheftDeviceFactor:
+                type: string
+                format: string
+                title: "TruckOtherThanCollisionCoverageAntiTheftDeviceFactor"
+               TruckTotalPairsJunkDealersPlates:
+                type: string
+                format: string
+                title: "TruckTotalPairsJunkDealersPlates"
+               TruckTotalSetsOfDealerPlates:
+                type: string
+                format: string
+                title: "TruckTotalSetsOfDealerPlates"
+               TruckMatureDriverImprovementCourseDiscount:
+                type: string
+                format: string
+                title: "TruckMatureDriverImprovementCourseDiscount"
+               TruckPIPCoverageCoverageType:
+                type: string
+                format: string
+                title: "TruckPIPCoverageCoverageType"
+               TruckMedicalPaymentsCoverageAccidentPreventionDiscountFactor:
+                type: string
+                format: string
+                title: "TruckMedicalPaymentsCoverageAccidentPreventionDiscountFactor"
+               TruckMedicalPaymentsCoverageNotSubjectToNoFaultFactor:
+                type: string
+                format: string
+                title: "TruckMedicalPaymentsCoverageNotSubjectToNoFaultFactor"
+               TruckMedicalPaymentsCoverageMatureDriverImprovementCourseDiscountFactor:
+                type: string
+                format: string
+                title: "TruckMedicalPaymentsCoverageMatureDriverImprovementCourseDiscountFactor"
+               TruckMedicalPaymentsCoverageNoPIPMedicalPaymentsFactor:
+                type: string
+                format: string
+                title: "TruckMedicalPaymentsCoverageNoPIPMedicalPaymentsFactor"
+               TruckMedicalPaymentsCoverageMedicalPaymentsFleetFactor:
+                type: string
+                format: string
+                title: "TruckMedicalPaymentsCoverageMedicalPaymentsFleetFactor"
+               TruckMedicalPaymentsCoverageNoFaultFactor:
+                type: string
+                format: string
+                title: "TruckMedicalPaymentsCoverageNoFaultFactor"
+               TruckMedicalPaymentsCoverageJunkDealersAutoDealerPlatesPremium:
+                type: string
+                format: string
+                title: "TruckMedicalPaymentsCoverageJunkDealersAutoDealerPlatesPremium"
+               TruckMedicalPaymentsCoverageJunkDealersPlatesPremium:
+                type: string
+                format: string
+                title: "TruckMedicalPaymentsCoverageJunkDealersPlatesPremium"
+               TruckAdditionalChiropracticTreatmentsCoveragePremium:
+                type: string
+                format: string
+                title: "TruckAdditionalChiropracticTreatmentsCoveragePremium"
+               TruckAdditionalChiropracticTreatmentsCoverageBasePremium:
+                type: string
+                format: string
+                title: "TruckAdditionalChiropracticTreatmentsCoverageBasePremium"
+               TruckAlternativeExpensesCoverageTruckPremium:
+                type: string
+                format: string
+                title: "TruckAlternativeExpensesCoverageTruckPremium"
+               TruckAlternativeExpensesCoverageManualPremium:
+                type: string
+                format: string
+                title: "TruckAlternativeExpensesCoverageManualPremium"
+               TruckDefensiveDrivingCourseCredit:
+                type: string
+                format: string
+                title: "TruckDefensiveDrivingCourseCredit"
+               RentalReimbursementOtherThanCollisionCovPolicyTermPremium:
+                type: string
+                format: string
+                title: "RentalReimbursementOtherThanCollisionCovPolicyTermPremium"
+               RentalReimbursementOtherThanCollisionCovOtherThanCollisionFactor:
+                type: string
+                format: string
+                title: "RentalReimbursementOtherThanCollisionCovOtherThanCollisionFactor"
+               RentalReimbursementOtherThanCollisionCovMaximumRentalDays_1:
+                type: string
+                format: string
+                title: "RentalReimbursementOtherThanCollisionCovMaximumRentalDays_1"
+               RentalReimbursementOtherThanCollisionCovDailyRentalAmount_1:
+                type: string
+                format: string
+                title: "RentalReimbursementOtherThanCollisionCovDailyRentalAmount_1"
+               RentalReimbursementCollisionCovPolicyTermPremium:
+                type: string
+                format: string
+                title: "RentalReimbursementCollisionCovPolicyTermPremium"
+               RentalReimbursementCollisionCovCollisionFactor:
+                type: string
+                format: string
+                title: "RentalReimbursementCollisionCovCollisionFactor"
+               RentalReimbursementCollisionCovMaximumRentalDays_1:
+                type: string
+                format: string
+                title: "RentalReimbursementCollisionCovMaximumRentalDays_1"
+               RentalReimbursementCollisionCovDailyRentalAmount_1:
+                type: string
+                format: string
+                title: "RentalReimbursementCollisionCovDailyRentalAmount_1"
+               RentalReimbursementCoverageMaximumRentalDays:
+                type: string
+                format: string
+                title: "RentalReimbursementCoverageMaximumRentalDays"
+               RentalReimbursementCoverageDailyRentalAmount:
+                type: string
+                format: string
+                title: "RentalReimbursementCoverageDailyRentalAmount"
+               AudioVisualAndDataElectronicEquipmentCoveragePolicyTermPremium:
+                type: string
+                format: string
+                title: "AudioVisualAndDataElectronicEquipmentCoveragePolicyTermPremium"
+               AudioVisualAndDataElectronicEquipmentCoverageBasePremium:
+                type: string
+                format: string
+                title: "AudioVisualAndDataElectronicEquipmentCoverageBasePremium"
+               AudioVisualAndDataElectronicEquipmentCoverageLimit:
+                type: string
+                format: string
+                title: "AudioVisualAndDataElectronicEquipmentCoverageLimit"
+        PrivatePassenger:
+           type: array
+           items:
+            properties:
+             PrivatePassengerDetail:
+              type: object
+              properties:      
+               AddressLine1:
+                type: string
+                format: string
+                title: "AddressLine1"
+               AddressLine2:
+                type: string
+                format: string
+                title: "AddressLine2"
+               City:
+                type: string
+                format: string
+                title: "City"
+               County:
+                type: string
+                format: string
+                title: "County"
+               State:
+                type: string
+                format: string
+                title: "State"
+               ZipCode:
+                type: string
+                format: string
+                title: "ZipCode"
+               VehicleType:
+                type: string
+                format: string
+                title: "VehicleType"
+               PrivatePassengerType:
+                type: string
+                format: string
+                title: "PrivatePassengerType"
+               PrivatePassengerSafetyScore:
+                type: string
+                format: string
+                title: "PrivatePassengerSafetyScore"
+               PrivatePassengerSafetyScoreDiscountApplies:
+                type: string
+                format: string
+                title: "PrivatePassengerSafetyScoreDiscountApplies"
+               PrivatePassengerPercentageOfTransportationNetworkServiceAutoUse:
+                type: string
+                format: string
+                title: "PrivatePassengerPercentageOfTransportationNetworkServiceAutoUse"
+               PrivatePassengerUsedAsTNCOrOnDemand:
+                type: string
+                format: string
+                title: "PrivatePassengerUsedAsTNCOrOnDemand"
+               PrivatePassengerUse:
+                type: string
+                format: string
+                title: "PrivatePassengerUse"
+               PrivatePassengerOperatorExperience:
+                type: string
+                format: string
+                title: "PrivatePassengerOperatorExperience"
+               PrivatePassengerOriginalCostNew:
+                type: string
+                format: string
+                title: "PrivatePassengerOriginalCostNew"
+               PrivatePassengerStatedAmount:
+                type: string
+                format: string
+                title: "PrivatePassengerStatedAmount"
+               PrivatePassengerFleet:
+                type: string
+                format: string
+                title: "PrivatePassengerFleet"
+               PrivatePassengerModel:
+                type: string
+                format: string
+                title: "PrivatePassengerModel"
+               PrivatePassengerYear:
+                type: string
+                format: string
+                title: "PrivatePassengerYear"
+               PrivatePassengerVIN:
+                type: string
+                format: string
+                title: "PrivatePassengerVIN"
+               PrivatePassengerMake:
+                type: string
+                format: string
+                title: "PrivatePassengerMake"
+               PrivatePassengerLiabilityCoveragePercentOfMilesDrivenInGreenZone:
+                type: string
+                format: string
+                title: "PrivatePassengerLiabilityCoveragePercentOfMilesDrivenInGreenZone"
+               PrivatePassengerLiabilityCoverageDeductible:
+                type: string
+                format: string
+                title: "PrivatePassengerLiabilityCoverageDeductible"
+               PrivatePassengerLiabilityCoverageType:
+                type: string
+                format: string
+                title: "PrivatePassengerLiabilityCoverageType"
+               PrivatePassengerLiabilityCoverageLimit:
+                type: string
+                format: string
+                title: "PrivatePassengerLiabilityCoverageLimit"
+               PrivatePassengerMedicalPaymentsCoverageLimit:
+                type: string
+                format: string
+                title: "PrivatePassengerMedicalPaymentsCoverageLimit"
+               PrivatePassengerHiredAutosSpecifiedAsCoveredAutosYouOwn:
+                type: string
+                format: string
+                title: "PrivatePassengerHiredAutosSpecifiedAsCoveredAutosYouOwn"
+               PrivatePassengerLessorAdditionalInsuredAndLossPayee:
+                type: string
+                format: string
+                title: "PrivatePassengerLessorAdditionalInsuredAndLossPayee"
+               PrivatePassengerUninsuredMotoristsCoverageWanted:
+                type: string
+                format: string
+                title: "PrivatePassengerUninsuredMotoristsCoverageWanted"
+               PrivatePassengerZipCodeOverride:
+                type: string
+                format: string
+                title: "PrivatePassengerZipCodeOverride"
+               PrivatePassengerCollisionCoverageCoverageType:
+                type: string
+                format: string
+                title: "PrivatePassengerCollisionCoverageCoverageType"
+               PrivatePassengerCollisionCoveragePercentOfMilesDrivenInGreenZone:
+                type: string
+                format: string
+                title: "PrivatePassengerCollisionCoveragePercentOfMilesDrivenInGreenZone"
+               PrivatePassengerCollisionCoverageDeductible:
+                type: string
+                format: string
+                title: "PrivatePassengerCollisionCoverageDeductible"
+               PrivatePassengerOtherThanCollisionCoverageCoverageType:
+                type: string
+                format: string
+                title: "PrivatePassengerOtherThanCollisionCoverageCoverageType"
+               PrivatePassengerOtherThanCollisionCoverageDeductible:
+                type: string
+                format: string
+                title: "PrivatePassengerOtherThanCollisionCoverageDeductible"
+               PrivatePassengerOtherThanCollisionCoveragePercentOfMilesDrivenInGreenZone:
+                type: string
+                format: string
+                title: "PrivatePassengerOtherThanCollisionCoveragePercentOfMilesDrivenInGreenZone"
+               PrivatePassengerOtherThanCollisionCoverageFullGlassCoverage:
+                type: string
+                format: string
+                title: "PrivatePassengerOtherThanCollisionCoverageFullGlassCoverage"
+               PrivatePassengerTowingLaborCoverageLimit:
+                type: string
+                format: string
+                title: "PrivatePassengerTowingLaborCoverageLimit"
+               PrivatePassengerTowingLaborCoverageManualPremium:
+                type: string
+                format: string
+                title: "PrivatePassengerTowingLaborCoverageManualPremium"
+               PrivatePassengerLiabilityCoveragePolicyTermPremium:
+                type: string
+                format: string
+                title: "PrivatePassengerLiabilityCoveragePolicyTermPremium"
+               PrivatePassengerLiabilityCoverageBasePremium:
+                type: string
+                format: string
+                title: "PrivatePassengerLiabilityCoverageBasePremium"
+               PrivatePassengerLiabilityCoveragePremiumILFDeductible:
+                type: string
+                format: string
+                title: "PrivatePassengerLiabilityCoveragePremiumILFDeductible"
+               PrivatePassengerLiabilityCoverageLiabilityCombinedRatingFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerLiabilityCoverageLiabilityCombinedRatingFactor"
+               PrivatePassengerLiabilityCoverageHiredAutoFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerLiabilityCoverageHiredAutoFactor"
+               PrivatePassengerLiabilityCoverageMatureDriverImprovementCourseDiscountFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerLiabilityCoverageMatureDriverImprovementCourseDiscountFactor"
+               PrivatePassengerLiabilityCoverageAccidentPreventionDiscountFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerLiabilityCoverageAccidentPreventionDiscountFactor"
+               PrivatePassengerLiabilityCoverageAccidentPreventionRefresherDiscountFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerLiabilityCoverageAccidentPreventionRefresherDiscountFactor"
+               PrivatePassengerLiabilityCoverageGreenZoneDiscountFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerLiabilityCoverageGreenZoneDiscountFactor"
+               PrivatePassengerLiabilityCoverageSafetyScoreDiscountFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerLiabilityCoverageSafetyScoreDiscountFactor"
+               PrivatePassengerLiabilityCoverageTortLimitationFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerLiabilityCoverageTortLimitationFactor"
+               PrivatePassengerLiabilityCoverageCoverageUseFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerLiabilityCoverageCoverageUseFactor"
+               PrivatePassengerLiabilityCoverageLiabilityTotalModificationFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerLiabilityCoverageLiabilityTotalModificationFactor"
+               PrivatePassengerLiabilityCoverageTypeFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerLiabilityCoverageTypeFactor"
+               PrivatePassengerLiabilityCoverageManualPremium:
+                type: string
+                format: string
+                title: "PrivatePassengerLiabilityCoverageManualPremium"
+               PrivatePassengerLiabilityCoverageDefensiveDrivingCourseCreditFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerLiabilityCoverageDefensiveDrivingCourseCreditFactor"
+               PrivatePassengerMedicalPaymentsCoveragePolicyTermPremium:
+                type: string
+                format: string
+                title: "PrivatePassengerMedicalPaymentsCoveragePolicyTermPremium"
+               PrivatePassengerMedicalPaymentsCoverageBasePremium:
+                type: string
+                format: string
+                title: "PrivatePassengerMedicalPaymentsCoverageBasePremium"
+               PrivatePassengerMedicalPaymentsCoverageLiabilityCombinedRatingFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerMedicalPaymentsCoverageLiabilityCombinedRatingFactor"
+               PrivatePassengerMedicalPaymentsCoverageSafetyScoreDiscountFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerMedicalPaymentsCoverageSafetyScoreDiscountFactor"
+               PrivatePassengerMedicalPaymentsCoverageCoverageUseFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerMedicalPaymentsCoverageCoverageUseFactor"
+               PrivatePassengerMedicalPaymentsCoverageTypeFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerMedicalPaymentsCoverageTypeFactor"
+               PrivatePassengerUnderinsuredMotoristsCoveragePolicyTermPremium:
+                type: string
+                format: string
+                title: "PrivatePassengerUnderinsuredMotoristsCoveragePolicyTermPremium"
+               PrivatePassengerUnderinsuredMotoristsCoverageBasePremium:
+                type: string
+                format: string
+                title: "PrivatePassengerUnderinsuredMotoristsCoverageBasePremium"
+               PrivatePassengerUnderinsuredMotoristsCoverageTypeFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerUnderinsuredMotoristsCoverageTypeFactor"
+               PrivatePassengerUnderinsuredMotoristsCoverageIndividualNamedInsuredFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerUnderinsuredMotoristsCoverageIndividualNamedInsuredFactor"
+               PrivatePassengerUnderinsuredMotoristsCoverageAccidentPreventionDiscountFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerUnderinsuredMotoristsCoverageAccidentPreventionDiscountFactor"
+               PrivatePassengerUninsuredMotoristsCoveragePolicyTermPremium:
+                type: string
+                format: string
+                title: "PrivatePassengerUninsuredMotoristsCoveragePolicyTermPremium"
+               PrivatePassengerUninsuredMotoristsCoverageBasePremium:
+                type: string
+                format: string
+                title: "PrivatePassengerUninsuredMotoristsCoverageBasePremium"
+               PrivatePassengerUninsuredMotoristsCoverageTypeFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerUninsuredMotoristsCoverageTypeFactor"
+               PrivatePassengerUninsuredMotoristsCoverageMatureDriverImprovementCourseDiscountFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerUninsuredMotoristsCoverageMatureDriverImprovementCourseDiscountFactor"
+               PrivatePassengerUninsuredMotoristsCoverageEconomicLossCoverageFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerUninsuredMotoristsCoverageEconomicLossCoverageFactor"
+               PrivatePassengerUninsuredMotoristsCoverageAccidentPreventionDiscountFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerUninsuredMotoristsCoverageAccidentPreventionDiscountFactor"
+               PrivatePassengerRentalReimbursementCoveragePolicyTermPremium:
+                type: string
+                format: string
+                title: "PrivatePassengerRentalReimbursementCoveragePolicyTermPremium"
+               PrivatePassengerTapesRecordsAndDiscsCoveragePolicyTermPremium:
+                type: string
+                format: string
+                title: "PrivatePassengerTapesRecordsAndDiscsCoveragePolicyTermPremium"
+               PrivatePassengerTapesRecordsAndDiscsCoverageBasePremium:
+                type: string
+                format: string
+                title: "PrivatePassengerTapesRecordsAndDiscsCoverageBasePremium"
+               PrivatePassengerTowingLaborCoveragePolicyTermPremium:
+                type: string
+                format: string
+                title: "PrivatePassengerTowingLaborCoveragePolicyTermPremium"
+               PrivatePassengerTowingLaborCoverageBasePremium:
+                type: string
+                format: string
+                title: "PrivatePassengerTowingLaborCoverageBasePremium"
+               PrivatePassengerOtherThanCollisionCoveragePolicyTermPremium:
+                type: string
+                format: string
+                title: "PrivatePassengerOtherThanCollisionCoveragePolicyTermPremium"
+               PrivatePassengerOtherThanCollisionCoverageBasePremium:
+                type: string
+                format: string
+                title: "PrivatePassengerOtherThanCollisionCoverageBasePremium"
+               PrivatePassengerOtherThanCollisionCoveragePhysicalDamageCombinedRatingFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerOtherThanCollisionCoveragePhysicalDamageCombinedRatingFactor"
+               PrivatePassengerOtherThanCollisionCoverageGreenZoneDiscountFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerOtherThanCollisionCoverageGreenZoneDiscountFactor"
+               PrivatePassengerOtherThanCollisionCoverageCoverageUseFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerOtherThanCollisionCoverageCoverageUseFactor"
+               PrivatePassengerOtherThanCollisionCoverageTypeFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerOtherThanCollisionCoverageTypeFactor"
+               PrivatePassengerCollisionCoveragePolicyTermPremium:
+                type: string
+                format: string
+                title: "PrivatePassengerCollisionCoveragePolicyTermPremium"
+               PrivatePassengerCollisionCoverageBasePremium:
+                type: string
+                format: string
+                title: "PrivatePassengerCollisionCoverageBasePremium"
+               PrivatePassengerCollisionCoveragephysicalDamageCombinedRatingFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerCollisionCoveragephysicalDamageCombinedRatingFactor"
+               PrivatePassengerCollisionCoverageAccidentPreventionDiscountFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerCollisionCoverageAccidentPreventionDiscountFactor"
+               PrivatePassengerCollisionCoverageSafetyFeatureDiscountFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerCollisionCoverageSafetyFeatureDiscountFactor"
+               PrivatePassengerCollisionCoverageGreenZoneDiscountFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerCollisionCoverageGreenZoneDiscountFactor"
+               PrivatePassengerCollisionCoverageSafetyScoreDiscountFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerCollisionCoverageSafetyScoreDiscountFactor"
+               PrivatePassengerCollisionCoverageMatureDriverImprovementCourseDiscountFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerCollisionCoverageMatureDriverImprovementCourseDiscountFactor"
+               PrivatePassengerCollisionCoverageCoverageUseFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerCollisionCoverageCoverageUseFactor"
+               PrivatePassengerCollisionCoverageTypeFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerCollisionCoverageTypeFactor"
+               PrivatePassengerCollisionCoverageManualPremium:
+                type: string
+                format: string
+                title: "PrivatePassengerCollisionCoverageManualPremium"
+               PrivatePassengerCollisionfleetfactor:
+                type: string
+                format: string
+                title: "PrivatePassengerCollisionfleetfactor"
+               PrivatePassengerCollisiontype:
+                type: string
+                format: string
+                title: "PrivatePassengerCollisiontype"
+               PrivatePassengerUninsuredMotoristsCoverageManualPremium:
+                type: string
+                format: string
+                title: "PrivatePassengerUninsuredMotoristsCoverageManualPremium"
+               PrivatePassengerPassiveRestraintDiscount:
+                type: string
+                format: string
+                title: "PrivatePassengerPassiveRestraintDiscount"
+               PrivatePassengerAccidentPreventionDiscount:
+                type: string
+                format: string
+                title: "PrivatePassengerAccidentPreventionDiscount"
+               PrivatePassengerSafetyFeatures:
+                type: string
+                format: string
+                title: "PrivatePassengerSafetyFeatures"
+               PrivatePassengerAccidentPreventionRefresherDiscount:
+                type: string
+                format: string
+                title: "PrivatePassengerAccidentPreventionRefresherDiscount"
+               PrivatePassengerAntiTheftDevice:
+                type: string
+                format: string
+                title: "PrivatePassengerAntiTheftDevice"
+               PrivatePassengerAntiTheftVehicleRecoveryDevice:
+                type: string
+                format: string
+                title: "PrivatePassengerAntiTheftVehicleRecoveryDevice"
+               PrivatePassengerOtherThanCollisionCoverageManualPremium:
+                type: string
+                format: string
+                title: "PrivatePassengerOtherThanCollisionCoverageManualPremium"
+               PrivatePassengerOtherThanCollisionCoverageAccidentPreventionDiscountFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerOtherThanCollisionCoverageAccidentPreventionDiscountFactor"
+               PrivatePassengerOtherThanCollisionCoverageAntiTheftDeviceFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerOtherThanCollisionCoverageAntiTheftDeviceFactor"
+               PrivatePassengerMedicalPaymentsCoverageManualPremium:
+                type: string
+                format: string
+                title: "PrivatePassengerMedicalPaymentsCoverageManualPremium"
+               PrivatePassengerPIPCoverageCoverageType:
+                type: string
+                format: string
+                title: "PrivatePassengerPIPCoverageCoverageType"
+               PrivatePassengerMatureDriverImprovementCourseDiscount:
+                type: string
+                format: string
+                title: "PrivatePassengerMatureDriverImprovementCourseDiscount"
+               PrivatePassengerMedicalPaymentsCoverageAccidentPreventionDiscountFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerMedicalPaymentsCoverageAccidentPreventionDiscountFactor"
+               PrivatePassengerMedicalPaymentsCoverageNotSubjectToNoFaultFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerMedicalPaymentsCoverageNotSubjectToNoFaultFactor"
+               PrivatePassengerMedicalPaymentsCoverageMatureDriverImprovementCourseDiscountFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerMedicalPaymentsCoverageMatureDriverImprovementCourseDiscountFactor"
+               PrivatePassengerMedicalPaymentsCoverageNoPIPMedicalPaymentsFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerMedicalPaymentsCoverageNoPIPMedicalPaymentsFactor"
+               PrivatePassengerMedicalPaymentsCoverageMedicalPaymentsFleetFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerMedicalPaymentsCoverageMedicalPaymentsFleetFactor"
+               PrivatePassengerMedicalPaymentsCoveragePassiveRestraintDiscountFactor:
+                type: string
+                format: string
+                title: "PrivatePassengerMedicalPaymentsCoveragePassiveRestraintDiscountFactor"
+               PrivatePassengerUnderinsuredMotoristsCoverageWanted:
+                type: string
+                format: string
+                title: "PrivatePassengerUnderinsuredMotoristsCoverageWanted"
+               PrivatePassengerDefensiveDrivingCourseCredit:
+                type: string
+                format: string
+                title: "PrivatePassengerDefensiveDrivingCourseCredit"
+               PrivatePassengerAlternativeExpensesCoveragePrivatePassengerPremium:
+                type: string
+                format: string
+                title: "PrivatePassengerAlternativeExpensesCoveragePrivatePassengerPremium"
+               PrivatePassengerAdditionalChiropracticTreatmentsCoveragePremium:
+                type: string
+                format: string
+                title: "PrivatePassengerAdditionalChiropracticTreatmentsCoveragePremium"
+               PrivatePassengerAdditionalChiropracticTreatmentsCoverageBasePremium:
+                type: string
+                format: string
+                title: "PrivatePassengerAdditionalChiropracticTreatmentsCoverageBasePremium"
+               PrivatePassengerAlternativeExpensesCoverageManualPremium:
+                type: string
+                format: string
+                title: "PrivatePassengerAlternativeExpensesCoverageManualPremium"
+               RentalReimbursementOtherThanCollisionCovPolicyTermPremium:
+                type: string
+                format: string
+                title: "RentalReimbursementOtherThanCollisionCovPolicyTermPremium"
+               RentalReimbursementOtherThanCollisionCovOtherThanCollisionFactor:
+                type: string
+                format: string
+                title: "RentalReimbursementOtherThanCollisionCovOtherThanCollisionFactor"
+               RentalReimbursementOtherThanCollisionCovMaximumRentalDays_1:
+                type: string
+                format: string
+                title: "RentalReimbursementOtherThanCollisionCovMaximumRentalDays_1"
+               RentalReimbursementOtherThanCollisionCovDailyRentalAmount_1:
+                type: string
+                format: string
+                title: "RentalReimbursementOtherThanCollisionCovDailyRentalAmount_1"
+               RentalReimbursementCollisionCovPolicyTermPremium:
+                type: string
+                format: string
+                title: "RentalReimbursementCollisionCovPolicyTermPremium"
+               RentalReimbursementCollisionCovCollisionFactor:
+                type: string
+                format: string
+                title: "RentalReimbursementCollisionCovCollisionFactor"
+               RentalReimbursementCollisionCovMaximumRentalDays_1:
+                type: string
+                format: string
+                title: "RentalReimbursementCollisionCovMaximumRentalDays_1"
+               RentalReimbursementCollisionCovDailyRentalAmount_1:
+                type: string
+                format: string
+                title: "RentalReimbursementCollisionCovDailyRentalAmount_1"
+               RentalReimbursementCoverageMaximumRentalDays:
+                type: string
+                format: string
+                title: "RentalReimbursementCoverageMaximumRentalDays"
+               RentalReimbursementCoverageDailyRentalAmount:
+                type: string
+                format: string
+                title: "RentalReimbursementCoverageDailyRentalAmount"
+               AudioVisualAndDataElectronicEquipmentCoveragePolicyTermPremium:
+                type: string
+                format: string
+                title: "AudioVisualAndDataElectronicEquipmentCoveragePolicyTermPremium"
+               AudioVisualAndDataElectronicEquipmentCoverageBasePremium:
+                type: string
+                format: string
+                title: "AudioVisualAndDataElectronicEquipmentCoverageBasePremium"
+               AudioVisualAndDataElectronicEquipmentCoverageLimit:
+                type: string
+                format: string
+                title: "AudioVisualAndDataElectronicEquipmentCoverageLimit"
+        HiredAuto:
+           type: array
+           items:
+            properties:
+             HiredAutoDetail:
+              type: object
+              properties:      
+               HiredAutoTotalCostOfHireInsuredPrimary:
+                type: string
+                format: string
+                title: "HiredAutoTotalCostOfHireInsuredPrimary"
+               HiredAutoTotalCostOfHireOwnerPrimary:
+                type: string
+                format: string
+                title: "HiredAutoTotalCostOfHireOwnerPrimary"
+               HiredAutoLiabilityCoverageLimit:
+                type: string
+                format: string
+                title: "HiredAutoLiabilityCoverageLimit"
+               HiredAutoLiabilityCoverageDeductible:
+                type: string
+                format: string
+                title: "HiredAutoLiabilityCoverageDeductible"
+               HiredAutoLiabilityCoverageType:
+                type: string
+                format: string
+                title: "HiredAutoLiabilityCoverageType"
+               HiredAutoLiabilityCoveragePropertyDamageLimitText:
+                type: string
+                format: string
+                title: "HiredAutoLiabilityCoveragePropertyDamageLimitText"
+               HiredAutoLiabilityCoveragePropertyDamagePremium:
+                type: string
+                format: string
+                title: "HiredAutoLiabilityCoveragePropertyDamagePremium"
+               HiredAutoLiabilityCoverageBodilyInjuryPremium:
+                type: string
+                format: string
+                title: "HiredAutoLiabilityCoverageBodilyInjuryPremium"
+               HiredAutoCollisionCoverageTotalCostOfHire:
+                type: string
+                format: string
+                title: "HiredAutoCollisionCoverageTotalCostOfHire"
+               HiredAutoCollisionCoverageDeductible:
+                type: string
+                format: string
+                title: "HiredAutoCollisionCoverageDeductible"
+               HiredAutoOtherThanCollisionCoverageTotalCostOfHire:
+                type: string
+                format: string
+                title: "HiredAutoOtherThanCollisionCoverageTotalCostOfHire"
+               HiredAutoOtherThanCollisionCoverageCoverageType:
+                type: string
+                format: string
+                title: "HiredAutoOtherThanCollisionCoverageCoverageType"
+               HiredAutoOtherThanCollisionCoverageDeductible:
+                type: string
+                format: string
+                title: "HiredAutoOtherThanCollisionCoverageDeductible"
+               HiredAutoTruckersLiabilityCoverageTotalNumberOfVehicles:
+                type: string
+                format: string
+                title: "HiredAutoTruckersLiabilityCoverageTotalNumberOfVehicles"
+               HiredAutoTruckersLiabilityCoverageTruckersPremium:
+                type: string
+                format: string
+                title: "HiredAutoTruckersLiabilityCoverageTruckersPremium"
+               HiredAutoTruckersLiabilityCoveragePrimaryCostOfHireTruckers:
+                type: string
+                format: string
+                title: "HiredAutoTruckersLiabilityCoveragePrimaryCostOfHireTruckers"
+               HiredAutoTruckersLiabilityCoverageExcessCostOfHireTruckers:
+                type: string
+                format: string
+                title: "HiredAutoTruckersLiabilityCoverageExcessCostOfHireTruckers"
+               HiredAutoLiabilityCoveragePolicyTermPremium:
+                type: string
+                format: string
+                title: "HiredAutoLiabilityCoveragePolicyTermPremium"
+               HiredAutoLiabilityCoverageTotalCostOfHireInsuredPrimary:
+                type: string
+                format: string
+                title: "HiredAutoLiabilityCoverageTotalCostOfHireInsuredPrimary"
+               HiredAutoLiabilityCoverageTotalCostOfHireOwnerPrimary:
+                type: string
+                format: string
+                title: "HiredAutoLiabilityCoverageTotalCostOfHireOwnerPrimary"
+               HiredAutoLiabilityCoverageInsuredPrimaryFactor:
+                type: string
+                format: string
+                title: "HiredAutoLiabilityCoverageInsuredPrimaryFactor"
+               HiredAutoLiabilityCoverageInsuredExcessFactor:
+                type: string
+                format: string
+                title: "HiredAutoLiabilityCoverageInsuredExcessFactor"
+               HiredAutoLiabilityCoverageBaseRate:
+                type: string
+                format: string
+                title: "HiredAutoLiabilityCoverageBaseRate"
+               HiredAutoLiabilityCoveragePremiumILFDeductible:
+                type: string
+                format: string
+                title: "HiredAutoLiabilityCoveragePremiumILFDeductible"
+               HiredAutoCollisionCoveragePolicyTermPremium:
+                type: string
+                format: string
+                title: "HiredAutoCollisionCoveragePolicyTermPremium"
+               HiredAutoCollisionCoverageBasePremium:
+                type: string
+                format: string
+                title: "HiredAutoCollisionCoverageBasePremium"
+               HiredAutoOtherThanCollisionCoveragePolicyTermPremium:
+                type: string
+                format: string
+                title: "HiredAutoOtherThanCollisionCoveragePolicyTermPremium"
+               HiredAutoOtherThanCollisionCoverageBasePremium:
+                type: string
+                format: string
+                title: "HiredAutoOtherThanCollisionCoverageBasePremium"
+               HiredAutoTruckersLiabilityCoveragePolicyTermPremium:
+                type: string
+                format: string
+                title: "HiredAutoTruckersLiabilityCoveragePolicyTermPremium"
+               HiredAutoTruckersLiabilityCoverageTruckersExcessLiabilityFactor:
+                type: string
+                format: string
+                title: "HiredAutoTruckersLiabilityCoverageTruckersExcessLiabilityFactor"
+               HiredAutoInsuranceRequired:
+                type: string
+                format: string
+                title: "HiredAutoInsuranceRequired"
+               HiredAutoPermittedCarrier:
+                type: string
+                format: string
+                title: "HiredAutoPermittedCarrier"
+               HiredAutoTruckersLiabilityMinimumPremiumCoveragePremium:
+                type: string
+                format: string
+                title: "HiredAutoTruckersLiabilityMinimumPremiumCoveragePremium"
+               HiredAutoTruckersLiabilityMinimumPremiumCoverageTruckersliabilityCoveragePremium_1:
+                type: string
+                format: string
+                title: "HiredAutoTruckersLiabilityMinimumPremiumCoverageTruckersliabilityCoveragePremium_1"
+               HiredAutoTruckersLiabilityMinimumPremiumCoverageMinimumTruckersLiabilityPremium:
+                type: string
+                format: string
+                title: "HiredAutoTruckersLiabilityMinimumPremiumCoverageMinimumTruckersLiabilityPremium"
+               HiredAutoTruckersLiabilityMinimumPremiumCoveragTtotalNumberOfVehicles_1:
+                type: string
+                format: string
+                title: "HiredAutoTruckersLiabilityMinimumPremiumCoveragTtotalNumberOfVehicles_1"
+               HiredAutoPhysicalDamageMinimumPremiumCoveragePremium:
+                type: string
+                format: string
+                title: "HiredAutoPhysicalDamageMinimumPremiumCoveragePremium"
+               HiredAutoPhysicalDamageMinimumPremiumCoverageMinimumPhysicalDamagePremium:
+                type: string
+                format: string
+                title: "HiredAutoPhysicalDamageMinimumPremiumCoverageMinimumPhysicalDamagePremium"
+               HiredAutoPhysicalDamageMinimumPremiumCoveragephysicalDamagePremium_1:
+                type: string
+                format: string
+                title: "HiredAutoPhysicalDamageMinimumPremiumCoveragephysicalDamagePremium_1"
+               HiredAutoLiabilityMinimumPremiumCoveragePremium:
+                type: string
+                format: string
+                title: "HiredAutoLiabilityMinimumPremiumCoveragePremium"
+               HiredAutoLiabilityMinimumPremiumCoverageMinimumLiabilityPremium:
+                type: string
+                format: string
+                title: "HiredAutoLiabilityMinimumPremiumCoverageMinimumLiabilityPremium"
+               HiredAutoLiabilityMinimumPremiumCoverageliabilityCoveragePremium_1:
+                type: string
+                format: string
+                title: "HiredAutoLiabilityMinimumPremiumCoverageliabilityCoveragePremium_1"      
+        NonOwnedAuto:
+           type: array
+           items:
+            properties:
+             NonOwnedAutoDetail:
+              type: object
+              properties:      
+               NonOwnedAutoNumberOfEmployees:
+                type: string
+                format: string
+                title: "NonOwnedAutoNumberOfEmployees"
+               NonOwnedAutoLiabilityCoverageDeductible:
+                type: string
+                format: string
+                title: "NonOwnedAutoLiabilityCoverageDeductible"
+               NonOwnedAutoLiabilityCoverageLimit:
+                type: string
+                format: string
+                title: "NonOwnedAutoLiabilityCoverageLimit"
+               NonOwnedAutoEmployeesAsInsureds:
+                type: string
+                format: string
+                title: "NonOwnedAutoEmployeesAsInsureds"
+               NonOwnedAutoSocialServiceAgency:
+                type: string
+                format: string
+                title: "NonOwnedAutoSocialServiceAgency"
+               NonOwnedAutoNumberOfPartners:
+                type: string
+                format: string
+                title: "NonOwnedAutoNumberOfPartners"
+               NonOwnedAutoNumberOfVolunteers:
+                type: string
+                format: string
+                title: "NonOwnedAutoNumberOfVolunteers"
+               NonOwnedAutoVolunteersAsInsureds:
+                type: string
+                format: string
+                title: "NonOwnedAutoVolunteersAsInsureds"
+               NonOwnedAutoLiabilityCoverageType:
+                type: string
+                format: string
+                title: "NonOwnedAutoLiabilityCoverageType"
+               NonOwnedAutoPropertyDamageLimitText:
+                type: string
+                format: string
+                title: "NonOwnedAutoPropertyDamageLimitText"
+               NonOwnedAutoLiabilityCoveragePolicyTermPremium:
+                type: string
+                format: string
+                title: "NonOwnedAutoLiabilityCoveragePolicyTermPremium"
+               NonOwnedAutoLiabilityCoverageRate:
+                type: string
+                format: string
+                title: "NonOwnedAutoLiabilityCoverageRate"
+               NonOwnedAutoLiabilityCoverageEmployeesAsInsuredsPremium:
+                type: string
+                format: string
+                title: "NonOwnedAutoLiabilityCoverageEmployeesAsInsuredsPremium"
+               NonOwnedAutoLiabilityCoveragePartnershipPremium:
+                type: string
+                format: string
+                title: "NonOwnedAutoLiabilityCoveragePartnershipPremium"
+               NonOwnedAutoLiabilityCoverageVolunteersPremium:
+                type: string
+                format: string
+                title: "NonOwnedAutoLiabilityCoverageVolunteersPremium"
+               NonOwnedAutoLiabilityCoverageVolunteersAsInsuredsPremium:
+                type: string
+                format: string
+                title: "NonOwnedAutoLiabilityCoverageVolunteersAsInsuredsPremium"
+               NonOwnedAutoLiabilityCoverageBodilyInjuryPremium:
+                type: string
+                format: string
+                title: "NonOwnedAutoLiabilityCoverageBodilyInjuryPremium"
+               NonOwnedAutoLiabilityCoveragePropertyDamagePremium:
+                type: string
+                format: string
+                title: "NonOwnedAutoLiabilityCoveragePropertyDamagePremium"  
+        AdditionalInsuredList:
+         type: array
+         items:
+          properties:
+           AdditionalInsuredType:
+              title: "Additional Insured Type"
+              type: string
+              enum: ["Owners, Lessees Or Contractors - Scheduled Person Or Organization","Managers Or Lessors Of Premises","Designated Person Or Organization","Co-Owner Of Insured Premises","Lessor Of Leased Equipment","Owners, Lessees or Contractors - Automatic Status When Required In Construction Agreement With You","Lessor Of Leased Equipment - Automatic Status When Required In Lease Agreement With You","Club Members","Users of Golfmobiles"]
+              default: "Lessor Of Leased Equipment - Automatic Status When Required In Lease Agreement With You"
+           AdditionalInsuredDetail:
+            type: array
+            items:
+             properties: 
+              AdditionalInsuredAction:
+               title: " Additional Insured Action"
+               type: string
+              AdditionalInsuredNumber:
+               title: "Additional Insured Number"
+               type: string
+              AdditionalInsuredName:
+               title: "Additional Insured Name"
+               type: string
+              AdditionalInsuredAddressLine1:
+               title: "Additional Insured Address Line1"
+               type: string
+              AdditionalInsuredAddressLine2:
+               title: "Additional Insured Address Line2"
+               type: string
+              AdditionalInsuredCounty:
+               title: "Additional Insured County"
+               type: string
+              AdditionalInsuredCity:
+               title: "Additional Insured City"
+               type: string
+              AdditionalInsuredZipCode: 
+               title: "Additional Insured ZipCode"
+               type: string
+              AdditionalInsuredState: 
+               title: "Additional Insured State"
+               type: string
+              COIDescription:
+               title: "COIDescription"
+               type: string
+              AdditionalInsuredRate:
+               title: "AdditionalInsuredRate"
+               type: string
+              AdditionalInsuredAgencyCommission:
+               title: "AdditionalInsuredAgencyCommission"
+               type: string
+              AdditionalInsuredBillingBrokerCommission:
+               title: "AdditionalInsuredBillingBrokerCommission"
+               type: string
+              AdditionalInsuredCommission:
+               title: "AdditionalInsuredCommission"
+               type: string     
+        TFSList:
+          type: array
+          items:
+           properties:
+             TFSRate:
+               title: "Tax Rate"
+               type: string
+             TFSName:
+               title: "Tax Name"
+               type: string
+             TFSAmount:
+                title: "TFS Amount"
+                type: string
+          

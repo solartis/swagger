@@ -1,0 +1,168 @@
+swagger: '2.0'
+info:
+  title: Encryption URL Service
+  version: "2.1"
+  description: Construct a encrypted url with necessary input for runtime
+  contact: 
+    name: DevOps
+    email: devops@solartis.net
+host: uciapplicationservice.solartis.net
+basePath: /ApplicationServiceV5/ApplicationEncURLGenerator5
+schemes:
+  - https
+consumes:
+- application/json
+produces:
+- application/json
+paths:
+  /getEncryptedURL:
+    post:
+      description: 
+       This requestService endpoint returns whether the particular user has succesfully logged in or not.The respose include Login status, Token, UserRole.
+      tags:
+        - Authentication
+        - Encryption URL
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: user
+          in: body
+          description: Encrypted data
+          required: true
+          schema:
+           $ref: "#/definitions/User_Data"
+        - name: Token
+          in: header
+          description: Authentication Token
+          required: true
+          type: string
+          default: "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"
+        - name: Content-Type
+          in: header
+          description: Content Type
+          required: true
+          type: string
+          default: "application/json"
+        - name: MODE
+          in: header
+          description: denotes which mode to select
+          required: true
+          type: string
+          format: string
+          default: "LIVE"
+        - name: ENVIRONMENT
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "15"
+      responses:
+        200:
+          description: Successful response
+          schema:
+              $ref: "#/definitions/Authentication_Success_Response"
+        default:
+          description: Unexpected Error
+definitions:
+  User_Data:
+      required:
+        - component
+      properties:
+        component:
+          type: string
+          default: "EncryptionURL"
+        data:
+          type: object
+          properties:
+            url:
+              type: string
+              default: "https://ucibriteco.solartis.net/isoportal/common/delegate.xhtml"
+            saltValidityInHours:
+              type: string
+              default: "2400000"
+            index:
+              type: integer
+              default: 0
+            expanded:
+              type: boolean
+              default: true
+            isDisabled:
+              type: boolean
+              default: true
+            isSaltNeeded:
+              type: string
+              default: "false"
+            urlParamName:
+              type: string
+              default: "encKey"
+            sourceParameters:
+              type: array
+              default:
+              - name: "Object::Quote::State"
+                value: "AL"
+              - name: "Object::Quote::ProductName"
+                value: "315"
+              - name: "Object::Workflow::Type"
+                value: "QUOTE"
+              - name: "Object::Quote::Effectivedate_input"
+                value: "2018-12-15"
+              - name: "Object::Quote::ProductId"
+                value: "315"
+              - name: "Object::Quote::ProductVerId"
+                value: "325"
+              - name: "Object::Quote::ProductPlan"
+                value: "Personal Jewelry Insurance Program"
+              - name: "Object::Product::OwnerId"
+                value: "41"
+              - name: "Object::Quote::OwnerId"
+                value: "41"
+              - name: "Object::Quote::LOB"
+                value: "IM"
+              - name: "ISO::QuoteExpirationDate"
+                value: "2019-08-01"
+              - name: "ISO::ProductVerNumber"
+                value: "BRT_IM3_V1"
+              - name: "Object::Quote::ObjectId"
+                value: "1029216"
+              - name: "userName"
+                value: "britecoagent"
+              - name: "password"
+                value: "welcome1"
+              - name: "mode"
+                value: "LIVE"
+              - name: "environment"
+                value: "15"
+              - name: "TransactionKeys"
+                value: "Object::Quote::QuoteID~Object::QuoteInsured::QuoteInsuredID~Object::QuoteInsuredAddress::QuoteInsuredAddressID~Object::QuoteInsuredCommunication::QuoteQotCommunicationID~Object::QuoteAdditionalInsured::AdditionalInsuredId"
+              - name: "Object::Quote::QuoteID"
+                value: "1029216"
+              - name: "Object::QuoteInsured::QuoteInsuredID"
+                value: "831712458"
+              - name: "Object::QuoteInsuredAddress::QuoteInsuredAddressID"
+                value: "1023080"
+              - name: "Object::QuoteInsuredCommunication::QuoteQotCommunicationID"
+                value: "733933"
+              - name: "Object::QuoteAdditionalInsured::AdditionalInsuredId"
+                value: "361563"
+              items:
+                properties:
+                  name:
+                    type: string
+                  value:
+                    type: string
+  Authentication_Success_Response:
+          properties:
+            RequestStatus:
+              type: string
+            LoginStatus:
+              type: string
+            Token:
+              type: string
+            UserRole:
+              type: string
+            UserPrimaryObjectId:
+              type: integer
+              format: integer32

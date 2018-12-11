@@ -80,6 +80,7 @@ definitions:
             url:
               type: string
               enum: ["https://ucibriteco.solartis.net/isoportal/common/delegate.xhtml","http://devbriteco.solartis.net:8080/WebModuleV2/common/delegate.xhtml"]
+              default: "https://ucibriteco.solartis.net/isoportal/common/delegate.xhtml"
             saltValidityInHours:
               type: string
               default: "2400000"

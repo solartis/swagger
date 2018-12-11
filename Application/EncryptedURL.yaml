@@ -79,7 +79,7 @@ definitions:
           properties:
             url:
               type: string
-              default: "https://ucibriteco.solartis.net/isoportal/common/delegate.xhtml"
+              enum: ["https://uciisoportal.solartis.net/isoportal/common/delegate.xhtml","https://devbriteco.solartis.net:8080/WebModuleV2/common/delegate.xhtml"]
             saltValidityInHours:
               type: string
               default: "2400000"

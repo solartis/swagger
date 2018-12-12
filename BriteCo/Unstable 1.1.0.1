@@ -1,0 +1,374 @@
+swagger: '2.0'
+info:
+  version: "1.0.0"
+  title: Solartis Submission API for BriteCo
+  description: To create for Inland Marine from Solartis Submission API.
+  
+  
+host: ucibritecokb.solartis.net
+basePath: /KnowledgeEngineV6_2/KnowledgeBase
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /FireEventV2:
+    post:
+      description: Create Submission for the given input
+      operationId: createsubmission
+      produces:
+        - application/json
+      parameters:
+        - name: Token
+          in: header
+          description: Authentication Token
+          required: true
+          type: string
+          format: string
+          default: "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"
+        - name: EventName
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "BRITECOSubmission"
+        - name: EventVersion
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "1.1.0.1"
+        - name: Submission
+          in: body
+          description: Submission content
+          required: true
+          schema:
+            $ref: '#/definitions/Submission_Request'
+      responses:
+        '200':
+          description: Success Response
+          schema:
+            $ref: '#/definitions/Submission_Success_Response'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/errorModel'
+
+definitions:
+  Submission_Request:
+    type: object
+    required:
+      - ServiceRequestDetail
+      - Policy
+    properties:
+      Policy:
+        type: object
+        properties:
+          ProductNumber:
+            title: "Product Number"
+            type: string
+            default: "BRITECO"
+          ProductVerNumber:
+            title: "Product Ver Number"
+            type: string
+            default: "BRITECO_2018_V1"
+          EventName:
+            title: "Event Name"
+            type: string
+            default: "BRITECOSubmission"
+          EventVersion:
+            title: "Event Version"
+            type: string
+            default: "1.1.0.1"
+      InsuredInformation:
+        type: object
+        properties:
+          CustomerID:
+            title: "Customer ID"
+            type: string
+          FirstName:
+            title: "First Name"
+            type: string
+          LastName:
+            title: "Last Name"
+            type: string
+          PhoneNumber:
+            title: "Phone Number"
+            type: string
+          EmailAddress:
+            title: "Email Address"
+            type: string
+          AddressLine1:
+            title: "Address Line 1"
+            type: string
+          AddressLine2:
+            title: "Address Line 2"
+            type: string
+          City:
+            title: "City"
+            type: string
+          State:
+            title: "State"
+            type: string
+            enum: ["AL","AK","AR","AZ","CA","CO","CT","DC","DE","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA","MA","MD","ME","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","NY","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","WA","WI","WV","WY","VA"]
+          ZipCode:
+            title: "Zip Code"
+            type: string
+          ConsentToSMS:
+            title: "Consent To SMS"
+            type: string
+            enum: ["Yes","No"]
+      JewelerInformation:
+        type: object
+        properties:
+          JewelerOrgID:
+            title: "Jeweler Org ID"
+            type: string
+          JewelerOrgCompanyName:
+            title: "Jeweler Org Company Name"
+            type: string
+          JewelerStoreID:
+            title: "Jeweler Store ID"
+            type: string
+          JewelerStoreCompanyName:
+            title: "Jeweler Store Company Name"
+            type: string
+      JewelList:
+        type: array 
+        items:
+          properties:
+            JewelDetail:
+              type: object
+              properties: 
+                AppraisalID:
+                  title: "Appraisal ID"
+                  type: string
+                AppraisalDate:
+                  title: "Appraisal Date"
+                  type: string
+                ShortDescription:
+                  title: "Short Description"
+                  type: string
+                AppraisalValue:
+                  title: "Appraisal Value"
+                  type: string
+                AgreedValueFlag:
+                  title: "Agreed Value Flag"
+                  type: string
+                  enum: ["Yes","No"]
+                CustomFlag:
+                  title: "Custom Flag"
+                  type: string
+                  enum: ["Yes","No"]
+                Type:
+                  title: "Type"
+                  type: string
+      OwnerId:
+        type: string
+        default: "41"
+      ServiceRequestDetail:
+        type: object
+        properties:
+          ServiceRequestVersion:
+            type: string
+            default: "1.0"
+          LanguageCode:
+            type: string
+            default: "en"
+          UserName:
+            type: string
+            default: "BriteCoagent"
+          OwnerId:
+            type: string
+            default: "41"
+          RegionCode:
+            type: string
+            default: "US"
+          Token:
+            type: string
+            default: "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"
+          BrowserIp:
+            type: string 
+            default: "127.0.0.1"
+          ResponseType:
+            type: string
+            default: "json"
+      EndClientUserUniqueSessionId:
+        type: string
+        default: "Uniquesession"
+
+  Submission_Success_Response:
+    type: object
+    required:
+      - ServiceRequestDetail
+      - Policy
+    properties:
+      Policy:
+        type: object
+        properties:
+          ProductNumber:
+            title: "Product Number"
+            type: string
+          ProductVerNumber:
+            title: "Product Ver Number"
+            type: string
+          EventName:
+            title: "Event Name"
+            type: string
+          EventVersion:
+            title: "Event Version"
+            type: string
+      Insured Information:
+        type: object
+        properties:
+          CustomerID:
+            title: "Customer ID"
+            type: string
+          FirstName:
+            title: "First Name"
+            type: string
+          LastName:
+            title: "Last Name"
+            type: string
+          PhoneNumber:
+            title: "Phone Number"
+            type: string
+          EmailAddress:
+            title: "Email Address"
+            type: string
+          AddressLine1:
+            title: "Address Line 1"
+            type: string
+          AddressLine2:
+            title: "Address Line 2"
+            type: string
+          City:
+            title: "City"
+            type: string
+          State:
+            title: "State"
+            type: string
+          ZipCode:
+            title: "Zip Code"
+            type: string
+          ConsentToSMS:
+            title: "Consent To SMS"
+            type: string
+      JewelerInformation:
+        type: object
+        properties:
+          JewelerOrgID:
+            title: "Jeweler Org ID"
+            type: string
+          JewelerOrgCompanyName:
+            title: "Jeweler Org Company Name"
+            type: string
+          JewelerStoreID:
+            title: "Jeweler Store ID"
+            type: string
+          JewelerStoreCompanyName:
+            title: "Jeweler Store Company Name"
+            type: string
+      JewelList:
+        type: array 
+        items:
+          properties:
+            JewelDetail:
+              type: object
+              properties: 
+                AppraisalID:
+                  title: "Appraisal ID"
+                  type: string
+                AppraisalDate:
+                  title: "Appraisal Date"
+                  type: string
+                ShortDescription:
+                  title: "Short Description"
+                  type: string
+                AppraisalValue:
+                  title: "Appraisal Value"
+                  type: string
+                AgreedValueFlag:
+                  title: "Agreed Value Flag"
+                  type: string
+                CustomFlag:
+                  title: "Custom Flag"
+                  type: string
+                Type:
+                  title: "Type"
+                  type: string
+      OwnerId:
+        type: string
+        default: "41"
+      ServiceRequestDetail:
+        type: object
+        properties:
+          ServiceRequestVersion:
+            type: string
+            default: "1.0"
+          LanguageCode:
+            type: string
+            default: "en"
+          UserName:
+            type: string
+            default: "BriteCoagent"
+          OwnerId:
+            type: string
+            default: "41"
+          RegionCode:
+            type: string
+            default: "US"
+          Token:
+            type: string
+            default: "5Bp+YnpIAmPYOzrerFQgjVIYsirPgd80pejXJtLplOOes2CZFTdqyxRzDjTKnghxtCDpFGywlqx9hbtRdwTBXwsDpsdnPIriVqja5TlkWTRQ1I+S1c5nufq+fkr58BWfxn600DDg/lUxYSu+b7XPA3k3tZEDZdrXa7A0OY9Q5TTlpi5A0KOIBgMktXywkTSiV7/qrXsqXCk3LX+xMA2b0ujnnlE85f8NjXtCMVsmVTKjbXImxFGAQ8dTW7P1xm6RltCwjuKcrCKGah3zLKMrrelX93yRRHlyYBo09fVlScLdHnJomrq9wasIWuH2+xQeHX0Y6N5++Km+IggWQGiGSor00dq0DQpnWH0FhnfMrbBVNh8UcuK8aMBT+9GkDmmP8B7eoRAPSORHrAiU5s7EymQ/9aexd1t7PPcEUcyZVwebwhrOn9aM6jB8NWNFVrEcarSk3cq2V2vR/2+fz6LzZ6sQVhRT/L9jRh43Nwrr0Nu+vo1owdDhDZWTW/wqm4zkAlsD1DN/T1iQL2VE1ahqRpCnYTCb8X3BTkct1NWorZJ/3xkdFRzABP/0sHWNpHPL0atnDzESNwr4hS4WtHOu2iF2FHe1N8kSwhFnGzwVF285jc7NeQPIDmNp7k0N60laz5lZJHyFhDcD4UBd5dgUC1xiRymC2fVWZXG5+MZXDO+Y++XB1KF8hQE22awSJ+yKvqU0NQQI6jl4wy+D2hpDMiRlY0Z2KF8g95U0t64jWzWXSN7bq2Oe5yQdadCDho10Sk9ORfYedOboQLuJCAErRqP8Q54Tz8IndrGCFZr9+9XdFCHraxyL3I1t1P0WU4Dds8oxcmX71YTlvyDEdv85YNItwWjq+26dVyY3LYn0PyRdDPoNfcdausjEnbNi8Sgi0r06pXnt5EnwXXGOCu8nE5VrCzBMaupMfKUcEWByahb9p0+BBbYcUEDiliPc3v/ySh7BqbDI6jn1V0+K7W+4Ym7r0uh09yWUavhjNJLY109Aa4gKkuWn7nkx1x46ocyii8xwyZzDe0biukzP8e+0tN4zLLrxgsm411KQE9qjDESZWoKzlUADDaAGsyV1uzDtDyrGHni84pgPEDujWWD1avSwKJSSfhxR4abrkp19YSiwMUuM0QFBTdMeUH0Ut88M3UOykDTTWuMZ5byG4NgOorE0qA7ganV2zoBPn+PQrWQTNj5g9z2mxtXoMSxcSsu4MAQMsqoHqreijYLlb9ktfhYG6oIY2ebQI8FFE4clKeVEjcrM59m45dTAvC27opHaBbz0vfi5VZybM8+TOJoguakcj5xbitqNepQ8iv9Z4/2au0nG8CFU3cF9d8zs0QhzupsRpFOAPm8LnVXjSQ3lY+Ko5Rp2gZH8oaUtMCmrFXv1SlzV2Z5MYioHqhCwCZGyWhY6ozjvw4HzyAodAIHYLaXTJin25Z+yhI3HDfhJ9E7tSgb2HKpb2TIybb9FsTMONMD3O41l8QsLQq4apnLSzRDSI/GCtCdPkse/MaegNi0MzNeqY7twPE17YFwal7AgY1+TIlB27nLw2gNYQOVU0i2yEK5wwK2TtbH9p8S3vj7NHtHbVf9+/DvugAF5xnVJF4Pnr99FQpUpPa4xMjl/e904b04gy04vmXiZvnWZgtsvg6DeF0Fmv3HF2zGa2g7tyzO1xNTCgDcokUc8Wb0oBo/u6IZTbyGUOQ/51w2doFIPDoa/KFHpvgOEKpyVHMsY6H4y3Wa5zeWWbwOyb0JwvYYP3UqkQjU7EyW9oGlz1KUBj53f3xMWGCKsdqJqU2Mi20JwgOFRwLzX7r/qM9whZTPT2Od+63vUX1WdXyjrCoFXCJVR+z+/sCtjOoyBhs4RjuWRNlxHZlYtwXqx9pqGn7Z7y0267YDI9ctUQg6NAsn1Sgbwkwf/gW57GOHHy1iTDHv4/A/uJVduVZyGhBbxxSFUYzXuvC9fGmOnj7NMjDSs9nHL0bYQkEY2e9FxcGW0Q5p4qzZVoiRTjyF/SvHb81C84LIkcEM4YXCSmRnGzrKk9lxf1u1fCLvF5lc1Lngm1X1T7RJ/VATiXqrdL6qpkdJXADGoVVVnZ4G/eirVkMv1fEE78wi5MfM8bdO8+R60Hkln+wGbPn0qmy2AS+xpIhTA8OQF/OpBLeRNR+e/MRbf8upEKSHNlrzs2jGf6zwxBrnE+uYl+JCk8mh7FwfMIuIqyJn+4KxUKQ63zsOZrIXaR9ZDlB4XxDavi1ItmVshhrrl9EwEcIuGuWzMtc0sqUNZ91P8WA7xv4MxS4XpBDjhjWgB/2la2grZKMl/KjeZrf8Ijn8xlNiskgidWxQa49IH2P0vxZObx9s6xQy7sq7sfpWlG+y6KF+i/ac05CuWZJBr+LSqGxncRJaSU1PCeYNINBd9nWECuV+TG/g6kswYxzYjs5zAR0UUdLCbGXrD1Rl24h/w3fyisGluL0CCt5J5V4zADL8t7xvSzHlmdWW/4psQRvSIP7SM/jHeOReMFdf69Zl/SW3m/WOASgzLH6/ueVxjlqwMhlxlaT0uKhG5jgvCGZXXSdF8Mi9jSrVrqyKRhwdzgYEKfND2qO9O355iwBHiMkHKDgQjEcVWOVZaJFC9X4lj86DrlMAvbW7Qah7FaKMZMfEZEfEl9O7oUokzj9xR3xu7lbtyA1LuIylM+excNsJ/WqZRwyAGauYp34dxPYMJJ5xunb3iHVCDUa0uvuWs02JzbCzHHpuxskc4fnbWEJZroXPyeMTZV7NRPmPue3KQhb5qA+LDokTfLdVfvi6N1Y97aad8EOWkVFI="
+          BrowserIp:
+            type: string 
+            default: "127.0.0.1"
+          ResponseType:
+            type: string
+            default: "json"
+      EndClientUserUniqueSessionId:
+        type: string
+        default: "Uniquesession"
+      EndClientUserBrowserSessionId:
+        type: string
+      EndClientUserBrowserInformation:
+        type: string
+      PaaSClientIPAddress:
+        type: string
+      ClientUniqueRequestID:
+        type: string
+                    
+       
+  errorModel:
+    type: object
+    required:
+      - ResponseStatus
+      - MessageDetail
+    properties:
+      ResponseStatus:
+        type: string
+      MessageDetail:
+        type: object
+        properties:
+          MessageCode:
+            type: string
+          MessageType:
+            type: string
+          UserMessage:
+            type: string
+          MessageLevel:
+            type: string
+          MessageSeverity:
+            type: string
+          MessageList:
+            type: object
+            properties:
+              Message:
+                type: array
+                items:
+                  type: string       

@@ -6,7 +6,7 @@ info:
   
   
 host: authentication.uat.solartis.net
-basePath: /CommonServiceV2/AuthenticationServiceV2
+basePath: /CommonServiceV2_1/AuthenticationServiceV2
 schemes:
   - https
 consumes:

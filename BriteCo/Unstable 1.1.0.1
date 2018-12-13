@@ -90,6 +90,7 @@ definitions:
           CustomerID:
             title: "Customer ID"
             type: string
+            default: "12"
           FirstName:
             title: "First Name"
             type: string
@@ -115,6 +116,7 @@ definitions:
             title: "State"
             type: string
             enum: ["AL","AK","AR","AZ","CA","CO","CT","DC","DE","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA","MA","MD","ME","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","NY","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","WA","WI","WV","WY","VA"]
+            default: "NY"
           ZipCode:
             title: "Zip Code"
             type: string
@@ -122,21 +124,26 @@ definitions:
             title: "Consent To SMS"
             type: string
             enum: ["Yes","No"]
+            default: "Yes"
       JewelerInformation:
         type: object
         properties:
           JewelerOrgID:
             title: "Jeweler Org ID"
             type: string
+            default: "10"
           JewelerOrgCompanyName:
             title: "Jeweler Org Company Name"
             type: string
+            default: "Diana Jewels"
           JewelerStoreID:
             title: "Jeweler Store ID"
             type: string
+            default: "12"
           JewelerStoreCompanyName:
             title: "Jeweler Store Company Name"
             type: string
+            default: "Jewels Store"
       JewelList:
         type: array 
         items:
@@ -160,10 +167,12 @@ definitions:
                   title: "Agreed Value Flag"
                   type: string
                   enum: ["Yes","No"]
+                  default: "Yes"
                 CustomFlag:
                   title: "Custom Flag"
                   type: string
                   enum: ["Yes","No"]
+                  default: "Yes"
                 Type:
                   title: "Type"
                   type: string

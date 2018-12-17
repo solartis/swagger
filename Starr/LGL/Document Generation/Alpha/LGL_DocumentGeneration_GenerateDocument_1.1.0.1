@@ -1,0 +1,740 @@
+swagger: '2.0'
+info:
+  version: '1.1.0.1'
+  title: LGL Document Generation API
+  description: |
+    Document Generation API will generate a PDF with all the forms listed and the input values provided
+    
+  contact:
+    name: Solartis Support
+    email: solartis_assist_support@solartis.com
+    
+host: starrlgl.alpha.solartis.net
+basePath: /KnowledgeEngineV6_3/KnowledgeBase
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /FireEventV2:
+    post:
+      description: Forms generation API for LGL
+      operationId: generateForms
+      produces:
+        - application/json
+      parameters:
+        - name: Token
+          in: header
+          description: Authentication Token
+          required: true
+          type: string
+          format: string
+          default: "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"
+        - name: Content-Type
+          in: header
+          description: Content Type
+          required: true
+          type: string
+          default: "application/json"
+        - name: EventName
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "GenerateDocument"
+        - name: EventVersion
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "1.1.0.1"       
+        - name: Rating Request
+          in: body
+          description: For rating request
+          schema:
+            $ref: '#/definitions/DocGeneration_Request'
+            
+      responses:
+       '200':
+        description: Success Response
+        schema:
+         $ref: '#/definitions/DocGeneration_Success_Response'
+       default:
+        description: unexpected error
+        schema:
+          $ref: '#/definitions/errorModel'
+          
+definitions:
+  DocGeneration_Request:
+    type: object
+    properties:
+      ConsumerOwnerId:
+       title: "Owner ID"
+       type: string
+       default: "40"
+      EventName:
+        type: string
+        default: GenerateDocument
+      EventVersion:
+        type: string
+        default: '1.1.0.1'
+      ProductNumber:
+        type: string
+        default: STARR_LGL_V1
+      ProductVerNumber:
+        type: string
+        default: STARR_LGL_2018_V1
+      ServiceRequestDetail:
+        type: object
+        properties:
+         ServiceRequestVersion:
+          title: "ServiceRequestVersion"
+          type: string
+          default: "1.0"
+         ServiceResponseVersion:
+          title: "ServiceResponseVersion"
+          type: string
+          default: "1.0"
+         OwnerId:
+          title: "Owner ID"
+          type: string
+          default: "39"
+         ResponseType:
+          title: "Response Type"
+          type: string
+          default: "json"
+         UserName:
+          title: "User Name"
+          type: string
+          default: "lglagent"
+         Token:
+          type: string
+          default: "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"
+         BrowserIp:
+          type: string
+          default: "127.0.0.1"
+         LanguageCode:
+          type: string
+          default: "en"
+         RegionCode:
+          type: string
+          default: "US"
+      Policy:
+       type: object
+       properties:
+        AgentAddressLine1:
+          type: string
+        AgentAddressLine2:
+          type: string
+        AgentCity: 
+          type: string
+        AgentCode:
+          type: string
+        AgentID:
+          type: string
+        AgentName:
+          type: string
+        AgentPostalCd:
+          type: string
+        AgentState:
+          type: string
+        ALAE100percentReimbursed:
+          type: string
+        ALAEEroding:
+          type: string
+        ALAEExcluded:
+          type: string
+        ALAEProrata:
+          type: string
+        ALAEProrata%:
+          type: string
+        AnnualPayroll:
+          type: string
+        NumberofDaysPriorToCancelForAnyOtherReason:
+          type: string
+        AreAllClaimsClosed:
+          type: string
+        AssignedUnderwriterId:
+          type: string
+        AssignedUnderwriterSalesforceObjectID:
+          type: string
+        AssignedUWCompanyJobTitle:
+          type: string
+        AssignedUWFirstName:
+          type: string
+        AssignedUWLastName:
+          type: string
+        AssignedUWMailingAddressLine1:
+          type: string
+        AssignedUWMailingAddressLine2:
+          type: string
+        AssignedUWMailingCity:
+          type: string
+        AssignedUWMailingCountry:
+          type: string
+        AssignedUWMailingPostalCd:
+          type: string
+        AssignedUWMailingState:
+          type: string
+        AssignedUWUnit:
+          type: string
+        AssignedUWUserType1:  
+          type: string
+        AssignedUWUserType2:
+          type: string
+        BridgedPolicyNumber:
+          type: string
+        BusinessName:
+          type: string
+        ClaimOccurrenceDate:
+          type: string
+        ClaimOrLossHistoryReportingPeriod:
+          type: string
+        ClaimsAdministrator:
+          type: string
+        ClaimsAdministratorAddressCity:
+          type: string
+        ClaimsAdministratorAddressCounty:
+          type: string
+        ClaimsAdministratorAddressLine1:
+          type: string
+        ClaimsAdministratorAddressLine2:
+          type: string
+        ClaimsAdministratorAddressState:
+          type: string
+        ClaimsAdministratorAddressZipcode:
+          type: string
+        ClaimsAfterHoursEmergencyContactNumber:
+          type: string
+        ClaimsFax:
+          type: string
+        DamagetoPremisesRentedtoYouLimit:
+          type: string
+        DownPaymentPct:
+          type: string
+        DownPayment:
+          type: string
+        DueamountPct:
+          type: string
+        Dueamount:
+          type: string
+        Duedate:
+          type: string
+        EachEmployeeLimit:
+          type: string
+        EndorsementDescription:
+          type: string
+        EndorsementEffectiveDate:
+          type: string
+        EndorsementNumber:
+          type: string
+        EndorsementType:
+          type: string
+        EntityType:
+          type: string
+        ExperienceRatingApply:
+          type: string
+        ExtendedReportingPeriodEndorsementEffectiveDate:
+          type: string
+        ExtendedReportingPeriodEndorsementPremium:
+          type: string
+        GoverningState:
+          type: string
+        HiredAutoLiability:
+          type: string
+        HiredAutoLiabilityPremium:
+          type: string
+        InstallmentApplies:
+          type: string
+        InsuredAddressLine1:
+          type: string
+        InsuredAddressLine2:
+          type: string
+        InsuredCity:
+          type: string
+        InsuredState:
+          type: string
+        InsuredCounty:
+          type: string
+        InsuredName:
+          type: string
+        InsuredZipcode1:
+          type: string
+        InsuredZipcode2:
+          type: string
+        KnownPollutants:
+          type: string
+        KnownPollutionIncidents:
+          type: string
+        LastRateLookUpDate:
+          type: string
+        LineOfBusiness:
+          type: string
+        LiquorAggregateLimit:
+          type: string
+        LiquorEachCommonCauseLimit:
+          type: string
+        LiquorRetroactiveDate:
+          type: string
+        MailingAddressLine1:
+          type: string
+        MailingAddressLine2:
+          type: string
+        MailingCity:
+          type: string
+        MailingCounty:
+          type: string
+        MailingState:
+          type: string
+        MailingZipcode1:
+          type: string
+        MailingZipcode2:
+          type: string
+        MedicalExpenseLimit:
+          type: string
+        MinimumEarnedPremium:
+          type: string
+        MinimumPremium:
+          type: string
+        MinPremiumPct:
+          type: string
+        NonOwnedWatercraftLength:
+          type: string
+        NonOwnershipLiability:
+          type: string
+        NonOwnershipLiabilityPremium:
+          type: string
+        NumberofDaysPriorToCancelForNonPaymentOfPremium:
+          type: string
+        NumberOfEmployees:
+          type: string
+        OnsiteCleanupLeadRetroactiveDate:
+          type: string
+        OwnersContractorsAggregateLimit:
+          type: string
+        OwnersContractorsEachOccurrenceLimit:
+          type: string
+        PersonalAndAdversitingInjuryLimit:
+          type: string
+        PhoneNumber:
+          type: string
+        PlacingBroker:
+          type: string
+        PlacingBrokerAddressCity:
+          type: string
+        PlacingBrokerAddressPostalCode: 
+          type: string
+        PlacingBrokerAddressState:
+          type: string
+        PlacingBrokerAddressStreetLine1:
+          type: string
+        PlacingBrokerNumber:
+          type: string
+        PlacingUnderwriterId:
+          type: string
+        PlacingUnderwriterSalesforceObjectID:
+          type: string
+        PolicyDuration:
+          type: string
+        PolicyEffectiveDate:
+          type: string
+        PolicyExpirationDate:
+          type: string
+        PolicyNumber:
+          type: string
+        RenewalPolicyNumber:
+          type: string
+        PrimaryAndNonContributoryIncluded:
+          type: string
+        PriorRefusalToRenewalByInsurer:
+          type: string
+        ProducerFirstName:
+          type: string
+        ProducerLastName:
+          type: string
+        ProducerEmailID:
+          type: string
+        QuoteNumber:
+          type: string
+        BoundDate:
+          type: string
+        RefusalToRenewalReason:
+          type: string
+        RegionCode:
+          type: string
+        RenewalNumber:
+          type: string
+        RequestedAggregateLimit:
+          type: string
+        RequestedEachOccLimit:
+          type: string
+        RequestedRetroactiveDate:
+          type: string
+        RequestedSIRDeductible:
+          type: string
+        SICCode:
+          type: string
+        SIRDeductible:
+          type: string
+        Subline:
+          type: string
+        SubmissionID:
+          type: string
+        SubmissionName:
+          type: string
+        TaxAmount:
+          type: string
+        TaxCode:
+          type: string
+        TaxName:
+          type: string
+        TerrorismCoverage:
+          type: string
+        TerrorismPremium:
+          type: string
+        TotalPremium:
+          type: string
+        TPA:
+          type: string
+        TPAAfterhoursPhoneNumber:
+          type: string
+        TPAAutoClaimsEmailAddress:
+          type: string
+        TPACity:
+          type: string
+        TPAClaimsFaxNumber:
+          type: string
+        TPAClaimsPhoneNumber:
+          type: string
+        TPAExcessClaimsEmailAddress:
+          type: string
+        TPAGLClaimsEmailAddress:
+          type: string
+        TPAPostalCode:
+          type: string
+        TPAState:
+          type: string
+        TPAStreet:
+          type: string
+        TransactionType:
+          type: string
+        TransportationPollutionLiabCoveredHaulers:
+          type: string
+        TransportationPollutionLiabCoveredProducts:
+          type: string
+        TransportationPollutionLiabCoveredVehicles:
+          type: string
+        TransportationPollutionLiabCoveredWastes:
+          type: string
+        WaiverOfSubrogationIncluded:
+          type: string
+        WritingCompany:
+          type: string
+        YearsInBusiness:
+          type: string
+        AdditionalInsuredList:
+          type: array
+          items:
+            properties:
+              AdditionalInsuredDetail:
+                type: array
+                items:
+                  properties:
+                    AdditionalInsuredZipCode:
+                      type: string
+                    AdditionalInsuredAction:
+                      type: string
+                    AdditionalInsuredCounty:
+                      type: string
+                    AdditionalInsuredName:
+                      type: string
+                    AdditionalInsuredNumber:
+                      type: string
+                    AdditionalInsuredAddressLine2:
+                      type: string
+                    AdditionalInsuredAddressLine1:
+                      type: string
+                    AdditionalInsuredState:
+                      type: string
+                    COIDescription:
+                      type: string
+                    AdditionalInsuredPremium:
+                      type: string
+                    AdditionalInsuredCity:
+                      type: string
+              AdditionalInsuredType:
+                type: string
+        Location:
+          type: object
+          properties:
+            LocationDetail:
+              type: array
+              items:
+                properties:
+                  BuildingNumber:
+                    type: string
+                  BusinessAddressLine2:
+                    type: string
+                  BusinessAddressLine1:
+                    type: string
+                  BusinessCity:
+                    type: string
+                  BusinessCounty:
+                    type: string
+                  BusinessState:
+                    type: string
+                  BusinessZipCode1:
+                    type: string
+                  BusinessZipCode2:
+                    type: string
+                  LocationNumber:
+                    type: string
+                  NoticeAndKnwldgeOfAnOccLocation:
+                    type: string
+                  Occupancy:
+                    type: string
+                  RatingTerritory:
+                    type: string
+                  Classification:
+                    type: object
+                    properties:
+                      ClassificationDetail:
+                        type: array
+                        items:
+                          properties:
+                            AllOtherNoticesToTheInsurer:
+                              type: string
+                            ClassCode:
+                              type: string
+                            ClassDescription:
+                              type: string
+                            ExposureAmt:
+                              type: string
+                            ExposureBasis:
+                              type: string
+                            GeneralAggregateAdjBasis:
+                              type: string
+                            GeneralAggregateAdjRate:
+                              type: string
+                            GeneralAggregatePDDeductible:
+                              type: string
+                            ISOCode:
+                              type: string
+                            PremiumBase:
+                              type: string
+                            LiquorLiabilityPremium:
+                              type: string
+                            LiquorLiabilityRate:
+                              type: string
+                            SpecialProtectiveHighwayClassCode:
+                              type: string
+                            SpecialProtectiveHighwayClassDescription:
+                              type: string
+                            SpecialProtectiveHighwayPremiumBase:
+                              type: string
+                            NYSplProtectiveHighwayCovgContractorAddressCity:
+                              type: string
+                            NYSplProtectiveHighwayCovgContractorAddressCounty:
+                              type: string
+                            NYSplProtectiveHighwayCovgContractorAddressLine1:
+                              type: string
+                            NYSplProtectiveHighwayCovgContractorAddressLine2:
+                              type: string
+                            NYSplProtectiveHighwayCovgContractorAddressState:
+                              type: string
+                            NYSplProtectiveHighwayCovgContractorAddressZipCode:
+                              type: string
+                            NYSplProtectiveHighwayCovgContractorName:
+                              type: string
+                            NYSplProtectiveHighwayCovgDescOfOperations:
+                              type: string
+                            NYSplProtectiveHighwayCovgExistenceHzdAggLimit:
+                              type: string
+                            NYSplProtectiveHighwayCovgPremium:
+                              type: string
+                            NYSplProtectiveHighwayCovgRate:
+                              type: string
+                            OwnrsOrContrctrsLiabCovgContractorName:
+                              type: string
+                            ContractNumber:
+                              type: string
+                            CoveredOperationsAddressLine1:
+                              type: string
+                            CoveredOperationsAddressLine2:
+                              type: string
+                            CoveredOperationsAddressCity:
+                              type: string
+                            CoveredOperationsAddressCounty:
+                              type: string
+                            CoveredOperationsAddressState:
+                              type: string
+                            CoveredOperationsAddressZipCode:
+                              type: string
+                            ContractorAddressLine1:
+                              type: string
+                            ContractorAddressLine2:
+                              type: string
+                            ContractorAddressCity:
+                              type: string
+                            ContractorAddressCounty:
+                              type: string
+                            ContractorAddressState:
+                              type: string
+                            ContractorAddressZipCode:
+                              type: string
+                            OwnrsOrContrctrsLiabCovgPremium:
+                              type: string
+                            OwnrsOrContrctrsLiabCovgRatePer1000OfCost:
+                              type: string
+                            PollutionRetroactiveDate:
+                              type: string
+                            PremOpsAndProdsCompltdOpsGeneralAggregateLimit:
+                              type: string
+                            PremOpsBIDeductible:
+                              type: string
+                            PremOpsBIPDDeductible:
+                              type: string
+                            PremOpsPDDeductible:
+                              type: string
+                            PremOpsPremium:
+                              type: string
+                            PremOpsProdsEachOccurrenceLimit:
+                              type: string
+                            PremOpsProdsRetroactiveDate:
+                              type: string
+                            PremOpsRate:
+                              type: string
+                            ProdCompltdOpsPremium:
+                              type: string
+                            ProdCompltdOpsRate:
+                              type: string
+                            ProdsCompldOpsAggregateLimit:
+                              type: string
+                            ProdsCompldOpsBIDeductible:
+                              type: string
+                            ProdsCompldOpsBIPDDeductible:
+                              type: string
+                            ProdsCompldOpsPDDeductible:
+                              type: string
+                            RailroadAggregateLimit:
+                              type: string
+                            RailroadEachOccurrenceLimit:
+                              type: string
+                            RailRoadProtectiveLiabCovgContractorName:
+                              type: string
+                            RailRoadProtectiveLiabCovgContractorAddressLine1:
+                              type: string
+                            RailRoadProtectiveLiabCovgContractorAddressLine2:
+                              type: string
+                            RailRoadProtectiveLiabCovgContractorAddressCity:
+                              type: string
+                            RailRoadProtectiveLiabCovgContractorAddressCounty:
+                              type: string
+                            RailRoadProtectiveLiabCovgContractorAddressLineState:
+                              type: string
+                            RailRoadProtectiveLiabCovgContractorAddressZipCode:
+                              type: string
+                            RailRoadProtectiveLiabCovgGovAuthOrOtherContrctingPartyAddressCity:
+                              type: string
+                            RailRoadProtectiveLiabCovgGovAuthOrOtherContrctingPartyAddressCounty:
+                              type: string
+                            RailRoadProtectiveLiabCovgGovAuthOrOtherContrctingPartyAddressLine1:
+                              type: string
+                            RailRoadProtectiveLiabCovgGovAuthOrOtherContrctingPartyAddressLine2:
+                              type: string
+                            RailRoadProtectiveLiabCovgGovAuthOrOtherContrctingPartyAddressState:
+                              type: string
+                            RailRoadProtectiveLiabCovgGovAuthOrOtherContrctingPartyAddressZipCode:
+                              type: string
+                            RailRoadProtectiveLiabCovgGovAuthOrOtherContrctingPartyName:
+                              type: string
+                            RailRoadProtectiveLiabCovgJobLocAddressLine1:
+                              type: string
+                            RailRoadProtectiveLiabCovgJobLocAddressLine2:
+                              type: string
+                            RailRoadProtectiveLiabCovgJobLocAddressCity:
+                              type: string
+                            RailRoadProtectiveLiabCovgJobLocAddressCounty:
+                              type: string
+                            RailRoadProtectiveLiabCovgJobLocAddressState:
+                              type: string
+                            RailRoadProtectiveLiabCovgJobLocAddressZip:
+                              type: string
+                            RailRoadProtectiveLiabCovgPremium:
+                              type: string
+                            RailRoadProtectiveLiabCovgRate:
+                              type: string
+                            TotalSales:
+                              type: string
+        DocGenerationFormsList:
+          type: array
+          items:
+            properties:
+              FormNumber:
+                type: string
+              FormName:
+                type: string
+      
+          
+  errorModel:
+    type: object
+    properties:
+      RequestStatus:
+        type: string
+      MessageDetail:
+        type: object
+        properties:
+          MessageCode:
+            type: string
+          MessageType:
+            type: string
+          UserMessage:
+            type: string
+          MessageLevel:
+            type: string
+          MessageSeverity:
+            type: string
+          MessageList:
+            type: object
+            properties:
+              Message:
+                type: array
+                items:
+                  type: string
+                  
+  DocGeneration_Success_Response:
+    type: object
+    properties:
+      RequestStatus:
+        type: string
+      PolicyEffectiveDate:
+        type: string
+      PolicyExpirationDate:
+        type: string
+      PolicyNumber:
+        type: string
+      OwnerID:
+        type: string
+      QuoteNumber:
+        type: string
+      BoundDate:
+        type: string
+      TransactionType:
+        type: string
+      DocumentURL:
+        type: string
+      Documents:
+        type: array
+        items:
+          properties:
+            DocumentURL:
+              type: string
+            DocumentName:
+              type: string
+
+
+        

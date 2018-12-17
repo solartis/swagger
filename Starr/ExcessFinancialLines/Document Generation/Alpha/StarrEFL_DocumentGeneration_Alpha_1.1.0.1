@@ -9,7 +9,7 @@ info:
     name: Solartis Support
     email: solartis_assist_support@solartis.com
     
-host: starrefl.beta.solartis.net
+host: starrefl.alpha.solartis.net
 basePath: /KnowledgeEngineV6_2/KnowledgeBase
 schemes:
   - https
@@ -143,6 +143,8 @@ definitions:
           type: string
         Amenddeclarationspage.ItemNo:
           type: string
+        AmenddeclarationspagePuertoRico.ItemNo:
+          type: string
         AmenddeclarationspageBreakoutsharedAndSeparatelimitsforspecifiedcoveragesDeclarations.AggregatePolicyLimitOfLiability:
           type: string
         AmenddeclarationspageBreakoutsharedAndSeparatelimitsforspecifiedcoveragesDeclarations.SeparateLimitOfLiability:
@@ -167,6 +169,32 @@ definitions:
           type: string
         CrimeAndFidelityconversionendorsement.PerOccurrenceOrLoss:
           type: string
+        ConnecticutStarrsecureexcessliabilitypolicy.ExcessPolicyInsurer:
+          type: string
+        ConnecticutStarrsecureexcessliabilitypolicy.ExcessPolicyLimits:
+          type: string
+        ConnecticutStarrsecureexcessliabilitypolicy.ExcessPolicyPolicyNumber:
+          type: string
+        ConnecticutStarrsecureexcessliabilitypolicy.ExcessPolicyPolicyPeriod:
+          type: string
+          description: Provide From - To date in YYYY-MM-DD format
+        ConnecticutStarrsecureexcessliabilitypolicy.FollowedPolicyInsurer:
+          type: string
+        ConnecticutStarrsecureexcessliabilitypolicy.FollowedPolicyLimits:
+          type: string
+        ConnecticutStarrsecureexcessliabilitypolicy.FollowedPolicyPolicyNumber:
+          type: string
+        ConnecticutStarrsecureexcessliabilitypolicy.FollowedPolicyPolicyPeriod:
+          type: string
+          description: Provide From - To date in YYYY-MM-DD format
+        ConnecticutStarrsecureexcessliabilitypolicy.LimitOfLiability:
+          type: string
+        ConnecticutStarrsecureexcessliabilitypolicy.UnderlyingCoverage:
+          type: array
+          items:
+            properties:
+              UnderlyingCoverage:
+                type: string
         Defensecostsdisclosure.NamedInsuredDt:
           type: string
           description: Provide date in YYYY-MM-DD format
@@ -241,6 +269,8 @@ definitions:
         Followformtomidtermendorsementfollowedpolicy.EndorsementNo:
           type: string
         Followformtomidtermendorsementfollowedpolicy.Premium:
+          type: string
+        FollowFormToMidTermEndorsementsOfFollowedPolicy.Premium:
           type: string
         FollowformtospecifiedsublimitSEndorsement.SublimitAmt:
           type: string
@@ -450,6 +480,13 @@ definitions:
         PendingorpriorlitigationexclusionPuertorico.AsOfDt: 
           type: string
           description: Provide date in YYYY-MM-DD format
+        PendingorpriorlitigationexclusionIncreasedlimitsPuertoRico.AsOfDt:
+          type: string
+          description: Provide date in YYYY-MM-DD format
+        PendingorpriorlitigationexclusionIncreasedlimitsPuertoRico.FirstLiabilityLimit: 
+          type: string
+        PendingorpriorlitigationexclusionIncreasedlimitsPuertoRico.LiabilityLimit:
+          type: string
         PolicyInsurerName:
           type: string
         PolicyNumber:
@@ -506,6 +543,12 @@ definitions:
           type: string
         PuertoRicoStarrsecureexcessliabilitypolicy.PriorPolicyNumberWithInsurer:
           type: string
+        PuertoRicoStarrsecureexcessliabilitypolicy.UnderlyingCoverage:
+          type: array
+          items:
+            properties:
+              UnderlyingCoverage:
+                type: string
         Quotashareendorsement.InsurerName:
           type: string
         Quotashareendorsement.LimitOfLiability:
@@ -528,6 +571,10 @@ definitions:
         RelianceendorsementNowarrantyPuertoricoSpecifiedapplications.SignedDt:
           type: string
           description: Provide date in YYYY-MM-DD format
+        RelianceendorsementNowarrantyPuertoricoSpecifiedapplications.TypeOfPolicyApplication:
+          type: string
+        RelianceendorsementNowarrantyPuertoricoSpecifiedapplications.PolicyInsurerName:
+          type: string
         RelianceendorsementSpecifiedapplications.PolicyInsurerName: 
           type: string
         RelianceendorsementSpecifiedapplications.SignedDt:

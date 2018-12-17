@@ -276,6 +276,50 @@ definitions:
                     LeadInvestor:
                       title: "Lead Investor"
                       type: string 
+          Coverage:
+            type: array
+            items:
+              properties:
+                CoverageDetail:
+                  type: object
+                  properties:
+                    CoverageName:
+                      title: "Coverage Name"
+                      type: string
+                      enum: ["Directors and Officers", "EPLI", "Fiduciary"]
+                    LimitOfLiability:
+                      title: "Limit Of Liability"
+                      type: string
+                    Retention:
+                      title: "Retention"
+                      type: string
+                    BaseRate:
+                      title: "Base Rate"
+                      type: string
+                    BasePremium:
+                      title: "Premium"
+                      type: string
+                    RetentionFactor:
+                      title: "Retention Factor"
+                      type: string
+                    RetentionPremium:
+                      title: "Retention Premium"
+                      type: string
+                    IncreasedLimitFactor:
+                      title: "Increased Limit Factor"
+                      type: string
+                    IncreasedLimitPremium:
+                      title: "Increased Limit Premium"
+                      type: string
+                    AdjustedPremium:
+                      title: "Base Premium"
+                      type: string
+                    IndustryFactorValue:
+                      title: "Industry Factor Value"
+                      type: string
+                    CoverageLevelTotalBasePremium:
+                      title: "Coverage Level Total Base Premium"
+                      type: string
       OwnerId:
         title: "Owner ID"
         type: string

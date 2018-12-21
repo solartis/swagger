@@ -1,0 +1,1340 @@
+swagger: "2.0"
+info:
+  description: "Rebshare CreateQuote api"
+  version: "V2"
+  title: "Solartis CreateQuote API for Rebshare"
+host: "rebshare.alpha.solartis.net"
+basePath: "/KnowledgeEngineV6_2/KnowledgeBase"
+schemes:
+- "https"
+consumes:
+- "application/json"
+produces:
+- "application/json"
+paths:
+  /FireEventV2:
+    post:
+      description: "Rebshare CreateQuote"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "Token"
+        in: "header"
+        description: "Authentication Token"
+        required: true
+        type: "string"
+        default: "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"
+      - name: "Content-Type"
+        in: "header"
+        description: "Content Type"
+        required: true
+        type: "string"
+        default: "application/json"
+      - in: "body"
+        name: "CreateQuote Request"
+        description: ""
+        required: true
+        schema:
+          $ref: "#/definitions/CreateQuote_1.1.0.3"
+      - name: "EventName"
+        in: "header"
+        description: "Event name"
+        required: true
+        type: "string"
+        default: "CreateQuote_1.1.0.3"
+      responses:
+        200:
+          description: "Successful Response"
+          schema:
+            $ref: "#/definitions/CreateQuote_Success_Response"
+        default:
+          description: "Error Response"
+          schema:
+            $ref: "#/definitions/errorModel"
+definitions:
+  CreateQuote_1.1.0.3:
+    type: "object"
+    properties:
+      OwnerId:
+        type: "string"
+        format: "string"
+        title: "OwnerId"
+        default: "37"
+      EventName:
+        type: "string"
+        format: "string"
+        title: "EventName"
+        default: "CreateQuote_1.1.0.3"
+      ServiceRequestDetail:
+        type: "object"
+        properties:
+          OwnerId:
+            type: "string"
+            format: "string"
+            title: "OwnerId"
+            default: "37"
+          RegionCode:
+            type: "string"
+            format: "string"
+            title: "RegionCode"
+          WebServerSessionId:
+            type: "string"
+            format: "string"
+            title: "WebServerSessionId"
+          ClusterName:
+            type: "string"
+            format: "string"
+            title: "ClusterName"
+          GroupName:
+            type: "string"
+            format: "string"
+            title: "GroupName"
+          BrowserType:
+            type: "string"
+            format: "string"
+            title: "BrowserType"
+          NodeName:
+            type: "string"
+            format: "string"
+            title: "NodeName"
+          BrowserTime:
+            type: "string"
+            format: "string"
+            title: "BrowserTime"
+          ServiceResponseVersion:
+            type: "string"
+            format: "string"
+            title: "ServiceResponseVersion"
+          BrowserTimeZone:
+            type: "string"
+            format: "string"
+            title: "BrowserTimeZone"
+          WebServerNodeIPAddress:
+            type: "string"
+            format: "string"
+            title: "WebServerNodeIPAddress"
+          WebServerNodeName:
+            type: "string"
+            format: "string"
+            title: "WebServerNodeName"
+          ServiceRequestVersion:
+            type: "string"
+            format: "string"
+            title: "ServiceRequestVersion"
+            default: "1.0"
+          ServiceName:
+            type: "string"
+            format: "string"
+            title: "ServiceName"
+          ResponseType:
+            type: "string"
+            format: "string"
+            title: "ResponseType"
+            default: "JSON"
+          Token:
+            type: "string"
+            format: "string"
+            title: "Token"
+            default: "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"
+          UserName:
+            type: "string"
+            format: "string"
+            title: "UserName"
+            default: "rebshareagent"
+          ServerIp:
+            type: "string"
+            format: "string"
+            title: "ServerIp"
+          ClientIp:
+            type: "string"
+            format: "string"
+            title: "ClientIp"
+          LanguageCode:
+            type: "string"
+            format: "string"
+            title: "LanguageCode"
+          BrowserIp:
+            type: "string"
+            format: "string"
+            title: "BrowserIp"
+            default: "192.168.3.253"
+      Policy:
+        type: "object"
+        properties:
+          ProductNumber:
+            type: "string"
+            format: "string"
+            title: "ProductNumber"
+            default: "REBSHARE_AU"
+          AgencyName:
+            type: "string"
+            format: "string"
+            title: "AgencyName"
+            default: "Buckle"
+          AgentName:
+            type: "string"
+            format: "string"
+            title: "AgentName"
+            default: "Buckle"
+          EffectiveDate:
+            type: "string"
+            format: "string"
+            title: "EffectiveDate"
+            default: "2018-11-27"
+          ExpirationDate:
+            type: "string"
+            format: "string"
+            title: "ExpirationDate"
+            default: "2019-05-27"
+          InsuredName:
+            type: "string"
+            format: "string"
+            title: "InsuredName"
+            default: "John Doe"
+          AddressLine1:
+            type: "string"
+            format: "string"
+            title: "AddressLine1"
+            default: "123 Test St"
+          AddressLine2:
+            type: "string"
+            format: "string"
+            title: "AddressLine2"
+          City:
+            type: "string"
+            format: "string"
+            title: "City"
+            default: "Atlanta"
+          County:
+            type: "string"
+            format: "string"
+            title: "County"
+            default: "FULTON"
+          State:
+            type: "string"
+            format: "string"
+            title: "State"
+            default: "GA"
+          ZipCode:
+            type: "string"
+            format: "string"
+            title: "ZipCode"
+            default: "30016.0"
+          QuoteType:
+            type: "string"
+            format: "string"
+            title: "QuoteType"
+            default: "NEW BUSINESS"
+          IndividualNamedInsuredOnThePolicy:
+            type: "string"
+            format: "string"
+            title: "IndividualNamedInsuredOnThePolicy"
+            default: "Yes"
+          OptionalClassPlan:
+            type: "string"
+            format: "string"
+            title: "OptionalClassPlan"
+            default: "Yes"
+          ScheduleRatingApplies:
+            type: "string"
+            format: "string"
+            title: "ScheduleRatingApplies"
+            default: "No"
+          PolicyFee:
+            type: "string"
+            format: "string"
+            title: "PolicyFee"
+            default: "25.0"
+          UnderwritingFee:
+            type: "string"
+            format: "string"
+            title: "UnderwritingFee"
+            default: "15.0"
+          EFTInstallmentFee:
+            type: "string"
+            format: "string"
+            title: "EFTInstallmentFee"
+            default: "7.0"
+          DriverLicenseState:
+            type: "string"
+            format: "string"
+            title: "DriverLicenseState"
+            default: "GA"
+          DriverLicenseNumber:
+            type: "string"
+            format: "string"
+            title: "DriverLicenseNumber"
+            default: "abcdefg12345"
+          CleanMVR:
+            type: "string"
+            format: "string"
+            title: "CleanMVR"
+            default: "Yes"
+          AtFaultLosses:
+            type: "string"
+            format: "string"
+            title: "AtFaultLosses"
+            default: "No"
+          UninsuredMotoristsCoverageType:
+            type: "string"
+            format: "string"
+            title: "UninsuredMotoristsCoverageType"
+            default: "Combined Single Limit"
+          UninsuredMotoristsCoverageCombinedSingleLimit:
+            type: "string"
+            format: "string"
+            title: "UninsuredMotoristsCoverageCombinedSingleLimit"
+            default: "75000.0"
+          UninsuredMotoristsCoverageSplitLimit:
+            type: "string"
+            format: "string"
+            title: "UninsuredMotoristsCoverageSplitLimit"
+            default: "25,000/50,000"
+          UninsuredMotoristsCoverageDeductible:
+            type: "string"
+            format: "string"
+            title: "UninsuredMotoristsCoverageDeductible"
+            default: "0.0"
+          UninsuredMotoristsPropertyDamageCoverageLimit:
+            type: "string"
+            format: "string"
+            title: "UninsuredMotoristsPropertyDamageCoverageLimit"
+            default: "25000.0"
+          AtFaultLiabilityLimitsType:
+            type: "string"
+            format: "string"
+            title: "AtFaultLiabilityLimitsType"
+            default: "Added On To At-Fault Liability Limits"
+          PrivatePassenger:
+            type: "array"
+            items:
+              type: "object"
+              properties:
+                PrivatePassengerDetail:
+                  type: "object"
+                  properties:
+                    Type:
+                      type: "string"
+                      format: "string"
+                      title: "Type"
+                      default: "Personal Use or Farm Use - Nonfleet Vehicle"
+                    Use:
+                      type: "string"
+                      format: "string"
+                      title: "Use"
+                      default: "To or From Work 15 or More Miles"
+                    VIN:
+                      type: "string"
+                      format: "string"
+                      title: "VIN"
+                      default: "aaaaaaaaaaaaaaaaa"
+                    Year:
+                      type: "string"
+                      format: "string"
+                      title: "Year"
+                      default: "2015.0"
+                    Model:
+                      type: "string"
+                      format: "string"
+                      title: "Model"
+                      default: "Focus"
+                    Make:
+                      type: "string"
+                      format: "string"
+                      title: "Make"
+                      default: "Ford"
+                    AddressLine1:
+                      type: "string"
+                      format: "string"
+                      title: "AddressLine1"
+                      default: "GA"
+                    AddressLine2:
+                      type: "string"
+                      format: "string"
+                      title: "AddressLine2"
+                    City:
+                      type: "string"
+                      format: "string"
+                      title: "City"
+                      default: "Atlanta"
+                    County:
+                      type: "string"
+                      format: "string"
+                      title: "County"
+                      default: "FULTON"
+                    State:
+                      type: "string"
+                      format: "string"
+                      title: "State"
+                      default: "GA"
+                    ZipCode:
+                      type: "string"
+                      format: "string"
+                      title: "ZipCode"
+                      default: "30016.0"
+                    StatedAmount:
+                      type: "string"
+                      format: "string"
+                      title: "StatedAmount"
+                      default: "5000.0"
+                    SafetyScoreDiscountApplies:
+                      type: "string"
+                      format: "string"
+                      title: "SafetyScoreDiscountApplies"
+                      default: "No"
+                    DriverName:
+                      type: "string"
+                      format: "string"
+                      title: "DriverName"
+                      default: "John Doe"
+                    PercentageOfTransportationNetworkServiceAutoUse:
+                      type: "string"
+                      format: "string"
+                      title: "PercentageOfTransportationNetworkServiceAutoUse"
+                      default: "20% to 49.9%"
+                    CommercialAutomobilePrivatePassengerLiabilityCoverage.CoverageType:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerLiabilityCoverage.CoverageType"
+                      default: "Combined Single Limit"
+                    CommercialAutomobilePrivatePassengerLiabilityCoverage.Deductible:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerLiabilityCoverage.Deductible"
+                      default: "No Deductible"
+                    CommercialAutomobilePrivatePassengerUninsuredMotoristsCoverage.CoverageStatus:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerUninsuredMotoristsCoverage.CoverageStatus"
+                      default: "Combined Single Limit"
+                    CommercialAutomobilePrivatePassengerUninsuredMotoristsPropertyDamageCoverage.CoverageStatus:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerUninsuredMotoristsPropertyDamageCoverage.CoverageStatus"
+                      default: "Combined Single Limit"
+                    CommercialAutomobilePrivatePassengerRentalReimbursementCoverage.AnyOneDay:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerRentalReimbursementCoverage.AnyOneDay"
+                      default: "0.0"
+                    CommercialAutomobilePrivatePassengerRentalReimbursementCoverage.NumberOfDays:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerRentalReimbursementCoverage.NumberOfDays"
+                      default: "0.0"
+                    CommercialAutomobilePrivatePassengerRentalReimbursementCoverageOtherThanCollisionCoverage.CoverageType:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerRentalReimbursementCoverageOtherThanCollisionCoverage.CoverageType"
+                      default: "No Coverage"
+                    CommercialAutomobilePrivatePassengerRentalReimbursementCoverageCollisionCoverage.CoverageType:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerRentalReimbursementCoverageCollisionCoverage.CoverageType"
+                      default: "No Coverage"
+  CreateQuote_Success_Response:
+    type: "object"
+    properties:
+      ResponseStatus:
+        type: "string"
+        format: "string"
+        title: "ResponseStatus"
+        default: "SUCCESS"
+      OwnerId:
+        type: "string"
+        format: "string"
+        title: "OwnerId"
+        default: "37"
+      EventName:
+        type: "string"
+        format: "string"
+        title: "EventName"
+        default: "CreateQuote_1.1.0.3"
+      EndClientUserUniqueSessionId:
+        type: "string"
+        format: "string"
+        title: "EndClientUserUniqueSessionId"
+      Policy:
+        type: "object"
+        properties:
+          ProductNumber:
+            type: "string"
+            format: "string"
+            title: "ProductNumber"
+            default: "REBSHARE_AU"
+          ProductVerNumber:
+            type: "string"
+            format: "string"
+            title: "ProductVerNumber"
+            default: "REBSHARE_AU_V1"
+          AtFaultLiabilityLimitsType:
+            type: "string"
+            format: "string"
+            title: "AtFaultLiabilityLimitsType"
+            default: "Added On To At-Fault Liability Limits"
+          UninsuredMotoristsCoverageType:
+            type: "string"
+            format: "string"
+            title: "UninsuredMotoristsCoverageType"
+            default: "Combined Single Limit"
+          UninsuredMotoristsCoverageSplitLimit:
+            type: "string"
+            format: "string"
+            title: "UninsuredMotoristsCoverageSplitLimit"
+            default: "25,000/50,000"
+          UninsuredMotoristsCoverageCombinedSingleLimit:
+            type: "string"
+            format: "string"
+            title: "UninsuredMotoristsCoverageCombinedSingleLimit"
+            default: "75000.0"
+          UninsuredMotoristsCoverageDeductible:
+            type: "string"
+            format: "string"
+            title: "UninsuredMotoristsCoverageDeductible"
+            default: "0.0"
+          UninsuredMotoristsPropertyDamageCoverageLimit:
+            type: "string"
+            format: "string"
+            title: "UninsuredMotoristsPropertyDamageCoverageLimit"
+            default: "25000.0"
+          AgencyName:
+            type: "string"
+            format: "string"
+            title: "AgencyName"
+            default: "Buckle"
+          AgentName:
+            type: "string"
+            format: "string"
+            title: "AgentName"
+            default: "Buckle"
+          EffectiveDate:
+            type: "string"
+            format: "string"
+            title: "EffectiveDate"
+            default: "2018-11-27"
+          ExpirationDate:
+            type: "string"
+            format: "string"
+            title: "ExpirationDate"
+            default: "2019-05-27"
+          InsuredName:
+            type: "string"
+            format: "string"
+            title: "InsuredName"
+            default: "John Doe"
+          ZipCode:
+            type: "string"
+            format: "string"
+            title: "ZipCode"
+            default: "30016.0"
+          AddressLine1:
+            type: "string"
+            format: "string"
+            title: "AddressLine1"
+            default: "123 Test St"
+          City:
+            type: "string"
+            format: "string"
+            title: "City"
+            default: "Atlanta"
+          County:
+            type: "string"
+            format: "string"
+            title: "County"
+            default: "FULTON"
+          State:
+            type: "string"
+            format: "string"
+            title: "State"
+            default: "GA"
+          RideSharingEndorsementIndicator:
+            type: "string"
+            format: "string"
+            title: "RideSharingEndorsementIndicator"
+          AtFaultLosses:
+            type: "string"
+            format: "string"
+            title: "AtFaultLosses"
+            default: "No"
+          CleanMVR:
+            type: "string"
+            format: "string"
+            title: "CleanMVR"
+            default: "Yes"
+          TermFactor:
+            type: "string"
+            format: "string"
+            title: "TermFactor"
+            default: "0.4959"
+          TotalPremium:
+            type: "string"
+            format: "string"
+            title: "TotalPremium"
+            default: "1569.0"
+          CommercialAutoPrivatePassengerTotalPremium:
+            type: "string"
+            format: "string"
+            title: "CommercialAutoPrivatePassengerTotalPremium"
+            default: "1521.6"
+          IndividualNamedInsuredOnThePolicy:
+            type: "string"
+            format: "string"
+            title: "IndividualNamedInsuredOnThePolicy"
+            default: "Yes"
+          OptionalClassPlan:
+            type: "string"
+            format: "string"
+            title: "OptionalClassPlan"
+            default: "Yes"
+          GrossReceiptsBasisOrMileageBasis:
+            type: "string"
+            format: "string"
+            title: "GrossReceiptsBasisOrMileageBasis"
+          ScheduleRatingApplies:
+            type: "string"
+            format: "string"
+            title: "ScheduleRatingApplies"
+            default: "No"
+          PolicyType:
+            type: "string"
+            format: "string"
+            title: "PolicyType"
+          PolicyFee:
+            type: "string"
+            format: "string"
+            title: "PolicyFee"
+            default: "25.0"
+          UnderwritingFee:
+            type: "string"
+            format: "string"
+            title: "UnderwritingFee"
+            default: "15.0"
+          EFTInstallmentFee:
+            type: "string"
+            format: "string"
+            title: "EFTInstallmentFee"
+            default: "7.0"
+          QuoteNumber:
+            type: "string"
+            format: "string"
+            title: "QuoteNumber"
+            default: "441.0"
+          PrivatePassenger:
+            type: "array"
+            items:
+              type: "object"
+              properties:
+                PrivatePassengerDetail:
+                  type: "object"
+                  properties:
+                    GaragingAddress:
+                      type: "string"
+                      format: "string"
+                      title: "GaragingAddress"
+                    OperatorExperienceFactor:
+                      type: "string"
+                      format: "string"
+                      title: "OperatorExperienceFactor"
+                      default: "0.75"
+                    ZipCode:
+                      type: "string"
+                      format: "string"
+                      title: "ZipCode"
+                      default: "30016.0"
+                    AddressLine2:
+                      type: "string"
+                      format: "string"
+                      title: "AddressLine2"
+                    AddressLine1:
+                      type: "string"
+                      format: "string"
+                      title: "AddressLine1"
+                      default: "GA"
+                    City:
+                      type: "string"
+                      format: "string"
+                      title: "City"
+                      default: "Atlanta"
+                    County:
+                      type: "string"
+                      format: "string"
+                      title: "County"
+                      default: "FULTON"
+                    State:
+                      type: "string"
+                      format: "string"
+                      title: "State"
+                      default: "GA"
+                    Territory:
+                      type: "string"
+                      format: "string"
+                      title: "Territory"
+                      default: "118.0"
+                    ClassCode:
+                      type: "string"
+                      format: "string"
+                      title: "ClassCode"
+                      default: "7381.0"
+                    Type:
+                      type: "string"
+                      format: "string"
+                      title: "Type"
+                      default: "Personal Use or Farm Use - Nonfleet Vehicle"
+                    Use:
+                      type: "string"
+                      format: "string"
+                      title: "Use"
+                      default: "To or From Work 15 or More Miles"
+                    OperatorExperience:
+                      type: "string"
+                      format: "string"
+                      title: "OperatorExperience"
+                      default: "No operator licensed less than 5 years"
+                    Model:
+                      type: "string"
+                      format: "string"
+                      title: "Model"
+                      default: "Focus"
+                    Year:
+                      type: "string"
+                      format: "string"
+                      title: "Year"
+                      default: "2015.0"
+                    VIN:
+                      type: "string"
+                      format: "string"
+                      title: "VIN"
+                      default: "aaaaaaaaaaaaaaaaa"
+                    OriginalCostNewOfVehicle:
+                      type: "string"
+                      format: "string"
+                      title: "OriginalCostNewOfVehicle"
+                    StatedAmount:
+                      type: "string"
+                      format: "string"
+                      title: "StatedAmount"
+                      default: "5000.0"
+                    CommercialAutoPrivatePassengerPremium:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutoPrivatePassengerPremium"
+                      default: "893.8"
+                    SafetyScore:
+                      type: "string"
+                      format: "string"
+                      title: "SafetyScore"
+                      default: "1 - 26"
+                    SafetyScoreDiscountApplies:
+                      type: "string"
+                      format: "string"
+                      title: "SafetyScoreDiscountApplies"
+                      default: "No"
+                    PercentageOfTransportationNetworkServiceAutoUse:
+                      type: "string"
+                      format: "string"
+                      title: "PercentageOfTransportationNetworkServiceAutoUse"
+                      default: "20% to 49.9%"
+                    UsedAsTNCOrOnDemand:
+                      type: "string"
+                      format: "string"
+                      title: "UsedAsTNCOrOnDemand"
+                      default: "Used As Both Transportation Network Company And On-Demand"
+                    UseFactor:
+                      type: "string"
+                      format: "string"
+                      title: "UseFactor"
+                      default: "0.25"
+                    CommercialAutomobilePrivatePassengerLiabilityCoverage.Deductible:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerLiabilityCoverage.Deductible"
+                      default: "Not Applicable"
+                    CommercialAutomobilePrivatePassengerLiabilityCoverage.Limit:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerLiabilityCoverage.Limit"
+                      default: "75000.0"
+                    CommercialAutomobilePrivatePassengerLiabilityCoverage.CoverageType:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerLiabilityCoverage.CoverageType"
+                      default: "Combined Single Limit"
+                    CommercialAutomobilePrivatePassengerLiabilityCoverage.PolicyTermPremium:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerLiabilityCoverage.PolicyTermPremium"
+                      default: "528.0"
+                    CommercialAutomobilePrivatePassengerLiabilityCoverage.PremiumILFDeductible:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerLiabilityCoverage.PremiumILFDeductible"
+                      default: "0.74"
+                    CommercialAutomobilePrivatePassengerLiabilityCoverage.LiabilityCombinedRatingFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerLiabilityCoverage.LiabilityCombinedRatingFactor"
+                      default: "1.0"
+                    CommercialAutomobilePrivatePassengerLiabilityCoverage.SafetyScoreDiscountFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerLiabilityCoverage.SafetyScoreDiscountFactor"
+                      default: "1.0"
+                    CommercialAutomobilePrivatePassengerLiabilityCoverage.LiabilityTotalModificationFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerLiabilityCoverage.LiabilityTotalModificationFactor"
+                      default: "1.0"
+                    CommercialAutomobilePrivatePassengerLiabilityCoverage.IncreasedLiabilityLimitsFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerLiabilityCoverage.IncreasedLiabilityLimitsFactor"
+                      default: "0.74"
+                    CommercialAutomobilePrivatePassengerLiabilityCoverage.DeductibleFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerLiabilityCoverage.DeductibleFactor"
+                      default: "1.0"
+                    CommercialAutomobilePrivatePassengerLiabilityCoverage.LiabilityCoverageForOwnerOfHiredAutoFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerLiabilityCoverage.LiabilityCoverageForOwnerOfHiredAutoFactor"
+                      default: "1.0"
+                    CommercialAutomobilePrivatePassengerLiabilityCoverage.ClassFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerLiabilityCoverage.ClassFactor"
+                      default: "0.95"
+                    CommercialAutomobilePrivatePassengerLiabilityCoverage.FleetSizeFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerLiabilityCoverage.FleetSizeFactor"
+                      default: "1.06"
+                    CommercialAutomobilePrivatePassengerLiabilityCoverage.AgeFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerLiabilityCoverage.AgeFactor"
+                      default: "1.0"
+                    CommercialAutomobilePrivatePassengerLiabilityCoverage.OriginalCostNewFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerLiabilityCoverage.OriginalCostNewFactor"
+                      default: "1.11"
+                    CommercialAutomobilePrivatePassengerLiabilityCoverage.NAICSFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerLiabilityCoverage.NAICSFactor"
+                      default: "1.0"
+                    CommercialAutomobilePrivatePassengerLiabilityCoverage.FarmersAutosFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerLiabilityCoverage.FarmersAutosFactor"
+                      default: "0.0"
+                    CommercialAutomobilePrivatePassengerLiabilityCoverage.UseFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerLiabilityCoverage.UseFactor"
+                      default: "2.0"
+                    CommercialAutomobilePrivatePassengerLiabilityCoverage.BaseLossCost:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerLiabilityCoverage.BaseLossCost"
+                      default: "369.0"
+                    CommercialAutomobilePrivatePassengerLiabilityCoverage.LiabilityLossCostMultiplier:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerLiabilityCoverage.LiabilityLossCostMultiplier"
+                      default: "1.667"
+                    CommercialAutomobilePrivatePassengerLiabilityCoverage.BasePremium:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerLiabilityCoverage.BasePremium"
+                      default: "615.123"
+                    CommercialAutomobilePrivatePassengerLiabilityCoverage.LiabilityPremium:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerLiabilityCoverage.LiabilityPremium"
+                      default: "1017.5977328508001"
+                    CommercialAutomobilePrivatePassengerMedicalPaymentsCoverage.Limit:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerMedicalPaymentsCoverage.Limit"
+                      default: "1000.0"
+                    CommercialAutomobilePrivatePassengerMedicalPaymentsCoverage.PolicyTermPremium:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerMedicalPaymentsCoverage.PolicyTermPremium"
+                      default: "20.0"
+                    CommercialAutomobilePrivatePassengerMedicalPaymentsCoverage.LiabilityCombinedRatingFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerMedicalPaymentsCoverage.LiabilityCombinedRatingFactor"
+                      default: "1.0"
+                    CommercialAutomobilePrivatePassengerMedicalPaymentsCoverage.SafetyScoreDiscountFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerMedicalPaymentsCoverage.SafetyScoreDiscountFactor"
+                      default: "1.0"
+                    CommercialAutomobilePrivatePassengerMedicalPaymentsCoverage.UseFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerMedicalPaymentsCoverage.UseFactor"
+                      default: "2.0"
+                    CommercialAutomobilePrivatePassengerMedicalPaymentsCoverage.BaseLossCost:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerMedicalPaymentsCoverage.BaseLossCost"
+                      default: "13.0"
+                    CommercialAutomobilePrivatePassengerMedicalPaymentsCoverage.LiabilityLossCostMultiplier:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerMedicalPaymentsCoverage.LiabilityLossCostMultiplier"
+                      default: "1.667"
+                    CommercialAutomobilePrivatePassengerMedicalPaymentsCoverage.BasePremium:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerMedicalPaymentsCoverage.BasePremium"
+                      default: "21.671"
+                    CommercialAutomobilePrivatePassengerCollisionCoverage.Deductible:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerCollisionCoverage.Deductible"
+                      default: "1000.0"
+                    CommercialAutomobilePrivatePassengerCollisionCoverage.PolicyTermPremium:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerCollisionCoverage.PolicyTermPremium"
+                      default: "300.0"
+                    CommercialAutomobilePrivatePassengerCollisionCoverage.UseFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerCollisionCoverage.UseFactor"
+                      default: "1.5"
+                    CommercialAutomobilePrivatePassengerCollisionCoverage.SafetyScoreDiscountFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerCollisionCoverage.SafetyScoreDiscountFactor"
+                      default: "1.0"
+                    CommercialAutomobilePrivatePassengerCollisionCoverage.FarmersAutosFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerCollisionCoverage.FarmersAutosFactor"
+                      default: "1.0"
+                    CommercialAutomobilePrivatePassengerCollisionCoverage.VehicleValueFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerCollisionCoverage.VehicleValueFactor"
+                      default: "0.76"
+                    CommercialAutomobilePrivatePassengerCollisionCoverage.DeductibleFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerCollisionCoverage.DeductibleFactor"
+                      default: "0.14"
+                    CommercialAutomobilePrivatePassengerCollisionCoverage.Over90000Factor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerCollisionCoverage.Over90000Factor"
+                      default: "0.0"
+                    CommercialAutomobilePrivatePassengerCollisionCoverage.OriginalCostNewFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerCollisionCoverage.OriginalCostNewFactor"
+                      default: "0.0"
+                    CommercialAutomobilePrivatePassengerCollisionCoverage.AgeGroupFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerCollisionCoverage.AgeGroupFactor"
+                      default: "0.0"
+                    CommercialAutomobilePrivatePassengerCollisionCoverage.FleetSizeFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerCollisionCoverage.FleetSizeFactor"
+                      default: "1.08"
+                    CommercialAutomobilePrivatePassengerCollisionCoverage.ClassFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerCollisionCoverage.ClassFactor"
+                      default: "1.07"
+                    CommercialAutomobilePrivatePassengerCollisionCoverage.NAICSFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerCollisionCoverage.NAICSFactor"
+                      default: "1.0"
+                    CommercialAutomobilePrivatePassengerCollisionCoverage.PhysicalDamageTotalModificationFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerCollisionCoverage.PhysicalDamageTotalModificationFactor"
+                      default: "1.0"
+                    CommercialAutomobilePrivatePassengerCollisionCoverage.VehicleSymbolCharacterOneRACARatingFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerCollisionCoverage.VehicleSymbolCharacterOneRACARatingFactor"
+                      default: "0.0"
+                    CommercialAutomobilePrivatePassengerCollisionCoverage.VehicleSymbolCharacterTwoRACARatingFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerCollisionCoverage.VehicleSymbolCharacterTwoRACARatingFactor"
+                      default: "0.0"
+                    CommercialAutomobilePrivatePassengerCollisionCoverage.PhysicalDamageCombinedRatingFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerCollisionCoverage.PhysicalDamageCombinedRatingFactor"
+                      default: "0.0"
+                    CommercialAutomobilePrivatePassengerCollisionCoverage.PremiumIndicator:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerCollisionCoverage.PremiumIndicator"
+                      default: "1.0"
+                    CommercialAutomobilePrivatePassengerCollisionCoverage.BasePremium:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerCollisionCoverage.BasePremium"
+                      default: "511.769"
+                    CommercialAutomobilePrivatePassengerCollisionCoverage.PhysicalDamageLossCostMultiplier:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerCollisionCoverage.PhysicalDamageLossCostMultiplier"
+                      default: "1.667"
+                    CommercialAutomobilePrivatePassengerCollisionCoverage.BaseLossCost:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerCollisionCoverage.BaseLossCost"
+                      default: "307.0"
+                    CommercialAutomobilePrivatePassengerCollisionCoverage.OriginalCostNew:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerCollisionCoverage.OriginalCostNew"
+                      default: "0.0"
+                    CommercialAutomobilePrivatePassengerCollisionCoverage.StatedAmount:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerCollisionCoverage.StatedAmount"
+                      default: "5000.0"
+                    CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.Deductible:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.Deductible"
+                      default: "1000.0"
+                    CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.PolicyTermPremium:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.PolicyTermPremium"
+                      default: "22.0"
+                    CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.UseFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.UseFactor"
+                      default: "1.05"
+                    CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.PhysicalDamageTotalModificationFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.PhysicalDamageTotalModificationFactor"
+                      default: "1.0"
+                    CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.PremiumIndicator:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.PremiumIndicator"
+                      default: "1.0"
+                    CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.VehicleValueFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.VehicleValueFactor"
+                      default: "0.43"
+                    CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.DeductibleFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.DeductibleFactor"
+                      default: "0.22"
+                    CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.OriginalCostNew:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.OriginalCostNew"
+                      default: "0.0"
+                    CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.StatedAmount:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.StatedAmount"
+                      default: "5000.0"
+                    CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.ClassFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.ClassFactor"
+                      default: "1.05"
+                    CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.NAICSFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.NAICSFactor"
+                      default: "1.0"
+                    CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.BasePremium:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.BasePremium"
+                      default: "163.366"
+                    CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.FleetSizeFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.FleetSizeFactor"
+                      default: "1.06"
+                    CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.PhysicalDamageCombinedRatingFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.PhysicalDamageCombinedRatingFactor"
+                      default: "0.0"
+                    CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.VehicleSymbolCharacterTwoRACARatingFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.VehicleSymbolCharacterTwoRACARatingFactor"
+                      default: "0.0"
+                    CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.VehicleSymbolCharacterOneRACARatingFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.VehicleSymbolCharacterOneRACARatingFactor"
+                      default: "0.0"
+                    CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.FarmersAutosFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.FarmersAutosFactor"
+                      default: "0.0"
+                    CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.PhysicalDamageLossCostMultiplier:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.PhysicalDamageLossCostMultiplier"
+                      default: "1.667"
+                    CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.BaseLossCost:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.BaseLossCost"
+                      default: "98.0"
+                    CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.AgeGroupFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.AgeGroupFactor"
+                      default: "0.0"
+                    CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.Over90000Factor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.Over90000Factor"
+                      default: "0.0"
+                    CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.OriginalCostNewFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.OriginalCostNewFactor"
+                      default: "0.0"
+                    CommercialAutomobilePrivatePassengerUninsuredMotoristsCoverage.BasePremium:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerUninsuredMotoristsCoverage.BasePremium"
+                      default: "36.86"
+                    CommercialAutomobilePrivatePassengerUninsuredMotoristsCoverage.BaseLossCost:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerUninsuredMotoristsCoverage.BaseLossCost"
+                      default: "36.86"
+                    CommercialAutomobilePrivatePassengerUninsuredMotoristsCoverage.DeductibleFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerUninsuredMotoristsCoverage.DeductibleFactor"
+                      default: "0.0"
+                    CommercialAutomobilePrivatePassengerUninsuredMotoristsCoverage.LiabilityLossCostMultiplier:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerUninsuredMotoristsCoverage.LiabilityLossCostMultiplier"
+                      default: "1.0"
+                    CommercialAutomobilePrivatePassengerUninsuredMotoristsCoverage.PremiumIndicator:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerUninsuredMotoristsCoverage.PremiumIndicator"
+                      default: "1.0"
+                    CommercialAutomobilePrivatePassengerUninsuredMotoristsCoverage.FarmersAutosFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerUninsuredMotoristsCoverage.FarmersAutosFactor"
+                      default: "1.0"
+                    CommercialAutomobilePrivatePassengerUninsuredMotoristsCoverage.PolicyTermPremium:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerUninsuredMotoristsCoverage.PolicyTermPremium"
+                      default: "19.8"
+                    CommercialAutomobilePrivatePassengerUninsuredMotoristsPropertyDamageCoverage.PolicyTermPremium:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerUninsuredMotoristsPropertyDamageCoverage.PolicyTermPremium"
+                      default: "4.0"
+                    CommercialAutomobilePrivatePassengerUninsuredMotoristsCoverage.CoverageStatus:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerUninsuredMotoristsCoverage.CoverageStatus"
+                      default: "Combined Single Limit"
+                    CommercialAutomobilePrivatePassengerUninsuredMotoristsPropertyDamageCoverage.CoverageStatus:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerUninsuredMotoristsPropertyDamageCoverage.CoverageStatus"
+                      default: "Combined Single Limit"
+                    CommercialAutomobilePrivatePassengerUninsuredMotoristsPropertyDamageCoverage.BasePremium:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerUninsuredMotoristsPropertyDamageCoverage.BasePremium"
+                      default: "7.66"
+                    CommercialAutomobilePrivatePassengerUninsuredMotoristsPropertyDamageCoverage.BaseLossCost:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerUninsuredMotoristsPropertyDamageCoverage.BaseLossCost"
+                      default: "7.66"
+                    CommercialAutomobilePrivatePassengerUninsuredMotoristsPropertyDamageCoverage.DeductibleFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerUninsuredMotoristsPropertyDamageCoverage.DeductibleFactor"
+                      default: "0.0"
+                    CommercialAutomobilePrivatePassengerUninsuredMotoristsPropertyDamageCoverage.LiabilityLossCostMultiplier:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerUninsuredMotoristsPropertyDamageCoverage.LiabilityLossCostMultiplier"
+                      default: "1.0"
+                    CommercialAutomobilePrivatePassengerUninsuredMotoristsPropertyDamageCoverage.PremiumIndicator:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerUninsuredMotoristsPropertyDamageCoverage.PremiumIndicator"
+                      default: "1.0"
+                    CommercialAutomobilePrivatePassengerUninsuredMotoristsPropertyDamageCoverage.FarmersAutosFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerUninsuredMotoristsPropertyDamageCoverage.FarmersAutosFactor"
+                      default: "1.0"
+                    CommercialAutomobilePrivatePassengerRentalReimbursementCoverageOtherThanCollisionCoverage.PolicyTermPremium:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerRentalReimbursementCoverageOtherThanCollisionCoverage.PolicyTermPremium"
+                      default: "0.0"
+                    CommercialAutomobilePrivatePassengerRentalReimbursementCoverageOtherThanCollisionCoverage.PhysicalDamageTotalModificationFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerRentalReimbursementCoverageOtherThanCollisionCoverage.PhysicalDamageTotalModificationFactor"
+                      default: "1.0"
+                    CommercialAutomobilePrivatePassengerRentalReimbursementCoverageOtherThanCollisionCoverage.PremiumIndicator:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerRentalReimbursementCoverageOtherThanCollisionCoverage.PremiumIndicator"
+                      default: "0.0"
+                    CommercialAutomobilePrivatePassengerRentalReimbursementCoverageOtherThanCollisionCoverage.MaximumNumberOfDays:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerRentalReimbursementCoverageOtherThanCollisionCoverage.MaximumNumberOfDays"
+                      default: "0.0"
+                    CommercialAutomobilePrivatePassengerRentalReimbursementCoverageOtherThanCollisionCoverage.MaximumAmountAnyDay:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerRentalReimbursementCoverageOtherThanCollisionCoverage.MaximumAmountAnyDay"
+                      default: "0.0"
+                    CommercialAutomobilePrivatePassengerRentalReimbursementCoverageOtherThanCollisionCoverage.BasePremium:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerRentalReimbursementCoverageOtherThanCollisionCoverage.BasePremium"
+                      default: "0.0"
+                    CommercialAutomobilePrivatePassengerRentalReimbursementCoverageOtherThanCollisionCoverage.PhysicalDamageLossCostMultiplier:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerRentalReimbursementCoverageOtherThanCollisionCoverage.PhysicalDamageLossCostMultiplier"
+                      default: "1.0"
+                    CommercialAutomobilePrivatePassengerRentalReimbursementCoverageOtherThanCollisionCoverage.BaseLossCost:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerRentalReimbursementCoverageOtherThanCollisionCoverage.BaseLossCost"
+                      default: "0.0"
+                    CommercialAutomobilePrivatePassengerRentalReimbursementCoverageCollisionCoverage.PolicyTermPremium:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerRentalReimbursementCoverageCollisionCoverage.PolicyTermPremium"
+                      default: "0.0"
+                    CommercialAutomobilePrivatePassengerRentalReimbursementCoverageCollisionCoverage.PhysicalDamageTotalModificationFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerRentalReimbursementCoverageCollisionCoverage.PhysicalDamageTotalModificationFactor"
+                      default: "1.0"
+                    CommercialAutomobilePrivatePassengerRentalReimbursementCoverageCollisionCoverage.PremiumIndicator:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerRentalReimbursementCoverageCollisionCoverage.PremiumIndicator"
+                      default: "0.0"
+                    CommercialAutomobilePrivatePassengerRentalReimbursementCoverage.AnyOneDay:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerRentalReimbursementCoverage.AnyOneDay"
+                      default: "0.0"
+                    CommercialAutomobilePrivatePassengerRentalReimbursementCoverage.NumberOfDays:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerRentalReimbursementCoverage.NumberOfDays"
+                      default: "0.0"
+                    CommercialAutomobilePrivatePassengerRentalReimbursementCoverageCollisionCoverage.MaximumNumberOfDays:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerRentalReimbursementCoverageCollisionCoverage.MaximumNumberOfDays"
+                      default: "0.0"
+                    CommercialAutomobilePrivatePassengerRentalReimbursementCoverageCollisionCoverage.MaximumAmountAnyDay:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerRentalReimbursementCoverageCollisionCoverage.MaximumAmountAnyDay"
+                      default: "0.0"
+                    CommercialAutomobilePrivatePassengerRentalReimbursementCoverageCollisionCoverage.BasePremium:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerRentalReimbursementCoverageCollisionCoverage.BasePremium"
+                      default: "0.0"
+                    CommercialAutomobilePrivatePassengerRentalReimbursementCoverageCollisionCoverage.PhysicalDamageLossCostMultiplier:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerRentalReimbursementCoverageCollisionCoverage.PhysicalDamageLossCostMultiplier"
+                      default: "1.0"
+                    CommercialAutomobilePrivatePassengerRentalReimbursementCoverageCollisionCoverage.BaseLossCost:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerRentalReimbursementCoverageCollisionCoverage.BaseLossCost"
+                      default: "0.0"
+                    CommercialAutomobilePrivatePassengerLiabilityCoverage.OperatorExperienceDiscountFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerLiabilityCoverage.OperatorExperienceDiscountFactor"
+                      default: "0.95"
+  errorModel:
+    type: "object"
+    properties:
+      RequestStatus:
+        type: "string"
+        format: "string"
+        title: "RequestStatus"
+      ResponseStatus:
+        type: "string"
+        format: "string"
+        title: "ResponseStatus"
+      MessageDetail:
+        type: "object"
+        properties:
+          MessageCode:
+            type: "object"
+            properties: {}
+          MessageType:
+            type: "string"
+            format: "string"
+            title: "MessageType"
+          UserMessage:
+            type: "string"
+            format: "string"
+            title: "UserMessage"
+          MessageLevel:
+            type: "string"
+            format: "string"
+            title: "MessageLevel"
+          MessageSeverity:
+            type: "string"
+            format: "string"
+            title: "MessageSeverity"
+          MessageList:
+            type: "array"
+            items:
+              type: "object"
+              properties:
+                Message:
+                  type: "string"
+                  format: "string"
+                  title: "Message"

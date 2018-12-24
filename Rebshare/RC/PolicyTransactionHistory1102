@@ -146,7 +146,7 @@ definitions:
         type: "string"
         format: "string"
         title: "EffectiveDate"
-        default: "43466.0"
+        default: "2019-01-15"
       Policy:
         type: "object"
         properties:
@@ -155,16 +155,21 @@ definitions:
             format: "string"
             title: "PolicyNumber"
             default: "GA-01R-18-2527"
+          EffectiveDate:
+            type: "string"
+            format: "string"
+            title: "EffectiveDate"
+            default: "2019-07-01"
           ExpirationDate:
             type: "string"
             format: "string"
             title: "ExpirationDate"
-            default: "43647.0"
+            default: "2019-07-01"
           AsOfDate:
             type: "string"
             format: "string"
             title: "AsOfDate"
-            default: "43446.0"
+            default: "2019-02-30"
           PolicyPremium:
             type: "string"
             format: "string"
@@ -188,6 +193,9 @@ definitions:
                 format: "string"
                 title: "TransactionType"
                 default: "Installment"
+                enum:
+                - "Installment"
+                - "\nDownPayment"
               TransactionAmount:
                 type: "string"
                 format: "string"
@@ -197,12 +205,12 @@ definitions:
                 type: "string"
                 format: "string"
                 title: "TransactionStatus"
-                default: "PAID"
+                default: "paid"
               TransactionDate:
                 type: "string"
                 format: "string"
                 title: "TransactionDate"
-                default: "43511.0"
+                default: "2019-02-15"
               InstallmentNumber:
                 type: "string"
                 format: "string"

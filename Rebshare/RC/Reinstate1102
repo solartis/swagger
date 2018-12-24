@@ -124,6 +124,10 @@ definitions:
             format: "string"
             title: "ReinstateReason"
             default: "Payment Received"
+            enum:
+            - "Payment Received"
+            - "\nUnderwriting Reasons"
+            - "\nCancel in Error"
           ReinstateEffectiveDate:
             type: "string"
             format: "string"
@@ -159,12 +163,12 @@ definitions:
             type: "string"
             format: "string"
             title: "EffectiveDate"
-            default: "43466.0"
+            default: "2019-01-01"
           ExpirationDate:
             type: "string"
             format: "string"
             title: "ExpirationDate"
-            default: "43647.0"
+            default: "2019-07-01"
           TotalPremium:
             type: "string"
             format: "string"
@@ -180,11 +184,15 @@ definitions:
             format: "string"
             title: "ReinstateReason"
             default: "Payment Received"
+            enum:
+            - "Payment Received"
+            - "\nUnderwriting Reasons"
+            - "\nCancel in Error"
           ReinstateEffectiveDate:
             type: "string"
             format: "string"
             title: "ReinstateEffectiveDate"
-            default: "43466.0"
+            default: "2019-01-01"
       Documents:
         type: "object"
         properties:

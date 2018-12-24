@@ -180,7 +180,7 @@ definitions:
             type: "string"
             format: "string"
             title: "CancelEffectiveDate"
-            default: "43466.0"
+            default: "2019-01-01"
           CancelType:
             type: "string"
             format: "string"

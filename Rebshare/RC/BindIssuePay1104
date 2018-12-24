@@ -84,12 +84,12 @@ definitions:
             type: "string"
             format: "string"
             title: "ServiceResponseVersion"
-            default: "1"
+            default: "1.0"
           ServiceRequestVersion:
             type: "string"
             format: "string"
             title: "ServiceRequestVersion"
-            default: "1"
+            default: "1.0"
           BrowserTimeZone:
             type: "string"
             format: "string"

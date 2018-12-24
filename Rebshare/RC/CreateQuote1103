@@ -221,7 +221,7 @@ definitions:
             type: "string"
             format: "string"
             title: "ZipCode"
-            default: "30016.0"
+            default: "30016"
           QuoteType:
             type: "string"
             format: "string"
@@ -373,7 +373,7 @@ definitions:
                       type: "string"
                       format: "string"
                       title: "ZipCode"
-                      default: "30016.0"
+                      default: "30016"
                     StatedAmount:
                       type: "string"
                       format: "string"

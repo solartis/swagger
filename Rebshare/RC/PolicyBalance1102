@@ -1,0 +1,218 @@
+swagger: "2.0"
+info:
+  description: "Rebshare PolicyBalance api"
+  version: "V2"
+  title: "Solartis PolicyBalance API for Rebshare"
+host: "rebshare.rc.solartis.net"
+basePath: "/KnowledgeEngineV6_2/KnowledgeBase"
+schemes:
+- "https"
+consumes:
+- "application/json"
+produces:
+- "application/json"
+paths:
+  /FireEventV2:
+    post:
+      description: "Rebshare PolicyBalance"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "Token"
+        in: "header"
+        description: "Authentication Token"
+        required: true
+        type: "string"
+        default: "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"
+      - name: "Content-Type"
+        in: "header"
+        description: "Content Type"
+        required: true
+        type: "string"
+        default: "application/json"
+      - in: "body"
+        name: "PolicyBalance Request"
+        description: ""
+        required: true
+        schema:
+          $ref: "#/definitions/PolicyBalance_1.1.0.2"
+      - name: "EventName"
+        in: "header"
+        description: "Event name"
+        required: true
+        type: "string"
+        default: "PolicyBalance_1.1.0.2"
+      responses:
+        200:
+          description: "Successful Response"
+          schema:
+            $ref: "#/definitions/PolicyBalance_Success_Response"
+        default:
+          description: "Error Response"
+          schema:
+            $ref: "#/definitions/errorModel"
+definitions:
+  PolicyBalance_1.1.0.2:
+    type: "object"
+    properties:
+      OwnerId:
+        type: "string"
+        format: "string"
+        title: "OwnerId"
+        default: "37"
+      EventName:
+        type: "string"
+        format: "string"
+        title: "EventName"
+        default: "PolicyBalance_1.1.0.2"
+      ServiceRequestDetail:
+        type: "object"
+        properties:
+          OwnerId:
+            type: "string"
+            format: "string"
+            title: "OwnerId"
+            default: "37"
+          Token:
+            type: "string"
+            format: "string"
+            title: "Token"
+            default: "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"
+          ResponseType:
+            type: "string"
+            format: "string"
+            title: "ResponseType"
+            default: "JSON"
+          LanguageCode:
+            type: "string"
+            format: "string"
+            title: "LanguageCode"
+            default: "en"
+          RegionCode:
+            type: "string"
+            format: "string"
+            title: "RegionCode"
+            default: "US"
+          UserName:
+            type: "string"
+            format: "string"
+            title: "UserName"
+            default: "rebshareagent"
+          ServiceRequestVersion:
+            type: "string"
+            format: "string"
+            title: "ServiceRequestVersion"
+            default: "1.0"
+          ServiceResponseVersion:
+            type: "string"
+            format: "string"
+            title: "ServiceResponseVersion"
+            default: "1.0"
+      Policy:
+        type: "object"
+        properties:
+          PolicyNumber:
+            type: "string"
+            format: "string"
+            title: "PolicyNumber"
+            default: "GA-01R-18-2527"
+          AsOfDate:
+            type: "string"
+            format: "string"
+            title: "AsOfDate"
+            default: "2019-03-01"
+  PolicyBalance_Success_Response:
+    type: "object"
+    properties:
+      ResponseStatus:
+        type: "string"
+        format: "string"
+        title: "ResponseStatus"
+        default: "Success"
+      OwnerId:
+        type: "string"
+        format: "string"
+        title: "OwnerId"
+        default: "37"
+      EventName:
+        type: "string"
+        format: "string"
+        title: "EventName"
+        default: "PolicyBalance_1.1.0.2"
+      Policy:
+        type: "object"
+        properties:
+          PolicyNumber:
+            type: "string"
+            format: "string"
+            title: "PolicyNumber"
+            default: "GA-01R-18-2527"
+          AsOfDate:
+            type: "string"
+            format: "string"
+            title: "AsOfDate"
+            default: "2019-03-01"
+          PolicyPremium:
+            type: "string"
+            format: "string"
+            title: "PolicyPremium"
+            default: "905.0"
+          PremiumBalance:
+            type: "string"
+            format: "string"
+            title: "PremiumBalance"
+            default: "555.0"
+          EarnedPremium:
+            type: "string"
+            format: "string"
+            title: "EarnedPremium"
+            default: "301.7"
+          TotalPaidPremium:
+            type: "string"
+            format: "string"
+            title: "TotalPaidPremium"
+            default: "350.0"
+  errorModel:
+    type: "object"
+    properties:
+      RequestStatus:
+        type: "string"
+        format: "string"
+        title: "RequestStatus"
+      ResponseStatus:
+        type: "string"
+        format: "string"
+        title: "ResponseStatus"
+      MessageDetail:
+        type: "object"
+        properties:
+          MessageCode:
+            type: "object"
+            properties: {}
+          MessageType:
+            type: "string"
+            format: "string"
+            title: "MessageType"
+          UserMessage:
+            type: "string"
+            format: "string"
+            title: "UserMessage"
+          MessageLevel:
+            type: "string"
+            format: "string"
+            title: "MessageLevel"
+          MessageSeverity:
+            type: "string"
+            format: "string"
+            title: "MessageSeverity"
+          MessageList:
+            type: "array"
+            items:
+              type: "object"
+              properties:
+                Message:
+                  type: "string"
+                  format: "string"
+                  title: "Message"

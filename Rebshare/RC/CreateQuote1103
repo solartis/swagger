@@ -1366,6 +1366,47 @@ definitions:
                       format: "string"
                       title: "CommercialAutomobilePrivatePassengerLiabilityCoverage.OperatorExperienceDiscountFactor"
                       default: "0.95"
+                    CommercialAutomobilePrivatePassengerLiabilityCoverage.AdditionalNamedInsuredSurchargeFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerLiabilityCoverage.AdditionalNamedInsuredSurchargeFactor"
+                      default: "1.1"
+                    CommercialAutomobilePrivatePassengerCollisionCoverage.AdditionalNamedInsuredSurchargeFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerCollisionCoverage.AdditionalNamedInsuredSurchargeFactor"
+                      default: "1.1"
+                    CommercialAutomobilePrivatePassengerMedicalPaymentsCoverage.AdditionalNamedInsuredSurchargeFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerMedicalPaymentsCoverage.AdditionalNamedInsuredSurchargeFactor"
+                      default: "1.1"
+                    CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.AdditionalNamedInsuredSurchargeFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.AdditionalNamedInsuredSurchargeFactor"
+                      default: "1.1"
+                    CommercialAutomobilePrivatePassengerRentalReimbursementCoverageCollisionCoverage.AdditionalNamedInsuredSurchargeFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerRentalReimbursementCoverageCollisionCoverage.AdditionalNamedInsuredSurchargeFactor"
+                      default: "1.1"
+                    CommercialAutomobilePrivatePassengerRentalReimbursementCoverageOtherThanCollisionCoverage.AdditionalNamedInsuredSurchargeFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerRentalReimbursementCoverageOtherThanCollisionCoverage.AdditionalNamedInsuredSurchargeFactor"
+                      default: "1.1"
+                    CommercialAutomobilePrivatePassengerUninsuredMotoristsCoverage.AdditionalNamedInsuredSurchargeFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerUninsuredMotoristsCoverage.AdditionalNamedInsuredSurchargeFactor"
+                      default: "1.1"
+                    CommercialAutomobilePrivatePassengerUninsuredMotoristsPropertyDamageCoverage.AdditionalNamedInsuredSurchargeFactor:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobilePrivatePassengerUninsuredMotoristsPropertyDamageCoverage.AdditionalNamedInsuredSurchargeFactor"
+                      default: "1.1"
+                    
   errorModel:
     type: "object"
     properties:

@@ -268,6 +268,29 @@ definitions:
             format: "string"
             title: "DriverLicenseNumber"
             default: "abcdefg12345"
+          AdditionalNamedInsuredList:
+            type: "array"
+            items:
+              type: "object"
+              properties:
+                AdditionalNamedInsuredDetail:
+                  type: "object"
+                  properties:
+                    CommercialAutomobileDesignatedInsuredForCoveredAutosLiabilityCoverageDetail.NameOfPersonsOrOrganizations:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobileDesignatedInsuredForCoveredAutosLiabilityCoverageDetail.NameOfPersonsOrOrganizations"
+                      default: "Jane Doe"
+                    CommercialAutomobileDesignatedInsuredForCoveredAutosLiabilityCoverageDetail.DriverLicenseNumber:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobileDesignatedInsuredForCoveredAutosLiabilityCoverageDetail.DriverLicenseNumber"
+                      default: "abcdefg12345"
+                    CommercialAutomobileDesignatedInsuredForCoveredAutosLiabilityCoverageDetail.DriversLicenseState:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobileDesignatedInsuredForCoveredAutosLiabilityCoverageDetail.DriversLicenseState"
+                      default: "GA"
           CleanMVR:
             type: "string"
             format: "string"
@@ -548,7 +571,6 @@ definitions:
             - "No Coverage"
             - "\nCombined Single Limit"
             - "\nSplit Limit"
-            - "\n"
           UninsuredMotoristsCoverageSplitLimit:
             type: "string"
             format: "string"
@@ -564,7 +586,6 @@ definitions:
             - " \n1,000,000/2,000,000"
             - " 2,500,000/5,000,000"
             - " \n5,000,000/10,000,000"
-            - "\n \n\n"
           UninsuredMotoristsCoverageCombinedSingleLimit:
             type: "string"
             format: "string"
@@ -592,7 +613,6 @@ definitions:
             - "\n5,000,000"
             - "\n7,500,000"
             - "\n10,000,000"
-            - "\n"
           UninsuredMotoristsCoverageDeductible:
             type: "string"
             format: "string"
@@ -683,6 +703,29 @@ definitions:
             format: "string"
             title: "CleanMVR"
             default: "Yes"
+          AdditionalNamedInsuredList:
+            type: "array"
+            items:
+              type: "object"
+              properties:
+                AdditionalNamedInsuredDetail:
+                  type: "object"
+                  properties:
+                    CommercialAutomobileDesignatedInsuredForCoveredAutosLiabilityCoverageDetail.NameOfPersonsOrOrganizations:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobileDesignatedInsuredForCoveredAutosLiabilityCoverageDetail.NameOfPersonsOrOrganizations"
+                      default: "Jane Doe"
+                    CommercialAutomobileDesignatedInsuredForCoveredAutosLiabilityCoverageDetail.DriversLicenseState:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobileDesignatedInsuredForCoveredAutosLiabilityCoverageDetail.DriversLicenseState"
+                      default: "GA"
+                    CommercialAutomobileDesignatedInsuredForCoveredAutosLiabilityCoverageDetail.DriverLicenseNumber:
+                      type: "string"
+                      format: "string"
+                      title: "CommercialAutomobileDesignatedInsuredForCoveredAutosLiabilityCoverageDetail.DriverLicenseNumber"
+                      default: "abcdefg12345"
           TermFactor:
             type: "string"
             format: "string"
@@ -1406,7 +1449,6 @@ definitions:
                       format: "string"
                       title: "CommercialAutomobilePrivatePassengerUninsuredMotoristsPropertyDamageCoverage.AdditionalNamedInsuredSurchargeFactor"
                       default: "1.1"
-                    
   errorModel:
     type: "object"
     properties:

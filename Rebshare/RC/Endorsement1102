@@ -26,7 +26,7 @@ paths:
         description: "Authentication Token"
         required: true
         type: "string"
-        default: "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"
+        default: "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"
       - name: "Content-Type"
         in: "header"
         description: "Content Type"
@@ -138,7 +138,7 @@ definitions:
             type: "string"
             format: "string"
             title: "Token"
-            default: "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"
+            default: "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"
           UserName:
             type: "string"
             format: "string"
@@ -227,46 +227,114 @@ definitions:
             format: "string"
             title: "IndividualNamedInsuredOnThePolicy"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           OptionalClassPlan:
             type: "string"
             format: "string"
             title: "OptionalClassPlan"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           ScheduleRatingApplies:
             type: "string"
             format: "string"
             title: "ScheduleRatingApplies"
-            default: "No"
+            default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           AtFaultLiabilityLimitsType:
             type: "string"
             format: "string"
             title: "AtFaultLiabilityLimitsType"
             default: "Added On To At-Fault Liability Limits"
+            enum:
+            - "Added On To At-Fault Liability Limits"
+            - "\nReduced By At-Fault Liability Limits"
+            - "\nNot Applicable"
           UninsuredMotoristsCoverageType:
             type: "string"
             format: "string"
             title: "UninsuredMotoristsCoverageType"
-            default: "Combined Single Limit"
+            default: "No Coverage"
+            enum:
+            - "No Coverage"
+            - "\nCombined Single Limit"
+            - "\nSplit Limit"
+            - "\n"
           UninsuredMotoristsCoverageCombinedSingleLimit:
             type: "string"
             format: "string"
             title: "UninsuredMotoristsCoverageCombinedSingleLimit"
-            default: "75000.0"
+            default: "Not Applicable"
+            enum:
+            - "Not Applicable"
+            - " \n75,000"
+            - " \n100,000"
+            - " \n125,000"
+            - "\n150,000"
+            - "\n200,000"
+            - "\n250,000"
+            - "\n300,000"
+            - "\n350,000"
+            - "\n400,000"
+            - "\n500,000"
+            - "\n600,000"
+            - "\n750,000"
+            - "\n1,000,000"
+            - "\n1,500,000"
+            - "\n2,000,000"
+            - "\n2,500,000"
+            - "\n3,000,000"
+            - "\n5,000,000"
+            - "\n7,500,000"
+            - "\n10,000,000"
+            - "\n"
           UninsuredMotoristsCoverageSplitLimit:
             type: "string"
             format: "string"
             title: "UninsuredMotoristsCoverageSplitLimit"
-            default: "25,000\\/50,000"
+            default: "Not Applicable"
+            enum:
+            - "Not Applicable"
+            - " \n25,000/50,000"
+            - " \n50,000/100,000"
+            - " 100,000/300,000"
+            - " \n250,000/500,000"
+            - " \n500,000/1,000,000"
+            - " \n1,000,000/2,000,000"
+            - " 2,500,000/5,000,000"
+            - " \n5,000,000/10,000,000"
+            - "\n \n\n"
           UninsuredMotoristsCoverageDeductible:
             type: "string"
             format: "string"
             title: "UninsuredMotoristsCoverageDeductible"
-            default: "0.0"
+            default: "Not Applicable"
+            enum:
+            - "Not Applicable"
+            - "\nNone"
+            - "\n500/500"
+            - "\n250/250"
+            - "\n1,000/1,000"
+            - "\n2,000"
+            - "\n1,000"
+            - "\n500"
+            - "\n"
           UninsuredMotoristsPropertyDamageCoverageLimit:
             type: "string"
             format: "string"
             title: "UninsuredMotoristsPropertyDamageCoverageLimit"
-            default: "25000.0"
+            default: "Not Applicable"
+            enum:
+            - "Not Applicable"
+            - "\n25,000"
+            - "\n50,000"
+            - "\n100,000"
+            - "\n"
           PolicyFee:
             type: "string"
             format: "string"
@@ -311,24 +379,22 @@ definitions:
             format: "string"
             title: "CleanMVR"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           AtFaultLosses:
             type: "string"
             format: "string"
             title: "AtFaultLosses"
-            default: "No"
+            default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           PaymentPlan:
             type: "string"
             format: "string"
             title: "PaymentPlan"
             default: "Monthly"
-          '  ':
-            type: "string"
-            format: "string"
-            title: "  "
-          null:
-            type: "string"
-            format: "string"
-            title: "null"
           NameOfPersonsOrOrganizations:
             type: "string"
             format: "string"
@@ -347,91 +413,145 @@ definitions:
             format: "string"
             title: "CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosCoveredAutosLiability"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosAutoMedicalPayments:
             type: "string"
             format: "string"
             title: "CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosAutoMedicalPayments"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosOtherAutoCoverage:
             type: "string"
             format: "string"
             title: "CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosOtherAutoCoverage"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosCollision:
             type: "string"
             format: "string"
             title: "CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosCollision"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosUninsuredMotorists:
             type: "string"
             format: "string"
             title: "CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosUninsuredMotorists"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosUnderinsuredMotorists:
             type: "string"
             format: "string"
             title: "CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosUnderinsuredMotorists"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosYouOwnCollision:
             type: "string"
             format: "string"
             title: "CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosYouOwnCollision"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosYouOwnCoveredAutosLiability:
             type: "string"
             format: "string"
             title: "CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosYouOwnCoveredAutosLiability"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosYouOwnAutoMedicalPayments:
             type: "string"
             format: "string"
             title: "CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosYouOwnAutoMedicalPayments"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosYouOwnOtherAutoCoverage:
             type: "string"
             format: "string"
             title: "CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosYouOwnOtherAutoCoverage"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosYouOwnUninsuredMotorists:
             type: "string"
             format: "string"
             title: "CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosYouOwnUninsuredMotorists"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosYouOwnUnderinsuredMotorists:
             type: "string"
             format: "string"
             title: "CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosYouOwnUnderinsuredMotorists"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileSuspensionOfInsuranceDetail.CoveredAutosListedBelowCoveredAutosLiability:
             type: "string"
             format: "string"
             title: "CommercialAutomobileSuspensionOfInsuranceDetail.CoveredAutosListedBelowCoveredAutosLiability"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileSuspensionOfInsuranceDetail.CoveredAutosListedBelowAutoMedicalPayments:
             type: "string"
             format: "string"
             title: "CommercialAutomobileSuspensionOfInsuranceDetail.CoveredAutosListedBelowAutoMedicalPayments"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileSuspensionOfInsuranceDetail.CoveredAutosListedBelowOtherAutoCoverage:
             type: "string"
             format: "string"
             title: "CommercialAutomobileSuspensionOfInsuranceDetail.CoveredAutosListedBelowOtherAutoCoverage"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileSuspensionOfInsuranceDetail.CoveredAutosListedBelowCollision:
             type: "string"
             format: "string"
             title: "CommercialAutomobileSuspensionOfInsuranceDetail.CoveredAutosListedBelowCollision"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileSuspensionOfInsuranceDetail.CoveredAutosListedBelowUninsuredMotorists:
             type: "string"
             format: "string"
             title: "CommercialAutomobileSuspensionOfInsuranceDetail.CoveredAutosListedBelowUninsuredMotorists"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileSuspensionOfInsuranceDetail.CoveredAutosListedBelowUnderinsuredMotorists:
             type: "string"
             format: "string"
             title: "CommercialAutomobileSuspensionOfInsuranceDetail.CoveredAutosListedBelowUnderinsuredMotorists"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileSuspensionOfInsuranceDetail.CoveredAutos:
             type: "string"
             format: "string"
@@ -442,91 +562,145 @@ definitions:
             format: "string"
             title: "CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosCoveredAutosLiability"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosAutoMedicalPayments:
             type: "string"
             format: "string"
             title: "CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosAutoMedicalPayments"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosOtherAutoCoverage:
             type: "string"
             format: "string"
             title: "CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosOtherAutoCoverage"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosCollision:
             type: "string"
             format: "string"
             title: "CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosCollision"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosUninsuredMotorists:
             type: "string"
             format: "string"
             title: "CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosUninsuredMotorists"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosUnderinsuredMotorists:
             type: "string"
             format: "string"
             title: "CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosUnderinsuredMotorists"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosYouOwnCollision:
             type: "string"
             format: "string"
             title: "CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosYouOwnCollision"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosYouOwnCoveredAutosLiability:
             type: "string"
             format: "string"
             title: "CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosYouOwnCoveredAutosLiability"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosYouOwnAutoMedicalPayments:
             type: "string"
             format: "string"
             title: "CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosYouOwnAutoMedicalPayments"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosYouOwnOtherAutoCoverage:
             type: "string"
             format: "string"
             title: "CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosYouOwnOtherAutoCoverage"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosYouOwnUninsuredMotorists:
             type: "string"
             format: "string"
             title: "CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosYouOwnUninsuredMotorists"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosYouOwnUnderinsuredMotorists:
             type: "string"
             format: "string"
             title: "CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosYouOwnUnderinsuredMotorists"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileReinstatementOfInsuranceDetail.CoveredAutosListedBelowCoveredAutosLiability:
             type: "string"
             format: "string"
             title: "CommercialAutomobileReinstatementOfInsuranceDetail.CoveredAutosListedBelowCoveredAutosLiability"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileReinstatementOfInsuranceDetail.CoveredAutosListedBelowAutoMedicalPayments:
             type: "string"
             format: "string"
             title: "CommercialAutomobileReinstatementOfInsuranceDetail.CoveredAutosListedBelowAutoMedicalPayments"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileReinstatementOfInsuranceDetail.CoveredAutosListedBelowOtherAutoCoverage:
             type: "string"
             format: "string"
             title: "CommercialAutomobileReinstatementOfInsuranceDetail.CoveredAutosListedBelowOtherAutoCoverage"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileReinstatementOfInsuranceDetail.CoveredAutosListedBelowCollision:
             type: "string"
             format: "string"
             title: "CommercialAutomobileReinstatementOfInsuranceDetail.CoveredAutosListedBelowCollision"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileReinstatementOfInsuranceDetail.CoveredAutosListedBelowUninsuredMotorists:
             type: "string"
             format: "string"
             title: "CommercialAutomobileReinstatementOfInsuranceDetail.CoveredAutosListedBelowUninsuredMotorists"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileReinstatementOfInsuranceDetail.CoveredAutosListedBelowUnderinsuredMotorists:
             type: "string"
             format: "string"
             title: "CommercialAutomobileReinstatementOfInsuranceDetail.CoveredAutosListedBelowUnderinsuredMotorists"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileReinstatementOfInsuranceDetail.CoveredAutos:
             type: "string"
             format: "string"
@@ -658,41 +832,65 @@ definitions:
                 format: "string"
                 title: "CommercialAutomobileExclusionOfFederalEmployeesUsingAutosInGovernmentBusiness"
                 default: "Included"
+                enum:
+                        - "Included"
+                        - "\nExcluded"
               CommercialAutomobileDesignatedInsuredForCoveredAutosLiabilityCoverage:
                 type: "string"
                 format: "string"
                 title: "CommercialAutomobileDesignatedInsuredForCoveredAutosLiabilityCoverage"
                 default: "Included"
+                enum:
+                        - "Included"
+                        - "\nExcluded"
               CommercialAutomobileCoverageForCertainOperationsInConnectionWithRailroads:
                 type: "string"
                 format: "string"
                 title: "CommercialAutomobileCoverageForCertainOperationsInConnectionWithRailroads"
                 default: "Included"
+                enum:
+                        - "Included"
+                        - "\nExcluded"
               CommercialAutomobileGovernmentalBodiesAmendatoryEndorsement:
                 type: "string"
                 format: "string"
                 title: "CommercialAutomobileGovernmentalBodiesAmendatoryEndorsement"
                 default: "Included"
+                enum:
+                        - "Included"
+                        - "\nExcluded"
               CommercialAutomobileDriveOtherCarCovBroadenedCovForNamedIndividuals:
                 type: "string"
                 format: "string"
                 title: "CommercialAutomobileDriveOtherCarCovBroadenedCovForNamedIndividuals"
                 default: "Included"
+                enum:
+                        - "Included"
+                        - "\nExcluded"
               CommercialAutomobileDrivingSchoolsNonOwnedCoverages:
                 type: "string"
                 format: "string"
                 title: "CommercialAutomobileDrivingSchoolsNonOwnedCoverages"
                 default: "Included"
+                enum:
+                        - "Included"
+                        - "\nExcluded"
               CommercialAutomobileReinstatementOfInsurance:
                 type: "string"
                 format: "string"
                 title: "CommercialAutomobileReinstatementOfInsurance"
                 default: "Included"
+                enum:
+                        - "Included"
+                        - "\nExcluded"
               CommercialAutomobileFiduciaryLiabilityOfBanks:
                 type: "string"
                 format: "string"
                 title: "CommercialAutomobileFiduciaryLiabilityOfBanks"
                 default: "Included"
+                enum:
+                        - "Included"
+                        - "\nExcluded"
               CommercialAutomobileSuspensionOfInsurance:
                 type: "string"
                 format: "string"
@@ -702,7 +900,10 @@ definitions:
                 type: "string"
                 format: "string"
                 title: "CommercialAutomobileWaiverOfTransferOfRightsOfRecoveryAgainstOthersToUsWaiverOfSubrogation"
-                default: "Excluded"
+                default: "Included"
+                enum:
+                        - "Included"
+                        - "\nExcluded"
           AdditionalNamedInsuredList:
             type: "array"
             items:
@@ -740,17 +941,33 @@ definitions:
                         type: "string"
                         format: "string"
                         title: "Action"
-                        default: "Modify"
+                        default: "Add"
+                        enum:
+                        - "Add"
+                        - "\nModify"
+                        - "\nRemove"
+                        - "\nNoChange"
                       Type:
                         type: "string"
                         format: "string"
                         title: "Type"
                         default: "Personal Use or Farm Use - Nonfleet Vehicle"
+                        enum:
+                        - "Personal Use or Farm Use - Nonfleet Vehicle"
+                        - "\nBusiness Use - Nonfleet Vehicle"
+                        - "\nPersonal Use or Business Use - Fleet Vehicle"
+                        - "\nFarm Use - Fleet Vehicle"
                       Use:
                         type: "string"
                         format: "string"
                         title: "Use"
-                        default: "To or From Work 15 or More Miles"
+                        default: "Not Driven to Work or School"
+                        enum:
+                        - "Not Driven to Work or School"
+                        - "\nTo or From Work Less Than 15 Miles"
+                        - "\nTo or From Work 15 or More Miles"
+                        - "\nNot Applicable"
+                        - "\n"
                       VIN:
                         type: "string"
                         format: "string"
@@ -804,7 +1021,14 @@ definitions:
                         type: "string"
                         format: "string"
                         title: "OperatorExperience"
-                        default: "No operator licensed less than 5 years"
+                        default: "No Operator Licensed Less Than 5 Years"
+                        enum:
+                        - "No Operator Licensed Less Than 5 Years"
+                        - "\nOperator Licensed Less Than 5 Years and Not Owner or\
+                          \ Principal Operator"
+                        - "\nOwner or Principal Operator Licensed Less Than 5 Years"
+                        - "\nNot Applicable"
+                        - "\n"
                       StatedAmount:
                         type: "string"
                         format: "string"
@@ -814,6 +1038,14 @@ definitions:
                         type: "string"
                         format: "string"
                         title: "SafetyScore"
+                        enum:
+                        - "1 – 26"
+                        - "\n27 – 30"
+                        - "\n31 – 34"
+                        - "\n35 – 37"
+                        - "\n38 – 42"
+                        - "\n43 – 100"
+                        - "\n"
                       SafetyScoreDiscountApplies:
                         type: "string"
                         format: "string"
@@ -828,8 +1060,14 @@ definitions:
                         type: "string"
                         format: "string"
                         title: "UsedAsTNCOrOnDemand"
-                        default: "Used As Both Transportation Network Company And\
-                          \ On-Demand"
+                        default: "Used As Transportation Network Company Only"
+                        enum:
+                        - "Used As Transportation Network Company Only"
+                        - " \nUsed As On-Demand And Not As Transportation Network\
+                          \ Company"
+                        - " \nUsed As Both Transportation Network Company And On-Demand"
+                        - "\nNot Used In A Transportation Network Company Or On-Demand\
+                          \ Capacity"
                       DriverName:
                         type: "string"
                         format: "string"
@@ -839,7 +1077,21 @@ definitions:
                         type: "string"
                         format: "string"
                         title: "ClassCode"
-                        default: "7381.0"
+                        default: "7381"
+                        enum:
+                        - "7381"
+                        - "\n7382"
+                        - "\n7383"
+                        - "\n7386"
+                        - "\n7387"
+                        - "\n7388"
+                        - "\n7392"
+                        - "\n7393"
+                        - "\n7394"
+                        - "\n7391"
+                        - "\n7398"
+                        - "\n7399"
+                        - "\n"
                       CommercialAutomobilePrivatePassengerLiabilityCoverage.CoverageType:
                         type: "string"
                         format: "string"
@@ -859,22 +1111,51 @@ definitions:
                         type: "string"
                         format: "string"
                         title: "CommercialAutomobilePrivatePassengerMedicalPaymentsCoverage.Limit"
-                        default: "1000.0"
+                        default: "No Coverage"
+                        enum:
+                        - "No Coverage"
+                        - "\n500"
+                        - "\n1,000"
+                        - "\n2,000"
+                        - "\n5,000"
+                        - "\n"
                       CommercialAutomobilePrivatePassengerCollisionCoverage.CoverageType:
                         type: "string"
                         format: "string"
                         title: "CommercialAutomobilePrivatePassengerCollisionCoverage.CoverageType"
-                        default: "Stated Amount"
+                        default: "No Coverage"
+                        enum:
+                        - "No Coverage"
+                        - "\nACV"
+                        - "\nStated Amount"
+                        - "\nCollision"
+                        - "\nBlanket Collision"
+                        - "\n"
                       CommercialAutomobilePrivatePassengerCollisionCoverage.Deductible:
                         type: "string"
                         format: "string"
                         title: "CommercialAutomobilePrivatePassengerCollisionCoverage.Deductible"
-                        default: "1000.0"
+                        default: "50"
+                        enum:
+                        - "50"
+                        - "\n100"
+                        - "\n250"
+                        - "\n500"
+                        - "\n1,000"
+                        - "\n2,000"
+                        - "\n3,000"
+                        - "\n5,000"
+                        - "\nNot Applicable"
                       CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.CoverageType:
                         type: "string"
                         format: "string"
                         title: "CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.CoverageType"
-                        default: "Stated Amount"
+                        default: "No Coverage"
+                        enum:
+                        - "No Coverage"
+                        - "\nACV"
+                        - "\nStated Amount"
+                        - "\n"
                       CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.Deductible:
                         type: "string"
                         format: "string"
@@ -890,6 +1171,9 @@ definitions:
                         format: "string"
                         title: "CommercialAutomobilePrivatePassengerRentalReimbursementCoverageCollisionCoverage.CoverageType"
                         default: "No Coverage"
+                        enum:
+                        - "No Coverage"
+                        - "\nCollision"
                       CommercialAutomobilePrivatePassengerUninsuredMotoristsCoverage.CoverageStatus:
                         type: "string"
                         format: "string"
@@ -937,7 +1221,13 @@ definitions:
                                   type: "string"
                                   format: "string"
                                   title: "Action"
-                                  default: "Modify"
+                                  default: "Add"
+                                  enum:
+                                  - "Add"
+                                  - "\nModify"
+                                  - "\nRemove"
+                                  - "\nNoChange"
+                                
                                 CommercialAutomobilePrivatePassengerLessorAdditionalInsuredAndLossPayee.Name:
                                   type: "string"
                                   format: "string"
@@ -947,7 +1237,7 @@ definitions:
                                   type: "string"
                                   format: "string"
                                   title: "CommercialAutomobilePrivatePassengerLessorAdditionalInsuredAndLossPayee.AddressLine1"
-                                  default: "5318.0"
+                                  default: "5318"
                                 CommercialAutomobilePrivatePassengerLessorAdditionalInsuredAndLossPayee.AddressLine2:
                                   type: "string"
                                   format: "string"
@@ -968,7 +1258,7 @@ definitions:
                                   format: "string"
                                   title: "CommercialAutomobilePrivatePassengerLessorAdditionalInsuredAndLossPayee.Zipcode"
                                   default: "30004.0"
-                      OptionalForms:
+                      OptionalFroms:
                         type: "object"
                         properties:
                           CommercialAutomobilePrivatePassengerRentalReimbursementCoverage:
@@ -976,11 +1266,17 @@ definitions:
                             format: "string"
                             title: "CommercialAutomobilePrivatePassengerRentalReimbursementCoverage"
                             default: "Excluded"
+                            enum:
+                                  - "Excluded"
+                                  - "\nIncluded"
                           CommercialAutomobilePrivatePassengerMultiPurposeEquipment:
                             type: "string"
                             format: "string"
                             title: "CommercialAutomobilePrivatePassengerMultiPurposeEquipment"
-                            default: "Included"
+                            default: "Excluded"
+                            enum:
+                                  - "Excluded"
+                                  - "\nIncluded"
   Endorsement_Success_Response:
     type: "object"
     properties:
@@ -998,7 +1294,7 @@ definitions:
         type: "string"
         format: "string"
         title: "EventName"
-        default: "Endorsement_1.1.0.2"  
+        default: "Endorsement_1.1.0.2"
       Policy:
         type: "object"
         properties:
@@ -1007,31 +1303,88 @@ definitions:
             format: "string"
             title: "AtFaultLiabilityLimitsType"
             default: "Added On To At-Fault Liability Limits"
+            enum:
+            - "Added On To At-Fault Liability Limits"
+            - "\nReduced By At-Fault Liability Limits"
+            - "\nNot Applicable"
           UninsuredMotoristsCoverageType:
             type: "string"
             format: "string"
             title: "UninsuredMotoristsCoverageType"
-            default: "Combined Single Limit"
+            default: "No Coverage"
+            enum:
+            - "No Coverage"
+            - "\nCombined Single Limit"
+            - "\nSplit Limit"
           UninsuredMotoristsCoverageSplitLimit:
             type: "string"
             format: "string"
             title: "UninsuredMotoristsCoverageSplitLimit"
-            default: "25,000/50,000"
+            default: "Not Applicable"
+            enum:
+            - "Not Applicable"
+            - " \n25,000/50,000"
+            - " \n50,000/100,000"
+            - " 100,000/300,000"
+            - " \n250,000/500,000"
+            - " \n500,000/1,000,000"
+            - " \n1,000,000/2,000,000"
+            - " 2,500,000/5,000,000"
+            - " \n5,000,000/10,000,000"
           UninsuredMotoristsCoverageCombinedSingleLimit:
             type: "string"
             format: "string"
             title: "UninsuredMotoristsCoverageCombinedSingleLimit"
-            default: "75000.0"
+            default: "Not Applicable"
+            enum:
+            - "Not Applicable"
+            - " \n75,000"
+            - " \n100,000"
+            - " \n125,000"
+            - "\n150,000"
+            - "\n200,000"
+            - "\n250,000"
+            - "\n300,000"
+            - "\n350,000"
+            - "\n400,000"
+            - "\n500,000"
+            - "\n600,000"
+            - "\n750,000"
+            - "\n1,000,000"
+            - "\n1,500,000"
+            - "\n2,000,000"
+            - "\n2,500,000"
+            - "\n3,000,000"
+            - "\n5,000,000"
+            - "\n7,500,000"
+            - "\n10,000,000"
+            - "\n"
           UninsuredMotoristsCoverageDeductible:
             type: "string"
             format: "string"
             title: "UninsuredMotoristsCoverageDeductible"
-            default: "0.0"
+            default: "Not Applicable"
+            enum:
+            - "Not Applicable"
+            - "\nNone"
+            - "\n500/500"
+            - "\n250/250"
+            - "\n1,000/1,000"
+            - "\n2,000"
+            - "\n1,000"
+            - "\n500"
+            - "\n"
           UninsuredMotoristsPropertyDamageCoverageLimit:
             type: "string"
             format: "string"
             title: "UninsuredMotoristsPropertyDamageCoverageLimit"
-            default: "25000.0"
+            default: "Not Applicable"
+            enum:
+            - "Not Applicable"
+            - "\n25,000"
+            - "\n50,000"
+            - "\n100,000"
+            - "\n"
           ProrataPremiumDifference:
             type: "string"
             format: "string"
@@ -1076,12 +1429,18 @@ definitions:
             type: "string"
             format: "string"
             title: "AtFaultLosses"
-            default: "No"
+            default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CleanMVR:
             type: "string"
             format: "string"
             title: "CleanMVR"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           AdditionalNamedInsuredList:
             type: "array"
             items:
@@ -1156,26 +1515,6 @@ definitions:
                       format: "string"
                       title: "Territory"
                       default: "118.0"
-                    ClassCode:
-                      type: "string"
-                      format: "string"
-                      title: "ClassCode"
-                      default: "7381.0"
-                    Type:
-                      type: "string"
-                      format: "string"
-                      title: "Type"
-                      default: "Personal Use or Farm Use - Nonfleet Vehicle"
-                    Use:
-                      type: "string"
-                      format: "string"
-                      title: "Use"
-                      default: "To or From Work 15 or More Miles"
-                    OperatorExperience:
-                      type: "string"
-                      format: "string"
-                      title: "OperatorExperience"
-                      default: "No operator licensed less than 5 years"
                     Model:
                       type: "string"
                       format: "string"
@@ -1210,10 +1549,6 @@ definitions:
                       format: "string"
                       title: "CommercialAutoPrivatePassengerPremium"
                       default: "910.0"
-                    SafetyScore:
-                      type: "string"
-                      format: "string"
-                      title: "SafetyScore"
                     SafetyScoreDiscountApplies:
                       type: "string"
                       format: "string"
@@ -1239,11 +1574,6 @@ definitions:
                       format: "string"
                       title: "CommercialAutomobilePrivatePassengerLiabilityCoverage.Deductible"
                       default: "No Deductible"
-                    CommercialAutomobilePrivatePassengerLiabilityCoverage.Limit:
-                      type: "string"
-                      format: "string"
-                      title: "CommercialAutomobilePrivatePassengerLiabilityCoverage.Limit"
-                      default: "75000.0"
                     CommercialAutomobilePrivatePassengerLiabilityCoverage.CoverageType:
                       type: "string"
                       format: "string"
@@ -1344,11 +1674,6 @@ definitions:
                       format: "string"
                       title: "CommercialAutomobilePrivatePassengerLiabilityCoverage.LiabilityPremium"
                       default: "1017.5977328508001"
-                    CommercialAutomobilePrivatePassengerMedicalPaymentsCoverage.Limit:
-                      type: "string"
-                      format: "string"
-                      title: "CommercialAutomobilePrivatePassengerMedicalPaymentsCoverage.Limit"
-                      default: "1000.0"
                     CommercialAutomobilePrivatePassengerMedicalPaymentsCoverage.PolicyTermPremium:
                       type: "string"
                       format: "string"
@@ -1389,11 +1714,6 @@ definitions:
                       format: "string"
                       title: "CommercialAutomobilePrivatePassengerMedicalPaymentsCoverage.BasePremium"
                       default: "21.671"
-                    CommercialAutomobilePrivatePassengerCollisionCoverage.Deductible:
-                      type: "string"
-                      format: "string"
-                      title: "CommercialAutomobilePrivatePassengerCollisionCoverage.Deductible"
-                      default: "1000.0"
                     CommercialAutomobilePrivatePassengerCollisionCoverage.PolicyTermPremium:
                       type: "string"
                       format: "string"
@@ -1504,11 +1824,6 @@ definitions:
                       format: "string"
                       title: "CommercialAutomobilePrivatePassengerCollisionCoverage.StatedAmount"
                       default: "5000.0"
-                    CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.Deductible:
-                      type: "string"
-                      format: "string"
-                      title: "CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.Deductible"
-                      default: "1000.0"
                     CommercialAutomobilePrivatePassengerOtherThanCollisionCoverage.PolicyTermPremium:
                       type: "string"
                       format: "string"
@@ -1971,92 +2286,146 @@ definitions:
             type: "string"
             format: "string"
             title: "CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosCoveredAutosLiability"
-            default: "No"
+            default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosAutoMedicalPayments:
             type: "string"
             format: "string"
             title: "CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosAutoMedicalPayments"
-            default: "No"
+            default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosOtherAutoCoverage:
             type: "string"
             format: "string"
             title: "CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosOtherAutoCoverage"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosCollision:
             type: "string"
             format: "string"
             title: "CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosCollision"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosUninsuredMotorists:
             type: "string"
             format: "string"
             title: "CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosUninsuredMotorists"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosUnderinsuredMotorists:
             type: "string"
             format: "string"
             title: "CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosUnderinsuredMotorists"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosYouOwnCollision:
             type: "string"
             format: "string"
             title: "CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosYouOwnCollision"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosYouOwnCoveredAutosLiability:
             type: "string"
             format: "string"
             title: "CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosYouOwnCoveredAutosLiability"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosYouOwnAutoMedicalPayments:
             type: "string"
             format: "string"
             title: "CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosYouOwnAutoMedicalPayments"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosYouOwnOtherAutoCoverage:
             type: "string"
             format: "string"
             title: "CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosYouOwnOtherAutoCoverage"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosYouOwnUninsuredMotorists:
             type: "string"
             format: "string"
             title: "CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosYouOwnUninsuredMotorists"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosYouOwnUnderinsuredMotorists:
             type: "string"
             format: "string"
             title: "CommercialAutomobileSuspensionOfInsuranceDetail.AllCoveredAutosYouOwnUnderinsuredMotorists"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileSuspensionOfInsuranceDetail.CoveredAutosListedBelowCoveredAutosLiability:
             type: "string"
             format: "string"
             title: "CommercialAutomobileSuspensionOfInsuranceDetail.CoveredAutosListedBelowCoveredAutosLiability"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileSuspensionOfInsuranceDetail.CoveredAutosListedBelowAutoMedicalPayments:
             type: "string"
             format: "string"
             title: "CommercialAutomobileSuspensionOfInsuranceDetail.CoveredAutosListedBelowAutoMedicalPayments"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileSuspensionOfInsuranceDetail.CoveredAutosListedBelowOtherAutoCoverage:
             type: "string"
             format: "string"
             title: "CommercialAutomobileSuspensionOfInsuranceDetail.CoveredAutosListedBelowOtherAutoCoverage"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileSuspensionOfInsuranceDetail.CoveredAutosListedBelowCollision:
             type: "string"
             format: "string"
             title: "CommercialAutomobileSuspensionOfInsuranceDetail.CoveredAutosListedBelowCollision"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileSuspensionOfInsuranceDetail.CoveredAutosListedBelowUninsuredMotorists:
             type: "string"
             format: "string"
             title: "CommercialAutomobileSuspensionOfInsuranceDetail.CoveredAutosListedBelowUninsuredMotorists"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileSuspensionOfInsuranceDetail.CoveredAutosListedBelowUnderinsuredMotorists:
             type: "string"
             format: "string"
             title: "CommercialAutomobileSuspensionOfInsuranceDetail.CoveredAutosListedBelowUnderinsuredMotorists"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileSuspensionOfInsuranceDetail.CoveredAutos:
             type: "string"
             format: "string"
@@ -2067,86 +2436,137 @@ definitions:
             format: "string"
             title: "CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosCoveredAutosLiability"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosAutoMedicalPayments:
             type: "string"
             format: "string"
             title: "CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosAutoMedicalPayments"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosOtherAutoCoverage:
             type: "string"
             format: "string"
             title: "CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosOtherAutoCoverage"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosCollision:
             type: "string"
             format: "string"
             title: "CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosCollision"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosUninsuredMotorists:
             type: "string"
             format: "string"
             title: "CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosUninsuredMotorists"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosUnderinsuredMotorists:
             type: "string"
             format: "string"
             title: "CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosUnderinsuredMotorists"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosYouOwnCollision:
             type: "string"
             format: "string"
             title: "CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosYouOwnCollision"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosYouOwnCoveredAutosLiability:
             type: "string"
             format: "string"
             title: "CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosYouOwnCoveredAutosLiability"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosYouOwnAutoMedicalPayments:
             type: "string"
             format: "string"
             title: "CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosYouOwnAutoMedicalPayments"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosYouOwnUninsuredMotorists:
             type: "string"
             format: "string"
             title: "CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosYouOwnUninsuredMotorists"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosYouOwnUnderinsuredMotorists:
             type: "string"
             format: "string"
             title: "CommercialAutomobileReinstatementOfInsuranceDetail.AllCoveredAutosYouOwnUnderinsuredMotorists"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileReinstatementOfInsuranceDetail.CoveredAutosListedBelowCoveredAutosLiability:
             type: "string"
             format: "string"
             title: "CommercialAutomobileReinstatementOfInsuranceDetail.CoveredAutosListedBelowCoveredAutosLiability"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileReinstatementOfInsuranceDetail.CoveredAutosListedBelowAutoMedicalPayments:
             type: "string"
             format: "string"
             title: "CommercialAutomobileReinstatementOfInsuranceDetail.CoveredAutosListedBelowAutoMedicalPayments"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileReinstatementOfInsuranceDetail.CoveredAutosListedBelowOtherAutoCoverage:
             type: "string"
             format: "string"
             title: "CommercialAutomobileReinstatementOfInsuranceDetail.CoveredAutosListedBelowOtherAutoCoverage"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileReinstatementOfInsuranceDetail.CoveredAutosListedBelowCollision:
             type: "string"
             format: "string"
             title: "CommercialAutomobileReinstatementOfInsuranceDetail.CoveredAutosListedBelowCollision"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileReinstatementOfInsuranceDetail.CoveredAutosListedBelowUninsuredMotorists:
             type: "string"
             format: "string"
             title: "CommercialAutomobileReinstatementOfInsuranceDetail.CoveredAutosListedBelowUninsuredMotorists"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileReinstatementOfInsuranceDetail.CoveredAutosListedBelowUnderinsuredMotorists:
             type: "string"
             format: "string"
             title: "CommercialAutomobileReinstatementOfInsuranceDetail.CoveredAutosListedBelowUnderinsuredMotorists"
             default: "Yes"
+            enum:
+            - "Yes"
+            - " No"
           CommercialAutomobileReinstatementOfInsuranceDetail.CoveredAutos:
             type: "string"
             format: "string"

@@ -1,6 +1,6 @@
 swagger: '2.0'
 info:
-  version: 'CreateCustomerV2'
+  version: 'CreateCustomerV3'
   title: Assist Card - Create Customer API
   description: |
     Create Customer API is to save the Traveler, Trip information and generate a unique identifier which can be referenced to a CSR at any given point in the business flow. From which the CSR would pickup the CRN number and issue a quote in case the user is not able to proceed with the flow by Underwriting rules.

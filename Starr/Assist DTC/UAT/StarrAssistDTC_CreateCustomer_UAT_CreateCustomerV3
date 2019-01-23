@@ -157,7 +157,7 @@ definitions:
             enum: ["1","2","3","4","9","10","11"]
           PlanType:
             type: string
-            enum: ["Single Trip","Annual","Renter's Collision","Car Rental"]
+            enum: ["Single Trip","Annual","Renter's Collision","Car Rental", "Air Ticket"]
           DepartureDate:
             type: string
           ReturnDate:

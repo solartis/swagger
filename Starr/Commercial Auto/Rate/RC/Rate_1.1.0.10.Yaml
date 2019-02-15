@@ -78,13 +78,13 @@ definitions:
          default: StarrCARate_1.1.0.10
       EffectiveDate:
          type: string
-         default: "2019-02-01"
+         default: "2019-02-15"
       ExpirationDate:
          type: string
-         default: "2020-02-01"
+         default: "2020-02-15"
       LastRateLookUpDate:
          type: string
-         default: "2019-02-01"
+         default: "2019-02-15"
       InsuredName:
          type: string
          default: "John Smith"

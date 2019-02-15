@@ -1,8 +1,8 @@
 swagger: "2.0"
 info:
-  version: "1.1.0.8"
-  title: Solartis Rate API for STARR Commercial Auto
-  description: To rate a commercial auto policy per the inputs provided
+  version: "1.1.0.10"
+  title: Solartis Rate selection API for STARR Commercial Auto
+  description: To rate for a commercial auto policy per the inputs provided
 
 host: starrca.rc.solartis.net
 basePath: /DroolsV4_2/DroolsService
@@ -210,6 +210,7 @@ definitions:
               properties:
                 BusinessIncomeCoverageType: 
                   default: "Business Income Without Extra Expense Coverage"
+                  type: string
                 BusinessInterruptionCoverageDetail:
                       type: array
                       items:
@@ -322,6 +323,7 @@ definitions:
                         default: ""
           CommercialAutoDrivingSchoolPedestrianPIPCoveragePedestrianPIPCoverage:
             default: "1000"
+            type: string
           CommercialAutoGaragekeepersCovCustomersSoundReceivingEquipment:
             type: array
             items:
@@ -372,6 +374,7 @@ definitions:
                   default: "Direct (Excess)"
           CommercialAutoGrossReceiptsBasisMedicalPaymentsCoverageLimitText: 
             default: "1000"
+            type: string
           CommercialAutoMinnesotaAddedPersonalInjuryProtection: 
             default: "Yes"
           CommercialAutoNamedIndividualsBroadenedPersonalInjuryProtectionCoverage:

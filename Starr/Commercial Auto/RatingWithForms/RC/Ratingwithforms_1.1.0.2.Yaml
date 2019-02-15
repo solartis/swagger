@@ -1,8 +1,8 @@
 swagger: "2.0"
 info:
-  version: "1.1.0.10"
-  title: Solartis Rate API for STARR Commercial Auto
-  description: To rate a commercial auto policy per the inputs provided
+  version: "1.1.0.2"
+  title: Solartis Rate with form selection API for STARR Commercial Auto
+  description: To rate and produce the forms for a commercial auto policy per the inputs provided
 
 host: starrca.rc.solartis.net
 basePath: /DroolsV4_2/DroolsService
@@ -39,7 +39,7 @@ paths:
           required: true
           type: string
           format: string
-          default: "StarrCARate_1.1.0.10"
+          default: "StarrCARatingWithForms_1.1.0.2"
         - name: Rating Request
           in: body
           description: For rating request
@@ -210,6 +210,7 @@ definitions:
               properties:
                 BusinessIncomeCoverageType: 
                   default: "Business Income Without Extra Expense Coverage"
+                  type: string
                 BusinessInterruptionCoverageDetail:
                       type: array
                       items:
@@ -322,6 +323,7 @@ definitions:
                         default: ""
           CommercialAutoDrivingSchoolPedestrianPIPCoveragePedestrianPIPCoverage:
             default: "1000"
+            type: string
           CommercialAutoGaragekeepersCovCustomersSoundReceivingEquipment:
             type: array
             items:
@@ -372,6 +374,7 @@ definitions:
                   default: "Direct (Excess)"
           CommercialAutoGrossReceiptsBasisMedicalPaymentsCoverageLimitText: 
             default: "1000"
+            type: string
           CommercialAutoMinnesotaAddedPersonalInjuryProtection: 
             default: "Yes"
           CommercialAutoNamedIndividualsBroadenedPersonalInjuryProtectionCoverage:
@@ -1625,7 +1628,7 @@ definitions:
                         PublicTransportationUnderinsuredMotoristCoverageWanted:
                           default: ""
                           type: string
-                        PublicTransportationUnderinsuredMotoristPropertyDamageCoverageWanted: 
+                         PublicTransportationUnderinsuredMotoristPropertyDamageCoverageWanted: 
                           default: ""
                           type: string
                         PublicTransportationUnderinsuredMotoristsCoverageSplitLimit:
@@ -2706,6 +2709,7 @@ definitions:
                           type: string
                         ZoneRatedGaragingZone: 
                           default: "Zone 03 Boston"
+                          type: string
                           type: string
                         ZoneRatedFarthestTerminalZone: 
                           default: "Zone 01 Atlanta"

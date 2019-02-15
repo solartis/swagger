@@ -1,6 +1,6 @@
 swagger: "2.0"
 info:
-  version: "1.1.0.8"
+  version: "1.1.0.10"
   title: Solartis Rate API for STARR Commercial Auto
   description: To rate a commercial auto policy per the inputs provided
 
@@ -1625,7 +1625,7 @@ definitions:
                         PublicTransportationUnderinsuredMotoristCoverageWanted:
                           default: ""
                           type: string
-                         PublicTransportationUnderinsuredMotoristPropertyDamageCoverageWanted: 
+                        PublicTransportationUnderinsuredMotoristPropertyDamageCoverageWanted: 
                           default: ""
                           type: string
                         PublicTransportationUnderinsuredMotoristsCoverageSplitLimit:
@@ -2706,7 +2706,6 @@ definitions:
                           type: string
                         ZoneRatedGaragingZone: 
                           default: "Zone 03 Boston"
-                          type: string
                           type: string
                         ZoneRatedFarthestTerminalZone: 
                           default: "Zone 01 Atlanta"

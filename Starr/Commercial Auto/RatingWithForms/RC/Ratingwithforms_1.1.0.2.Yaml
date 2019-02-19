@@ -148,8 +148,7 @@ definitions:
               properties:
                 AddedPersonalInjuryProtectionDetail:
                   type: object
-                  items:
-                    properties:
+                  properties:
                       FamilyMembersName: 
                         default: "1"
                         type: string
@@ -260,6 +259,7 @@ definitions:
               properties:
                 CommercialAutoDriveOtherCarCovBroadenedCovForNamedIndividualsSubjectToNoFault: 
                   default: "Yes"
+                  type: string
                 CommercialAutoDriveOtherCarCovBroadenedCovForNamedIndividualsDetail:
                   type: array
                   items:
@@ -377,6 +377,7 @@ definitions:
             type: string
           CommercialAutoMinnesotaAddedPersonalInjuryProtection: 
             default: "Yes"
+            type: string
           CommercialAutoNamedIndividualsBroadenedPersonalInjuryProtectionCoverage:
             type: array
             items:
@@ -403,8 +404,7 @@ definitions:
               properties:
                 CommercialAutoPennsylvaniaNamedIndividualsBroadenedFirstPartyBenefitsDetail:
                   type: object
-                  items:
-                    properties:
+                  properties:
                       AccidentalDeathBenefit:
                         default: ""
                         type: string
@@ -1295,16 +1295,20 @@ definitions:
                     properties:
                         AddressLine1:
                           default: ""
+                          type: string
                         AddressLine2:
                           default: ""
+                          type: string
                         AudioVisualAndDataElectronicEquipmentCoverageList:
                           type: array
                           items:
                             properties:
                               AudioVisualAndDataElectronicEquipmentCoverageLimit:
                                 default: "500"
+                                type: string
                         AuxillaryRunningLampsDiscount:
                           default: "Yes"
+                          type: string
                         City: 
                           default: "Brighton"
                         CommercialAutoAdditionalPersonalInjuryProtectionNewYorkList:
@@ -1422,8 +1426,10 @@ definitions:
                           type: string
                         PublicTransportationCollisionCoverageCoverageType: 
                           default:  "ACV"
+                          type: string
                         PublicTransportationCollisionCoverageDeductible:
                           default: "500"
+                          type: string
                         PublicTransportationCollisionCoverageDeductibleWaiver: 
                           default: "No"
                           type: string
@@ -1692,8 +1698,10 @@ definitions:
                               type: string
                       AuxillaryRunningLampsDiscount: 
                         default: "Yes"
+                        type: string
                       City:
                         default: "Brighton"
+                        type: string
                       CommercialAutoAdditionalPersonalInjuryProtectionNewYorkList:
                         type: array
                         items:
@@ -2074,18 +2082,23 @@ definitions:
                     properties:
                         AddressLine1: 
                           default: "8TH ST"
+                          type: string
                         AddressLine2: 
                           default: "PHOENIX"
+                          type: string
                         AudioVisualAndDataElectronicEquipmentCoverageList:
                           type: array
                           items:
                             properties:
                               AudioVisualAndDataElectronicEquipmentCoverageLimit: 
                                 default: "500"
+                                type: string
                         AuxillaryRunningLampsDiscount: 
                             default: "Yes"
+                            type: string
                         City: 
                           default: "Brighton"
+                          type: string
                         CommercialAutoAdditionalPersonalInjuryProtectionNewYorkList:
                           type: array
                           items:
@@ -2715,6 +2728,7 @@ definitions:
                           type: string
                         ZoneRatedZipCodeOverride: 
                           default: "Other"
+                          type: string
                         ZoneRatedVIN:
                           default: ""
                           type: string
@@ -2834,6 +2848,7 @@ definitions:
                           type: string
                         ZoneRatedExtraordinaryMedicalBenefitsCoverageExtraordinaryMedicalBenefitRatingBasis: 
                           default: ""
+                          type: string
   errorModel:
     type: object
     required:

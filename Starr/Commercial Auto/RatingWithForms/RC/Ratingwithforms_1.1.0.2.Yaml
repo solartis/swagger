@@ -141,7 +141,7 @@ definitions:
             default: "30,000 Medical Expenses and 20,000 Other PIP Benefits"
           AddedPIPNamedInsureds:
             type: string
-            default: ""
+            default: "Named Insured Including Spouse"
           AddedPersonalInjuryProtection:
             type: array
             items:
@@ -150,7 +150,7 @@ definitions:
                   type: object
                   properties:
                       FamilyMembersName: 
-                        default: "1"
+                        default: "John"
                         type: string
           AddedPersonalInjuryProtectionLimitText: 
             default: "10,000"
@@ -166,13 +166,13 @@ definitions:
             default: "100"
           AdditionalPIPAggregateLimit:
             type: string
-            default: ""
+            default: "10,000"
           AdditionalPIPCoverageType: 
             type: string
             default: "Option B"
           AdditionalPIPWorkLossOrSurvivorsIncomeLossPerWeek: 
             type: string
-            default: ""
+            default: "100"
           AddlInsGLLessorOfLeasedEqpmtAutomtcStatusWhenRqdInLeasedAgrmtWithYouManualPremium:
             type: string
             default: "478"
@@ -269,19 +269,19 @@ definitions:
                         default: "1,000"
                       CommercialAutoDriveOtherCarCovBroadenedCovForNamedIndividualsLiabilityCoverageCoverageType:
                         type: string
-                        default: ""
+                        default: "Combined Single Limit"
                       CommercialAutoDriveOtherCarCovBroadenedCovForNamedIndividualsLiabilityCoverageDeductible:
                         type: string
                         default: "250 Combined Single Limit"
                       CommercialAutoDriveOtherCarCovBroadenedCovForNamedIndividualsLiabilityCoverageFinancialResponsibilityRequirement:
                         type: string
-                        default: ""
+                        default: "No"
                       CommercialAutoDriveOtherCarCovBroadenedCovForNamedIndividualsLiabilityCoverageLimitText:
                         type: string
                         default: "3,000,000"
                       CommercialAutoDriveOtherCarCovBroadenedCovForNamedIndividualsLiabilityCoveragePropertyDamageLimitText:
                         type: string
-                        default: ""
+                        default: "10,000"
                       CommercialAutoDriveOtherCarCovBroadenedCovForNamedIndividualsMedicalPaymentsCoverageLimitText:
                         type: string
                         default: "500"
@@ -299,7 +299,7 @@ definitions:
                         default: "Combined Single Limit"
                       CommercialAutoDriveOtherCarCovBroadenedCovForNamedIndividualsUnderinsuredMotoristsCoverageSplitLimit:
                         type: string
-                        default: ""
+                        default: "500,000/1,000,000"
                       CommercialAutoDriveOtherCarCovBroadenedCovForNamedIndividualsUnderinsuredMotoristsPropertyDamageCoverageLimitText:
                         type: string
                         default: "100,000"
@@ -311,7 +311,7 @@ definitions:
                         default: "Combined Single Limit"
                       CommercialAutoDriveOtherCarCovBroadenedCovForNamedIndividualsUninsuredMotoristsCoverageSplitLimit:
                         type: string
-                        default: ""
+                        default: "500,000/1,000,000"
                       CommercialAutoDriveOtherCarCovBroadenedCovForNamedIndividualsUninsuredMotoristsPropertyDamageCoverageDeductible:
                         type: string
                         default: "Full Coverage"
@@ -320,7 +320,7 @@ definitions:
                         default: "100,000"
                       CommercialAutoDriveOtherCarCoverageBroadenedCoverageForNamedIndividualsPedestrianPIPCoverage_PedestrianPIPCoverage:
                         type: string
-                        default: ""
+                        default: "Yes"
           CommercialAutoDrivingSchoolPedestrianPIPCoveragePedestrianPIPCoverage:
             default: "1000"
             type: string
@@ -406,22 +406,22 @@ definitions:
                   type: object
                   properties:
                       AccidentalDeathBenefit:
-                        default: ""
+                        default: "No Coverage"
                         type: string
                       CombinationFirstPartyBenefit:
-                        default: ""
+                        default: "No Coverage"
                         type: string
                       CoverageType: 
-                        default: ""
+                        default: "No Coverage"
                         type: string
                       FuneralExpenseBenefit: 
-                        default: ""
+                        default: "No Coverage"
                         type: string
                       MedicalExpenseBenefit:
-                        default: ""
+                        default: "No Coverage"
                         type: string
                       WorkLossBenefit: 
-                       default:  ""
+                       default:  "No Coverage"
                        type: string
           CommercialAutoPublicOrLiveryPassengerConveyanceAndOnDemandDeliveryServicesExclusion:
             type: string
@@ -541,10 +541,10 @@ definitions:
             default: "Combined Single Limit"
             type: string
           UninsuredMotorisCoverageAtFaultLiabilityLimitsType:
-            default: ""
+            default: "Added On To At-Fault Liability Limits"
             type: string
           UninsuredMotorisCoverageDeductible: 
-            default: ""
+            default: "None"
             type: string
           UninsuredMotoristPropertyDamageDeductible: 
             default: "Full Coverage"
@@ -556,7 +556,7 @@ definitions:
             default: "100,000"
             type: string
           UninsuredMotoristsCoverageSplitLimit: 
-            default: ""
+            default: "15,000/30,000"
             type: string
           UninsuredMotoristsCoverageStacked:
             default: "Non-Stacked Coverage"
@@ -565,13 +565,13 @@ definitions:
             default: "Combined Single Limit"
             type: string
           VehiclePIPCoverageCoordinationOfBenefitsExcessPIP: 
-            default: ""
+            default: "Not Applicable"
             type: string
           VehiclePIPCoveragePIPExclusionWorkLoss: 
-            default: ""
+            default: "Not Applicable"
             type: string
           VehiclePIPCoveragepipExtendedBenefits: 
-            default: ""
+            default: "Basic"
             type: string
           WageLoss: 
             default: "Yes"
@@ -649,7 +649,7 @@ definitions:
             default:  ""
             type: string
           RiskAnalyzerWanted:
-            default: ""
+            default: "No"
             type: string
           ScheduleRatingModificationApplies: 
             default: "No"
@@ -664,7 +664,7 @@ definitions:
             default: "41"
             type: string
           ScheduleRatingModificationEquipmentPct: 
-            default: "41%"
+            default: "41"
             type: string
           ScheduleRatingModificationEquipmentPctPhysicalDamage: 
             default: "41"
@@ -694,7 +694,7 @@ definitions:
             default: ""
             type: string
           TerrorismCoverage: 
-            default: "1000"
+            default: "Yes"
             type: string
           TortLimitation: 
             default: "Named Insured and all Regular Operators accepted Tort Limitation"
@@ -950,10 +950,10 @@ definitions:
                                   default: "Not Applicable"
                                   type: string
                         CommercialAutoFarmLaborContractorsDeductible:
-                          default: ""
+                          default: "No Deductible"
                           type: string
                         CommercialAutoPIPMedicalExpensesCoverageLimitText:
-                          default: ""
+                          default: "No Coverage"
                           type: string
                         CommercialAutoRentalReimbursementCovList:
                            type: array
@@ -969,16 +969,16 @@ definitions:
                           default: "Option B"
                           type: string
                         CommercialAutoVehicleCollisionCoverageCollisionType:
-                          default: ""
+                          default: "Not Applicable"
                           type: string
                         CommercialAutoVehicleLiabilityCoverageBodilyInjuryLimit:
-                          default: ""
+                          default: "500000"
                           type: string
                         CommercialAutoVehicleLiabilityCoveragePropertyDamageLimit: 
-                          default: ""
+                          default: "Not Applicable"
                           type: string
                         CommercialAutoVehicleLiabilityPropertyDamageCoverageDeductible:
-                          default: ""
+                          default: "No Deductible"
                           type: string
                         County:
                           default: "Surry"
@@ -1038,7 +1038,7 @@ definitions:
                           default: "Yes"
                           type: string
                         PrivatePassengerGrossVehicleWeightOver10000: 
-                          default: ""
+                          default: "No"
                           type: string
                         PrivatePassengerHiredAutosSpecifiedAsCoveredAutosYouOwn: 
                           default: "Yes"
@@ -1071,7 +1071,7 @@ definitions:
                           default: "Combined Single Limit"
                           type: string
                         PrivatePassengerLossPayableClauseAudioVisualAndDataElectronicEquipmentLimit:
-                          default: ""
+                          default: "500"
                           type: string
                         PrivatePassengerMake:
                           default: "KENWORTH"
@@ -1131,7 +1131,7 @@ definitions:
                           default: "No Coverage"
                           type: string
                         PrivatePassengerPIPCoverageCopayment: 
-                          default: ""
+                          default: "0%"
                           type: string
                         PrivatePassengerPIPCoverageCoverageType: 
                           default: "Employers Subject to MA Workers Compensation Act"
@@ -1179,10 +1179,10 @@ definitions:
                           default: "Yes"
                           type: string
                         PrivatePassengerPedestrianOnlyPremiumExtendedExtraordinaryMedicalBenefitsCoverageExtraordinaryMedicalBenefit:
-                          default: ""
+                          default: "No Coverage"
                           type: string
                         PrivatePassengerPedestrianOnlyPremiumExtendedExtraordinaryMedicalBenefitsCoverageExtraordinaryMedicalBenefitRatingBasis: 
-                          default: ""
+                          default: "Not Applicable"
                           type: string
                         PrivatePassengerPercentageOfTransportationNetworkServiceAutoUse:
                           default: "80% or More"
@@ -1218,7 +1218,7 @@ definitions:
                           default: "35"
                           type: string
                         PrivatePassengerTransportationOfEmployees:
-                          default: ""
+                          default: "No"
                           type: string
                         PrivatePassengerType:
                           default: "Farm Use - Fleet Vehicle"
@@ -1334,10 +1334,10 @@ definitions:
                                   default: "Not Applicable"
                                   type: string
                         CommercialAutoFarmLaborContractorsDeductible: 
-                          default: ""
+                          default: "No Deductible"
                           type: string
                         CommercialAutoPIPMedicalExpensesCoverageLimitText: 
-                          default: ""
+                          default: "No Coverage"
                           type: string
                         CommercialAutoRentalReimbursementCovList:
                           type: array

@@ -57,7 +57,7 @@ definitions:
         properties:
           ProductNumber:
             type: string
-            default: "ISO_CA-"
+            default: "ISO_CA"
           ProductVersionNumber:
             type: string
             default: "ISO_CA_V1"

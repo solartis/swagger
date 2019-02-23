@@ -1,0 +1,250 @@
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: Auto ID Card generation
+  description: >-
+    Solartis Auto ID Card generation API with instructions to get instant ID cards for Insured vehicles.
+host: isocakbv4-2.uat.solartis.net
+basePath: /DroolsV4_2/DroolsService
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /FireEventV2:
+    post:
+      description: Gets PDF that contains Auto Generated ID card
+      operationId: getPdfUrl
+      produces:
+        - application/json
+      parameters:
+        - name: Token
+          in: header
+          description: Authentication Token
+          required: true
+          type: string
+          format: string
+          default: >-
+            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
+        - name: Content-Type
+          in: header
+          description: Content Type
+          required: true
+          type: string
+          format: string
+          default: application/json
+        - name: AutoID Generation Request
+          in: body
+          description: For Auto generate PDF request
+          schema:
+            $ref: '#/definitions/AutoID Generation_Request'
+      responses:
+        '200':
+          description: Success Response
+          schema:
+            $ref: '#/definitions/Rating_Success_Response'
+definitions:
+  AutoID Generation_Request:
+    type: object
+    properties:
+      EventName:
+        type: string
+        default: "GenerateAutoIDCards"
+      Policy:
+        type: object
+        properties:
+          ProductNumber:
+            type: string
+            default: "ISO_CA-"
+          ProductVersionNumber:
+            type: string
+            default: "ISO_CA_V1"
+          CompanyName:
+            type: string
+            default: "Trends Insurance"
+          CompanyNumberOrNAICNumber:
+            type: string
+            default: "11684"
+          CompanyAddressLine1:
+            type: string
+            default: "One Trends Farm Plaza"
+          CompanyAddressLine2:
+            type: string
+            default: "2nd floor"
+          CompanyCity:
+            type: string
+            default: "Bloomington"
+          CompanyCounty:
+            type: string
+            default: "Bloomington"
+          CompanyZipCode:
+            type: string
+            default: "61710"
+          CompanyState:
+            type: string
+            default: "IL"
+          CompanyPhoneNumber:
+            type: string
+            default: "877-734-2265"
+          AgencyName:
+            type: string
+            default: "Lockton Affinity"
+          AgencyAddressLine1:
+            type: string
+            default: "0895 Lowell Ave"
+          AgencyAddressLine2:
+            type: string
+            default: "Overland Park"
+          AgencyCity:
+            type: string
+            default: "Johnson"
+          AgencyCounty:
+            type: string
+            default: "Johnson"
+          AgencyZipCode:
+            type: string
+            default: "66210"
+          AgencyState:
+            type: string
+            default: "KS"
+          AgencyPhoneNumber:
+            type: string
+            default: "+1 913-652-7500"
+          AgentName:
+            type: string
+            default: "John"
+          AgentAddressLine1:
+            type: string
+            default: "27TH ST"
+          AgentAddressLine2:
+            type: string
+            default: "PHOENIX"
+          AgentCounty:
+            type: string
+            default: "YAVAPAI"
+          AgentCity:
+            type: string
+            default: "PRESCOTT VALLEY"
+          AgentZipCode:
+            type: string
+            default: "85005"
+          AgentState:
+            type: string
+            default: "AZ"
+          AgentTelephoneNumber:
+            type: string
+            default: "812-376-6070"
+          InsuredName:
+            type: string
+            default: "Avanos Medical, Inc."
+          AddressLine1:
+            type: string
+            default: "5405 Windward Pkwy"
+          AddressLine2:
+            type: string
+            default: "Jordan Ct"
+          County:
+            type: string
+            default: "Alpharetta"
+          ZipCode:
+            type: string
+            default: "30004"
+          City:
+            type: string
+            default: "Alpharetta"
+          State:
+            type: string
+            default: "GA"
+          PolicyNumber:
+            type: string
+            default: "10198146181"
+          EffectiveDate:
+            type: string
+            default: "02/14/2019"
+          ExpirationDate:
+            type: string
+            default: "02/14/2020"
+          LineOfBusiness:
+            type: string
+            default: "Commercial"
+          NamedDriverPolicy:
+            type: string
+            default: "No"
+          AutoIDIssuedDate:
+            type: string
+            default: "02/14/2019"
+          ContactIfEmergency:
+            type: string
+            default: "Agency"
+          Vehicles:
+            type: array
+            items:
+              properties:
+                State:
+                  type: string
+                  default: "TN"
+                VIN:
+                  type: string
+                  default: "19UYA31581L000000"
+                Year:
+                  type: string
+                  default: "2012"
+                Make:
+                  type: string
+                  default: "Volkswagen"
+                Model:
+                  type: string
+                  default: "Passat"
+                VehiclePlateNumber:
+                  type: string
+                  default: "ABC 1234"
+                Owner:
+                  type: string
+                  default: "H W LongFellow"
+                PersonalInjuryProtectionBenefitsPropertyDamageLiability:
+                  type: string
+                  default: "No"
+                BodilyInjuryLiability:
+                  type: string
+                  default: "No"
+                NamesOfExcludedDrivers:
+                  type: string
+                  default: "John"
+                AddressForNotificationOfCommencementOfMedicalTreatment:
+                  type: string
+                  default: "johnson@example.org"
+                PhoneNumberToReportClaims:
+                  type: string
+                  default: "555-555-1234"
+      ServiceRequestDetail:
+        type: object
+        properties:
+          ServiceRequestVersion:
+            type: string
+            default: "1.0"
+          OwnerId:
+            type: string
+            default: "1"
+          UserName:
+            type: string
+            default: "admin"
+          Token:
+            type: string
+            default: "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"
+          LanguageCode:
+            type: string
+            default: "en"
+          ResponseType:
+            type: string
+            default: "JSON"
+  Rating_Success_Response:
+    type: object
+    properties:
+      Status:
+        type: string
+      DocumentUrl:
+        type: string
+      DocumentName:
+        type: string

@@ -87,7 +87,7 @@ definitions:
             default: "IL"
           CompanyPhoneNumber:
             type: string
-            default: "877-734-2265"
+            default: "+1 877-734-2265"
           AgencyName:
             type: string
             default: "Lockton Affinity"
@@ -135,7 +135,7 @@ definitions:
             default: "AZ"
           AgentTelephoneNumber:
             type: string
-            default: "812-376-6070"
+            default: "+1 812-376-6070"
           InsuredName:
             type: string
             default: "Avanos Medical, Inc."
@@ -211,13 +211,13 @@ definitions:
                   default: "No"
                 NamesOfExcludedDrivers:
                   type: string
-                  default: "John"
+                  default: "Johnson paul"
                 AddressForNotificationOfCommencementOfMedicalTreatment:
                   type: string
                   default: "johnson@example.org"
                 PhoneNumberToReportClaims:
                   type: string
-                  default: "555-555-1234"
+                  default: "+1 555-555-1234"
       ServiceRequestDetail:
         type: object
         properties:

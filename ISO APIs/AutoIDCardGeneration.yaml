@@ -40,8 +40,16 @@ paths:
           description: Expected response
           required: true
           type: string
+          enum: ["application/pdf", "application/json"]
           format: string
           default: application/pdf
+        - name: EventName
+          in: header
+          description: Event Name to Invoke
+          required: true
+          type: string
+          format: string
+          default: GenerateAutoIDCards
         - name: AutoID Generation Request
           in: body
           description: For Auto generate PDF request
@@ -191,6 +199,7 @@ definitions:
               properties:
                 State:
                   type: string
+                  enum: ["AL","AK","AS","AZ","AR","CA","CO","CT","DE","DC","FM","FL","GA","GU","HI","IL","IN","IA","ID","KS","KY","ME","MH","MD","MA","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NC","ND","MP","OH","OK","OR","PW","PA","PR","RI","SC","SD","TN","TX","UT","VT","VI","VA","WA","WV","WI","WY"]
                   default: "RI"
                 VIN:
                   type: string

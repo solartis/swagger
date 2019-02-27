@@ -191,7 +191,7 @@ definitions:
               properties:
                 State:
                   type: string
-                  default: "TN"
+                  default: "RI"
                 VIN:
                   type: string
                   default: "19UYA31581L000000"

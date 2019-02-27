@@ -11,14 +11,14 @@ schemes:
 consumes:
   - application/json
 produces:
-  - application/json
+  - application/pdf
 paths:
   /FireEventV2:
     post:
       description: Gets PDF that contains Auto Generated ID card
       operationId: getPdfUrl
       produces:
-        - application/json
+        - application/pdf
       parameters:
         - name: Token
           in: header
@@ -35,6 +35,13 @@ paths:
           type: string
           format: string
           default: application/json
+        - name: Accept
+          in: header
+          description: Expected response
+          required: true
+          type: string
+          format: string
+          default: application/pdf
         - name: AutoID Generation Request
           in: body
           description: For Auto generate PDF request
@@ -42,9 +49,9 @@ paths:
             $ref: '#/definitions/AutoID Generation_Request'
       responses:
         '200':
-          description: Success Response
+          description: A PDF File
           schema:
-            $ref: '#/definitions/Rating_Success_Response'
+            type: file
 definitions:
   AutoID Generation_Request:
     type: object
@@ -239,12 +246,3 @@ definitions:
           ResponseType:
             type: string
             default: "JSON"
-  Rating_Success_Response:
-    type: object
-    properties:
-      Status:
-        type: string
-      DocumentUrl:
-        type: string
-      DocumentName:
-        type: string

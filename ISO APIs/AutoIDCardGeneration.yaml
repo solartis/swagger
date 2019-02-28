@@ -11,14 +11,14 @@ schemes:
 consumes:
   - application/json
 produces:
-  - application/pdf
+  - application/json
 paths:
   /FireEventV2:
     post:
       description: Gets PDF that contains Auto Generated ID card
       operationId: getPdfUrl
       produces:
-        - application/pdf
+        - application/json
       parameters:
         - name: Token
           in: header
@@ -42,7 +42,7 @@ paths:
           type: string
           enum: ["application/pdf", "application/json"]
           format: string
-          default: application/pdf
+          default: application/json
         - name: EventName
           in: header
           description: Event Name to Invoke

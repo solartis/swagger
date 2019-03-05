@@ -1,0 +1,360 @@
+swagger: '2.0'
+info:
+  version: "1.0"
+  title: Solartis Policy Issuance API for Embroker
+  description: To generate Policy Number from Solartis API
+  
+host: embroker.beta.solartis.net
+basePath: /KnowledgeEngineV6_2/KnowledgeBase
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /FireEventV2:
+    post:
+      description: Issue Policy for the given input
+      operationId: issuePolicy
+      produces:
+        - application/json
+      parameters:
+        - name: Token
+          in: header
+          description: Authentication Token
+          required: true
+          type: string
+          format: string
+          default: "E4gm4d+kqRePr1+Y2/614wYCDCnCkC/tWYPLx44brgoitwpapJleuCpJNC0oqxhS0dbrHaGJ2AXD0OQYcLzoXerqQQAjdK6O/wgmbPINzEzJ93kEkwPDzjofzghxGaeCGwbSkpp6VgCWCFAD4zJ+L2pgh/+IHpnwqYn7xF8ms1MpD0RCUoNZ/T64C5yNAAr7uQgaeYuelwUaOeWus2PAMr+kHssCka9rVNKAkXk7EziIaHAuBPWxUMtNncwfADwhPjlZ0JjGio+07KL4sRl/8mxPjVhbOOE52AwW0MHGaC1imeg4dkgHpaZwghmivD3mh4nZXUyhsedDvgYQwiNyK6SsdEzTqWlgfYyL8OgXA3Ndon8U9N49XnKhK8r/9iAltHm+QZ6XJip0hvIpAQMOZ4g+hdCC1nRLZ8NLu1EtBil6OR4IAJBGO8PCb+kubvsB8EM6jiWUZUSKMVQStZOaSAuTmyy2HAsEojutGo0Sh2MvsUBbeGpNcBykYQxTSkoZVVPBHYqFEm3bZIJ9JOu22S7xF1bWMuIpdgYghWc6Dovo4sgc4m7GWR9O2D1Bldwaz7ywHzzxluDz/ser+UpU/RmuUvnADtHHt3lQk+QjTV3WHPqmFQFSyPpk+EPNCcjdWAmVsbDSFuFd+/nwqqn6/emeuCkiq4iPn69RevZjNJwu8VrH3gfVh8hCJcBM7yKTCYXDHvzAxhKbrOBjR9FZSU4dKhWtzwBFj341Wh6TactblC9hmD3MYJK+K0C7O894lnKTISVUJD3PHxG7WYt0nJKT1uv5U/5dLjLOFAfbzgSdkFzdJgSuy61xJGRJh62mm1PTFFhcf5+0ATth4UrwlZeq3R/sInGZXtv91jbst9IJ2YH0K4DR/ezSBclLajCnNbEY33zKcgE7Ejpk1QXt/o8yyX7dMf7JSd5rjwcubYtsAsdsyeDe8CUdQPdXel13+2XKGmrENx6Qgsp3FSC2GkBc9OweLlyWvaZHYffOCK1iSbgVDxdagI5mcGKby5J+nowagvSYe3QXR5IH/9pYFH4I0AgsQMHv1i8xwv/XLXTzJ4JoSDjkEQDLXBmf9yTJSWrvNW1/ac8c9t4BKa3M66q/vhinmGjIhn/H3XgD+uqcJSgKzwwUl1y/QMmLiJYU+IHHw+jb6U6L3+xtRJrFe4ZqyQR8sp/Z2Rm5zWFnNRtvndO+S5uoEit+/SJlpWpLI7C1cX388I0pf3Gz1Z9Ya5ouZh16jHzdX4fnY+lLJJzeYJCWZZ76+6BeF6jMnE0dAVt8LMrYNT7G7NChbfvuJHIZjsIC3xkxiDa4/HcUSlxrbNCC9+EkC4TxRpFjGkSOTutdgsTzsfHDdb6GuOLNA77XdvwC1BVD+VZ+0zSdaoUdhzjrmSwEMYIMiYuCOusXhuPq0S6EyUP0SkjnrxHsntRRIzm/SCOdBiBY8W5tf/C+yOOEILcmaeccqIzge/Bo7ZzFpvB+/kyL3yYMsQXz5BLG8XstPbXl0laEmiLRdEmld3OP5UsYXyzQHtbw+1QFFdcnjDnc63s8YPmWUzl8HK11H3Alvg768PllB2nAk6i4ird5+zC4wHRpz1BHkhfKBwAvGCvXvO1KxWSd8bpqUVNlPhepfGt/FrevEDpjkGJnpyQ/i3M3rmYPVohUYVq1fzn8qisG56YI4SAq1795EvenGLgyKN91tTAhxZ4ozJX1av+IoGjFmNOqslBJpudyEZfBCRvrprQXQ9I5cD99Gw=="
+        - name: EventName  
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string 
+          default: "EmbrokerIssuePolicy"
+        - name: EventVersion
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "2.1.0.2"
+        - name: Policy
+          in: body
+          description: Policy content
+          required: true
+          schema:
+            $ref: '#/definitions/Policy_Request'
+      responses:
+        '200':
+          description: Success Response
+          schema:
+            $ref: '#/definitions/Policy_Success_Response'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/errorModel'
+            
+definitions:
+  Policy_Request:
+    type: object
+    required:
+      - ServiceRequestDetail
+      - Policy
+    properties:
+      EndClientUserUniqueSessionId:
+        type: string
+        default: "Uniquesession"
+      EndClientUserBrowserSessionId:
+        type: string
+      EndClientUserBrowserInformation:
+        type: string
+      PaaSClientIPAddress:
+        type: string
+      ClientUniqueRequestID:
+        type: string
+      ServiceRequestDetail:
+        type: object
+        properties:
+          OwnerId:
+            type: string
+            default: "36"
+          ResponseType:
+            type: string
+            enum: ["JSON","XML"]
+            default: "JSON"
+          UserName:
+            type: string
+            default: "EmbrokerAgent"
+          Token:
+            type: string
+            default: "E4gm4d+kqRePr1+Y2/614wYCDCnCkC/tWYPLx44brgoitwpapJleuCpJNC0oqxhS0dbrHaGJ2AXD0OQYcLzoXerqQQAjdK6O/wgmbPINzEzJ93kEkwPDzjofzghxGaeCGwbSkpp6VgCWCFAD4zJ+L2pgh/+IHpnwqYn7xF8ms1MpD0RCUoNZ/T64C5yNAAr7uQgaeYuelwUaOeWus2PAMr+kHssCka9rVNKAkXk7EziIaHAuBPWxUMtNncwfADwhPjlZ0JjGio+07KL4sRl/8mxPjVhbOOE52AwW0MHGaC1imeg4dkgHpaZwghmivD3mh4nZXUyhsedDvgYQwiNyK6SsdEzTqWlgfYyL8OgXA3Ndon8U9N49XnKhK8r/9iAltHm+QZ6XJip0hvIpAQMOZ4g+hdCC1nRLZ8NLu1EtBil6OR4IAJBGO8PCb+kubvsB8EM6jiWUZUSKMVQStZOaSAuTmyy2HAsEojutGo0Sh2MvsUBbeGpNcBykYQxTSkoZVVPBHYqFEm3bZIJ9JOu22S7xF1bWMuIpdgYghWc6Dovo4sgc4m7GWR9O2D1Bldwaz7ywHzzxluDz/ser+UpU/RmuUvnADtHHt3lQk+QjTV3WHPqmFQFSyPpk+EPNCcjdWAmVsbDSFuFd+/nwqqn6/emeuCkiq4iPn69RevZjNJwu8VrH3gfVh8hCJcBM7yKTCYXDHvzAxhKbrOBjR9FZSU4dKhWtzwBFj341Wh6TactblC9hmD3MYJK+K0C7O894lnKTISVUJD3PHxG7WYt0nJKT1uv5U/5dLjLOFAfbzgSdkFzdJgSuy61xJGRJh62mm1PTFFhcf5+0ATth4UrwlZeq3R/sInGZXtv91jbst9IJ2YH0K4DR/ezSBclLajCnNbEY33zKcgE7Ejpk1QXt/o8yyX7dMf7JSd5rjwcubYtsAsdsyeDe8CUdQPdXel13+2XKGmrENx6Qgsp3FSC2GkBc9OweLlyWvaZHYffOCK1iSbgVDxdagI5mcGKby5J+nowagvSYe3QXR5IH/9pYFH4I0AgsQMHv1i8xwv/XLXTzJ4JoSDjkEQDLXBmf9yTJSWrvNW1/ac8c9t4BKa3M66q/vhinmGjIhn/H3XgD+uqcJSgKzwwUl1y/QMmLiJYU+IHHw+jb6U6L3+xtRJrFe4ZqyQR8sp/Z2Rm5zWFnNRtvndO+S5uoEit+/SJlpWpLI7C1cX388I0pf3Gz1Z9Ya5ouZh16jHzdX4fnY+lLJJzeYJCWZZ76+6BeF6jMnE0dAVt8LMrYNT7G7NChbfvuJHIZjsIC3xkxiDa4/HcUSlxrbNCC9+EkC4TxRpFjGkSOTutdgsTzsfHDdb6GuOLNA77XdvwC1BVD+VZ+0zSdaoUdhzjrmSwEMYIMiYuCOusXhuPq0S6EyUP0SkjnrxHsntRRIzm/SCOdBiBY8W5tf/C+yOOEILcmaeccqIzge/Bo7ZzFpvB+/kyL3yYMsQXz5BLG8XstPbXl0laEmiLRdEmld3OP5UsYXyzQHtbw+1QFFdcnjDnc63s8YPmWUzl8HK11H3Alvg768PllB2nAk6i4ird5+zC4wHRpz1BHkhfKBwAvGCvXvO1KxWSd8bpqUVNlPhepfGt/FrevEDpjkGJnpyQ/i3M3rmYPVohUYVq1fzn8qisG56YI4SAq1795EvenGLgyKN91tTAhxZ4ozJX1av+IoGjFmNOqslBJpudyEZfBCRvrprQXQ9I5cD99Gw=="
+          BrowserIp:
+            type: string 
+            default: "127.0.0.1"
+          LanguageCode:
+            type: string
+            default: "en"
+          ServiceRequestVersion:
+            type: string
+            default: "1.0"
+          RegionCode:
+            type: string
+            default: "US"
+      Policy:
+        type: object
+        required:
+          - QuoteNumber
+          - SurplusLinesDisclosureName
+          - SurplusLinesDisclosureDate
+          - EventVersion
+          - SurplusLinesDisclosureTitle
+          - WarrantyStatementName
+          - WarrantyStatementDate
+          - WarrantyStatementTitle
+        
+        properties:
+          ProductNumber:
+            title: "Product Number"
+            type: string
+            default: "EMBRKR"
+          ProductVerNumber:
+            title: "Product Ver Number"
+            type: string
+            default: "EMBRKR_2018_V1"
+          EventName:
+            title: "Event Name"
+            type: string
+            default: "EmbrokerIssuePolicy"
+          EventVersion:
+            title: "Event Version"
+            type: string
+            default: "2.1.0.2"
+          QuoteNumber:
+            title: "Quote Number"
+            type: string
+          SurplusLinesDisclosureName:
+            title: "Surplus Lines Disclosure Name"
+            type: string
+          SurplusLinesDisclosureDate:
+            title: "Surplus Lines Disclosure Date"
+            type: string
+          SurplusLinesDisclosureTitle:
+            title: "Surplus Lines Disclosure Title"
+            type: string
+          WarrantyStatementName:
+            title: "Warranty Statement Name"
+            type: string
+          WarrantyStatementDate:
+            title: "Warranty Statement Date"
+            type: string
+          WarrantyStatementTitle:
+            title: "Warranty Statement Title"
+            type: string
+      OwnerId:
+        title: "Owner ID"
+        type: string
+        default: "36"    
+        
+  Policy_Success_Response:
+    type: object
+    required:
+      - ServiceRequestDetail
+      - Policy
+    properties:
+      EndClientUserUniqueSessionId:
+        type: string
+        default: "Uniquesession"
+      EndClientUserBrowserSessionId:
+        type: string
+        default: ""
+      EndClientUserBrowserInformation:
+        type: string
+        default: ""
+      PaaSClientIPAddress:
+        type: string
+        default: ""
+      ClientUniqueRequestID:
+        type: string
+        default: ""
+      ServiceRequestDetail:
+        type: object
+        properties:
+          OwnerId:
+            type: string
+            default: "36"
+          ResponseType:
+            type: string
+            enum: ["JSON","XML"]
+            default: "JSON"
+          UserName:
+            type: string
+            default: "EmbrokerAgent"
+          Token:
+            type: string
+            default: "E4gm4d+kqRePr1+Y2/614wYCDCnCkC/tWYPLx44brgoitwpapJleuCpJNC0oqxhS0dbrHaGJ2AXD0OQYcLzoXerqQQAjdK6O/wgmbPINzEzJ93kEkwPDzjofzghxGaeCGwbSkpp6VgCWCFAD4zJ+L2pgh/+IHpnwqYn7xF8ms1MpD0RCUoNZ/T64C5yNAAr7uQgaeYuelwUaOeWus2PAMr+kHssCka9rVNKAkXk7EziIaHAuBPWxUMtNncwfADwhPjlZ0JjGio+07KL4sRl/8mxPjVhbOOE52AwW0MHGaC1imeg4dkgHpaZwghmivD3mh4nZXUyhsedDvgYQwiNyK6SsdEzTqWlgfYyL8OgXA3Ndon8U9N49XnKhK8r/9iAltHm+QZ6XJip0hvIpAQMOZ4g+hdCC1nRLZ8NLu1EtBil6OR4IAJBGO8PCb+kubvsB8EM6jiWUZUSKMVQStZOaSAuTmyy2HAsEojutGo0Sh2MvsUBbeGpNcBykYQxTSkoZVVPBHYqFEm3bZIJ9JOu22S7xF1bWMuIpdgYghWc6Dovo4sgc4m7GWR9O2D1Bldwaz7ywHzzxluDz/ser+UpU/RmuUvnADtHHt3lQk+QjTV3WHPqmFQFSyPpk+EPNCcjdWAmVsbDSFuFd+/nwqqn6/emeuCkiq4iPn69RevZjNJwu8VrH3gfVh8hCJcBM7yKTCYXDHvzAxhKbrOBjR9FZSU4dKhWtzwBFj341Wh6TactblC9hmD3MYJK+K0C7O894lnKTISVUJD3PHxG7WYt0nJKT1uv5U/5dLjLOFAfbzgSdkFzdJgSuy61xJGRJh62mm1PTFFhcf5+0ATth4UrwlZeq3R/sInGZXtv91jbst9IJ2YH0K4DR/ezSBclLajCnNbEY33zKcgE7Ejpk1QXt/o8yyX7dMf7JSd5rjwcubYtsAsdsyeDe8CUdQPdXel13+2XKGmrENx6Qgsp3FSC2GkBc9OweLlyWvaZHYffOCK1iSbgVDxdagI5mcGKby5J+nowagvSYe3QXR5IH/9pYFH4I0AgsQMHv1i8xwv/XLXTzJ4JoSDjkEQDLXBmf9yTJSWrvNW1/ac8c9t4BKa3M66q/vhinmGjIhn/H3XgD+uqcJSgKzwwUl1y/QMmLiJYU+IHHw+jb6U6L3+xtRJrFe4ZqyQR8sp/Z2Rm5zWFnNRtvndO+S5uoEit+/SJlpWpLI7C1cX388I0pf3Gz1Z9Ya5ouZh16jHzdX4fnY+lLJJzeYJCWZZ76+6BeF6jMnE0dAVt8LMrYNT7G7NChbfvuJHIZjsIC3xkxiDa4/HcUSlxrbNCC9+EkC4TxRpFjGkSOTutdgsTzsfHDdb6GuOLNA77XdvwC1BVD+VZ+0zSdaoUdhzjrmSwEMYIMiYuCOusXhuPq0S6EyUP0SkjnrxHsntRRIzm/SCOdBiBY8W5tf/C+yOOEILcmaeccqIzge/Bo7ZzFpvB+/kyL3yYMsQXz5BLG8XstPbXl0laEmiLRdEmld3OP5UsYXyzQHtbw+1QFFdcnjDnc63s8YPmWUzl8HK11H3Alvg768PllB2nAk6i4ird5+zC4wHRpz1BHkhfKBwAvGCvXvO1KxWSd8bpqUVNlPhepfGt/FrevEDpjkGJnpyQ/i3M3rmYPVohUYVq1fzn8qisG56YI4SAq1795EvenGLgyKN91tTAhxZ4ozJX1av+IoGjFmNOqslBJpudyEZfBCRvrprQXQ9I5cD99Gw=="
+          BrowserIp:
+            type: string 
+            default: "127.0.0.1"
+          LanguageCode:
+            type: string
+            default: "en"
+          ServiceRequestVersion:
+            type: string
+            default: "1.0"
+          RegionCode:
+            type: string
+            default: "US"
+      Policy:
+        type: object
+        properties:
+          ProductNumber:
+            title: "Product Number"
+            type: string
+          ProductVerNumber:
+            title: "Product Ver Number"
+            type: string
+          EventName:
+            title: "Event Name"
+            type: string
+          EventVersion:
+            title: "Event Version"
+            type: string
+          PolicyNumber:
+            title: "Policy Number"
+            type: string
+          QuoteNumber:
+            title: "Quote Number"
+            type: string
+          SubmissionNumber:
+            title: "Submission Number"
+            type: string
+          EffectiveDate:
+            title: "Effective Date"
+            type: string
+          ExpirationDate:
+            title: "Expiration Date"
+            type: string
+          TotalDiscountPercent:
+            title: "Total Discount Percent"
+            type: string
+          TotalDiscountFactor:
+            title: "Total Discount Percent"
+            type: string
+          TotalBasePremium:
+            title: "Total Base Premium"
+            type: string
+          AnnualPremium:
+            title: "Annual Premium"
+            type: string
+          ProrataFactor:
+            title: "Prorata Factor"
+            type: string
+          ProratedPremium:
+            title: "Prorata Premium"
+            type: string
+          FinalPremium:
+            title: "Prorata Premium"
+            type: string
+          TotalTaxes:
+            title: "Total Taxes"
+            type: string
+          TotalFees:
+            title: "Total Fees"
+            type: string
+          TaxesFeesAndSurcharges:
+            title: "Taxes Fees And Surcharges"
+            type: string
+          TotalPremium:
+            title: "Total Premium"
+            type: string
+          Commission:
+            title: "Commission"
+            type: string
+          SurplusLinesDisclosureName:
+            title: "Surplus Lines Disclosure Name"
+            type: string
+          SurplusLinesDisclosureDate:
+            title: "Surplus Lines Disclosure Date"
+            type: string
+          SurplusLinesDisclosureTitle:
+            title: "Surplus Lines Disclosure Title"
+            type: string
+          WarrantyStatementName:
+            title: "Warranty Statement Name"
+            type: string
+          WarrantyStatementDate:
+            title: "Warranty Statement Date"
+            type: string
+          WarrantyStatementTitle:
+            title: "Warranty Statement Title"
+            type: string
+          Coverage:
+            type: array
+            items:
+              properties:
+                CoverageDetail:
+                  type: object
+                  properties:
+                    CoverageName:
+                      title: "Coverage Name"
+                      type: string
+                    LimitOfLiability:
+                      title: "Limit Of Liability"
+                      type: string
+                    Retention:
+                      title: "Retention"
+                      type: string
+                    ErrorsandOmissionsBaseRate:
+                      title: "Errors and Omissions Base Rate"
+                      type: string
+                    CyberBaseRate:
+                      title: "Cyber Base Rate"
+                      type: string
+                    BaseRate:
+                      title: "Base Rate"
+                      type: string
+                    StandardPremium:
+                      title: "Standard Premium"
+                      type: string
+                    CoverageLevelTotalBasePremium:
+                      title: "Coverage Level Total Base Premium"
+                      type: string
+                    TotalEnhancedPremium:
+                      title: "Total Enhanced Premium"
+                      type: string
+      OwnerId:
+        title: "Owner ID"
+        type: string
+        default: "36"
+                
+  errorModel:
+    type: object
+    required:
+      - RequestStatus
+      - MessageDetail
+    properties:
+      RequestStatus:
+        type: string
+      MessageDetail:
+        type: object
+        properties:
+          MessageCode:
+            type: string
+          MessageType:
+            type: string
+          UserMessage:
+            type: string
+          MessageLevel:
+            type: string
+          MessageSeverity:
+            type: string
+          MessageList:
+            type: object
+            properties:
+              Message:
+                type: array
+                items:
+                  type: string      

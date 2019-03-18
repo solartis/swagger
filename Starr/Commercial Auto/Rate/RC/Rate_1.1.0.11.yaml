@@ -1,6 +1,6 @@
 swagger: "2.0"
 info:
-  version: "1.1.0.10"
+  version: "1.1.0.11"
   title: Solartis Rate with form selection API for STARR Commercial Auto
   description: To rate and produce the forms for a commercial auto policy per the inputs provided
 
@@ -39,7 +39,7 @@ paths:
           required: true
           type: string
           format: string
-          default: "StarrCARate_1.1.0.10"
+          default: "StarrCARate_1.1.0.11"
         - name: Rating Request
           in: body
           description: For rating request
@@ -75,16 +75,16 @@ definitions:
          default: STARR_CA_2018_V1
       EventName:
          type: string
-         default: StarrCARate_1.1.0.10
+         default: StarrCARate_1.1.0.11
       EffectiveDate:
          type: string
-         default: "2019-02-15"
+         default: "2019-03-18"
       ExpirationDate:
          type: string
-         default: "2020-02-15"
+         default: "2020-03-18"
       LastRateLookUpDate:
          type: string
-         default: "2019-02-15"
+         default: "2019-03-18"
       InsuredName:
          type: string
          default: "John Smith"

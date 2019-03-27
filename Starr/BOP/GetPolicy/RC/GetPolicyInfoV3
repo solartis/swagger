@@ -41,7 +41,7 @@ paths:
         description: "API Version"
         required: true
         type: "string"
-        default: "V2"
+        default: "V3"
       - in: "body"
         name: "Rating Request"
         description: ""
@@ -53,7 +53,7 @@ paths:
         description: "Eventname"
         required: true
         type: "string"
-        default: "GetPolicyInfoV3"
+        default: "GetPolicyInfo"
       responses:
         200:
           description: "Successful Response"
@@ -79,12 +79,12 @@ definitions:
             type: "string"
             format: "string"
             title: "EventName"
-            default: "GetPolicyInfoV3"
+            default: "GetPolicyInfo"
           EventVersion:
             type: "string"
             format: "string"
             title: "EventVersion"
-            default: "V2"
+            default: "V3"
       OwnerId:
         type: "string"
         format: "string"
@@ -261,7 +261,7 @@ definitions:
                type: "string"
                format: "string"
                title: "EventVersion"
-               default: "V2"
+               default: "V3"
              InsuredStateRegion:
                type: "string"
                format: "string"
@@ -549,7 +549,7 @@ definitions:
                type: "string"
                format: "string"
                title: "EventName"
-               default: "GetPolicyInfoV3"
+               default: "GetPolicyInfo"
              TFSList:
                type: array
                items:

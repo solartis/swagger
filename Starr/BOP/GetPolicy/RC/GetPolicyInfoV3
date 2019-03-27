@@ -1,0 +1,701 @@
+
+
+
+---
+swagger: "2.0"
+info:
+  description: To fetch all the latest changes made to a policy for Starr Business Owners Policy 
+  version: "V2"
+  title: "Solartis GetPolicyInfo API for STARR Business Owners Policy"
+host: "starrbop.rc.solartis.net"
+basePath: "/DroolsV6/DroolsService"
+schemes:
+- "https"
+consumes:
+- "application/json"
+produces:
+- "application/json"
+paths:
+  /FireEventV2:
+    post:
+      description: "Starr BOP GetPolicyInfo API"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "Token"
+        in: "header"
+        description: "Authentication Token"
+        required: true
+        type: "string"
+        default: "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"
+      - name: "Content-Type"
+        in: "header"
+        description: "Content Type"
+        required: true
+        type: "string"
+        default: "application/json"
+      - name: "EventVersion"
+        in: "header"
+        description: "API Version"
+        required: true
+        type: "string"
+        default: "V2"
+      - in: "body"
+        name: "Rating Request"
+        description: ""
+        required: true
+        schema:
+          $ref: "#/definitions/GetPolicyInfo_Request"
+      - name: "EventName"
+        in: "header"
+        description: "Eventname"
+        required: true
+        type: "string"
+        default: "GetPolicyInfoV3"
+      responses:
+        200:
+          description: "Successful Response"
+          schema:
+            $ref: "#/definitions/Rating_Success_Response"
+        default:
+          description: "Error Response"
+          schema:
+            $ref: "#/definitions/errorModel"
+definitions:
+  GetPolicyInfo_Request:
+    type: "object"
+    properties:
+      Policy:
+        type: "object"
+        properties:
+          PolicyNumber:
+            type: "string"
+            format: "string"
+            title: "PolicyNumber"
+            default: "1000207735"
+          EventName:
+            type: "string"
+            format: "string"
+            title: "EventName"
+            default: "GetPolicyInfoV3"
+          EventVersion:
+            type: "string"
+            format: "string"
+            title: "EventVersion"
+            default: "V2"
+      OwnerId:
+        type: "string"
+        format: "string"
+        title: "OwnerId"
+        default: "24"
+      ServiceRequestDetail:
+        type: "object"
+        properties:
+          ServiceRequestVersion:
+            type: "string"
+            format: "string"
+            title: "ServiceRequestVersion"
+            default: "1.0"
+          LanguageCode:
+            type: "string"
+            format: "string"
+            title: "LanguageCode"
+            default: "en"
+          UserName:
+            type: "string"
+            format: "string"
+            title: "UserName"
+            default: "BOPAgent"
+          OwnerId:
+            type: "string"
+            format: "string"
+            title: "OwnerId"
+            default: "24"
+          RegionCode:
+            type: "string"
+            format: "string"
+            title: "RegionCode"
+            default: "US"
+          Token:
+            type: "string"
+            format: "string"
+            title: "Token"
+            default: "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"
+          ServiceResponseVersion:
+            type: "string"
+            format: "string"
+            title: "ServiceResponseVersion"
+            default: "1.0"
+          BrowserIp:
+            type: "string"
+            format: "string"
+            title: "BrowserIp"
+            default: "127.0.0.1"
+          ResponseType:
+            type: "string"
+            format: "string"
+            title: "ResponseType"
+            default: "JSON"
+      EndClientUserUniqueSessionId:
+        type: "string"
+        format: "string"
+        title: "EndClientUserUniqueSessionId"
+        default: "Uniquesession"
+        
+  Rating_Success_Response:
+    type: "object"
+    properties:
+      RuleInformation:
+        type: object
+        properties: 
+          OwnerId:
+            type: "string"
+            format: "string"
+            title: "OwnerId"
+            default: "24"
+          ResponseStatus:
+            type: "string"
+            format: "string"
+            title: "ResponseStatus"
+            default: "SUCCESS"
+          EndClientUserUniqueSessionId:
+            type: "string"
+            format: "string"
+            title: "EndClientUserUniqueSessionId"
+            default: "Uniquesession"
+          Policy:
+           type: "object"
+           properties:
+             BusinessOwnBrandProducts:
+               type: "string"
+               format: "string"
+               title: "BusinessOwnBrandProducts"
+               default: "No"
+             BusinessEntityType:
+               type: "string"
+               format: "string"
+               title: "BusinessEntityType"
+             TerrorismCoverageSpecificLimits:
+               type: "string"
+               format: "string"
+               title: "TerrorismCoverageSpecificLimits"
+               default: "No"
+             LastRateLookUpDate:
+               type: "string"
+               format: "string"
+               title: "LastRateLookUpDate"
+             ProdsCompldOpsAggregateLimit:
+               type: "string"
+               format: "string"
+               title: "ProdsCompldOpsAggregateLimit"
+             InsuredAddressLine2:
+               type: "string"
+               format: "string"
+               title: "InsuredAddressLine2"
+             InsuredAddressLine1:
+               type: "string"
+               format: "string"
+               title: "InsuredAddressLine1"
+             BOPMoneyordersandCounterfeitMoneyLimit:
+               type: "string"
+               format: "string"
+               title: "BOPMoneyordersandCounterfeitMoneyLimit"
+               default: "1000"
+             BOPConditionalExclusionOfTerrorismDispositionOfAct2002:
+               type: "string"
+               format: "string"
+               title: "BOPConditionalExclusionOfTerrorismDispositionOfAct2002"
+               default: "No"
+             MortgageholderList:
+               type: object
+               properties:
+                 MortgageholderName:
+                   type: "string"
+                   format: "string"
+                   title: "MortgageholderName"
+                 Addressline2:
+                   type: "string"
+                   format: "string"
+                   title: "Addressline2"
+                 State:
+                   type: "string"
+                   format: "string"
+                   title: "State"
+                 ZipCode:
+                   type: "string"
+                   format: "string"
+                   title: "ZipCode"
+                 Addressline1:
+                   type: "string"
+                   format: "string"
+                   title: "Addressline1"
+                 City:
+                   type: "string"
+                   format: "string"
+                   title: "City"
+                 County:
+                   type: "string"
+                   format: "string"
+                   title: "County"
+             OwnManufacturingProducts:
+               type: "string"
+               format: "string"
+               title: "OwnManufacturingProducts"
+               default: "No"
+             AgencyCode:
+               type: "string"
+               format: "string"
+               title: "AgencyCode"
+               default: "AGY1068"
+             InsuredZipcode2:
+               type: "string"
+               format: "string"
+               title: "InsuredZipcode2"
+             BusinessZipCode:
+               type: "string"
+               format: "string"
+               title: "BusinessZipCode"
+             EventVersion:
+               type: "string"
+               format: "string"
+               title: "EventVersion"
+               default: "V2"
+             InsuredStateRegion:
+               type: "string"
+               format: "string"
+               title: "InsuredStateRegion"
+             BOPHiredNonOwnedAutoHiredCoverageLiabilityCoverage:
+               type: "string"
+               format: "string"
+               title: "BOPHiredNonOwnedAutoHiredCoverageLiabilityCoverage"
+             BOPBailBondsLimit:
+               type: "string"
+               format: "string"
+               title: "BOPBailBondsLimit"
+               default: "250"
+             BusinessName:
+               type: "string"
+               format: "string"
+               title: "BusinessName"
+             TerrorismCoverage:
+               type: "string"
+               format: "string"
+               title: "TerrorismCoverage"
+             BusnIncomeOrdinaryPayrollNumDays:
+               type: "string"
+               format: "string"
+               title: "BusnIncomeOrdinaryPayrollNumDays"
+               default: "60"
+             BOPTerrorismCoverageLimit:
+               type: "string"
+               format: "string"
+               title: "BOPTerrorismCoverageLimit"
+             BOPNewlyAcquiredPropertyBldgLimit:
+               type: "string"
+               format: "string"
+               title: "BOPNewlyAcquiredPropertyBldgLimit"
+               default: "250000"
+             BusinessPolicy:
+               type: "string"
+               format: "string"
+               title: "BusinessPolicy"
+               default: "Yes"
+             BOPPollutionCleanupLimit:
+               type: "string"
+               format: "string"
+               title: "BOPPollutionCleanupLimit"
+               default: "10000"
+             BOPHiredNonOwnedAutoNonOwnedCoverageLiabilityCoverage:
+               type: "string"
+               format: "string"
+               title: "BOPHiredNonOwnedAutoNonOwnedCoverageLiabilityCoverage"
+             InsuredCity:
+               type: "string"
+               format: "string"
+               title: "InsuredCity"
+             BOPForgeryAlterationCoverageLimit:
+               type: "string"
+               format: "string"
+               title: "BOPForgeryAlterationCoverageLimit"
+               default: "2500"
+             ProductionChannel:
+               type: "string"
+               format: "string"
+               title: "ProductionChannel"
+             EachOccLimit:
+               type: "string"
+               format: "string"
+               title: "EachOccLimit"
+             ExcludeTerrorismActOutUS:
+               type: "string"
+               format: "string"
+               title: "ExcludeTerrorismActOutUS"
+               default: "No"
+             WaiverofTransferofRightsOfRecoveryAgainstOthersToUsIncluded:
+               type: "string"
+               format: "string"
+               title: "WaiverofTransferofRightsOfRecoveryAgainstOthersToUsIncluded"
+             BOPNewlyAcquiredPropertyBppLimit:
+               type: "string"
+               format: "string"
+               title: "BOPNewlyAcquiredPropertyBppLimit"
+               default: "100000"
+             TRIAExtended:
+               type: "string"
+               format: "string"
+               title: "TRIAExtended"
+               default: "No"
+             BOPResidentialCleaningServices:
+               type: "string"
+               format: "string"
+               title: "BOPResidentialCleaningServices"
+               default: "No"
+             ClaimsList:
+              type: "array"
+              items:
+               properties:
+                 AmountPaidForClaim:
+                   type: "string"
+                   format: "string"
+                   title: "AmountPaidForClaim"
+                 ClaimOccurenceDate:
+                   type: "string"
+                   format: "string"
+                   title: "ClaimOccurenceDate"
+                 IsClaimClosed:
+                   type: "string"
+                   format: "string"
+                   title: "IsClaimClosed"
+                 LossCause:
+                   type: "string"
+                   format: "string"
+                   title: "LossCause"
+             TerrsmSubLimit:
+               type: "string"
+               format: "string"
+               title: "TerrsmSubLimit"
+             ContentFilledBy:
+               type: "string"
+               format: "string"
+               title: "ContentFilledBy"
+             TRIAExpirationDate:
+               type: "string"
+               format: "string"
+               title: "TRIAExpirationDate"
+               default: "2020-12-31"
+             RiskName:
+               type: "string"
+               format: "string"
+               title: "RiskName"
+             InsuredCounty:
+               type: "string"
+               format: "string"
+               title: "InsuredCounty"
+             BOPPhotography:
+               type: "string"
+               format: "string"
+               title: "BOPPhotography"
+               default: "No"
+             UWQuestionList:
+               type: "array"
+               items:
+                properties:
+                  UWQuestion:
+                    type: "string"
+                    format: "string"
+                    title: "UWQuestion"
+                  UWQuestionId:
+                    type: "string"
+                    format: "string"
+                    title: "UWQuestionId"
+             AdditionalInsuredList:
+               type: array
+               items:
+                properties:
+                  AdditionalInsuredType:
+                    type: string
+                    title: "AdditionalInsuredType"
+                  AdditionalInsuredDetail:
+                    type: array
+                    items:
+                     properties:
+                       AINumber:
+                         type: string
+                         title: "AINumber"
+                       AIName:
+                         type: string
+                         title: "AIName"
+                       Action:
+                         type: string
+                         title: "Action"
+                       TypeRisk:
+                         type: string
+                         title: "TypeRisk"
+                       AddressLine1:
+                         type: string
+                         title: "AddressLine1"
+                       AddressLine2:
+                         type: string
+                         title: "AddressLine2"
+                       County:
+                         type: string
+                         title: "County"
+                       City:
+                         type: string
+                         title: "City"
+                       ZipCode:
+                         type: string
+                         title: "ZipCode"
+                       State:
+                         type: string
+                         title: "State"
+                       YourProducts:
+                         type: string
+                         title: "YourProducts"
+                       LocAndDescOfCompOperations:
+                         type: string
+                         title: "LocAndDescOfCompOperations"
+                       DescOfLeasedEquipment:
+                         type: string
+                         title: "DescOfLeasedEquipment"
+                       LossPayableApplicableClause:
+                         type: string
+                         title: "LossPayableApplicableClause"
+                       DescOfProperty:
+                         type: string
+                         title: "DescOfProperty"
+                       COIDescription:
+                         type: string
+                         title: "COIDescription"
+                       AdditionalInsuredPolicyTermPremium:
+                         type: string
+                         title: "AdditionalInsuredPolicyTermPremium"   
+             TRIPTerminatesBeforeExpirationDate:
+               type: "string"
+               format: "string"
+               title: "TRIPTerminatesBeforeExpirationDate"
+               default: "No"
+             BOPLimitedFungiBacteriaCovLimit:
+               type: "string"
+               format: "string"
+               title: "BOPLimitedFungiBacteriaCovLimit"
+               default: "15000"
+             RiskApplicable:
+               type: "string"
+               format: "string"
+               title: "RiskApplicable"
+               default: "No"
+             PriorClaims:
+               type: "string"
+               format: "string"
+               title: "PriorClaims"
+             BOPPersonalPropertyOffPremisesLimit:
+               type: "string"
+               format: "string"
+               title: "BOPPersonalPropertyOffPremisesLimit"
+               default: "10000"
+             InsuredState:
+               type: "string"
+               format: "string"
+               title: "InsuredState"
+             OptionalMedicalCovLimitPerPerson:
+               type: "string"
+               format: "string"
+               title: "OptionalMedicalCovLimitPerPerson"
+               default: "5000"
+             PropDamageLiabDed:
+               type: "string"
+               format: "string"
+               title: "PropDamageLiabDed"
+               default: "No Deductible"
+             BOPLimitedFungiBacteriaCovSeparatePremisesLocationsOption:
+               type: "string"
+               format: "string"
+               title: "BOPLimitedFungiBacteriaCovSeparatePremisesLocationsOption"
+               default: "No"
+             PropDamageLiabDedType:
+               type: "string"
+               format: "string"
+               title: "PropDamageLiabDedType"
+               default: "Not Applicable"
+             AggregateLimit:
+               type: "string"
+               format: "string"
+               title: "AggregateLimit"
+             PolicyNumber:
+               type: "string"
+               format: "string"
+               title: "PolicyNumber"
+             FormOfBusiness:
+               type: "string"
+               format: "string"
+               title: "FormOfBusiness"
+             BOPLostWagesClaimsInvestigationLimit:
+               type: "string"
+               format: "string"
+               title: "BOPLostWagesClaimsInvestigationLimit"
+               default: "250"
+             TerrorismBPPLimit:
+               type: "string"
+               format: "string"
+               title: "TerrorismBPPLimit"
+             PrimaryandNoncontributoryOtherInsuranceConditionIncluded:
+               type: "string"
+               format: "string"
+               title: "PrimaryandNoncontributoryOtherInsuranceConditionIncluded"
+             EventName:
+               type: "string"
+               format: "string"
+               title: "EventName"
+               default: "GetPolicyInfoV3"
+             TFSList:
+               type: array
+               items:
+                 properties:
+                   TFSDetail:
+                     type: object
+                   TFSName:
+                     type: string
+                     title: "TFSName"
+                   TFSRate:
+                     type: string
+                     title: "TFSRate"
+                   TFSAmount:
+                     type: string
+                     title: "TFSAmount"
+                   TFSCode:
+                     type: string
+                     title: "TFSCode"
+             BOPConditionalExclusionOfTerrorismNuclearBiologicalChemicalDispositionOfAct2002:
+               type: "string"
+               format: "string"
+               title: "BOPConditionalExclusionOfTerrorismNuclearBiologicalChemicalDispositionOfAct2002"
+               default: "No"
+             TypeOfExclusion:
+               type: "string"
+               format: "string"
+               title: "TypeOfExclusion"
+             BOPInterruptionComputerOpsCoverageLimit:
+               type: "string"
+               format: "string"
+               title: "BOPInterruptionComputerOpsCoverageLimit"
+               default: "10000"
+             InsuredZipCode:
+               type: "string"
+               format: "string"
+               title: "InsuredZipCode"
+             BOPFireExtinguisherRechargeLimit:
+               type: "string"
+               format: "string"
+               title: "BOPFireExtinguisherRechargeLimit"
+               default: "5000"
+             ExpirationDate:
+               type: "string"
+               format: "string"
+               title: "ExpirationDate"
+             BOPTerrorismCoverageTerrorismLiabLimit:
+               type: "string"
+               format: "string"
+               title: "BOPTerrorismCoverageTerrorismLiabLimit"
+             AgentCode:
+               type: "string"
+               format: "string"
+               title: "AgentCode"
+               default: "1068"
+             RiskApplicableSubQuestionList:
+               type: "array"
+               items:
+                 properties:
+                   RiskApplicableSubQuestionDescription:
+                     type: "string"
+                     format: "string"
+                     title: "RiskApplicableSubQuestionDescription"
+                   RiskApplicableSubQuestionDisplayOrder:
+                     type: "string"
+                     format: "string"
+                     title: "RiskApplicableSubQuestionDisplayOrder"
+             WaiverOfTransferOfRightsOfRecoveryAgainstOthersToUsName:
+               type: "string"
+               format: "string"
+               title: "WaiverOfTransferOfRightsOfRecoveryAgainstOthersToUsName"
+             BOPPersonalEffectsLimit:
+               type: "string"
+               format: "string"
+               title: "BOPPersonalEffectsLimit"
+               default: "2500"
+             BusinessAddressZipcode2:
+               type: "string"
+               format: "string"
+               title: "BusinessAddressZipcode2"
+             BOPLimitedFungiBacteriaCovBusnIncomeExtraExpenseCoverageNumDays:
+               type: "string"
+               format: "string"
+               title: "BOPLimitedFungiBacteriaCovBusnIncomeExtraExpenseCoverageNumDays"
+             BOPEmployeeDishtyCoverageLimit:
+               type: "string"
+               format: "string"
+               title: "BOPEmployeeDishtyCoverageLimit"
+               default: "10000"
+             InsuredMailingAddress:
+               type: "string"
+               format: "string"
+               title: "InsuredMailingAddress"
+             BOPConditionalLimitationOfCoverageTerrorismSublimitAnnualAggregateTerrorismAct2002:
+               type: "string"
+               format: "string"
+               title: "BOPConditionalLimitationOfCoverageTerrorismSublimitAnnualAggregateTerrorismAct2002"
+               default: "No"
+             BOPElectronicDataCoverageLimit:
+               type: "string"
+               format: "string"
+               title: "BOPElectronicDataCoverageLimit"
+               default: "10000"
+             EffectiveDate:
+               type: "string"
+               format: "string"
+               title: "EffectiveDate"
+     
+  errorModel:
+    type: "object"
+    properties:
+      ResponseStatus:
+        type: "string"
+        format: "string"
+        title: "ResponseStatus"
+      MessageDetail:
+        type: "object"
+        properties:
+          MessageSeverity:
+            type: "string"
+            format: "string"
+            title: "MessageSeverity"
+          MessageCode:
+            type: "object"
+            properties: {}
+          UserMessage:
+            type: "string"
+            format: "string"
+            title: "UserMessage"
+          MessageLevel:
+            type: "string"
+            format: "string"
+            title: "MessageLevel"
+          MessageType:
+            type: "string"
+            format: "string"
+            title: "MessageType"
+          MessageList:
+            type: "array"
+            items:
+              type: "object"
+              properties:
+                Message:
+                  type: "string"
+                  format: "string"
+                  title: "Message"
+      RequestStatus:
+        type: "string"
+        format: "string"
+        title: "RequestStatus"

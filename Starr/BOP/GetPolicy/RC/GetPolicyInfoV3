@@ -5,7 +5,7 @@
 swagger: "2.0"
 info:
   description: To fetch all the latest changes made to a policy for Starr Business Owners Policy 
-  version: "V2"
+  version: "V3"
   title: "Solartis GetPolicyInfo API for STARR Business Owners Policy"
 host: "starrbop.rc.solartis.net"
 basePath: "/DroolsV6/DroolsService"

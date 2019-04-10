@@ -78,19 +78,40 @@ definitions:
          default: StarrCARate_1.1.0.11
       EffectiveDate:
          type: string
-         default: "2019-03-18"
+         default: "2019-04-10"
       ExpirationDate:
          type: string
-         default: "2020-03-18"
+         default: "2020-04-10"
       LastRateLookUpDate:
          type: string
-         default: "2019-03-18"
+         default: "2019-04-10"
       InsuredName:
          type: string
          default: "John Smith"
+      BusinessType:
+         type: string
+         default: "Partnership"
+      ProgramName:
+         type: string
+         default: "Starr Commercial Auto"
+      ProfitCenter:
+          type: string
+          default: "Sales Force"
+      GenerateRatingWorkSheet:
+          type: string
+          default: "Yes"
       InsuredAddressLine1:
          type: string
          default: "8th Avenue"
+      InsuredAddressline2:
+         type: string
+         default: "8th Avenue"
+      InsuredCity:
+         type: string
+         default: "Boston"
+      InsuredZipcode:
+         type: string
+         default: "85001"
       InsuredState:
          type: string
          default: "NY"
@@ -956,6 +977,12 @@ definitions:
                         AddressLine2: 
                           default: "PHOENIX"
                           type: string
+                        VehicleNumber:
+                          default: "1"
+                          type: string
+                        LocationNumber:
+                          default: "1"
+                          type: string
                         AuxillaryRunningLampsDiscount: 
                           default: "Yes"
                           type: string
@@ -1336,6 +1363,12 @@ definitions:
                           type: string
                         AddressLine2:
                           default: ""
+                          type: string
+                        VehicleNumber:
+                          default: "1"
+                          type: string
+                        LocationNumber:
+                          default: "1"
                           type: string
                         AudioVisualAndDataElectronicEquipmentCoverageList:
                           type: array
@@ -1749,6 +1782,12 @@ definitions:
                       City:
                         default: "Brighton"
                         type: string
+                      VehicleNumber:
+                          default: "1"
+                          type: string
+                      LocationNumber:
+                          default: "1"
+                          type: string
                       CommercialAutoAdditionalPersonalInjuryProtectionNewYorkList:
                         type: array
                         items:
@@ -2135,6 +2174,12 @@ definitions:
                           type: string
                         AddressLine2: 
                           default: "PHOENIX"
+                          type: string
+                        VehicleNumber:
+                          default: "1"
+                          type: string
+                        LocationNumber:
+                          default: "1"
                           type: string
                         AudioVisualAndDataElectronicEquipmentCoverageList:
                           type: array
@@ -2539,6 +2584,12 @@ definitions:
                   ZoneRatedDetail:
                     type: object
                     properties:
+                        VehicleNumber:
+                          default: "1"
+                          type: string
+                        LocationNumber:
+                          default: "1"
+                          type: string
                         CommercialAutoFullSafetyGlassCoverageMinnesota: 
                           default: "Other"
                           type: string

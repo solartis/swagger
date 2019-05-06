@@ -5,7 +5,7 @@ info:
   description: To get token from Authentication Service
   
   
-host: authentication.uat.solartis.net
+host: authenticationhyb.uat.solartis.net
 basePath: /CommonServiceV2_1/AuthenticationServiceV2
 schemes:
   - https

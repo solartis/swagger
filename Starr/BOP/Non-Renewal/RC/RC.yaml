@@ -76,7 +76,7 @@ definitions:
         default: "Uniqusession"
        OwnerId:
         type: string
-        default: "30"
+        default: "24"
        ServiceRequestDetail:
         type: object
         properties:

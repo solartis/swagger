@@ -1,8 +1,8 @@
 swagger: '2.0'
 info:
   version: "1.7.0.1"
-  title: Solartis Renewal Quote API for STARR Business Owners Policy
-  description: To create quote for the Renewing policy with the latest changes made to it
+  title: Solartis Renewal Rate API for STARR Business Owners Policy
+  description: To Rate the Renewing policy with the latest changes made to it
 
 host: starrbop.rc.solartis.net
 basePath: /DroolsV6/DroolsService
@@ -15,7 +15,7 @@ produces:
 paths:
   /FireEventV2:
     post:
-      description: Gets Quote for General Liability based on ISO ERC
+      description: To Rate the Renewing policy with the latest changes made to it 
       operationId: getRates
       produces:
         - application/json
@@ -39,7 +39,7 @@ paths:
           required: true
           type: string
           format: string
-          default: "RenewalQuoteWorkflow"
+          default: "RenewalRateAndCompare"
         - name: EventVersion
           in: header
           description: Name of the event to be invoked
@@ -259,7 +259,7 @@ definitions:
         EventName:
          title: "EventName"
          type: string
-         default: "RenewalQuoteWorkflow"
+         default: "RenewalRateAndCompare"
         EventVersion:
          title: "EventVersion"
          type: string
@@ -1384,7 +1384,7 @@ definitions:
             type: string
             format: string
             title: "EventName"
-            default: "RenewalQuoteWorkflow"
+            default: "RenewalRateAndCompare"
           BopElectronicDataCoverageFactor:
             type: string
             format: string

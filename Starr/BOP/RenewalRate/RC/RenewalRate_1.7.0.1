@@ -1,9 +1,8 @@
-
 swagger: '2.0'
 info:
   version: "1.7.0.1"
-  title: Solartis Renewal Rate API for STARR Business Owners Policy
-  description: To Rate the Renewing policy with the latest changes made to it
+  title: Solartis Renewal Quote API for STARR Business Owners Policy
+  description: To create quote for the Renewing policy with the latest changes made to it
 
 host: starrbop.rc.solartis.net
 basePath: /DroolsV6/DroolsService
@@ -16,7 +15,7 @@ produces:
 paths:
   /FireEventV2:
     post:
-      description: To Rate the Renewing policy with the latest changes made to it 
+      description: Gets Quote for General Liability based on ISO ERC
       operationId: getRates
       produces:
         - application/json
@@ -40,7 +39,7 @@ paths:
           required: true
           type: string
           format: string
-          default: "RenewalRateAndCompare"
+          default: "RenewalQuoteWorkflow"
         - name: EventVersion
           in: header
           description: Name of the event to be invoked
@@ -48,11 +47,11 @@ paths:
           type: string
           format: string
           default: "1.7.0.1"       
-        - name: Rating Request
+        - name: Renewal Quote Request
           in: body
           description: For rating request
           schema:
-            $ref: '#/definitions/RenewalRate_Request'
+            $ref: '#/definitions/RenewalQuote_Request'
             
       responses:
        '200':
@@ -64,7 +63,7 @@ paths:
         schema:
           $ref: '#/definitions/errorModel'
 definitions:
-  RenewalRate_Request:
+  RenewalQuote_Request:
     type: object
     properties:
       EndClientUserUniqueSessionId: 
@@ -116,15 +115,15 @@ definitions:
         RenewingPolicyNumber:
          title: "Renewing Policy Number"
          type: string
-         default: "1000208243"
+         default: "1000206243"
         RenewalEffectiveDate: 
          title: "Renewal Effective Date"
          type: string
-         default: "2018-02-01"
+         default: "2018-10-01"
         RenewalExpirationDate:
          title: "Renewal Expiration Date"
          type: string
-         default: "2019-02-01"
+         default: "2019-10-01"
         ProductVerNumber:
          title: "Product Version Number"
          type: string
@@ -133,14 +132,6 @@ definitions:
          title: "Product Number"
          type: string
          default: "StarrBasicBOPENDR-4"
-        GenerateQuoteLetter:
-         title: "Generate Quote Letter"
-         type: string
-         default: "Y"
-        SendMail:
-         title: "SendMail"
-         type: string
-         default: "Y"
         TerrorismCoverage:
          title: "Terrorism Coverage"
          type: string
@@ -260,7 +251,7 @@ definitions:
         LastRateLookUpDate:
          title: "LastRateLookUpDate"
          type: string
-         default: "2018-02-07"
+         default: "2018-01-19"
         InsuredState:
          title: "InsuredState"
          type: string
@@ -268,7 +259,7 @@ definitions:
         EventName:
          title: "EventName"
          type: string
-         default: "RenewalRateAndCompare"
+         default: "RenewalQuoteWorkflow"
         EventVersion:
          title: "EventVersion"
          type: string
@@ -329,7 +320,7 @@ definitions:
         ContentFilledBy:
          title: "ContentFilledBy"
          type: string
-         default: "Udayakumar"
+         default: "Name"
         BusinessName:
          title: "BusinessName"
          type: string
@@ -630,7 +621,7 @@ definitions:
                       type: string
                       format: string
                       title: "County"
-                      default: "Albany"
+                      default: "Anderson"
                     BOPWaterBackUpAndSumpOverflowLocationBusinessIncomeExtraExpenseAnnualAggregateLimit:
                       type: string
                       format: string
@@ -676,12 +667,12 @@ definitions:
                       type: string
                       format: string
                       title: "StateRegion"
-                      default: "Texas"
+                      default: "West Virginia"
                     ZipCode:
                       type: string
                       format: string
                       title: "ZipCode"
-                      default: "99502"
+                      default: "123"
                     NumEmployees:
                       type: string
                       format: string
@@ -701,18 +692,18 @@ definitions:
                       type: string
                       format: string
                       title: "City"
-                      default: "Bear Point"
+                      default: "AK"
                     RatingTerritory:
                       type: string
                       format: string
                       title: "RatingTerritory"
-                      default: "009"
+                      default: "701"
                     FireProtectionClassPPC:
                       type: string
                       format: string
                       title: "FireProtectionClassPPC"
-                      enum: ["1","2","3","4","5","6","7","8","8B","9","10","5Y"]
-                      default: "5Y"
+                      enum: ["1","2","3","4","5","6","7","8","8B","9","10"]
+                      default: "8"
                     EmployeeDishtyApply:
                       type: string
                       format: string
@@ -774,7 +765,7 @@ definitions:
                                 type: string
                                 format: string
                                 title: "OrdinanceOrLawCov1Limit"
-                                default: "1000"
+                                default: "25000"
                               BldgCodeEffectivenessGrade:
                                 type: string
                                 format: string
@@ -811,7 +802,7 @@ definitions:
                               OptnlDedFactor:
                                 type: string
                                 title: "OptnlDedFactor"
-                                default: "5000"
+                                default: "5000.0000"
                               BOPOrdinanceOrLawCov2CoverageLimit:
                                 type: string
                                 format: string
@@ -837,8 +828,8 @@ definitions:
                                 type: string
                                 format: string
                                 title: "OrdinanceOrLawCoverage"
-                                enum: ["Coverage 1 only","Coverage 3 Only","Coverage 1 with Coverages 2 and 3 Combined","Coverages 1 and 2","Coverages 1,2 and 3","Neither Coverage 1, 2, or 3"]
-                                default: "Coverage 1 only"
+                                enum: ["Coverage 1 Only","Coverage 3 Only","Coverage 1 with Coverages 2 and 3 Combined","Coverages 1 and 2","Coverages 1,2 and 3","Neither Coverage 1, 2, or 3"]
+                                default: "Coverage 1 Only"
                               SinkholeLossIncluded:
                                 type: string
                                 format: string
@@ -914,17 +905,17 @@ definitions:
                                 format: string
                                 title: "BldgCodeEffectivenessGradeClass"
                                 enum: ["Building individually inspected and certified as best grade 1","Graded-building constructed before year of community grading","Graded-building constructed during or after year of community grading","Not Graded"]
-                                default: "Not Graded"
+                                default: "Building individually inspected and certified as best grade 1"
                               BuildingID:
                                 type: string
                                 format: string
                                 title: "BuildingID"
                                 default: "1"
                               DoesThisRiskPerformHomeRepairAndRemodeling:
-                               type: string
-                               format: string
-                               title: "DoesThisRiskPerformHomeRepairAndRemodeling"
-                               default: "No"
+                                type: string
+                                format: string
+                                title: "DoesThisRiskPerformHomeRepairAndRemodeling"
+                                default: "No"
                               WindstormMitigationDiscountApplies:
                                 type: string
                                 enum: ["Yes","No"]
@@ -934,7 +925,7 @@ definitions:
                                 type: string
                               SubDecking:
                                 type: string
-                              OccupancyClass:
+                              BuildingOccupancyType:
                                 type: string
                               CertificateLevel:
                                 type: string
@@ -981,7 +972,7 @@ definitions:
                                           type: string
                                           format: string
                                           title: "TotalAnnualGrossSales"
-                                          default: "2500000"
+                                          default: "100000"
                                         TerrsmSubLimit:
                                           type: string
                                           format: string
@@ -996,12 +987,12 @@ definitions:
                                           type: string
                                           format: string
                                           title: "BusnPrsnlPropLimit"
-                                          default: "1000000"
+                                          default: "1202100"
                                         SquareFootage:
                                           type: string
                                           format: string
                                           title: "SquareFootage"
-                                          default: "5000"
+                                          default: "250"
                                         BOPClassificationAccountsReceivableCoverageOffLimit:
                                           type: string
                                           format: string
@@ -1112,13 +1103,6 @@ definitions:
         type: string
         format: string
         title: "ResponseStatus"
-      DocumentsInfoList:
-        type: object
-        properties:
-          DocumentURL:
-            type: string
-            format: string
-            title: "DocumentURL"
       EndClientUserUniqueSessionId:
         type: string
         format: string
@@ -1144,6 +1128,10 @@ definitions:
             type: string
             format: string
             title: "LastRateLookUpDate"
+          QuoteNumber:
+            type: string
+            format: string
+            title: "QuoteNumber"
           ProdsCompldOpsAggregateLimit:
             type: string
             format: string
@@ -1396,7 +1384,7 @@ definitions:
             type: string
             format: string
             title: "EventName"
-            default: "RenewalRateAndCompare"
+            default: "RenewalQuoteWorkflow"
           BopElectronicDataCoverageFactor:
             type: string
             format: string
@@ -2122,6 +2110,10 @@ definitions:
                                 type: string
                                 format: string
                                 title: "OrdinanceOrLawCov1Limit"
+                              BurglaryAlarmCentral:
+                                type: string
+                                format: string
+                                title: "BurglaryAlarmCentral"
                               BOPIllinoisChangesContractorsHomeRepairAndRemodelingPremium:
                                 type: string
                                 format: string
@@ -2142,10 +2134,6 @@ definitions:
                                 type: string
                                 format: string
                                 title: "BOPIllinoisChangesContractorsHomeRepairAndRemodelingCommission"
-                              BurglaryAlarmCentral:
-                                type: string
-                                format: string
-                                title: "BurglaryAlarmCentral"
                               FunctlBldgFactor:
                                 type: string
                                 format: string
@@ -2683,4 +2671,5 @@ definitions:
                                           type: string
                                           format: string
                                           title: "PropertyFinalRate"
+
 

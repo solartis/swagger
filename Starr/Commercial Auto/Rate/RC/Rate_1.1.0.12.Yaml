@@ -100,6 +100,10 @@ definitions:
       GenerateRatingWorkSheet:
           type: string
           default: "Yes"
+      DocumentType:
+          type: string
+          default: "Quote Letter"
+          enum: ["Quote Letter", "Binder Letter", "Policy Issuance"]
       ApplyModelPremium:
           type: string
           default: "N"

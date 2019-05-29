@@ -1,0 +1,521 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"version": "1.0.0",
+		"title": "Solartis Rate API for ISO-GL-V2",
+		"description": " To get rate for General Liability from Solartis Rate API with ISO ERC.
+    General Liability Insurance is a business insurance policy that is
+    applicable to most contractors and business owners because it protects them.
+    When a business has this type of insurance policy, they're covered when it
+    comes to claims of bodily injury, associated medical costs and damage to
+    property that occurred as a result of your business operations."
+	},
+	"host": "uciisowckbv6-4.solartis.net",
+	"basePath": "/KnowledgeEngineV6_4/KnowledgeBase/FireEventV3",
+	"schemes": [
+		"https"
+	],
+	"produces": [
+		"application/json"
+	],
+	"consumes": [
+		"application/json"
+	],
+	"paths": {
+		"/FireEventV2": {
+			"post": {
+				"description": "Gets Rate for General Liability based on ISO ERC",
+				"operationId": "getRates",
+				"produces": [
+					"application/json"
+				],
+				"parameters":[
+				  {
+						"name": "Token",
+						"in": "header",
+						"description": "Authentication Token",
+						"required": true,
+						"type": "string",
+						"format": "string",
+						"default": "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"
+					},
+					{
+						"name": "Content-Type",
+						"in": "header",
+						"description": "Content Type",
+						"required": true,
+						"type": "string",
+						"format": "string",
+						"default": "application/json"
+					},
+					{
+						"name": "EventName",
+						"in": "header",
+						"description": "EventName",
+						"required": true,
+						"type": "string",
+						"format": "string",
+						"default": "GeneratePolicyPDF_V1"
+					},
+					{
+						"name": "Rating Request",
+						"in": "body",
+						"description": "For rating request",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/Request"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"schema": {
+							"$ref": "#/definitions/Success_Response"
+						}
+					},
+					"default": {
+						"description": "unexpected error",
+						"schema": {
+							"$ref": "#/definitions/errorModel"
+						}
+					}
+				}
+			}
+		}
+	},
+	"definitions": {
+		"Request": {
+			"type": "object",
+			"properties": {
+			"ServiceRequestDetail": {
+				"type": "object",
+				"properties": {
+					"EndClientUserUniqueSessionId": {
+							"type": "string",
+							"default":"1.0"
+							},
+					"ServiceRequestVersion": {
+							"type": "string",
+							"default":"1.0"
+							},
+					"LanguageCode": {
+							"type": "string",
+							"default":"en"
+							},
+					"UserName": {
+							"type": "string",
+							"default":"isorateadmin"
+							},
+					"RegionCode": {
+							"type": "string",
+							"default":""
+							},
+					"ServiceResponseVersion": {
+							"type": "string",
+							"default":"1.0"
+							},
+					"ResponseType": {
+							"type": "string",
+							"default":"json"
+							},
+					"Token": {
+							"type": "string",
+							"default":"o/WwiFUNrk64AGe/U05nYTQeeixoAo2X9zMD4/qPHcH7SUq6mA/MxaC9cj3yr0td2Telv2tsfTTuMb32Hu37QeHPcaXlgZnRyP+jC9qzSE7ITCAmZAdGc9Z9cEXz54jbWapFYD2Tn/1bQv+0ULI4BhpOWhBW1aln1z9URyhahnwNCWtY3XDA6zIHErFqlB/1vXTdGISFs3CvQ2FLJko1NvTDkLH0a1D1RedR4p9OBCDcKKGtNpWw1X094je1dz8KQ0vFKaO3wuuz1foFxXbxOsDsdmB1cp4NxLBw20uDzevarBuihxTnPcHY06hVzMRxMzhYqzmyrlG8bmJUNiTAi5LF384JCBYoMfsJYKnHIvarV+dfoc02oO6CTMgukBYd+I4IxTkU2WM8XDJ9tAlRuOfqSa5WA7EwoTZqGMwOV9HDvBxPauutliKcr+vpBhwXs6aAhRvMM5pBBKtk2DJkkUdWAmYrSfraEFqifhVZWiXK4ZBoYSVQjwbAOhH6YEufV1SYo7xJGaKYNhJn4/NMA8QC43BxTERRd5F8OuXsHFUbCwszVRRGwcfaFJFbEhM2uoc5Aah3Ley91+Ew4ODWI9nruZG+tnhsvkYeT4LRUsuorCxMtiR6qXZRTVM2HY0IEIl3R28j5awGnBeJJ/BUNvl98FY8bmS21mt2VGLEDltUKcuuITGP7W/v2kZDzXjYvXc93fzCUqOkmHyVZXkt9S5zyMTTAPhVleYW8tsycfVHL7yaxl6vhfUrg5EL6A92GW3DTu7DBZ9SMc5PXFAo3KXs31sAxL/cs1RKRs7odnxM94E8qM6Xu3EppBcaGwzejFBMSpwhBEbPqmsyrw3fuf3tbGG/d0p4CGNQzkkR0rXFJo1D79COpuN71cmKxQLlzC0sI+7PWNm1FM1tdpuKEOyn2rXF7anePdCrC7oB658HydU3RRVsxQPYpKpXu2i0rtoiOdDEmSwAk3thhJ5rMp6ziI0kx/yCxUGjnaEupFysXS1qcNHYSyKwuTxHhXGsnv+jsKMelc1Umvc27uj5izQWfWQU90Jg3WEKX4khahzIuOpFL21/Tzh701uOV4T0HolQXR0r+onjsr2qS9Q4DMFiiltuq9/KEKiuxJZuMbNYf6RXgUg+ZQqmx7KZN9rpX78Lvt5rAchHPL9DtKl2vEjHHBWs9Kpxfj5tqm6f4OudwgNODUFuIPS9g53wCqRT3UqiridYOsBDLxXomwjyNEY9OP1G119JEKBnWekQW53FOBUXbWBlUXKxKkTGb+3NMPwIaeXEvAck4QGUInNcNOrJgm9CEkpfy/7cpqFyP2uCMq/5fcW45+qy9gRbOr21KdL3ui1oJMoDiG2bvTvOD+NOIQ5cw3FGdQvapEECIuEAFJ6atMv6nxpOY4MIX7J76I3O+jNWd/8x5uAVdYU8SFJVGN7gzM0ejhac0PGLr0aKitNocMXMzS9gknO1M3hfsL8sEgBbKfv+XONmoFoowRIKh0wbR/c95wi6xOHHFasdXfoLUSjvySb88MC/FFkkKdpi//+d9Px+zjjeBOPicZu8hcwbzkZEY5OhvatFlsbeEQkQff30dhPRnDxsaye4Z/oqi75yCcr1a8H+/wPznxgl4QDmtL5TajKqtA4WhR3y58tAm5v96KwdOJxecV0Ow1eWcwlmmv75rwG38UVya9jHFzVNgxADKeC3ik094ajn08yfd/fdtDrUW+1nmyCDO+ESiiEyKpgmV4Dq5f1zDoFOrO1lNitJkjibJofTFRPpTOcNJ10NKPPHiGXHR6sJiFid+fv7c6iYlp2pumnz49H546f/HUlf8v3qGlrxU9cIRNCEqyA5loe+2X+/X8TQ/XR4xd7IyLkWnnoD5MiepBwGqXQbUP2VnYuyUA/FKiAJb3RrNg8zqfe/UoADK1RHhRYNz9EbApxrAIPbnv8wanVnwVQtrH2F+nUL2lasMK7hfQNxcMv4PIssktuzWWK40Yu9j3CIsfQFiX+0jEb6NPogKsu5tFKNnfKSccAxVuWu2iI50MSZLACTe2GEnmsy6F+/FHMGGPqc25gpZCYKaA=="
+							},
+					"OwnerId": {
+							"type": "string",
+							"default":"1"
+							}
+			}
+			},
+			 
+			  "OwnerID": {
+							"type": "string",
+							"default":"1"
+							},
+			  "ProductNumber": {
+							"type": "string",
+							"default":"ISOWC"
+							},
+			  "ProductVerNumber": {
+							"type": "string",
+							"default":"ISO_WC_V1"
+							},
+			  "EventName": {
+							"type": "string",
+							"default":"WC_RatingEvent_V1"
+							},
+			  "EffectiveDate": {
+							"type": "string",
+							"default":"2019-04-01"
+							},
+			  "ExpirationDate": {
+							"type": "string",
+							"default":"2020-02-01"
+							},
+			  "LastRateLookUpDate": {
+							"type": "string",
+							"default":"2019-04-01"
+							},
+			  "State":{
+							"type": "string",
+							"default":"PA"
+							},
+			  "City": {
+							"type": "string",
+							"default":"Abbottstown"
+							},
+			  "ZipCode": {
+							"type": "string",
+							"default":"17301"
+							},
+			  "County": {
+							"type": "string",
+							"default":"Adams"
+							},
+							
+				"WorkersComp":{
+							"type": "array",
+							"items": {
+								"properties": {
+									"State": {
+										"type": "string"
+									},
+									"WorkersCompAuditNoncomplianceChargeEndorsement":{
+									"type": "array",
+									"items":{
+										"properties":{
+											"NoncomplianceChargeMultiplier":{
+											"type": "string"
+											}
+										}
+									}
+									},
+									"WorkersCompLocation":{
+									"type": "array",
+									"items":{
+										"properties":{
+											"WorkersCompClass":{
+											"type": "array",
+											"items":{
+												"properties":{
+													  "WorkersCompAtomicEnergyRadiation.FlatChargePremium": {
+														"type": "string"
+														},
+													  "ClassCodeByClassDescription": {
+														"type": "string"
+														},
+													  "ClassCodeForClassDescription": {
+														"type": "string"
+														},
+													  "IfAny": {
+														"type": "string"
+														},
+													  "Payroll": {
+														"type": "string"
+														},
+													  "SelectBy":{
+														"type": "string"
+														},
+													  "WorkersCompClassCoverage.ARate": {
+														"type": "string"
+														},
+													  "WorkersCompClassCoverage.ClassCode": {
+														"type": "string"
+														},
+													  "WorkersCompClassCoverage.DiseaseLoading": {
+														"type": "string"
+														},
+													  "WorkersCompClassCoverage.NumberFullTimeEmployees": {
+														"type": "string"
+														},
+													  "WorkersCompClassCoverage.NumberPartTimeEmployees": {
+														"type": "string"
+														},
+													  "WorkersCompClassCoverage.PartialDiseaseAdjustment":{
+														"type": "string"
+														},
+													  "WorkersCompClassCoverage.USLHAdjustment": {
+														"type": "string"
+														},
+													  "WorkersCompSupplementalDiseasePremiumCoverage.ManualPremium": {
+														"type": "string"
+														},
+													  "WorkersCompSupplementalDiseasePremiumCoverage.SupplementalDiseaseLoading": {
+														"type": "string"
+														},
+													  "WorkersCompSupplementaryDiseasePremiumCoverage.SubjectPayroll": {
+														"type": "string"
+														},
+													  "WorkersCompSupplementaryDiseasePremiumCoverage.SupplementaryDiseaseType": {
+														"type": "string"
+														},
+													  "WorkersCompUSLHPremiumCoverage.SubjectPayroll": {
+														"type": "string"
+														},
+													  "NumberOfApparatus": {
+														"type": "string"
+														},
+													  "WorkersCompClassTransportationWagesMaintenanceAndCureCoverage.TWMCAdjustment": {
+														"type": "string"
+														},
+													  "WorkersCompClassCoverage.NumberOfAmbulances": {
+														"type": "string"
+														},
+													  "WorkersCompClassCoverage.NumberOfEmployees": {
+														"type": "string"
+														},
+													  "WorkersCompClassCoverage.NumberOfHazardousMaterialsResponseTeams": {
+														"type": "string"
+														},
+													  "WorkersCompClassCoverage.NumberOfWeeksInTheProgram": {
+														"type": "string"
+														},
+													  "WorkersCompClassCoverage.VolunteerFirefightersPopulation":{
+														"type": "string"
+														}
+												}
+											}
+											
+											},
+											
+											"City": {
+												"type": "string",
+												"default":"Abbottstown"
+												},
+											"ZipCode": {
+												"type": "string",
+												"default":"17301"
+												}
+										}
+										}
+									},
+									"WorkersCompWaiverOfOurRightToRecoverFromOthersEndorsement":{
+									"type": "array",
+									"items":{
+										"properties":{
+											 "WorkersCompWaiverOfOurRightToRecoverFromOthersEndorsementDetail":{
+												"type": "array",
+												"items":{
+													"properties":{
+													  "ManualPremium": {
+														"type": "string"
+														},
+													  "FlatCharge":{
+														"type": "string"
+														},
+													  "FlatChargePremium": {
+														"type": "string"
+														}
+													}
+													}
+											 }
+										}
+										}
+									},
+									
+									  "AdmiraltyLimit": {
+												"type": "string",
+												"default":"200,000"
+												},
+									  "DeductibleAmount": {
+												"type": "string",
+												"default":"1000"
+												},
+									  "DeductibleType": {
+												"type": "string",
+												"default":"Per Claim"
+												},
+									  "DiseaseEachEmployeeLimit": {
+												"type": "string",
+												"default":""
+												},
+									  "DiseasePolicyLimit": {
+												"type": "string",
+												"default":"500,000"
+												},
+									  "EachAccidentLimit": {
+												"type": "string",
+												"default":"500,000"
+												},
+									  "EmployersLiabilityOnlyPolicy": {
+												"type": "string",
+												"default":"Yes"
+												},
+									  "ExperienceModIndicator": {
+												"type": "string",
+												"default":"Yes"
+												},
+									  "FederalEmployersLiabilityActCoverageLimit": {
+												"type": "string",
+												"default":"200,000"
+												},
+									  "ScheduleModIndicator": {
+												"type": "string",
+												"default":"Yes"
+												},
+									  "TotalPayroll": {
+												"type": "string",
+												"default":"100"
+												},
+									  "WorkersCompPackageAdmiraltyIncrLimitsMinimumPremiumCoveragePremium": {
+												"type": "string",
+												"default":"100"
+												},
+									  "WorkersCompPackageBalanceToMinimumCoveragePremium": {
+												"type": "string",
+												"default":"100"
+												},
+									  "WorkersCompPackageEmployersLiabilityIncrLimitsBalanceToMinimumCoveragePremium": {
+												"type": "string",
+												"default":"2000"
+												},
+									  "WorkersCompPackageExpenseConstant": {
+												"type": "string",
+												"default":"10"
+												},
+									  "WorkersCompPackageFederalEmployersLiabililtyActIncrLimitsMinimumPremiumCoveragePremium": {
+												"type": "string",
+												"default":"120"
+												},
+									  "WorkersCompPackageTotalStandardPremium": {
+												"type": "string",
+												"default":"5"
+												},
+									  "XMLRatingRequest": {
+												"type": "string",
+												"default":"Yes"
+												},
+									  "XMLStateRatingRequest": {
+												"type": "string",
+												"default":"Yes"
+												},
+									  "WorkersCompAuditNoncomplianceChargeCoverage.AuditNoncomplianceChargeIndicator": {
+												"type": "string",
+												"default":"Yes"
+												},
+									  "WorkersCompExperienceModCoverage.ExperienceMod": {
+												"type": "string",
+												"default":"1"
+												},
+									  "WorkersCompExperienceModCoveragePostARD.ExperienceMod": {
+												"type": "string",
+												"default":"1"
+												},
+									  "WorkersCompPremiumDiscountCoverage.PremiumDiscountTable": {
+												"type": "string",
+												"default":""
+												},
+									  "WorkersCompPremiumDiscountCoverage.PremiumDiscountType": {
+												"type": "string",
+												"default":"Schedule X"
+												},
+									  "WorkersCompScheduleModCoverage.ScheduleMod": {
+												"type": "string",
+												"default":"1"
+												},
+									  "ConstructionClassIndicator": {
+												"type": "string",
+												"default":"Yes"
+												},
+									  "ManagedCareIndicator": {
+												"type": "string",
+												"default":"Yes"
+												},
+									  "OccasionalPrivateResidenceExposureIndicator": {
+												"type": "string",
+												"default":"Yes"
+												},
+									  "WorkersCompConstructionClassCoverage.Factor": {
+												"type": "string",
+												"default":"10"
+												},
+									  "WorkersCompConstructionClassCoveragePostARD.Factor": {
+												"type": "string",
+												"default":"5"
+												},
+									  "WorkersCompManagedCareCoverage.Factor": {
+												"type": "string",
+												"default":"5"
+												},
+									  "CertifiedSafetyIndicator": {
+												"type": "string",
+												"default":"Yes"
+												},
+									  "MeritRatingIndicator": {
+												"type": "string",
+												"default":"Yes"
+												},
+									  "WorkersCompMeritRatingCoverage.NumberOfClaims": {
+												"type": "string",
+												"default":"No compensable employee lost-time injuries"
+												}
+									
+									
+								}
+							}
+				}						
+			}
+
+		},
+		"Success_Response": {
+			"type": "object",
+			"properties": {
+				"messageDetail": {
+					"type": "object"
+				},
+				"ResponseStatus": {
+					"type": "string"
+				},
+				"Policy": {
+					"type": "object"
+				}
+			}
+		},
+		"errorModel": {
+			"type": "object",
+			"required": [
+				"RequestStatus",
+				"MessageDetail"
+			],
+			"properties": {
+				"RequestStatus": {
+					"type": "string"
+				},
+				"MessageDetail": {
+					"type": "object",
+					"properties": {
+						"MessageCode": {
+							"type": "string"
+						},
+						"MessageType": {
+							"type": "string"
+						},
+						"UserMessage": {
+							"type": "string"
+						},
+						"MessageLevel": {
+							"type": "string"
+						},
+						"MessageSeverity": {
+							"type": "string"
+						},
+						"MessageList": {
+							"type": "object",
+							"properties": {
+								"Message": {
+									"type": "array",
+									"items": {
+										"type": "string"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+	}
+}

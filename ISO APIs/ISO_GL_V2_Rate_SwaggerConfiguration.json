@@ -3,12 +3,7 @@
 	"info": {
 		"version": "1.0.0",
 		"title": "Solartis Rate API for ISO-GL-V2",
-		"description": " To get rate for General Liability from Solartis Rate API with ISO ERC.
-    General Liability Insurance is a business insurance policy that is
-    applicable to most contractors and business owners because it protects them.
-    When a business has this type of insurance policy, they're covered when it
-    comes to claims of bodily injury, associated medical costs and damage to
-    property that occurred as a result of your business operations."
+		"description": "To get rate for General Liability from Solartis Rate API with ISO ERC."
 	},
 	"host": "sciisoglkbv4-4.solartis.net",
 	"basePath": "/DroolsV4_4/DroolsService/FireEventV3",
@@ -1971,217 +1966,11 @@
 					  "GeneralAggregateLimitGovernmentalSubdivision":  {	"type": "string"	},
 					  "GovernmentalSubdivision": {	"type": "string"	},
 					  "PerPersonLimit":  {	"type": "string"	},
-					  "PremOpsProdsEachOccurrenceLimitGovernmentalSubdivision":  {	"type": "string"	},
-					  "GeneralLiabilityAmendmentOfDefinitionOfPollutants": { "type": "array","items":{"properties":
-						{
-						  "ManualPremium": {	"type": "string"	}
-						}
-					  }},
-					  "GeneralLiabilityAmendmentOfDefinitionOfPollutantsRailRoadCov": { "type": "array","items":{"properties":
-						{
-						  "ManualPremium": {	"type": "string"	}
-						}
-					  }},
-					  "DoesThisRiskOperateScaffoldBuildingsInChicagoThatRequirePermit": {	"type": "string"	},
-					  "DoesThisRiskOperateScaffolds": {	"type": "string"	},
-					  "DoesThisRiskPerformHomeRepairAndRemodeling": {	"type": "string"	},
-					  "LossSupportPerInjuredPerson": {	"type": "string"	},
-					  "PerPersonLimitPD": {	"type": "string"	},
-					  "GeneralLiabilityExtendedReportingPeriodEndorsementPollutionLiabilityLimited": { "type": "array","items":{"properties":
-						{
-						  "ManualPremium": {	"type": "string"	}
-						}
-					  }},
-					  "GeneralLiabilityIllinoisChangesAdditionalInsuredCityOfChicagoScaffolding": { "type": "array","items":{"properties":
-						{
-						  "ManualPremium": {	"type": "string"	}
-						}
-					  }},
-					  "GeneralLiabilityIllinoisChangesContractorsHomeRepairAndRemodeling": { "type": "array","items":{"properties":
-						{
-						  "Deductible": {	"type": "string"	}
-						}
-					  }},
-					  "RadonMeasurementAndMitigationContractors": {	"type": "string"	},
-					  "GeneralLiabilityMassachusettsResidentialFuelTankCoverage": { "type": "array","items":{"properties":
-						{
-						  "ManualPremium": {	"type": "string"	}
-						}
-					  }},
-					  "GeneralLiabilityMassachusettsResidentialFuelTankCoverageSeparateDefenseLimit": { "type": "array","items":{"properties":
-						{
-						  "ManualPremium": {	"type": "string"	}
-						}
-					  }},
-					  "InspectionAgenciesPerformBoilerPressureVesselInspection": {	"type": "string"	},
-					  "GeneralLiabilityInspectionAgenciesBoilerAndPressureVesselUnits": { "type": "array","items":{"properties":
-						{
-						  "BIEachOccurrenceLimit": {	"type": "string"	},
-						  "PDEachOccurrenceLimit": {	"type": "string"	}
-						}
-					  }},
-            
-					  "ElevatorContractor": {	"type": "string"	},
-					  "ElevatorContractorLimitTypeSplitLimit": {	"type": "string"	},
-					  "GeneralLiabilityElevatorsContractorsAndInspectorsChangesCancellationAndSplitLimitsOfInsurance": { "type": "array","items":{"properties":
-						{
-						  "BodilyInjuryLimit": {	"type": "string"	},
-						  "PropertyDamageLimit":{	"type": "string"	}
-						}
-					  }},
-					  "LiquorEachCommonCauseOtherPecuniaryLossLimit": {	"type": "string"	},
-					  "LiquorEachPersonOtherPecuniaryLossLimit": {	"type": "string"	},
-					  "LiquorPropertyDamageCommonCauseLimit": {	"type": "string"	},
-					  "LiquorWrittenWithSubLimits": {	"type": "string"	},
-					  "GeneralLiabilityMontanaExtendedReportingPeriodEndorsementEmployeeBenefitsLiabilityCov": { "type": "array","items":{"properties":
-						{
-						  "ManualPremium": {	"type": "string"	}
-						}
-					  }},
-					  "SRPReductionInExpensesPct": {	"type": "string"	},
-					  "GeneralLiabilityPollutantsDefinitionAmendment": { "type": "array","items":{"properties":
-						{
-						  "ManualPremium": {	"type": "string"	}
-						}
-					  }},
-					  "OwnerAndOperatorOfChallengeCoursesZipLinesOrSimilarDevices": {	"type": "string"	},
-					 "GeneralLiabilityNorthCarolinaExtendedReportingPeriodEndorsementPollutionLiab": { "type": "array","items":{"properties":
-						{
-						  "ManualPremium": {	"type": "string"	}
-						}
-					  }},
-					  "GeneralLiabilityNorthCarolinaExtendedReportingPeriodEndorsementPollutionLiabLimited": { "type": "array","items":{"properties":
-						{
-						  "ManualPremium": {	"type": "string"	}
-						}
-					  }},
-					  "GeneralLiabilityNorthCarolinaSupplementalExtddRptgPerEndtSpecificAccsProdsWorkLocsPremOpsProdsCompldOpsClaimsMade": { "type": "array","items":{"properties":
-						{
-						  "ManualPremium": {	"type": "string"	}
-						}
-					  }},
-					  "GeneralLiabilityNorthCarolinaSupplementalExtddRptgPerEndtSpecificAccsProdsWorkLocsProdsCompldOpsClaimsMade": { "type": "array","items":{"properties":
-						{
-						  "ManualPremium": {	"type": "string"	}
-						}
-					  }},
-					  "GeneralLiabilityNorthCarolinaSupplementalExtendedReportingPeriodEndorsementLiquorClaimsMade": { "type": "array","items":{"properties":
-						{
-						  "ManualPremium": {	"type": "string"	}
-						}
-					  }},
-					  "GeneralLiabilityNorthCarolinaSupplementalExtendedReportingPeriodEndorsementPremOpsProdsCompldOpsClaimsMade": { "type": "array","items":{"properties":
-						{
-						  "ManualPremium": {	"type": "string"	}
-						}
-					  }},
-					  "GeneralLiabilityNorthCarolinaSupplementalExtendedReportingPeriodEndorsementProdsCompldOpsClaimsMade": { "type": "array","items":{"properties":
-						{
-						  "ManualPremium": {	"type": "string"	}
-						}
-					  }},
-					  "GeneralLiabilityNorthCarolinaSupplementalExtendedReportingPeriodEndorsementUST": { "type": "array","items":{"properties":
-						{
-						  "ManualPremium": {	"type": "string"	}
-						}
-					  }},
-			 
-					  "RisksLicensedOrCertifiedToUsePesticidesInCompliance": {	"type": "string"	},
-					  "StopGap": {	"type": "string"	},
-					  "GeneralLiabilityStopGapEmployersLiabilityCoverageEndorsementPolLvl": { "type": "array","items":{"properties":
-						{
-						  "LimitBodilyInjuryByAccident": {	"type": "string"	},
-						  "LimitBodilyInjuryByDiseaseAggregate": {	"type": "string"	},
-						  "LimitBodilyInjuryByDiseaseEachEmployee": {	"type": "string"	},
-						  "ManualPremium": {	"type": "string"	}
-						}
-					  }},
-					  "GeneralLiabilityStateAmndmtOfLiquorLiabExclExcptnScheddActivs": { "type": "array","items":{"properties":
-						{
-						  "GeneralLiabilityStateAmndmtOfLiquorLiabExclExcptnScheddActivsDetail": { "type": "array","items":{"properties":
-							{
-							  "ManualPremium": {	"type": "string"	}
-							}
-						  }}
-						}
-					  }},
-					  "GeneralLiabilityStateAmndmtOfLiquorLiabExclExcptnScheddActivsProductsCompletedOps": { "type": "array","items":{"properties":
-						{
-						  "GeneralLiabilityStateAmndmtOfLiquorLiabExclExcptnScheddActivsProductsCompletedOpsDetail": { "type": "array","items":{"properties":
-							{
-							  "ManualPremium": {	"type": "string"	}
-							}
-						  }}
-						}
-					  }},
-					  "GeneralLiabilityStateChangesSupplementalExtendedReportingPeriodEndorsement": { "type": "array","items":{"properties":
-						{
-						  "ManualPremium": {	"type": "string"	}
-						}
-					  }},
-					  "GeneralLiabilityStateChangesSupplementalExtendedReportingPeriodEndorsementForPollutionLiability": { "type": "array","items":{"properties":
-						{
-						  "ManualPremium": {	"type": "string"	}
-						}
-					  }},
-					  "GeneralLiabilityStateChangesVolunteerWorkersExclusion": { "type": "array","items":{"properties":
-						{
-						  "ManualPremium": {	"type": "string"	}
-						}
-					  }},
-					  "GeneralLiabilityChangesExtendedReportingPeriodForElectronicDataLiability": { "type": "array","items":{"properties":
-						{
-						  "ManualPremium": {	"type": "string"	}
-						}
-					  }},
-					  "LeadHaveAllPremisesConstructedInOrAfter1978": {	"type": "string"	},
-					  "LeadIsMultiplePremieseRiskConstructedBefore1978AndInOrAfter1978": {	"type": "string"	},
-					  "LeadWishToPurchaseCoverageForPremisesCertifiedAsLeadFree":{	"type": "string"	},
-					  "GeneralLiabilityNewJerseyChangesCoverageAndExclusionLiabilityForHazardsLeadMultiplePremises": { "type": "array","items":{"properties":
-						{
-						  "ManualPremium": {	"type": "string"	}
-						}
-					  }},
-					  "GeneralLiabilityNewJerseyChangesCoverageForLiabilityForHazardsLeadWithoutSublimitPolLvl": { "type": "array","items":{"properties":
-						{
-						  "ManualPremium": {	"type": "string"	}
-						}
-					  }},
-					  "GeneralLiabilityChangesBindingArbitration": { "type": "array","items":{"properties":
-						{
-						  "ManualPremium": {	"type": "string"	}
-						}
-					  }},
-					  "GeneralLiabilityChangesNonBindingArbitration": { "type": "array","items":{"properties":
-						{
-						  "ManualPremium": {	"type": "string"	}
-						}
-					  }},
-			 
-					"ExistenceHazardAggregateLimit":  {	"type": "string"	},
-				    "SRPEmployeesSelectionPct": {	"type": "string"	},
-				    "SRPEmployeesTrainingPct": {	"type": "string"	},
-				    "SRPPremisesCarePct": {	"type": "string"	},
-				    "SRPPremisesConditionPct": {	"type": "string"	},
-    
-					"GeneralLiabilityNewYorkChangesBindingArbitration": { "type": "array","items":{"properties":
-						{
-						  "ManualPremium": {	"type": "string"	}
-						}
-					  }},
-				    "GeneralLiabilityNewYorkChangesNonBindingArbitration": { "type": "array","items":{"properties":
-						{
-						  "ManualPremium": {	"type": "string"	}
-						}
-					  }},
-				    "PerPersonLimitOtherThanPD": {	"type": "string"	}
-       
-							  
+					  "PremOpsProdsEachOccurrenceLimitGovernmentalSubdivision":  {	"type": "string"	}
 						}
 						}
 						}
 			}
-
 		},
 		"Success_Response": {
 			"type": "object",
@@ -2240,6 +2029,5 @@
 				}
 			}
 		}
-
 	}
 }

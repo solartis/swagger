@@ -1,0 +1,613 @@
+swagger: '2.0'
+info:
+  version: "1.0"
+  title: Solartis Submission for Embroker (Renewal)
+  description: To create renewal submission for Embroker
+  
+host: embroker.beta.solartis.net
+basePath: /KnowledgeEngineV6_2/KnowledgeBase
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /FireEventV2:
+    post:
+      description: Create Renewal Submission in Solartis platform
+      operationId: createsubmission
+      produces:
+        - application/json
+      parameters:
+        - name: Token
+          in: header
+          description: Authentication Token
+          required: true
+          type: string
+          format: string
+          default: "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"
+        - name: EventName  
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "EmbrokerSubmission"
+        - name: EventVersion
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "3.1.0.1"
+        - name: Policy
+          in: body
+          description: Policy content
+          required: true
+          schema:
+            $ref: '#/definitions/Policy_Request'
+      responses:
+        '200':
+          description: Success Response
+          schema:
+            $ref: '#/definitions/Policy_Success_Response'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/errorModel'
+            
+definitions:
+  Policy_Request:
+    type: object
+    required:
+      - ServiceRequestDetail
+      - Policy
+    properties:
+      EndClientUserUniqueSessionId:
+        type: string
+        default: "Uniquesession"
+      EndClientUserBrowserSessionId:
+        type: string
+      EndClientUserBrowserInformation:
+        type: string
+      PaaSClientIPAddress:
+        type: string
+      ClientUniqueRequestID:
+        type: string
+      ServiceRequestDetail:
+        type: object
+        properties:
+          OwnerId:
+            type: string
+            default: "36"
+          ResponseType:
+            type: string
+            enum: ["JSON","XML"]
+            default: "JSON"
+          UserName:
+            type: string
+            default: "EmbrokerAgent"
+          Token:
+            type: string
+            default: "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"
+          BrowserIp:
+            type: string 
+            default: "127.0.0.1"
+          LanguageCode:
+            type: string
+            default: "en"
+          ServiceRequestVersion:
+            type: string
+            default: "1.0"
+          RegionCode:
+            type: string
+            default: "US"
+      Policy:
+        type: object
+        required:
+          - ProductNumber
+          - ProductVerNumber
+          - EventName
+          - EventVersion
+          - BusinessName
+          - BusinessType
+          - TypeOfBusiness
+          - Industry
+          - FirstName
+          - LastName
+          - EmailAddress
+          - AddressLine1
+          - City
+          - State
+          - ZipCode
+          - NumberOfEmployees
+          - AnnualRevenue
+        properties:
+          ProductNumber:
+            title: "Product Number"
+            type: string
+            default: "EMBRKR"
+          ProductVerNumber:
+            title: "Product Ver Number"
+            type: string
+            default: "EMBRKR_2018_V1"
+          EventName:
+            title: "Event Name"
+            type: string
+            default: "EmbrokerSubmission"
+          EventVersion:
+            title: "Event Version"
+            type: string
+            default: "3.1.0.1"
+          PolicyNumber:
+            title: "Policy Number"
+            type: string
+          BusinessName:
+            title: "Business Name"
+            type: string
+          BusinessType:
+            title: "Business Type"
+            type: string
+            enum: ["Technology Organization","NonProfit Organization"]
+          TypeOfBusiness:
+            title: "Type Of Business"
+            type: string
+            enum: ["Association","Corporation","Individual / Sole Proprietor","Joint Venture","Limited Liability Company (LLC)","Non-Profit","Partnership","Professional Corporation","S-Corporation"]
+          Industry:
+            title: "Industry"
+            type: string
+          YearStarted:
+            title: "Year Started"
+            type: string
+          FirstName:
+            title: "First Name"
+            type: string 
+          LastName:
+            title: "Last Name"
+            type: string 
+          PrimaryNumber:
+            title: "Primary Number"
+            type: string 
+          AlternateNumber:
+            title: "Alternante Number"
+            type: string 
+          EmailAddress:
+            title: "Email Address"
+            type: string
+          Website:
+            title: "Website"
+            type: string
+          AddressLine1:
+            title: "Address Line 1"
+            type: string
+          SuiteNumber:
+            title: "Suite Number"
+            type: string
+          AddressLine2:
+            title: "Address Line 2"
+            type: string
+          City:
+            title: "City"
+            type: string
+          State:
+            title: "State"
+            type: string
+            enum: ["AL","AK","AR","AZ","CA","CO","CT","DC","DE","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA","MA","MD","ME","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","WA","WI","WV","WY","VA","VI","PR","NY"]
+          ZipCode:
+            title: "Zip Code"
+            type: string
+          TotalAssets:
+            title: "Total Assets"
+            type: string
+          AnnualRevenue:
+            title: "Annual Revenue"
+            type: string 
+          TotalCapitalRaisedToDate:
+            title: "Total Capital Raised To Date"
+            type: string
+          NumberOfEmployees:
+            title: "Number Of Employees"
+            type: string
+          AssetsUnderManagementForDefinedBenifitPlan:
+            title: "Assets Under Management For Defined Benifit Plan"
+            type: string
+          PlanToGoToIPOInNext12Months:
+            title: "Plan To Go To IPO In Next 12 Months"
+            type: string
+            enum: ["Yes","No"]
+          PastLitigation:
+            title: "Past Litigation"
+            type: string 
+            enum: ["Yes","No"]
+          PriorClaims:
+            title: "Prior Claims"
+            type: string
+            enum: ["Yes","No"]
+          ManagementExperience:
+            title: "Management Experience"
+            type: string
+            enum: ["Needs Improvement","Average","Great"]
+          FinancialAnalysis:
+            title: "Financial Analysis"
+            type: string
+            enum: ["Needs Improvement","Average","Great"]
+          HasNonProfitFiledAForm990:
+            title: "Has NonProfit Filed A Form990"
+            type: string
+            enum: ["Yes","No"]
+          IsTheNonProfitNewlyRegisteredwithinLast12Months:
+            title: "Is The NonProfit Newly Registered Within Last 12 Months"
+            type: string
+            enum: ["Yes","No"]
+          DoesNonProfitHaveADefinedBenefitOrPensionPlan:
+            title: "Does NonProfit Have A Defined Benefit Or Pension Plan"
+            type: string
+            enum: ["Yes","No"]
+          Payroll:
+            title: "Payroll"
+            type: string
+          FundraiseList:
+            type: array
+            items:
+              properties:
+                FundraiseDetail:
+                  type: object
+                  required:
+                    - FundraiseDate
+                    - MoneyRaised
+                    - LeadInvestor
+                  properties:
+                    FundraiseDate:
+                      title: "Fundraise Date"
+                      type: string
+                    MoneyRaised:
+                      title: "Money Raised"
+                      type: string
+                    LeadInvestor:
+                      title: "Lead Investor"
+                      type: string  
+          NumberOfPersonallyIdentifiableOrSensitiveRecords:
+            title: "Number Of Personally Identifiable Or Sensitive Records"
+            type: string
+          NumberOfPersonallyIdentifiableOrSensitiveRecordsEstimate:
+            title: "Number Of Personally Identifiable Or Sensitive Records Estimate"
+            type: string
+          ThirdPartyDataList:
+            type: array
+            items:
+              properties:
+                ThirdPartyDataStoredOrProcessedOnYourNetwork:
+                  type: object
+                  properties:
+                    Value:
+                      title: "Value"
+                      type: string
+                    IfOtherSpecify:
+                      title: "If OtherS pecify"
+                      type: string
+          DoYouOutsourceAnyWorkPerformedForClientsToSubcontractors:
+            title: "Do You Outsource Any Work Performed For Clients To Subcontractors"
+            type: boolean
+          DoYouOutsourceAnyWorkPerformedForClientsToSubcontractorsExplain:
+            title: "Do You Outsource Any Work Performed For Clients To Subcontractors Explain"
+            type: string
+          BreachOfPrivacyNotificationToCustomerClientOrEmployee:
+            title: "Breach Of Privacy Notification To Custome rClient O rEmployee"
+            type: boolean
+          BreachOfPrivacyNotificationToCustomerClientOrEmployeeExplain:
+            title: "Breach Of Privacy Notification To Customer Client Or Employee Explain"
+            type: string
+          ComputerNetworkOrSystemOrDataSecurityBreaches:
+            title: "Computer Network Or System Or DataSecurity Breaches"
+            type: boolean
+          ComputerNetworkOrSystemOrDataSecurityBreachesExplain:
+            title: "Computer Network Or System Or DataSecurity Breaches Explain"
+            type: string
+          WrittenDemandForDamagesAsAResultOfBreachOfContractOrNegligence:
+            title: "Written Demand For Damages As A Result Of Breach Of ContractOr Negligence"
+            type: string
+          WrittenDemandForDamagesAsAResultOfBreachOfContractOrNegligenceExplain:
+            title: "Written Demand For Damages As A Result Of Breach Of Contract Or Negligence Explain"
+            type: string
+          FutureClaim:
+            title: "Future Claim"
+            type: boolean
+          FutureClaimExplain:
+            title: "Future Claim Explain"
+            type: string
+          HasThereBeenOrDoYouAnticipateInTheNextYearABankruptcyProceeding:
+            title: "Has There Been Or Do You Anticipate In The Next Year A Bankruptcy Proceeding"
+            type: boolean
+          HasThereBeenOrDoYouAnticipateInTheNextYearABankruptcyProceedingExplain:
+            title: "Has There Been Or Do You Anticipate In The Next Year A Bankruptcy Proceeding Explain"
+            type: string
+          DoYouAnticipateWithinTheNextYearASaleOfTheCompanyForLessThanTheAmountOfFundingRaised:
+            title: "Do You Anticipate Within The Next Year A Sale Of The Company For Less Than The Amount Of FundingRaised"
+            type: boolean
+          DoYouAnticipateWithinTheNextYearASaleOfTheCompanyForLessThanTheAmountOfFundingRaisedExplain:
+            title: "Do You Anticipate Within The Next Year A Sale Of The Company For Less Than The Amount Of Funding Raised Explain"
+            type: string
+          LiabilityClaimsOrViolationsOfLawsOrConsumerFraudOrLitigation:
+            title: "Liability Claims Or Violations Of Laws Or Consumer Fraud O rLitigation"
+            type: boolean
+          
+            
+          
+      OwnerId:
+        title: "Owner ID"
+        type: string
+        default: "36"
+        
+  Policy_Success_Response:
+    type: object
+    required:
+      - ServiceRequestDetail
+      - Policy
+    properties:
+      EndClientUserUniqueSessionId:
+        type: string
+        default: "Uniquesession"
+      EndClientUserBrowserSessionId:
+        type: string
+        default: ""
+      EndClientUserBrowserInformation:
+        type: string
+        default: ""
+      PaaSClientIPAddress:
+        type: string
+        default: ""
+      ClientUniqueRequestID:
+        type: string
+        default: ""
+      ServiceRequestDetail:
+        type: object
+        properties:
+          OwnerId:
+            type: string
+            default: "36"
+          ResponseType:
+            type: string
+            enum: ["JSON","XML"]
+            default: "JSON"
+          UserName:
+            type: string
+            default: "EmbrokerAgent"
+          Token:
+            type: string
+            default: "GTnbP460GlTPthIef6iAxfSlY86riIB2EVoDkqJC6lt8md5YWl9E77Y6fm8v+gZ0Ujw1qxPYz7ShGZz6c/nziFbv+ctRr7ilx/Bb27U28AxDy0uaITKOLSpqpUge8HlTMKq3vX4jrKXDkAUW54vKKCiHPqUb239UbtDW6AnpuwSZNzFMCs2nCJS24hBgAT0KYm+/h1jskyRpz1mAnMxmjeiBmF/jQXMsE3pHOU3mRSDzZlXYmPmB7zysxMqkFo4j35aGB/zKf1hBkK14tTDBlsgfHRGAC3qxBC+ULwYjYGSzAV5+NTyqDgx6oJh6L2XgKE9+p7YoDy2VQWQ7wVgyOtm66tuxsjXn9gPbaE4Rn7yDnjIFuVi6nrDquG9F7fIGXrPIossAhopGZBp9u4V7uMVFYKlK+4tirigbPt7xrwKqVAk5q6spMXZiwzA70l1EW/GMy/4IA3f2k+DM3AKujUPAbR50mz5fwKA4adjtEjbDSrxtD2HgupT867FRr2Yd6UHeEyGiCXRIHpUfHHHJibvzCE7U5c43iqfkZgov41t9U5R5LBG2vETMD80VYAqVTWCY4cLEvF36d0cxoeKEpmk5cQC1KAst+vOixAVvDKDe7INciwXlrHNGV7XFuWOJ45kJIspygAf43SAiDC2kslPdJ77mJmLqpRIODg6Yf2IfweSH/sIddsjIAe1V1h6c3bN0njGOZj25tdg+dAe8h/PCMTv4NVumA1HCm3fYDLzrJLSepsoJSVf/dRyNaSowXbglYQs9pGLi2wiMH34GydTfZbvWfTX6HrvgyAz84IS6yIlYSmjCUy1kY1JdbHBf6ytsroXYlyWKC2QZJYPLnyXBcfylLOSazh3jJjxBdICdZaCqkD8lDaC5iSHHFHlKl3H3+uzYs8q8R7Fz2/1ps9ybbm27xb1vACzFICfKeqNSKyM9NcY0ewZTBJIDw9K1PiTKW44r9Tak1Qmkk4tlOgcS4K5Ot9h9v85aNmygx1dQQuYBWPcXPNrMhiRvKvH/wQLV8kY/j7szrE3syozSTlHJirO4r3cWOlhqz0v5DRBsCGnMIwSlAnFbjPo0MpGyWtDGfm1H5gh8IYFDhaH/W32ZYES+aFN5qjW8SA6+rsN0H51SvtcFyPr5tGiZuGPVfRBOmis1hA0sK0Or9aoimLBhWPZ/inBzGzEc+f3LYYu6so66xw6YKB0Ok8OgqxsDBSJ5gAkF5lTzkgfsP0vj3l/mWpWiyftHnzNZYik5SLRjfkRPO1DYJTR8HnvyenOdQ+I8hpWFlxp3eLWDXTiSHBzouvY4krYPwaEV2r5hdn3Er5nC0E4cU/yh3kBbw0pO10b6Xi4xbehUbrb76T8GWApt8rr46StUAw+/RlujGraZO74J5v0/wDOfAqidbJI/+n37DtaXAJ7s+FTWIz44ZjyKgcZ8g/o0hzP6M9lYLELFdR6hbsTAWIBnmvYfO2A6g+khZEJlg2pFwYF9LDUzge+PnhyRMU/alwPjKxKicXF2ro7uUXbISSs2M+og5oh0zu0hBF6dZ/ekCNhpGvwRStamTY7mQkayoJYdGCuGO7EKpZcHd5kZCCCj5SfnzyUdKfDgya1UmB/Ekp5S1Fa3MGaPXTNqObH8gWF7nKKuY+3c+I39dyw4GKrQuD0GK3+0YWx7DlhPVs9TChL/Vqz1nk1X/+5X3VKgePlRAIUO/FPqOz06HVS2SSIC99HxHK22sbvsQkS/8EqwnPjV1ktsp/4rdDeiyjwdd84EKzPruK9m52iDp5QvfH2Y4fkXrsCJZvyHDrlG7mMVLLmyYmbMBGK6zFSssmElHQBuJejMARM+LYmGTIxMVTNRRc2TU/3uxOnMwl3Tu9E7U5eKizvKG2VfmyFwgYBferL6R494sa6mSt4YoKowC3DcWV0YP7rrrt0xXwYXumtWwSN8e6xR+WJtmjQN2Zxpoglyim87szgcaBvBuA1IlnPSnUYUCITTjFGGUHCvGiULG8xvRxLXkFqlwrSpsxNUaapHOt0IpbvVPbLYIHW84SvjkI5P8sw4QlA7OARMwrj3NvnitJ9FxiG8rCJZtcfvEBtXjfTFjimw6LSV/OJWXKOfE0GBV1tHX1zZQ0gjzi9WLjhMaHHSrcdQMrp9Dk99thyINGiKUm1YntyMjKtiwF53JlCXuLUmB+8ih7sMf764AI1PH2xvjDtyq+4rcPxNiXodcirWpCQTZOD8lQQkimsMSreSo86K8B8LLjiPJaIMnUrUKfUxBJajjEX6Uo8zV8CYYCH5F4TVt/d6LasK3stZN69VM6KAdXqX6BYxc+LqwLeSMPQDeL04xWZdSPpgdOO1Al5pGtNWznp+5L/aEed1fTxBoPzF3MV/whqtx8Odo3cxs96zXvAw0il8+QhylsUuGcsqY4uZA5q6KVESz+agVe7EircRHcXCtGyiVjHT2dvIts423qGC3TycdSllrpiOIMFfMejv18RUFu/RqIwVCDalo+Wb3BY6naL+uYpiGEIrlQVqbCPvb8rVW9VVyVv3OYvWL2WpoLucH20pvxIDoMUIvXoBhtDpTuPf77osSDmXpSICog3fmYRoW1Aiinzit4SR5QcsxtUdfB3TH0W6k7RlKZXijr6iFmlk3Q/8Cf0Uq+JP3p0ZkKOQZ8YtH9zKaLu/7DQGXctRYMIGc8SsSMhdAyfuoUcn1nw0mhfL/LzQ5IIYRymlVPbFupU8yhA6eTd8MYHqXGtyaxQ2kd+DKP7/cjyjgp+q5y5UvGXLfjexhgxF0FwxEpphfxrdD7eg3ohiXTQ+z2YRsA7luzAWu151qJsY3gjgUfD+iyH2965iStHqXYbHs7KwgamLjqZ1tL6RW4C366jOUBbCFXGYISsXHlfvbfLfFcSfiT4eHwQ+Af0dIBTK9PvVWkwVeJ6c9L0NolmTuTXnw2VAX13c493HmtQVIshdSZYgf+XtjSfdHvsxlmo1HjIL+hD2IUWNP664lOiF2xYzHrFCkte2CahgKANe/N7E/XB3M/AE6BFPFCI5pQm8JZjQTRveWRJS85fmppL2IUv88AA9IzeFxk4fuVbUmQeOeokiy0fcESw9VgQGilY2ADxycDvUW/+JeBn0nRPr4ypj1nBym3X3FNKXJS2NXNI6Y1civzVD8eWml702rFUp+q+qVJ8WcYyj3oPU8tH2Pq3eE9QZ2lubpi46/QItSltoE807igg9XeCnGdWi6QTQTwc+vYnj+agNIOSmwaA0y4BzZOQ6I8MVC+KG8UmZz81haxyt+b1q7Es31EmaoS4D9Fw503Qh+3kZWv8Z5/uEaM7PjEG/Zz6JnIHU/E/hAfp6srB29btyc4rv0ArKnksH2TYUSO7BYxGcPI4fmtuERBwr5Ldz+f46XSTkBQz0qe/ogCJ6oElD6VufUDH5uhWAnr5R2YnhhF1VG8AdZHpcqgwuIue/MWBJ+p63Z1+18hf/ldVG0MynZntViTmSmW8lvgCoC5XNKthdI0O0e2TcIdiTmS0BvHkOKOGa/xR6q0+/31ucOIOJzu6QeP3AsQ="
+          BrowserIp:
+            type: string 
+            default: "127.0.0.1"
+          LanguageCode:
+            type: string
+            default: "en"
+          ServiceRequestVersion:
+            type: string
+            default: "1.0"
+          RegionCode:
+            type: string
+            default: "US"
+      Policy:
+        type: object
+        properties:
+          ProductNumber:
+            title: "Product Number"
+            type: string
+          ProductVerNumber:
+            title: "Product Ver Number"
+            type: string
+          EventName:
+            title: "Event Name"
+            type: string
+          EventVersion:
+            title: "Event Version"
+            type: string
+          BusinessName:
+            title: "Business Name"
+            type: string
+          BusinessType:
+            title: "Business Type"
+            type: string
+          TypeOfBusiness:
+            title: "Type Of Business"
+            type: string
+          Industry:
+            title: "Industry"
+            type: string
+          YearStarted:
+            title: "Year Started"
+            type: string
+          FirstName:
+            title: "First Name"
+            type: string 
+          LastName:
+            title: "Last Name"
+            type: string 
+          PrimaryNumber:
+            title: "Primary Number"
+            type: string 
+          AlternateNumber:
+            title: "Alternante Number"
+            type: string 
+          EmailAddress:
+            title: "Email Address"
+            type: string
+          Website:
+            title: "Website"
+            type: string
+          AddressLine1:
+            title: "Address Line 1"
+            type: string
+          AddressLine2:
+            title: "Address Line 2"
+            type: string
+          SuiteNumber:
+            title: "Suite Number"
+            type: string
+          City:
+            title: "City"
+            type: string
+          State:
+            title: "State"
+            type: string
+          ZipCode:
+            title: "Zip Code"
+            type: string
+          TotalAssets:
+            title: "Total Assets"
+            type: string
+          AnnualRevenue:
+            title: "Annual Revenue"
+            type: string 
+          TotalCapitalRaisedToDate:
+            title: "Total Capital Raised To Date"
+            type: string
+          NumberOfEmployees:
+            title: "Number Of Employees"
+            type: string
+          AssetsUnderManagementForDefinedBenifitPlan:
+            title: "Assets Under Management For Defined Benifit Plan"
+            type: string
+          PlanToGoToIPOInNext12Months:
+            title: "Plan To Go To IPO In Next 12 Months"
+            type: string
+            enum: ["Yes","No"]
+          PastLitigation:
+            title: "Past Litigation"
+            type: string 
+          PriorClaims:
+            title: "Prior Claims"
+            type: string
+          ManagementExperience:
+            title: "Management Experience"
+            type: string
+          FinancialAnalysis:
+            title: "Financial Analysis"
+            type: string
+          HasNonProfitFiledAForm990:
+            title: "Has NonProfit Filed A Form990"
+            type: string
+          IsTheNonProfitNewlyRegisteredwithinLast12Months:
+            title: "Is The NonProfit Newly Registered Within Last 12 Months"
+            type: string
+          DoesNonProfitHaveADefinedBenefitOrPensionPlan:
+            title: "Does NonProfit Have A Defined Benefit Or Pension Plan"
+            type: string
+          Payroll:
+            title: "Payroll"
+            type: string
+          FundraiseList:
+            type: array
+            items:
+              properties:
+                FundraiseDetail:
+                  type: object
+                  required:
+                    - FundraiseDate
+                    - MoneyRaised
+                    - LeadInvestor
+                  properties:
+                    FundraiseDate:
+                      title: "Fundraise Date"
+                      type: string
+                    MoneyRaised:
+                      title: "Money Raised"
+                      type: string
+                    LeadInvestor:
+                      title: "Lead Investor"
+                      type: string    
+          NumberOfPersonallyIdentifiableOrSensitiveRecords:
+            title: "Number Of Personally Identifiable Or Sensitive Records"
+            type: string
+          NumberOfPersonallyIdentifiableOrSensitiveRecordsEstimate:
+            title: "Number Of Personally Identifiable Or Sensitive Records Estimate"
+            type: string
+          ThirdPartyDataList:
+            type: array
+            items:
+              properties:
+                  Value:
+                    title: "Value"
+                    type: string
+                  IfOtherSpecify:
+                    title: "If OtherS pecify"
+                    type: string
+          DoYouOutsourceAnyWorkPerformedForClientsToSubcontractors:
+            title: "DoYouOutsourceAnyWorkPerformedForClientsToSubcontractors"
+            type: boolean
+          DoYouOutsourceAnyWorkPerformedForClientsToSubcontractorsExplain:
+            title: "Do You Outsource Any Work Performed For Clients To Subcontractors Explain"
+            type: string
+          BreachOfPrivacyNotificationToCustomerClientOrEmployee:
+            title: "Breach Of Privacy Notification To Custome rClient O rEmployee"
+            type: boolean
+          BreachOfPrivacyNotificationToCustomerClientOrEmployeeExplain:
+            title: "Breach Of Privacy Notification To Customer Client Or Employee Explain"
+            type: string
+          ComputerNetworkOrSystemOrDataSecurityBreaches:
+            title: "Computer Network Or System Or DataSecurity Breaches"
+            type: boolean
+          ComputerNetworkOrSystemOrDataSecurityBreachesExplain:
+            title: "Computer Network Or System Or DataSecurity Breaches Explain"
+            type: string
+          WrittenDemandForDamagesAsAResultOfBreachOfContractOrNegligence:
+            title: "Written Demand For Damages As A Result Of Breach Of ContractOr Negligence"
+            type: boolean
+          WrittenDemandForDamagesAsAResultOfBreachOfContractOrNegligenceExplain:
+            title: "Written Demand For Damages As A Result Of Breach Of Contract Or Negligence Explain"
+            type: string
+          FutureClaim:
+            title: "Future Claim"
+            type: boolean
+          FutureClaimExplain:
+            title: "Future Claim Explain"
+            type: string
+          HasThereBeenOrDoYouAnticipateInTheNextYearABankruptcyProceeding:
+            title: "Has There Been Or Do You Anticipate In The Next Year A Bankruptcy Proceeding"
+            type: boolean
+          HasThereBeenOrDoYouAnticipateInTheNextYearABankruptcyProceedingExplain:
+            title: "Has There Been Or Do You Anticipate In The Next Year A Bankruptcy Proceeding Explain"
+            type: string
+          DoYouAnticipateWithinTheNextYearASaleOfTheCompanyForLessThanTheAmountOfFundingRaised:
+            title: "Do You Anticipate Within The Next Year A Sale Of The Company For Less Than The Amount Of FundingRaised"
+            type: boolean
+          DoYouAnticipateWithinTheNextYearASaleOfTheCompanyForLessThanTheAmountOfFundingRaisedExplain:
+            title: "Do You Anticipate Within The Next Year A Sale Of The Company For Less Than The Amount Of Funding Raised Explain"
+            type: string
+          LiabilityClaimsOrViolationsOfLawsOrConsumerFraudOrLitigation:
+            title: "Liability Claims Or Violations Of Laws Or Consumer Fraud O rLitigation"
+            type: boolean
+      OwnerId:
+        title: "Owner ID"
+        type: string
+        default: "36"
+                
+  errorModel:
+    type: object
+    required:
+      - RequestStatus
+      - MessageDetail
+    properties:
+      RequestStatus:
+        type: string
+      MessageDetail:
+        type: object
+        properties:
+          MessageCode:
+            type: string
+          MessageType:
+            type: string
+          UserMessage:
+            type: string
+          MessageLevel:
+            type: string
+          MessageSeverity:
+            type: string
+          MessageList:
+            type: object
+            properties:
+              Message:
+                type: array
+                items:
+                  type: string      

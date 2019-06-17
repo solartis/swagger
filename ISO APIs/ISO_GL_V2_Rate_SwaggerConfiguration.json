@@ -5,7 +5,7 @@
 		"title": "Solartis Rate API for ISO-GL-V2",
 		"description": "To get rate for General Liability from Solartis Rate API with ISO ERC."
 	},
-	"host": "sciisoglkbv4-4.solartis.net",
+	"host": "isoglbkbv4-2.solartis.net",
 	"basePath": "/DroolsV4_4/DroolsService/FireEventV3",
 	"schemes": [
 		"https"
@@ -17,7 +17,7 @@
 		"application/json"
 	],
 	"paths": {
-		"/FireEventV2": {
+		"/FireEventV3": {
 			"post": {
 				"description": "Gets Rate for General Liability based on ISO ERC",
 				"operationId": "getRates",

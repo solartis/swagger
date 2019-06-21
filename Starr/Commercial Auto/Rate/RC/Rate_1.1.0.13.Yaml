@@ -81,10 +81,10 @@ definitions:
          default: "2019-06-21"
       ExpirationDate:
          type: string
-         default: "2020-05-21"
+         default: "2020-06-21"
       LastRateLookUpDate:
          type: string
-         default: "2019-05-21"
+         default: "2019-06-21"
       InsuredName:
          type: string
          default: "John Smith"

@@ -7,7 +7,7 @@ info:
     
   contact:
     name: Solartis Support
-    email: solartis_assist_support@solartis.com
+    email: solartis_efl_support@solartis.com
     
 host: starrefl.beta.solartis.net
 basePath: /KnowledgeEngineV6_2/KnowledgeBase
@@ -111,18 +111,6 @@ definitions:
          RegionCode:
           type: string
           default: "US"
-         EventName:
-          type: string
-          default: "DocumentGeneration"
-         EventVersion:
-          type: string
-          default: "1.1.0.1"
-         ProductNumber:
-          type: string
-          default: "STARR_EFL"
-         ProductVerNumber:
-          type: string
-          default: "STARR_EFL_1.0"
       Policy:
        type: object
        required:
@@ -133,6 +121,18 @@ definitions:
          type: string
         Addfirstandsecondreinstatedlimitsofliabilityexcesssideadic.SecondReinstatedLimitOfLiability: 
          type: string
+        EventName:
+          type: string
+          default: GenerateDocument
+        EventVersion:
+          type: string
+          default: '1.1.0.1'
+        ProductNumber:
+          type: string
+          default: 'STARR_EFL'
+        ProductVerNumber:
+          type: string
+          default: 'STARR_EFL_1.0'
         AgencyOrBrokerageName:
          type: string
         AgencyTaxpayerIDSocialSecurityNo:
@@ -150,8 +150,6 @@ definitions:
         AmenddeclarationspageBreakoutsharedAndSeparatelimitsforspecifiedcoveragesDeclarations.SeparateLimitOfLiability:
           type: string
         AmenddeclarationspageBreakoutsharedAndSeparatelimitsforspecifiedcoveragesDeclarations.SharedLimitOfLiabilityDOCoverage:
-          type: string
-        AmenddeclarationspageBreakoutsharedAndSeparatelimitsforspecifiedcoveragesDeclarations.SharedLimitOfLiabilityEmploymentPracticesLiabCoverage:
           type: string
         AuthorizedRepresentative:
           type: string
@@ -188,6 +186,8 @@ definitions:
           type: string
           description: Provide From - To date in YYYY-MM-DD format
         ConnecticutStarrsecureexcessliabilitypolicy.LimitOfLiability:
+          type: string
+        ConnecticutStarrsecureexcessliabilitypolicy.PriorPolicyNumberWithInsurer:
           type: string
         ConnecticutStarrsecureexcessliabilitypolicy.UnderlyingCoverage:
           type: array
@@ -487,6 +487,9 @@ definitions:
           type: string
         PendingorpriorlitigationexclusionIncreasedlimitsPuertoRico.LiabilityLimit:
           type: string
+        PendingorpriorlitigationexclusionIncreasedlimits.AsOfDt:
+          type: string
+          description: Provide date in YYYY-MM-DD format
         PolicyInsurerName:
           type: string
         PolicyNumber:
@@ -644,7 +647,7 @@ definitions:
           type: string
         Virginiaaddendumtodeclarations.ReinstatedLimitofLiabilityPurchasedbyNamedInsuredItem7:  
           type: string
-        Virginiaaddendumtodeclarations.ReinstatedLimitofLiabilityPurchasedbyNamedInsuredItem:
+        Virginiaaddendumtodeclarations.ReinstatedLimitofLiabilityPurchasedbyNamedInsuredItem8:
           type: string
         Virginiapurchaseofdiscoveryperiodwithreinstatedlimitofliability.NumberOfYears:
           type: string

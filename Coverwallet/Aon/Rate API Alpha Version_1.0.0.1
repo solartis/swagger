@@ -1,12 +1,12 @@
 swagger: '2.0'
 info:
   version: "1.0.0"
-  title: Solartis Rate API With Forms for Coverwallet - Aon
-  description: To get rate and forms for Profesional Liability from Solartis Rate API.
+  title: Solartis Rate API for Coverwallet
+  description: To get rate for Profesional Liability from Solartis Rate API along with Forms List
   
   
 host: cw.alpha.solartis.net
-basePath: DroolsV6/DroolsService
+basePath: /DroolsV6/DroolsService
 schemes:
   - https
 consumes:
@@ -16,7 +16,7 @@ produces:
 paths:
   /FireEventV2:
     post:
-      description: Get Rates and Forms for the given input
+      description: Get Rates for the given input
       operationId: getRates
       produces:
         - application/json
@@ -57,6 +57,7 @@ paths:
           description: unexpected error
           schema:
             $ref: '#/definitions/errorModel'
+
 definitions:
   Rating_Request:
     type: object
@@ -66,7 +67,7 @@ definitions:
     properties:
       EndClientUserUniqueSessionId:
         type: string
-        default: "Uniquesession"
+        default: "5ba3b6f1f8ce2d1148d3aba3"
       EndClientUserBrowserSessionId:
         type: string
       EndClientUserBrowserInformation:
@@ -87,7 +88,7 @@ definitions:
             default: "JSON"
           UserName:
             type: string
-            default: "CWAgent"
+            default: "cwagent"
           Token:
             type: string
             default: "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"
@@ -186,7 +187,6 @@ definitions:
                     ProfessionCode:
                       title: "Profession Code"
                       type: string
-                      enum: ["PNM2","PNM21","CON4","FIT7","ACT0","APE1","AEO0","BAE0","BBL0","CON8","FIT12","CGT0","ADS0","CON14","CON9","CCM0","NUR5","OTM3","FIT9","FIT2","CHC0","ADJ0","CON3","FIT3","AEC0","CNS10","CNS7","CNS8","CNS1","CNS5","CNS2","CNS4","CNS3","CNS6","CNL0","CML0","ASC0","CON15","DYC0","DHM2","DAM1","DHM0","DGA0","DSP0","DPL0","EEO0","EAG0","ELO0","EMT1","EMT2","ELT0","EPC0","FIT10","FIT1","CON16","CON10","CON19","NUR9","HEO0","THA0","NUR8","NUR7","PPM5","PNM1","PME0","PMK1","LIT0","PNM5","PNM8","PNM7","PNM6","CON13","CON11","FIT6","NUR10","NUR21","CON5","MLP0","NUR6","MAS0","MRA0","MCS0","MBO0","MML0","MTN0","APE3","CON18","MUM0","MRT0","NEO0","PNM21","PNM1","PNM2","PNM3","PNM24","PNM23","PNM22","NUR2","NUR1","NUR4","NUR3","NDO0","PPM1","PNM24","OTM1","OTM2","OPT0","ODL0","EMT3","CON7","PNM4","PNM23","PDO0","PRF0","APE2","PPM2","PPM4","PPM3","PLB0","PHY1","PHY2","PHY3","PHY11","PAS14","PAS24","PAS34","PAS1","PAS2","PAS3","FIT4","PDA0","FIT8","PNM3","PNM22","CON12","CON2","RED0","XDO0","PRI0","OPO0","NUR14","REO0","CON17","PTR0","RCP1","RST3","RST1","RST2","NUR24","CON6","SOC0","FIT11","SLE0","SLP0","SCM0","SCW0","SUR0","STD0","FIT5","FIT13","VAS0","XNO0","XXX0"]
                     HeadCount:
                       title: "Head Count"
                       type: string
@@ -205,7 +205,7 @@ definitions:
         default: "27"
       EndClientUserUniqueSessionId:
         type: string
-        default: "Uniquesession"
+        default: "5ba3b6f1f8ce2d1148d3aba3"
       EndClientUserBrowserSessionId:
         type: string
         default: "7Eadfad4444"
@@ -227,7 +227,7 @@ definitions:
             default: "JSON"
           UserName:
             type: string
-            default: "CWAgent"
+            default: "cwagent"
           Token:
             type: string
             default: "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"
@@ -267,7 +267,7 @@ definitions:
             type: string
           TotalPremiumBeforeTaxes:
             title: "Total Premium Before Taxes"
-            type: string'
+            type: string
           TotalBasePremium:
             title: TotalBasePremium"
             type: string

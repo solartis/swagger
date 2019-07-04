@@ -1,0 +1,119 @@
+swagger: '2.0'
+info:
+  version: "1.0.0"
+  title: Solartis Authentication Service
+  description: To get token from Authentication Service
+  
+  
+host: scicommonservice.solartis.net
+basePath: /CommonServiceV2_1/AuthenticationServiceV2
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths: 
+  /requestService:
+    post:
+      description: Authentication Service
+      operationId: getToken
+      produces:
+        - application/json
+      parameters:
+        - name: Authenication
+          in: body
+          description: Authentication Service
+          required: true
+          schema:
+            $ref: '#/definitions/Authenication_Request'
+      responses:
+        '200':
+          description: Success Response
+          schema:
+            $ref: '#/definitions/Authenication_Success_Response'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/errorModel'
+
+definitions:
+  Authenication_Request:
+    type: object
+    required:
+      - ServiceRequestDetail
+      - UserCredential
+    properties:
+      ServiceRequestDetail:
+        type: object
+        properties:
+          OwnerId:
+            type: string
+            default: "27"
+          ResponseType:
+            type: string
+            enum: ["JSON","XML"]
+            default: "JSON"
+          BrowserIp:
+            type: string 
+            default: "192.168.5.98"
+          ServiceRequestVersion:
+            type: string
+            default: "2.0"
+      UserCredential:
+        type: object
+        properties:
+          UserName: 
+            type: string
+            default: "cwagent"
+          Password:
+            type: string
+            default: "sKVSbX7wj8UYYAaar4amxQ=="
+            
+  Authenication_Success_Response:
+    type: object
+    required:
+      - RequestStatus
+      - Token
+    properties:
+          RequestStatus:
+            type: string
+          LoginStatus:
+            type: string
+          Token:
+            type: string
+          UserRole:
+            type: string
+          UserPrimaryObjectId:
+            type: string
+          UserPrimaryObjectType:
+            type: string
+       
+  errorModel:
+    type: object
+    required:
+      - RequestStatus
+      - MessageDetail
+    properties:
+      RequestStatus:
+        type: string
+      MessageDetail:
+        type: object
+        properties:
+          MessageCode:
+            type: string
+          MessageType:
+            type: string
+          UserMessage:
+            type: string
+          MessageLevel:
+            type: string
+          MessageSeverity:
+            type: string
+          MessageList:
+            type: object
+            properties:
+              Message:
+                type: array
+                items:
+                  type: string      

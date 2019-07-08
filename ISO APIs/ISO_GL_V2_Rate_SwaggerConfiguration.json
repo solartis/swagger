@@ -81,1896 +81,3138 @@
 	},
 	"definitions": {
 		"Request": {
-			"type": "object",
-			"properties": {
-			"OwnerID":  {
-					"type": "string",
-					"default":"1"
-					},
-			"ServiceRequestDetail": {
-				"type": "object",
-				"properties": {
-					"EndClientUserUniqueSessionId": {
-							"type": "string",
-							"default":"1.0"
-							},
-					"ServiceRequestVersion": {
-							"type": "string",
-							"default":"1.0"
-							},
-					"LanguageCode": {
-							"type": "string",
-							"default":"en"
-							},
-					"UserName": {
-							"type": "string",
-							"default":"isorateadmin"
-							},
-					"RegionCode": {
-							"type": "string",
-							"default":""
-							},
-					"ServiceResponseVersion": {
-							"type": "string",
-							"default":"1.0"
-							},
-					"ResponseType": {
-							"type": "string",
-							"default":"json"
-							},
-					"Token": {
-							"type": "string",
-							"default":"QeRXLmUY7xEFSHjHMcCuhauJEl+in5Huh0cS+CLndfy+4m82ZwGrPI58uSH0CYZs4cazG0Em3MQf73wuurBsEeFBdKaiqqfDvabmpEfprzsaw3Q7JHhb1ZEcyCvKND2i6jHI5gOlLpkmJNncsa5FKyUXN0vQkdFsMZckXUjZJOTwN/JZxZbU0Q0pwv/YW6dLcWqUL677bxWW3Suj2AgTmdIwOH0RaC5+E0qUpAAp+2thdJjkopHpT7/cguUUVxNTyKAjDhxHSfSyfeT75v2YN6qfBMiIR9Ry5sQhau90fAC6t9RxzN2iCnn1rTYZMlWjMCiG0yzK/Y9ryC0de83rpGMpmpA70JCx33fcSww89zJoGTgLhPT1LGW1Wickra244f9r0PJF9s/qPMXEUDYFUWmVHnqnu/iGbCzHex2+u5NTZT4XqXxrfxa3rxA6Y5BikR6a7ERwdiXHvaNQlmhS1Vlk4maL91KdL3Cd8tPsuE5cMQc9gwMOMr41v+IEJEehpZbfRQKLWrEKCj7RaIFDHcJJHZSNZteG5vSmHzzCiEdx2Kbl+7l1V6PtNJ6KAvSDABcx/sh3eqadipKV37dZcHw3Ylb65AeKiPLwOAJ3Sf11o+pMDxkZgGpVuoJmIELzYEqGNDO+MDPOLor3RIYPNZTPUZq4JlkVMVzNavSAfC0LOJPTp5Gx6RWz19oKb5pFkT40VSO99ym2a1nXgyz629zG1Mwjrzw+Ei+iOtazKzplbiSGNPBv9mKtbxWhlnRH6HzBcwp+i4x5xBtzPGfCBfqXFbE7HWV0W53OGz4s9mDW7TnQLJnygnry5esOj7JKUK1yj4mIsjGpIb8l/PjYX333NJbABtGboz9YZkDjE9mKG19A6JhRgkPJlObp1C2FHm69NeNsT+Emy9lcGKE39Bgvuz+Jkbfss1meINQ9nrf+QXypF4mn3PqWOv90nSLusvJ0E9tBEemiJoCH5IifmRgvuz+Jkbfss1meINQ9nrdB6fdxQtO0PpsPPo6xUNoyKzKQxu5GFmchkU0ulZ3JGLk3XEFDJ2sMiC4orFYMjpfOVXM7dAWLJYxFGIkB9yhdbHnqZk4HmXQ6EZrrFJpQkU8lIAmbsL3lMDrkYq/mlhtBm+UmQv+S0DH5FOO6wVBQ2kdvsaGk535QmgdKJoY4kk8kKk3qBLD/iRjudOpbH7iAEDfkZmDamKCmDoAVNYTbk61AhSx7XHAon/uG3Jbl9hIkquzLCG79PFGmsQF3qI8Q5O8pmync1rD1ekEwgc+XTh0qFa3PAEWPfjVaHpNpy7thrLOsHp4Yft8mCFQX5zoZFWg+ktiVvyaXLk1CHT9Q9E+hueOvUPyPTThxapYMXN2SF4YfzxQjWbNqC8byXxzw55ECUNlfLucfcYnHw0WYfm1XAPtUAdmaanWRBJ6yvZ8/upvipu33grsX8eE4JmcoAK5OQu1pJJXLrO3sBi27QQhukVAMOodkVW8JA9z6olOY+6z32vdo8KGMJWthl8tI28oPAkZefZxv33QDVMzHJBn5oDvyRJAulYnokHhtmbY/0pGQhciwCEXR8XdsrVZch4Vr1dC3pCTjxpiv4Diu8CSLPa/x/Pi8favKQC6rr4bj6tEuhMlD9EpI568R7J5uAm8sUqbTdGxjtpi6g+l0n0Ix7+8FGpgQiG/2Bi5d1F6SEw9Jf3g34hgp2yGwSIuWhu+4H8IdCjHbDMdVBu9P0n0m9L0OQ0j4RLBIhAlrNQIbXShqjKcHtezTTYyxyEczqSQozijghbtJ2rG02pJLNbEY33zKcgE7Ejpk1QXt/r5mWYeXsiaKEug2C8zbeEn6NSwOr9+tuaG5YOXi/dQKsbUDUr6ClSu1pzX4Dh7zPqmXBSUOLFnuKg+EB4gnS4JhM3RvYhUtapPubeem1sccOf1wEgxWl77bz+eWDydn9Q=="
-							},
-					"OwnerId": {
-							"type": "string",
-							"default":"1"
-							}
-			}
-			},
-			  "ProductNumber": {
-							"type": "string",
-							"default":"ISOGL"
-							},
-			  "ProductVerNumber": {
-							"type": "string",
-							"default":"ISO_GL_V2"
-							},
-			  "EventName": {
-							"type": "string",
-							"default":"GL_RatingEvent_V1"
-							},
-			  "EffectiveDate": {
-							"type": "string",
-							"default":"2019-02-01"
-							},
-			  "ExpirationDate": {
-							"type": "string",
-							"default":"2019-02-01"
-							},
-			  "LastRateLookUpDate": {
-							"type": "string",
-							"default":"2019-03-12"
-							},
-			  "State":{
-							"type": "string",
-							"default":"AL"
-							},
+		  "type":"object",
+		  "properties":{
+		    "ExpirationDate":{
+		      "type": "string",
+		      "default": "2020-02-01"
+		    },
+		    "County":{
+		      "type": "string",
+		      "default": "Borough of Richmond"
+		    },
+		    "State": {
+		      "type": "string",
+		      "default": "AL"
+		    },
+		    "GeneralLiability":{
+		      "type":"array",
+		      "items":{
+		        "properties":{
+		          "GeneralLiabilityLocation":{
+		            "type":"array",
+		            "items":{
+		              "properties":{
+		          "GeneralLiabilityDesignatedLocGeneralAggLimit":{
+		            "type":"array",
+		            "items":{
+		              "properties":{
+		                "ManualPremium":{
+		                 "type": "string",
+		                 "default": "0"
+		                }
+		              }
+		            }
+		          },
+		          "OwnersContractorsTerritory":{
+		            "type": "string",
+		            "default": "999"
+		          },
+		          "State":{
+		            "type": "string",
+		            "default": "AL"
+		          },
+		          "UniqueIdentifier":{
+		            "type": "string",
+		            "default": ""
+		          },
+		          "ProdsCompldOpsBIDeductible":{
+		            "type": "string",
+		            "default":  "No Deductible"
+		          },
+		          "GeneralLiabilityDesignatedLocLiquorAggLimit": {
+		            "type":"array",
+		            "items":{
+		              "properties":{
+		                "ManualPremium":{
+		                  "type": "string",
+		                  "default": "0"
+		                }
+		            }
+		            }
+              },
+              "PollutionTerritory":{
+                "type": "string",
+		            "default":"999"
+		            },
+          "TerrorismTerritory": {
+            "type": "string",
+            "default":"502"
+            },
+          "CertifiedActsOfTerrorismManhattan":{ 
+            "type": "string",
+            "default":"Yes"
+            },
+          "ProdsCompldOpsBIPDDeductible":{ 
+             "type": "string",
+            "default":"No Deductible"
+            },
+            "GeneralLiabilityExclAllHazardsInConnectionWithDesignatedPrem":{
+              "type":"array",
+              "items":{
+              "properties":{
+                 "ManualPremium":{
+                   "type": "string",
+                    "default":"0"
+                 }
+              }
+              }
+            },
+            "PremOpsBIDeductible":{
+             "type": "string",
+            "default":"No Deductible"
+            },
+            "ZipCode":{
+              "type": "string",
+               "default":"35005"
+            },
+            "CertifiedActsOfTerrorismTerr":{
+              "type": "string",
+               "default":"Yes"
+            },
+            "ProdsCompldOpsPDDeductible":{
+               "type": "string",
+               "default":"No Deductible"
+            },
+            "GeneralLiabilityExclDamageToWorkPerformedBySubcontractorsOnYourBehalfDesignSitesOps":{
+              "type":"array",
+              "items":{
+                "properties":{
+                  "ManualPremium":{
+                   "type": "string",
+                    "default":"0"
+                 }
+                }
+              }
+            },
+            "PremOpsBIPDDeductible":{
+             "type": "string",
+            "default":"No Deductible" 
+            },
+            "GeneralLiabilityAddlInsdMgrsLessorsPrem":{
+             "type":"array",
+             "items":{
+               "properties":{
+                 "GeneralLiabilityAddlInsdMgrsLessorsPremDetail":{
+                   "type":"array",
+                   "items":{
+                     "properties":{
+                       "ManualPremium":{
+                         "type": "string",
+                         "default":"0"
+                       }
+                     }
+                   }
+                 }
+               }
+             }
+            },
+             "LiquorDeductible":{
+               "type": "string",
+               "default":"500 Per Claim" 
+             },
+             "ProdsCompldOpsTerritory":{
+               "type": "string",
+               "default":"999"
+             },
+             "GeneralLiabilityExclExplosionCollapseUndrgrdPropDmgHazardSpecifiedOps":{
+               "type":"array",
+               "items":{
+                 "properties":{
+                   "ManualPremium":{
+                     "type":"string",
+                     "default":"0"
+                   }
+                 }
+               }
+             },
+             "PremOpsPDDeductible":{
+              "type":"string",
+              "default":"No Deductible"
+             },
+             "GeneralLiabilityAddlInsdOwnersLesseesContrctrsCompldOpsLocLvl":{
+              "type":"array",
+              "items":{
+                "properties":{
+                  "GeneralLiabilityAddlInsdOwnersLesseesContrctrsCompldOpsLocLvlDetail":{
+                   "type":"array",
+                   "items":{
+                "properties":{ 
+                  "ManualPremium":{
+                    "type":"string",
+                     "default":"0"
+                  }
+                }
+                   }
+                  }
+                }
+              }
+             },
+             "LiquorLiabTerr":{
+              "type":"string",
+              "default":"" 
+             },
+             "ProductWithdrawalDeductible":{
+                "type":"string",
+                "default":"No Deductible"
+             },
+             "GeneralLiabilityExclExplosionCollapseUndrgrdPropDmgHazardSpecifiedOpsExcepted":{
+               "type":"array",
+               "items":{
+                 "properties":{
+                    "ManualPremium":{
+                     "type":"string",
+                     "default":"0" 
+                    }
+                 }
+               }
+             },
+             "PremisesOperationsTerr":{
+              "type":"string",
+              "default":"" 
+             },
+             "GeneralLiabilityClassification":{
+               "type":"array",
+               "items":{
+                 "properties":{
+               "RailroadPremiumBasis": {
+                 "type":"string",
+                 "default":"Total Cost"
+                 },
+              "PremOpsBIDeductible":{
+                "type":"string",
+                "default":"No Deductible"
+                },
+              "GeneralLiabilityClassificationOwnersContractorsCoverage.ELPOverOneHundred":{
+                "type":"string",
+                "default":"10000"
+                },
+              "ProdsCompldOpsBIPDDeductibleFactorOverride":{
+                "type":"string",
+                "default":"0"
+                },
+              "LiquorExposureOnPremises": {
+                 "type":"string",
+                "default":"Yes"
+                },
+              "EDLClassCode": {
+                 "type":"string",
+                "default":"92900"
+                },
+              "ProductWithdrawalExposure": {
+                 "type":"string",
+                "default":"0"
+                },
+              "OwnersContractorsExposure": {
+                 "type":"string",
+                "default":"10000000"
+                },
+              "LeadIsResidentialRiskWithUnitsConstructedPrior1978": {
+                "type":"string",
+                "default":"No"
+                },
+              "StopGapIncrdLimitFactorOverride":{ 
+               "type":"string",
+               "default":"0"
+              },
+              "PremOpsPDDeductible":{
+                 "type":"string",
+                "default":"No Deductible"
+                },
+              "LiquorClassCode":{ 
+                 "type":"string",
+                "default":"59211"
+              },
+              "NumPassgrFreightTrains": {
+                 "type":"string",
+                "default":"21 - 40"
+                },
+              "IfAnyBasis": {
+                 "type":"string",
+                "default":"No"
+                },
+              "UniqueIdentifier":{ 
+                 "type":"string",
+                "default":""
+              },
+              "ProdsCompldOpsPremiumBasis":{
+                 "type":"string",
+                "default":"Total Cost"
+                },
+              "RiskLicensedOrCertifiedToUsePesticidesInComplianceWithTheStructuralPestControlAct": {
+                 "type":"string",
+                "default":""
+                },
+              "PremOpsBIDeductibleFactorOverride":{
+                 "type":"string",
+                "default":"0"
+                },
+              "GeneralLiabilityClassificationOwnersContractorsCoverage.ELPOverOneMillion":{ 
+                 "type":"string",
+                "default":"10000"
+                },
+              "ProdsCompldOpsCov":{
+                 "type":"string",
+                "default":"Products/Completed Operations"
+                },
+              "LiquorPremiumBasis":{
+                 "type":"string",
+                "default":"Gross Sales"
+                },
+              "EDLClassDescription": {
+                 "type":"string",
+                "default":"Payroll Exposure Basis"
+                },
+              "ProductWithdrawalPremiumBasis": {
+                 "type":"string",
+                "default":"Gross Sales"
+              },
+              "OwnersContractorsPremiumBasis": {
+               "type":"string",
+                "default":"Total Cost"
+              },
+              "LeadNumUnitsWithLOC": {
+                 "type":"string",
+                "default":"0"
+                },
+              "TotalCostWorkTrainsOrOtherRREquipmtAssigned":{
+                 "type":"string",
+                "default":""
+                },
+              "PremOpsPDDeductibleFactorOverride": {
+                 "type":"string",
+                "default":"0"
+              },
+              "LiquorClassDescription": {
+                 "type":"string",
+                "default":"Package stores,retail establishment selling alcohol for consumption off premises"
+                },
+              "ClassCode":{ 
+                 "type":"string",
+                "default":"10010"
+              },
+              "OtherThanProdsCompldOpsCov":{
+                 "type":"string",
+                "default":"Premises/Operations"
+                },
+              "IfAnyBasisProdsCompldOps":{
+                 "type":"string",
+                "default":"No"
+                },
+              "ProductWithdrawalCoverage":{
+                 "type":"string",
+                "default":"Products/Completed Operations"
+                },
+              "SpecialProtectiveHighwayClassCode":{
+                 "type":"string",
+                "default":""
+                },
+              "PremOpsBIPDDeductible":{
+                 "type":"string",
+                "default":"No Deductible"
+                },
+				 "GeneralLiabilityCanoesOrRowboats": { "type": "array","items":{"properties":
+			                {
+			                  "ManualPremium":{
+								   "type": "string",
+								   "default": "0"
+			                }		              
+						  }}},
+			              "ProdsCompldOpsELPOverride": {
+								   "type": "string",
+								   "default":"0"
+								   },
+			              "LmtdProdsWithdrawalDeductibleFactorOverride": {
+								   "type": "string",
+								   "default":"0"
+								   },
+			              "EDLExposure": {
+								   "type": "string",
+								   "default":"99999"
+								   },
+			              "PublicOrPrivateSchool":{
+								   "type": "string",
+								   "default": ""
+								   },
+			              "PollutionClassCode": {
+								   "type": "string",
+								   "default":"90100"
+								   },
+			              "LeadNumUnitsWithLOIC": {
+								   "type": "string",
+								   "default":"0"
+								   },
+			              "USTClassCode":{
+								   "type": "string",
+								   "default": ""
+								   },
+			              "PremOpsPremiumBasis":{
+								   "type": "string",
+								   "default": "Total Cost"
+								   },
+			              "LiquorDedFactorOverride":{
+								   "type": "string",
+								   "default": "1"
+								   },
+			              "ClassDescription":{
+								   "type": "string",
+								   "default": "Contrctrs-sub work connctn w/street,highway constrctn,recons repair-not elevated"
+								   },
+			              "ProductWithdrawalDeductible":{
+								   "type": "string",
+								   "default": "No Deductible"
+								   },
+			              "OwnersContractorsClassCode":{
+								   "type": "string",
+								   "default": "15192"
+								   },
+			              "InjurySuprvsrInspctrsOtherEmpsCov":{
+								   "type": "string",
+								   "default": "Included"
+								   },
+			              "SpecialProtectiveHighwayClassDescription":{
+								   "type": "string",
+								   "default": ""
+								   },
+			              "PremOpsBIPDDeductibleFactorOverride":{
+								   "type": "string",
+								   "default": "0"
+								   },	
+                "GeneralLiabilitySnowplowOperationsCoverage":{
+                  "type":"array",
+                  "items":{
+                    "properties":{
+                      "ManualPremium":{
+                        "type":"string",
+                        "default":"0"
+                      }
+                    }
+                  }
+                },
+                "ProdsCompldOpsExposure":{
+                "type":"string",
+                "default":"9500000"
+                },
+              "LmtdProdsWithdrawalPremium":{
+                "type":"string",
+                "default":""
+                },
+              "EDLPremiumRatingBase": {
+                "type":"string",
+                "default":"Payroll"
+                },
+              "RailroadClassCode": {
+                "type":"string",
+                "default":"40013"
+                },
+              "PollutionClassDescription": {
+                "type":"string",
+                 "default":"Pollution Liability Coverage Form"
+                 },
+              "LeadNumUnitsWithoutLOCorLOIC": {
+                "type":"string",
+                "default":"0"
+                },
+              "USTClassDescription": {
+                "type":"string",
+                "default":""
+                },
+              "ProdsCompldOpsBIDeductible": {
+                "type":"string",
+                 "default":"No Deductible"
+                 },
+              "LiquorDeductible": {
+                "type":"string",
+                "default":"500 Per Claim"
+                },
+              "ClimbingFacilityOperator": {
+                "type":"string",
+                "default":"No"
+                },
+              "ProductWithdrawalDeductibleFactorOverride": {
+                "type":"string",
+                "default":"0"
+                },
+              "OwnersContractorsClassDescription": {
+                "type":"string",
+                "default":"Principals Protective Liability-Liability To Independent Contractors-(Cov A)-NOC"
+                },
+              "SpecialProtectiveHighwayExposure": {
+                "type":"string",
+                "default":"0"
+                },
+              "PremOpsELPOverride": {
+                "type":"string",
+                "default":"0"
+                },
+                "GeneralLiabilityTerrorism": {
+                  "type":"array",
+                  "items":{
+                    "properties":{
+                  "PremisesOperationsTerritory": {
+                    "type":"string",
+                    "default":"503"
+                    },
+                  "Territory":{ 
+                  "type":"string",
+                  "default":"502"
+                  }
+                    }
+                  }
+              },
+              "ProdsCompldOpsIncrdLimitTableAssignmentOverride": {
+                "type":"string",
+                  "default":"A"
+                  },
+              "MedPayCovForStud": {
+                "type":"string",
+                  "default":"No"
+                  },
+              "ElevatorContractorsClassCategory": {
+                "type":"string",
+                  "default":"Class I"
+                  },
+              "RailroadClassDescription": {
+                "type":"string",
+                "default":"State or Federal Highway Projects"
+                },
+              "PollutionExposure": {
+                "type":"string",
+                  "default":"9999"
+                  },
+              "USTExposure": {
+                "type":"string",
+                  "default":"0"
+                  },
+              "ProdsCompldOpsBIDeductibleFactorOverride": {
+                "type":"string",
+                  "default":"0"
+                  },
+              "LiquorELPOverride": {
+                "type":"string",
+                  "default":"10"
+                  },
+              "Contractor": {
+                "type":"string",
+                  "default":"Yes"
+                  },
+              "ProductWithdrawalELPOverride": {
+                "type":"string",
+                  "default":"0"
+                  },
+              "OwnersContractorsELPOverOneMillionOverride": {
+                "type":"string",
+                  "default":"10000"
+                  },
+              "LeadCovWithNoLetter": {
+                "type":"string",
+                  "default":"No"
+                  },
+              "PremOpsExposure": {
+                "type":"string",
+                  "default":"9500000"
+                  },
+              "SpecialProtectiveHighwayPremiumBasis": {
+                "type":"string",
+                  "default":""
+                  },
+              "EstdContractCostWORRHzd": {
+                "type":"string",
+                  "default":"20"
+                  },
+                   "GeneralLiabilityElevatorsContractors": {
+                     "type":"array",
+                     "items":{
+                       "properties":{
+                
+                  "BodilyInjuryLimit": {
+                    "type":"string",
+                  "default":"1,000,000"
+                  },
+                  "PropertyDamageLimit": {
+                    "type":"string",
+                  "default":"500,000"
+                  }
+                     }
+                     }
+              },
+              "ProdsCompldOpsPDDeductible": {
+                 "type":"string",
+                  "default":"No Deductible"
+                  },
+              "MiscIfAnyBasis": {
+                 "type":"string",
+                  "default":"No"
+                  },
+              "RailroadExposure": {
+                 "type":"string",
+                  "default":"100000"
+                  },
+              "PollutionPremiumBasis": {
+                 "type":"string",
+                  "default":"Number of Tanks"
+                  },
+              "USTPremiumBasis": {
+                 "type":"string",
+                  "default":""
+                  },
+              "ProdsCompldOpsBIPDDeductible": {
+                 "type":"string",
+                  "default":"No Deductible"
+                  },
+              "LiquorExposure": {
+                 "type":"string",
+                  "default":"1000000"
+                  },
+              "DriverEducationProvider": {
+                 "type":"string",
+                  "default":"No"
+                  },
+              "ProductWithdrawalExpensesAndLiabilityIncrdLimitTableAssignmentOverride": {
+                 "type":"string",
+                  "default":"0"
+                  },
+              "OwnersContractorsELPOverride": {
+                 "type":"string",
+                  "default":"1000"
+                  },
+              "PremOpsIncrdLimitTableAssignmentOverride": {
+                 "type":"string",
+                  "default":"N/A"
+                  },
+              "LimitedCovForPersonalAndAdvertisingInjury": {
+                 "type":"string",
+                  "default":"No"
+                  },
+              "SprayPainting": {
+                 "type":"string",
+                  "default":"No"
+                  },
+              "EstimatedContractCostRatio":{
+                 "type":"string",
+                  "default":"20"
+                  },
+                  "GeneralLiabilityMarylandChangesLiabilityForHazardsOfLeadClassLvl": {
+                    "type":"array",
+                    "items":{
+                      "properties":{
+                  "NumberOfUnitsDwellingBuilt1979After": {
+                    "type":"string",
+                    "default":""
+                    },
+                  "NumberOfUnitsDwellingBuilt1979Before":{
+                    "type":"string",
+                     "default":""
+                  }
+                }
+                    }
+              },
+              "ProdsCompldOpsPDDeductibleFactorOverride": {
+                 "type":"string",
+                  "default":"0"
+                  },
+              "MunicipalityOperatesAFireDepartment": {
+                 "type":"string",
+                     "default":"Yes"
+                     },
+              "LeadConstructedPriorto1978PrimaFacieEvidenceofCompliance": {
+                 "type":"string",
+                     "default":"No"
+                     },
+              "LeadHaveAllPremisesConstructedInOrAfter1978": {
+                 "type":"string",
+                     "default":"Yes"
+                     },
+              "LeadNumberofUnitsLeadFree": {
+                 "type":"string",
+                     "default":"0"
+                     },
+              "LeadNumberofUnitsLeadMitigatedByIndependentClearanceInspection": {
+                 "type":"string",
+                     "default":"0"
+                     },
+              "LeadNumberofUnitsLeadMitigatedByPresumptiveCompliance": {
+                 "type":"string",
+                     "default":"0"
+                     },
+              "LeadNumberofUnitsLeadMitigatedByVisualInspection": {
+                 "type":"string",
+                     "default":"0"
+                     },
+              "LeadNumberofUnitsLeadSafe": {
+                 "type":"string",
+                     "default":"0"
+                     },
+              "LeadPredominateStatusOfLeadSafety":{
+                 "type":"string",
+                     "default":""
+                     },
+              "LeadPremisesConsideredLeadFree": {
+                 "type":"string",
+                     "default":"Yes"
+                     },
+              "LeadRentalPropertyDefinedinRhodeIslandGeneralLaws": {
+                 "type":"string",
+                     "default":"No"
+              }
+               }
+               }
+             },
+             "LiquorLiabTerritory": {
+             "type":"string",
+              "default":"503"
+              },
+             "RailroadTerritory": {
+               "type":"string",
+               "default":"999"
+               },
+               "GeneralLiabilityLimitationOfCoverageToInsuredPremisesLocLvl": {
+                 "type":"array",
+                 "items":{
+                   "properties":{
+              "ManualPremium": {
+                "type":"string",
+              "default":"0"
+              }
+            }
+                 }
+          },
+          "PremisesOperationsTerritory": {
+            "type":"string",
+              "default":"503"
+          }
+		         }
+		          }
+		          },
+		          "GeneralLiabilityExclusionProductTampering": {
+		            "type":"array",
+		            "items":{
+		              "properties":{
+          "ManualPremium": {
+            "type":"string",
+              "default":"0"
+          }
+        }
+		            }
+      },
+      "GeneralLiabilityExclMedPayCovInmatesPatientsPrisoners": {
+        "type":"array",
+        "items":{
+        "properties":{
+          "ManualPremium": {
+            "type":"string",
+              "default":"0"
+          }
+        }
+        }
+      },
+      "GeneralLiabilityDesignatedConstrctnProjGeneralAggregateLimit": {
+        "type":"array",
+        "items":{
+          "properties":{
+          "GeneralLiabilityDesignatedConstrctnProjGeneralAggregateLimitDetail": {
+            "type":"array",
+            "items":{
+              "properties":
+            {
+              "ManualPremium": {
+                "type":"string",
+              "default":"0"
+              }
+            }
+            }
+          }
+        }
+          
+        }
+      },
+      "GeneralLiabilityAddlInsdOwnersLesseesContrctrsAutomtcStatusWhenReqInConstrctnAgrmtWithYou": {
+        "type":"array",
+        "items":{
+          "properties":
+        {
+          "ManualPremium": {
+            "type":"string",
+              "default":"0"
+          }
+        }
+        }
+      },
+       "SRPLocationExposureOutsidePremisesPct": {
+         "type":"string",
+              "default":"4%"
+              },
+      "PollutionRetroactiveDate":{
+        "type":"string",
+          "default":"2019-01-01"
+              },
+          "GeneralLiabilityNewYorkChangesNonBindingArbitration": {
+            "type":"array",
+            "items":{
+              "properties":
+        {
+          "ManualPremium": 
+          {
+            "type":"string",
+          "default":"0"
+          }
+        }
+            }
+      },
+      "ExperienceRatingApplies":{
+         "type":"string",
+          "default":"Yes"
+        },
+        "GeneralLiabilityIllinoisChangesAdditionalInsuredCityOfChicagoScaffolding": {
+          "type":"array",
+          "items":
+          {
+            "properties":
+        {
+          "ManualPremium": {
+            "type":"string",
+          "default":"0"
+          }
+        }
+          }
+      },
+      "ERPExposuresOnSpecialUWBasisThirdLatestYearProdCompldOps": {
+        "type":"string",
+          "default":"1"
+        },
+        "GeneralLiabilityTotalPollutionExclusionForDesignatedProdsOrWork": {
+          "type":"array",
+          "items":{
+            "properties":
+        {
+          "GeneralLiabilityTotalPollutionExclusionForDesignatedProdsOrWorkDetail": {
+            "type":"array",
+            "items":
+            {
+              "properties":
+            {
+              "ManualPremium": {
+              "type":"string",
+              "default":"0"
+              }
+            }
+            }
+          }
+        }
+          }
+      },
+      "GeneralLiabilityExclConstructionMngmtErrorsOmissions": {
+        "type":"array",
+        "items":{
+          "properties":
+        {
+          "ManualPremium": 
+          {
+            "type":"string",
+              "default":"0"
+          }
+        }
+        }
+      },
+      "GeneralLiabilityAmndmtOfSectVExtddRptgPeriodsSpecificAccs": {
+        "type":"array",
+        "items":
+        {
+          "properties":
+        {
+          "GeneralLiabilityAmndmtOfSectVExtddRptgPeriodsSpecificAccsDetail": {
+            "type":"array",
+            "items":{
+              "properties":
+            {
+              "ManualPremium": {
+                "type":"string",
+              "default":"0"
+              }
+            }
+            }
+        }
+        }
+        }
+      },
+      "YearInClaimsMade": {
+        "type":"string",
+         "default":"2"
+         },
+      "ProdsWithdrawalCoverage": {
+        "type":"string",
+        "default":"No"
+        },
+      "ZipCode": {
+        "type":"string",
+        "default":"35005"
+        },
+      "LiquorPropertyDamageCommonCauseLimit": {
+        "type":"string",
+       "default":"10,000"
+       },
+	   
+	    "GeneralLiabilityNorthCarolinaSupplementalExtendedReportingPeriodEndorsementLiquorClaimsMade": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":  {
+                "type":"string",
+              "default":"0"
+        }
+      }}},
+      "ERPSecondLatestYearYIP":  {
+                "type":"string",
+              "default":"3"},
+      "SRPRiskRelativeDegreeOfExposurePct": 
+	   {
+                "type":"string",
+              "default":"0%"},
+      "CommercialPesticideApplicators":  {
+                "type":"string",
+              "default":""},
+      "GeneralLiabilityProfessionalLiabExclWebSiteDesigners": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": 
+		   {
+                "type":"string",
+              "default":"0"
+        }
+      }}},
+      "GeneralLiabilityHazardousMaterialContractors": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": 
+		   {
+                "type":"string",
+              "default":"0"
+        }
+      }}},
+      "GeneralLiabilityExclSpecificAccidentsProdsWorkOrLocation": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": 
+		   {
+                "type":"string",
+              "default":"0"
+        }
+      }}},
+		"GeneralLiabilityAddlInsdDesigntdPersonOrg": { "type": "array","items":{"properties":
+        {
+          "GeneralLiabilityAddlInsdDesigntdPersonOrgDetail": { "type": "array","items":{"properties":
+            {
+              "ManualPremium":  {
+                "type":"string",
+                "default":"0"
+            }
+          }}}
+        }
+      }},
+      "SRPClassificationPct": {
+                "type":"string",
+                "default":"0%"},
+      "PackagePolicy": {
+                "type":"string",
+                "default":"No"},
+      "GeneralLiabilityChangesNonBindingArbitration": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "EachPersonLossOfMeansOfSupportLimit": {
+                "type":"string",
+                "default":"25,000"},
+      "GeneralLiabilityInsuredsConsentToExcessRate": { "type": "array","items":{"properties":
+        {
+          "ExcessRatedPremium": {
+                "type":"string",
+                "default":"0"},
+          "ManualRatedPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "ERPExposuresOnSpecialUWBasisLatestYearProdCompldOps": {
+                "type":"string",
+                "default":"1"},
+      "GeneralLiabilitySupplementalExtendedReportingPeriodEndtProdsCompldOps": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityLimitedFungiOrBacteriaCoverage": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"},
+          "FungiBacteriaLiabAggregateLimit": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityExclusionOfCertifiedActsOfNuclearBiologicalChemicalActsTerrorismCapOnLossesFromCertifiedActs": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityExclFinancialServ": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityConstrctnProjMngmtProtvLiabCov": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "PremOpsProdsRetroactiveDate": {
+                "type":"string",
+                "default":"2019-01-01"},
+      "LeadIsMultiplePremieseRiskConstructedBefore1978AndInOrAfter1978": {
+                "type":"string",
+                "default":""},
+      "SRPReductionInExpensesPct": {
+                "type":"string",
+                "default":"0%"},
+      "ERPPeriodEnds6MonthsPrior": {
+                "type":"string",
+                "default":"Yes"},
+      "GeneralLiabilityWaiverTransferRightsRecovery": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityPollutionExclLimitedExceptionShortTermEvent": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityExtendedReportingPeriodEndtForEmpBenefitsLiabCov": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityExclProductsProfessionalServicesOpticalHearingAidEstablishments": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityEmploymentRelatedPracticesExclusion": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityAmndmtOfCovTerrWorldwideCovWithSpecdExcptns": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},        
 				
-			
-			
-			"GeneralLiability": {
-					"type": "array",
-					"items": {
-						"properties": {
-						
-							  "State": {
-								"type": "string"
-								},
-							  "City": {
-								"type": "string"
-								},
-							  "ZipCode": {
-								"type": "string"
-								},
-							  "County": {
-								"type": "string"
-								},
-							  "GeneralLiabilityDamageToPremisesRentedToYouCoverage.LimitGovernmentalSubdivision": {
-								"type": "string"
-								},
-							  "GeneralLiabilityMedPayCoverage.Limit": {
-								"type": "string"
-								},
-							  "GeneralLiabilityCompositeRating.CompositeExposure": {
-								"type": "string"
-								},
-							  "GeneralLiabilityTerrorismEndorsementCoverage.CertifiedActsofTerrorismExposureClassFactorOverride": {
-								"type": "string"
-								},
-							  "AggregateLimit": {
-								"type": "string"
-								},
-							  "CPPGoverningState": {
-								"type": "string"
-								},
-							  "GeneralLiabilityCompositeRating.CompositeRating": {
-								"type": "string"
-								},
-							  "CPPIRPMFactor":{
-								"type": "string"
-								},
-							  "GeneralLiabilityCompositeRating.CompositeRatingExposureBasis": {
-								"type": "string"
-								},
-							  "EachCommonCauseLimit": {
-								"type": "string"
-								},
-							  "GeneralLiabilityCompositeRating.CompositeRatingExposureBasisOverride": {
-								"type": "string"
-								},
-							  "GeneralLiabilityCompositeRating.FinalAdjustedCompositeExposure":{
-								"type": "string"
-								},
-							  "EachElectronicDataIncidentLimit": {
-								"type": "string"
-								},
-							  "EachPollutionIncidentLimit": {
-								"type": "string"
-								},
-							  "EDLAggregateLimit": {
-								"type": "string"
-								},
-							  "EDLRetroactiveDate": {
-								"type": "string"
-								},
-							  "ERPActualExpectedLossRatio": {
-								"type": "string"
-								},
-							  "ERPDramaticChangeOnExposure":{
-								"type": "string"
-								},
-							  "ERPExpenseVariationApplies":{
-								"type": "string"
-								},
-							  "ERPExperienceModificationAllOtherSublines": {
-								"type": "string"
-								},
-							  "ERPExperienceModificationOverride": {
-								"type": "string"
-								},
-							  "ERPExposuresOnSpecialUWBasisLatestYearPremOps": {
-								"type": "string"
-								},
-							  "ERPExposuresOnSpecialUWBasisLatestYearProdCompldOps": {
-								"type": "string"
-								},
-							  "ERPExposuresOnSpecialUWBasisPremOpsCurrent": {
-								"type": "string"
-								},
-							  "ERPExposuresOnSpecialUWBasisProdCompldOpsCurrent": {
-								"type": "string"
-								},
-							  "ERPExposuresOnSpecialUWBasisSecondLatestYearPremOps": {
-								"type": "string"
-								},
-							  "ERPExposuresOnSpecialUWBasisSecondLatestYearProdCompldOps": {
-								"type": "string"
-								},
-							  "ERPExposuresOnSpecialUWBasisThirdLatestYearPremOps": {
-								"type": "string"
-								},
-							  "ERPExposuresOnSpecialUWBasisThirdLatestYearProdCompldOps": {
-								"type": "string"
-								},
-							  "ERPLatestYearEffectiveDate": {
-								"type": "string"
-								},
-							  "ERPLatestYearLatestValuationDate": {
-								"type": "string"
-								},
-							  "ERPLatestYearTotalIncludedLoss": {
-								"type": "string"
-								},
-							  "ERPLatestYearTypeOfPolicy": {
-								"type": "string"
-								},
-							  "ERPLatestYearWithSameCarrier":{
-								"type": "string"
-								},
-							  "ERPLatestYearYIP": {
-								"type": "string"
-								},
-							  "ERPPeriodEnds6MonthsPrior": {
-								"type": "string"
-								},
-							  "ERPSecondLatestYearEffectiveDate": {
-								"type": "string"
-								},
-							  "ERPSecondLatestYearLatestValuationDate": {
-								"type": "string"
-								},
-							  "ERPSecondLatestYearTotalIncludedLoss": {
-								"type": "string"
-								},
-							  "ERPSecondLatestYearTypeOfPolicy": {
-								"type": "string"
-								},
-							  "ERPSecondLatestYearWithSameCarrier":{
-								"type": "string"
-								},
-							  "ERPSecondLatestYearYIP": {
-								"type": "string"
-								},
-							  "ERPThirdLatestYearEffectiveDate": {
-								"type": "string"
-								},
-							  "ERPThirdLatestYearLatestValuationDate": {
-								"type": "string"
-								},
-							  "ERPThirdLatestYearTotalIncludedLoss": {
-								"type": "string"
-								},
-							  "ERPThirdLatestYearTypeOfPolicy": {
-								"type": "string"
-								},
-							  "ERPThirdLatestYearWithSameCarrier": {
-								"type": "string"
-								},
-							  "ERPThirdLatestYearYIP":{
-								"type": "string"
-								},
-							  "ERPYearsOfExperienceIncurred": {
-								"type": "string"
-								},
-							  "ExperienceBusinessStartDate": {
-								"type": "string"
-								},
-							  "ExperienceRatingApplies": {
-								"type": "string"
-								},
-							  "GeneralAggregateLimit": {
-								"type": "string"
-								},
-							  "IncidentLimit": {
-								"type": "string"
-								},
-							  "LiquorCoverageForm": {
-								"type": "string"
-								},
-							  "LiquorDeductible": {
-								"type": "string"
-								},
-							  "LiquorRetroactiveDate": {
-								"type": "string"
-								},
-							  "multistate": {
-								"type": "string"
-								},
-							  "OwnersContractorsAggregateLimit": {
-								"type": "string"
-								},
-							  "OwnersContractorsCoverageForm": {
-								"type": "string"
-								},
-							  "OwnersContractorsEachOccurrenceLimit":{
-								"type": "string"
-								},
-							  "PackageModEligibility": {
-								"type": "string"
-								},
-							  "PackageModFactor": {
-								"type": "string"
-								},
-							  "PackagePolicy": {
-								"type": "string"
-								},
-							  "PollutionAggregateLimit": {
-								"type": "string"
-								},
-							  "PollutionCleanUpCoverage": {
-								"type": "string"
-								},
-							  "PollutionRetroactiveDate": {
-								"type": "string"
-								},
-							  "PremiumDiscountPercentage": {
-								"type": "string"
-								},
-							  "PremOpsBIDeductible": {
-								"type": "string"
-								},
-							  "PremOpsBIPDDeductible": {
-								"type": "string"
-								},
-							  "PremOpsPDDeductible": {
-								"type": "string"
-								},
-							  "PremOpsProdsCoverageForm": {
-								"type": "string"
-								},
-							  "PremOpsProdsEachOccurrenceLimit": {
-								"type": "string"
-								},
-							  "PremOpsProdsRetroactiveDate": {
-								"type": "string"
-								},
-							  "ProdsCompldOpsAggregateLimit":{
-								"type": "string"
-								},
-							  "ProdsCompldOpsBIDeductible": {
-								"type": "string"
-								},
-							  "ProdsCompldOpsBIPDDeductible": {
-								"type": "string"
-								},
-							  "ProdsCompldOpsPDDeductible": {
-								"type": "string"
-								},
-							  "ProdsWithdrawalCoverage": {
-								"type": "string"
-								},
-							  "ProductsWithdrawalAggregateLimit": {
-								"type": "string"
-								},
-							  "ProductWithdrawalCoverageType": {
-								"type": "string"
-								},
-							  "ProductWithdrawalDeductible": {
-								"type": "string"
-								},
-							  "ProductWithdrawalParticipationPercentage": {
-								"type": "string"
-								},
-							  "RailroadAggregateLimit": {
-								"type": "string"
-								},
-							  "RailroadCoverageForm": {
-								"type": "string"
-								},
-							  "RailroadEachOccurrenceLimit": {
-								"type": "string"
-								},
-							  "RetroactiveDateApplies": {
-								"type": "string"
-								},
-							  "RiskType": {
-								"type": "string"
-								},
-							  "ScheduleRatingModificationApplies": {
-								"type": "string"
-								},
-							  "SRPClassificationPct": {
-								"type": "string"
-								},
-							  "SRPCooperationMedicalFacilitiesPct": {
-								"type": "string"
-								},
-							  "SRPCooperationSafetyProgramPct": {
-								"type": "string"
-								},
-							  "SRPEmployeesPct": {
-								"type": "string"
-								},
-							  "SRPEquipmentPct": {
-								"type": "string"
-								},
-							  "SRPLocationExposureInsidePremisesPct":{
-								"type": "string"
-								},
-							  "SRPLocationExposureOutsidePremisesPct": {
-								"type": "string"
-								},
-							  "SRPPremisesPct": {
-								"type": "string"
-								},
-							  "Subline": {
-								"type": "string"
-								},
-							  "TerrorismCoverage": {
-								"type": "string"
-								},
-							  "TRIAExpirationDate":{
-								"type": "string"
-								},
-							  "TRIAExtended": {
-								"type": "string"
-								},
-							  "TRIPTerminatesBeforeExpirationDate": {
-								"type": "string"
-								},
-							  "UndergroundStorageTankRetroactiveDate": {
-								"type": "string"
-								},
-							  "USTAggregateLimit":{
-								"type": "string"
-								},
-							  "YearInClaimsMade":{
-								"type": "string"
-								},
-								
-							 "GeneralLiabilityAbuseMolestationExcl": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityAbuseOrMolestationExclusionSpecifiedProfessionalServices": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityAddlInsdLessorOfLeasedEquipmtAutomtcStatusWhenReqdInLeaseAgrmtWithYou": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityAddlInsdOwnersLesseesContrctrsAutomtcStatusForOtherPartiesWhenReqInConstrctnAgrmt": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityAddlInsdOwnersLesseesContrctrsAutomtcStatusWhenReqInConstrctnAgrmtWithYou": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityAmendmentOfInsuredContractDefinition": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityAmendmentOfPersonalAndAdvertisingInjuryDefinition": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityAmndmtOfCovTerrWorldwideCov": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityAmndmtOfCovTerrWorldwideCovWithSpecdExcptns": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityAmndmtOfLimitsOfIns": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityAmndmtOfLiquorLiabExcl": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityAmndmtOfLiquorLiabExclExcptnScheddActivsProductsCompletedOps": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityAmndmtOfLiquorLiabExclProdsCompldOps": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityAmndmtTravelAgencyToursLimitationOfCov": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityBindingArbitration": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityBoats": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityCapOnLossesFromCertifiedActsOfTerrorism": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityCertifiedActsOfTerrorismAggregateLimitCapOnLossesFromCertifiedActsOfTerrorismPremOps": {"type": "array","items":{"properties":
-								{
-								  "AggregateLimit": 	{	"type": "string"	},
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityCertifiedActsOfTerrorismAggregateLimitCapOnLossesFromCertifiedActsOfTerrorismProdsCompldOps": {"type": "array","items":{"properties":
-								{
-								  "AggregateLimit": 	{	"type": "string"	},
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityCollegeSchool": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityCollegeSchoolLimitedForm": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityCommunicableDiseaseExclusion": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityCommunicableDiseaseExclusionProdsCompldOps": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityConditionalExclusionOfTerrorismNuclearBiologicalChemicalDispositionOfAct2002": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityConditionalLimitationOfCoverageTerrorismSublimitAnnualAggregateTerrorismAct2002": {"type": "array","items":{"properties":
-								{
-								  "AggregateLimit": {	"type": "string"	},
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityConstrctnProjMngmtProtvLiabCov": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityContractualLiabLimitation": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityContractualLiabRailroads": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityCoverageExtensionCoverageAProductRestorationExpense": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityCovForInjuryLeasedWorkers": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityCovForInjuryLeasedWorkersUndergroundStorageTanks": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityDruggistsBroadenedCov": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityEarlierNoticeOfCancellationProvidedByUs": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityEarlierNoticeOfCancellationProvidedByUsOwnersContractors": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityElectronicDataLiabEndt": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityElectronicDataLiabilityCoverageForm": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityEmployeeBenefitsLiabCovClaimsMade": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityEmploymentRelatedPracticesExclusion": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityEmploymentRelatedPracticesExclusionOwnersContrctrsPollution": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExcessProvisionVendors": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclAdultDayCareCenters": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclAthleticSportsParticipants": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclBodilyInjuryToRailroadPassengers": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclConstructionMngmtErrorsOmissions": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclDamageToPremRentedToYou": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclDamageToWorkPerformedBySubcontractorsOnYourBehalf": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclDescribedHazardsCarnivalsCircusesFairs": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclDesignatedOngoingOps": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclDesignatedOpsCovByConsolidatedWrapUpInsProgramPolLvl": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclDesignatedProducts": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclDesignatedProfessionalServices": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclDesignatedWork": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclDiagnosticTestingLabs": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclEmployeesAndVolunteerWorkersAsInsureds": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclExistenceOrMaintenanceOfStreetsRdsHwysOrBridges": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclFiduciaryOrRepLiabOfFinclInstitutions": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclFinancialServ": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclFuneralServ": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclInjuryToVolunteerFirefighters": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclIntercompanyProductsSuits": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclInternetServicePrvdrsAndInternetAccessPrvdrsErrorsOmissions": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclLawEnforcementActivities": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclMedPayCovInmatesPatientsPrisoners": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclMedPayToChildrenDayCareCenters": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclNewEntities": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclOilGasProducingOps": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclPersonalAdvertisingInjury": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclProductsCompletedOperationsHazard": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclProductsProfessionalServicesDruggists": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclProductsProfessionalServicesOpticalHearingAidEstablishments": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclProfessionalServicesBloodBanks": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclProfessionalVeterinarianServices": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclRiotCivilCommotionMobActionGovtSubdivision": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclRollingStockRailroadConstruction": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclSalineSubstancesContamination": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclSpecificAccidentsProdsWorkOrLocation": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclSpecificAccidentsProdsWorkOrLocationProdsCompldOps": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclTestingConsultingErrorsOmissions": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclUndergroundStorageTankIncidents": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclusionAccessOrDisclosureOfConfidentialOrPersonalInfoAndDataRelatedLiabLmtdBIExcptnNotInclddCGL": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclusionAccessOrDisclosureOfConfidentialOrPersonalInformationCovBOnly": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclusionExteriorInsulationAndFinishSystemsOwnersContractors": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclusionExteriorInsulationAndFinishSystemsPremOpsProds": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclusionExteriorInsulationAndFinishSystemsProdsCompldOps": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclusionOfCertifiedActsOfNuclearBiologicalChemicalActsTerrorismCapOnLossesFromCertifiedActs": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclusionOfCertifiedActsOfTerrorism": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclusionOfNewlyAcquiredOrganizationsAsInsureds": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclusionOfPunitiveDamagesRelatedToACertifiedActOfTerrorism": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclusionOfTerrorismNuclearBiologicalChemicalTerrorism": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclusionProductReplacementRepairOrRepurchase": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclusionProductTampering": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclusionUnmannedAircraft": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclusionUnmannedAircraftCovAOnly": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclusionUnmannedAircraftCovBOnly": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclusionUnmannedAircraftOwnersAndContractors": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclVolunteerWorkers": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclYear2000ComputerReltdElectronicProblems": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclYear2000ComputerReltdOtherElectronicProblemsProdsCompldOps": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExclYear2000ComputerReltdOtherElectronicProblemsWithExceptionForBIOnYourPrem": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExtendedReportingPeriodEndorsementForElectronicDataLiabilityCoverage": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExtendedReportingPeriodEndt": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExtendedReportingPeriodEndtForEmpBenefitsLiabCov": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityExtendedReportingPeriodForTerrorismCoverage": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityFinancialInstitutionsRptgProvisionLmtnToFiduciaryOrRepInterest": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityFungiOrBacteriaExclusion": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityFungiOrBacteriaExclusionOwnersContractorsProductsCompleted": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityGovernmentalSubdivisions": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityHazardousMaterialContractors": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityInsuredSiteDefinition": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityLawnCareServicesCov": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityLimitationOfCoverageForTerrorismSubLimitAnnualAggregateBasis": {"type": "array","items":{"properties":
-								{
-								  "AggregateLimit": {	"type": "string"	},
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityLimitationOfCovToDesignatedPremOrProject": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityLimitedContractualLiabCovPersonalAdvertisingInj": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityLimitedContractualLiabilityRailroads": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityLimitedCovForDesignatedUnmannedAircraft": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityLimitedCovForDesignatedUnmannedAircraftCovAOnly": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityLimitedCovForDesignatedUnmannedAircraftCovBOnly": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityLimitedExclContractorsProfessionalLiab": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityLimitedExclDesignatedOpsCovByConsolidatedWrapUpInsProgram": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityLimitedExclPersonalAdvertisingInjLawyers": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityLimitedFungiOrBacteriaCoverage": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityLimitedPollutionLiabExtensionEndt": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityLimitedProductWithdrawalExpenseEndtPolLvl": {"type": "array","items":{"properties":
-								{
-								  "AggregateLimit": 	{	"type": "string"	},
-								  "Deductible": {	"type": "string"	},
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityLimitedTerrorismExclOtherThanCertifiedActsOfTerrorismCapOnLossesFromCertifiedActsOfTerrorism": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityLiquorLiab": {"type": "array","items":{"properties":
-								{
-								  "ManualPremium":	{	"type": "string"	}
-								}
-							  }},
-							  
-							"GeneralLiabilityLocation": 
-							{
-							"type": "array",
-										"items": {
-											"properties": {
-												"GeneralLiabilityClassification":
-												{
-												"type": "array",
-												"items": {
-													"properties": {
-														"GeneralLiabilityClassificationOwnersContractorsCoverage.ELPOverOneHundred": {
-														"type": "string"
-														},
-														
-														 "GeneralLiabilityCanoesOrRowboats":{
-														 "type": "array",
-														 "items": {
-														 "properties": {
-															"ManualPremium":{
-															"type": "string"
-															}
-														 }
-														 }
-														 
-														 },
-														 
-												  "State": {
-															"type": "string"
-															},
-												  "ZipCode": {
-															"type": "string"
-															},
-												  "GeneralLiabilityClassificationOwnersContractorsCoverage.ELPOverOneMillion": {
-															"type": "string"
-															},
-												  "ClassCode": {
-															"type": "string"
-															},
-												  "ClassDescription": {
-															"type": "string"
-															},
-												  "EDLClassCode": {
-															"type": "string"
-															},
-												  "EDLClassDescription": {
-															"type": "string"
-															},
-												  "EDLExposure": {
-															"type": "string"
-															},
-												  "EDLPremiumRatingBase": {
-															"type": "string"
-															},
-												  "EstdContractCostWORRHzd": {
-															"type": "string"
-															},
-												  "EstimatedContractCostRatio": {
-															"type": "string"
-															},
-												  "IfAnyBasis": {
-															"type": "string"
-															},
-												  "IfAnyBasisProdsCompldOps": {
-															"type": "string"
-															},
-												  "InjurySuprvsrInspctrsOtherEmpsCov": {
-															"type": "string"
-															},
-												  "LimitedCovForPersonalAndAdvertisingInjury": {
-															"type": "string"
-															},
-												  "LiquorClassCode":{
-															"type": "string"
-															},
-												  "LiquorClassDescription": {
-															"type": "string"
-															},
-												  "LiquorDedFactorOverride":{
-															"type": "string"
-															},
-												  "LiquorDeductible": {
-															"type": "string"
-															},
-												  "LiquorELPOverride": {
-															"type": "string"
-															},
-												  "LiquorExposure": {
-															"type": "string"
-															},
-												  "LiquorPremiumBasis": {
-															"type": "string"
-															},
-												  "LmtdProdsWithdrawalDeductibleFactorOverride": {
-															"type": "string"
-															},
-												  "LmtdProdsWithdrawalPremium": {
-															"type": "string"
-															},
-												  "MedPayCovForStud": {
-															"type": "string"
-															},
-												  "MiscIfAnyBasis": {
-															"type": "string"
-															},
-												  "MunicipalityOperatesAFireDepartment": {
-															"type": "string"
-															},
-												  "NumPassgrFreightTrains": {
-															"type": "string"
-															},
-												  "OtherThanProdsCompldOpsCov": {
-															"type": "string"
-															},
-												  "OwnersContractorsClassCode": {
-															"type": "string"
-															},
-												  "OwnersContractorsClassDescription": {
-															"type": "string"
-															},
-												  "OwnersContractorsELPOverOneMillionOverride": {
-															"type": "string"
-															},
-												  "OwnersContractorsELPOverride": {
-															"type": "string"
-															},
-												  "OwnersContractorsExposure": {
-															"type": "string"
-															},
-												  "OwnersContractorsPremiumBasis": {
-															"type": "string"
-															},
-												  "PollutionClassCode": {
-															"type": "string"
-															},
-												  "PollutionClassDescription": {
-															"type": "string"
-															},
-												  "PollutionExposure": {
-															"type": "string"
-															},
-												  "PollutionPremiumBasis": {
-															"type": "string"
-															},
-												  "PremOpsBIDeductible": {
-															"type": "string"
-															},
-												  "PremOpsBIDeductibleFactorOverride": {
-															"type": "string"
-															},
-												  "PremOpsBIPDDeductible": {
-															"type": "string"
-															},
-												  "PremOpsBIPDDeductibleFactorOverride": {
-															"type": "string"
-															},
-												  "PremOpsELPOverride": {
-															"type": "string"
-															},
-												  "PremOpsExposure": {
-															"type": "string"
-															},
-												  "PremOpsIncrdLimitTableAssignmentOverride": {
-															"type": "string"
-															},
-												  "PremOpsPDDeductible":{
-															"type": "string"
-															},
-												  "PremOpsPDDeductibleFactorOverride": {
-															"type": "string"
-															},
-												  "PremOpsPremiumBasis": {
-															"type": "string"
-															},
-												  "ProdsCompldOpsBIDeductible": {
-															"type": "string"
-															},
-												  "ProdsCompldOpsBIDeductibleFactorOverride": {
-															"type": "string"
-															},
-												  "ProdsCompldOpsBIPDDeductible": {
-															"type": "string"
-															},
-												  "ProdsCompldOpsBIPDDeductibleFactorOverride": {
-															"type": "string"
-															},
-												  "ProdsCompldOpsCov":{
-															"type": "string"
-															},
-												  "ProdsCompldOpsELPOverride": {
-															"type": "string"
-															},
-												  "ProdsCompldOpsExposure": {
-															"type": "string"
-															},
-												  "ProdsCompldOpsIncrdLimitTableAssignmentOverride":{
-															"type": "string"
-															},
-												  "ProdsCompldOpsPDDeductible": {
-															"type": "string"
-															},
-												  "ProdsCompldOpsPDDeductibleFactorOverride": {
-															"type": "string"
-															},
-												  "ProdsCompldOpsPremiumBasis": {
-															"type": "string"
-															},
-												  "ProductWithdrawalCoverage": {
-															"type": "string"
-															},
-												  "ProductWithdrawalDeductible": {
-															"type": "string"
-															},
-												  "ProductWithdrawalDeductibleFactorOverride": {
-															"type": "string"
-															},
-												  "ProductWithdrawalELPOverride": {
-															"type": "string"
-															},
-												  "ProductWithdrawalExpensesAndLiabilityIncrdLimitTableAssignmentOverride": {
-															"type": "string"
-															},
-												  "ProductWithdrawalExposure":{
-															"type": "string"
-															},
-												  "ProductWithdrawalPremiumBasis": {
-															"type": "string"
-															},
-												  "RailroadClassCode": {
-															"type": "string"
-															},
-												  "RailroadClassDescription": {
-															"type": "string"
-															},
-												  "RailroadExposure": {
-															"type": "string"
-															},
-												  "RailroadPremiumBasis": {
-															"type": "string"
-															},
-												  "SprayPainting": {
-															"type": "string"
-															},
-												  "TotalCostWorkTrainsOrOtherRREquipmtAssigned": {
-															"type": "string"
-															},
-												  "USTClassCode": {
-															"type": "string"
-															},
-												  "USTClassDescription": {
-															"type": "string"
-															},
-												  "USTExposure": {
-															"type": "string"
-															},
-												  "USTPremiumBasis":{
-															"type": "string"
-															},
-												 "GeneralLiabilitySnowplowOperationsCoverage": {
-														"type": "array",
-														 "items": {
-														 "properties": {
-															"ManualPremium":{
-															"type": "string"
-															}
-														 }
-														 }
-												 },
-											  "PublicOrPrivateSchool": {
-															"type": "string"
-															},
-											  "Contractor": {
-															"type": "string"
-															},
-											  "ElevatorContractorsClassCategory": {
-															"type": "string"
-															},
-											  "RiskLicensedOrCertifiedToUsePesticidesInComplianceWithTheStructuralPestControlAct": {
-															"type": "string"
-															},
-											  "GeneralLiabilityElevatorsContractors": 
-											  {
-												"type": "array",
-														 "items": {
-														 "properties": {
-															"BodilyInjuryLimit": {
-															"type": "string"
-															},
-															"PropertyDamageLimit": {
-															"type": "string"
-															}
-														 }
-														 }
-											  },
-											  
-											"LiquorExposureOnPremises": {
-															"type": "string"
-															},
-											 "GeneralLiabilityTerrorism": {
-													 "type": "array",
-													 "items": {
-													 "properties": {
-												
-												  "PremisesOperationsTerritory":{
-															"type": "string"
-															},
-												  "Territory": {
-															"type": "string"
-															}
-												}
-												}
-											  },	
-												
-											  "LeadCovWithNoLetter": {
-															"type": "string"
-															},
-											  "LeadIsResidentialRiskWithUnitsConstructedPrior1978": {
-															"type": "string"
-															},
-											  "LeadNumUnitsWithLOC":{
-															"type": "string"
-															},
-											  "LeadNumUnitsWithLOIC": {
-															"type": "string"
-															},
-											  "LeadNumUnitsWithoutLOCorLOIC":{
-															"type": "string"
-															}, 
-												
-											  "GeneralLiabilityMarylandChangesLiabilityForHazardsOfLeadClassLvl": {
-													"type": "array",
-													 "items": {
-													 "properties":{
-													  "NumberOfUnitsDwellingBuilt1979After":{
-															"type": "string"
-															}, 
-													  "NumberOfUnitsDwellingBuilt1979Before": {
-															"type": "string"
-															}
-													}
-													}
-												  },
-													
-													
-												  "StopGapIncrdLimitFactorOverride": {
-															"type": "string"
-															}, 
-												  "DriverEducationProvider":{
-															"type": "string"
-															}, 
-												  "SpecialProtectiveHighwayClassCode": {
-															"type": "string"
-															}, 
-												  "SpecialProtectiveHighwayClassDescription": {
-															"type": "string"
-															}, 
-												  "SpecialProtectiveHighwayExposure": {
-															"type": "string"
-															}, 
-												  "SpecialProtectiveHighwayPremiumBasis":{
-															"type": "string"
-															}, 
-												  "ClimbingFacilityOperator":{
-															"type": "string"
-															}
-													}
-													}
-												},
-												
-
-										  "LiquorDeductible": {
-															"type": "string"
-															}, 
-										  "LiquorLiabTerr": {
-															"type": "string"
-															}, 
-										  "LiquorLiabTerritory":{
-															"type": "string"
-															}, 
-										  "OwnersContractorsTerritory": {
-															"type": "string"
-															}, 
-										  "PollutionTerritory": {
-															"type": "string"
-															}, 
-										  "PremisesOperationsTerr": {
-															"type": "string"
-															}, 
-										  "PremisesOperationsTerritory": {
-															"type": "string"
-															}, 
-										  "PremOpsBIDeductible":{
-															"type": "string"
-															}, 
-										  "PremOpsBIPDDeductible": {
-															"type": "string"
-															}, 
-										  "PremOpsPDDeductible": {
-															"type": "string"
-															}, 
-										  "ProdsCompldOpsBIDeductible": {
-															"type": "string"
-															}, 
-										  "ProdsCompldOpsBIPDDeductible": {
-															"type": "string"
-															}, 
-										  "ProdsCompldOpsPDDeductible": {
-															"type": "string"
-															}, 
-										  "ProdsCompldOpsTerritory": {
-															"type": "string"
-															}, 
-										  "ProductWithdrawalDeductible": {
-															"type": "string"
-															}, 
-										  "RailroadTerritory": {
-															"type": "string"
-															}, 
-										  "CertifiedActsOfTerrorismTerr": {
-															"type": "string"
-															}, 
-										  "TerrorismTerritory": {
-															"type": "string"
-															}, 
-										  "CertifiedActsOfTerrorismManhattan": {
-															"type": "string"
-															}																	
-											}
-											}
-							},
-							 "GeneralLiabilityNonBindingArbitration": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityOpticalHearingAidEstablishments": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityPersonalInjuryLiab": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityPesticideOrHerbicideApplicatorCov": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityPesticideOrHerbicideApplicatorCovOwnersContractors": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityPollutionExclLimitedExceptionForDesigntdPollutants": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityPollutionExclLimitedExceptionShortTermEvent": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityPollutionExclNamedPerilLimitedExcptnShortTermPollutionEvent": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityPollutionLiabCovExtension": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityPrimaryAndNoncontributoryOtherInsuranceCondition": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityPrincipalsProtectiveLiabCov": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	},
-								  "WorkersCompensationRate": {	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityProfessionalLiabExclElectronicDataProcgSrvcCompuConsultingProgrammingSrvc": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityProfessionalLiabExclWebSiteDesigners": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityProflLiabExclSpasOrPersonalEnhancementFacilities": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilitySeedMerchantsCovForErroneousDeliveryMixtureAndRsltgFailrOfSeedGermin": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilitySeedMerchantsCovForErroneousDeliveryMixtureAndRsltgFailrOfSeedGerminNotIncldd": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilitySeedMerchantsCovForErroneousDeliveryMixtureAndRsltgFailrOfSeedGerminNotInclddProdsCompldOps": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilitySeedMerchantsCovForErroneousDeliveryMixtureAndRsltgFailrOfSeedGerminProdsCompldOps": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilitySilicaOrSilicaRelatedDustExclusionOwnersContractorsProdsCompldOps": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilitySilicaOrSilicaRelatedDustExclusionPremOpsProds": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilitySilicaOrSilicaRelatedDustExclusionRailroad": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityStevedoringOperations": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilitySupplementalExtendedReportingPeriodEndorsementCG3057": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilitySupplementalExtendedReportingPeriodEndt": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilitySupplementalExtendedReportingPeriodEndtLiquorLiab": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilitySupplementalExtendedReportingPeriodEndtProdsCompldOps": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilitySupplementalExtendedReportingPeriodEndtSpecificAccsProdsWorkOrLocations": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilitySupplementalExtendedReportingPeriodEndtSpecificAccsProdsWorkOrLocsProdsCompldOps": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityTotalPollutionExclEndt": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityTotalPollutionExclusionProdsCompldOps": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityTotalPollutionExclWithABldgHeatgEquipmtExcptnHostileFireExcptn": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityTotalPollutionExclWithAHostileFireExcptn": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityUndergroundResourcesAndEquipmtCov": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityVoluntaryCleanUpCostsReimbursement": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityWaiverCharitableImmunity": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityWaiverGovernmentalImmunity": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityWaiverOfTransferOfRightsOfRecoveryAgainstOthersToUsOwnersContrctrs": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityWaiverTransferRightsRecovery": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityYear2000CompuReltdAndOtherElectronicProblemsExclDesigntdLocsOpsProdsSrvcs": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }},
-							  "GeneralLiabilityYear2000CompuReltdAndOtherElectronicProblemsExclProdsCompldOps": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }},
-							 "GeneralLiabilityAddlInsdConcessionaires": { "type": "array","items":{"properties":
-							{
-							  "GeneralLiabilityAddlInsdConcessionairesDetail": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }}
-							}
-						  }},
-						  "GeneralLiabilityAddlInsdDesigntdPersonOrg": { "type": "array","items":{"properties":
-							{
-							  "GeneralLiabilityAddlInsdDesigntdPersonOrgDetail": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }}
-							}
-						  }},
-						  "GeneralLiabilityAddlInsdEngrsArchsSrvyrsNotEngagedInsd": { "type": "array","items":{"properties":
-							{
-							  "GeneralLiabilityAddlInsdEngrsArchsSrvyrsNotEngagedInsdDetail": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }}
-							}
-						  }},
-						  "GeneralLiabilityAddlInsdGrantorFranchise": { "type": "array","items":{"properties":
-							{
-							  "GeneralLiabilityAddlInsdGrantorFranchiseDetail": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }}
-							}
-						  }},
-						  "GeneralLiabilityAddlInsdLessorLeasedEquipmt": { "type": "array","items":{"properties":
-							{
-							  "GeneralLiabilityAddlInsdLessorLeasedEquipmtDetail": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }}
-							}
-						  }},
-						  "GeneralLiabilityAddlInsdOwnersLesseesContrctrsScheddPersonOrg": { "type": "array","items":{"properties":
-							{
-							  "GeneralLiabilityAddlInsdOwnersLesseesContrctrsScheddPersonOrgDetail": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }}
-							}
-						  }},
-						  "GeneralLiabilityAddlInsdVendors": { "type": "array","items":{"properties":
-							{
-							  "GeneralLiabilityAddlInsdVendorsDetail": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }}
-							}
-						  }},
-						  "GeneralLiabilityAmndmtOfCovTerrAddlSchddCountries": { "type": "array","items":{"properties":
-							{
-							  "GeneralLiabilityAmndmtOfCovTerrAddlSchddCountriesDetail": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }}
-							}
-						  }},
-						  "GeneralLiabilityAmndmtOfLiquorLiabExclExcptnScheddActivs": { "type": "array","items":{"properties":
-							{
-							  "GeneralLiabilityAmndmtOfLiquorLiabExclExcptnScheddActivsDetail": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }}
-							}
-						  }},
-						  "GeneralLiabilityAmndmtOfSectVExtddRptgPeriodsSpecificAccs": { "type": "array","items":{"properties":
-							{
-							  "GeneralLiabilityAmndmtOfSectVExtddRptgPeriodsSpecificAccsDetail": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }}
-							}
-						  }},
-						  "GeneralLiabilityDesignatedConstrctnProjGeneralAggregateLimit": { "type": "array","items":{"properties":
-							{
-							  "GeneralLiabilityDesignatedConstrctnProjGeneralAggregateLimitDetail": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }}
-							}
-						  }},
-						  "GeneralLiabilityTotalPollutionExclusionForDesignatedProdsOrWork": { "type": "array","items":{"properties":
-							{
-							  "GeneralLiabilityTotalPollutionExclusionForDesignatedProdsOrWorkDetail": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }}
-							}
-						  }},
-						  "GeneralLiabilityYear2000CompuReltdAndOtherElectronicProblemsLimitedCovOption": { "type": "array","items":{"properties":
-							{
-							  "GeneralLiabilityYear2000CompuReltdAndOtherElectronicProblemsLimitedCovOptionDetail": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }}
-							}
-						  }},
-						  "GeneralLiabilityYear2000CompuReltdAndOtherElectronicProblemsLmtdCovOptionsProdsCompldOps": { "type": "array","items":{"properties":
-							{
-							  "GeneralLiabilityYear2000CompuReltdAndOtherElectronicProblemsLmtdCovOptionsProdsCompldOpsDetail": { "type": "array","items":{"properties":
-								{
-								  "ManualPremium": {	"type": "string"	}
-								}
-							  }}
-							}
-						  }},
-		
-						 "SRPMedicalFacilitiesandSafetyProgramPct": {	"type": "string"	},
-						 "SRPRiskRelativeDegreeOfExposurePct":{	"type": "string"	},
-						  "GeneralLiabilityAlaskaChangesAttorneysFeesPolLvl": { "type": "array","items":{"properties":
-							{
-							  "Limit": {	"type": "string"	}
-							}
-						  }},
-						  "GeneralLiabilityChangesAttorneysFeesProductWithdrawalEDL": { "type": "array","items":{"properties":
-							{
-							  "Limit": {	"type": "string"	}
-							}
-						  }},
-						  "GeneralLiabilitySupplementalExtendedReportingPeriodEndtElectronicDataLiability": { "type": "array","items":{"properties":
-							{
-							  "ManualPremium": {	"type": "string"	}
-							}
-						  }},
-    
-						"ByLawsCreatedOrAmendedOnOrAfterDate": {	"type": "string"	},
-						"CondominiumAssociation":  {	"type": "string"	},
-						"GeneralLiabilityExtendedReportingPeriodEndorsementPollutionLiability":  { "type": "array","items":{"properties":
-							{
-							  "ManualPremium": {	"type": "string"	}
-							}
-						  }},
-						"CommercialPesticideApplicators":{	"type": "string"	},
-						"GeneralLiabilityStructuralPesticideApplicators":  { "type": "array","items":{"properties":
-						{
-						  "BIEachOccurrenceLimit": {	"type": "string"	},
-						  "PDEachOccurrenceLimit": {	"type": "string"	}
-						}
-					  }},
-					  "GeneralLiabilityChangesExtendedReportingPeriodForEmployeeBenefitsLiabilityCov":  { "type": "array","items":{"properties":
-						{
-						  "ManualPremium": {	"type": "string"	}
-						}
-					  }},
-					  "GeneralLiabilityChangesExtendedReportingPeriodForPremOps":  { "type": "array","items":{"properties":
-						{
-						  "ManualPremium": {	"type": "string"	}
-						}
-					  }},
-					  "GeneralLiabilityChangesExtendedReportingPeriodForProdCompldOpsLiab":  { "type": "array","items":{"properties":
-						{
-						  "ManualPremium": {	"type": "string"	}
-						}
-					  }},
-					  "GeneralLiabilityChangesExtendedReportingPeriodUST":  { "type": "array","items":{"properties":
-						{
-						  "ManualPremium": {	"type": "string"	}
-						}
-					  }},
-					  "GeneralLiabilityConnecticutExtendedReportingPeriodEndorsementPollutionLiabLimited":  { "type": "array","items":{"properties":
-						{
-						  "ManualPremium": {	"type": "string"	}
-						}
-					  }},
-					 "ManufacturedHomeInstaller": {	"type": "string"	},
-					"GeneralLiabilityColoradoAmendmentOfSectionVExtendedReportingPerSpecificAccidentsProdsWorkOrLocClaimsMade":  { "type": "array","items":{"properties":
-						{
-						  "ManualPremium": {	"type": "string"	}
-						}
-					  }},
-					  "GeneralLiabilityInsuredsConsentToExcessRate":  { "type": "array","items":{"properties":
-						{
-						  "ExcessRatedPremium":  {	"type": "string"	},
-						  "ManualRatedPremium":  {	"type": "string"	}
-						}
-					  }},
-					  "AnnualRevenue": {	"type": "string"	},
-					  "NumberOfEmployees": {	"type": "string"	},
-					  "GeneralLiabilityGeorgiaLimitedFungiOrBacteriaCoverageSmallBusinessesOwnersContractorsProdsCompldOps": { "type": "array","items":{"properties":
-						{
-						  "ManualPremium": {	"type": "string"	}
-						}
-					  }},
-					  "GeneralLiabilityGeorgiaLimitedFungiOrBacteriaCoverageSmallBusinessesPremOpsProdsCompldOps": { "type": "array","items":{"properties":
-						{
-						  "ManualPremium": {	"type": "string"	}
-						}
-					  }},
-					  "EachCommonCauseBodilyInjuryLimit":  {	"type": "string"	},
-					  "EachCommonCauseLossOfMeansOfSupportLimit":  {	"type": "string"	},
-					  "EachPersonBodilyInjuryLimit":  {	"type": "string"	},
-					  "EachPersonLossOfMeansOfSupportLimit":  {	"type": "string"	},
-					  "GeneralAggregateLimitGovernmentalSubdivision":  {	"type": "string"	},
-					  "GovernmentalSubdivision": {	"type": "string"	},
-					  "PerPersonLimit":  {	"type": "string"	},
-					  "PremOpsProdsEachOccurrenceLimitGovernmentalSubdivision":  {	"type": "string"	}
-						}
-						}
-						}
-			}
+		      "TRIAExtended": {
+                "type":"string",
+                "default":"No"},
+      "ERPYearsOfExperienceIncurred": {
+                "type":"string",
+                "default":"3"},
+      "GeneralLiabilityStructuralPesticideApplicators": { "type": "array","items":{"properties":
+        {
+          "BIEachOccurrenceLimit": {
+                "type":"string",
+                "default":"500,000"},
+          "PDEachOccurrenceLimit": {
+                "type":"string",
+                "default":"500,000"
+        }
+      }}},
+      "ERPActualExpectedLossRatio": {
+                "type":"string",
+                "default":""},
+      "GeneralLiabilitySilicaOrSilicaRelatedDustExclusionPremOpsProds": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityLimitedCovForDesignatedUnmannedAircraft": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityExclYear2000ComputerReltdOtherElectronicProblemsWithExceptionForBIOnYourPrem": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityExclDesignatedProfessionalServices": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityCollegeSchool": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityDamageToPremisesRentedToYouCoverage.LimitGovernmentalSubdivision": {
+                "type":"string",
+                "default":""},
+      "RailroadCoverageForm": {
+                "type":"string",
+                "default":"Occurrence"},
+      "OwnersContractorsAggregateLimit": {
+                "type":"string",
+                "default":"50,000"},
+      "GeneralLiabilityStateChangesSupplementalExtendedReportingPeriodEndorsement": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityNonBindingArbitration": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityExclusionUnmannedAircraft": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityExclMedPayToChildrenDayCareCenters": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityDruggistsBroadenedCov": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityAddlInsdOwnersLesseesContrctrsScheddPersonOrg": { "type": "array","items":{"properties":
+        {
+          "GeneralLiabilityAddlInsdOwnersLesseesContrctrsScheddPersonOrgDetail": { "type": "array","items":{"properties":
+            {
+              "ManualPremium": {
+                "type":"string",
+                "default":"0"
+            }
+          }}}
+        }
+      }},
+      "SRPPremisesPct": {
+                "type":"string",
+                "default":"0%"},
+      "PremOpsBIDeductible": {
+                "type":"string",
+                "default":"No Deductible"},
+      "GeneralAggregateLimit": {
+                "type":"string",
+                "default":"200,000 CSL"},
+      "GeneralLiabilityIllinoisChangesContractorsHomeRepairAndRemodeling": { "type": "array","items":{"properties":
+        {
+          "Deductible":{
+                "type":"string",
+                "default": "0"
+        }
+      }}},
+      "ERPLatestYearEffectiveDate": {
+                "type":"string",
+                "default":"2011-08-01"},
+      "GeneralLiabilityTotalPollutionExclusionProdsCompldOps": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityExclSpecificAccidentsProdsWorkOrLocationProdsCompldOps": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityExclDamageToPremRentedToYou": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityAmndmtTravelAgencyToursLimitationOfCov": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                "type":"string",
+                "default": "0"
+        }
+      }}},
+      "multistate": {
+                "type":"string",
+                "default":"No"},
+      "ProductWithdrawalCoverageType":{
+                "type":"string",
+                "default": "Expense"},
+      "LiquorRetroactiveDate": {
+                "type":"string",
+                "default":"2019-01-01"},
+      "GeneralLiabilityNorthCarolinaSupplementalExtendedReportingPeriodEndorsementPremOpsProdsCompldOpsClaimsMade": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                "type":"string",
+                "default": "0"
+        }
+      }}},
+      "ERPThirdLatestYearEffectiveDate": {
+                "type":"string",
+                "default":"2009-08-01"},
+      "GeneralLiabilityAlaskaChangesAttorneysFeesPolLvl": { "type": "array","items":{"properties":
+        {
+          "Limit": {
+                "type":"string",
+                "default":""
+        }
+      }}},
+      "CondominiumAssociation":{
+                "type":"string",
+                "default": "No"},
+      "GeneralLiabilityProflLiabExclSpasOrPersonalEnhancementFacilities": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityInsuredSiteDefinition": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityContractualLiabLimitation": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityAddlInsdEngrsArchsSrvyrsNotEngagedInsd": { "type": "array","items":{"properties":
+        {
+          "GeneralLiabilityAddlInsdEngrsArchsSrvyrsNotEngagedInsdDetail": { "type": "array","items":{"properties":
+            {
+              "ManualPremium":{
+                "type":"string",
+                "default": "0"
+            }
+          }}}
+        }
+      }},
+      "SRPCooperationMedicalFacilitiesPct": {
+                "type":"string",
+                "default":"0%"},
+      "PerPersonLimit": {
+                "type":"string",
+                "default":"100,000"},
+      "SRPEmployeesSelectionPct": {
+                "type":"string",
+                "default":"3%"},
+      "EachPollutionIncidentLimit": {
+                "type":"string",
+                "default":"100,000"},
+      "GeneralLiabilityGeorgiaLimitedFungiOrBacteriaCoverageSmallBusinessesOwnersContractorsProdsCompldOps": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "ERPExposuresOnSpecialUWBasisPremOpsCurrent":{
+                "type":"string",
+                "default": "1"},
+      "GeneralLiabilitySupplementalExtendedReportingPeriodEndtSpecificAccsProdsWorkOrLocations": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityExclusionOfCertifiedActsOfTerrorism": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityExclFuneralServ": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "TRIPTerminatesBeforeExpirationDate": {
+                "type":"string",
+                "default":"No"},
+      "PremiumDiscountPercentage": {
+                "type":"string",
+                "default":"0"},
+      "LeadWishToPurchaseCoverageForPremisesCertifiedAsLeadFree": {
+                "type":"string",
+                "default":""},
+      "GeneralLiabilityPollutantsDefinitionAmendment": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                "type":"string",
+                "default": "0"
+        }
+      }}},
+      "ERPSecondLatestYearEffectiveDate": {
+                "type":"string",
+                "default":"2010-08-01"},
+      "GeneralLiabilityYear2000CompuReltdAndOtherElectronicProblemsExclDesigntdLocsOpsProdsSrvcs": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "AggregateLimit": {
+                "type":"string",
+                "default":"600,000"},
+      "GeneralLiabilityPollutionExclNamedPerilLimitedExcptnShortTermPollutionEvent": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityExtendedReportingPeriodForTerrorismCoverage": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityExclProfessionalServicesBloodBanks": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityEmploymentRelatedPracticesExclusionOwnersContrctrsPollution": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityAmndmtOfLimitsOfIns": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityStateChangesSupplementalExtendedReportingPeriodEndorsementForPollutionLiability": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "EachCommonCauseBodilyInjuryLimit": {
+                "type":"string",
+                "default":"100,000"},
+      "GeneralLiabilityColoradoAmendmentOfSectionVExtendedReportingPerSpecificAccidentsProdsWorkOrLocClaimsMade": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                "type":"string",
+                "default": "0"
+        }
+      }}},
+      "ERPDramaticChangeOnExposure": {
+                "type":"string",
+                "default":"No"},
+      "GeneralLiabilitySilicaOrSilicaRelatedDustExclusionRailroad": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityLimitedCovForDesignatedUnmannedAircraftCovAOnly": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityExclusionAccessOrDisclosureOfConfidentialOrPersonalInfoAndDataRelatedLiabLmtdBIExcptnNotInclddCGL": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityExclDesignatedWork": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityCollegeSchoolLimitedForm": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityMedPayCoverage.Limit": {
+                "type":"string",
+                "default":"5,000"},
+      "RailroadEachOccurrenceLimit":{
+                "type":"string",
+                "default": "50,000"},
+      "OwnersContractorsCoverageForm": {
+                "type":"string",
+                "default":"Occurrence"},
+      "GeneralLiabilityUndergroundResourcesAndEquipmtCov": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityOpticalHearingAidEstablishments": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityExclusionUnmannedAircraftCovAOnly": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityExclNewEntities": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityEarlierNoticeOfCancellationProvidedByUs": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityAddlInsdVendors": { "type": "array","items":{"properties":
+        {
+          "GeneralLiabilityAddlInsdVendorsDetail": { "type": "array","items":{"properties":
+            {
+              "ManualPremium": {
+                "type":"string",
+                "default":"0"
+            }
+          }}}
+        }
+      }},
+      "ScheduleRatingModificationApplies": {
+                "type":"string",
+                "default":"Yes"},
+      "PremOpsBIPDDeductible": {
+                "type":"string",
+                "default":"No Deductible"},
+      "GeneralAggregateLimitGovernmentalSubdivision": {
+                "type":"string",
+                "default":"200,000"},
+      "GeneralLiabilityMassachusettsResidentialFuelTankCoverage": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "ERPLatestYearLatestValuationDate": {
+                "type":"string",
+                "default":"2013-02-01"},
+      "GeneralLiabilityExclTestingConsultingErrorsOmissions": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityExclDamageToWorkPerformedBySubcontractorsOnYourBehalf": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityBindingArbitration": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityCompositeRating.CompositeExposure": {
+                "type":"string",
+                "default":"1"},
+      "ProductWithdrawalDeductible": {
+                "type":"string",
+                "default":"No Deductible"},
+      "LiquorWrittenWithSubLimits": {
+                "type":"string",
+                "default":"Yes"},
+      "GeneralLiabilityNorthCarolinaSupplementalExtendedReportingPeriodEndorsementProdsCompldOpsClaimsMade": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                "type":"string",
+                "default": "0"
+        }
+      }}},
+      "ERPThirdLatestYearLatestValuationDate": {
+                "type":"string",
+                "default":"2013-02-01"},
+      "GeneralLiabilityChangesAttorneysFeesProductWithdrawalEDL": { "type": "array","items":{"properties":
+        {
+          "Limit": {
+                "type":"string",
+                "default":""
+        }
+      }}},
+      "DoesThisRiskOperateScaffoldBuildingsInChicagoThatRequirePermit": {
+                "type":"string",
+                "default":"No"},
+      "GeneralLiabilitySeedMerchantsCovForErroneousDeliveryMixtureAndRsltgFailrOfSeedGermin": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityLawnCareServicesCov": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityContractualLiabRailroads": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityAddlInsdGrantorFranchise": { "type": "array","items":{"properties":
+        {
+          "GeneralLiabilityAddlInsdGrantorFranchiseDetail": { "type": "array","items":{"properties":
+            {
+              "ManualPremium":{
+                "type":"string",
+                "default": "0"
+            }
+          }}}
+        }
+      }},
+      "SRPCooperationSafetyProgramPct": {
+                "type":"string",
+                "default":"0%"},
+      "PerPersonLimitOtherThanPD": {
+                "type":"string",
+                "default":"287,000"},
+      "SRPEmployeesTrainingPct": {
+                "type":"string",
+                "default":"3%"},
+      "ElevatorContractor": {
+                "type":"string",
+                "default":"No"},
+      "GeneralLiabilityGeorgiaLimitedFungiOrBacteriaCoverageSmallBusinessesPremOpsProdsCompldOps": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "ERPExposuresOnSpecialUWBasisProdCompldOpsCurrent": {
+                "type":"string",
+                "default":"1"},
+      "GeneralLiabilitySupplementalExtendedReportingPeriodEndtSpecificAccsProdsWorkOrLocsProdsCompldOps": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityLimitedPollutionLiabExtensionEndt": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityExclusionOfNewlyAcquiredOrganizationsAsInsureds": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityExclInjuryToVolunteerFirefighters": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                "type":"string",
+                "default": "0"
+        }
+      }}},
+      "TerrorismCoverage": {
+                "type":"string",
+                "default":"No"},
+      "ProdsCompldOpsAggregateLimit":{
+                "type":"string",
+                "default": "200,000 CSL"},
+      "LiquorCoverageForm": {
+                "type":"string",
+                "default":"Occurrence"},
+      "GeneralLiabilityNorthCarolinaExtendedReportingPeriodEndorsementPollutionLiab": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "ERPSecondLatestYearLatestValuationDate": {
+                "type":"string",
+                "default":"2013-03-01"},
+      "GeneralLiabilityYear2000CompuReltdAndOtherElectronicProblemsExclProdsCompldOps": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "AnnualRevenue":{
+                "type":"string",
+                "default": ""},
+      "GeneralLiabilityPollutionLiabCovExtension": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityFinancialInstitutionsRptgProvisionLmtnToFiduciaryOrRepInterest": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityExclProfessionalVeterinarianServices": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityExcessProvisionVendors": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityAmndmtOfLiquorLiabExcl": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "OwnersContractorsEachOccurrenceLimit":{
+                "type":"string",
+                "default": "25,000"},
+      "GeneralLiabilityStateChangesVolunteerWorkersExclusion": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "EachCommonCauseLimit": {
+                "type":"string",
+                "default":"500,000"},
+      "GeneralLiabilityChangesExtendedReportingPeriodForEmployeeBenefitsLiabilityCov": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "ERPExpenseVariationApplies": {
+                "type":"string",
+                "default":"No"},
+      "GeneralLiabilityStevedoringOperations": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityLimitedCovForDesignatedUnmannedAircraftCovBOnly": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityExclusionAccessOrDisclosureOfConfidentialOrPersonalInformationCovBOnly": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                "type":"string",
+                "default": "0"},
+          "ExposureBasis": {
+                "type":"string",
+                "default":""
+        }
+      }}},
+      "GeneralLiabilityExclDiagnosticTestingLabs": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityCommunicableDiseaseExclusion": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityTerrorismEndorsementCoverage.CertifiedActsofTerrorismExposureClassFactorOverride":{
+                "type":"string",
+                "default": "0"},
+      "ERPLatestYearTotalIncludedLoss": {
+                "type":"string",
+                "default":"0"},
+      "GeneralLiabilityVoluntaryCleanUpCostsReimbursement": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityPersonalInjuryLiab": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityExclusionUnmannedAircraftCovBOnly": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityExclOilGasProducingOps": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityEarlierNoticeOfCancellationProvidedByUsOwnersContractors": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityAmendmentOfInsuredContractDefinition": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "State": {
+                "type":"string",
+                "default":"AL"},
+      "PremOpsPDDeductible": {
+                "type":"string",
+                "default":"No Deductible"},
+      "GovernmentalSubdivision":{
+                "type":"string",
+                "default": "No"},
+      "GeneralLiabilityMassachusettsResidentialFuelTankCoverageSeparateDefenseLimit": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityLimitationOfCovToDesignatedPremOrProject": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityExclUndergroundStorageTankIncidents": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                "type":"string",
+                "default": "0"
+        }
+      }}},		
+	   	 "GeneralLiabilityExclDescribedHazardsCarnivalsCircusesFairs": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityBoats": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityCompositeRating.CompositeRating":{
+                 "type":"string",
+                "default": "No"},
+      "ProductWithdrawalParticipationPercentage": {
+                 "type":"string",
+                "default":"0"},
+      "LossSupportPerInjuredPerson":{
+                 "type":"string",
+                "default": "84,061.32"},
+      "GeneralLiabilityNorthCarolinaSupplementalExtendedReportingPeriodEndorsementUST": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "ERPThirdLatestYearTotalIncludedLoss":{
+                 "type":"string",
+                "default": "1000"},
+      "GeneralLiabilitySupplementalExtendedReportingPeriodEndtElectronicDataLiability": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "DoesThisRiskOperateScaffolds": {
+                 "type":"string",
+                "default":"No"},
+      "GeneralLiabilitySeedMerchantsCovForErroneousDeliveryMixtureAndRsltgFailrOfSeedGerminNotIncldd": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityExclIntercompanyProductsSuits": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityCovForInjuryLeasedWorkers": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityAddlInsdLessorLeasedEquipmt": { "type": "array","items":{"properties":
+        {
+          "GeneralLiabilityAddlInsdLessorLeasedEquipmtDetail": { "type": "array","items":{"properties":
+            {
+              "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+            }
+          }}}
+        }
+      }},
+      "SRPEmployeesPct": {
+                 "type":"string",
+                "default":"3%"},
+      "PerPersonLimitPD":{
+                 "type":"string",
+                "default": "68,777.44"},
+      "SRPPremisesCarePct":{
+                 "type":"string",
+                "default": "0%"},
+      "ElevatorContractorLimitTypeSplitLimit":{
+                 "type":"string",
+                "default": "No"},
+      "GeneralLiabilityAmendmentOfDefinitionOfPollutants": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "ERPExposuresOnSpecialUWBasisSecondLatestYearPremOps":{
+                 "type":"string",
+                "default": "1"},
+      "GeneralLiabilityTotalPollutionExclEndt": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityLimitedProductWithdrawalExpenseEndtPolLvl": { "type": "array","items":{"properties":
+        {
+          "AggregateLimit":{
+                 "type":"string",
+                "default": "1,000,000"},
+          "Deductible":{
+                 "type":"string",
+                "default": "No Deductible"},
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityExclusionOfPunitiveDamagesRelatedToACertifiedActOfTerrorism": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityAmndmtOfLiquorLiabExclExcptnScheddActivs": { "type": "array","items":{"properties":
+        {
+          "GeneralLiabilityAmndmtOfLiquorLiabExclExcptnScheddActivsDetail": { "type": "array","items":{"properties":
+            {
+              "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+            }
+          }}}
+        }
+      }},
+      "USTAggregateLimit": {
+                 "type":"string",
+                "default":""},
+      "ProdsCompldOpsBIDeductible": {
+                 "type":"string",
+                "default":"No Deductible"},
+      "LiquorDeductible":{
+                 "type":"string",
+                "default": "500 Per Claim"},
+      "GeneralLiabilityNorthCarolinaExtendedReportingPeriodEndorsementPollutionLiabLimited": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "ERPSecondLatestYearTotalIncludedLoss":{
+                 "type":"string",
+                "default": "91250"},
+      "GeneralLiabilityYear2000CompuReltdAndOtherElectronicProblemsLimitedCovOption": { "type": "array","items":{"properties":
+        {
+          "GeneralLiabilityYear2000CompuReltdAndOtherElectronicProblemsLimitedCovOptionDetail": { "type": "array","items":{"properties":
+            {
+              "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+            }
+          }}}
+        }
+      }},
+      "ByLawsCreatedOrAmendedOnOrAfterDate":{
+                 "type":"string",
+                "default": "Yes"},
+      "GeneralLiabilityPrimaryAndNoncontributoryOtherInsuranceCondition": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityFungiOrBacteriaExclusion": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityExclRiotCivilCommotionMobActionGovtSubdivision": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityExclAdultDayCareCenters": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityNewJerseyChangesCoverageAndExclusionLiabilityForHazardsLeadMultiplePremises": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "EachCommonCauseLossOfMeansOfSupportLimit": {
+                 "type":"string",
+                "default":"100,000"},
+      "GeneralLiabilityChangesExtendedReportingPeriodForPremOps": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "ERPExperienceModificationAllOtherSublines": {
+                 "type":"string",
+                "default":"0"},
+      "GeneralLiabilitySupplementalExtendedReportingPeriodEndorsementCG3057": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityLimitedExclContractorsProfessionalLiab": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityExclusionExteriorInsulationAndFinishSystemsOwnersContractors": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityExclEmployeesAndVolunteerWorkersAsInsureds": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityCommunicableDiseaseExclusionProdsCompldOps": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityAbuseMolestationExcl": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "RetroactiveDateApplies":{
+                 "type":"string",
+                "default": "No"},
+      "GeneralLiabilityInspectionAgenciesBoilerAndPressureVesselUnits": { "type": "array","items":{"properties":
+        {
+          "BIEachOccurrenceLimit": {
+                 "type":"string",
+                "default":"500,000"},
+          "PDEachOccurrenceLimit":{
+                 "type":"string",
+                "default": "100,000"
+        }
+      }}},
+      "ERPLatestYearTypeOfPolicy": {
+                 "type":"string",
+                "default":"Claims Made"},
+      "GeneralLiabilityWaiverCharitableImmunity": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityPesticideOrHerbicideApplicatorCov": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityExclusionUnmannedAircraftOwnersAndContractors": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityExclPersonalAdvertisingInjury": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityElectronicDataLiabEndt": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"},
+          "ExposureBasis": {
+                 "type":"string",
+                "default":""
+        }
+      }}},
+      "GeneralLiabilityAmendmentOfPersonalAndAdvertisingInjuryDefinition": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "StopGap":{
+                 "type":"string",
+                "default": "No"},
+      "PremOpsProdsCoverageForm": {
+                 "type":"string",
+                "default":"Claims Made"},
+      "IncidentLimit": {
+                 "type":"string",
+                "default":"25,000"},
+      "GeneralLiabilitySeedMerchantsCovForErroneousDeliveryMixtureAndRsltgFailrOfSeedGerminNotInclddProdsCompldOps": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityLimitationOfCoverageForTerrorismSubLimitAnnualAggregateBasis": { "type": "array","items":{"properties":
+        {
+          "AggregateLimit":{
+                 "type":"string",
+                "default": "200,000"},
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityExclVolunteerWorkers": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityExclDesignatedOngoingOps": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityCapOnLossesFromCertifiedActsOfTerrorism": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityCompositeRating.CompositeRatingExposureBasis":{
+                 "type":"string",
+                "default": "Gross Sales"},
+      "ProductsWithdrawalAggregateLimit":{
+                 "type":"string",
+                "default": "1,000,000"},
+      "ManufacturedHomeInstaller":{
+                 "type":"string",
+                "default": "No"},
+      "GeneralLiabilityStopGapEmployersLiabilityCoverageEndorsementPolLvl": { "type": "array","items":{"properties":
+        {
+          "LimitBodilyInjuryByAccident":{
+                 "type":"string",
+                "default": ""},
+          "LimitBodilyInjuryByDiseaseAggregate": {
+                 "type":"string",
+                "default":""},
+          "LimitBodilyInjuryByDiseaseEachEmployee":{
+                 "type":"string",
+                "default": ""},
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "ERPThirdLatestYearTypeOfPolicy": {
+                 "type":"string",
+                "default":"Claims Made"},
+      "GeneralLiabilityChangesExtendedReportingPeriodForElectronicDataLiability": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "DoesThisRiskPerformHomeRepairAndRemodeling": {
+                 "type":"string",
+                "default":"No"},
+      "GeneralLiabilityExclInternetServicePrvdrsAndInternetAccessPrvdrsErrorsOmissions": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityCovForInjuryLeasedWorkersUndergroundStorageTanks": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityAddlInsdLessorOfLeasedEquipmtAutomtcStatusWhenReqdInLeaseAgrmtWithYou": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "SRPEquipmentPct":{
+                 "type":"string",
+                "default": "0%"},
+      "PollutionAggregateLimit":{
+                 "type":"string",
+                "default": "200,000"},
+      "SRPPremisesConditionPct":{
+                 "type":"string",
+                "default": "0%"},
+      "ExistenceHazardAggregateLimit": {
+                 "type":"string",
+                "default":""},
+      "GeneralLiabilityAmendmentOfDefinitionOfPollutantsRailRoadCov": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "ERPExposuresOnSpecialUWBasisSecondLatestYearProdCompldOps": {
+                 "type":"string",
+                "default":"1"},
+      "GeneralLiabilityTotalPollutionExclWithABldgHeatgEquipmtExcptnHostileFireExcptn": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityLimitedTerrorismExclOtherThanCertifiedActsOfTerrorismCapOnLossesFromCertifiedActsOfTerrorism": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityExclusionOfTerrorismNuclearBiologicalChemicalTerrorism": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityAmndmtOfLiquorLiabExclExcptnScheddActivsProductsCompletedOps": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "UndergroundStorageTankRetroactiveDate":{
+                 "type":"string",
+                "default": "2019-01-01"},
+      "ProdsCompldOpsBIPDDeductible":{
+                 "type":"string",
+                "default": "No Deductible"},
+      "LiquorEachCommonCauseOtherPecuniaryLossLimit":{
+                 "type":"string",
+                "default": "100,000"},
+      "GeneralLiabilityNorthCarolinaSupplementalExtddRptgPerEndtSpecificAccsProdsWorkLocsPremOpsProdsCompldOpsClaimsMade": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "ERPSecondLatestYearTypeOfPolicy": {
+                 "type":"string",
+                "default":"Claims Made"},
+      "GeneralLiabilityYear2000CompuReltdAndOtherElectronicProblemsLmtdCovOptionsProdsCompldOps": { "type": "array","items":{"properties":
+        {
+          "GeneralLiabilityYear2000CompuReltdAndOtherElectronicProblemsLmtdCovOptionsProdsCompldOpsDetail": { "type": "array","items":{"properties":
+            {
+              "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+            }
+          }}}
+        }
+      }},
+      "CPPGoverningState": {
+                 "type":"string",
+                "default":""},
+      "GeneralLiabilityPrincipalsProtectiveLiabCov": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"},
+          "WorkersCompensationRate": {
+                 "type":"string",
+                "default":".0001"
+        }
+      }}},
+      "GeneralLiabilityFungiOrBacteriaExclusionOwnersContractorsProductsCompleted": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityExclRollingStockRailroadConstruction": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityExclAthleticSportsParticipants": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "RiskType":{
+                 "type":"string",
+                "default": "Motel/Hotel"},
+      "PackageModEligibility": {
+                 "type":"string",
+                "default":""},
+      "GeneralLiabilityNewJerseyChangesCoverageForLiabilityForHazardsLeadWithoutSublimitPolLvl": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "EachElectronicDataIncidentLimit": {
+                 "type":"string",
+                "default":""},
+      "GeneralLiabilityChangesExtendedReportingPeriodForProdCompldOpsLiab": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "ERPExperienceModificationOverride":{
+                 "type":"string",
+                "default":"0"},
+      "GeneralLiabilitySupplementalExtendedReportingPeriodEndt": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityLimitedExclDesignatedOpsCovByConsolidatedWrapUpInsProgram": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityExclusionExteriorInsulationAndFinishSystemsPremOpsProds": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityExclExistenceOrMaintenanceOfStreetsRdsHwysOrBridges": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityConditionalExclusionOfTerrorismNuclearBiologicalChemicalDispositionOfAct2002": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityAbuseOrMolestationExclusionSpecifiedProfessionalServices": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "InspectionAgenciesPerformBoilerPressureVesselInspection": {
+                 "type":"string",
+                "default":"No"},
+      "GeneralLiabilityElevatorsContractorsAndInspectorsChangesCancellationAndSplitLimitsOfInsurance": { "type": "array","items":{"properties":
+        {
+          "BodilyInjuryLimit":{
+                 "type":"string",
+                "default": ""},
+          "PropertyDamageLimit":{
+                 "type":"string",
+                "default": ""
+        }
+      }}},
+      "ERPLatestYearWithSameCarrier":{
+                 "type":"string",
+                "default": "Yes"},
+      "GeneralLiabilityWaiverGovernmentalImmunity": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityPesticideOrHerbicideApplicatorCovOwnersContractors": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityExtendedReportingPeriodEndorsementForElectronicDataLiabilityCoverage": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityExclProductsCompletedOperationsHazard": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityElectronicDataLiabilityCoverageForm": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityAmndmtOfCovTerrAddlSchddCountries": { "type": "array","items":{"properties":
+        {
+          "GeneralLiabilityAmndmtOfCovTerrAddlSchddCountriesDetail": { "type": "array","items":{"properties":
+            {
+              "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+            }
+          }}}
+        }
+      }},
+      "Subline":{
+                 "type":"string",
+                "default": "Premises/Operations and Products/Completed Operations"},
+      "PremOpsProdsEachOccurrenceLimit": {
+                 "type":"string",
+                "default":"100,000 CSL"},
+      "EDLAggregateLimit":{
+                 "type":"string",
+                "default": ""},
+      "GeneralLiabilitySeedMerchantsCovForErroneousDeliveryMixtureAndRsltgFailrOfSeedGerminProdsCompldOps": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityLimitedContractualLiabCovPersonalAdvertisingInj": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},	
+		      "GeneralLiabilityExclYear2000ComputerReltdElectronicProblems": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default":  "0"
+        }
+      }}},
+      "GeneralLiabilityExclDesignatedOpsCovByConsolidatedWrapUpInsProgramPolLvl": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityCertifiedActsOfTerrorismAggregateLimitCapOnLossesFromCertifiedActsOfTerrorismPremOps": { "type": "array","items":{"properties":
+        {
+          "AggregateLimit": {
+                 "type":"string",
+                "default": "100,000"},
+          "ManualPremium": {
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityCompositeRating.CompositeRatingExposureBasisOverride":{
+                 "type":"string",
+                "default": "0"},
+      "RadonMeasurementAndMitigationContractors":{
+                 "type":"string",
+                "default": "No"},
+      "NumberOfEmployees":{
+                 "type":"string",
+                "default": ""},
+      "GeneralLiabilityStateAmndmtOfLiquorLiabExclExcptnScheddActivs": { "type": "array","items":{"properties":
+        {
+          "GeneralLiabilityStateAmndmtOfLiquorLiabExclExcptnScheddActivsDetail": { "type": "array","items":{"properties":
+            {
+              "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+            }
+          }}}
+        }
+      }},
+      "ERPThirdLatestYearWithSameCarrier": {
+                 "type":"string",
+                "default": "Yes"},
+      "GeneralLiabilityChangesExtendedReportingPeriodUST": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityExclusionProductReplacementRepairOrRepurchase": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityExclLawEnforcementActivities": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityCoverageExtensionCoverageAProductRestorationExpense": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityAddlInsdOwnersLesseesContrctrsAutomtcStatusForOtherPartiesWhenReqInConstrctnAgrmt": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "SRPLocationExposureInsidePremisesPct":{
+                 "type":"string",
+                "default":"0%"},
+      "PollutionCleanUpCoverage":{
+                 "type":"string",
+                "default": "No"},
+      "GeneralLiabilityNewYorkChangesBindingArbitration": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "ExperienceBusinessStartDate":{
+                 "type":"string",
+                "default": "2009-08-01"},
+      "GeneralLiabilityExtendedReportingPeriodEndorsementPollutionLiabilityLimited": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "ERPExposuresOnSpecialUWBasisThirdLatestYearPremOps": {
+                 "type":"string",
+                "default":"1"},
+      "GeneralLiabilityTotalPollutionExclWithAHostileFireExcptn": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityLiquorLiab": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"},
+          "LiquorClassCode":{
+                 "type":"string",
+                "default": ""
+        }
+      }}},
+      "GeneralLiabilityExclBodilyInjuryToRailroadPassengers": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityAmndmtOfLiquorLiabExclProdsCompldOps": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "ProdsCompldOpsPDDeductible": {
+                 "type":"string",
+                "default":"No Deductible"},
+      "LiquorEachPersonOtherPecuniaryLossLimit":{
+                 "type":"string",
+                "default": "50,000"},
+      "GeneralLiabilityNorthCarolinaSupplementalExtddRptgPerEndtSpecificAccsProdsWorkLocsProdsCompldOpsClaimsMade": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "ERPSecondLatestYearWithSameCarrier":{
+                 "type":"string",
+                "default": "Yes"},
+      "SRPMedicalFacilitiesandSafetyProgramPct": {
+                 "type":"string",
+                "default":"0%"},
+      "CPPIRPMFactor": {
+                 "type":"string",
+                "default":"1"},
+      "GeneralLiabilityProfessionalLiabExclElectronicDataProcgSrvcCompuConsultingProgrammingSrvc": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityGovernmentalSubdivisions": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityExclSalineSubstancesContamination": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityAddlInsdConcessionaires": { "type": "array","items":{"properties":
+        {
+          "GeneralLiabilityAddlInsdConcessionairesDetail": { "type": "array","items":{"properties":
+            {
+              "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+            }
+          }}}
+        }
+      }},
+      "RisksLicensedOrCertifiedToUsePesticidesInCompliance": {
+                 "type":"string",
+                "default":"No"},
+      "PackageModFactor": {
+                 "type":"string",
+                "default":"1"},
+      "GeneralLiabilityChangesBindingArbitration": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "EachPersonBodilyInjuryLimit": {
+                 "type":"string",
+                "default":"50,000"},
+      "GeneralLiabilityConnecticutExtendedReportingPeriodEndorsementPollutionLiabLimited": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "ERPExposuresOnSpecialUWBasisLatestYearPremOps": {
+                 "type":"string",
+                "default":"1"},
+      "GeneralLiabilitySupplementalExtendedReportingPeriodEndtLiquorLiab": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityLimitedExclPersonalAdvertisingInjLawyers": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityExclusionExteriorInsulationAndFinishSystemsProdsCompldOps": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityExclFiduciaryOrRepLiabOfFinclInstitutions": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityConditionalLimitationOfCoverageTerrorismSublimitAnnualAggregateTerrorismAct2002": { "type": "array","items":{"properties":
+        {
+          "AggregateLimit": {
+                 "type":"string",
+                "default":"100,000"},
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "LeadHaveAllPremisesConstructedInOrAfter1978": {
+                 "type":"string",
+                "default":""},
+      "GeneralLiabilityMontanaExtendedReportingPeriodEndorsementEmployeeBenefitsLiabilityCov": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "ERPLatestYearYIP": {
+                 "type":"string",
+                "default":"2"},
+      "GeneralLiabilityWaiverOfTransferOfRightsOfRecoveryAgainstOthersToUsOwnersContrctrs": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityPollutionExclLimitedExceptionForDesigntdPollutants": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityExtendedReportingPeriodEndt": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityExclProductsProfessionalServicesDruggists": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityEmployeeBenefitsLiabCovClaimsMade": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityAmndmtOfCovTerrWorldwideCov": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "TRIAExpirationDate": {
+                 "type":"string",
+                "default":"2019-01-01"},
+      "PremOpsProdsEachOccurrenceLimitGovernmentalSubdivision": {
+                 "type":"string",
+                "default":"100,000"},
+      "GeneralLiabilityExtendedReportingPeriodEndorsementPollutionLiability": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "EDLRetroactiveDate": {
+                 "type":"string",
+                "default":"2019-01-01"},
+      "GeneralLiabilitySilicaOrSilicaRelatedDustExclusionOwnersContractorsProdsCompldOps": { "type": "array","items":{"properties":
+        {
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityLimitedContractualLiabilityRailroads": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityExclYear2000ComputerReltdOtherElectronicProblemsProdsCompldOps": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityExclDesignatedProducts": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityCertifiedActsOfTerrorismAggregateLimitCapOnLossesFromCertifiedActsOfTerrorismProdsCompldOps": { "type": "array","items":{"properties":
+        {
+          "AggregateLImit":{
+                 "type":"string",
+                "default": "100,000"},
+          "ManualPremium":{
+                 "type":"string",
+                "default": "0"
+        }
+      }}},
+      "GeneralLiabilityCompositeRating.FinalAdjustedCompositeExposure": {
+                 "type":"string",
+                "default":"0"},
+      "RailroadAggregateLimit":{
+                 "type":"string",
+                "default": "150,000"},
+      "OwnerAndOperatorOfChallengeCoursesZipLinesOrSimilarDevices": {
+                 "type":"string",
+                "default":"No"},
+      "GeneralLiabilityStateAmndmtOfLiquorLiabExclExcptnScheddActivsProductsCompletedOps": { "type": "array","items":{"properties":
+        {
+          "GeneralLiabilityStateAmndmtOfLiquorLiabExclExcptnScheddActivsProductsCompletedOpsDetail": { "type": "array","items":{"properties":
+            {
+              "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+            }
+          }}}
+        }
+      }},
+      "ERPThirdLatestYearYIP": {
+                 "type":"string",
+                "default":"3"},
+      "GeneralLiabilityCoverageForInjuryToCoEmployees": { "type": "array","items":{"properties":
+        {
+          "GeneralLiabilityCoverageForInjuryToCoEmployeesDetail": { "type": "array","items":{"properties":
+            {
+              "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+            }
+          }}}
+        }
+      }},
+      "ResidentialContractor": {
+                 "type":"string",
+                "default":"No"},
+      "PDLimitPerOccurrence": {
+                 "type":"string",
+                "default":"100,000"},
+      "GeneralLiabilityTexasChangesAirportLiability": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityTexasChangesPesticideOrHerbicideApplicatorCov": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityTexasChangesPesticideOrHerbicideApplicatorCoverageOwnersAndContractors": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityChangesSupplementalExtendedReportingPeriodEndtForEmployeeBenefitsLiabCov": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityChangesSuppllExtendedReportingPeriodForExcldOrRemovedElectronicDataLiabilityCov": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilitySupplementalExtendedReportingPeriodEndtForProdCompldOpsLiab": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilitySupplementalExtendedReportingPeriodEndtTerrorism": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilitySupplementalExtendedReportingPeriodForExcldCov": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilitySupplementalExtendedReportingPeriodForExcldLiquorLiabCov": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilitySupplementalExtendedReportingPeriodForExcldProdCompldOpsLiabCov": { "type": "array","items":{"properties":
+        {
+          "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}},
+      "GeneralLiabilityVermontCoverageForInjurytoCoEmployees": { "type": "array","items":{"properties":
+        {
+          "GeneralLiabilityVermontCoverageForInjurytoCoEmployeesDetail": { "type": "array","items":{"properties":
+            {
+              "ManualPremium": {
+                 "type":"string",
+                "default":"0"
+            }
+          }}}
+        }
+      }},
+      "WashingtonStateDepartmentOfTransportation":{
+                 "type":"string",
+                "default": "No"},
+      "GeneralLiabilityLimitedFungiOrBacteriaCoverageOwnersContractorsProductsCompleted": { "type": "array","items":{"properties":
+        {
+          "FungiBacteriaLiabAggregateLimit": {
+                 "type":"string",
+                "default":"0"
+        }
+      }}}
+    		
+				
+				}
+		      }
+		    },
+	"Lob": {
+                "type":"string",
+                "default":""
+  },
+  "LastRateLookUpDate": {
+                "type":"string",
+                "default":"2019-07-03"
+  },
+  "ProductNumber":{
+                "type":"string",
+                "default": "ISOGL"
+  },
+  "InsuredName": {
+                "type":"string",
+                "default":""
+  },
+  "OwnerID":{
+                "type":"string",
+                "default": "1"
+  },
+  "ProductVerNumber": {
+                "type":"string",
+                "default":"ISO_GL_V2"
+  },
+  "Active":{
+                "type":"string",
+                "default": ""
+  },
+   "ServiceRequestDetail": {
+  		  "type":"object",
+		  "properties":{
+		    "ServiceResponseVersion":{
+		      "type" : "string",
+		       "default" : "1.0"
+		      },
+		      "ResponseType":{
+		        "type" : "string",
+		        "default" : "json"
+		        },
+		        "EndClientUserUniqueSessionId" : {
+		          "type" : "string",
+		          "default" : "1.0"
+		          },
+		          "token" : {
+		            "type" : "string",
+		            "default" : "cgHkrayYxCQUELzjteEsxZP32zou6UWFXKryWyV7StxpCXrv4Wrw5AgstHJauqCYxIwmtIjmQm1gAaFftpBW9+9fDequY+K/u0MvHxFxBpLbESXeQL46dz2Ady6iMvcNJ2xQAvAICVPMKGXbQNU+m0ElteQl51/LSPYsFHka6314zLAyXr1iifE21KN5M4KPuj9BeyB02zPGKGO+3S7yojnIPpfpamzEmQMR5XY2iB4UEyLtWCuR9wtM5FtbWHIbzj/bnmLCK6pb8HpH9fDqD3/NUXwW9f8LB/d+oCPp3dUsnCP5Awut2j7mq3nQhacg7xN56OlEJTqV+byM4WsBSYUu+RCiXbic0kx+kBFEW0zB3ahSzo9l23f2dqI051gXd/YRH090RvwO9XpFkmMrxYCoi4MB4x6dvKmhUsgRY80chdGFe6NaXRz5QHH9Ghhtq50njM6Vr2lOJFh8PUPJzbZG2Ecu9vbW5khPB8jeVHKHMwlQswycTzbVogwTTGlvkr0TZgGmgdhmMTzAqe0NTlUoh7CxFto9YYnsQ9eJYRfMUJsg8DOC93m69wudKk1Wu872JSbEKfULE3+hfzAll8W8jF1O8ak3UoBq1qIf/8jytZ9VAQ/L8jhq8mz7Szs5P7yI4K6jdJOzfUWfYeiflteVrPvYVaeXirqCiX8CueLmHmQuan4NsfYl2ws5dZ03SDDvvGZ+/2cwDeXfUTdjaG0IReHMCzI8TUeSoKgniUqIdEWAZvDVT+4dfy964U7httS0iXn/5bYTBwOWgG4YFXXpJj1nd+hMt+DTuJFG2iJS9yCsl+g3HbrW8jjVWuGNw3qMIl92ECSBuAujK6DqEzQVuGnvyP385edvTPMwGAcx2bcKemqTnS/xlog+IUx8vY0RE64FXkwjVhndjLWFxfcXoh04wm/SeWg/Gu0atqYwZ6zz/ELelvOlvddhWJ9OIFN2WcrxuBJox11v2C6GhPwwevhs+xC1WlhKBUkQduC1kqf1U/TEDS2FMmRJIQU2TtWbBVhXDuEEAPDAWxLE3Q0wOgMkgIi0d0ATOk4lp7KmyLzGRjrtZ5GLCp9igKhDrNOt6/r47Q+BN4J2Qie+tjn7JHPeEyme8agVLPvNW0jGl61EwmcoeVHvVHnnGcHnDt1wxx6JWxZE6/FTCLGhTZ9hJ59Z1Hyqzd0bdBKdlTCyeXH+YYd8E6KXdXR2mZLgmvlfjSIeCARWzpU6BJDzdebsJAzzQGaJtopkkyFAwh/nBagajHYhS/1A38t/8pvO+35WgKQCrv9Wq206+AwhGSjM9ANEoNIJb/PMhtIVAgmo5AE5xKz4Du3xEwUCl9IQUwkIAUiLvuyAF9v5+MDZp3JSsw2BRFShIWKyCb39aGjnOczcDJrTX3XHPwhV+l4PK9tE+CLXIBCymsq1xelWZCK2SXWiZzFzq0g9iSJrs1xpL9ES+g4ig5hM7HpujgrCBmUTCvj+VEil3uel+wADNcsz9wHTO/mwRMiD+INLXz1FTK+E5UsjdjQNo3QWL3EkYOEJIvneIjmrr8idyI3WTyELxlMqwIrTb4339qvrpbPc9IsCUhFZCzC7pI/KjiHSnimnmr7qCNPVDKRGR2A6aD/doZZUgmVyi9760e/v1m2/SrUL7DuiQTfxs3UqW6IMURpPXdyZaR8SjBByeLKDHjevMn51EJ8glGgjW9K2k2t1JppHFc920NUvC5cH6vDfj1gnAyTauBeFCleEs1TEe1SO/draOOTvTNK9PYtxC6h/xI/H9+sGq2T8yPI+BGOgffJ72/sZIDhSf3cyftv7t2i3kggt/KprE6bX3iKIrDaYsH+EuX7HtZ5fADGy4cAD6XxEup9YstwtzlGfVQqTCV0pNKbFbIKUi9p0FVwqLhdGJawncRfA2kG9NUG/iQexnYBoQSxctUSGt7BTrAVX7RubDTSkxLODsZ+QD2n9YQIgU3ZZyvG4EmjHXW/YLoaEngq7tOddfEz4y/tURqDA2g=="
+		            },
+		        "ServiceRequestVersion" : {
+		          "type" : "string",
+		          "default" : "1.0"
+		          },
+		          "OwnerId" : {
+		            "type" : "string",
+		            "default" : "1"
+		            },
+		          "LanguageCode" : {
+		            "type" : "string",
+		            "default" : "en"
+		            },
+		            "UserName" : {
+		              "type" : "string",
+		              "default" : "isorateadmin"
+		              },
+		              "RegionCode" : {
+		                "type" : "string",
+		                "default" : ""
+		                }
+		  }
+   },
+    "EventName": {
+                "type":"string",
+                "default":"GL_RatingEvent_V1"
+  },
+  "Environment": {
+                "type":"string",
+                "default":""
+  },
+  "City":{
+                "type":"string",
+                "default": "Adamsville"
+  },
+  "EffectiveDate":{
+                "type":"string",
+                "default": "2019-02-01"
+  },
+  "Mode":{
+                "type":"string",
+                "default": ""
+  },
+  "Zipcode":{
+                "type":"string",
+                "default": "35005"
+  }
+   
+		  }
 		},
 		"Success_Response": {
 			"type": "object",

@@ -149,21 +149,13 @@ definitions:
           ExpirationDate:
             title: "Expiration Date"
             type: string
-          PLLimit:
-            title: "Professional Liability Limit"
-            type: string
-            enum: ["$100,000/$300,000","$100,000/$500,000","$200,000/$600,000","$250,000/$750,000","$200,000 / $1,000,000","$500,000 / $500,000","$500,000 / $1,000,000","$500,000 / $2,500,000","$1,000,000/$1,000,000","$1,000,000/$2,000,000","$1,000,000/$3,000,000","$1,000,000/$5,000,000","$1,000,000/$6,000,000","$2,000,000/$4,000,000","$2,400,000/$4,800,000","$2,000,000/$5,000,000","$2,000,000/$6,000,000"]
-          BackgroundChecks:
-            title: "Background Checks"
-            type: string
-            enum: ["Yes","No","N/A"]
           NatureOfBusiness:
             title: "Nature Of Busienss"
             type: string
             enum: ["Case Management","Clinic","Consulting","Counseling","Fitness","Fitness Center","Health Ed","Home Health","Pharmacy","Rehab Center","Staffing","Other"]
           NumberOfAdditionalInsured:
             title: "Number Of Additional Insured"
-            type: string
+            type: number
           MedicalDirector:
             title: "Medical Director"
             type: string
@@ -178,18 +170,36 @@ definitions:
             type: array
             items:
               properties:
-                Profession:
-                  type: object
-                  required:
-                    - ProfessionCode
-                    - HeadCount
-                  properties:
-                    ProfessionCode:
-                      title: "Profession Code"
-                      type: string
-                    HeadCount:
-                      title: "Head Count"
-                      type: string
+                ProfessionCode:
+                  title: "Profession Code"
+                  type: string
+                HeadCount:
+                  title: "Head Count"
+                  type: string
+          Coverages:
+            type: array
+            items:
+              properties:
+                OccurrenceLimit:
+                  title: "Occurrence Limit"
+                  type: number
+                AggregateLimit:
+                  title: "Aggregate Limit"
+                  type: number
+                CyberOptionsLimit:
+                  title: "Cyber Options Limit"
+                  type:  number
+          UwQuestions:
+            type: array
+            items:
+              properties:
+                BackgroundChecks:
+                  title: "Background Checks"
+                  type: string
+                  enum: ["Yes","No","N/A"]
+                MedicalDirector:
+                  title: "Medical Director"
+                  type: string
       OwnerId:
         type: string
         default: "27"

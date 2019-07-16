@@ -100,6 +100,12 @@ definitions:
       GenerateRatingWorkSheet:
           type: string
           default: "Yes"
+      IsValidationRequired:
+          type: string
+          default: "Yes"
+      IsRatingRequired:
+          type: string
+          default: "Yes"
       DocumentType:
           type: string
           default: "Quote Letter"
@@ -198,6 +204,16 @@ definitions:
           AddedPersonalInjuryProtectionLimitText: 
             default: "10,000"
             type: string
+          CommercialAutoLeasingOrRentalConcernsContingentCoverage:
+            default: "Yes"
+            type: string
+          CommercialAutoLeasingOrRentalConcernsContingentCoverageList:
+            type: array
+            items:
+              properties:
+                LesseeLiabilityPremium:
+                  type: string
+                  default: "5"
           AdditionalChiropracticTreatments: 
             type: string
             default: "No"
@@ -1457,6 +1473,12 @@ definitions:
                         ZipCode: 
                           default: "85001"
                           type: string
+                        CommercialAutoTapesRecordsAndDiscsCov:
+                          default: "Yes"
+                          type: string
+                        CommercialAutoMichiganPropertyDamageLiabilityCoverageBuyback:
+                          default: "Yes"
+                          type: string
           PublicTransportation:
             type: array
             items:
@@ -1902,6 +1924,12 @@ definitions:
                         ZipCode: 
                           default: "85001"
                           type: string
+                        CommercialAutoTapesRecordsAndDiscsCov:
+                          default: "Yes"
+                          type: string
+                        CommercialAutoMichiganPropertyDamageLiabilityCoverageBuyback:
+                          default: "Yes"
+                          type: string
           Special:
             type: array
             items:
@@ -2327,6 +2355,31 @@ definitions:
                       specialVehicleUninsuredMotoristCoverageClassFactor:
                         default: ""
                         type: string
+                      CommercialAutoLeasingRentalConcernsConversionEmbezzlementSecretionCov:
+                        default: "Yes"
+                        type: string
+                      CommercialAutoTapesRecordsAndDiscsCov:
+                          default: "Yes"
+                          type: string
+                      CommercialAutoMichiganPropertyDamageLiabilityCoverageBuyback:
+                          default: "Yes"
+                          type: string
+                      CommercialAutoMobileHomesContentsCov:
+                        default: "Yes"
+                        type: string
+                      CommercialAutoMobileHomesContentsCovList:
+                        type: array
+                        items:
+                            properties:
+                              CoverageType:
+                                type: string
+                                default: "Stated Amount - Specified Causes of Loss"
+                              Limit:
+                                type: string
+                                default: "10001"
+                              Deductible:
+                                type: string
+                                default: ""
           Truck:
             type: array
             items:
@@ -2764,6 +2817,12 @@ definitions:
                         ZipCode: 
                           default: "85001"
                           type: string
+                        CommercialAutoTapesRecordsAndDiscsCov:
+                          default: "Yes"
+                          type: string
+                        CommercialAutoMichiganPropertyDamageLiabilityCoverageBuyback:
+                          default: "Yes"
+                          type: string
           ZoneRated:
             type: array
             items:
@@ -3173,6 +3232,12 @@ definitions:
                           type: string
                         ZoneRatedExtraordinaryMedicalBenefitsCoverageExtraordinaryMedicalBenefitRatingBasis: 
                           default: ""
+                          type: string
+                        CommercialAutoTapesRecordsAndDiscsCov:
+                          default: "Yes"
+                          type: string
+                        CommercialAutoMichiganPropertyDamageLiabilityCoverageBuyback:
+                          default: "Yes"
                           type: string
   errorModel:
     type: object

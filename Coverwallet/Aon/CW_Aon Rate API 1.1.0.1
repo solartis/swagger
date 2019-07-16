@@ -5,7 +5,7 @@ info:
   description: To get rate for Profesional Liability from Solartis Rate API along with Forms List
   
   
-host: cw.beta.solartis.net
+host: cw.alpha.solartis.net
 basePath: /DroolsV6/DroolsService
 schemes:
   - https
@@ -158,7 +158,7 @@ definitions:
             type: number
           ScheduledCreditsDebits:
             title: "Scheduled Credits Debits"
-            type: number
+            type: string
           Professions:
             type: array
             items:
@@ -168,7 +168,7 @@ definitions:
                   type: string
                 HeadCount:
                   title: "Head Count"
-                  type: number
+                  type: string
           Coverages:
             type: object
             properties:
@@ -255,7 +255,7 @@ definitions:
           ProductVerNumber:
             title: "Product Ver Number"
             type: string
-            default: "1.0"
+            default: "2.0"
           EventName:
             title: "Event Name"
             type: string

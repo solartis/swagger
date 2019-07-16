@@ -269,13 +269,13 @@ definitions:
             type: string
           TotalPremiumPlusTaxes:
             title: "Total Premium Plus Taxes"
-            type: string
+            type: number
           TotalPremiumBeforeTaxes:
             title: "Total Premium Before Taxes"
-            type: string
+            type: number
           TotalBasePremium:
             title: TotalBasePremium"
-            type: string
+            type: number
           TotalBaseRate:
             title: "Total Base Rate"
             type: string
@@ -304,126 +304,123 @@ definitions:
           ExpirationDate:
             title: "Expiration Date"
             type: string
-          PLLimit:
-            title: "Professional Liability Limit"
-            type: string
           PLLimitFactor:
             title: "PL Limit Factor"
-            type: string
+            type: number
           PLLimitSubtotal:
             title: "PL Limit Subtotal"
-            type: string
+            type: number
           BackgroundChecksFactor:
            title: "Background Checks Factor"
-           type: string
+           type: number
           BackgroundChecksRate:
            title: "Background Checks Rate"
-           type: string
+           type: number
           BackgroundChecksSubtotal:
             title: "Background Checks Subtotal"
-            type: string
+            type: number
           SizeOfFirmCount:
             title: "Size Of Firm Count"
-            type: string
+            type: number
           SizeOfFirmCreditFactor:
             title: "Size Of Firm Credit Factor"
-            type: string
+            type: number
           SizeOfFirmCreditRate:
             title: "Size Of Firm Credit Rater"
-            type: string
+            type: number
           ExposureModeFactor:
             title: "Exposure Mode Factor"
-            type: string
+            type: number
           ExposureModeRate:
             title: "Exposure Mode Rate"
-            type: string
+            type: number
           UnusualRiskFactor:
             title: "Unusual Risk Factor"
-            type: string
+            type: number
           UnusualRiskRate:
             title: "Unusual Risk Rate"
-            type: string
-          Services/LocationsFactor:
+            type: number
+          ServicesLocationsFactor:
             title: "Services / Locations Factor"
-            type: string
-          Services/LocationsRate:
+            type: number
+          ServicesLocationsRate:
             title: "Services / Locations Rate"
-            type: string
+            type: number
           NatureOfBusiness:
             title: "Nature Of Busienss"
             type: string
           NatureOfBusinessFactor:
             title: "Nature Of Busienss Factor"
-            type: string
+            type: number
           NatureOfBusinessRate:
             title: "Nature Of Business Rate"
-            type: string
+            type: number
           TotalCreditsAndDebits:
             title: "Total Credits And Debits"
-            type: string
+            type: number
           PLLimitsTotalWithDebitsAndCredits:
             title: "PL Limits Total With Debits And Credits"
-            type: string
+            type: number
           EntityChargeFactor:
             title: "Entity Charge Factor"
-            type: string
+            type: number
           EntityChargeRate:
             title: "Entity Charge Rate"
-            type: string
+            type: number
           EntityChargeSubtotal:
             title: "Entity Charge Subtotal"
-            type: string
+            type: number
           NumberOfAdditionalInsured:
             title: "Number Of Additional Insured"
-            type: string
+            type: number
           AdditionalInsuredRate:
             title: "Additional Insured Rate"
-            type: string
+            type: number
           AdditionalInsuredSubtotal:
             title: "Additional Insured Subtotal"
-            type: string
+            type: number
           MedicalDirectorRate:
             title: "Medica Director Rate"
-            type: string
+            type: number
           MedicalDirectorSubtotal:
             title: "Medical Director Subtotal"
-            type: string
+            type: number
           CyberLimitOptionsAmount:
             title: "Cyber Limit Options Amount"
-            type: string
+            type: number
           CyberLimitOptionsSubtotal:
             title: "Cybe rLimit Options Subtotal"
             type: string
           MediaExpenseRate:
             title: "Media Expense Rate"
-            type: string
+            type: number
           MediaExpenseSubtotal:
-            title: Media Expense Subtotal"
-            type: string
+            title: "Media Expense Subtotal"
+            type: number
           EplFillingStatus:
             title: "Epl Filling Status"
             type: string
           EPLLimit:
             title: "EPL Limit"
-            type: string
+            type: number
           EPLPremium:
             title: "EPL Premium"
-            type: string
+            type: number
           EPLSubtotal:
             title: "EPL Subtotal"
-            type: string
+            type: number
           ConsultingServicesCount:
             title: "Consulting Services Count"
-            type: string
+            type: number
           ConsultingServicesAmount:
             title: "Consulting Services Amount"
-            type: string
+            type: number
           ConsultingServicesRate:
             title: "Consulting Services Rate"
-            type: string
+            type: number
           ConsultingServicesSubtotal:
             title: "Consulting Services Subtotal"
-            type: string
+            type: number
           UwQuestions:
             type: object
             properties:
@@ -447,16 +444,16 @@ definitions:
                   type: string
                 HeadCount:
                   title: "Head Count"
-                  type: string
+                  type: number
                 BaseRate:
                   title: "Base Rate"
-                  type: string
+                  type: number
                 MinRate:
                   title: "Min Rate"
-                  type: string
+                  type: number
                 Premium:
                   title: "Premium"
-                  type: string
+                  type: number
           Coverages:
             type: object
             properties:
@@ -492,10 +489,10 @@ definitions:
                   type: string
                 TFSRate:
                   title: "TFS Rate"
-                  type: string
+                  type: number
                 TFSAmount:
                   title: "TFS Amount"
-                  type: string
+                  type: number
                 TFSAppliedDate:
                   title: "TFScAppliedDate"
                   type: string
@@ -506,9 +503,8 @@ definitions:
                   title: "TFS Code"
                   type: string
           Forms:
-            type: array 
-            items:
-              properties:
+            type: object
+            properties:
                 FormName:
                   title: "Form Name"
                   type: string
@@ -520,7 +516,7 @@ definitions:
                   type: string
                 Sequence:
                   title: "Sequence"
-                  type: string
+                  type: number
   errorModel:
     type: object
     required:

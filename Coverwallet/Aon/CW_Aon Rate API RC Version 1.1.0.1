@@ -1,0 +1,547 @@
+swagger: '2.0'
+info:
+  version: "1.0.0"
+  title: Solartis Rate API for Coverwallet - Aon
+  description: To get rate for Profesional Liability from Solartis Rate API along with Forms List
+  
+  
+host: cw.rc.solartis.net
+basePath: /DroolsV6/DroolsService
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /FireEventV2:
+    post:
+      description: Get Rates for the given input
+      operationId: getRates
+      produces:
+        - application/json
+      parameters:
+        - name: Token
+          in: header
+          description: Authentication Token
+          required: true
+          type: string
+          format: string
+          default: "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"
+        - name: EventName
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "AonPliRateWithForms"
+        - name: EventVersion
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "1.1.0.1"
+        - name: Rating
+          in: body
+          description: Rating content
+          required: true
+          schema:
+            $ref: '#/definitions/Rating_Request'
+      responses:
+        '200':
+          description: Success Response
+          schema:
+            $ref: '#/definitions/Rating_Success_Response'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/errorModel'
+
+definitions:
+  Rating_Request:
+    type: object
+    required:
+      - ServiceRequestDetail
+      - Policy
+    properties:
+      EndClientUserUniqueSessionId:
+        type: string
+        default: "5ba3b6f1f8ce2d1148d3aba3"
+      EndClientUserBrowserSessionId:
+        type: string
+      EndClientUserBrowserInformation:
+        type: string
+      PaaSClientIPAddress:
+        type: string
+      ClientUniqueRequestID:
+        type: string
+      ServiceRequestDetail:
+        type: object
+        properties:
+          OwnerId:
+            type: string
+            default: "27"
+          ResponseType:
+            type: string
+            enum: ["JSON","XML"]
+            default: "JSON"
+          UserName:
+            type: string
+            default: "cwagent"
+          Token:
+            type: string
+            default: "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"
+          BrowserIp:
+            type: string 
+            default: "127.0.0.1"
+          ServiceRequestVersion:
+            type: string
+            default: "1.0"
+          RegionCode:
+            type: string
+            default: "US"
+      Policy:
+        type: object
+        required:
+          - ZipCode
+          - State
+          - EventName
+          - EventVersion
+          - EffectiveDate
+          - ExpirationDate
+        properties:
+          ProductNumber:
+            title: "Product Number"
+            type: string
+            default: "AON_PLI"
+          ProductVerNumber:
+            title: "Product Ver Number"
+            type: string
+            default: "1.0"
+          EventName:
+            title: "Event Name"
+            type: string
+            default: "AonPliRateWithForms"
+          EventVersion:
+            title: "Event Version"
+            type: string
+            default: "1.1.0.1"
+          AddressLine1:
+            title: "Address Line 1"
+            type: string
+          AddressLine2:
+            title: "Address Line 2"
+            type: string
+          City:
+            title: "City"
+            type: string
+          ZipCode:
+            title: "Zip Code"
+            type: string
+          State:
+            title: "State"
+            type: string
+            enum: ["AL","AK","AR","AZ","CA","CO","CT","DC","DE","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA","MA","MD","ME","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","NY","OH","OK","OR","PA","PR","RI","SC","SD","TN","TX","UT","VT","WA","WI","WV","WY","VA"]
+          EffectiveDate:
+            title: "Effective Date"
+            type: string
+          ExpirationDate:
+            title: "Expiration Date"
+            type: string
+          NatureOfBusiness:
+            title: "Nature Of Busienss"
+            type: string
+            enum: ["staffing","pharmacy","rehab_services","case_management","counseling","clinic","home_health","health_education","consulting","fitness","other"]
+          NumberOfAdditionalInsured:
+            title: "Number Of Additional Insured"
+            type: number
+          ScheduledCreditsDebits:
+            title: "Scheduled Credits Debits"
+            type: string
+          Professions:
+            type: array
+            items:
+              properties:
+                ProfessionCode:
+                  title: "Profession Code"
+                  type: string
+                HeadCount:
+                  title: "Head Count"
+                  type: string
+          Coverages:
+            type: object
+            properties:
+              OccurrenceLimit:
+                title: "Occurrence Limit"
+                type: number
+              AggregateLimit:
+                title: "Aggregate Limit"
+                type: number
+              CyberOptionsLimit:
+                title: "Cyber Options Limit"
+                type:  number
+          UwQuestions:
+            type: object
+            properties:
+              BackgroundChecks:
+                title: "Background Checks"
+                type: string
+                enum: ["Yes","No","N/A"]
+              MedicalDirector:
+                title: "Medical Director"
+                type: string
+              ServicesLocations:
+                title: "Services Or Locations"
+                type: string
+                enum: ["Services Debit","All Other","MD Prescriber","High Tech Critical Care","Staffing to Nursing Home > 50%"]
+      OwnerId:
+        type: string
+        default: "27"
+
+  Rating_Success_Response:
+    type: object
+    required:
+      - ServiceRequestDetail
+      - Policy
+    properties:
+      OwnerId:
+        type: string
+        default: "27"
+      EndClientUserUniqueSessionId:
+        type: string
+        default: "5ba3b6f1f8ce2d1148d3aba3"
+      EndClientUserBrowserSessionId:
+        type: string
+        default: "7Eadfad4444"
+      EndClientUserBrowserInformation:
+        type: string
+        default: "Mozilla/..."
+      PaaSClientIPAddress:
+        type: string
+        default: "125.25.25.2"
+      ClientUniqueRequestID:
+        type: string
+        default: ""
+      ServiceRequestDetail:
+        type: object
+        properties:
+          ResponseType:
+            type: string
+            enum: ["JSON","XML"]
+            default: "JSON"
+          UserName:
+            type: string
+            default: "cwagent"
+          Token:
+            type: string
+            default: "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"
+          BrowserIp:
+            type: string 
+            default: "127.0.0.1"
+          ServiceRequestVersion:
+            type: string
+            default: "1.0"
+          RegionCode:
+            type: string
+            default: "US"
+      Policy:
+        type: object
+        properties:
+          ProductNumber:
+            title: "Product Number"
+            type: string
+            default: "AON_PLI"
+          ProductVerNumber:
+            title: "Product Ver Number"
+            type: string
+            default: "1.0"
+          EventName:
+            title: "Event Name"
+            type: string
+            default: "AonPliRateWithForms"
+          EventVersion:
+            title: "Event Version"
+            type: string
+            default: "1.1.0.1"
+          ApplicableFromDate:
+            title: "Applicable From Date"
+            type: string
+          TotalPremiumPlusTaxes:
+            title: "Total Premium Plus Taxes"
+            type: number
+          TotalPremiumBeforeTaxes:
+            title: "Total Premium Before Taxes"
+            type: number
+          TotalBasePremium:
+            title: TotalBasePremium"
+            type: number
+          TotalBaseRate:
+            title: "Total Base Rate"
+            type: string
+          TotalHeadCount:
+            title: "Total Head Count"
+            type: number
+          AddressLine1:
+            title: "Address Line 1"
+            type: string
+          AddressLine2:
+            title: "Address Line 2"
+            type: string
+          City:
+            title: "City"
+            type: string
+          ZipCode:
+            title: "Zip Code"
+            type: string
+          State:
+            title: "State"
+            type: string
+            enum: ["AL","AK","AR","AZ","CA","CO","CT","DC","DE","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA","MA","MD","ME","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","NY","OH","OK","OR","PA","PR","RI","SC","SD","TN","TX","UT","VT","WA","WI","WV","WY","VA"]
+          EffectiveDate:
+            title: "Effective Date"
+            type: string
+          ExpirationDate:
+            title: "Expiration Date"
+            type: string
+          PLLimitFactor:
+            title: "PL Limit Factor"
+            type: number
+          PLLimitSubtotal:
+            title: "PL Limit Subtotal"
+            type: number
+          BackgroundChecksFactor:
+           title: "Background Checks Factor"
+           type: number
+          BackgroundChecksRate:
+           title: "Background Checks Rate"
+           type: number
+          BackgroundChecksSubtotal:
+            title: "Background Checks Subtotal"
+            type: number
+          SizeOfFirmCount:
+            title: "Size Of Firm Count"
+            type: number
+          SizeOfFirmCreditFactor:
+            title: "Size Of Firm Credit Factor"
+            type: number
+          SizeOfFirmCreditRate:
+            title: "Size Of Firm Credit Rater"
+            type: number
+          ExposureModeFactor:
+            title: "Exposure Mode Factor"
+            type: number
+          ExposureModeRate:
+            title: "Exposure Mode Rate"
+            type: number
+          UnusualRiskFactor:
+            title: "Unusual Risk Factor"
+            type: number
+          UnusualRiskRate:
+            title: "Unusual Risk Rate"
+            type: number
+          ServicesLocationsFactor:
+            title: "Services / Locations Factor"
+            type: number
+          ServicesLocationsRate:
+            title: "Services / Locations Rate"
+            type: number
+          NatureOfBusiness:
+            title: "Nature Of Busienss"
+            type: string
+          NatureOfBusinessFactor:
+            title: "Nature Of Busienss Factor"
+            type: number
+          NatureOfBusinessRate:
+            title: "Nature Of Business Rate"
+            type: number
+          TotalCreditsAndDebits:
+            title: "Total Credits And Debits"
+            type: number
+          PLLimitsTotalWithDebitsAndCredits:
+            title: "PL Limits Total With Debits And Credits"
+            type: number
+          EntityChargeFactor:
+            title: "Entity Charge Factor"
+            type: number
+          EntityChargeRate:
+            title: "Entity Charge Rate"
+            type: number
+          EntityChargeSubtotal:
+            title: "Entity Charge Subtotal"
+            type: number
+          NumberOfAdditionalInsured:
+            title: "Number Of Additional Insured"
+            type: number
+          AdditionalInsuredRate:
+            title: "Additional Insured Rate"
+            type: number
+          AdditionalInsuredSubtotal:
+            title: "Additional Insured Subtotal"
+            type: number
+          MedicalDirectorRate:
+            title: "Medica Director Rate"
+            type: number
+          MedicalDirectorSubtotal:
+            title: "Medical Director Subtotal"
+            type: number
+          CyberLimitOptionsAmount:
+            title: "Cyber Limit Options Amount"
+            type: number
+          CyberLimitOptionsSubtotal:
+            title: "Cybe rLimit Options Subtotal"
+            type: string
+          MediaExpenseRate:
+            title: "Media Expense Rate"
+            type: number
+          MediaExpenseSubtotal:
+            title: "Media Expense Subtotal"
+            type: number
+          EplFillingStatus:
+            title: "Epl Filling Status"
+            type: string
+          EPLLimit:
+            title: "EPL Limit"
+            type: number
+          EPLPremium:
+            title: "EPL Premium"
+            type: number
+          EPLSubtotal:
+            title: "EPL Subtotal"
+            type: number
+          ConsultingServicesCount:
+            title: "Consulting Services Count"
+            type: number
+          ConsultingServicesAmount:
+            title: "Consulting Services Amount"
+            type: number
+          ConsultingServicesRate:
+            title: "Consulting Services Rate"
+            type: number
+          ConsultingServicesSubtotal:
+            title: "Consulting Services Subtotal"
+            type: number
+          UwQuestions:
+            type: object
+            properties:
+              BackgroundChecks:
+                  title: "Background Checks"
+                  type: string
+                  enum: ["Yes","No","N/A"]
+              MedicalDirector:
+                  title: "Medical Director"
+                  type: string
+              ServicesLocations:
+                  title: "Services Or Locations"
+                  type: string
+                  enum: ["Services Debit","All Other","MD Prescriber","High Tech Critical Care","Staffing to Nursing Home > 50%"]
+          Professions:
+            type: array
+            items:
+              properties:
+                ProfessionCode:
+                  title: "Profession Code"
+                  type: string
+                HeadCount:
+                  title: "Head Count"
+                  type: number
+                BaseRate:
+                  title: "Base Rate"
+                  type: number
+                MinRate:
+                  title: "Min Rate"
+                  type: number
+                Premium:
+                  title: "Premium"
+                  type: number
+          Coverages:
+            type: object
+            properties:
+                OccurrenceLimit:
+                  title: "Occurrence Limit"
+                  type: number
+                AggregateLimit:
+                  title: "Aggregate Limit"
+                  type: number
+                CyberOptionsLimit:
+                  title: "Cyber Options Limit"
+                  type:  number
+          CoverageExtensions:
+            type: object
+            properties:
+                CoverageExtensionName:
+                  title: "Coverage Extension Name"
+                  type: string
+                CoverageExtensionValue:
+                  title: "Coverage Extension Value"
+                  type: string
+                CoverageExtesionAggregate:
+                  title: "Coverage Extesion Aggregate"
+                  type: string
+          TFSList:
+            type: object 
+            properties:
+                TFSName:
+                  title: "TFS Name"
+                  type: string
+                TFSType:
+                  title: "TFS Type"
+                  type: string
+                TFSRate:
+                  title: "TFS Rate"
+                  type: number
+                TFSAmount:
+                  title: "TFS Amount"
+                  type: number
+                TFSAppliedDate:
+                  title: "TFSAppliedDate"
+                  type: string
+                TFSDescription:
+                  title: "TFS Description"
+                  type: string
+                TFSCode:
+                  title: "TFS Code"
+                  type: string
+          Forms:
+            type: object
+            properties:
+                FormName:
+                  title: "Form Name"
+                  type: string
+                FormNumber:
+                  title: "Form Number"
+                  type: string
+                FormType:
+                  title: "Form Type"
+                  type: string
+                Sequence:
+                  title: "Sequence"
+                  type: number
+  errorModel:
+    type: object
+    required:
+      - RequestStatus
+      - MessageDetail
+    properties:
+      RequestStatus:
+        type: string
+      MessageDetail:
+        type: object
+        properties:
+          MessageCode:
+            type: string
+          MessageType:
+            type: string
+          UserMessage:
+            type: string
+          MessageLevel:
+            type: string
+          MessageSeverity:
+            type: string
+          MessageList:
+            type: object
+            properties:
+              Message:
+                type: array
+                items:
+                  type: string      

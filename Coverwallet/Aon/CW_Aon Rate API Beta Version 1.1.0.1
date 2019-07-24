@@ -191,10 +191,14 @@ definitions:
               MedicalDirector:
                 title: "Medical Director"
                 type: string
-              ServicesLocations:
-                title: "Services Or Locations"
+              HighTechCriticalCare:
+                title: "High Tech Critical Care"
                 type: string
-                enum: ["Services Debit","All Other","MD Prescriber","High Tech Critical Care","Staffing to Nursing Home > 50%"]
+                enum: ["Yes", "No"]
+              StaffingToNursingHomeGreaterThan50Percent:
+                title: "Staffing To Nursing Home Greater Than 50 Percent"
+                type: string
+                enum: ["Yes", "No"]
       OwnerId:
         type: string
         default: "27"
@@ -343,12 +347,15 @@ definitions:
           UnusualRiskRate:
             title: "Unusual Risk Rate"
             type: number
-          ServicesLocationsFactor:
-            title: "Services / Locations Factor"
+          HighTechCriticalCareFactor:
+            title: "HighTechCriticalCareFactor"
             type: number
           ServicesLocationsRate:
             title: "Services / Locations Rate"
             type: number
+          StaffingToNursingHomeFactor:
+            title: "StaffingToNursingHomeFactor"
+            type: string
           NatureOfBusiness:
             title: "Nature Of Busienss"
             type: string
@@ -434,10 +441,14 @@ definitions:
               MedicalDirector:
                   title: "Medical Director"
                   type: string
-              ServicesLocations:
-                  title: "Services Or Locations"
-                  type: string
-                  enum: ["Services Debit","All Other","MD Prescriber","High Tech Critical Care","Staffing to Nursing Home > 50%"]
+              HighTechCriticalCare:
+                title: "High Tech Critical Care"
+                type: string
+                enum: ["Yes", "No"]
+              StaffingToNursingHomeGreaterThan50Percent:
+                title: "Staffing To Nursing Home Greater Than 50 Percent"
+                type: string
+                enum: ["Yes", "No"]
           Professions:
             type: array
             items:

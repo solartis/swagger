@@ -1,0 +1,422 @@
+swagger: '2.0'
+info:
+  version: "1.0"
+  title: Solartis Get Policy for Embroker
+  description: To enable Get Policy API for Embroker
+  
+host: embroker.rc.solartis.net
+basePath: /KnowledgeEngineV6_2/KnowledgeBase
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /FireEventV2:
+    post:
+      description: Get Policy in Solartis platform
+      operationId: getpolicy
+      produces:
+        - application/json
+      parameters:
+        - name: Token
+          in: header
+          description: Authentication Token
+          required: true
+          type: string
+          format: string
+          default: "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"
+        - name: EventName  
+          in: header
+          description: Name of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "EmbrokerGetPolicy"
+        - name: EventVersion
+          in: header
+          description: Version of the event to be invoked
+          required: true
+          type: string
+          format: string
+          default: "3.1.0.1"
+        - name: Policy
+          in: body
+          description: Policy content
+          required: true
+          schema:
+            $ref: '#/definitions/Policy_Request'
+      responses:
+        '200':
+          description: Success Response
+          schema:
+            $ref: '#/definitions/Policy_Success_Response'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/errorModel'
+            
+definitions:
+  Policy_Request:
+    type: object
+    required:
+      - ServiceRequestDetail
+      - Policy
+    properties:
+      EndClientUserUniqueSessionId:
+        type: string
+        default: "Uniquesession"
+      EndClientUserBrowserSessionId:
+        type: string
+      EndClientUserBrowserInformation:
+        type: string
+      PaaSClientIPAddress:
+        type: string
+      ClientUniqueRequestID:
+        type: string
+      ServiceRequestDetail:
+        type: object
+        properties:
+          OwnerId:
+            type: string
+            default: "36"
+          ResponseType:
+            type: string
+            enum: ["JSON","XML"]
+            default: "JSON"
+          UserName:
+            type: string
+            default: "EmbrokerAgent"
+          Token:
+            type: string
+            default: "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"
+          BrowserIp:
+            type: string 
+            default: "127.0.0.1"
+          LanguageCode:
+            type: string
+            default: "en"
+          ServiceRequestVersion:
+            type: string
+            default: "1.0"
+          RegionCode:
+            type: string
+            default: "US"
+      Policy:
+        type: object
+        required:
+          - ProductNumber
+          - ProductVerNumber
+          - EventName
+          - EventVersion
+          - PolicyNumber
+        properties:
+          ProductNumber:
+            title: "Product Number"
+            type: string
+            default: "EMBRKR"
+          ProductVerNumber:
+            title: "Product Ver Number"
+            type: string
+            default: "EMBRKR_2018_V1"
+          EventName:
+            title: "Event Name"
+            type: string
+            default: "EmbrokerGetPolicy"
+          EventVersion:
+            title: "Event Version"
+            type: string
+            default: "3.1.0.1"
+          PolicyNumber:
+            title: "Policy Number"
+            type: string
+           
+      OwnerId:
+        title: "Owner ID"
+        type: string
+        default: "36"
+        
+  Policy_Success_Response:
+    type: object
+    required:
+      - ServiceRequestDetail
+      - Policy
+    properties:
+      EndClientUserUniqueSessionId:
+        type: string
+        default: "Uniquesession"
+      EndClientUserBrowserSessionId:
+        type: string
+        default: ""
+      EndClientUserBrowserInformation:
+        type: string
+        default: ""
+      PaaSClientIPAddress:
+        type: string
+        default: ""
+      ClientUniqueRequestID:
+        type: string
+        default: ""
+      ServiceRequestDetail:
+        type: object
+        properties:
+          OwnerId:
+            type: string
+            default: "36"
+          ResponseType:
+            type: string
+            enum: ["JSON","XML"]
+            default: "JSON"
+          UserName:
+            type: string
+            default: "EmbrokerAgent"
+          Token:
+            type: string
+            default: "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"
+          BrowserIp:
+            type: string 
+            default: "127.0.0.1"
+          LanguageCode:
+            type: string
+            default: "en"
+          ServiceRequestVersion:
+            type: string
+            default: "1.0"
+          RegionCode:
+            type: string
+            default: "US"
+      Policy:
+        type: object
+        properties:
+          ProductNumber:
+            title: "Product Number"
+            type: string
+          ProductVerNumber:
+            title: "Product Ver Number"
+            type: string
+          EventName:
+            title: "Event Name"
+            type: string
+          EventVersion:
+            title: "Event Version"
+            type: string
+          PolicyNumber:
+            title: "Policy Number"
+            type: string
+          BusinessName:
+            title: "Business Name"
+            type: string
+          BusinessType:
+            title: "Business Type"
+            type: string
+          TypeOfBusiness:
+            title: "Type Of Business"
+            type: string
+          Industry:
+            title: "Industry"
+            type: string
+          YearStarted:
+            title: "Year Started"
+            type: string
+          FirstName:
+            title: "First Name"
+            type: string 
+          LastName:
+            title: "Last Name"
+            type: string 
+          PrimaryNumber:
+            title: "Primary Number"
+            type: string 
+          AlternateNumber:
+            title: "Alternante Number"
+            type: string 
+          EmailAddress:
+            title: "Email Address"
+            type: string
+          Website:
+            title: "Website"
+            type: string
+          AddressLine1:
+            title: "Address Line 1"
+            type: string
+          AddressLine2:
+            title: "Address Line 2"
+            type: string
+          SuiteNumber:
+            title: "Suite Number"
+            type: string
+          City:
+            title: "City"
+            type: string
+          State:
+            title: "State"
+            type: string
+          ZipCode:
+            title: "Zip Code"
+            type: string
+          TotalAssets:
+            title: "Total Assets"
+            type: string
+          AnnualRevenue:
+            title: "Annual Revenue"
+            type: string 
+          TotalCapitalRaisedToDate:
+            title: "Total Capital Raised To Date"
+            type: string
+          NumberOfEmployees:
+            title: "Number Of Employees"
+            type: string
+          AssetsUnderManagementForDefinedBenifitPlan:
+            title: "Assets Under Management For Defined Benifit Plan"
+            type: string
+          PlanToGoToIPOInNext12Months:
+            title: "Plan To Go To IPO In Next 12 Months"
+            type: string
+            enum: ["Yes","No"]
+          PastLitigation:
+            title: "Past Litigation"
+            type: string 
+          PriorClaims:
+            title: "Prior Claims"
+            type: string
+          ManagementExperience:
+            title: "Management Experience"
+            type: string
+          FinancialAnalysis:
+            title: "Financial Analysis"
+            type: string
+          HasNonProfitFiledAForm990:
+            title: "Has NonProfit Filed A Form990"
+            type: string
+          IsTheNonProfitNewlyRegisteredwithinLast12Months:
+            title: "Is The NonProfit Newly Registered Within Last 12 Months"
+            type: string
+          DoesNonProfitHaveADefinedBenefitOrPensionPlan:
+            title: "Does NonProfit Have A Defined Benefit Or Pension Plan"
+            type: string
+          Payroll:
+            title: "Payroll"
+            type: string
+          FundraiseList:
+            type: array
+            items:
+              properties:
+                FundraiseDetail:
+                  type: object
+                  required:
+                    - FundraiseDate
+                    - MoneyRaised
+                    - LeadInvestor
+                  properties:
+                    FundraiseDate:
+                      title: "Fundraise Date"
+                      type: string
+                    MoneyRaised:
+                      title: "Money Raised"
+                      type: string
+                    LeadInvestor:
+                      title: "Lead Investor"
+                      type: string 
+          EffectiveDate:
+            title: "Effective Date"
+            type: string
+          ExpirationDate:
+            title: "Expiration Date"
+            type: string
+          ExtendedExpirationDate:
+            title: "Extended Expiration Date"
+            type: string
+          ManagementExperienceDiscountFactor:
+            title: "Management Experience Discount Factor"
+            type: string
+          FinancialAnalysisDiscountFactor:
+            title: "Financial Analysis Discount Factor"
+            type: string
+          PartnerCode:
+            title: "Partner Code"
+            type: string
+          NumberOfPersonallyIdentifiableOrSensitiveRecords:
+            title: "Number Of Personally Identifiable Or Sensitive Records"
+            type: string
+          NumberOfPersonallyIdentifiableOrSensitiveRecordsEstimate:
+            title: "Number Of Personally Identifiable O rSensitive Records Estimate"
+            type: string
+          FinalPremium:
+            title: "Final Premium"
+            type: string
+          Commission:
+            title: "Commission"
+            type: string
+          TaxesFessAndSurcharges:
+            title: "Taxes, Fees and Surcharges"
+            type: string
+          TotalTaxes:
+            title: "Total Taxes"
+            type: string
+          TotalFees:
+            title: "Total Fees"
+            type: string
+          TotalPremium:
+            title: "Total Premium"
+            type: string
+          Coverage:
+            type: array
+            items:
+              properties:
+                CoverageDetail:
+                  type: object
+                  required:
+                    - CoverageName
+                    - LimitOfLiability
+                    - Retention
+                    - CoverageLevelTotalBasePremium
+                  properties:
+                    CoverageName:
+                      title: "Coverage Name"
+                      type: string
+                    LimitOfLiability:
+                      title: "Limit Of Liability"
+                      type: string
+                    Retention:
+                      title: "Retention"
+                      type: string
+                    EnhancedCoverageFlag:
+                      title: "Enhanced Coverage Flag"
+                      type: string
+                    CoverageLevelTotalBasePremium:
+                      title: "Coverage Level Total Base Premium"
+                      type: string
+      OwnerId:
+        title: "Owner ID"
+        type: string
+        default: "36"
+                
+  errorModel:
+    type: object
+    required:
+      - RequestStatus
+      - MessageDetail
+    properties:
+      RequestStatus:
+        type: string
+      MessageDetail:
+        type: object
+        properties:
+          MessageCode:
+            type: string
+          MessageType:
+            type: string
+          UserMessage:
+            type: string
+          MessageLevel:
+            type: string
+          MessageSeverity:
+            type: string
+          MessageList:
+            type: object
+            properties:
+              Message:
+                type: array
+                items:
+                  type: string      

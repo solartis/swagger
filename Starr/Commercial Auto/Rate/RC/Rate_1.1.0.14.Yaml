@@ -824,6 +824,15 @@ definitions:
                 Year3LatestValuationDate:
                   type: string
                   default: ""
+                LossDevelopmentFactorOverrideYear3:
+                  type: string
+                  default: "0"
+                LossDevelopmentFactorOverrideYear2:
+                  type: string
+                  default: "0"
+                LossDevelopmentFactorOverrideYear1:
+                  type: string
+                  default: "0"
                 CommercialAutoExperienceRatingModificationYear1DetailList:
                   type: array
                   items:

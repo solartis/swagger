@@ -141,6 +141,9 @@ definitions:
           AddressLine2:
             title: "Address Line 2"
             type: string
+          County:
+            title: "County"
+            type: string
           City:
             title: "City"
             type: string
@@ -192,6 +195,25 @@ definitions:
                 CoverageExtensionAggregate:
                   title: "Coverage Extesion Aggregate"
                   type: string
+          Professions:
+            type: array
+            items:
+              properties:
+                ProfessionCode:
+                  title: "Profession Code"
+                  type: string
+                HeadCount:
+                  title: "Head Count"
+                  type: number
+                BaseRate:
+                  title: "Base Rate"
+                  type: number
+                MinRate:
+                  title: "Min Rate"
+                  type: number
+                Premium:
+                  title: "Premium"
+                  type: number
           TFSList:
            type: array
            items:

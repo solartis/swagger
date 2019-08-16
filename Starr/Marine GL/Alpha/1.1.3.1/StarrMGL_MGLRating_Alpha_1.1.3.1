@@ -153,7 +153,7 @@ definitions:
             enum: ["Small Marine","Marine Artisan"]
           LimitEachOccurrenceIncludingSupplementaryPayments:
             type: string
-            default: "1,000,000 CSL"
+            enum: ['1000000', '500000', '300000']
           ProductsHazardorCompletedOperations:
             type: string
             default: "2,000,000"
@@ -176,9 +176,6 @@ definitions:
             enum: ["1500", "2500", "5000", "10000"]
           AnnualGrossReceipts:
             type: string
-          LiabilityLimit:
-            type: string
-            enum: ['1000000', '500000', '300000']
           IsTRIAApplicable:
             type: string
             enum: ["Yes", "No"]

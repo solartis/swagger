@@ -107,7 +107,6 @@ definitions:
         type: object
         required:
           - PolicyNumber
-          - ReasonForReinstatement
         
         properties:
           ProductNumber:
@@ -132,14 +131,6 @@ definitions:
           ReasonForReinstatement:
             title: "Reason For Reinstatement"
             type: string
-          OutputTypeList:
-            type: array
-            items:
-              properties:
-                Type:
-                  title: "Type"
-                  type: string
-                  enum: ["REINSTATE"]
       OwnerId:
         title: "Owner ID"
         type: string
@@ -237,6 +228,15 @@ definitions:
               properties:
                 Type:
                   title: "Type"
+                  type: string
+                URL:
+                  title: "PDF URL"
+                  type: string
+                Name:
+                  title: "PDF Name"
+                  type: string
+                Path:
+                  title: "Path"
                   type: string
       OwnerId:
         title: "Owner ID"

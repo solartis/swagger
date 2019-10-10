@@ -98,17 +98,17 @@
 						"ISOERCVersion": {
 							"title": "State and ERC Version identifier",
 							"type": "string",
-							"default": "RC_BP_FL_07012017_V01"
+							"default": "RC_BP_AK_09012019_V01"
 						},
 						"EffectiveDate": {
 							"title": "Policy Start Date",
 							"type": "string",
-							"default": "2017-07-01"
+							"default": "2019-09-01"
 						},
 						"ExpirationDate": {
 							"title": "PolicyExpiryDate",
 							"type": "string",
-							"default": "2018-07-01"
+							"default": "2020-09-01"
 						},
 						"InsuredName": {
 							"title": "InsuredName",
@@ -141,7 +141,7 @@
 						"State": {
 							"title": "State",
 							"type": "string",
-							"default": "FL",
+							"default": "AK",
 							"enum": [
 								"SC",
 								"MI",
@@ -179,7 +179,7 @@
 						"ZipCode": {
 							"title": "Zip",
 							"type": "string",
-							"default": "32003"
+							"default": "99501"
 						},
 						"BOPConditionalLimitationOfCoverageTerrorismSublimitAnnualAggregateTerrorismAct2002": {
 							"title": "Conditional Limitation Of Coverage Terrorism Sublimit Annual Aggregate Terrorism Act 2002",
@@ -983,12 +983,12 @@
 											"ZipCode": {
 												"title": "ZipCode",
 												"type": "string",
-												"default": "32003"
+												"default": "99501"
 											},
 											"RatingTerritory": {
 												"title": "RatingTerritory",
 												"type": "string",
-												"default": "002"
+												"default": "702"
 											},
 											"FireProtectionClassPPC": {
 												"title": "Protection Class ",

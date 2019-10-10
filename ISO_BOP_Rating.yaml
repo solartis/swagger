@@ -172,7 +172,8 @@
 								"OR",
 								"NE",
 								"DE",
-								"FL"
+								"FL",
+								"AK"
 							]
 						},
 						"ZipCode": {

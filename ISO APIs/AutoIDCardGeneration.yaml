@@ -105,25 +105,25 @@ definitions:
             default: "+1 877-734-2265"
           AgencyName:
             type: string
-            default: "Lockton Affinity"
+            default: "Solartis Agency"
           AgencyAddressLine1:
             type: string
-            default: "0895 Lowell Ave"
+            default: "1601 North-Sepulveda Blvd. #606"
           AgencyAddressLine2:
             type: string
             default: "Overland Park"
           AgencyCity:
             type: string
-            default: "Johnson"
+            default: "Manhattan Beach"
           AgencyCounty:
             type: string
-            default: "Johnson"
+            default: "Los Angeles"
           AgencyZipCode:
             type: string
-            default: "66210"
+            default: "90266"
           AgencyState:
             type: string
-            default: "KS"
+            default: "CA"
           AgencyPhoneNumber:
             type: string
             default: "+1 913-652-7500"

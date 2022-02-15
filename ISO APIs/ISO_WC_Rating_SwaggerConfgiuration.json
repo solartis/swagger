@@ -6,7 +6,7 @@
 		"description": " To get rate for Workers Compensation from Solartis Rate API with ISO ERC."
 	},
 	"host": "isowckbv6-4.ga.solartis.net",
-	"basePath": "/KnowledgeEngineV6_4/KnowledgeBase/FireEventV3",
+	"basePath": "/KnowledgeEngineV6_4/KnowledgeBase",
 	"schemes": [
 		"https"
 	],

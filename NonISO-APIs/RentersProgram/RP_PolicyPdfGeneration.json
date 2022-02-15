@@ -3,7 +3,7 @@ info:
   version: 1.0.0
   title: Solartis PDF Generation for Renters Program
   description: To generate PDF Generation for Renters Program.
-host: rentersapihk.solartis.net
+host: solartisdemokbv6-2.solartis.net
 basePath: /KnowledgeEngineV6_2/KnowledgeBase
 schemes:
   - https
